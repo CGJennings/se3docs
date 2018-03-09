@@ -8,7 +8,6 @@
 
 1. [Getting started](getting-started.md)
    1. [Installation on Windows](install-win.md)
-      1. Graphics issues on Windows
    2. [Installation on macOS](install-mac.md)
    3. [Installation on other platforms](install-other.md)
    4. Upgrading from Strange Eons 1 or 2
