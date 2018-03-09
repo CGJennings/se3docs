@@ -10,7 +10,7 @@ These pages will help you get the most out of [Strange Eons](cgjennings.ca/eons/
 
 ## Tomes of knowledge
 
-![](images/user-manual-logo.png) [User Manual](user-manual.md)  
+![](images/user-manual-logo.png){:.float-left} [User Manual](user-manual.md)  
 A guide to the major features of Strange Eons. How to create game components, manage plug-ins, create decks and projects, and more.
 
 **Advanced field guides**
