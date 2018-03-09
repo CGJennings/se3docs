@@ -7,12 +7,10 @@ To get started, [download](http://cgjennings.ca/eons/download/update.html) the m
 [macOS](install-mac.md)
 [Linux and other platforms](install-other.md)
 
-##Running it the first time
-
+## Running it the first time
 Strange Eons uses plug-ins to support content creation for specific games. It doesn't come with any installed, so the first time you run it you will be prompted to install some [core components](corecomponents.md) and other plug-ins. This also happens whenever you update Strange Eons, since some plug-ins may need to be updated for the new version. Once these extra pieces are downloaded, the program will want to restart. Let it. Now you are ready to start creating!
 
 **More info:** [Installing and managing plug-ins](installing-managing-plugins.md)
 
 ## What next?
-
-Once you have a plug-in for at least one game installed, choose the **File|New** menu item and choose one of the game component types that it supports. (Can't find one? Choose the **Everything** category.) That will get you started making your first card or other component. [Come back anytime](user-manual.md) when you want more information on particular features.
+Once you have a plug-in for at least one game installed, choose the **File/New** menu item and choose a type of game component from that game. (Can't find one? Choose the **Everything** category.) That will get you started making your first card or other component. [Come back anytime](user-manual.md) when you want more information on particular features.
