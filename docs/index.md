@@ -15,9 +15,9 @@ A guide to the major features of Strange Eons. How to create game components, ma
 
 **Advanced field guides**
 
-![](images/developer-manual-logo.png) [Developer manual](dev-manual.md)  
+![](images/developer-manual-logo.png){: .float-left} [Developer manual](dev-manual.md)  
 Plug-ins add support for new games and other features. This section tells you how to make them. Go, read, learn, create!
 
-![](images/translator-manual-logo.png) [Translator manual](translation-manual.md)  
+![](images/translator-manual-logo.png){: .float-left} [Translator manual](translation-manual.md)  
 
 Guidance for those who want to localize Strange Eons for other languages or improve existing translations.
