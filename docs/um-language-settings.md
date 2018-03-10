@@ -6,10 +6,10 @@ Normally, Strange Eons will try to use the same language used by your operating 
 
 ## Changing the language settings
 
-The interface and game language can be changed from [Preferences](preferences.md). A drop down menu for each setting lists the available languages. Simply choose the desired language and then choose OK to close the dialog. Changing languages requires a restart of the application.
+The interface and game language can be changed from [Preferences](um-preferences.md). A drop down menu for each setting lists the available languages. Simply choose the desired language and then choose OK to close the dialog. Changing languages requires a restart of the application.
 
 ![the preferences dialog](images/language-settings.png)
 
 ## Contributing
 
-Not all languages are supported by Strange Eons, and some of the existing translations are from older versions and are now out of date and incomplete. The available translations rely on the work of volunteers. If you would like to contribute to the translation process, have a look at the [Translation Manual](translation-manual.md).
+Not all languages are supported by Strange Eons, and some of the existing translations are from older versions and are now out of date and incomplete. The available translations rely on the work of volunteers. If you would like to contribute to the translation process, have a look at the [Translation Manual](um-translation-manual.md).

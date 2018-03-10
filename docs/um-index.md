@@ -4,20 +4,20 @@
 
 # User manual contents
 
-1. [Getting started](getting-started.md)
-   1. [Installation on Windows](install-win.md)
-   2. [Installation on macOS](install-mac.md)
-   3. [Installation on other platforms](install-other.md)
-   4. [Upgrading from Strange Eons 1 or 2](upgrading.md)
-   5. [Choosing language settings](language-settings.md)
-   6. [Troubleshooting](troubleshooting.md)
-   7. [Command line options](command-line-options.md)
-2. [Installing and managing plug-ins](installing-managing-plugins.md)
-   1. [Understanding Core Components](core-components.md)
-   2. Downloading and installing plug-ins
-   3. Managing installed plug-ins
-   4. Checking for updates
-   5. "Linking" to a plug-in online
+1. [Getting started](um-getting-started.md)
+   1. [Installation on Windows](um-install-win.md)
+   2. [Installation on macOS](um-install-mac.md)
+   3. [Installation on other platforms](um-install-other.md)
+   4. [Upgrading from Strange Eons 1 or 2](um-upgrading.md)
+   5. [Choosing language settings](um-language-settings.md)
+   6. [Troubleshooting](um-troubleshooting.md)
+   7. [Command line options](um-command-line-options.md)
+2. [Installing and managing plug-ins](um-installing-managing-plugins.md)
+   1. [Understanding core components](um-core-components.md)
+   2. [Downloading and installing plug-ins](um-plugin-catalogue.md)
+   3. [Managing installed plug-ins](um-plugin-manager.md)
+   4. [Managing update notifications](um-update-notifications.md)
+   5. ["Linking" to a plug-in](um-eonscat-links.md) (`eonscat` links)
 3. Basic application features
    1. The menu bar
       1. File menu
@@ -33,7 +33,7 @@
    2. Document tabs
    3. Context bar
    4. Message pop-ups
-   5. [Relaunching the application](relaunching.md)
+   5. [Relaunching the application](um-relaunching.md)
 4. Creating game components
    1. Preview area
    2. Markup text

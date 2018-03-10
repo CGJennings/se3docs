@@ -20,4 +20,4 @@ At least 2 GB of RAM recommended.
 
 Installation problems are rare but frustrating. If the installer fails to start or reports a corrupt file, it usually means that the file did not download correctly. Try downloading it again.
 
-For other issues, refer to the [Troubleshooting](troubleshooting.md) section.
+For other issues, refer to the [Troubleshooting](um-troubleshooting.md) section.

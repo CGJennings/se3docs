@@ -3,6 +3,9 @@
 
 @import "{{ site.theme }}";
 
+img {
+  max-width: 40%;
+}
 
 p img:only-child {
   display: block;

@@ -1,6 +1,6 @@
 # Upgrading from Strange Eons 1 or 2
 
-Upgrading from version 1 or 2 of Strange Eons is easy. Although settings and plug-ins from previous versions are not entirely compatible with the new version, Strange Eons 3 keeps these files in a separate place from previous versions so that there are no conflicts. For the most part, you can just download and install Strange Eons 3 with the [standard directions](getting-started.md).
+Upgrading from version 1 or 2 of Strange Eons is easy. Although settings and plug-ins from previous versions are not entirely compatible with the new version, Strange Eons 3 keeps these files in a separate place from previous versions so that there are no conflicts. For the most part, you can just download and install Strange Eons 3 with the [standard directions](um-getting-started.md).
 
 ## Don't panic!
 
@@ -12,7 +12,7 @@ SE3 only creates a few basic kinds of components out of the box. Support for spe
 
 ### Where are My Favourite Plug-ins?
 
-Some plug-ins were never updated to work in SE3, some have had their functionality built into SE3. Some script-based plug-ins will continue to work if SE3 is run in compatibility mode (which it is by default, but you can change this in [Preferences](preferences.md)). Here is an annotated list of SE2 plug-ins whose features are now part of SE3 or another plug-in:
+Some plug-ins were never updated to work in SE3, some have had their functionality built into SE3. Some script-based plug-ins will continue to work if SE3 is run in compatibility mode (um-which it is by default, but you can change this in [Preferences](preferences.md)). Here is an annotated list of SE2 plug-ins whose features are now part of SE3 or another plug-in:
 
 <dl>
 <dt>Image Resource Browser</dt>

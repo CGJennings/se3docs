@@ -21,7 +21,7 @@ This message indicates that Strange Eons is running out of memory. Memory is the
 
 When this message appears, you have two options: either use less memory at a time, or increase the maximum amount of memory allowed to Strange Eons. To use less memory at a time, close tabs that you do not need to have open. For example, if you are laying out a deck, just have the deck tab open and close any other files you are working on. You can also uninstall unused plug-ins, although most plug-ins don’t use much memory unless you are actually using their features. You may find it useful to install the **Developer Tools** plug-in `eonscat:39f10fa9-6574-4be1-9dd6-3e658c9a6fd3` and then use the **Window/Memory Use** menu item. This will show you how much memory is being used at any given time so you can get a better idea of what is causing the problem.
 
-If you continue to run into this message, you will need to increase the memory available to Strange Eons by modifying the [Strange Eons VM options](command-line-options.md). Here are some example settings:
+If you continue to run into this message, you will need to increase the memory available to Strange Eons by modifying the [Strange Eons VM options](um-command-line-options.md). Here are some example settings:
 
 `-Xmx1024m`
 Sets a 1024 MiB (megabyte) limit, also known as 1 GiB (gigabyte). This is the usual default limit and is the lowest recommended value for running Strange Eons.
@@ -37,7 +37,7 @@ Sets a 2 GiB limit (as 2 GiB).
 
 ### The plug-in bundle X could not be updated
 
-This indicates that you have downloaded an update for a plug-in that required a [relaunch](relaunching.md), but when \Strange Eons restarted it was unable to replace the old plug-in for some reason. To investigate, you'll need to check your plug-in folder. If the app finishes starting, you can do this from the [plug-in manager](plugin-manager.md). Otherwise, find the `plug-ins` subfolder inside your [inside your user folder](user-folder.md). You should find a file with the name indicated by the error message and the file extension `.autoupdate`. You will usually also find a file with the same name but no `.autoupdate`. For example:
+This indicates that you have downloaded an update for a plug-in that required a [relaunch](um-relaunching.md), but when \Strange Eons restarted it was unable to replace the old plug-in for some reason. To investigate, you'll need to check your plug-in folder. If the app finishes starting, you can do this from the [plug-in manager](plugin-manager.md). Otherwise, find the `plug-ins` subfolder inside your [inside your user folder](user-folder.md). You should find a file with the name indicated by the error message and the file extension `.autoupdate`. You will usually also find a file with the same name but no `.autoupdate`. For example:
 
 ```
 DeveloperTools.seplugin 
@@ -50,7 +50,7 @@ The file with the `.autoupdate` extension is the new plug-in, the one without is
 
 ### After installing a plug-in
 
-If the app won't start after installing a plug-in, it is a good bet that the problem involves that plug-in. As above, find the `plug-ins` subfolder inside your [inside your user folder](user-folder.md). Locate the just-installed plug-in(s) and delete them, then try starting the app again.
+If the app won't start after installing a plug-in, it is a good bet that the problem involves that plug-in. As above, find the `plug-ins` subfolder inside your [inside your user folder](um-user-folder.md). Locate the just-installed plug-in(s) and delete them, then try starting the app again.
 
 ### After displaying a Fatal Error message
 
