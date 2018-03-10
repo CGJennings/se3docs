@@ -37,8 +37,8 @@ Plug-in developers can submit their own plug-ins for inclusion. At the moment, t
 
 ### Third-party catalogues
 
-Developers can create their own private catalogues. To display a private catalogue's listings, paste its base URL into the address bar at the top of the dialog and press **Enter**. Private catalogues can be prepared using the catalogue tools (see above).
+Developers can create their own private catalogues. To display a private catalogue's listings, paste its base URL into the address bar at the top of the dialog and press <kbd>Enter</kbd>. Private catalogues can be prepared using the catalogue tools (see above).
 
 ### Clearing cached listings
 
-The standard catalog is cached for a few hours to prevent excessive downloading. This rarely causes problems, but you can bypass the cache by clicking in the address bar and pressing **Enter**.
+The standard catalog is cached for a few hours to prevent excessive downloading. This rarely causes problems, but you can bypass the cache by clicking in the address bar and pressing <kbd>Enter</kbd>.

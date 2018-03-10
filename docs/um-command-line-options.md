@@ -67,7 +67,7 @@ Command line options are specified in different ways, depending on the platform.
 
 ### On Windows
 
-Open a command prompt by pressing the **Windows key + R**, then typing `cmd` and pressing Enter. Then change to the SE install directory by entering:
+Open a command prompt by pressing <kbd>Windows</kbd>+<kbd>R</kbd>, then typing `cmd` and pressing <kbd>Enter</kbd>. Then change to the SE install directory by entering:
 
 ```bash
 cd "%programfiles%/StrangeEons/bin"

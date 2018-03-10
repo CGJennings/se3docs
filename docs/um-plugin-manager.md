@@ -10,7 +10,7 @@ To uninstall a plug-in, select it in the list and click the **Uninstall** button
 
 ## Options for "tool" plug-ins
 
-Some plug-ins install themselves as tools that are listed in the **Toolbox** menu. Tools have a few additional configuration options not available to other plug-ins. You can assign a shortcut key to activate them: click in the **Shortcut Key** field, then press the desired key combination. (To clear a shortcut, press <key>Backspace</key> or <key>Delete</key>.) You can also enable or disable them without uninstalling in order to keep the number of entries in the **Toolbox** menu manageable.
+Some plug-ins install themselves as tools that are listed in the **Toolbox** menu. Tools have a few additional configuration options not available to other plug-ins. You can assign a shortcut key to activate them: click in the **Shortcut Key** field, then press the desired key combination. (To clear a shortcut, press <kbd>Backspace</kbd> or <kbd>Delete</kbd>.) You can also enable or disable them without uninstalling in order to keep the number of entries in the **Toolbox** menu manageable.
 
 ## Opening the plug-in folder
 
