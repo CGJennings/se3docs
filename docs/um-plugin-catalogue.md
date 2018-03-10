@@ -8,7 +8,7 @@ The plug-in catalogue, available from the **Toolbox/Catalogue** menu, is used to
 
 The catalogue uses the following icons to help you identify the status of each plug-in:
 
-|                      Icon                      |                      Core icon                      | Description                                                  |
+|                  Plug‑in Icon                  |         [Core](um-core-components.md) icon          | Description                                                  |
 | :--------------------------------------------: | :-------------------------------------------------: | ------------------------------------------------------------ |
 | ![icon](images/catalog/not-installed-new.png)  | ![icon](images/catalog/core-not-installed-new.png)  | **New:** not installed, and new or updated since you last checked the catalogue |
 |   ![icon](images/catalog/not-installed.png)    |   ![icon](images/catalog/core-not-installed.png)    | **Not installed:** not installed, not new                    |
