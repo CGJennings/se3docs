@@ -43,7 +43,12 @@ At least 2 GB of RAM recommended.
    java -cp strange-eons.selibrary register
    ```
 
-   >To register for all users instead of yourself, try the `--allusers` option (run with `sudo`). The registration tool requires that you have the package `xdg-utils` installed. Recent builds of popular Linux distros should already include it, but if yours does not you can install it yourself. A typical command to do this is `sudo apt-get install xdg-utils`; check the documentation for your distro for more information. If needed, you can specify the location of `xdg-utils` with the `--xdg` option. (Use `--help` option for a complete list of options.)
+   >To register for all users instead of yourself, try the `--allusers` option. The registration tool requires that you have the package `xdg-utils` installed. Recent builds of popular Linux distros should already include it, but if yours does not you can install it yourself. A typical command to do this is `sudo apt-get install xdg-utils`; check the documentation for your distro for more information. If needed, you can specify the location of `xdg-utils` with the `--xdg` option. The `--uninstall` option can be used to remove a previous registration. (Use `--help` option for a complete list of options.)
 
-   ​
 
+
+## Troubleshooting
+
+Installation problems are rare but frustrating. If the installer fails to start or reports a corrupt file, it usually means that the file did not download correctly. Try downloading it again.
+
+For other issues, refer to the [Troubleshooting](troubleshooting.md) section.

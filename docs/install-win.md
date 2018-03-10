@@ -22,15 +22,4 @@ Before installing, it is a good idea to make sure that you have installed the la
 
 Installation problems are rare but frustrating. If the installer fails to start or reports a corrupt file, it usually means that the file did not download correctly. Try downloading it again.
 
-### Graphics issues
-
-Some Windows machines have weird graphics glitches when running Strange Eons, such as bits of the interface not being drawn or being drawn in the wrong place. If this happens to you, try these steps:
-
-1. Update your graphics driver to the latest version. Once installed and the the computer reboots, try starting Strange Eons again.
-2. If your computer has two graphics chipsets (one power saving and one high performance), make sure Strange Eons uses the high performance chip.
-3. Right click on the shortcut icon that you use to start Strange Eons and choose **Properties**. Look for the field labelled **Target**. In this field you will find something like `"C:\Program Files\Strange Eons\bin\strangeeons.exe"`. Edit this by adding a space, then the following (all after the `.exe"`):
-   `-J-Dsun.java2d.ddoffscreen=false`
-   Click **OK** and try running the app again.
-4. The option above seems to do the trick for most people, but i f that doesn't work, you can also try adding the following in various combinations to see if you can find one that works (put a space between each extra option, as well as between the options and the end of the `.exe"` bit):
-   `-J-Dsun.java2d.opengl=true`
-   `-J-Dsun.java2d.d3d=false`
+For other issues, refer to the [Troubleshooting](troubleshooting.md) section.

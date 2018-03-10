@@ -1,8 +1,6 @@
 ![Strange Eons 3](images/se3-header.png)
 
-![](images/user-manual-logo.png){: .float-left} This is the **user manual**. [Other documentation](index.md)
-
-
+![](images/user-manual-logo.png)
 
 # User manual contents
 
@@ -12,8 +10,8 @@
    3. [Installation on other platforms](install-other.md)
    4. [Upgrading from Strange Eons 1 or 2](upgrading.md)
    5. [Choosing language settings](language-settings.md)
-   6. Troubleshooting
-   7. Command line options
+   6. [Troubleshooting](troubleshooting.md)
+   7. [Command line options](command-line-options.md)
 2. [Installing and managing plug-ins](installing-managing-plugins.md)
    1. [Understanding Core Components](core-components.md)
    2. Downloading and installing plug-ins
@@ -35,7 +33,7 @@
    2. Document tabs
    3. Context bar
    4. Message pop-ups
-   5. Relaunching the application
+   5. [Relaunching the application](relaunching.md)
 4. Creating game components
    1. Preview area
    2. Markup text
@@ -81,3 +79,5 @@
    2. Customizing a task folder icon
    3. Searching projects
    4. Automation scripts
+
+[Other documentation](index.md)

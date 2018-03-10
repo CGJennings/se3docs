@@ -12,4 +12,4 @@ The interface and game language can be changed from [Preferences](preferences.md
 
 ## Contributing
 
-Not all languages are supported by Strange Eons, and some of the existing translations are from older versions and are now out of date and incomplete. The available translations rely on the work of volunteers. If you would like to contribute to the translation process, have a look at the [Translator Manual](translation-manual.md).
+Not all languages are supported by Strange Eons, and some of the existing translations are from older versions and are now out of date and incomplete. The available translations rely on the work of volunteers. If you would like to contribute to the translation process, have a look at the [Translation Manual](translation-manual.md).
