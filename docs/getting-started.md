@@ -3,8 +3,8 @@
 ##Downloading and installing
 To get started, [download](http://cgjennings.ca/eons/download/update.html) the most recent version of Strange Eons available for your computer. For installation instructions, refer to the page for your specific platform:
 
-[Windows](install-win.md)
-[macOS](install-mac.md)
+[Windows](install-win.md)  
+[macOS](install-mac.md)  
 [Linux and other platforms](install-other.md)
 
 ## Running it the first time
