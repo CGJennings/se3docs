@@ -10,7 +10,7 @@
    1. [Installation on Windows](install-win.md)
    2. [Installation on macOS](install-mac.md)
    3. [Installation on other platforms](install-other.md)
-   4. Upgrading from Strange Eons 1 or 2
+   4. [Upgrading from Strange Eons 1 or 2](upgrading.md)
    5. Choosing language settings
    6. Troubleshooting
    7. Command line options
