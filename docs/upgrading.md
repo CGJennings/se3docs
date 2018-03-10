@@ -12,14 +12,14 @@ SE3 only creates a few basic kinds of components out of the box. Support for spe
 
 ### Where are My Favourite Plug-ins?
 
-Some plug-ins were never updated to work in SE3, some have had their functionality built into SE3. Some script-based plug-ins will continue to work if SE3 is run in compatibility mode (which it is by default, but you can change this in the **Preferences** dialog). Here is an annotated list of SE2 plug-ins whose features are now part of SE3 or another plug-in:
+Some plug-ins were never updated to work in SE3, some have had their functionality built into SE3. Some script-based plug-ins will continue to work if SE3 is run in compatibility mode (which it is by default, but you can change this in [Preferences](preferences.md)). Here is an annotated list of SE2 plug-ins whose features are now part of SE3 or another plug-in:
 
 <dl>
 <dt>Image Resource Browser</dt>
 <dd>This plug-in was used to explore the images that SE or plug-ins use internally. It is built in now: in an image selection dialog or component portrait panel, there will be a folder icon that opens a file chooser to select an image file. Shift+clicking this icon will open a dialog for browsing image resources.</dd>   <dt>Markup Bar</dt>
-<dd>This plug-in creates a floating toolbar that helps with editing. This functionality has been improved and expanded in the new **Context Bar** feature.</dd>
+<dd>This plug-in creates a floating toolbar that helps with editing. This functionality has been improved and expanded in the new <strong>Context Bar</strong> feature.</dd>
 <dt>Script Library Documentation Browser</dt>
-<dd>Replaced by the improved **Document Browser**, which is found in the **Help** menu.</dd>
+<dd>Replaced by the improved <strong>Document Browser</strong>, which is found in the <strong>Help</strong> menu.</dd>
 <dt>Silhouette Pack</dt>
 <dd>These token shapes, and many more are now built in. (It is still possible to register additional shapes as required using a plug-in.)</dd>
 <dt>Show Regions, Memory Monitor</dt>

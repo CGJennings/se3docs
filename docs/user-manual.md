@@ -11,7 +11,7 @@
    2. [Installation on macOS](install-mac.md)
    3. [Installation on other platforms](install-other.md)
    4. [Upgrading from Strange Eons 1 or 2](upgrading.md)
-   5. Choosing language settings
+   5. [Choosing language settings](language-settings.md)
    6. Troubleshooting
    7. Command line options
 2. [Installing and managing plug-ins](installing-managing-plugins.md)
