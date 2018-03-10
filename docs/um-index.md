@@ -1,7 +1,5 @@
 ![Strange Eons 3](images/se3-header.png)
 
-![](images/user-manual-logo.png)
-
 # User manual contents
 
 1. [Getting started](um-getting-started.md)
@@ -17,7 +15,7 @@
    2. [Downloading and installing plug-ins](um-plugin-catalogue.md)
    3. [Managing installed plug-ins](um-plugin-manager.md)
    4. [Managing update notifications](um-update-notifications.md)
-   5. ["Linking" to a plug-in](um-eonscat-links.md) (`eonscat` links)
+   5. [`eonscat` links](um-eonscat-links.md) (sharing plug-ins on social media)
 3. Basic application features
    1. The menu bar
       1. File menu
