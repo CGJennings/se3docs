@@ -6,7 +6,7 @@ This page describes the steps needed to install Strange Eons on Windows-based PC
 
 One of Windows 7 SP1, Windows 8, Windows 10
 
-At least 2 GB of RAM are recommended.
+At least 2 GB of RAM recommended.
 
 A 64-bit processor (and 64-bit version of Windows) are recommended.
 

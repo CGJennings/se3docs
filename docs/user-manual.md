@@ -1,6 +1,6 @@
 ![Strange Eons 3](images/se3-header.png)
 
-![](images/user-manual-logo.png) This is the **user manual** for Strange Eons. [Other documentation](index.md)
+![](images/user-manual-logo.png){: .float-left} This is the **user manual**. [Other documentation](index.md)
 
 
 

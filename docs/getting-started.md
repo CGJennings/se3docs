@@ -1,6 +1,6 @@
 # Welcome
 *Strange Eons* is a design tool for creating custom content for board, card, and role-playing games. You can use it to expand existing games with your own content, or as a tool for prototyping new games from scratch.
-##Downloading and installing
+## Downloading and installing
 To get started, [download](http://cgjennings.ca/eons/download/update.html) the most recent version of Strange Eons available for your computer. For installation instructions, refer to the page for your specific platform:
 
 [Windows](install-win.md)  
