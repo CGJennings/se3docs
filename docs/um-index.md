@@ -25,11 +25,11 @@
 4. [Creating game components](um-game-components.md)
    1. Preview area
    2. [Markup text](um-markup-text.md)
-      1. Table of markup tags
-      2. Spelling checking
-      3. Thesaurus
+      1. Standard markup tags
+      2. [Spelling checking](um-spelling.md)
+      3. [Thesaurus](um-thesaurus.md)
       4. Advanced markup
-      5. [Saving keystrokes with abbreviations](um-abbreviations.md)
+      5. [Working more efficiently with abbreviations](um-abbreviations.md)
    3. Portraits
    4. Tinting
    5. Design rationale comments
