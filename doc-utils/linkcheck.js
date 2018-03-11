@@ -16,17 +16,21 @@ let sources = fs.readdirSync(SOURCE_DIR).filter( (f,i,a) => f.endsWith('.md') );
 // make a copy to track orphans (files not linked to by any document)
 let orphans = sources.slice();
 
+let totalProblems = 0;
+
 /** reportProblem(filename, message) */
 let reportProblem = (function() {
   let lastErrorFile;
   return function(filename, message) {
     if(filename !== lastErrorFile ) {
       lastErrorFile = filename;
-      console.log(`${filename}:`);
+      console.log(`\n${filename}:`);
     }
     console.log(`  ${message}`);
+    ++totalProblems;
   }
 })();
+
 
 // For each source file:
 //   - find all the links in the text
@@ -56,3 +60,5 @@ for(let filename of sources) {
 }
 
 orphans.forEach( (f,i,a) => reportProblem(f, 'not linked to by any file') );
+
+console.log(`\n${totalProblems} problem(s) found\n`)

@@ -8,7 +8,7 @@ To get started, [download](http://cgjennings.ca/eons/download/update.html) the m
 [Linux and other platforms](um-install-other.md)
 
 ## Running it the first time
-Strange Eons uses plug-ins to support content creation for specific games. It doesn't come with any installed, so the first time you run it you will be prompted to install some [core components](um-corecomponents.md) and other plug-ins. This also happens whenever you update Strange Eons, since some plug-ins may need to be updated for the new version. Once these extra pieces are downloaded, the program will want to restart. Let it. Now you are ready to start creating!
+Strange Eons uses plug-ins to support content creation for specific games. It doesn't come with any installed, so the first time you run it you will be prompted to install some [core components](um-core-components.md) and other plug-ins. This also happens whenever you update Strange Eons, since some plug-ins may need to be updated for the new version. Once these extra pieces are downloaded, the program will want to restart. Let it. Now you are ready to start creating!
 
 **More info:** [Installing and managing plug-ins](um-installing-managing-plugins.md)
 

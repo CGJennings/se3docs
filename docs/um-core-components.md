@@ -6,9 +6,11 @@ A core component is a special plug-in that is needed for Strange Eons to provide
 
 When you first run Strange Eons, and again after each update, you will be prompted to check the plug-in catalogue for updates. This ensures core components are kept up to date, but if you prefer you can [manage them manually](um-installing-managing-plugins.md) just like any other plug-in.
 
-## Missing core components
+## Missing plug-ins
 
-Occasionally Strange Eons may open a window stating that an additional plug-in is required to continue. Such plug-ins are generally called core components, although that name is not always accurate. In many cases, the missing plug-in has resources needed by another plug-in. Choose **Download and Install** to install them and continue. You can also check the option to automatically install these in the future, without asking first.
+Occasionally Strange Eons may open a window stating that an additional plug-in is required to continue. Such plug-ins are generally called core components, although that name is not always accurate. In many cases, one plug-in simply depends on some resources that are stored in another plug-in.
+
+Choose **Download and Install** to install the required plug-in and continue. You can also check the option to automatically install these in the future, without asking first.
 
 ![missing plug-in dialog](images/missing-core.png)
 

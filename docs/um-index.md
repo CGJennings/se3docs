@@ -67,6 +67,6 @@
       6. Task groups
    2. Customizing a task folder icon
    3. [Searching projects](um-find-in-project.md)
-   4. Automation scripts
+   4. [Automation scripts](um-ajs-scripts.md)
 
 [Other documentation](index.md)

@@ -1,6 +1,6 @@
 # Relaunching the application
 
-It is sometimes necessary to relaunch (um-quit and restart) Strange Eons to complete a requested operation. Most commonly, relaunches are required after [installing or updating plug-ins](installing-managing-plugins.md) or changing certain [preference settings](preferences.md).
+It is sometimes necessary to relaunch (um-quit and restart) Strange Eons to complete a requested operation. Most commonly, relaunches are required after [installing or updating plug-ins](um-installing-managing-plugins.md) or changing certain [preference settings](um-preferences.md).
 
 When a relaunch is required, a pop-up message will appear that includes a **Relaunch now** option. Choosing this will cause Strange Eons to relaunch immediately (you will be given an opportunity to save files with unsaved changes first if necessary).
 
