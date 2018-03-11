@@ -1,0 +1,5 @@
+{
+  "name": "doc-utils",
+  "description": "minimal package.json so tools treat these as Node.js scripts",
+  "version": "0.0.0"
+}
