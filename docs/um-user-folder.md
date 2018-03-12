@@ -6,7 +6,7 @@ Strange Eons stores all of your personalized settings and installed plug-ins in 
 
 The location of the folder varies:
 
-On **Windows** the user file is part of your "roaming profile". It includes the following folder and its contents:
+On **Windows** it is part of your "roaming profile". It includes the following folder and its contents:
 
 ​    `%APPDATA%\StrangeEons3`
 
@@ -16,7 +16,7 @@ On **macOS** and **Linux**, the user folder is a hidden directory under your hom
 
 ​    `~/.StrangeEons3`
 
-Because the file is hidden (starts with `.`) it might not be visible but if you have run Strange Eons it will exist!
+Because the file is hidden (starts with `.`) it might not be visible under normal conditions, but if you have run Strange Eons it will exist!
 
 > If you are having trouble finding it you can open **Toolbox/Quickscript**, paste in the following script code, and run it:  
 >
