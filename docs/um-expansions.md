@@ -30,7 +30,7 @@ Some game plug-ins can automatically create a set of graphics for you from a sin
 
 ![page 2 of the custom expansion tool](images/custom-exp-2.png)
 
-Choose **Continue** to move to the last step. The **New Expansion** tool actually builds and installs a mini plug-in that registers the new expansion for you. This makes it easy to share the new expansion symbol with others: all they have to do is install your plug-in. (If they load one of your components without the plug-in installed, they won't see the symbol.) This last step gives you a chance to save a copy of the plug-in somewhere, to make it easier to share. If you skip this step, you can always find the plug-in in [your plug-in folder](um-manage-plugins.md).
+Choose **Continue** to move to the last step. The **New Expansion** tool actually builds and installs a mini plug-in that registers the new expansion for you. This makes it easy to share the new expansion symbol with others: all they have to do is install your plug-in. (If they load one of your components without the plug-in installed, they won't see the symbol.) This last step gives you a chance to save a copy of the plug-in somewhere, to make it easier to share. If you skip this step, you can always find the plug-in in [your plug-in folder](um-plugin-manager.md).
 
 ![page 3 of the custom expansion tool](images/custom-exp-3.png)
 
