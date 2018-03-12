@@ -40,11 +40,11 @@
    8. [Expansion symbols](um-expansions.md)
    9. Sharing components
 5. [The deck editor](um-deck-editor.md)
-   1. Paper and pages in a deck
-      1. Splitting large pages
+   1. [Paper and pages in a deck](um-deck-pages.md)
+      1. [Splitting large pages](um-splitting-large-pages.md)
       2. Publisher's marks
       3. Bleed margins
-   2. Adding content to a deck
+   2. [Adding content to a deck](um-adding-deck-content.md)
       1. Game components
       2. Text boxes
       3. Images (custom tiles)
@@ -52,7 +52,7 @@
       5. Fold-up boxes
    3. Searching for deck components
    4. Deck editor commands
-   5. Creating expansion boards
+   5. [Creating expansion boards](um-expansion-boards.md)
       1. Tiles
       2. Decorations
    6. Locked deck objects
