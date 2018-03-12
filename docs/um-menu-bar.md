@@ -110,7 +110,7 @@ Options that affect how content is displayed, especially how game component prev
 
 ### Preview Quality
 
-Allows you to adjust the quality of game components previews to balance legibility and speed. The default is **Adjust Automatically** which will continually adjust the quality based on how long drawing takes. Reasonably powerful systems can probably lock this on **High** or **Ultrahigh**. On less powerful systems, you may also want to adjust the preview update rate [preference](um-preferences.md)
+Allows you to adjust the quality of game components previews to balance legibility and speed. The default is **Adjust Automatically** which will continually adjust the quality based on how long drawing takes. Reasonably powerful systems can probably lock this on **High** or **Ultrahigh**. On less powerful systems, you may also want to adjust the preview update rate [preference](um-preferences.md).
 
 ### Preview Backdrop
 
