@@ -57,8 +57,8 @@
       2. Decorations
    6. Locked deck objects
    7. Deck snapping options
-   8. Tips for sharing decks
-   9. Tips for printing and assembling components
+   8. [Tips for sharing decks](um-share-tips.md)
+   9. [Tips for printing and assembling components](um-print-tips.md)
 6. [Projects](um-projects.md)
    1. Adding new tasks to a project
       1. Deck of cards task
