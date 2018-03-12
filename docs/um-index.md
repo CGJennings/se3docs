@@ -35,8 +35,8 @@
    3. Portraits
    4. Tinting
    5. Design rationale comments
-   6. Printing components
-   7. Exporting images
+   6. [Printing components](um-print.md)
+   7. [Exporting images](um-export.md)
    8. [Expansion symbols](um-expansions.md)
    9. Sharing components
 5. [The deck editor](um-deck-editor.md)
