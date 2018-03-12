@@ -20,7 +20,7 @@ The new copy runs but it will still try to store plug-ins and settings in your u
 
 To get Strange Eons to use this new user folder you need to set an environment variable before running it. Create a text file `StrangeEons\run.cmd` with the following contents:
 
-```bash
+```bat
 set STRANGE_EONS_USER_DIR=%CD%\user
 bin\strangeeons
 ```
