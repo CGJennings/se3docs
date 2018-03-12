@@ -25,7 +25,7 @@
    3. [Using and customizing the context bar](um-context-bar.md)
    4. [Preferences](um-preferences.md)
 4. [Creating game components](um-game-components.md)
-   1. Preview area
+   1. [Preview area](um-preview-area.md)
    2. [Markup text](um-markup-text.md)
       1. Standard markup tags
       2. [Spelling checking](um-spelling.md)
