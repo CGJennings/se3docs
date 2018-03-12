@@ -6,7 +6,7 @@ The context bar is a tool bar that floats at the edge of the editor control you 
 
 ## Hiding or collapsing the context bar
 
-You can toggle whether the context bar is visible using the **View|Context Bar** [menu item](um-menu-bar.md). Alternatively, you can *collapse* the bar to momentarily get it out of your way. Clicking on the small button at the left edge of the bar, marked with a minus (-) symbol will collapse the bar. Clicking it again, now marked with a plus (+) symbol, will expand it back to full size. Pressing **Shift+Esc** while using the control that the bar is over will also collapse and expand the bar.
+You can toggle whether the context bar is visible using the **View/Context Bar** [menu item](um-menu-bar.md). Alternatively, you can *collapse* the bar to momentarily get it out of your way. Clicking on the small button at the left edge of the bar, marked with a minus (-) symbol will collapse the bar. Clicking it again, now marked with a plus (+) symbol, will expand it back to full size. Pressing **Shift+Esc** while using the control that the bar is over will also collapse and expand the bar.
 
 ## Customizing the buttons
 
