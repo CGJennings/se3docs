@@ -38,7 +38,7 @@ let reportProblem = (function() {
 //   - cross the link target off the orphans list
 for(let filename of sources) {
   let text = fs.readFileSync( path.resolve(SOURCE_DIR, filename), {encoding: 'utf8'} );
-  let linkRegex = /\]\(([-\w\d]+\.md)\)/g;
+  let linkRegex = /\]\(([-\w\d]+\.md)/g;
   let link;
 
   if(text.trim().length === 0) {

@@ -12,6 +12,7 @@
    7. [Troubleshooting](um-troubleshooting.md)
    8. [Portable installations](um-portable-install.md)
    7. [Command line options](um-command-line-options.md)
+
 2. [Installing and managing plug-ins](um-installing-managing-plugins.md)
    1. [Understanding core components](um-core-components.md)
    2. [Downloading and installing plug-ins](um-plugin-catalogue.md)
@@ -19,11 +20,13 @@
    4. [Relaunching the application](um-relaunching.md)
    4. [Managing update notifications](um-update-notifications.md)
    5. [`eonscat` links](um-eonscat-links.md) (sharing plug-ins on social media)
+
 3. [Overview of the app interface](um-overview.md)
    1. [Main menu commands](um-menu-bar.md)
    2. [Document tab management](um-document-tabs.md)
    3. [Using and customizing the context bar](um-context-bar.md)
    4. [Preferences](um-preferences.md)
+
 4. [Creating game components](um-game-components.md)
    1. [Preview area](um-preview-area.md)
    2. [Markup text](um-markup-text.md)
@@ -31,7 +34,7 @@
       2. [Spelling checking](um-spelling.md)
       3. [Thesaurus](um-thesaurus.md)
       4. Advanced markup
-      5. [Working more efficiently with abbreviations](um-abbreviations.md)
+      5. [Using abbreviations to work efficiently](um-abbreviations.md)
    3. Portraits
    4. Tinting
    5. Design rationale comments
@@ -39,26 +42,26 @@
    7. [Exporting images](um-export.md)
    8. [Expansion symbols](um-expansions.md)
    9. Sharing components
+
 5. [The deck editor](um-deck-editor.md)
-   1. [Paper and pages in a deck](um-deck-pages.md)
-      1. [Splitting large pages](um-splitting-large-pages.md)
-      2. Publisher's marks
-      3. Bleed margins
-   2. [Adding content to a deck](um-adding-deck-content.md)
+   1. [Adding content to a deck](um-deck-adding-content)
       1. Game components
       2. Text boxes
       3. Images (custom tiles)
       4. Lines and shapes
       5. Fold-up boxes
-   3. Searching for deck components
-   4. Deck editor commands
-   5. [Creating expansion boards](um-expansion-boards.md)
+   2. [Editing commands](um-deck-commands.md)
+   3. [Pages and paper size](um-deck-pages.md)
+   4. [Splitting large pages when printing](um-deck-page-split.md)
+   5. [Publisher's marks and bleed margins](um-deck-pubmarks.md)
+   5. [Creating boards](um-boards.md)
       1. Tiles
       2. Decorations
    6. Locked deck objects
    7. Deck snapping options
    8. [Tips for sharing decks](um-share-tips.md)
    9. [Tips for printing and assembling components](um-print-tips.md)
+
 6. [Projects](um-projects.md)
    1. Adding new tasks to a project
       1. Deck of cards task

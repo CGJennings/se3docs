@@ -1,6 +1,6 @@
 # The deck editor
 
-The deck editor is used to layout printed pages. It is most commonly used to prepare a deck of related components. It can also be used to design [custom expansion boards](um-expansion-boards.md) when supported by a game's plug-in.
+The deck editor is used to layout printed pages. It is most commonly used to prepare a deck of related components. It can also be used to design [custom boards](um-boards.md) when supported by a game's plug-in.
 
 ## The editor
 
@@ -8,11 +8,47 @@ The deck editor has three basic parts. The upper left corner lets you set basic 
 
 ![the deck editor](images/deck-editor.png)
 
+## Game setting
+
+The **Deck** tab includes an option to choose the game that the deck is associated with. The default is **All Games**, which is all you need if you are creating a deck of cards. Setting a specific game is usually only relevant if you want to design a game board.
+
+Changing the game affects which objects are available: it adds game-specific content in new tabs under the **Components** section. (Not all games add new content.) When set to **All Games**, only the **Tools** and **Faces** tabs are shown.
+
 ## Deck pages
 
-Clicking the last tab in the page tab strip adds a new page. Clicking a tab's delete button removes that page; if the last page is removed, a new, empty page is inserted automatically. When designing large objects like game boards, you can [tile large pages](um-splitting-large-pages.md) over a number of smaller, printer-sized pages from the **Print** dialog.
+Pages are managed from the tab strip over the design area:
 
-[Learn more about paper sizes and deck pages](um-deck-pages.md)
+![animated example of managing deck pages](images/deck-tabs.gif)
+
+To *add a new page*, click the last tab in the list.
+
+To *remove a page*, click the tab's remove button; if the last page is removed, a new, empty page is inserted automatically.
+
+To *rename a page*, double click the tab label and enter the desired name.
+
+To *reorder the pages*, drag and drop the tabs into the new sequence.
+
+## Paper size
+
+Every page in a deck is the same size. You can change this size using the **Deck** tab's **Paper Size** dropdown. (If you have selected a game for the deck, there may also be additional page sizes listed. These are sized for making game boards or other game-specific objects.)
+
+You can define a new paper size by choosing **Custom**:
+
+
+
+At the top of this dialog is a list of custom sizes (initially empty). You can add a new size with the **+** button, and delete it again with the **-** button. To define the size's properties, select it in the list and then edit the details:
+
+The **Name** field can be anything you wish and is used to identify the size when selecting.
+
+The rest of the fields are measurements. You can choose whether you wish to use centimetre (cm) or inch measurements from the dropdown.
+
+The **Size** defines the width and height of the paper (or height and width, the order doesn't matter).
+
+The **Margin** sets the size of the light blue margin drawn along the edge of each page. This is only meant as a guide and does not affect where you can place objects.
+
+The **Grid Size** defines the spacing of the major grid lines in the deck. The minor lines (dashed) are placed at half this interval automatically.
+
+
 
 ## Adding content
 
@@ -22,8 +58,5 @@ Content is added by dragging it from the lists of objects on the left and droppi
 
 Many objects use *snapping* to combine with other objects. For example if you drag one card face over another and release the mouse button, the new face will snap into place next to its neighbour. If these are the front and back of a single game component, fold marks will appear to indicate that the two faces should be folded together to create a single card.
 
-[Learn more about adding content to decks](um-adding-deck-content.md)
+[Learn more about adding content to decks](um-deck-adding-content.md)
 
-## Game sensitivity
-
-The objects available to a deck depend on the game it is set to use. This can be changed using the dropdown list in the deck's main settings. This will reload the tiles, decorations, and other specialty objects related to that game. If there is no such content, only the **Tools** and **Faces** object tabs are shown.
