@@ -40,8 +40,8 @@ Select all objects on current page
 <kbd>I</kbd>  
 Invert the selection
 
-<kbd>C</kbd>/ <kbd>O</kbd>  
-Lock / unlock the selected objects; they cannot be selected or moved by accidental left clicks
+<kbd>C</kbd> / <kbd>O</kbd>  
+Lock / unlock the selected objects so they cannot be selected or moved by accidental left clicks
 
 <kbd>G</kbd>  
 Combine the selected objects into a group
@@ -66,6 +66,8 @@ Move by 1 point in the direction of *arrow key*;
 with <kbd>Shift</kbd> move by 1 grid line;  
 with <kbd>Ctrl</kbd> move by ½ grid line
 
+To *align groups of objects on an edge* or *distribute them so they are even spaced out*, use the [**Deck** menu](um-menu-bar.md).
+
 ## Editing objects
 
 double click *on object*  
@@ -82,8 +84,8 @@ Cut / copy / paste the current selection
 Rotate selected objects right (clockwise) / left (counter-clockwise)
 
 <kbd>M</kbd>  
-Mirror (horizontally flip) the selected objects;
-vertical flip is available from the menu
+Mirror (horizontally flip) the selected objects;  
+vertical flip is available from the **Deck** menu
 
 <kbd>F</kbd> / <kbd>B</kbd>  
 Move the selected objects to the front / back of other objects on the page
@@ -94,4 +96,4 @@ Move the selected objects to the front / back of other objects on the page
 Style the selection
 
 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> / <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>V</kbd>  
-Copy / paste the style settings
+Copy / paste style settings
