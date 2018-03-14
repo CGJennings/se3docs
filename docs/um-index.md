@@ -49,22 +49,23 @@
       2. Text boxes
       3. Images (custom tiles)
       4. Lines and shapes
-      5. Fold-up boxes
    2. [Editing commands](um-deck-commands.md)
    3. [Pages and paper size](um-deck-pages.md)
    4. [Splitting large pages when printing](um-deck-page-split.md)
-   5. [Publisher's marks and bleed margins](um-deck-pubmarks.md)
-   5. [Creating boards](um-boards.md)
+   5. [Publisher's marks (crop, fold marks) and bleed margins](um-deck-pubmarks.md)
+   6. [Creating decks](um-deck-decks.md)
+   7. [Creating boards](um-deck-boards.md)
       1. Tiles
       2. Decorations
-   6. Locked deck objects
-   7. Deck snapping options
+   8. [Creating fold-up boxes](um-deck-boxes.md) (tuck boxes)
+   9. Locked deck objects
+   7. [Object snapping](deck-snap.md)
    8. [Tips for sharing decks](um-share-tips.md)
    9. [Tips for printing and assembling components](um-print-tips.md)
 
 6. [Projects](um-projects.md)
    1. Adding new tasks to a project
-      1. Deck of cards task
+      1. [Deck of cards task](um-proj-deck-task.md)
       2. Documentation task
       3. Factory task
       4. Plug-in task

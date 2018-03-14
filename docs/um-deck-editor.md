@@ -1,62 +1,58 @@
 # The deck editor
 
-The deck editor is used to layout printed pages. It is most commonly used to prepare a deck of related components. It can also be used to design [custom boards](um-boards.md) when supported by a game's plug-in.
+The deck editor is used to lay out printed pages. It is most commonly used to:
 
-## The editor
+1. Prepare a [deck of related components](um-deck-decks.md) for printing.
+2. Design [custom boards](um-deck-boards.md) (when supported by a game's plug-in).
+3. Make [custom boxes](um-deck-boxes.md) for storing cards and tokens.
 
-The deck editor has three basic parts. The upper left corner lets you set basic properties of the deck, such as the paper size it will use. Below that are collections of objects that can be added to the deck, including shapes, text, game components, and game-specific tiles and decorations. On the right side is the page layout area. A tab strip allows you to add, switch between, and organize pages in the deck.
+## Quick start
+
+### A tour of the deck editor
+
+The deck editor has three basic parts. The upper left corner controls the deck's basic properties, such as [paper size](um-deck-pages.md) and [crop marks](um-deck-pubmarks.md). Below that are [objects that can be added to the deck](um-deck-adding-content.md), including shapes, text, game components, and game-specific tiles and decorations. On the right side is the design area. You can [add, switch between, and organize pages](um-deck-pages.md) using the tabs above the design area.
 
 ![the deck editor](images/deck-editor.png)
 
-## Game setting
+### Moving around the page
 
-The **Deck** tab includes an option to choose the game that the deck is associated with. The default is **All Games**, which is all you need if you are creating a deck of cards. Setting a specific game is usually only relevant if you want to design a game board.
+To *move to different parts of the page into view*, left click on the paper and drag.
 
-Changing the game affects which objects are available: it adds game-specific content in new tabs under the **Components** section. (Not all games add new content.) When set to **All Games**, only the **Tools** and **Faces** tabs are shown.
+To *zoom in or out*, use the mouse wheel or <kbd>+</kbd> and <kbd>-</kbd> keys.
 
-## Deck pages
+[Learn more](um-deck-commands.md)
 
-Pages are managed from the tab strip over the design area:
+### Adding objects
 
-![animated example of managing deck pages](images/deck-tabs.gif)
+To *add objects to the deck*, drag them from the lists to the page.
 
-To *add a new page*, click the last tab in the list.
+To *add game components*, first drag and drop the `.eon` file onto the object lists, or click **Add Components**.
 
-To *remove a page*, click the tab's remove button; if the last page is removed, a new, empty page is inserted automatically.
+[Learn more](um-deck-adding-content.md)
 
-To *rename a page*, double click the tab label and enter the desired name.
+### Editing objects
 
-To *reorder the pages*, drag and drop the tabs into the new sequence.
+To *select an object*, left click on it. Hold <kbd>Shift</kbd> to add objects to the selection.
 
-## Paper size
+To *select an area*, <kbd>Shift</kbd> + left click on the paper and drag.
 
-Every page in a deck is the same size. You can change this size using the **Deck** tab's **Paper Size** dropdown. (If you have selected a game for the deck, there may also be additional page sizes listed. These are sized for making game boards or other game-specific objects.)
+To *move and object*, left click on it and drag or use the arrow keys. When you drop an object over an existing object, it may [snap into place](deck-snap.md) as indicated by a blue rectangle. For the most part it just does the right thing and you don't need to worry about it.
 
-You can define a new paper size by choosing **Custom**:
+To *edit an object's content*, double click on it.
 
+To *change the object's style* (such as line colour), right click on it and choose **Style**.
 
+[Learn more](um-deck-commands.md)
 
-At the top of this dialog is a list of custom sizes (initially empty). You can add a new size with the **+** button, and delete it again with the **-** button. To define the size's properties, select it in the list and then edit the details:
+## About the **Game** setting
 
-The **Name** field can be anything you wish and is used to identify the size when selecting.
+To *set the game associated with a deck*, choose the game from the **Game** dropdown of the **Deck** tab. Setting a specific game is usually only relevant if you want to design a [game board](um-deck-boards.md). The default is **All Games**, which is all you need if you are creating a [deck of cards](um-deck-decks.md).
 
-The rest of the fields are measurements. You can choose whether you wish to use centimetre (cm) or inch measurements from the dropdown.
+Changing the **Game** adds game-specific content to different parts of the deck editor:
 
-The **Size** defines the width and height of the paper (or height and width, the order doesn't matter).
+- new objects  (and new categories of objects)  to add to deck pages;
+- new paper sizes for things like custom game boards;
+- new sizing helpers for use with the [**Fold-up Box** tool](um-deck-boxes.md).
 
-The **Margin** sets the size of the light blue margin drawn along the edge of each page. This is only meant as a guide and does not affect where you can place objects.
-
-The **Grid Size** defines the spacing of the major grid lines in the deck. The minor lines (dashed) are placed at half this interval automatically.
-
-
-
-## Adding content
-
-Content is added by dragging it from the lists of objects on the left and dropping it onto a page. To move around a page, click any exposed paper and drag the mouse. Use the mouse wheel, or <kbd>+</kbd> and <kbd>-</kbd> keys to zoom in and out. Click objects to select them; drag to position them on the page. Using the **Deck** menu, you can flip and turn objects, change how they are layered, change their style, and perform other editing operations.
-
-### Snapping and fold marks
-
-Many objects use *snapping* to combine with other objects. For example if you drag one card face over another and release the mouse button, the new face will snap into place next to its neighbour. If these are the front and back of a single game component, fold marks will appear to indicate that the two faces should be folded together to create a single card.
-
-[Learn more about adding content to decks](um-deck-adding-content.md)
+Not all games add new content, or add every possible kind of new content.
 
