@@ -1,6 +1,6 @@
 # Deck sharing tips
 
-## Keep decks and their games components and images together
+## Keep decks, game components, and images together
 
 To keep the size of deck files down, game components and custom tile images are not saved as part of the deck. Instead, the deck contains a link to the location of the original file on your computer. This can be a problem when you want to share the deck with someone, because the linked files won't be in the same place on their computer.
 

@@ -31,32 +31,30 @@
    1. [Preview area](um-preview-area.md)
    2. [Markup text](um-markup-text.md)
       1. Standard markup tags
-      2. [Spelling checking](um-spelling.md)
-      3. [Thesaurus](um-thesaurus.md)
-      4. Advanced markup
-      5. [Using abbreviations to work efficiently](um-abbreviations.md)
+      2. Advanced markup
    3. Portraits
    4. Tinting
    5. Design rationale comments
    6. [Printing components](um-print.md)
    7. [Exporting images](um-export.md)
    8. [Expansion symbols](um-expansions.md)
-   9. Sharing components
+   9. [Spelling checking](um-spelling.md)
+   10. [Thesaurus and other language tools](um-thesaurus.md)
+   11. [Using abbreviations to work efficiently](um-abbreviations.md)
+   9. [Play testing and improving your designs](um-play-testing.md)
 
 5. [The deck editor](um-deck-editor.md)
    1. [Adding content to a deck](um-deck-adding-content)
+   2. [Creating decks](um-deck-decks.md)
+   3. [Creating boards](um-deck-boards.md)
+   4. [Creating fold-up boxes](um-deck-boxes.md) (tuck boxes)
    2. [Editing commands](um-deck-commands.md)
    3. [Pages and paper size](um-deck-pages.md)
    4. [Splitting large pages when printing](um-deck-page-split.md)
    5. [Publisher's marks (crop, fold marks) and bleed margins](um-deck-pubmarks.md)
-   6. [Creating decks](um-deck-decks.md)
-   7. [Creating boards](um-deck-boards.md)
-      1. Tiles
-      2. Decorations
-   8. [Creating fold-up boxes](um-deck-boxes.md) (tuck boxes)
-   7. [Object snapping](um-deck-snap.md)
+   9. [Object snapping](um-deck-snap.md)
    8. [Tips for sharing decks](um-deck-share-tips.md)
-   9. [Tips for printing and assembling components](um-deck-print-tips.md)
+   9. [Tips for printing, assembling, and integrating components](um-deck-print-tips.md)
 
 6. [Projects](um-projects.md)
    1. Adding new tasks to a project
