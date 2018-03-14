@@ -36,7 +36,7 @@ To *select an object*, left click on it. Hold <kbd>Shift</kbd> to add objects to
 
 To *select an area*, <kbd>Shift</kbd> + left click on the paper and drag.
 
-To *move and object*, left click on it and drag or use the arrow keys. When you drop an object over an existing object, it may [snap into place](deck-snap.md) as indicated by a blue rectangle. For the most part it just does the right thing and you don't need to worry about it.
+To *move and object*, left click on it and drag or use the arrow keys. When you drop an object over an existing object, it may [snap into place](um-deck-snap.md) as indicated by a blue rectangle. For the most part it just does the right thing and you don't need to worry about it.
 
 To *edit an object's content*, double click on it.
 

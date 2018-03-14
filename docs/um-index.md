@@ -59,7 +59,7 @@
       2. Decorations
    8. [Creating fold-up boxes](um-deck-boxes.md) (tuck boxes)
    9. Locked deck objects
-   7. [Object snapping](deck-snap.md)
+   7. [Object snapping](um-deck-snap.md)
    8. [Tips for sharing decks](um-share-tips.md)
    9. [Tips for printing and assembling components](um-print-tips.md)
 
