@@ -8,5 +8,5 @@ If the component has more than one face, such as a card with a front and back si
 
 If you choose **Double-sided Layout**, matching front and back faces will be aligned on the front and back side of the same page. Note that most printers with a duplex feature are not precise enough for the two sides to match up exactly.
 
-[Printing and assembling tips](um-print-tips.md)
+[Printing and assembling tips](um-deck-print-tips.md)
 

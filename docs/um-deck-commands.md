@@ -42,6 +42,7 @@ Invert the selection
 
 <kbd>C</kbd> / <kbd>O</kbd>  
 Lock / unlock the selected objects so they cannot be selected or moved by accidental left clicks
+**Tip:** To select a locked object, click the paper to clear the selection, then right click the object
 
 <kbd>G</kbd>  
 Combine the selected objects into a group

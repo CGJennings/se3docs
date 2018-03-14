@@ -45,10 +45,6 @@
 
 5. [The deck editor](um-deck-editor.md)
    1. [Adding content to a deck](um-deck-adding-content)
-      1. Game components
-      2. Text boxes
-      3. Images (custom tiles)
-      4. Lines and shapes
    2. [Editing commands](um-deck-commands.md)
    3. [Pages and paper size](um-deck-pages.md)
    4. [Splitting large pages when printing](um-deck-page-split.md)
@@ -58,10 +54,9 @@
       1. Tiles
       2. Decorations
    8. [Creating fold-up boxes](um-deck-boxes.md) (tuck boxes)
-   9. Locked deck objects
    7. [Object snapping](um-deck-snap.md)
-   8. [Tips for sharing decks](um-share-tips.md)
-   9. [Tips for printing and assembling components](um-print-tips.md)
+   8. [Tips for sharing decks](um-deck-share-tips.md)
+   9. [Tips for printing and assembling components](um-deck-print-tips.md)
 
 6. [Projects](um-projects.md)
    1. Adding new tasks to a project

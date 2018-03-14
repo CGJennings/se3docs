@@ -2,7 +2,9 @@
 
 Certain combinations of objects *snap* when dropped on top of each other. For example, when you drop one card face onto another it snaps beside it so that their edges touch, to make them easier to cut out. For the most part, snapping just does the right thing and you don't need to worry about it. However, it is possible to change an object's snapping rules or stop it from snapping altogether.
 
-To *drop a dragged object without it snapping to a new position*, hold <kbd>Ctrl</kbd> as you release the mouse button.
+![deck snapping example](images/deck-snap-demo.gif)
+
+To *drop a dragged object without snapping*, hold <kbd>Ctrl</kbd> as you release the mouse button.
 
 ## Normal snapping rules
 
