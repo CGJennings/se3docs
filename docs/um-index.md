@@ -32,15 +32,14 @@
    2. [Markup text](um-markup-text.md)
       1. Standard markup tags
       2. Advanced markup
-   3. Portraits
-   4. Tinting
-   5. Design rationale comments
+   3. [Portraits](um-portraits.md)
+   4. [Tinting](um-tints.md)
    6. [Printing components](um-print.md)
    7. [Exporting images](um-export.md)
-   8. [Expansion symbols](um-expansions.md)
-   9. [Spelling checking](um-spelling.md)
-   10. [Thesaurus and other language tools](um-thesaurus.md)
-   11. [Using abbreviations to work efficiently](um-abbreviations.md)
+   7. [Expansion symbols](um-expansions.md)
+   8. [Spelling checking](um-spelling.md)
+   9. [Thesaurus and other language tools](um-thesaurus.md)
+   10. [Using abbreviations to work efficiently](um-abbreviations.md)
    9. [Play testing and improving your designs](um-play-testing.md)
 
 5. [The deck editor](um-deck-editor.md)
