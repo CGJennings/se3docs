@@ -32,6 +32,6 @@ To reset the component to a blank state, choose the **Edit/Clear** menu item.
 
 ### Trying ideas safely
 
-An important element of good design is trying out a number of alternative different ideas. It can be handy to work from a copy of the current design state when trying an idea. This ensures that you can return to the current state if the new design doesn't work out. You can also use a detached tab to compare the two versions side-by-side.
+An important element of good design is trying out a number of alternative different ideas. It can be handy to work from a copy of the current design state when trying an idea. This ensures that you can return to the current state if the new design doesn't work out. You can also use a [detached tab](um-document-tabs.md) to compare the two versions side-by-side.
 
 To *create a clone of the current component* to experiment with, choose the **Edit/Spin Off** menu item.
