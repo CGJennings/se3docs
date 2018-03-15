@@ -30,10 +30,8 @@
 4. [Creating game components](um-game-components.md)
    1. [Preview area](um-preview-area.md)
    2. [Markup text](um-markup-text.md)
-      1. Standard markup tags
-      2. Advanced markup
    3. [Portraits](um-portraits.md)
-   4. [Tinting](um-tints.md)
+   4. [Tints](um-tints.md)
    6. [Printing components](um-print.md)
    7. [Exporting images](um-export.md)
    7. [Expansion symbols](um-expansions.md)
