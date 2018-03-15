@@ -16,7 +16,7 @@ Notice how in the illustration below, the text between `<b>` and`</b>` is shown 
 
 ![how the example markup looks when rendered](images/common-markup.png){: .float-right}
 
-```html
+```
 Here are examples of some of the most commonly used tags:
 You can produce text that is <b>bold</b>, <i>italicized</i>,
 or <u>underlined</u>. You can also <colour #bc0000>change
@@ -37,8 +37,6 @@ Some tags accept *parameters*, extra information that alters the behaviour of th
 
 ## Tag reference
 
-<div style="columns:2">
-
 ### Typeface styles
 
 `<b>`**bold text**`</b>` 
@@ -52,9 +50,3 @@ Some tags accept *parameters*, extra information that alters the behaviour of th
 `<sup>`^superscript text^`</sup>`
 
 `<sub>`~subscript text~`</sub>`
-
-
-
-
-
-</div>
