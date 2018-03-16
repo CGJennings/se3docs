@@ -18,10 +18,11 @@ fetch("assets/js/nav.json")
   
   let current = location.pathname;
   current = current.substring(current.lastIndexOf('/')+1)
+  if(current === "") current = "index.html";
   if(!current.endsWith(".html")) return;
   current = current.substring(0, current.length - ".html".length);
 
-  
+
   let index = current.length >= 3 && current.charAt(2) === '-'
         ? current.substring(0,3) + "index.html"
         : "index.html";
