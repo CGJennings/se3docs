@@ -13,3 +13,34 @@ p img:only-child {
   margin-right: auto;
   max-width: 90%;
 }
+
+
+#foot-nav {
+  width: 100%;
+  display: flex;
+  margin-bottom: 1em;
+}
+#foot-nav div {
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+#foot-nav div:nth-child(1) {
+  margin-left: 0;
+}
+#foot-nav div:nth-child(1)::before {
+  content: "← ";
+}
+#foot-nav div:nth-child(2) {
+  text-align: right;
+  margin-right: 0;
+}
+#foot-nav div:nth-child(2)::after {
+  content: " →";
+}
+.contents {
+  float: right;
+}

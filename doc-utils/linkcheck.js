@@ -39,16 +39,16 @@ let reportProblem = (function() {
 for(let filename of sources) {
   let text = fs.readFileSync( path.resolve(SOURCE_DIR, filename), {encoding: 'utf8'} );
   let linkRegex = /\]\(([-\w\d]+\.md)/g;
-  let link;
+  let match;
 
   if(text.trim().length === 0) {
     reportProblem( filename, 'empty placeholder');
   }
 
   do {
-    link = linkRegex.exec(text);
-    if(link) {
-      let target = link[1];
+    match = linkRegex.exec(text);
+    if(match) {
+      let target = match[1];
       if(sources.indexOf(target) < 0 ) {
         reportProblem(filename, `broken link to ${target}`);
       } else {
@@ -56,7 +56,7 @@ for(let filename of sources) {
         if(i >= 0) orphans.splice(i, 1);
       }
     }
-  } while(link);
+  } while(match);
 }
 
 orphans.forEach( (f,i,a) => reportProblem(f, 'not linked to by any file') );
