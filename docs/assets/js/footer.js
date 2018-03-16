@@ -16,12 +16,23 @@ fetch("assets/js/nav.json")
     navDiv.appendChild(div);
   }
   
-  let navDiv = document.getElementById("foot-nav");
-
   let current = location.pathname;
   current = current.substring(current.lastIndexOf('/')+1)
   if(!current.endsWith(".html")) return;
   current = current.substring(0, current.length - ".html".length);
+
+  
+  let index = current.length >= 3 && current.charAt(2) === '-'
+        ? current.substring(0,3) + "index.html"
+        : "index.html";
+  let contentsEl = document.getElementById("contents")
+  contentsEl.href = index;
+  if( current === "index.html" ) {
+    contentsEl.parentNode.removeChild(contentsEl);
+  }
+
+  
+  let navDiv = document.getElementById("foot-nav");
 
   let currIndex = nav.file.indexOf(current);
   if(currIndex < 0) return;
@@ -38,14 +49,5 @@ fetch("assets/js/nav.json")
     link( nav.title[nextIndex], nav.file[nextIndex]+".html");
   } else {
     link();
-  }
-
-  let index = current.length >= 3 && current.charAt(2) === '-'
-        ? current.substring(0,3) + "index.html"
-        : "index.html";
-  let contentsEl = document.getElementById("contents")
-  contentsEl.href = index;
-  if( current === "index.html" ) {
-    contentsEl.parentNode.removeChild(contentsEl);
   }
 });
