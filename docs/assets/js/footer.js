@@ -40,8 +40,6 @@ fetch("assets/js/nav.json")
     link();
   }
 
-  document.body.appendChild(navDiv);
-
   let index = current.length >= 3 && current.charAt(2) === '-'
         ? current.substring(0,3) + "index.html"
         : "index.html";
