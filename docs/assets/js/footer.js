@@ -43,5 +43,9 @@ fetch("assets/js/nav.json")
   let index = current.length >= 3 && current.charAt(2) === '-'
         ? current.substring(0,3) + "index.html"
         : "index.html";
-  document.getElementById("contents").href = index;
+  let contentsEl = document.getElementById("contents")
+  contentsEl.href = index;
+  if( current === "index.html" ) {
+    contentsEl.parentNode.removeChild(contentsEl);
+  }
 });
