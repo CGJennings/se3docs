@@ -28,7 +28,7 @@ fetch("assets/js/nav.json")
         : "index.html";
   let contentsEl = document.getElementById("contents")
   contentsEl.href = index;
-  if( current === "index.html" ) {
+  if( current === "index" ) {
     contentsEl.parentNode.removeChild(contentsEl);
   }
 
