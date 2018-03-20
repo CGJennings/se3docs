@@ -52,14 +52,14 @@ By default, the following rules are used to figure out how a component should be
 
 2. Names that start with a `$` will affect the private setting with that name. For example, the name `$title` would cause that column to change the component's `title` private setting. The **Setting Explorer** is helpful for determining which setting names a component uses. This is part of the **Developer Tools** plug-in, `eonscat:39f10fa9-6574-4be1-9dd6-3e658c9a6fd3`.    
 
-3. A column name that starts with `port` can affect a component's portrait. The rest of the name determines what part of the portrait the name affects:
-   ​
+3. A column name that starts with `port` can affect a component's portrait. The rest of the name determines what part of the portrait the name affects:  
+     
    `portSource` or `portSrc`: the source image file (a file path or URL)  
    `portScale`: the scale factor  
    `portPanX` or `portX`: the horizontal offset of the portrait from its default centered position  
    `portPanY` or `portY`: the vertical offset of the portrait from its default centered position  
-   `portRotation` or `portRot`: the rotation angle, when allowed by the component type (in degrees)
-   ​
+   `portRotation` or `portRot`: the rotation angle, when allowed by the component type (in degrees)  
+     
    If the template component has more than one portrait, add a number after the `port` to specify which one the column should affect: `port0X`, `port1X`, and so on. Components are always built in column order, so a portrait's source should always be set first since this resets the other values to a default based on the image dimensions.
 
 
