@@ -64,5 +64,6 @@
    2. Customizing a task folder icon
    3. [Searching projects](um-find-in-project.md)
    4. [Automation scripts](um-ajs-scripts.md)
+   5. [Making cards from a CSV data file](um-project-csv-factory.md)
 
 [Other documentation](index.md)
