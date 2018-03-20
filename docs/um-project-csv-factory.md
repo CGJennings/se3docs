@@ -53,16 +53,15 @@ By default, the following rules are used to figure out how a component should be
 2. Names that start with a `$` will affect the private setting with that name. For example, the name `$title` would cause that column to change the component's `title` private setting. The **Setting Explorer** is helpful for determining which setting names a component uses. This is part of the **Developer Tools** plug-in, `eonscat:39f10fa9-6574-4be1-9dd6-3e658c9a6fd3`.    
 
 3. A column name that starts with `port` can affect a component's portrait. The rest of the name determines what part of the portrait the name affects:
+   ​
+   `portSource` or `portSrc`: the source image file (a file path or URL)  
+   `portScale`: the scale factor  
+   `portPanX` or `portX`: the horizontal offset of the portrait from its default centered position  
+   `portPanY` or `portY`: the vertical offset of the portrait from its default centered position  
+   `portRotation` or `portRot`: the rotation angle, when allowed by the component type (in degrees)
+   ​
+   If the template component has more than one portrait, add a number after the `port` to specify which one the column should affect: `port0X`, `port1X`, and so on. Components are always built in column order, so a portrait's source should always be set first since this resets the other values to a default based on the image dimensions.
 
-
-| Name                        | Affects                                                      |
-| --------------------------- | ------------------------------------------------------------ |
-| `portSource` or `portSrc`   | the source image file (a file path or URL)                   |
-| `portScale`                 | the scale factor                                             |
-| `portPanX` or `portX`       | the horizontal offset of the portrait from its default centered position |
-| `portPanY` or `portY`       | the vertical offset of the portrait from its default centered position |
-| `portRotation` or `portRot` | the rotation angle, when allowed by the component type (in degrees) |
-> If the template component has more than one portrait, add a number after the `port` to specify which one the column should affect: `port0X`, `port1X`, and so on. Components are always built in column order, so a portrait's source should always be set first since this resets the other values to a default based on the image dimensions.
 
 4. A column name not covered by any of the above is used to locate a *setter method*. For this to match, the  template class must define a method (function) whose name starts with `set` and ends with the column name. In the example above, the column `name` matched the method `setName`. (The first letter of the name will be capitalized when matching it against available setters.) For scripted components (the most common kind), `name` is probably the only column of this kind you will ever need. For compiled components, there are a few more rules to be aware of: The setter method must take exactly one parameter, and it must be a `String`, `Double`, `Float`, `Integer`, `Short`, `Byte` or `Enum` (or a comparable primitive type such as `double`). When filling out a component, it must be possible to convert the cell value to a suitable object using the matching `<Type>.valueOf` method.
 
