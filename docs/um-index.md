@@ -7,7 +7,7 @@
    2. [Installation on macOS](um-install-mac.md)
    3. [Installation on other platforms](um-install-other.md)
    4. [Transferring settings from another computer](um-install-user-folder.md)
-   5. [Upgrading from Strange Eons 1 or 2](um-upgrading.md)
+   5. [Upgrading from Strange Eons 1 or 2](um-install-upgrading.md)
    6. [Choosing language settings](um-language-settings.md)
    7. [Troubleshooting](um-troubleshooting.md)
    8. [Portable installations](um-portable-install.md)
