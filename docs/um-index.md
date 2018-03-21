@@ -14,7 +14,6 @@
    9. [Command line options](um-install-command-line-options.md)
 
 2. [Installing and managing plug-ins](um-plugins-intro.md)
-   1. [Understanding core components](um-plugins-core.md)
    2. [Downloading and installing plug-ins](um-plugins-catalogue.md)
    3. [Managing installed plug-ins](um-plugins-manager.md)
    4. [Relaunching the application](um-plugins-relaunching.md)
