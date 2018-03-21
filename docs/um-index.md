@@ -9,7 +9,7 @@
    4. [Transferring settings from another computer](um-install-user-folder.md)
    5. [Upgrading from Strange Eons 1 or 2](um-install-upgrading.md)
    6. [Choosing language settings](um-install-languages.md)
-   7. [Troubleshooting](um-troubleshooting.md)
+   7. [Troubleshooting](um-install-troubleshooting.md)
    8. [Portable installations](um-portable-install.md)
    9. [Command line options](um-command-line-options.md)
 
