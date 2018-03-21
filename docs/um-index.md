@@ -19,7 +19,7 @@
    3. [Managing installed plug-ins](um-plugin-manager.md)
    4. [Relaunching the application](um-relaunching.md)
    4. [Managing update notifications](um-update-notifications.md)
-   5. [`eonscat` links](um-eonscat-links.md) (sharing plug-ins on social media)
+   5. ["eons cat" links](um-eonscat-links.md) (sharing plug-ins on social media)
 
 3. [Overview of the app interface](um-overview.md)
    1. [Main menu commands](um-menu-bar.md)
@@ -54,7 +54,7 @@
    9. [Tips for printing, assembling, and integrating components](um-deck-print-tips.md)
 
 6. [Projects](um-projects.md)
-   1. [Deck of cards task](um-proj-deck-task.md)
+   1. [Deck of Cards task](um-proj-deck-task.md)
    2. Documentation task
    3. Factory task
    4. Plug-in task
