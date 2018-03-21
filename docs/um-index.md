@@ -62,5 +62,3 @@
    7. [Automation scripts](um-proj-automation.md)
    8. [Making cards from a CSV data file](um-proj-csv-factory.md)
    9. [Supported file types](um-proj-file-types.md)
-
-[Other documentation](index.md)
