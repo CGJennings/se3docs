@@ -33,7 +33,7 @@ Normally, a token matches the value of a key if it occurs anywhere inside it. Ho
 
 ### Submitting plug-ins
 
-Plug-in developers can submit their own plug-ins for inclusion. At the moment, the easiest way to get started is through this [contact form](https://cgjennings.ca/contact.html). The plug-in's catalogue listing information is prepared using the [root file editor](dm-eons-plugin.md). To test how your listing will appear, you can use the catalogue tools included with the **Developer Tools** plug-in (`eonscat:39f10fa9-6574-4be1-9dd6-3e658c9a6fd3`).
+Plug-in developers can submit their own plug-ins for inclusion. At the moment, the easiest way to get started is through this [contact form](https://cgjennings.ca/contact.html). The plug-in's catalogue listing information is prepared using the [root file editor](dm-eons-plugin.md). To test how your listing will appear, you can use the catalogue tools included with the **Developer Tools** plug-in (`eonscat:6574`).
 
 ### Third-party catalogues
 

@@ -10,8 +10,7 @@ Installed services are listed in the **[Preferences](um-ui-preferences.md)** dia
 
 ## English
 
-For English, there is an **English Thesaurus** plug-in available from the catalogue:  
-`eonscat:6ff316b8-1dc7-4ca5-af50-e0397e212729`
+For English, there is an **English Thesaurus** plug-in available from the catalogue (`eonscat:1dc7`).
 
 When looking up a word, clicking on a link in the pop-up window will look up that word in turn. (The arrow buttons in the top left corner allow you to move through your word history.) If you <kbd>Ctrl</kbd> + click a link, you will replace the looked-up word in the text you are editing. You can enter words to look up directly in the search box. Press <kbd>Enter</kbd> in the box to look up a word, or <kbd>Ctrl</kbd> + <kbd>Enter</kbd> to replace the original text.
 

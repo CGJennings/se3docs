@@ -22,8 +22,7 @@ This action is effective at laying out decks: it lets you mix components of diff
 
 ### Bulk export
 
-This action converts a group of game components to images *en masse*. It is not actually part of the deck task, but is added by the **Bulk Export** plug-in.  
-`eonscat:8f413848-961f-490d-a1ae-5aaf1cd77220`
+This action converts a group of game components to images *en masse*. It is not actually part of the deck task, but is added by the **Bulk Export** plug-in (`eonscat:961f`)
 
 ### Testing a virtual deck without printing
 
