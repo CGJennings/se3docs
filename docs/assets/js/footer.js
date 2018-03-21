@@ -1,5 +1,14 @@
 "use strict";
 
+let current = location.pathname;
+current = current.substring(current.lastIndexOf('/')+1)
+if(current === "") current = "index.html";
+
+// change header colour to match manual
+if(current.startsWith("um-") || current.startsWith("dm-") || current.startsWith("tm-") ) {
+  document.getElementById("header").classList.add(current.substring(0,2));
+}
+
 fetch("assets/js/nav.json")
 .then((response) => response.json())
 .then((nav) => {
@@ -16,23 +25,9 @@ fetch("assets/js/nav.json")
     navDiv.appendChild(div);
   }
   
-  let current = location.pathname;
-  current = current.substring(current.lastIndexOf('/')+1)
-  if(current === "") current = "index.html";
   if(!current.endsWith(".html")) return;
   current = current.substring(0, current.length - ".html".length);
 
-  let index = current.length >= 3 && current.charAt(2) === '-'
-        ? current.substring(0,3) + "index.html"
-        : "index.html";
-
-  let contentsEl = document.getElementById("contents")
-  contentsEl.href = index;
-  if(current.endsWith("index")) {
-    contentsEl.parentNode.removeChild(contentsEl);
-  }
-
-  
   let navDiv = document.getElementById("foot-nav");
 
   let currIndex = nav.file.indexOf(current);

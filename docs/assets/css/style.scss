@@ -14,6 +14,33 @@ p img:only-child {
   max-width: 90%;
 }
 
+#header {
+  width: 100%;
+  font-size: 1.2em;
+  background-color: #546E7A;
+  color: rgba(255,255,255,0.87);
+  padding: 1em;
+  box-shadow: rgba(0,0,0,0.3) 0 2px 8px;
+  top: 0;
+  position: sticky;
+}
+#header strong {
+  margin-right: 2em;
+}
+#header a {
+  color: rgba(255,255,255,0.87);
+  margin-left: 2em;
+}
+#header.um {
+  background-color: #1565C0;
+}
+#header.dm {
+  background-color: #6A169A;
+}
+#header.tm {
+  background-color: #4E342E;
+}
+
 
 #foot-nav {
   width: 100%;
