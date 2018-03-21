@@ -1,6 +1,6 @@
 # Upgrading from Strange Eons 1 or 2
 
-Upgrading from version 1 or 2 of Strange Eons is easy. Although settings and plug-ins from previous versions are not entirely compatible with the new version, Strange Eons 3 keeps these files in a separate place from previous versions so that there are no conflicts. For the most part, you can just download and install Strange Eons 3 with the [standard directions](um-getting-started.md).
+Upgrading from version 1 or 2 of Strange Eons is easy. Although settings and plug-ins from previous versions are not entirely compatible with the new version, Strange Eons 3 keeps these files in a separate place from previous versions so that there are no conflicts. For the most part, you can just download and install Strange Eons 3 with the [standard directions](um-install-intro.md).
 
 ## Don't panic!
 

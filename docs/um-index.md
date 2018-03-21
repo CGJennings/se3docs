@@ -2,7 +2,7 @@
 
 # User manual contents
 
-1. [Getting started](um-getting-started.md)
+1. [Getting started](um-install-intro.md)
    1. [Installation on Windows](um-install-win.md)
    2. [Installation on macOS](um-install-mac.md)
    3. [Installation on other platforms](um-install-other.md)
