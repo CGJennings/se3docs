@@ -10,8 +10,6 @@ Strange Eons doesn't support any games when first installed. The first time you 
 
 The first time you run Strange Eons and open the plug-in catalogue, the catalogue will also silently preselect a special set of plug-ins called *core components*. These are plug-ins that provide part of the basic functionality of Strange Eons, but don't change very often. Making them a separate download means that you won't have to re-download them every time you update the application. Strange Eons has been designed so that it can still run without these core components, but with reduced functionality.
 
-**Main article:** [Core components](um-plugins-core.md)
-
 ## Installing plug-ins
 
 You can also install plug-ins anytime by choosing the **Toolbox/Catalogue** menu item. This opens the same catalogue dialog as above (without any filters applied). Clicking on a listed plug-in will show more information about it. Checking the box next to the listing selects it for installation. As before, choosing **Download and Install** will install your choices. Depending on the plug-ins you select, you may or may not need to restart Strange Eons afterward.
