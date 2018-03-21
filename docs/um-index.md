@@ -56,11 +56,8 @@
 6. [Projects](um-projects.md)
    1. [Deck of Cards task](um-proj-deck-task.md)
    2. [Documentation task](um-proj-doc-task.md)
-   3. Factory task
+   3. [Factory task](um-proj-factory-task.md)
    4. Plug-in task
-   5. Generic task
-   6. Task groups
-   2. Customizing a task folder icon
    3. [Searching projects](um-proj-search.md)
    4. [Automation scripts](um-proj-automation.md)
    5. [Making cards from a CSV data file](um-proj-csv-factory.md)
