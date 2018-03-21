@@ -8,7 +8,7 @@ The plug-in catalogue, available from the **Toolbox/Catalogue** menu, is used to
 
 The catalogue uses the following icons to help you identify the status of each plug-in:
 
-|                  Plug‑in Icon                  |         [Core](um-core-components.md) icon          | Description                                                  |
+|                  Plug‑in Icon                  |         [Core](um-plugins-core.md) icon          | Description                                                  |
 | :--------------------------------------------: | :-------------------------------------------------: | ------------------------------------------------------------ |
 | ![icon](images/catalog/not-installed-new.png)  | ![icon](images/catalog/core-not-installed-new.png)  | **New:** not installed, and new or updated since you last checked the catalogue |
 |   ![icon](images/catalog/not-installed.png)    |   ![icon](images/catalog/core-not-installed.png)    | **Not installed:** not installed, not new                    |
@@ -25,7 +25,7 @@ A number of useful built-in filters are provided, such as filtering by game or p
 
 ### Advanced filter syntax
 
-The filter field accepts one or more *search tokens*. Search tokens are separated from each other by commas and/or spaces. (When making an [`eonscat` link](um-eonscat-links.md), avoid using spaces.) A token is normally matched against the `name`, `description`, `credits`, `tags`, `core`, `id`, and `comment` keys in the [catalog listing data](dm-eons-plugin.md) assigned by the plug-in developer. To match against a specific key, start the search token with the key name and an equals sign. For example, the token `game=AH` matches the `game` key against the token `AH`. If a token starts with an exclamation mark, as in `!game=AH`, then it will *exclude* matching plug-ins from the results.
+The filter field accepts one or more *search tokens*. Search tokens are separated from each other by commas and/or spaces. (When making an [`eonscat` link](um-plugins-eonscat.md), avoid using spaces.) A token is normally matched against the `name`, `description`, `credits`, `tags`, `core`, `id`, and `comment` keys in the [catalog listing data](dm-eons-plugin.md) assigned by the plug-in developer. To match against a specific key, start the search token with the key name and an equals sign. For example, the token `game=AH` matches the `game` key against the token `AH`. If a token starts with an exclamation mark, as in `!game=AH`, then it will *exclude* matching plug-ins from the results.
 
 Normally, a token matches the value of a key if it occurs anywhere inside it. However, when matching the `game` key, the token must match the entire value. Matching is not case-sensitive. The following wildcards are allowed in tokens: `*` to match any text except spaces, and `.` to match a single letter.
 

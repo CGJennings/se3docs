@@ -6,7 +6,7 @@ Strange Eons does not have support for a thesaurus built in, but it includes a f
 
 When a look-up service is installed, you can look up words in any field that supports spelling checking. Right click on a correctly spelled word to look it up. At the top of the pop-up menu you will see a menu item that shows a book icon and the word under the pointer. Selecting this will display the look-up service results for the word. If the menu item is disabled (greyed out), then the look-up service does not have an entry for that word.
 
-Installed services are listed in the **[Preferences](um-preferences.md)** dialog, in the **Language** section. Some services have configurable settings; these can be edited by selecting them in the service list and choosing **Service Preferences**.
+Installed services are listed in the **[Preferences](um-ui-preferences.md)** dialog, in the **Language** section. Some services have configurable settings; these can be edited by selecting them in the service list and choosing **Service Preferences**.
 
 ## English
 

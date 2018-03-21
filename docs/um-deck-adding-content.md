@@ -27,7 +27,7 @@ To *add game components* such as cards, first you need to add them to the **Face
 
 To *add a text box*, drag and drop the **Text Box** from the **Tools** list onto the page.
 
-To *edit the text in a text box*, double click the text box. Enter the desired [markup text](um-markup-text.md). Press <kbd>Enter</kbd> to accept the new text, or <kbd>Esc</kbd> to cancel the edit. To insert line breaks, use <kbd>Shift</kbd> + <kbd>Enter</kbd>.
+To *edit the text in a text box*, double click the text box. Enter the desired [markup text](um-gc-markup.md). Press <kbd>Enter</kbd> to accept the new text, or <kbd>Esc</kbd> to cancel the edit. To insert line breaks, use <kbd>Shift</kbd> + <kbd>Enter</kbd>.
 
 To *change the box size* click the box, then drag one of the corners.
 

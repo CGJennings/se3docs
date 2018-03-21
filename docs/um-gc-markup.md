@@ -25,7 +25,7 @@ the colour</colour>, <size 11>size</size>, and
 <image "d:\my pictures\example.png">.
 ```
 
-Common shortcuts that you may be familiar with, such as using <kbd>Ctrl</kbd> + <kbd>B</kbd> to bold the selected text will work as expected. Check the **Markup** menu. You can also format markup text using the [context bar](um-context-bar.md).
+Common shortcuts that you may be familiar with, such as using <kbd>Ctrl</kbd> + <kbd>B</kbd> to bold the selected text will work as expected. Check the **Markup** menu. You can also format markup text using the [context bar](um-ui-context-bar.md).
 
 To *typeset a heading, title or rule name* where relevant, surround the heading in `<h1>Rule name</h1>`.
 
@@ -85,7 +85,7 @@ Sets text colour using hexadecimal alpha (opacity), red, green, and blue values,
 `<colour hue saturation brightness>`...`</colour>`  
 `<color hue saturation brightness>`...`</color>`
 
-Sets the text colour from hue (colour wheel angle, 0–360°), saturation (0–1), and brightness (0–1) values. This is the same colour model used by a [tint control](um-tints.md).
+Sets the text colour from hue (colour wheel angle, 0–360°), saturation (0–1), and brightness (0–1) values. This is the same colour model used by a [tint control](um-gc-tints.md).
 
 You can also use these named colour tags: `<black>`, `<grey>`, `<gray>`, `<dark grey>`, `<dark gray>`, `<light grey>`, `<light gray>`, `<white>`, `<red>`, `<orange>`, `<yellow>`, `<green>`, `<blue>`, `<purple>`, `<brown>`. Plug-ins may also define new game-specific colour tags, or redefine the existing tags.
 
@@ -174,7 +174,7 @@ Insert an image from a local file. Notice that quotes are used because the path 
 
 ### Game-specific tags
 
-Games often define their own custom tags to do things like insert rule icons. Check the documentation for the plug-in. You might also wish to check if you the plug-in provides buttons for the [context bar](um-context-bar.md).
+Games often define their own custom tags to do things like insert rule icons. Check the documentation for the plug-in. You might also wish to check if you the plug-in provides buttons for the [context bar](um-ui-context-bar.md).
 
 ### Variable tags
 

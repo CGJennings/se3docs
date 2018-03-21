@@ -1,6 +1,6 @@
 # Creating decks
 
-The deck editor makes it easy to print sheets of cards to cut out for testing or making homebrew designs. If you are having your cards printed commercially, the printer will usually require a very specific format that you must follow, such as a PDF with exactly one card face per page. In  that case you are probably better off [using a script](um-proj-automation.md) to [export the components as images](um-export.md) and then compiling the images into the required format.
+The deck editor makes it easy to print sheets of cards to cut out for testing or making homebrew designs. If you are having your cards printed commercially, the printer will usually require a very specific format that you must follow, such as a PDF with exactly one card face per page. In  that case you are probably better off [using a script](um-proj-automation.md) to [export the components as images](um-gc-export.md) and then compiling the images into the required format.
 
 With the deck editor you can lay out the cards in your deck exactly as you wish. If you want certain cards next to each other or you want to put an instruction sheet on page 1, you can do it. Before you go down the road of manually laying out a deck, though, you might want to look at [building a deck automatically](um-proj-deck-task.md) with a project. It can pack decks into as few pages as possible, all by itself, even if your components vary wildly in size.
 

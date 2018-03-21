@@ -67,7 +67,7 @@ Move by 1 point in the direction of *arrow key*;
 with <kbd>Shift</kbd> move by 1 grid line;  
 with <kbd>Ctrl</kbd> move by ½ grid line
 
-To *align groups of objects on an edge* or *distribute them so they are even spaced out*, use the [**Deck** menu](um-menu-bar.md).
+To *align groups of objects on an edge* or *distribute them so they are even spaced out*, use the [**Deck** menu](um-ui-menu.md).
 
 ## Editing objects
 

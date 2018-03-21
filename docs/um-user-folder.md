@@ -33,22 +33,22 @@ You can specify a different location by setting the environment variable `STRANG
 Most of the files stored in the user folder have self-explanatory names. Here are some of the most common items you will find:
 
 `abbrev/*`  
-This folder contains your custom [abbreviations](um-abbreviations.md). Deleted it will revert abbreviations to their defaults.
+This folder contains your custom [abbreviations](um-gc-abbreviations.md). Deleted it will revert abbreviations to their defaults.
 
 `cat-cache`  
-A copy of the last [plug-in catalogue](um-plugin-catalogue.md) you downloaded. If you open the catalogue several times in quick succession, this cached copy is used instead of downloading it again each time.
+A copy of the last [plug-in catalogue](um-plugins-catalogue.md) you downloaded. If you open the catalogue several times in quick succession, this cached copy is used instead of downloading it again each time.
 
 `debugger-client/*`  
 Stores preferences for the script debugger client application used by plug-in developers.
 
 `learned-spelling-words`  
-Contains your personal [spelling words](um-spelling.md).
+Contains your personal [spelling words](um-gc-spelling.md).
 
 `plugins/*`  
 Contains the bundle files of all currently installed plug-ins.
 
 `preferences`  
-Contains your personalized [preference settings](um-preferences.md).
+Contains your personalized [preference settings](um-ui-preferences.md).
 
 `quickscript`  
 Contains the last script that you ran from the **Quickscript** window, to restore it when you open the window again.

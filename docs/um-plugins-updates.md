@@ -10,7 +10,7 @@ When updates are available, Strange Eons will do one of the following depending 
 A message window will pop up in the corner.
 
 **Install the updates immediately**  
-Without fanfare, download and install the updates and then let you know if you need to [relaunch](um-relaunching.md).
+Without fanfare, download and install the updates and then let you know if you need to [relaunch](um-plugins-relaunching.md).
 
 ## Checking manually
 

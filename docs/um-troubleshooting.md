@@ -37,7 +37,7 @@ Sets a 2 GiB limit (as 2 GiB).
 
 ### The plug-in bundle X could not be updated
 
-This indicates that you have downloaded an update for a plug-in that required a [relaunch](um-relaunching.md), but when \Strange Eons restarted it was unable to replace the old plug-in for some reason. To investigate, you'll need to check your plug-in folder. If the app finishes starting, you can do this from the [plug-in manager](um-plugin-manager.md). Otherwise, find the `plug-ins` subfolder inside your [inside your user folder](um-user-folder.md). You should find a file with the name indicated by the error message and the file extension `.autoupdate`. You will usually also find a file with the same name but no `.autoupdate`. For example:
+This indicates that you have downloaded an update for a plug-in that required a [relaunch](um-plugins-relaunching.md), but when \Strange Eons restarted it was unable to replace the old plug-in for some reason. To investigate, you'll need to check your plug-in folder. If the app finishes starting, you can do this from the [plug-in manager](um-plugins-manager.md). Otherwise, find the `plug-ins` subfolder inside your [inside your user folder](um-user-folder.md). You should find a file with the name indicated by the error message and the file extension `.autoupdate`. You will usually also find a file with the same name but no `.autoupdate`. For example:
 
 ```
 DeveloperTools.seplugin 

@@ -21,6 +21,6 @@ There is no need to worry about paper size for large expansion boards when shari
 
 ## Use projects instead of laying out a deck yourself
 
-[Projects](um-projects.md) can make it easier to share decks. In fact, you can often leave the deck out altogether. If the deck only contains game components and you don't care about the order, then the recipient can automatically generate a deck at whatever page size they desire using the **Make Deck** action. And projects can be shared easily, either as packaged projects or by zipping them up using the **Export** action.
+[Projects](um-proj-intro.md) can make it easier to share decks. In fact, you can often leave the deck out altogether. If the deck only contains game components and you don't care about the order, then the recipient can automatically generate a deck at whatever page size they desire using the **Make Deck** action. And projects can be shared easily, either as packaged projects or by zipping them up using the **Export** action.
 
 Another advantage of projects is [**project:** URLs](dm-special-urls.md). For example, if one of your game components uses a portrait image, put the image in a convenient location in your project, then drag-and-drop the image from the project view to the portrait panel. The portrait is now linked to a location relative to the open project and not a fixed location on your computer.

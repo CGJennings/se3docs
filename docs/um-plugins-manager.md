@@ -6,7 +6,7 @@ The plug-in manager lets you view, uninstall and configure some basic settings f
 
 ## Uninstalling a plug-in
 
-To uninstall a plug-in, select it in the list and click the **Uninstall** button. [Relaunching](um-relaunching.md) the app may be required to complete the request.
+To uninstall a plug-in, select it in the list and click the **Uninstall** button. [Relaunching](um-plugins-relaunching.md) the app may be required to complete the request.
 
 ## Options for "tool" plug-ins
 

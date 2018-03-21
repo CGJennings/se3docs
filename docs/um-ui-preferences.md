@@ -1,6 +1,6 @@
 # Preferences
 
-The **Preferences** dialog lets you configure Strange Eons to suit your needs and tastes. The dialog is divided into categories shown in a list running down the side of the dialog. Selecting a category displays the relevant options. To save your changes, choose the **OK** button. Options marked with an asterisk (*) won't take effect until you [relaunch](um-relaunching.md) the app.
+The **Preferences** dialog lets you configure Strange Eons to suit your needs and tastes. The dialog is divided into categories shown in a list running down the side of the dialog. Selecting a category displays the relevant options. To save your changes, choose the **OK** button. Options marked with an asterisk (*) won't take effect until you [relaunch](um-plugins-relaunching.md) the app.
 
 ![the preferences dialog](images/preferences.png)
 
@@ -10,7 +10,7 @@ The following categories are standard, but plug-ins can add more.
 
 ### Language
 
-[Change the game or interface language.](um-language-settings.md) Enable or disable live spelling checking. Configure any installed **Lexical Look-up Services**, such as the [thesaurus](um-thesaurus.md).
+[Change the game or interface language.](um-language-settings.md) Enable or disable live spelling checking. Configure any installed **Lexical Look-up Services**, such as the [thesaurus](um-gc-thesaurus.md).
 
 ### Look and Feel
 
@@ -18,7 +18,7 @@ Change the app theme and other user interface options.
 
 ### Context bar
 
-Customize the buttons shown on the [context bar](um-context-bar.md).
+Customize the buttons shown on the [context bar](um-ui-context-bar.md).
 
 ### Design support
 

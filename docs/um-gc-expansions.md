@@ -30,19 +30,19 @@ Some game plug-ins can automatically create a set of graphics for you from a sin
 
 ![page 2 of the custom expansion tool](images/custom-exp-2.png)
 
-Choose **Continue** to move to the last step. The **New Expansion** tool actually builds and installs a mini plug-in that registers the new expansion for you. This makes it easy to share the new expansion symbol with others: all they have to do is install your plug-in. (If they load one of your components without the plug-in installed, they won't see the symbol.) This last step gives you a chance to save a copy of the plug-in somewhere, to make it easier to share. If you skip this step, you can always find the plug-in in [your plug-in folder](um-plugin-manager.md).
+Choose **Continue** to move to the last step. The **New Expansion** tool actually builds and installs a mini plug-in that registers the new expansion for you. This makes it easy to share the new expansion symbol with others: all they have to do is install your plug-in. (If they load one of your components without the plug-in installed, they won't see the symbol.) This last step gives you a chance to save a copy of the plug-in somewhere, to make it easier to share. If you skip this step, you can always find the plug-in in [your plug-in folder](um-plugins-manager.md).
 
 ![page 3 of the custom expansion tool](images/custom-exp-3.png)
 
 
 
-Commands that let you change the [expansion symbol](um-expansions.md) displayed on supported game components. An expansion is a collection of related content that builds on a base game but is released together as a separate product. Manufacturers often mark the expansion content with a small graphical symbol so it can be easily separated out from the base game again. This menu lets you mark your own components with one or more expansion symbols, when supported by the game's plug-in.
+Commands that let you change the [expansion symbol](um-gc-expansions.md) displayed on supported game components. An expansion is a collection of related content that builds on a base game but is released together as a separate product. Manufacturers often mark the expansion content with a small graphical symbol so it can be easily separated out from the base game again. This menu lets you mark your own components with one or more expansion symbols, when supported by the game's plug-in.
 
 ### Editing a custom expansion
 
 If you want to change the name or graphics of a custom expansion, you have two options. Option one is to create a new expansion with the same name, uninstall the old plug-in, and update your components to use the new version. Option two is to modify the expansion's mini plug-in. This is not difficult:
 
-1. Copy the plug-in bundle file (`.seext`) for the expansion symbol into a [project](um-projects.md).
+1. Copy the plug-in bundle file (`.seext`) for the expansion symbol into a [project](um-proj-intro.md).
 2. Uninstall the existing plug-in.
 3. In the project, right click on the plug-in bundle and choose **Import Plug-in**.
 4. A new task folder will be added to the project. Open it, then look through the subfolders until you find the script and image files.

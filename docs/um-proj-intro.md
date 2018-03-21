@@ -10,7 +10,7 @@ A project is just a special folder on your computer. Strange Eons recognizes the
 
 To *create a new project*:
 
-1. Choose **File/New Project** from the [main menu](um-menu-bar.md).
+1. Choose **File/New Project** from the [main menu](um-ui-menu.md).
 2. Enter a name for the project. (This will also be the name of the project folder.)
 3. Click the folder icon to choose a location to store the project on your computer, usually in your home or documents folder.
 4. Choose how you want to store the project. They are usually stored in folders, as described above.

@@ -2,7 +2,7 @@
 
 With a CSV factory, you can create groups of game components by filling in a template with data from a CSV file. A CSV (Comma Separated Value) file is a plain text file that stores tabular data (data arranged in rows and columns). Most spreadsheets and many other tools can be used to create them.
 
-To get started you need to install the CSV Factory plug-in from the [catalogue](um-plugin-catalogue.md):  
+To get started you need to install the CSV Factory plug-in from the [catalogue](um-plugins-catalogue.md):  
 `eonscat:c29f2d03-964c-42d0-93dc-99b5ab58484a`
 
 This will add a new option when adding a task to a project, the CSV Factory.

@@ -12,7 +12,7 @@ To get started, [download](http://cgjennings.ca/eons/download/update.html) the l
 
 ## Adding support for specific games
 
-Out of the box, Strange Eons will let you make [decks](um-deck-editor.md) and generic tokens. It doesn't support any specific game. That's why the first time you run it, it will suggest that you install some *plug-ins*. Agree and it will show you a [catalogue](um-plugin-catalogue.md) of options to choose from. Pick some and then click **Download and Install**.
+Out of the box, Strange Eons will let you make [decks](um-deck-intro.md) and generic tokens. It doesn't support any specific game. That's why the first time you run it, it will suggest that you install some *plug-ins*. Agree and it will show you a [catalogue](um-plugins-catalogue.md) of options to choose from. Pick some and then click **Download and Install**.
 
 > No plug-in for the game you want? You can always [make one yourself](dm-index.md). For now, just pick something so you can continue with the guide and get a sense of what's possible. (Try Arkham Horror!)
 
@@ -20,28 +20,28 @@ Out of the box, Strange Eons will let you make [decks](um-deck-editor.md) and ge
 
 ## Relaunch to finish plug-in installation
 
-After it downloads your plug-ins, Strange Eons will want to [relaunch](um-relaunching.md) (quit and restart). Let it.
+After it downloads your plug-ins, Strange Eons will want to [relaunch](um-plugins-relaunching.md) (quit and restart). Let it.
 
 ![the relaunch pop-up window](images/relaunch.png)
 
 ## Your first game component
 
-When it starts back up, you will be ready to create your first [game component](um-game-components.md). Choose the **File/New** menu item, and you'll be shown a dialog of available components. Look through the categories and pick the kind of component you want. (If you get lost, try the **Everything** category.) Then choose **Create**.
+When it starts back up, you will be ready to create your first [game component](um-gc-intro.md). Choose the **File/New** menu item, and you'll be shown a dialog of available components. Look through the categories and pick the kind of component you want. (If you get lost, try the **Everything** category.) Then choose **Create**.
 
 ![the new component dialog](images/new-component.png)
 
 ## Create!
 
-Your new component will appear in an editor in the middle of the app window. On the left side you'll find editing controls, and on the right side the [preview area](um-preview-area.md) shows you what the result will look like. Try playing around with the editing controls and watch the preview area change.
+Your new component will appear in an editor in the middle of the app window. On the left side you'll find editing controls, and on the right side the [preview area](um-gc-preview.md) shows you what the result will look like. Try playing around with the editing controls and watch the preview area change.
 
 ![a game component editor](images/game-component.png)
 
 ## What next?
 OK, so you have created something and you are happy with it. Now what? Here are a few suggestions to start with:
 
-* [save it so you can edit it some more later](um-menu-bar.md#save)
-* [print it](um-print.md)
-* [export it (turn it into images)](um-export.md)
-* [make some more components and combine them into a deck](um-deck-editor.md)
+* [save it so you can edit it some more later](um-ui-menu.md#save)
+* [print it](um-gc-print.md)
+* [export it (turn it into images)](um-gc-export.md)
+* [make some more components and combine them into a deck](um-deck-intro.md)
 
 Go ahead and explore. You can [come back anytime](um-index.md) to learn more.

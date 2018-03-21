@@ -1,6 +1,6 @@
 # Printing components
 
-The **File/Print** menu is a quick way to print a single component. For more control, or to print a group of components together, you will want to create a [deck](um-deck-editor.md).
+The **File/Print** menu is a quick way to print a single component. For more control, or to print a group of components together, you will want to create a [deck](um-deck-intro.md).
 
 ![the print dialog](images/print.png)
 

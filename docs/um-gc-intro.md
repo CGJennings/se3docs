@@ -20,18 +20,18 @@ Components that don't match your criteria will be (temporarily) removed from the
 
 ## Design the component
 
-Clicking **Create** opens a new editor for the selected component. Nearly all component editors are divided into editing controls on the left, and a [preview area](um-preview-area.md) on the right that shows you what the result will look like. There may be multiple groups of editing controls divided into tabs. There may also be multiple faces shown in the preview area, divided into a separate group of tabs.
+Clicking **Create** opens a new editor for the selected component. Nearly all component editors are divided into editing controls on the left, and a [preview area](um-gc-preview.md) on the right that shows you what the result will look like. There may be multiple groups of editing controls divided into tabs. There may also be multiple faces shown in the preview area, divided into a separate group of tabs.
 
 ![a game component editor](images/game-component.png)
 
 ### The initial example
 
-Usually, the new component will come prefilled with an example. This will help you get your bearings and see which editing controls do what. It may also demonstrate how to use some game- or component-specific [markup tags](um-markup-text.md). This can be very useful to get you up to speed quickly, but might become a hindrance as you become familiar with how the component works.
+Usually, the new component will come prefilled with an example. This will help you get your bearings and see which editing controls do what. It may also demonstrate how to use some game- or component-specific [markup tags](um-gc-markup.md). This can be very useful to get you up to speed quickly, but might become a hindrance as you become familiar with how the component works.
 
 To reset the component to a blank state, choose the **Edit/Clear** menu item.
 
 ### Trying ideas safely
 
-An important element of good design is trying out a number of alternative different ideas. It can be handy to work from a copy of the current design state when trying an idea. This ensures that you can return to the current state if the new design doesn't work out. You can also use a [detached tab](um-document-tabs.md) to compare the two versions side-by-side.
+An important element of good design is trying out a number of alternative different ideas. It can be handy to work from a copy of the current design state when trying an idea. This ensures that you can return to the current state if the new design doesn't work out. You can also use a [detached tab](um-ui-documents.md) to compare the two versions side-by-side.
 
 To *create a clone of the current component* to experiment with, choose the **Edit/Spin Off** menu item.

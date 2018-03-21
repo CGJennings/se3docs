@@ -10,11 +10,11 @@ File commands apply to whole documents or projects.
 
 ### New
 
-Creates a new game component. The [New Component Dialog](um-game-components.md) is shown to let you pick the component type from searchable categories. An editor for the component will appear in the [tab strip](um-document-tabs.md).
+Creates a new game component. The [New Component Dialog](um-gc-intro.md) is shown to let you pick the component type from searchable categories. An editor for the component will appear in the [tab strip](um-ui-documents.md).
 
 ### New Project
 
-Creates a [new project](um-projects.md) to manage groups of related components or create plug-ins.
+Creates a [new project](um-proj-intro.md) to manage groups of related components or create plug-ins.
 
 ### Open
 
@@ -54,7 +54,7 @@ Creates a version of the current document by converting it to a different repres
 
 ### Print
 
-Prints the current document. For more control over how game components are printed, or to print a group of components as a set, [create a deck](um-deck-editor.md).
+Prints the current document. For more control over how game components are printed, or to print a group of components as a set, [create a deck](um-deck-intro.md).
 
 ### Exit (Quit on macOS)
 
@@ -100,7 +100,7 @@ Searches for matching text (in editors that support this).
 
 ### Preferences
 
-Opens the [Preferences dialog](um-preferences.md) to customize app settings.
+Opens the [Preferences dialog](um-ui-preferences.md) to customize app settings.
 
 
 
@@ -110,7 +110,7 @@ Options that affect how content is displayed, especially how game component prev
 
 ### Preview Quality
 
-Allows you to adjust the quality of game components previews to balance legibility and speed. The default is **Adjust Automatically** which will continually adjust the quality based on how long drawing takes. Reasonably powerful systems can probably lock this on **High** or **Ultrahigh**. On less powerful systems, you may also want to adjust the preview update rate [preference](um-preferences.md).
+Allows you to adjust the quality of game components previews to balance legibility and speed. The default is **Adjust Automatically** which will continually adjust the quality based on how long drawing takes. Reasonably powerful systems can probably lock this on **High** or **Ultrahigh**. On less powerful systems, you may also want to adjust the preview update rate [preference](um-ui-preferences.md).
 
 ### Preview Backdrop
 
@@ -118,19 +118,19 @@ Allows you to choose the background you prefer for game component previews, from
 
 ### Context Bar
 
-Toggles whether the [context bar](um-context-bar.md) is visible. This is a small floating toolbar that pops up next to whatever text field or deck page you are editing. It adjusts the options it shows depending to what you are editing.
+Toggles whether the [context bar](um-ui-context-bar.md) is visible. This is a small floating toolbar that pops up next to whatever text field or deck page you are editing. It adjusts the options it shows depending to what you are editing.
 
 ### Object Handles
 
-Toggles whether object handles are shown in the [deck editor](um-deck-editor.md). These are used to resize or rotate objects in a deck. It is sometimes useful to temporarily hide them to get a clearer view of what you are working on.
+Toggles whether object handles are shown in the [deck editor](um-deck-intro.md). These are used to resize or rotate objects in a deck. It is sometimes useful to temporarily hide them to get a clearer view of what you are working on.
 
 ### Grid Lines
 
-Toggles whether grid lines are shown in the [deck editor](um-deck-editor.md).
+Toggles whether grid lines are shown in the [deck editor](um-deck-intro.md).
 
 ### Margin
 
-Toggles whether the page margin is shown in the [deck editor](um-deck-editor.md).
+Toggles whether the page margin is shown in the [deck editor](um-deck-intro.md).
 
 ### Source Navigator
 
@@ -140,7 +140,7 @@ Toggles whether the source navigator panel is shown in the source code editor (w
 
 ## Expansion
 
-Commands that let you change the [expansion symbol](um-expansions.md) displayed on supported game components. An expansion is a collection of related content that builds on a base game but is released together as a separate product. Manufacturers often mark the expansion content with a small graphical symbol so it can be easily separated out from the base game again. This menu lets you mark your own components with one or more expansion symbols, when supported by the game's plug-in.
+Commands that let you change the [expansion symbol](um-gc-expansions.md) displayed on supported game components. An expansion is a collection of related content that builds on a base game but is released together as a separate product. Manufacturers often mark the expansion content with a small graphical symbol so it can be easily separated out from the base game again. This menu lets you mark your own components with one or more expansion symbols, when supported by the game's plug-in.
 
 ### New
 
@@ -170,7 +170,7 @@ Opens a dialog that allows you to choose one or more expansions for the componen
 
 ## Markup
 
-Commands that alter how text is formatted on game components by inserting [markup tags](um-markup-text.md).
+Commands that alter how text is formatted on game components by inserting [markup tags](um-gc-markup.md).
 
 ### Alignment
 
@@ -210,13 +210,13 @@ Applies superscript/subscript style to the selected text.
 
 ### Abbreviations
 
-Opens the [abbreviation editor](um-abbreviations.md) to define game-specific abbreviations that reduce typing.
+Opens the [abbreviation editor](um-gc-abbreviations.md) to define game-specific abbreviations that reduce typing.
 
 
 
 ## Deck
 
-Commands specific to laying out objects in the [deck editor](um-deck-editor.md).
+Commands specific to laying out objects in the [deck editor](um-deck-intro.md).
 
 ### Move to Front/Move to Back
 
@@ -310,25 +310,25 @@ Offer suggestions to complete a fragment of script code. You can choose a sugges
 
 ### Abbreviations
 
-Opens the [abbreviation editor](um-abbreviations.md) to define type-specific abbreviations that reduce typing.
+Opens the [abbreviation editor](um-gc-abbreviations.md) to define type-specific abbreviations that reduce typing.
 
 
 
 ## Toolbox
 
-Commands for installing and activating [plug-ins](um-installing-managing-plugins.md). Plug-ins that add user-activated "tools" will be listed here; selecting their respective menu item activates the tool in question. There are also commands here for managing plug-ins:
+Commands for installing and activating [plug-ins](um-plugins-intro.md). Plug-ins that add user-activated "tools" will be listed here; selecting their respective menu item activates the tool in question. There are also commands here for managing plug-ins:
 
 ### Updates
 
-Opens the **[Updates](um-update-notifications.md)** dialog to change the automatic update settings.
+Opens the **[Updates](um-plugins-updates.md)** dialog to change the automatic update settings.
 
 ### Catalogue
 
-Opens the **[Plug-in Catalogue](um-plugin-catalogue.md)** to install or update plug-ins.
+Opens the **[Plug-in Catalogue](um-plugins-catalogue.md)** to install or update plug-ins.
 
 ### Plug-in Manager
 
-Opens the **[Plug-in Manager](um-plugin-manager.md)** to browse installed plug-ins, uninstall them, or assign keyboard shortcuts to tool plug-ins.
+Opens the **[Plug-in Manager](um-plugins-manager.md)** to browse installed plug-ins, uninstall them, or assign keyboard shortcuts to tool plug-ins.
 
 ## Window
 
