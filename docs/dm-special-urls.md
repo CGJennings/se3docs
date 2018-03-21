@@ -24,6 +24,6 @@ This is helpful when developing plug-ins: you can, for example, run a plug-in sc
 
 ## Project URLs
 
-A project URL can be used to access a file in the open project independently of where the project is stored on your computer. They can be useful for [automation scripts](um-ajs-scripts.md) and in other cases where you want to refer content stored in another part of a project. For example, if you have a card that contains an `<image>` markup tag, you could use a project URL to store the image alongside the card without the link breaking when the project is copied somewhere else.
+A project URL can be used to access a file in the open project independently of where the project is stored on your computer. They can be useful for [automation scripts](um-proj-automation.md) and in other cases where you want to refer content stored in another part of a project. For example, if you have a card that contains an `<image>` markup tag, you could use a project URL to store the image alongside the card without the link breaking when the project is copied somewhere else.
 
 A project URL starts with `project://` and is followed by a path relative to the project root.

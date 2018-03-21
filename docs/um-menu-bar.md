@@ -96,7 +96,7 @@ Searches for matching text (in editors that support this).
 
 ### Find in Project
 
-[Searches for matching text](um-find-in-project.md) in the files of the current project.
+[Searches for matching text](um-proj-search.md) in the files of the current project.
 
 ### Preferences
 

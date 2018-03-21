@@ -54,16 +54,15 @@
    9. [Tips for printing, assembling, and integrating components](um-deck-print-tips.md)
 
 6. [Projects](um-projects.md)
-   1. Adding new tasks to a project
-      1. [Deck of cards task](um-proj-deck-task.md)
-      2. Documentation task
-      3. Factory task
-      4. Plug-in task
-      5. Generic task
-      6. Task groups
+   1. [Deck of cards task](um-proj-deck-task.md)
+   2. Documentation task
+   3. Factory task
+   4. Plug-in task
+   5. Generic task
+   6. Task groups
    2. Customizing a task folder icon
-   3. [Searching projects](um-find-in-project.md)
-   4. [Automation scripts](um-ajs-scripts.md)
-   5. [Making cards from a CSV data file](um-project-csv-factory.md)
+   3. [Searching projects](um-proj-search.md)
+   4. [Automation scripts](um-proj-automation.md)
+   5. [Making cards from a CSV data file](um-proj-csv-factory.md)
 
 [Other documentation](index.md)
