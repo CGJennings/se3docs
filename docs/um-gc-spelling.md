@@ -1,6 +1,6 @@
 # Spelling checking
 
-Strange Eons can perform live spelling checking on the text that appears on cards. To work, the **Spelling Dictionaries** [core component](um-plugins-core.md) must be installed, and it must include dictionary support for the current [game language](um-language-settings.md). When available, unknown words will be underlined in red. Right clicking on the word will open a menu of possible replacements and other options.
+Strange Eons can perform live spelling checking on the text that appears on cards. To work, the **Spelling Dictionaries** [core component](um-plugins-core.md) must be installed, and it must include dictionary support for the current [game language](um-install-languages.md). When available, unknown words will be underlined in red. Right clicking on the word will open a menu of possible replacements and other options.
 
 ![the spelling popup menu](images/spelling-popup.png)
 

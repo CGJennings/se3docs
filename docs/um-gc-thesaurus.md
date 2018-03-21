@@ -1,6 +1,6 @@
 # Lexical look-up services
 
-Strange Eons does not have support for a thesaurus built in, but it includes a feature called *lexical look-up services* that allows plug-ins to add this functionality. Note that the services that will be offered for a particular component will be tied to the [game language](um-language-settings.md). If you are not seeing the a service when you expect one, check this setting.
+Strange Eons does not have support for a thesaurus built in, but it includes a feature called *lexical look-up services* that allows plug-ins to add this functionality. Note that the services that will be offered for a particular component will be tied to the [game language](um-install-languages.md). If you are not seeing the a service when you expect one, check this setting.
 
 ## General use
 
