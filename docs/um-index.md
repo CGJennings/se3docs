@@ -11,7 +11,7 @@
    6. [Choosing language settings](um-install-languages.md)
    7. [Troubleshooting](um-install-troubleshooting.md)
    8. [Portable installations](um-install-portable.md)
-   9. [Command line options](um-command-line-options.md)
+   9. [Command line options](um-install-command-line-options.md)
 
 2. [Installing and managing plug-ins](um-plugins-intro.md)
    1. [Understanding core components](um-plugins-core.md)
