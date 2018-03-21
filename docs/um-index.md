@@ -58,6 +58,7 @@
    2. [Documentation task](um-proj-doc-task.md)
    3. [Factory task](um-proj-factory-task.md)
    4. [Plug-in task](um-proj-plugin-task.md)
+   5. [Generic task](um-proj-generic-task.md)
    3. [Searching projects](um-proj-search.md)
    4. [Automation scripts](um-proj-automation.md)
    5. [Making cards from a CSV data file](um-proj-csv-factory.md)
