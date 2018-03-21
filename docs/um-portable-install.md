@@ -8,7 +8,7 @@ You need three things to run Strange Eons:
 
 1. The app itself.
 2. A Java Runtime Environment (JRE).
-3. A [user folder](um-user-folder.md) for storing plug-ins and preferences.
+3. A [user folder](um-install-user-folder.md) for storing plug-ins and preferences.
 
 To get the app, you can run the installer normally and then grab the contents of the installation folder, which on Windows is typically `%PROGRAMFILES%\StrangeEons`.
 
@@ -16,7 +16,7 @@ The app requires a JRE with a very specific version range. If you don't have Jav
 
 Copy the installation folder, including the private JRE, to your flash drive or other destination. (You do not need the contents of the `.install4j` subfolder.) You should now be able to run Strange Eons directly from the copy by double clicking `StrangeEons\bin\strangeeons.exe`.
 
-The new copy runs but it will still try to store plug-ins and settings in your user profile (home directory). The next step is to create a new, portable user folder. Create the folder `StrangeEons\user` in your destination. If you have existing preferences or plug-ins you want to transfer, [copy the contents](um-user-folder.md) of your user folder into this new folder.
+The new copy runs but it will still try to store plug-ins and settings in your user profile (home directory). The next step is to create a new, portable user folder. Create the folder `StrangeEons\user` in your destination. If you have existing preferences or plug-ins you want to transfer, [copy the contents](um-install-user-folder.md) of your user folder into this new folder.
 
 To get Strange Eons to use this new user folder you need to set an environment variable before running it. Create a text file `StrangeEons\run.cmd` with the following contents:
 

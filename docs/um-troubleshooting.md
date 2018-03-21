@@ -37,7 +37,7 @@ Sets a 2 GiB limit (as 2 GiB).
 
 ### The plug-in bundle X could not be updated
 
-This indicates that you have downloaded an update for a plug-in that required a [relaunch](um-plugins-relaunching.md), but when \Strange Eons restarted it was unable to replace the old plug-in for some reason. To investigate, you'll need to check your plug-in folder. If the app finishes starting, you can do this from the [plug-in manager](um-plugins-manager.md). Otherwise, find the `plug-ins` subfolder inside your [inside your user folder](um-user-folder.md). You should find a file with the name indicated by the error message and the file extension `.autoupdate`. You will usually also find a file with the same name but no `.autoupdate`. For example:
+This indicates that you have downloaded an update for a plug-in that required a [relaunch](um-plugins-relaunching.md), but when \Strange Eons restarted it was unable to replace the old plug-in for some reason. To investigate, you'll need to check your plug-in folder. If the app finishes starting, you can do this from the [plug-in manager](um-plugins-manager.md). Otherwise, find the `plug-ins` subfolder inside your [inside your user folder](um-install-user-folder.md). You should find a file with the name indicated by the error message and the file extension `.autoupdate`. You will usually also find a file with the same name but no `.autoupdate`. For example:
 
 ```
 DeveloperTools.seplugin 
@@ -50,7 +50,7 @@ The file with the `.autoupdate` extension is the new plug-in, the one without is
 
 ### After installing a plug-in
 
-If the app won't start after installing a plug-in, it is a good bet that the problem involves that plug-in. As above, find the `plug-ins` subfolder inside your [inside your user folder](um-user-folder.md). Locate the just-installed plug-in(s) and delete them, then try starting the app again.
+If the app won't start after installing a plug-in, it is a good bet that the problem involves that plug-in. As above, find the `plug-ins` subfolder inside your [inside your user folder](um-install-user-folder.md). Locate the just-installed plug-in(s) and delete them, then try starting the app again.
 
 ### After displaying a Fatal Error message
 
