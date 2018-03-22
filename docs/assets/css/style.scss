@@ -14,8 +14,8 @@ p img:only-child {
   max-width: 90%;
 }
 
-ol > ol {
-  list-style-type: decimal;
+ol {
+  list-style-type: decimal !important;
 }
 
 .markdown-body blockquote {
