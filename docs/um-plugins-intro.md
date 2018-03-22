@@ -1,33 +1,29 @@
-# Installing and managing plug-ins
+# Plug-in essentials
 
-With most applications, plug-ins are a way to add optional features. With *Strange Eons*, plug-ins play a more vital role because they are used to add support for creating components for specific games. With no plug-ins installed, you can only create generic tokens and decks. As a result, you'll need to get familiar with the plug-in system before you get very far.
+Plug-ins play a vital role in Strange Eons. With no plug-ins installed, you can only create generic tokens and decks. Installing plug-ins will be one of the first things you'll want to do, so this page covers the bare essentials. Come back and check out the other pages in this section when you want more information.
 
 ## Installing plug-ins on your first run
 
-Strange Eons doesn't support any games when first installed. The first time you run it, it will prompt you to open the [plug-in catalogue](um-plugins-catalogue.md) to add support for at least one game. When you agree, it opens the catalogue for you and applies a filter so that only games are listed. Once you select something and click on the **Download and Install** button, your chosen plug-ins will be downloaded and installed. Some plug-ins include installation notes that are shown in a dialog box. After reading the notes, click on the **Close** button to dismiss each window. Once all of the selected plug-ins have been installed, you will be prompted to [relaunch](um-plugins-relaunching.md). Click the link to continue, and after a brief delay you'll be ready to start working. (On some platforms the relaunch option might not be able to restart the application. Just restart Strange Eons manually after it exits.)
+The first time you use Strange Eons, it will prompt you to open the [plug-in catalogue](um-plugins-catalogue.md) to add support for at least one game. When you agree, it opens the catalogue for you and applies a [filter](um-plugins-catalogue.md#filtering-searching-the-listings) so that only games are listed. Once you select something and click on the **Download and Install** button, your chosen plug-ins will be... downloaded and installed. After the install completes, you will be prompted to [relaunch](um-plugins-relaunching.md). Click the link to continue, and after a brief delay you'll be ready to [start creating](um-gc-intro.md). (On some platforms the relaunch option might not be able to restart the application. Just restart Strange Eons manually after it exits.)
 
-## Core components
+You can re-open the [catalogue](um-plugins-catalogue.md) at any time using the **Toolbox/Catalogue** menu item.
 
-The first time you run Strange Eons and open the plug-in catalogue, the catalogue will also silently preselect a special set of plug-ins called *core components*. These are plug-ins that provide part of the basic functionality of Strange Eons, but don't change very often. Making them a separate download means that you won't have to re-download them every time you update the application. Strange Eons has been designed so that it can still run without these core components, but with reduced functionality.
+The first time you run Strange Eons and open the plug-in catalogue, the catalogue will also silently preselect a special set of plug-ins called core components. *Don't worry about it*, just let it install them along with everything else.
 
-## Installing plug-ins
+> <a id="core"></a>If being told *not* to worry makes you worry *more*, here are the details:
+>
+> Core components provide part of the basic functionality of Strange Eons, but don't change very often. Making them a separate download means that you won't have to re-download them every time you update the application. Strange Eons has been designed so that it can still run without these core components, but with reduced functionality.
 
-You can also install plug-ins anytime by choosing the **Toolbox/Catalogue** menu item. This opens the same catalogue dialog as above (without any filters applied). Clicking on a listed plug-in will show more information about it. Checking the box next to the listing selects it for installation. As before, choosing **Download and Install** will install your choices. Depending on the plug-ins you select, you may or may not need to restart Strange Eons afterward.
+## Installing more plug-ins
 
-**Main article:** [Plug-in catalogue](um-plugins-catalogue.md)
+You can install more plug-ins anytime by choosing the **Toolbox/Catalogue** menu item. This opens the same catalogue dialog as above. This time, though, there won't be a filter that restricts what you see to plug-ins for adding games, so the list will be a lot longer. Don't panic, because the process is the same. Click a list entry for more information, check it to select it for installation. Choose **Download and Install** to continue.
 
-## Managing plug-ins
+To *learn more about finding, installing, and updating plug-ins*, refer to the page on the [plug-in catalogue](um-plugins-catalogue.md).
 
-Installed plug-ins can be managed using the **Toolbox/Manage Plug-ins** menu item. This dialog lets you review installed plug-ins, disable or uninstall them, and assign keyboard shortcuts to "tool" plug-ins (these add items to the **Toolbox** menu).
+To *learn how to be notified when new updates or plug-ins are available*, refer to the page on [managing plug-in updates](um-plugins-updates.md).
 
-**Main article:** [Plug-in manager](um-plugins-manager.md)
+## Uninstalling plug-ins
 
-## Updating plug-ins
+To *uninstall a plug-in*, choose the **Toolbox/Manage Plug-ins** menu item. Select the the plug-in you wish to remove in the list, then choose **Uninstall**.
 
-You can check for plug-in updates manually at any time by opening the plug-in catalogue. Any plug-ins with updates available will be marked with a special icon. You can also ask Strange Eons to check for updates automatically at regular intervals. To enable or configure this feature, choose the **Toolbox/Updates** menu item. You can also use this command to be notified when the Strange Eons app itself is updated.
-
-**Main article:** [Managing update notifications](um-plugins-updates.md)
-
-### Updating plug-ins after app updates
-
-Whenever you first start Strange Eons after installing an update, you'll be prompted to open the catalogue and check for updates. It's a good idea: existing plug-ins may need an update to work correctly in the new version. As with the first run, a filter will be applied to hide some of the catalogue entries, in this case hiding plug-ins that are up to date.
+To *learn more about managing installed plug-ins*, refer to the [plug-in manager](um-plugins-manager.md) page of the manual.

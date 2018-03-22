@@ -2,7 +2,7 @@
 
 A **Factory** task is used to create game component (`.eon`) files automatically. They can be used to manage translations of a game into multiple languages, to reduce the monotony of creating components that follow a regular pattern, or to create components using data from an external source.
 
-> Because they both deal with groups of components, factories support many of the same actions as **Deck** tasks. If you have not already done so, you should [read that section](um-proj-deck-task.md) first.
+> Because they both deal with groups of components, factories support many of the same actions as **Deck** tasks. If you have not already done so, you should [read that page](um-proj-deck-task.md) first.
 
 ## Types of factories
 
@@ -10,7 +10,7 @@ Factory tasks come in different flavours depending on exactly how they create co
 
 ### CSV Factory
 
-This factory produces components by reading data from a CSV data table.  It is not built in, but added by installing a plug-in. It is described in detail in its own [manual section](um-proj-csv-factory.md).
+This factory produces components by reading data from a CSV data table.  It is not built in, but added by installing a plug-in. It is described in detail in its own [manual page](um-proj-csv-factory.md).
 
 ### ⚠️ Scripted Factory
 

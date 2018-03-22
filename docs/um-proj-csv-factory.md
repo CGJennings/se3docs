@@ -53,13 +53,13 @@ By default, the following rules are used to figure out how a component should be
 2. Names that start with a `$` will affect the private setting with that name. For example, the name `$title` would cause that column to change the component's `title` private setting. The **Setting Explorer** is helpful for determining which setting names a component uses. This is part of the **Developer Tools** plug-in, `eonscat:39f10fa9-6574-4be1-9dd6-3e658c9a6fd3`.    
 
 3. A column name that starts with `port` can affect a component's portrait. The rest of the name determines what part of the portrait the name affects:  
-     
+  
    `portSource` or `portSrc`: the source image file (a file path or URL)  
    `portScale`: the scale factor  
    `portPanX` or `portX`: the horizontal offset of the portrait from its default centered position  
    `portPanY` or `portY`: the vertical offset of the portrait from its default centered position  
    `portRotation` or `portRot`: the rotation angle, when allowed by the component type (in degrees)  
-     
+   
    If the template component has more than one portrait, add a number after the `port` to specify which one the column should affect: `port0X`, `port1X`, and so on. Components are always built in column order, so a portrait's source should always be set first since this resets the other values to a default based on the image dimensions.
 
 
@@ -69,11 +69,11 @@ By default, the following rules are used to figure out how a component should be
 
 ## The factory script
 
-In most cases, you can simply run the `make.ajs` script unchanged. You won't need to understand or even look a the code. If you do want to make changes, this section will give you some pointers.
+In most cases, you can simply run the `make.ajs` script unchanged. You won't need to understand or even look at the code. When blissful ignorance fails you, read on for some pointers to get you started.
 
-### CSV file format
+### CSV file format tweaks
 
-There are many variants of the CSV format. Files produced by your favourite tool might not work with the factory script out of the box. You can probably get it to work by modifying the defaults in this section of the script:
+There are many variants of the CSV format. Files produced by your favourite tool might not work with the factory script out of the box, but you can probably get it to work by modifying the defaults in this section of the script:
 
 ```js
 // Set up the factory:
@@ -90,15 +90,15 @@ factory.setExtraSpaceIgnored( false );
 
 The delimiter is the character that separates one cell from another within a row. It is usually `,` (hence, *Comma* Separated Value) but some files use Tab (`\t`) or another character.
 
-The quote character is used to surround an entire cell value when it contains the delimiter. It is usually `"`: to store the cell value *Hey, Sarah* the file would use `"Hey, Sarah"` to keep the `,` from adding another cell. This creates another problem if the cell contains the quote character. In this case, the cell is quoted and then anywhere it occurs within the cell it is doubled. So *The "dog" barked* becomes `"The ""dog"" barked"`.
+The quote character is used to surround an entire cell value when it contains the delimiter. It is usually `"`: to store the cell value *Hey, Sarah* the file would use `"Hey, Sarah"` to keep the `,` from adding another cell. This creates its own problem if the cell contains the quote character. In this case, the cell is quoted and then anywhere the quote appears within the cell, the quote is doubled. So *The "dog" barked* becomes `"The ""dog"" barked"`.
 
-The most common CSV formats treat spaces at the start or end of a cell value as significant, meaning they are included in the cell value. If you are writing your CSV file by hand, this can make it difficult to read since `all,the,cells,must,run,together,with,no,spaces`. Setting this to `true` will let you write `more, readable, files`.
+The most common CSV formats treat spaces at the start or end of a cell value as significant, meaning they are included as part of the cell's value. If you are writing your CSV file by hand, this can make it difficult to read since `all,the,cells,must,run,together,with,no,spaces`. Setting this to `true` will let you write `more, readable, files`.
 
 ### Changing the inputs or outputs
 
 You can change the file names used by the factory by changing the string constants near the start of the file. You can change how the input data is loaded using code near the top of script. For example, you could use the currently edited component as a template instead of reading it from a file or download the CSV file from a URL. If you want to do something with the modified component other than save it to a file, you can override the `write(GameComponent template, String fileName, long recordNumber)` method in `CsvFactory`.
 
-### Custom column handling
+### ⚠️ Custom column handling
 
 To change how your factory deals with a column name, you can subclass the `CsvFactory` created in the `make.ajs` script and override the `processRow` method. This method provides three parameters: the `template` to be modified, a `Map<String,String>` from column names to their values in the current row (`rowValues`), and the same map with the previous row's values (`prevRowValues`). If you wish to process every column in order yourself, you can use `rowValues.keySet().iterator()`. Otherwise, you can handle whichever columns you want to customize yourself and then call the superclass method to use the standard handling algorithm:
 
@@ -115,6 +115,6 @@ factory = new JavaAdapter( CsvFactory, {
 });
 ```
 
-By default, the factory will report an error if the default algorithm does not know what to do with a column name. You can prevent this by calling `factory.setIgnoreUnknownKeys(true)`.
+By default, the factory will report an error if the default algorithm does not know what to do with a column name. You can prevent this by calling `factory.setIgnoreUnknownKeys(true)`. Alternatively, you can `remove` any columns that you handle yourself from `rowValues` before calling the superclass.
 
 If you need to perform custom setup (or cleanup) steps, you can override `beginProcessing()` or `endProcessing()`, respectively.

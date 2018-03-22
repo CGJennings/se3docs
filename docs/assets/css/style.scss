@@ -14,6 +14,13 @@ p img:only-child {
   max-width: 90%;
 }
 
+.markdown-body blockquote {
+  padding: 0.5em 1em;
+  color: rgba(33, 33, 33, 0.92);
+  background-color: #fff8ec;
+  border-left: 0.25em solid #ffc107;
+}
+
 #header {
   width: 100%;
   font-size: 1.2em;

@@ -43,7 +43,7 @@ Non-standard options are set just like standard options, but they can change fro
 Causes a fatal startup error. Used for testing.
 
 `--xDisableProjectRestore`
-Prevents Strange Eons from trying to re-open the same project that open when the app was last used. This is useful if a problem with this folder is preventing the app from starting.
+Prevents Strange Eons from trying to re-open the project that was open when the app was last used. This is useful if a problem with this folder is preventing the app from starting.
 
 `--xDisableFileRestore`
 Prevents Strange Eons from trying to re-open the files that were being edited when the app was last used. This is useful if a problem file is preventing the app from starting.

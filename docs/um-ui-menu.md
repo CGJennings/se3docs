@@ -1,6 +1,6 @@
 # Main menu commands
 
-Most high-level commands are accessed through the menu bar. This section offers a quick tour of the available menu items and their purpose. Note that plug-ins can add new items to these menus, so you may have items that are not listed here.
+Most high-level commands are accessed through the menu bar. This page offers a quick tour of the available menu items and their purpose. Note that plug-ins can add new items to these menus, so you may have items that are not listed here.
 
 **Tip:** If you are looking for a particular menu item, use your browser's find in page feature (usually <kbd>Ctrl</kbd>+<kbd>F</kbd> or <kbd>⌘</kbd>+<kbd>F</kbd>) and type the name.
 
@@ -232,7 +232,7 @@ Aligns or spreads out the selected objects in various ways against the last obje
 
 ### Snap To
 
-Changes the classes of objects that the selected objects will *snap to*. See the deck editor section for details.
+Changes the classes of objects that the selected objects will *snap to*. See the deck editor page for details.
 
 ### Group/Ungroup
 

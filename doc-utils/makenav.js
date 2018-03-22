@@ -2,8 +2,8 @@
 // makenav.js
 //
 // A Node.js script that builds a JSON file with the serial
-// navigation order for all sections. This is the order that
-// the sections should be read in when using the prev/next
+// navigation order for all pages. This is the order that
+// the pages should be read in when using the prev/next
 // links at the bottom of each page.
 //
 

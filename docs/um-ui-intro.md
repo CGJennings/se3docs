@@ -1,6 +1,6 @@
 # Overview of the user interface
 
-This section provides a high-level overview of the essential elements of the app's main window. The window can be divided into four areas: the menu bar, the document tab strip, the document area, and the project pane.
+This page provides a high-level overview of the essential elements of the app's main window. The window can be divided into four areas: the menu bar, the document tab strip, the document area, and the project pane.
 
 ![the main app window with the four basic areas labelled](images/window-tour.jpg)
 

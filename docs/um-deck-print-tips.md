@@ -1,6 +1,6 @@
 # Tips for printing and assembling components
 
-This section provides guidance on printing, assembling, and integrating homebrew content with an existing game. It is divided into three phases: design, production, and play. You'll get the best results by taking all three phases into account: thoughtful design, nice production standards, and an engaged gaming group.
+This page provides guidance on printing, assembling, and integrating homebrew content with an existing game. It is divided into three phases: design, production, and play. You'll get the best results by taking all three phases into account: thoughtful design, nice production standards, and an engaged gaming group.
 
 > If you want advice on printing components made by someone else, then you can skip down to the **Production Phase** since the design choices have been made for you.
 

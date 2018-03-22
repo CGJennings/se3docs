@@ -10,7 +10,7 @@ You can toggle whether the context bar is visible using the **View/Context Bar**
 
 ## Customizing the buttons
 
-The **Context Bar** section of the [preferences dialog](um-ui-preferences.md) lets you add, remove, or reorder the context bar buttons. A list at the top of the panel shows currently unused buttons. The bar underneath shows the used buttons currently in the order they would appear.
+The **Context Bar** page of the [preferences dialog](um-ui-preferences.md) lets you add, remove, or reorder the context bar buttons. A list at the top of the panel shows currently unused buttons. The bar underneath shows the used buttons currently in the order they would appear.
 
 ![the context bar editing controls](images/context-bar-editor.png)
 

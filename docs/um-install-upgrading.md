@@ -4,7 +4,7 @@ Upgrading from version 1 or 2 of Strange Eons is easy. Although settings and plu
 
 ## Don't panic!
 
-When you run Strange Eons 3 for the first time, there are some glaring differences that might lead you to feel a bit lost initially. Keep reading! This section will help get you over the hump.
+When you run Strange Eons 3 for the first time, there are some glaring differences that might lead you to feel a bit lost initially. Keep reading! This page will help get you over the hump.
 
 ### What Happened to the Arkham Horror Stuff?
 

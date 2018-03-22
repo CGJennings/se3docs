@@ -2,7 +2,7 @@
 
 A portable installation is one that can move from one computer to another without having to install the app on the new computer. For example, you might want to be able to run Strange Eons off of a flash drive using computers in a public lab.
 
-There is no official portable installation of Strange Eons, but it should be possible to create one with a little work. This section outlines the steps. The instructions are aimed at Windows as it has the most complex install process, but the basic idea could be applied to other platforms.
+There is no official portable installation of Strange Eons, but it should be possible to create one with a little work. This page outlines the steps. The instructions are aimed at Windows as it has the most complex install process, but the basic idea could be applied to other platforms.
 
 You need three things to run Strange Eons:
 
