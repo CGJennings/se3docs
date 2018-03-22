@@ -1,6 +1,7 @@
 # Project file types
 
 ## Common project files
+
 |                       Icon                       | Type                   | Extension(s)           | Notes                                                        |
 | :----------------------------------------------: | ---------------------- | ---------------------- | ------------------------------------------------------------ |
 |  ![eon-default](images/project/eon-default.png)  | Game component or deck | `.eon`                 |                                                              |
@@ -41,10 +42,10 @@ To *convert or optimize a bitmap image*, right click and choose **Convert To/PNG
 |                                                  | Photoshop      | `.psd`          | to *convert to a regular bitmap image*, double click to **View** then choose **Save As** |
 | ![vector-image](images/project/vector-image.png) | SVG            | `.svg`, `.svgz` | requires core component; limited support, always converted to fixed bitmap internally |
 
-
 ## Plug-in files
 
 ### Code
+
 |                 Icon                 | Type               | Extensions | Notes |
 | :----------------------------------: | ------------------ | ---------- | ----- |
 | ![script](images/project/script.png) | Script source code | `.js`      |       |
