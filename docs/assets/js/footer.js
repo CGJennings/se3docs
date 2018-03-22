@@ -4,9 +4,11 @@ let current = location.pathname;
 current = current.substring(current.lastIndexOf('/')+1)
 if(current === "") current = "index.html";
 
-// change header colour to match manual
+// change header colour to match manual, highlight current manual index link
 if(current.startsWith("um-") || current.startsWith("dm-") || current.startsWith("tm-") ) {
-  document.getElementById("header").classList.add(current.substring(0,2));
+  let manual = current.substring(0,2);
+  document.getElementById("header").classList.add(manual);
+  document.getElementById(manual+"-index").classList.add("current-index");
 }
 
 fetch("assets/js/nav.json")

@@ -24,13 +24,7 @@ p img:only-child {
   top: 0;
   position: sticky;
 }
-#header strong {
-  margin-right: 2em;
-}
-#header a {
-  color: rgba(255,255,255,0.92);
-  margin-left: 2em;
-}
+/* Match header background to the current manual. */
 #header.um {
   background-color: #015daf;
 }
@@ -40,6 +34,34 @@ p img:only-child {
 #header.tm {
   background-color: #38241a;
 }
+#header strong {
+  margin-right: 2em;
+  margin-left: -2em; /* counter (#header a) margin */
+}
+#header a {
+  color: rgba(255,255,255,0.92);
+  margin-left: 2em;
+}
+/* Highlight the link that takes reader to the index of the current manual. */
+#header a.current-index {
+  text-decoration: underline;
+}
+/* Hide all but current manual link if screen <= 800px */
+@media screen and (max-width: 800px) {
+  #header>a {
+    display: none;
+  }
+  #header > a.current-index {
+    display: inline;
+  }
+}
+/* Only show title link if screen <= 450px */
+@media screen and (max-width: 450px) {
+  #header > a.current-index {
+    display: none;
+  }
+}
+
 
 
 #foot-nav {
