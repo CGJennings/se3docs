@@ -32,6 +32,7 @@
 ### Images
 
 To *convert or optimize a bitmap image*, right click and choose **Convert To/PNG**, **Convert To/JPEG**, or **Convert To/JPEG2000**. Adjust the quality and scan settings as desired, then choose **Convert**.
+
 |                       Icon                       | Type           | Extension(s)    | Notes                                                        |
 | :----------------------------------------------: | -------------- | --------------- | ------------------------------------------------------------ |
 |        ![image](images/project/image.png)        | JPEG           | `.jpg`          | widely supported [lossy bitmap image format](https://cgjennings.ca/articles/jpeg-compression.html); does not support transparency |
