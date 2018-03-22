@@ -14,6 +14,10 @@ p img:only-child {
   max-width: 90%;
 }
 
+ol > ol {
+  list-style-type: decimal;
+}
+
 .markdown-body blockquote {
   padding: 0.5em 1em;
   color: rgba(33, 33, 33, 0.92);
