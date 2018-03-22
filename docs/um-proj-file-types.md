@@ -45,23 +45,11 @@ To *convert or optimize a bitmap image*, right click and choose **Convert To/PNG
 ## Plug-in files
 
 ### Code
-|                 Icon                 | Type               | Extension(s) | Notes |
-| :----------------------------------: | ------------------ | ------------ | ----- |
-| ![script](images/project/script.png) | Script source code | `.js`        |       |
-|   ![java](images/project/java.png)   | Java source code   | `.java`      |       |
-|  ![class](images/project/class.png)  | Compiled Java code | `.class`     |       |
-
-
-
-
-
 |                 Icon                 | Type               | Extensions | Notes |
 | :----------------------------------: | ------------------ | ---------- | ----- |
 | ![script](images/project/script.png) | Script source code | `.js`      |       |
 |   ![java](images/project/java.png)   | Java source code   | `.java`    |       |
 |  ![class](images/project/class.png)  | Compiled Java code | `.class`   |       |
-
-
 
 ### Data
 
