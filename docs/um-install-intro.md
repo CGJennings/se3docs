@@ -12,11 +12,15 @@ To get started, [download](http://cgjennings.ca/eons/download/update.html) the l
 
 ## Adding support for specific games
 
-Out of the box, Strange Eons will let you make [decks](um-deck-intro.md) and generic tokens. It doesn't support any specific game. That's why the first time you run it, it will suggest that you install some *plug-ins*. Agree and it will show you a [catalogue](um-plugins-catalogue.md) of options to choose from. Pick some and then click **Download and Install**.
+Out of the box, Strange Eons will let you make [decks](um-deck-intro.md) and generic tokens. It doesn't support any specific game. That's why the first time you run it, it will suggest that you install some *plug-ins*.
 
-> No plug-in for the game you want? You can always [make one yourself](dm-index.md). For now, just pick something so you can continue with the guide and get a sense of what's possible. (Try Arkham Horror!)
+![the first run plug-in dialog](images/plugins-first-run.png)
+
+Agree and it will show you a [catalogue](um-plugins-catalogue.md) of options to choose from. Pick some and then click **Download and Install**.
 
 ![plug-in catalogue dialog](images/catalog.png)
+
+> No plug-in for the game you want? You can always [make one yourself](dm-index.md). For now, just pick something so you can continue with the guide and get a sense of what's possible. (Try Arkham Horror!)
 
 ## Relaunch to finish plug-in installation
 

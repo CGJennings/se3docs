@@ -6,6 +6,8 @@ Plug-ins play a vital role in Strange Eons. With no plug-ins installed, you can 
 
 The first time you use Strange Eons, it will prompt you to open the [plug-in catalogue](um-plugins-catalogue.md) to add support for at least one game. When you agree, it opens the catalogue for you and applies a [filter](um-plugins-catalogue.md#filtering-searching-the-listings) so that only games are listed. Once you select something and click on the **Download and Install** button, your chosen plug-ins will be... downloaded and installed. After the install completes, you will be prompted to [relaunch](um-plugins-relaunching.md). Click the link to continue, and after a brief delay you'll be ready to [start creating](um-gc-intro.md). (On some platforms the relaunch option might not be able to restart the application. Just restart Strange Eons manually after it exits.)
 
+![the first run plug-in dialog](images/plugins-first-run.png)
+
 You can re-open the [catalogue](um-plugins-catalogue.md) at any time using the **Toolbox/Catalogue** menu item.
 
 The first time you run Strange Eons and open the plug-in catalogue, the catalogue will also silently preselect a special set of plug-ins called core components. *Don't worry about it*, just let it install them along with everything else.
