@@ -1,6 +1,6 @@
 # The plug-in root file
 
-All Strange Eons plug-ins must have a plug-in root file. This is a file named `eons-plugin` located in the root folder of the plug-in bundle (that is, it must not be inside any subfolder, such as `resources`, within the plug-in).
+All Strange Eons plug-ins must have a plug-in root file. This is a file named `eons-plugin` located in the root folder of the plug-in bundle (that is, it must not be inside any subfolder, such as `resources`, within the plug-in's task folder).
 
 The root file is a plain text file (UTF-8 encoded) that contains the essential information Strange Eons needs to load and start the plug-in. It also contains the description of the plug-in that will be used for its entry in the [plug-in catalogue](um-plugins-catalogue.md).
 
@@ -10,7 +10,7 @@ To *edit a plug-in root file*, double click on the file in its task folder. This
 
 ## The root file editor
 
-The easiest way to edit the root file is with the editor available from Strange Eons itself. This divides the contents of the file into different sections, each with its own tab. Make the desired changes, then choose **Update** to save the changes back to the root file and close the editor.
+The easiest way to edit the root file is with the editor included in Strange Eons itself. This various properties defined by the root file are divided into categories, each with its own tab. To edit the file, open it in the plug-in's task folder in the project pane. Make the desired changes, then choose **Update** to save the changes back to the root file and close the editor. Choose **Cancel** to discard your changes and close the editor.
 
 ### Plug-in control
 
