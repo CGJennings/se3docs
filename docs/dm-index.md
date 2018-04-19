@@ -9,12 +9,12 @@
    3. Lockdown
    4. [Resource and project URLs](dm-special-urls.md)
    5. Settings
-   6. The plug-in authoring kit
-3. Plug-in bundles
-   1. The root file
+3. Anatomy of a plug-in
+   1. Plug-in types
+   2. Plug-in bundles and task folders
+   3. [The root file](dm-eons-plugin.md)
    2. Compiled plug-in skeleton
-   3. Scripted plug-in skeleton
-   4. Plug-in types
+   5. Scripted plug-in skeleton
    5. Plug-in resource files
       1. Images
       2. Fonts
@@ -24,28 +24,31 @@
       6. Class maps
       7. Default abbreviation tables
       8. Installation scripts
-   6. Development tools
-      1. The root file editor
-      2. The source code editor
-      3. The **Convert Image** action
-      4. The **Draw Regions** action
-   7. Adding a new game
+4. Development tools and resources
+   1. The plug-in authoring kit
+   2. The source code editor
+   3. The script debugger
+   4. The **Document Browser**
+   3. The **Convert Image** action
+   6. The **Draw Regions** action
+5. How to...
+   7. Add support for a new game
       1. Registering the game
       2. Registering expansions
          1. Custom expansion symbol templates
-   8. DIY (Scripted) game component editors
+   8. Add new game component types using script code
       1. Portraits
       2. Prefab components
       3. Bleed margins
       4. Changing components without breaking old save files
-   9. Accessing and modifying existing components
+   9. Access and modify existing components
       1. Working with portraits
       2. Adding new marker silhouettes
-   10. Using and adding new app commands
+   10. Add new app commands and features
        1. Extending the app menu
        2. Extending the context bar
        3. Extending **Preferences**
-   11. The project system API
+   11. Work with the project system API
        1. Getting and traversing the open project
        2. Accessing project member files
        3. The **Task** classes

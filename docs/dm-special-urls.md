@@ -1,6 +1,6 @@
 # Special URLs
 
-A URL is a link like http://cgjennings.ca. URLs can be used in various places in Strange Eons. For example, you can set a portrait's file to the URL of an image from the Web and it will use that image for the portrait. Strange Eons also defines two special kinds of URLs (technically, URL *protocols*) for internal use: resource URLs, which start with `res://`, and project URLs, which start with `project://`. They can be used with any method that takes a URL as a parameter.
+A URL is text that points to the location of something, like the Web URL https://cgjennings.ca. URLs can be used in various places in Strange Eons. For example, you can set a portrait's file to the URL of an image from the Web and it will use that image for the portrait. Strange Eons also defines two special kinds of URLs (technically, URL *protocols*) for internal use: resource URLs, which start with `res://`, and project URLs, which start with `project://`. They can be used with any method that takes a URL as a parameter.
 
 ## Resource URLs
 
