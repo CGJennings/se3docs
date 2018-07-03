@@ -15,7 +15,7 @@ Considering these rules, the best way to share decks reliably is to keep the dec
 
 ## Use paper size PA4 for international sharing
 
-Different parts of the work use different paper sizes. The two most commonly used sizes are A4 and letter. You can lay out content that works on both of these paper sizes by using the special size PA4. The PA4 size uses the smaller of A4 and letter in each dimension, so the contents will fit on both without being clipped on the edges. To make sure that objects line up correctly, go through each page and first select all the objects (<kbd>Ctrl</kbd> + <kbd>A</kbd>), then use the **Deck/Center Content on Page** command.
+Different parts of the world use different paper sizes. The two most commonly used sizes are A4 and letter. You can lay out content that works on both of these paper sizes by using the special size PA4. The PA4 size uses the smaller of A4 and letter in each dimension, so the contents will fit on both without being clipped on the edges. To make sure that objects line up correctly, go through each page and first select all the objects (<kbd>Ctrl</kbd> + <kbd>A</kbd>), then use the **Deck/Center Content on Page** command.
 
 There is no need to worry about paper size for large expansion boards when sharing, since the recipient can choose their own paper size when [splitting the pages](um-deck-page-split.md).
 
