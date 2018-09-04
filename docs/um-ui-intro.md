@@ -16,5 +16,5 @@ The **document, or editor, area** is where the game component or other content t
 The **project pane** is only visible when a project is open, so it won't be visible when you first use the app. Projects allow you to organize and work on groups of related files, as well as to write your own plug-ins.  
 [Learn more](um-proj-intro.md)
 
-The **context bar** is a small toolbar that pops up beside, above, or below other editing controls as you work. It offers easy access to commands that are specific to the control you are using. You can customize the available controls, and plug-in authors can add new ones specially suited to that plug-in's game components or other content.  
+The **context bar** is a small tool bar that pops up beside, above, or below other editing controls as you work. It offers easy access to commands that are specific to the control you are using. You can customize the available controls, and plug-in authors can add new ones specially suited to that plug-in's game components or other content.  
 [Learn more](um-ui-context-bar.md)

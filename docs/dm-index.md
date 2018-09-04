@@ -2,7 +2,7 @@
 
 # Developer manual contents
 
-1. Introduction to plug-in development
+1. [Overview of plug-in authoring](dm-overview.md)
 2. Important concepts, definitions, and resources
    1. Script libraries
    2. The Strange Eons API
@@ -59,6 +59,12 @@
           3. Extending the **New...** action with new file types
           4. Adding support for new file types
           5. Adding new kinds of metadata to the properties view
+
+
+
+[Using the debugger to fix script problems](dm-debugger.md)
+
+
 
 How to guides temporary space
 How to create a plug-in  

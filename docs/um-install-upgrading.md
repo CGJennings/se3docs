@@ -17,7 +17,7 @@ Some plug-ins were never updated to work in SE3, some have had their functionali
 <dl>
 <dt>Image Resource Browser</dt>
 <dd>This plug-in was used to explore the images that SE or plug-ins use internally. It is built in now: in an image selection dialog or component portrait panel, there will be a folder icon that opens a file chooser to select an image file. Shift+clicking this icon will open a dialog for browsing image resources.</dd>   <dt>Markup Bar</dt>
-<dd>This plug-in creates a floating toolbar that helps with editing. This functionality has been improved and expanded in the new <strong>Context Bar</strong> feature.</dd>
+<dd>This plug-in creates a floating tool bar that helps with editing. This functionality has been improved and expanded in the new <strong>Context Bar</strong> feature.</dd>
 <dt>Script Library Documentation Browser</dt>
 <dd>Replaced by the improved <strong>Document Browser</strong>, which is found in the <strong>Help</strong> menu.</dd>
 <dt>Silhouette Pack</dt>

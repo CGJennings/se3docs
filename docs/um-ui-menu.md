@@ -118,7 +118,7 @@ Allows you to choose the background you prefer for game component previews, from
 
 ### Context Bar
 
-Toggles whether the [context bar](um-ui-context-bar.md) is visible. This is a small floating toolbar that pops up next to whatever text field or deck page you are editing. It adjusts the options it shows depending to what you are editing.
+Toggles whether the [context bar](um-ui-context-bar.md) is visible. This is a small floating tool bar that pops up next to whatever text field or deck page you are editing. It adjusts the options it shows depending to what you are editing.
 
 ### Object Handles
 
