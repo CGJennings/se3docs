@@ -24,7 +24,7 @@ There are a few different ways to start the debugger: from inside Strange Eons, 
 
 To *start the debugger from Strange Eons*, click on the little bug icon that appears when debugging is enabled.
 
-> This is usually the most convenient method. In the unlikely event that it doesn't work, you may need to adjust the **Automatic Launch** command in your preferences. Note that this also won't work if a script has already hit a breakpoint (see below), because Strange Eons will be frozen at the breakpoint. In any of these cases, you can use another method to start the debugger.
+> If clicking the bug icon works, you generally won't need to start the debugger at all: Strange Eons will start it automatically when needed. If the bug doesn't work, you can fix it by adjusting the **Automatic Launch** command in your preferences.
 
 To *start the debugger by launching it as a separate app*, just double click its app icon like usual:
 
@@ -48,11 +48,13 @@ Rarely, you will need to connect to Strange Eons manually. For example, if you a
 
 ![debugger connection settings](images/debugger-connect.png)
 
-To *connect to Strange Eons from the debugger manually*, switch to Strange Eons and look for the bug icon near the upper right corner. Hover over the icon and note the tool tip that appears. It will say something like "Listening at 127.0.0.1:8888". The part after the colon is the port number. The part before the colon (and after *Listening at*) is the host name. Enter this information in the connection screen in the debugger app, and it should connect momentarily.
+To *connect to Strange Eons from the debugger manually*, switch to Strange Eons and look for the bug icon near the upper right corner. Hover over the icon and observe the note that pops up. It will say something like "Listening at 127.0.0.1:8888". The part after the colon is the port number. The part before the colon (and after *Listening at*) is the host name. Enter this information in the connection screen in the debugger app, and it should connect momentarily.
 
 ## The debugger
 
 Once the debugger has connected to Strange Eons, you can use it to inspect and walk through scripts. To do that, the script must first be *interrupted*. There are several ways to do this, depending on where you are when you start out. Here are some:
+
+> When a script is *interrupted*, in most cases Strange Eons will appear be frozen. It isn't really, it is just waiting for the script, and since the script is paused Strange Eons is effectively paused to. As soon as you let the script finish from the debugger, Strange Eons will "thaw" again and run normally.
 
 To *interrupt a script at the next opportunity from the debugger*, click the ![pause icon](images/debugger/pause.png) **Pause** button in the tool bar along the top of the window.
 
@@ -117,7 +119,7 @@ To *examine the current value of a variable in the **Source** panel*, hover over
 
 ![hovering over a variable to reveal its value](images/debugger-mouseover.png)
 
-To *track how a variable or other expression changes over time*, click **New watch** in the **Watch Expressions** panel, then enter an expression to track, such as `x` or `diy.name` or `(pixels[x][y] & 0xff)/255`. Each time you take another step or otherwise interrupt the script, the expressions will be re-evaluated and their string value displayed in the table.
+To *track how a variable or other expression changes over time*, click **New watch** in the **Watch Expressions** panel, then enter an expression to track, such as `x` or `diy.name` or even `(pixels[x][y] & 0xff)/255`. Each time you take another **Step** or otherwise interrupt the script, the expressions will be re-evaluated and their string value displayed in the table.
 
 To *edit an existing watch expression*, click the expression, edit it, and press <kbd>Enter</kbd>.
 
@@ -180,6 +182,36 @@ To *examine a call site in the call stack and its scope,* click the relevant ent
 
 To *return to the point of interruption and its scope*, click the top entry in the **Call Stack**. Or, click any of the **Step** buttons in the tool bar.
 
+## Practicing with an example
+
+Let's try putting this together with some practice:
+
+1. If you haven't enabled debugging in Strange Eons yet, [do so now](#setting-up).
+2. Select and copy the "binco" script in the previous section.
+3. Switch to Strange Eons and open the Quickscript window (in the **Toolbox** menu).
+4. Delete any existing script (<kbd>Ctrl</kbd>+<kbd>A</kbd>, <kbd>Delete</kbd>), then paste in the "binco" script (<kbd>Ctrl</kbd>+<kbd>V</kbd>).
+5. Click on **Debug Script** in the Quickscript window.
+6. If the debugger app is not already running, Strange Eons will try to start it automatically. If it doesn't come up in a few seconds, start it yourself.
+7. Once connected, the debugger will show your script and the last line will be highlighted because that is where the script is interrupted.
+8. Click on **Step In**. Since the last line is a function call, we will step inside of that function. Now we are at the function declaration for the `binco()` function, because that is the function we *stepped into*.
+9. Click on **Step Over**. This will go to the next line with code on it, `let nFact = factorial(n);`.
+10. Click on **Step Over** again. Again this stops on the next line, `let kFact = factorial(k);`. Unlike with **Step In**, we did not step through the `factorial(n)` function call on the previous line. We just called the function normally and got the result.
+11. Since the last line assigned the value of `factorial(n)` to the variable `nFact`, that variable has a value now. Hover the mouse pointer over the `nFact` variable in the **Source** window. A note pops up showing that the value of this variable is now `24`, the result of the function call.
+12. Now hover the mouse over the `kFact` variable on the next line. This variable is `undefined`. The line is about to run, but it hasn't run yet, so `kFact` has not been assigned a value yet.
+13. Click on **Step In**. Now we have stepped into the `factorial()` function, which was called from the previous line.
+14. Notice that the **Call Stack** has three entries. The top entry is where we are right now. The next entry is the location that the `factorial()` function was called from (inside the `binco()` function). The last entry is the location that the `binco()` function was called from, the last line of the script. Click on each entry in turn and the **Source** window will show that location.
+15. The function we are in revolves around the variable *n*. Let's watch what happens to it. Click **New watch** in the **Watch Expressions** panel, and enter the value `n`. An new row is added that shows the expression `n` and its current value, `2`. (Recall that this function was called with the value of `k`, which was `2`).
+16. Click **Step In** until you reach the line `return factorial(n-1) * n;`.  Notice that this line calls the `factorial()` function from inside the `factorial()` function.
+17. **Step In** to it, and you will be back at the top of `factorial()`, but notice that now there is another entry in the **Call Stack** and the value of `n` in the **Watch Expressions** is now `1`. 
+18. Click **Step Over** so that we at the `if` statement. Now click **Step Over** again and you will see that the test in the `if` statement evaluated to `false`. You know this since, if the expression was `true`, the debugger would have stopped at the statement inside the braces `{` ... `}`.
+19. As an exercise, add a new watch expression that is the expression inside the `if()` statement.
+20. Click **Step Out** and we will leave this function. Notice that back in the `binco()` function, the watch expression shows that `n` is `4`. This is a different `n` (in a different scope) than the one inside the `factorial()` function. This is the value of the function's `n` argument. You can click the bottom entry of the **Call Stack** to verify that this was called as `binco(4,2)`, so indeed `n` should be `4` and `k` should be `2`.
+21. Set a **breakpoint** on the next line (Line 7) by clicking its line number link. It should turn pink.
+22. Click **Continue**. The script will run normally until it reaches the breakpoint, then it will stop again. It just so happens that the effect is the same as if we had clicked **Step Over**, but it didn't have to be. As long as the breakpoint is set, the script will be interrupted whenever it reaches this line.
+23. If we kept stepping, we would return from this function back to the line `println(binco(4,2));`. Because we *stepped into* the call to `binco()`, this line isn't done yet: it still has to pass the result of `binco(4,2)` to `println()` and call that function. But less us suppose we have learned what we wanted to learn, and we want to finish up. Click **Continue** to let the script complete normally.
+24. Back in Strange Eons, what do you think will happen if you click **Run Script**? Try it.
+25. Since there is still a breakpoint set, the script was interrupted. In the debugger, remove the **breakpoint** by clicking the line number again. Click **Continue** to let the script complete normally. Then try clicking **Run Script** again to verify that it runs uninterrupted.
+
 ## Debugging strategies
 
 Let's say you have a plug-in that isn't behaving as you expect. How do can you fix it? To answer that, let's first describe the situation more clearly. When you have a bug in your script, you don't know right away what the cause of the bug is. Instead, you have signs or symptoms that the script is not behaving as intended. You have to work backwards from the symptoms to the cause. This may not be easy: there might be more than one possible cause that for the symptoms you are observe, and the symptoms may be far removed from the root cause. Here are some basic strategies that can help you find that root cause:
@@ -208,7 +240,7 @@ Once you think you have fixed the root cause, always verify that the bug no long
 
 It is easier to find and fix problems while you write new code than it is to hunt down bugs after the fact. Try to break your program into small functional units that can be reused, and make them into functions. (This is a skill that you'll get better at with practice.) Then, thoroughly test each function to ensure that it behaves as expected. Make sure that you test the function with typical cases, edge cases, and invalid cases. An edge case is one that uses an extreme value for the possible inputs: if your function expects a non-negative number, what happens if you pass `0`? Or `Infinity`? An invalid case is one that shouldn't work. What happens if you pass `-1`? Or `null`? Or a `string`? If you detect illegal inputs and throw a descriptive Error, it can help you track down the source of buggy code. Here is an example:
 
-```
+```js
 function setId(id) {
     // use a regular expression to verify that id matches the pattern we expect
 	if(!/(\d|\_)+/.test(id)) {
