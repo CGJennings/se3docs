@@ -27,6 +27,8 @@ function createInterface( diy, editor ) {
 		'Enraged',  '0,1,1',         //   or just a string that uses the setting value format
 		'Toxic',    [0.34,1,1]       //   or an array [h,s,b] with h=angle/360
 	);
+	// set a custom title on the tint panel
+	hsbPanel.border.title = "Mood Box";
 
 	panel.add( hsbPanel );
 
