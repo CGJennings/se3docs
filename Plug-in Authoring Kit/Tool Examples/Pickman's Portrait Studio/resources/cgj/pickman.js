@@ -1,0 +1,614 @@
+//
+// pickman.js - version 3
+//
+// A plug-in that converts photorealistic images
+// into images that simulate a painted look.
+// Can be used to create portrait images from photos.
+//
+
+useLibrary( 'ui' );
+useLibrary( 'imageutils' );
+useLibrary( 'res://cgj/portrait-lib.js' );
+useLibrary( 'res://cgj/painter-lib.js' );
+
+importClass( java.awt.BorderLayout );
+importClass( java.awt.Cursor );
+importClass( java.io.File );
+importClass( ca.cgjennings.ui.dnd.FileDrop );
+importClass( arkham.dialog.ErrorDialog );
+importClass( javax.swing.JPopupMenu );
+importClass( javax.swing.JMenuItem );
+
+// Stores the dialog window, which is lazily created the first time
+// that the plug-in is activated.
+var dialog;
+// Tab component that previews the original image.
+var photoViewer;
+// Tab component that previews the painted image.
+var paintingViewer;
+
+// Stores the original and painted version of the image.
+var source, dest;
+// Tracks the game component, if any, that the source image came from.
+var portraitIsFrom;
+
+
+/*
+ * Plug-in Implementation
+ */
+
+function getName() {
+    return 'Pickman\'s Portrait Studio';
+}
+
+function getDescription() {
+    return 'Turns photographs into painting-like portraits';
+}
+
+function getVersion() {
+    return 3.0;
+}
+
+function run() {
+    if( dialog == null ) {
+    	dialog = createDialog();
+    }
+
+    enablePortraitButtons( Portraits.listSettablePortraits().length > 0 );
+
+	Settings.user.applyWindowSettings( 'pickmans-studio', dialog );
+    dialog.visible = true;
+    Settings.user.storeWindowSettings( 'pickmans-studio', dialog );
+    
+    // forget where portrait came from so card can be GC'd
+    if( portraitIsFrom != null ) {
+    	portraitIsFrom = null;
+    	updateImage( null );
+    }
+}
+
+
+
+
+
+
+
+function createDialog() {
+	var d = new swing.JDialog( Eons.window, 'Pickman\'s Portrait Studio', true );
+	var previewSize = new java.awt.Dimension( 600, 400 );
+	photoViewer = new arkham.ImageViewer();
+	photoViewer.setPreferredSize( previewSize );
+	paintingViewer = new arkham.ImageViewer();
+	paintingViewer.setPreferredSize( previewSize );
+
+	var imageTab = new swing.JTabbedPane();
+	imageTab.addTab( 'Painted', paintingViewer );
+	imageTab.addTab( 'Original', photoViewer );
+	imageTab.setBorder( swing.BorderFactory.createMatteBorder( 0,2,0,0, Color.BLACK ) );
+
+	d.setLayout( new BorderLayout() );
+	d.add( imageTab, BorderLayout.CENTER );
+
+	// create a listener that executes handlerFunction,
+	// then updates the painting if the source slider
+	// has been released by the user
+	function listener( handlerFunction ) {
+		var li = function listener( event ) {
+			try {
+				handlerFunction();
+				if( event == null || !event.source.model.valueIsAdjusting ) {
+					updatePainting();
+				}
+			} catch( ex ) {
+				Error.handleUncaught( ex );
+			}
+		};
+		return li;
+	}
+
+	var changeHue = listener( function changeHueLi() {
+		Painter.hueShift = hueSlider.value/1000 - 0.5;
+	} );
+	var changeSatBoost = listener( function changeSatBoostLi() {
+		Painter.satBoost = satSlider.value/500;
+	} );
+	var changeBriAdjust = listener( function changeBriAdjustLi() {
+		Painter.briAdjust = briSlider.value/1000;
+	} );
+	var changeConAdjust = listener( function changeConAdjustLi() {
+		Painter.conAdjust = conSlider.value/1000;
+	} );
+	var changeSmear = listener( function changeSmearLi() {
+		Painter.radius = smearSlider.value;
+	} );
+	var changeLevels = listener( function changeLevelsLi() {
+		Painter.levels = 1 << levelsSlider.value;
+	} );
+	var changeSensitivity = listener( function changeSensitivityLi() {
+		Painter.insensitivity = 3 - sensitivitySlider.value;
+	} );
+	var changeStrength = listener( function changeStrengthLi() {
+		Painter.strength = strengthSlider.value;
+	} );
+	var changeBlend = listener( function changeBlendLi() {
+		Painter.blending = blendSlider.value;
+	} );
+	function changeMode() {
+		try {
+			var sel = modeCombo.selectedIndex;
+			if( sel < 0 ) return;
+			if( sel == 0 ) {
+				Painter.composite = java.awt.AlphaComposite.SrcOver;
+			} else {
+				Painter.composite = BlendMode[ modeCombo.selectedItem.toString().replace( ' ', '' ) ];
+			}
+			updatePainting();
+		} catch( ex ) {
+			Error.handleUncaught( ex );
+		}
+	}
+
+
+
+
+	var colourPanel = new Grid( '', '[][grow,fill][fill]', '' );
+
+	var hueSlider = slider(
+		0, 1000, 500+125,
+		[0,'-180°', 250,'-90°', 500,'0°', 750,'+90°', 1000,'+180°'],
+		changeHue
+	);
+	hueSlider.majorTickSpacing = 500;
+	hueSlider.minorTickSpacing = 50;
+	hueSlider.paintTicks = true;
+	var hueSpinner = createLinkedSpinner( hueSlider, function(v) (v-500)*360/1000, function(v) (v*1000/360)+500 );
+
+	var satSlider = slider(
+		0, 1000, 0.55*500 + 500,
+		[0,'0%', 500,'100%', 1000,'200%'],
+		changeSatBoost
+	);
+	satSlider.majorTickSpacing = 500;
+	satSlider.minorTickSpacing = 50;
+	satSlider.paintTicks = true;
+	var satSpinner = createLinkedSpinner( satSlider, function(v) v/5, function(v) v*5 );
+
+	var briSlider = slider(
+		-1000, 1000, 0,
+		[-1000,'-100%', 0,'0%', 1000,'100%'],
+		changeBriAdjust
+	);
+	briSlider.majorTickSpacing = 1000;
+	briSlider.minorTickSpacing = 100;
+	briSlider.paintTicks = true;
+	var briSpinner = createLinkedSpinner( briSlider );
+
+	var conSlider = slider(
+		-1000, 1000, 0,
+		[-1000,'-100%', 0,'0%', 1000,'100%'],
+		changeConAdjust
+	);
+	conSlider.majorTickSpacing = 1000;
+	conSlider.minorTickSpacing = 100;
+	conSlider.paintTicks = true;
+	var conSpinner = createLinkedSpinner( conSlider );
+
+	colourPanel.place(
+		'Colour',     '', hueSlider, '', hueSpinner, 'wrap',
+		'Saturation', '', satSlider, '', satSpinner, 'wrap',
+		'Brightness', '', briSlider, '', briSpinner, 'wrap',
+		'Contrast',   '', conSlider, '', conSpinner, 'wrap'
+	);
+
+
+
+
+	var paintPanel = new TypeGrid();
+
+	var smearSlider = slider( 1, 8, 5, null, changeSmear );
+	smearSlider.majorTickSpacing = 1;
+	smearSlider.paintTicks = true;
+	smearSlider.snapToTicks = true;
+	smearSlider.paintLabels = true;
+	var levelsSlider = slider(
+		1, 8, 5,
+		[ 1,'2', 2,'4', 3,'8', 4,'16', 5,'32', 6,'64', 7,'128', 8,'256'],
+		changeLevels
+	);
+	levelsSlider.paintTicks = true;
+	levelsSlider.majorTickSpacing = 1;
+	levelsSlider.snapToTicks = true;
+	paintPanel.place(
+		'Smear',  '',   smearSlider,  'tab hfill',
+		'Levels', 'br', levelsSlider, 'tab hfill'
+	);
+
+
+
+
+	var sketchPanel = new TypeGrid();
+
+	var sketchCheck = checkBox(
+		'Draw sketch lines', true,
+		function sketchCheckLi() {
+			Painter.sketch = sketchCheck.selected;
+			ca.cgjennings.ui.JUtilities.enableTree( sketchSettingPanel, sketchCheck.selected );
+			updatePainting();
+		}
+	);
+	var sensitivitySlider = slider( 0, 3, 0, [0,'Low', 3,'High'], changeSensitivity );
+	sensitivitySlider.paintTicks = true;
+	sensitivitySlider.majorTickSpacing = 1;
+	sensitivitySlider.snapToTicks = true;
+	var strengthSlider = slider( 0, 4, 4, [0,'Low', 4,'High'], changeStrength );
+	strengthSlider.paintTicks = true;
+	strengthSlider.majorTickSpacing = 1;
+	strengthSlider.snapToTicks = true;
+
+	// these sliders are placed on their own subpanel so we can enable/disable
+	// them as a single unit when sketchCheck changes
+	var sketchSettingPanel = new TypeGrid();
+	sketchSettingPanel.place (
+		'Sensitivity', '', sensitivitySlider, 'tab hfill',
+		'Strength', 'br', strengthSlider, 'tab hfill'
+	);
+	// convert to real component so we can enable/disable the children
+	sketchSettingPanel = sketchSettingPanel.realize();
+
+	sketchPanel.place(
+		sketchCheck, '',
+		sketchSettingPanel, 'br hfill'
+	);
+	sketchPanel = sketchPanel.realize();
+
+
+
+
+
+	var resetPanel = new Row();
+	var reset = button( 'Reset All', null, function resetLi() {
+		// prevent repainting every time an individual value is reset
+		var auto = updatePainting.auto;
+		updatePainting.auto = false;
+		hueSlider.value = 500;
+		satSlider.value = 500;
+		briSlider.value = 0;
+		conSlider.value = 0;
+		smearSlider.value = 5;
+		levelsSlider.value = 5;
+		sketchCheck.selected = true;
+		sensitivitySlider.value = 0;
+		strengthSlider.value = 4;
+		ca.cgjennings.ui.JUtilities.enableTree( sketchPanel, true );
+		updatePainting.auto = auto;
+		updatePainting( true );
+	});
+	resetPanel.add( reset );
+	resetPanel.setAlignment(1);
+
+	var outputPanel = new Row();
+	var openBtn = button( '&Open...', null, openImageFile );
+	var getBtn = button( '&Get from Component', null, getPortrait );
+	var setBtn = button( '&Apply to Component', null, setPortrait );
+	var saveBtn = button( '&Save As...', null, saveImageFile );
+	outputPanel.add( openBtn, getBtn, setBtn, saveBtn );
+	outputPanel.setAlignment(1);
+
+	var repaintPanel = new Row();
+	var nowBtn = button( 'Repaint Now' , null, function nowBtnLi() { updatePainting(true); } );
+	var autoCheck = checkBox( 'Repaint automatically', true, function autoCheckLi() {
+		updatePainting.auto = !updatePainting.auto;
+		updatePainting();
+	});
+	repaintPanel.add( autoCheck, nowBtn );
+	repaintPanel.setAlignment(1);
+	repaintPanel = repaintPanel.realize();
+	repaintPanel.setBorder( swing.BorderFactory.createEmptyBorder(4,4,4,4) );
+
+	enablePortraitButtons = function enablePortraitButtons( enable ) {
+		getBtn.enabled = enable;
+		setBtn.enabled = enable;
+	};
+
+	var adjustmentTab = new swing.JTabbedPane();
+	adjustmentTab.addTab( 'Colour', colourPanel.realize() );
+	adjustmentTab.addTab( 'Painting', paintPanel.realize() );
+	adjustmentTab.addTab( 'Sketch Lines', sketchPanel ); // already realized
+
+	resetPanel = resetPanel.realize();
+	resetPanel.setBorder( swing.BorderFactory.createEmptyBorder( 24, 8, 16, 8 ) );
+
+	var controlStack = new Stack (
+		adjustmentTab,
+		resetPanel,
+		separator(),
+		noteLabel( ' To start, drag and drop an image file ' +
+			'or get it from the current component. ' ),
+		repaintPanel, noteLabel(' ')
+	);
+	controlStack = controlStack.realize();
+
+
+
+
+	// embed the controls in the north side of another panel;
+	// this keeps the controls at the bottom of the window when
+	// the dialog is resized
+	var controlPanel = new swing.JPanel();
+	controlPanel.setLayout( new BorderLayout() );
+	controlPanel.add( controlStack, BorderLayout.NORTH );
+
+	outputPanel = outputPanel.realize();
+	outputPanel.setBorder( swing.BorderFactory.createEmptyBorder(4,4,4,4) );
+	controlPanel.add( outputPanel, BorderLayout.SOUTH );
+
+	d.add( controlPanel, BorderLayout.WEST );
+
+	// add drag and drop support
+	new FileDrop( d.contentPane, null, true, function filesDropped( files ) {
+		try {
+			if( files != null && files.length > 0 ) {
+				loadImageFile( files[0] );
+			}
+		} catch( ex ) {
+			Error.handleUncaught( ex );
+		}
+	});
+
+	// use the standard image for the plug-in
+	// as an icon for the dialog
+	d.setIconImage( ImageUtils.get( 'cgj/pickman.jp2', true ) );
+
+	d.pack();
+	d.setLocationRelativeTo( Editor == null ? Eons.window : Editor );
+	dialog = d;
+
+	// install the example image
+	source = ImageUtils.get( 'cgj/pickman-sample.jp2', false );
+	photoViewer.setImage( source );
+
+	java.awt.EventQueue.invokeLater( function initExample() { updateImage( source ); } );
+
+	return d;
+}
+
+// createDialog() stores a function here that can be used to enable/disable
+// the controls that require a game component with a valid portrait.
+var enablePortraitButtons;
+
+
+
+/**
+ * Changes the source image the specified image.
+ */
+function updateImage( im ) {
+	waitCursor( true );
+	try {
+		if( im != null ) {
+			// resize very large images to reduce processing time
+			// and keep outline effects to a reasonable size
+			var MAX = 5*300; // 5" x 300 dpi
+			if( im.width > MAX || im.height > MAX ) {
+				im = ImageUtils.fit( im, MAX, MAX );
+			}
+			photoViewer.image = im;
+			paintingViewer.image = im;
+			source = im;
+			updatePainting();
+		} else {
+			photoViewer.image = null;
+			paintingViewer.image = null;
+		}
+	} finally {
+		waitCursor( false );
+	}
+}
+
+
+/**
+ * Redraws the painted image. This is called whenever one of the
+ * painting controls is changes. If 'force' is true, the painting
+ * is definitely updated. Otherwise, it is only updated if
+ * updatePainting.auto is true (which it is when the redraw box
+ * is checked).
+ */
+function updatePainting( force ) {
+	if( !(updatePainting.auto || force) ) return;
+	waitCursor( true );
+	try {
+		if( source == null ) return;
+		dest = Painter.paint( source );
+		paintingViewer.image = dest;
+	} catch( ex ) {
+		Error.handleUncaught( ex );
+	} finally {
+		waitCursor( false );
+	}
+}
+updatePainting.auto = true;
+
+
+/**
+ * Load source image from a user-selected file.
+ */
+function openImageFile( event ) {
+	try {
+		var f = resources.ResourceKit.showImageFileDialog( event.source );
+		if( f != null ) {
+			loadImageFile( f );
+		}
+	} catch( ex ) {
+		Error.handleUncaught( ex );
+	}
+}
+
+
+/**
+ * Save current painted image to a user-selected file.
+ */
+function saveImageFile( event ) {
+	try {
+		if( dest == null ) {
+			errorBeep();
+		}
+		ImageUtils.save( dest );
+	} catch( ex ) {
+		Error.handleUncaught( ex );
+	}
+}
+
+/**
+ * Use an image from a file as the source for painting.
+ * This is called from openImageFile and from the file drop handler.
+ */
+function loadImageFile( f ) {
+	try {
+		var im = ImageUtils.read( f );
+		if( im == null ) {
+			ErrorDialog.displayError( 'Not a supported image format', null );
+		} else {
+			updateImage( im );
+		}
+		portraitIsFrom = null;
+	} catch( ioEx ) {
+		ErrorDialog.displayError( 'Unable to read file', ioEx );
+	}
+}
+
+/**
+ * getPortrait( event )
+ * Event listener that handles the Get from Component button.
+ * This and setPortrait() work similarly. They check if the
+ * current component has settable portraits, and if so makes
+ * a list of them. If there is only one, the get or set happens
+ * immediately. Otherwise, a menu of the images is created and
+ * shown as a popup on the button.
+ */
+function getPortrait( event ) {
+	function apply( index ) {
+		var gc = Portraits.getProvider();
+		source = Portraits.getPortrait( gc, index );
+		portraitIsFrom = gc;
+		updateImage( source );		
+	}
+		
+	var list = Portraits.listSettablePortraits();
+	if( list.length == 1 ) {
+		apply( list[0] );
+	} else {
+		showPortraitMenu( event.source, list, apply );
+	}
+}
+
+/**
+ * setPortrait( event )
+ * Event listener that handles the Apply to Component button.
+ */
+function setPortrait( event ) {
+	function apply( index ) {
+		Portraits.setPortrait( Editor, index, dest, portraitIsFrom == Component );
+	}
+
+	var list = Portraits.listSettablePortraits();
+	if( list.length == 1 ) {
+		apply( list[0] );
+	} else {
+		showPortraitMenu( event.source, list, apply );
+	}
+}
+
+/**
+ * showPortraitMenu( parent, list, apply )
+ * Builds and displays a popup menu on the button 'parent'. The 'list'
+ * is an array of Portrait instances from a game component. The 'apply'
+ * argument is a function that takes the index of one of the elements
+ * in the list array and does whatever action should be performed when
+ * the menu item for that list element is selected (getting/setting
+ * the relevant portrait image).
+ */
+function showPortraitMenu( parent, list, apply ) {
+	function makeListener( index ) {
+		return function() {
+			apply( index );
+		};
+	}	
+	
+	var menu = new JPopupMenu();
+	for( let i=0; i<list.length; ++i ) {
+		var image = Portraits.getPortrait( Portraits.getProvider(), list[i] );
+		image = ImageUtils.createIcon( image, 48 );
+		var item = new JMenuItem( image );
+		item.addActionListener( makeListener( list[i] ) );
+		menu.add( item );
+	}
+	var parentSize = parent.getSize();
+	var menuSize = menu.getPreferredSize();
+	var insets = parent.getInsets();
+	menu.show( parent, parentSize.width - menuSize.width - insets.right, insets.top - menuSize.height );
+}
+
+/**
+ * createLinkedSpinner( slider, toSpinner, toSlider )
+ * Creates a spinner control that is bound to the value of a slider.
+ * 'toSpinner' and 'toSlider' are functions that convert values from the
+ * slider number range to the spinner number range and vice-versa.
+ */
+function createLinkedSpinner( slider, toSpinner, toSlider ) {
+	if( toSpinner === undefined ) {
+		toSpinner = function(v) v/10;
+		toSlider = function(v) v*10;
+	}
+	
+	var min = slider.minimum;
+	var max = slider.maximum;
+	var val = slider.value;
+
+	var updating = 0;
+
+	function spinnerChanged( event ) {
+		if( updating == 0 ) {
+			++updating;
+			slider.setValue( toSlider( sp.getValue() ) );
+			--updating;
+		}
+	}
+	
+	function sliderChanged( event ) {
+		if( updating == 0 ) {
+			++updating;
+			sp.setValue( java.lang.Double.valueOf( toSpinner( slider.getValue() ) ) );
+			--updating;
+		}
+	}
+	
+	var sp = spinner( toSpinner(min), toSpinner(max), 1, toSpinner(val), spinnerChanged );
+	sp.setBorder( swing.BorderFactory.createEmptyBorder( 0, 0, 16, 0 ) );
+	slider.addChangeListener( sliderChanged );
+	return sp;
+}
+
+
+
+/*
+ * Provide platform-specific error feedback (typically by playing an error sound).
+ */
+function errorBeep() {
+	swing.UIManager.lookAndFeel.provideErrorFeedback( dialog );
+}
+
+/*
+ * Show or hide a wait cursor over the dialog.
+ */
+function waitCursor( enable ) {
+	if( dialog ) {
+		if( enable ) {
+			ca.cgjennings.ui.JUtilities.showWaitCursor( dialog );
+		} else {
+			ca.cgjennings.ui.JUtilities.hideWaitCursor( dialog );
+		}
+	}
+}
+
+if( sourcefile == 'Quickscript' ) {
+	run();
+}

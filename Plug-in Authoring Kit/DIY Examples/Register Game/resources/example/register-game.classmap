@@ -1,0 +1,3 @@
+# register the card for our game (the one with code EG)
+@cat-example
+  Register Game Test Card = diy:example/register-game-diy.js||EG

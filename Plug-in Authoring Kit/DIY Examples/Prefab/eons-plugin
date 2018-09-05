@@ -1,0 +1,8 @@
+id = CATALOGUEID{84b8e972-9cee-431e-bbe2-c12131a8b75a:2013-8-20-9-6-53-215}
+
+catalog-name = Prefab Library Demo
+catalog-credit = Christopher G. Jennings
+catalog-description = Demonstrates the how to use the prefab library to create \
+    basic DIY components.
+
+res://example/prefab-plugin.js

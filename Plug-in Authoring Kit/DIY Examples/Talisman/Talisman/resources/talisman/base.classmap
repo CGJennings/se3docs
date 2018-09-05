@@ -1,0 +1,15 @@
+#
+# Base Class Map for Talisman
+#
+# Uses @ to look up the names of components in the UI string table.
+# Note that anywhere except a script, keys with hyphens use the hyphens,
+# even when @ is used to denote a localized string. (Underscores are only
+# used in place of hyphens for setting and string key names in scripts
+# because '-' cannot be part of a variable name.)
+#
+
+@cat-characters
+    @tal-comp-char = diy:talisman/components/character/char.js | talisman/components/character/icon.jp2 | TAL
+
+@cat-inventory
+    @tal-comp-purch = diy:talisman/components/purchase/purch.js | talisman/components/purchase/icon.jp2 | TAL

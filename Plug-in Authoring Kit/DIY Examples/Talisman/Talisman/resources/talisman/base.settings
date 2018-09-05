@@ -1,0 +1,89 @@
+#
+# base.settings
+#
+# Defines the settings values that will be loaded into the master
+# settings instance for the Talisman game.
+#
+
+#
+#    TIP:  When you are adding an image resource, type the key name and =,
+# then drag and drop the image file from your project folder to the point
+# in the editor where you want the path name to go. Strange Eons will
+# insert the path to the image for you.
+#
+
+
+
+# Character cards
+
+char-front-template = talisman/components/character/character-front.jp2
+char-back-template = talisman/components/character/character-back.jp2
+char-front-overlay = talisman/components/character/character-front-overlay.jp2
+# see character/card.js for an explanation of why the template is the overlay
+char-marker-template = talisman/components/character/marker-overlay.jp2
+char-marker-underlay = talisman/components/character/marker.jp2
+char-portrait-template = talisman/components/character/spirit-dancer.jp2
+char-portrait-clip-region = 72,74,274,459
+char-portrait-true-clip-region = 36,30,338,539
+char-marker-clip-region = 35,33,129,221
+char-marker-true-clip-region = 9,9,180,254
+
+char-title-region = 247,21,254,31
+char-special-title-region = 403,79,278,20
+char-special-text-region = 403,112,278,410
+char-start-region = 403,528,278,16
+char-strength-region = 23,173,19,84
+char-craft-region = 23,340,19,84
+char-objects-region = 148,558,132,18
+char-followers-region = 470,558,132,18
+char-life-region = 708,369,19,84
+char-gold-region = 708,255,19,85
+char-fate-region = 708,143,19,84
+
+char-expsym-region = 338,508,27,27
+char-rqdexp-region = 358,67,32,32
+char-rqdexp-gem = talisman/components/character/reqexp.jp2,348,57
+
+# A list of all of the character bases:
+#     for each entry X, there must be a key #tal_char_base_X
+#     and an image talisman/components/character/base-X.jp2
+char-bases = cobbles,deck,desert,field,lava,mountain,overgrown,path,plains,street,yard
+
+
+
+
+
+# Purchase cards
+
+purch-front-template = talisman/components/purchase/front-a.jp2
+purch-long-front-template = talisman/components/purchase/front-b.jp2
+purch-back-template = talisman/components/purchase/back.jp2
+purch-portrait-template = talisman/components/purchase/helmetupgrade.jp2
+purch-portrait-clip-region = 20,54,205,121
+
+purch-expsym-region = 21,217,16,16
+purch-expsym-gem = talisman/components/generic/exp.jp2,19,197
+purch-rqdexp-region = 24,69,23,23
+purch-rqdexp-gem = talisman/components/generic/reqexp.jp2,19,53
+
+purch-long-expsym-region = 21,160,16,16
+purch-long-expsym-gem = talisman/components/generic/exp.jp2,19,140
+purch-long-rqdexp-region = 24,69,23,23
+purch-long-rqdexp-gem = talisman/components/generic/reqexp.jp2,19,53
+
+# Generic card values
+# Several card types in Talisman are essentially the same
+# except for their colour; these values can be used for any of them
+
+generic-title-region = 40,31,164,26
+generic-type-region = 68,216,106,14
+generic-long-type-region = 70,160,106,14
+generic-text-region = 24,240,195,108
+generic-long-text-region = 24,183,195,166
+generic-measure-region = 0,0,182,9999999
+generic-text-shape = 0,0,316,36,36
+generic-encounter-number-region = 195,324,20,20
+# one of these will be copied over the true portrait clip key
+# during painting, depending on the height of the text
+generic-portrait-clip-region = 20,63,206,170
+generic-long-portrait-clip-region = 20,64,205,111

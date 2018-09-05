@@ -1,0 +1,17 @@
+The purpose of this kit is to help you learn how to
+write plug-ins for Strange Eons 3. You will also
+want to consult the Developer Manual for additional
+background and context on these examples.
+
+
+
+---
+
+You can reuse the example code and files in the
+"Graphics Templates" folder in your own projects.
+
+Licensed under CC BY 4.0:
+https://creativecommons.org/licenses/by/4.0/
+
+(This does not apply to other resources, e.g. fonts,
+which are covered by their own licenses.)

@@ -1,0 +1,5 @@
+# register the demo card in the examples category
+@cat-example
+  Design Support 1 (Verbal Support Adapter) = diy:example/design-support-diy1.js
+  Design Support 2 (Consequence Set) = diy:example/design-support-diy2.js
+  Design Support 3 (Custom View) = diy:example/design-support-diy3.js

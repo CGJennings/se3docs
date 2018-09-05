@@ -1,0 +1,6 @@
+# register the demo card in the examples category
+@cat-example
+  Card and Marker Face Style = diy:example/3-face-diy.js
+  Four Face Style = diy:example/4-face-diy.js
+  Six Face Style = diy:example/6-face-diy.js
+  Eight Face Style = diy:example/8-face-diy.js

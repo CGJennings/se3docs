@@ -1,0 +1,22 @@
+# The eons-plugin file, called the root file, must exist
+# in a plug-in bundle for Strange Eons to load the plug-in.
+# The root file lists one or more plug-ins that are included in
+# a plug-in bundle (.seplugin or .seext), or the theme class in a
+# theme bundle (.setheme). It is not required for a library bundle,
+# but can be included to specify a name, version, or icon. It can
+# also specify details of the bundle's catalog description.
+#
+# Examples:
+#
+# Load a plug-in from the named script file:
+# res://example/myplugin/myplugin.js
+#
+# Load a plug-in from the named class:
+# org.examples.strangeeons.MyPlugin
+#
+# For details see the "Plug-in Root File" Wiki page .
+#
+
+id = CATALOGUEID{170982a2-2d44-42c3-8bf2-50c74149197b:2013-8-20-9-5-44-230}
+
+res://example/basic-plugin.js

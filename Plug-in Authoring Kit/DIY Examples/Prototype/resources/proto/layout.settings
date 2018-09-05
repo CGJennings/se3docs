@@ -1,0 +1,82 @@
+
+bridge-tab-label = Bridge
+bridge-front-template = proto/bridge-tpl.png
+bridge-back-template = proto/bridge-tpl.png
+bridge-name = #proto-name
+bridge-name-region = 20,20,298,70
+bridge-name-oneliner = true
+bridge-name-style = family: 'Unkempt'; size: 20
+bridge-content = #proto-content
+bridge-content-region = 20,100,298,405
+bridge-content-style = family: 'Unkempt'; size: 12
+bridge-content-alignment = left, top
+
+poker-tab-label = Poker
+poker-front-template = proto/poker-tpl.png
+poker-back-template = proto/poker-tpl.png
+poker-name = #proto-name
+poker-name-region = 20,20,335,70
+poker-name-oneliner = true
+poker-name-style = family: 'Unkempt'; size: 20
+poker-content = #proto-content
+poker-content-region = 20,100,335,405
+poker-content-style = family: 'Unkempt'; size: 12
+poker-content-alignment = left, top
+
+bridge-im-tab-label = Bridge
+bridge-im-front-template = proto/bridge-tpl.png
+bridge-im-back-template = proto/bridge-tpl.png
+bridge-im-name = #proto-name
+bridge-im-name-region = 20,20,298,70
+bridge-im-name-oneliner = true
+bridge-im-name-style = family: 'Unkempt'; size: 20
+bridge-im-content = #proto-content
+bridge-im-content-region = 20,315,298,190
+bridge-im-content-style = family: 'Unkempt'; size: 12
+bridge-im-content-alignment = left, top
+bridge-im-portrait-template = icons/application/256.png
+bridge-im-portrait-clip-region = 20,100,298,190
+# creates an 1 pixel invisible overlay so the portrait is
+# drawn overtop of the card template instead of under
+bridge-im-portrait-overlay = icons/1x1.png
+bridge-im-portrait-overlay-region = 0,0,1,1
+
+poker-im-tab-label = Poker
+poker-im-front-template = proto/poker-tpl.png
+poker-im-back-template = proto/poker-tpl.png
+poker-im-name = #proto-name
+poker-im-name-region = 20,20,335,70
+poker-im-name-oneliner = true
+poker-im-name-style = family: 'Unkempt'; size: 20
+poker-im-content = #proto-content
+poker-im-content-region = 20,315,335,190
+poker-im-content-style = family: 'Unkempt'; size: 12
+poker-im-content-alignment = left, top
+poker-im-portrait-template = icons/application/256.png
+poker-im-portrait-clip-region = 20,100,298,190
+poker-im-portrait-overlay = icons/1x1.png
+poker-im-portrait-overlay-region = 0,0,1,1
+
+bridge-ls-tab-label = Bridge
+bridge-ls-front-template = proto/bridge-ls-tpl.js
+bridge-ls-back-template = proto/bridge-ls-tpl.js
+bridge-ls-name = #proto-name
+bridge-ls-name-region = 20,20,485,70
+bridge-ls-name-oneliner = true
+bridge-ls-name-style = family: 'Unkempt'; size: 20
+bridge-ls-content = #proto-content
+bridge-ls-content-region = 20,100,485,218
+bridge-ls-content-style = family: 'Unkempt'; size: 12
+bridge-ls-content-alignment = left, top
+
+poker-ls-tab-label = Poker
+poker-ls-front-template = proto/poker-ls-tpl.js
+poker-ls-deck-template = proto/poker-ls-tpl.js
+poker-ls-name = #proto-name
+poker-ls-name-region = 20,20,485,70
+poker-ls-name-oneliner = true
+poker-ls-name-style = family: 'Unkempt'; size: 20
+poker-ls-content = #proto-content
+poker-ls-content-region = 20,100,485,255
+poker-ls-content-style = family: 'Unkempt'; size: 12
+poker-ls-content-alignment = left, top

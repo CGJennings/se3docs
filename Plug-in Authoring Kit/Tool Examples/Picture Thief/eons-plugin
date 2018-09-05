@@ -1,0 +1,11 @@
+id = CATALOGUEID{1aec78fa-92b8-477d-ade4-48444649e990:2013-8-20-9-5-44-845}
+
+catalog-name = Picture Thief
+catalog-name_fr = Voleur des Portraits
+
+catalog-credit = Chris Jennings
+catalog-description = View and copy or save the portrait images stored in a game \
+    component.
+catalog-tags = tool
+
+res://example/picture-thief.js

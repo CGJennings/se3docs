@@ -1,0 +1,8 @@
+id = CATALOGUEID{cbde4e46-1045-4640-8b5c-f6e8def42c93:2013-8-20-9-5-44-692}
+
+catalog-name = FTP Export
+catalog-credit = Chris Jennings
+catalog-description = Adds basic FTP upload as an option when exporting components
+catalog-tags = tool,export
+
+res://example/ftp-export.js

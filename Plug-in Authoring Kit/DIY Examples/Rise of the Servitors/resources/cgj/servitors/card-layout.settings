@@ -1,0 +1,7 @@
+servitor-front-sheet-template = cgj/servitors/front.jp2
+servitor-back-sheet-template = cgj/servitors/back.jp2
+servitor-portrait-template = cgj/servitors/portrait.jp2
+servitor-portrait-clip-region = 12,12,316,172
+servitor-title-region = 35,216,267,41
+servitor-text-region = 31,260,274,167
+servitor-front-sheet-expsym-region = 304,496,30,30

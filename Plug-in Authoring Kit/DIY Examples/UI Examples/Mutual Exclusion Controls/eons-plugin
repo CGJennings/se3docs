@@ -1,0 +1,9 @@
+id = CATALOGUEID{1a50df92-bdde-40f7-8cda-38d12392b5b4:2013-8-20-9-8-37-265}
+
+catalog-name = Mutual Exclusion Buttons
+catalog-credit = Christopher G. Jennings
+catalog-description = Demonstrates how to use mutual exclusion interface \
+    controls (radio, toggle, and cycle buttons) in a DIY editor. Mutual exclusion \
+    controls present a set of options, of which at most one can be selected.
+
+res://example/mutex-plugin.js

@@ -1,0 +1,139 @@
+//
+// make-all.ajs
+//
+// Build all plug-ins in the plug-in authoring kit
+//
+
+importClass( java.io.File );
+importPackage( arkham.project );
+
+if( confirm( 'Make plug-in bundles for all script-based example plug-ins?', 'Make All' ) ) {
+	makeAll();
+	// tell the project to resynchronize the script's folder immediately so
+	// that the new plug-ins will appear in the project pane right away
+	member.parent.synchronize();
+} else {
+	println( '[To edit an automation script, right click on it and choose Open]' );
+}
+
+
+
+
+
+// Make bundles for all of the script-based plug-ins
+function makeAll() {
+	forAll( project, pluginTaskFilter( make ) );
+}
+
+
+
+
+
+// Make a bundle for an individual plug-in task
+function make( pluginTask ) {
+	const settings = pluginTask.settings;
+	const makeAction = Actions.findActionByName( 'makebundle' );
+
+	// 1. Find out what the bundle will be called
+
+	var name = settings.get( makeAction.KEY_BUNDLE_FILE );
+	if( name == null ) {
+		println( 'Warning: task ' + pluginTask + ' has never been built before; skipping make' );
+		return;
+	}
+	var bundle = new File( pluginTask.parent.file, name );
+	
+	// 2. Ask the MakeBundle action we looked up to make the bundle
+
+	makeAction.perform( project, pluginTask, null );
+	if( !bundle.exists() ) {
+		println( 'Error: MakeBundle failed or wrote bundle to unexpected location: ' + pluginTask );
+		return;
+	}
+	
+	// 3. Move the new bundle to the same folder as this script
+
+	var dest = new File( member.parent.file, name );
+	ProjectUtilities.moveFile( bundle, dest );
+	
+	// 4. As we make each bundle, show it in the project tree
+
+	// update the parent's tree immediately, so it detects the new file
+	member.parent.synchronize();
+	// find the Member instance for the new file
+	var destMember = member.parent.findChild( dest );
+	project.view.ensureVisible( destMember );
+}
+
+
+
+
+
+// Returns a function that executes somethingToDo( m ) if m
+// is a plug-in task folder with no Java code. This is used to create
+// a filter for the forAll function. (For more information, create a
+// new automation script in a project and read the sample script.)
+function pluginTaskFilter( somethingToDo ) {
+	return function filter( m ) {
+		if( isPluginTask( m ) && !childContainsJavaCode( m ) ) {
+			somethingToDo( m );
+		}
+	};
+}
+
+
+
+
+
+// returns true if the member is a plug-in task folder
+function isPluginTask( m ) {
+	return m instanceof Task && m.settings.get( m.KEY_TYPE ) == NewTaskType.PLUGIN_TYPE;
+}
+
+
+
+
+
+// returns true if any child of this member contains a .java or .class file
+function childContainsJavaCode( member ) {
+	var kids = member.getChildren();
+	for( let i=0; i<kids.length; ++i ) {
+		if( kids[i].isFolder() ) {
+			if( childContainsJavaCode( kids[i] ) ) return true;
+		} else if( ProjectUtilities.matchExtension( kids[i], 'java', 'class' ) ) {
+			return true;
+		}
+	}
+	return false;
+}
+
+
+
+
+
+// Calls somethingToDo( member ) for every project member that is
+// a descendant of parent.
+function forAll( parent, somethingToDo ) {
+	if( parent == null || !(parent instanceof Member)) {
+		error( 'missing parent, or parent is not a Member' );
+	}
+	if( !somethingToDo ) {
+		error( 'missing somethingToDo' );
+	}
+
+	var i;
+	var child;
+	var children = parent.getChildren();
+
+    for( i=0; i<children.length; ++i ) {
+		child = children[i];
+		if( child.isFolder() ) {
+			forAll( child, somethingToDo );
+		}
+		somethingToDo( child );
+	}
+	// this tells the project system that some of the files in
+	// parent may have changed without its knowing; it will look
+	// for new or deleted files and update the project accordingly
+	parent.synchronize();
+}

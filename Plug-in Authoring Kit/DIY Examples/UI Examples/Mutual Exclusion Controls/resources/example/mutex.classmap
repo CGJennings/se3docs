@@ -1,0 +1,3 @@
+# register the demo card in the examples category
+@cat-example
+  Mutual Exclusion Buttons = diy:example/mutex-diy.js

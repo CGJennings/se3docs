@@ -1,0 +1,7 @@
+@cat-misc
+    Prototype (Tall, Bridge) = diy:proto/bridge.js ||
+	Prototype (Tall, Poker) = diy:proto/poker.js ||
+    Prototype (Image, Bridge) = diy:proto/bridge-im.js ||
+	Prototype (Image, Poker) = diy:proto/poker-im.js ||
+    Prototype (Wide, Bridge) = diy:proto/bridge-ls.js ||
+	Prototype (Wide, Poker) = diy:proto/poker-ls.js ||

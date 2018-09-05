@@ -1,0 +1,3 @@
+# register the demo card in the examples category
+@cat-example
+  Painting Techniques = diy:example/painting-techniques-diy.js 

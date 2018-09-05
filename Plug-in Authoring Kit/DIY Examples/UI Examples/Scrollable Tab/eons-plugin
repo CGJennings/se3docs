@@ -1,0 +1,6 @@
+id = CATALOGUEID{a4dab5c8-19ff-4c98-90a7-63fe8a290666:2013-8-20-9-5-44-185}
+
+name = Scrollable Tabs
+description = Demonstrates the use of AbstractContainer.editorTabScrolling
+
+res://example/scrollable-tab-plugin.js

@@ -1,0 +1,9 @@
+id = CATALOGUEID{bb8a089a-5705-4bf8-85f4-e11aadb35505:2013-8-20-9-5-44-464}
+
+catalog-name = PNG Packer
+catalog-credit = Christopher G. Jennings
+catalog-description = Recompresses all PNG image files in a folder to reduce the \
+    size of projects and plug-ins.
+catalog-tags = project,tool
+
+res://cgj/PNGPack.js

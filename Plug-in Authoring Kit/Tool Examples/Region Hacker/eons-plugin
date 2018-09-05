@@ -1,0 +1,8 @@
+id = CATALOGUEID{bc1b0339-2523-40e7-93b1-fdf92a3dd5bc:2013-8-20-9-5-44-881}
+
+name = Region Hacker
+description = Interactively edits regions on the current game component
+
+catalog-tags = tool,development
+
+res:///region-hacker.js

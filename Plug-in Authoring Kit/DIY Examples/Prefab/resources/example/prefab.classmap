@@ -1,0 +1,7 @@
+#
+# Prefab Demo Class Map
+#
+
+@cat-example
+    Prefab Demo 1 = diy:example/prefab-diy.js ||
+	Prefab Demo 2 = diy:example/prefab2-diy.js ||

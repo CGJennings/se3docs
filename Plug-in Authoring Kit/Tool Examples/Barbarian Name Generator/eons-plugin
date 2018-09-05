@@ -1,0 +1,23 @@
+#
+# An eons-plugin file lists one or more plug-ins that are included in
+# a plug-in bundle (.seplugin or .seext), or the theme class in a
+# theme bundle (.setheme). It is not required for a library bundle,
+# but can be included to specify a name, version, or icon. It can
+# also specify details of the bundle's catalog description.
+#
+# Examples:
+#
+# Load a plug-in from the named script file:
+# res://example/myplugin/myplugin.js
+#
+# Load a plug-in from the named class:
+# org.examples.strangeeons.MyPlugin
+#
+# For details see the "Plug-in Root File" Wiki page .
+#
+
+id = CATALOGUEID{a9acd04a-860d-4b81-8da0-d1813ab39a98:2013-9-8-14-3-19-351}
+
+catalog-tags = tool
+
+res://example/barbarian-name-gen.js

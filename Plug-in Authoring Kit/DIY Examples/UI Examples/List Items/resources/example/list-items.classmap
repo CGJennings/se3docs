@@ -1,0 +1,3 @@
+# register the demo card in the examples category
+@cat-example
+  List Items = diy:example/list-items-diy.js

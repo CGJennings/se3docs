@@ -1,0 +1,15 @@
+#
+# hd.settings
+#
+# Defines the keys needed to load the high definition (300 ppi)
+# versions of the card templates. Only a few cards are included,
+# to keep the size of the plug-in authoring kit reasonable.
+#
+
+# Purchase cards
+
+purch-front-template-hires = talisman/components/purchase/front-a-300.jp2
+purch-long-front-template-hires = talisman/components/purchase/front-b-300.jp2
+
+purch-expsym-gem-hires = talisman/components/generic/exp-300.jp2,20,197
+purch-long-expsym-gem-hires = talisman/components/generic/exp-300.jp2,20,140

@@ -1,0 +1,4 @@
+# register the demo card in the examples category
+@cat-example
+  Multiple/Custom Portraits = diy:example/multi-portrait-diy.js
+  Custom Linked Portrait = diy:example/linked-multi-portrait-diy.js

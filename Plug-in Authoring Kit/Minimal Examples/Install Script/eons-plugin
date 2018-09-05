@@ -1,0 +1,5 @@
+id = CATALOGUEID{8455fc69-0cce-407d-8248-a87e20637f30:2013-8-20-9-5-44-273}
+
+installer = res://example/is-installer.js
+
+res://example/is-plugin.js

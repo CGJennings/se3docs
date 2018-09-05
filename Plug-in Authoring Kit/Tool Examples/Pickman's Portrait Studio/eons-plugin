@@ -1,0 +1,25 @@
+#
+# An eons-plugin file lists one or more plug-ins that are included in
+# a plug-in bundle (.seplugin or .seext).
+#
+# If the plug-in is script-based, it is listed by writing script: followed
+# by the path to the script within the plug-in bundle.
+# Example: script:resources/cgj/modern/install.js
+#
+# If the plug-in is a compiled class, then it is listed by
+# writing the fully qualified class name
+# Example: ca.cgjennings.seplugins.arkhamnights.FormatArkhamNights
+#
+
+id = CATALOGUEID{8e390556-9b88-432b-8f81-3dc9fdc0b72d:2013-8-20-9-5-44-747}
+
+catalog-name = Pickman's Portrait Studio
+catalog-credit = Chris Jennings
+catalog-description = Pickman's Portrait Studio is a tool for non-artists to \
+    turn photographs into game art with a painted look. Drag and drop a photo, \
+    adjust the effect sliders, and then replace a portrait image on the current game \
+    component.
+catalog-tags = tool
+catalog-minver = 3630
+
+res://cgj/pickman.js

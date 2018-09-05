@@ -1,0 +1,62 @@
+#
+# Prefab Component Demo
+#
+
+demo-front-template = example/pf-front.jp2
+demo-back-template = example/pf-back.jp2
+demo-portrait-template = example/pf-portrait.jp2
+demo-portrait-clip-region = 37,37,376,219
+
+demo-tab-label = Geoff's Tab
+demo-name-label = &Title
+demo-name = Troilus and Criseyde
+demo-name-alignment = centre, middle
+demo-name-style = family: 'Edwardian Script ITC'; size: 35
+demo-name-region = 42,298,365,56
+
+demo-content-label = &Quotation
+demo-content = \
+	Ye knowe eek, that in forme of speche is chaunge\n\
+	Withinne a thousand yeer, and wordes tho\n\
+	That hadden prys, now wonder nyce and straunge\n\
+	Us thinketh hem; and yet they spake hem so,\n\
+	And spedde as wel in love as men now do;\n\
+	Eek for to winne love in sondry ages,\n\
+	In sondry londes, sondry ben usages.
+demo-content-alignment = centre, middle
+demo-content-style = family: 'Old English Text MT'; size: 8
+demo-content-region = 42,356,365,172
+
+
+
+
+
+
+
+
+
+
+demo2-front-template = example/pf-back2.jp2
+demo2-back-template = example/pf-back2.jp2
+demo2-portrait-template = example/pf-portrait2.jp2
+demo2-portrait-clip-region = 100,85,240,394
+demo2-portrait-on-back = yes
+
+demo2-tab-label = $demo_tab_label
+# this still sets the default name, so for example this is what
+# will appear in the document tab; but since there is no region
+# there will be no control shown for this value
+demo2-name = $demo_name
+
+demo2-content-label = $demo_content_label
+demo2-content-region = 116,101,210,364
+demo2-content = \
+	And forthy if it happe in any wyse, \
+	that here be any lovere in this place \
+	that herkeneth, as the story wol devyse, \
+	how Troilus com to his lady grace, \
+	and thenketh, so nolde I nat love purchace, \
+	or wondreth on his speche and his doinge, \
+	I noot; but it is me no wonderinge.
+demo2-content-alignment = centre, top
+demo2-content-style = family: 'Edwardian Script ITC'; size: 11; weight: bold

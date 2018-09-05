@@ -1,0 +1,7 @@
+id = CATALOGUEID{1bd31123-d9ad-4f3d-89fa-fef9b5d0756d:2013-8-20-9-5-44-422}
+
+catalog-name = MD5
+catalog-description = Prints the MD5 checksum of any file in a project.
+catalog-tags = project,development
+
+res://example/md5.js
