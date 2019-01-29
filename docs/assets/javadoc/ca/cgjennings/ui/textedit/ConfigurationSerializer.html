@@ -99,7 +99,7 @@ var activeTableTab = "activeTableTab";
 <pre>public interface <span class="typeNameLabel">ConfigurationSerializer</span></pre>
 <div class="block">This interface can be implemented to serialize editor configurations
  to various formats. The interface expects that the implementation backs
- a collection of settings as if by a <a href="http://docs.oracle.com/javase/7/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util"><code>Map</code></a>. When a configuration
+ a collection of settings as if by a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util"><code>Map</code></a>. When a configuration
  is serialized, settings will be written to the serializer implementation as
  key, value pairs. When it is deserialized, settings will be queried by looking
  up keys and decoding the returned values. Missing keys will be filled in with
@@ -130,15 +130,15 @@ var activeTableTab = "activeTableTab";
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/ui/textedit/ConfigurationSerializer.html#get-java.lang.String-">get</a></span>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</code>
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/ui/textedit/ConfigurationSerializer.html#get-java.lang.String-">get</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</code>
 <div class="block">Returns the previously stored value of a feature key.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/ui/textedit/ConfigurationSerializer.html#put-java.lang.String-java.lang.String-">put</a></span>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
-   <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/ui/textedit/ConfigurationSerializer.html#put-java.lang.String-java.lang.String-">put</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
+   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>
 <div class="block">Stores a configuration feature with the specified key and value.</div>
 </td>
 </tr>
@@ -163,7 +163,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>get</h4>
-<pre><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;get(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</pre>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;get(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</pre>
 <div class="block">Returns the previously stored value of a feature key. If a key is
  requested for which no value was stored, this method must return
  <code>null</code>.</div>
@@ -181,8 +181,8 @@ var activeTableTab = "activeTableTab";
 <ul class="blockListLast">
 <li class="blockList">
 <h4>put</h4>
-<pre>void&nbsp;put(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
-         <a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</pre>
+<pre>void&nbsp;put(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
+         <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</pre>
 <div class="block">Stores a configuration feature with the specified key and value.
  When deserializing, the feature will be fetched by calling
  <a href="../../../../ca/cgjennings/ui/textedit/ConfigurationSerializer.html#get-java.lang.String-"><code>get(java.lang.String)</code></a> using the same key.</div>
