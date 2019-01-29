@@ -26,18 +26,3 @@ new java.net.URL("res://jsimmons/superwhiz/data.bin").openStream();
 ```
 
 [More on `res://` URLs](dm-special-urls.md)
-
-### Fonts
-
-### Settings files
-
-### Tile sets
-
-### Silhouettes
-
-### Class map files
-
-### Default abbreviation tables
-
-### Installation scripts
-

@@ -1,6 +1,6 @@
 # Converting and compressing images
 
-Image files can be converted and (re)compressed between the standard Strange Eons image formats (PNG, JPEG, and JPEG2000). You can also convert a few other image types (BMP, GIF) to one of the standard formats. Right click on the image file in the [project pane](um-projects.md), choose **Convert To**, then choose the desired output format.
+Image files can be converted and (re)compressed between the standard Strange Eons image formats (PNG, JPEG, and JPEG2000). You can also convert a few other image types (BMP, GIF) to one of the standard formats. Right click on the image file in the [project pane](um-proj-intro#the-project-pane.md), choose **Convert To**, then choose the desired output format.
 
 > You can “convert” an image to its current format. This can be used to recompress the file with a different quality setting or change other format options.
 
