@@ -7,31 +7,33 @@
    1. Script libraries
    2. The Strange Eons API
    3. Lockdown
-   4. [Resource and project URLs](dm-special-urls.md)
-   5. Settings
+   4. Settings
 3. Anatomy of a plug-in
    1. Plug-in types
    2. Plug-in bundles and task folders
    3. [The root file](dm-eons-plugin.md)
-   2. Compiled plug-in skeleton
+   4. Compiled plug-in skeleton
    5. Scripted plug-in skeleton
-   5. Plug-in resource files
-      1. Images
-      2. Fonts
-      3. Settings
-      4. Tile sets
-      5. Silhouettes
-      6. Class maps
-      7. Default abbreviation tables
-      8. Installation scripts
-4. Development tools and resources
+   6. [Installation script](dm-install-script.md)
+4. **Additional resources (images, fonts, etc.)**
+   1. [Resources](dm-resources.md)
+   2. [Accessing resources with `res://` and `project://` URLs](dm-special-urls.md)
+   3. [Image resources](dm-res-image.md)
+   4. [Font resources](dm-res-font.md)
+   5. [Settings file resources](dm-res-settings.md)
+   6. [String table resources](dm-res-string-table.md)
+   7. [Tile set resources](dm-res-tile-set.md)
+   8. [Silhouette resources](dm-res-silhouette.md)
+   9. [Class map resources](dm-res-classmap.md)
+   10. [Default abbreviation table resources](dm-res-abbrv-table.md)
+5. **Development tools**
    1. The plug-in authoring kit
-   2. The source code editor
-   3. The script debugger
+   2. [Source code editor](dm-code-editor.md)
+   3. [Script debugger](dm-debugger.md)
    4. The **Document Browser**
-   3. The **Convert Image** action
+   5. [Converting and compressing images](dm-convert-image.md)
    6. The **Draw Regions** action
-5. How to...
+6. How to...
    7. Add support for a new game
       1. Registering the game
       2. Registering expansions
@@ -62,7 +64,7 @@
 
 
 
-[Using the debugger to fix script problems](dm-debugger.md)
+
 
 
 

@@ -10,7 +10,7 @@ A resource URL starts with the protocol `res://` and is followed by a path relat
 
 ​    `resources/myplugin/images/kitty.jpg`
 
-you can access it with the URL:
+then you can access it with the URL:
 
 ​    `res://myplugin/images/kitty.jpg`
 
@@ -18,7 +18,7 @@ you can access it with the URL:
 
 ### Resources and the open project
 
-If you refer to a resource that is not found in any of the real `resources` folders in the loaded plug-ins, the `ResourceKit` will search the open project before giving up. To do this it checks each task folder with a `resources` subfolder for a suitable match. If it finds one, this is returned as missing resource.
+If you refer to a resource that is not found in any of the real `resources` folders in the loaded plug-ins, the `ResourceKit` will search the open project before giving up. To do this it checks each task folder with a `resources` subfolder for a suitable match. If it finds one, this is returned as the missing resource.
 
 This is helpful when developing plug-ins: you can, for example, run a plug-in script and it will load image resources for the script directly out of your plug-in task folder. Image resources that are discovered this way aren't cached, so if you replace one the new version will be used on the next run of the script.
 
@@ -26,4 +26,4 @@ This is helpful when developing plug-ins: you can, for example, run a plug-in sc
 
 A project URL can be used to access a file in the open project independently of where the project is stored on your computer. They can be useful for [automation scripts](um-proj-automation.md) and in other cases where you want to refer content stored in another part of a project. For example, if you have a card that contains an `<image>` markup tag, you could use a project URL to store the image alongside the card without the link breaking when the project is copied somewhere else.
 
-A project URL starts with `project://` and is followed by a path relative to the project root.
+A project URL starts with `project://` and is followed by a path relative to the root of the open project.

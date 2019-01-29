@@ -1,4 +1,4 @@
-# Using the debugger to fix script problems
+# Script debugger
 
 Strange Eons includes a *source-level debugger* to help you find and solve bugs in your script code. It allows you to run scripts line-by-line and watch how the values of script variables change and what values your functions are returning. This lets you verify whether your code is doing what you think it is doing, and if not, why not. This page will show you how to get the debugger running and provide some strategies you can use to fix (and prevent!) bugs.
 
