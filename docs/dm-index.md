@@ -14,7 +14,7 @@
    3. [The root file](dm-eons-plugin.md)
    4. Compiled plug-in skeleton
    5. Scripted plug-in skeleton
-   6. Installation script
+   6. [Installation scripts](dm-installation-script.md)
 4. **Additional resources (images, fonts, etc.)**
    1. [Resources](dm-resources.md)
    2. [Resource `res://` and other special URLs](dm-special-urls.md)
