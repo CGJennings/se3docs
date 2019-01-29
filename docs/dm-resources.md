@@ -11,7 +11,7 @@ To *quickly create nested folders in a project*, create a new folder, and then w
 
 ### Using `ResourceKit`
 
-The `ResourceKit` is a class that defines a number of static utility methods for dealing with resources. Many types of resources are loaded using special-purpose methods (functions) that are designed to process that kind of file. *Check the page for the particular resource type in this section for more information.*
+The [`ResourceKit`](assets/javadoc/resources/ResourceKit.html) is a class that defines a number of static utility methods for dealing with resources. Many types of resources are loaded using special-purpose methods (functions) that are designed to process that kind of file. *Check the page for the particular resource type in this section for more information.*
 
 For general access to any kind of resource file, such as a data file in your own private format, you can use the `ResourceKit.getInputStream(path)`. Here, as elsewhere in `ResourceKit`, the `path` is a path relative to the combined `resources` virtual file system. For example, Jane might access one of her files using the path `jsimmons/superwhiz/data.bin`. This would be stored in her plug-in task folder under `resources/jsimmons/superwhiz/data.bin`.
 

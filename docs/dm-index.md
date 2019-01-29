@@ -14,17 +14,17 @@
    3. [The root file](dm-eons-plugin.md)
    4. Compiled plug-in skeleton
    5. Scripted plug-in skeleton
-   6. [Installation script](dm-install-script.md)
+   6. Installation script
 4. **Additional resources (images, fonts, etc.)**
    1. [Resources](dm-resources.md)
    2. [Accessing resources with `res://` and `project://` URLs](dm-special-urls.md)
    3. [Image resources](dm-res-image.md)
    4. [Font resources](dm-res-font.md)
-   5. [Settings file resources](dm-res-settings.md)
-   6. [String table resources](dm-res-string-table.md)
-   7. [Tile set resources](dm-res-tile-set.md)
-   8. [Silhouette resources](dm-res-silhouette.md)
-   9. [Class map resources](dm-res-classmap.md)
+   5. [Class map resources](dm-res-classmap.md)
+   6. [Settings file resources](dm-res-settings.md)
+   7. [String table resources](dm-res-string-table.md)
+   8. [Tile set resources](dm-res-tile-set.md)
+   9. [Silhouette resources](dm-res-silhouette.md)
    10. [Default abbreviation table resources](dm-res-abbrv-table.md)
 5. **Development tools**
    1. The plug-in authoring kit
