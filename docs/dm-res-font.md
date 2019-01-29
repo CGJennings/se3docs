@@ -6,31 +6,31 @@ Plug-ins that add new kinds of game components will often also want to provide c
 
 ![The typeface viewer dialog](images\font-viewer.png)
 
-## Raw `Font` instances
+## Raw Font instances
 
-A single font file can be loaded directly to get a `Font` instance. This has limited utility: you can use it in user interface components, and you can use it to render text directly to a graphics context. However, you can’t use it anywhere that the font must be identified by *family name*. This includes markup boxes.
+A single font file can be loaded directly to get a [Font](https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html) instance. This has limited utility: you can use it in user interface components, and you can use it to render text directly to a graphics context. However, you can’t use it anywhere that the font must be identified by *family name*. This includes markup boxes.
 
-`ResourceKit.getFont(path, pointSize)`  
-Returns the font resource as a `Font` instance. The `pointSize` is the desired font size, in points (1/72 inch).
+[`ResourceKit.getFont(path, pointSize)`](assets/javadoc/resources/ResourceKit.html#getFont)  
+Returns the font resource as a Font instance. The `pointSize` is the desired font size, in points (1/72 inch).
 
 ## Font families and registration
 
 Typefaces normally come in families that are split over several files. For example, a typeface family named “Grouch” might include “Grouch regular”, “Grouch italic”, “Grouch bold”, and “Grouch bold italic”, each in its own file. To use such a family, it needs to be *registered*.
 
-`ResourceKit.registerFontFamily(commaSeparatedListOfPaths)`  
+[`ResourceKit.registerFontFamily(commaSeparatedListOfPaths)`](assets/javadoc/resources/ResourceKit.html#registerFontFamily)  
 This will attempt to register a group of font resources together as a family. You pass it a list of resource paths separated by commas (`,`). It is important that the first entry in the list is the path to the “regular” version of the font. For example: `"foo/fonts/grouch_regular.ttf,foo/fonts/grouch_bold.ttf"`.
 
 > The first font in the list must use a complete path, such as `foo/fonts/grouch_regular.ttf`. After that, any entries in the list that don’t include at least one `/` will be assumed to be in the same folder as the first entry.
 
-This method will return an array of `FontRegistrationResult` objects, one for each font in the list. These define the following methods:
+This method will return an array of [FontRegistrationResult](assets/javadoc/resources/ResourceKit.FontRegistrationResult.html) objects, one for each font in the list. These define the following methods:
 
-`getFamily()`  
+[`getFamily()`](assets/javadoc/resources/ResourceKit.FontRegistrationResult.html#getFamily)  
 This will return the name of the font family, which you will need to refer to the font when creating markup boxes. This is the “real” name of the font family, as stored inside the font resource. The file name of the resource is irrelevant and can be whatever you want.
 
-`getFont()`  
-Returns a `Font` instance for the resource. If the font was registered successfully, you can also get a `Font` instance using `new java.awt.Font(familyName, java.awt.Font.PLAIN, fontSize)`.
+[`getFont()`](assets/javadoc/resources/ResourceKit.FontRegistrationResult.html#getFont)  
+Returns a Font instance for the resource. If the font was registered successfully, you can also get a Font instance using code like `new java.awt.Font(familyName, java.awt.Font.PLAIN, fontSize)`.
 
-`isRegistrationSuccessful()`  
+[`isRegistrationSuccessful()`](assets/javadoc/resources/ResourceKit.FontRegistrationResult.html#isRegistrationSuccessful)  
 This returns `true` if the font was registered successfully. If this returns `false`, it is usually because the user already has a font with the same family name installed in their system font folder, or if a font with the same name was already registered. As long as the font with the same name really is the same font, this is usually not a problem. The system (or previously registered) font will be used instead of your font, but since they are *different copies* of the *same font* everything will still work as expected. However, if your font is different in some way (for example, if you have added some custom character glyphs), you won’t get the result you expect. For this reason, if you are modifying a font in any way you should also change the family names encoded within the font files.
 
 A typical usage pattern for registering a font family will look something like this:
@@ -43,23 +43,23 @@ let familyName = registrationResults[0].getFamily();
 // markup boxes and the like
 ```
 
-Note that using this method does not “magically” create a family. 
+Note that using this method does not “magically” create a family from font files that declare different family names internally.
 
 ### Registering single fonts
 
-Many decorative fonts only come in one variant. When a “family” consists of only a single file, you can use `ResourceKit.registerFont(path)` instead of `registerFontFamily`. This version expects a single resource path and returns a single registration result.
+Many decorative fonts only come in one variant. When a “family” consists of only a single file, you can use [`ResourceKit.registerFont(path)`](assets/javadoc/resources/ResourceKit.html#registerFont) instead of `registerFontFamily`. This version expects a single resource path and returns a single registration result.
 
 ### Other font-related methods
 
-The `ResourceKit` offers several other font-related methods. Some of the most commonly used ones are:
+The ResourceKit offers several other font-related methods. Some of the most commonly used ones are:
 
-`ResourceKit.isFamilyRegistered(familyName)`  
+[`ResourceKit.isFamilyRegistered(familyName)`](assets/javadoc/resources/ResourceKit.html#isFamilyRegistered)  
 Returns `true` if at least one font with the specified name was registered successfully.
 
-`ResourceKit.findAvailableFontFamily(commaSeparatedListOfFamilyNames, defaultFamily)`  
+[`ResourceKit.findAvailableFontFamily(commaSeparatedListOfFamilyNames, defaultFamily)`](assets/javadoc/resources/ResourceKit.html#findAvailableFontFamily)  
 Returns the first family in the list that is available on this device, or the default family value if none of them is available. This is similar to how font family styles for Web pages work.
 
-`ResourceKit.getBodyFamily()`  
+[`ResourceKit.getBodyFamily()`](assets/javadoc/resources/ResourceKit.html#getBodyFamily)  
 Returns the family name of the standard serif font that is the default for markup on game components. This can be used as the `defaultFamily` argument for the previous method.
 
 ## Using fonts from Google Fonts

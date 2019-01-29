@@ -6,7 +6,7 @@ A class map file is used to register new kinds of game components with Strange E
 
 > The name “class map” alludes to the fact that, historically, only compiled classes were used to create new components. Now, though, components can also be defined using scripts.
 
-To *register the contents of a class map file with Strange Eons*, call `gamedata.ClassMap.add(path)` using the resource path of the class map file. This can only be done in extension plug-ins.
+To *register the contents of a class map file with Strange Eons*, call [`gamedata.ClassMap.add(path)`](assets/javadoc/gamedata/ClassMap.html#add) using the resource path of the class map file. This can only be done in extension plug-ins.
 
 ## File format
 
@@ -74,14 +74,14 @@ Examples and Demonstrations
 
 #### Component name
 
-A component entry consists of a name, a class or script file, and optionally an icon image resource and/or game code. If the component name begins with `@`, then the actual name is looked up using the rest of the name using `Language.string(name)`.
+A component entry consists of a name, a class or script file, and optionally an icon image resource and/or game code. If the component name begins with `@`, then the actual name is looked up using the rest of the name using [`Language.string(name)`](assets/javadoc/resources/Language.html#string).
 
 #### Class or script
 
 Each component *must* declare a class or script file that can be used to create a new editor for the component type. The following forms can be used:
 
 **Fully qualified class name**  
-New instances of the component will be created by invoking this class’s no-argument constructor. The class must be a subclass of `GameComponent`. An editor for the new component is then created by calling its `createDefaultEditor()` method. As a convenience, if the class name does not specify a package it will default to `ca.cgjennings.apps.arkham.component`.
+New instances of the component will be created by invoking this class’s no-argument constructor. The class must a [GameComponent](assets/javadoc/ca/cgjennings/apps/arkham/component/GameComponent.html) instance. An editor for the new component is then created by calling its `createDefaultEditor()` method. As a convenience, if the class name does not specify a package it will default to `ca.cgjennings.apps.arkham.component`.
 
 **DIY component script**  
 A script implementing the DIY component functions is listed using `diy:` followed by the resource path to the DIY script. A new DIY component will be created using the script, and a matching `DIYEditor` created for the component.

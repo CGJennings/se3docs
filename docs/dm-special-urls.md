@@ -14,13 +14,20 @@ then you can access it with the URL:
 
 ​    `res://myplugin/images/kitty.jpg`
 
-> You can "escape" out of the `resources` folder to the root of the class path by adding an extra slash at the start of the URL. This URL refers to a file stored in the root of the plug-in bundle: `res:///at-the-root.txt`.
-
 ### Resources and the open project
 
 If you refer to a resource that is not found in any of the real `resources` folders in the loaded plug-ins, the `ResourceKit` will search the open project before giving up. To do this it checks each task folder with a `resources` subfolder for a suitable match. If it finds one, this is returned as the missing resource.
 
 This is helpful when developing plug-ins: you can, for example, run a plug-in script and it will load image resources for the script directly out of your plug-in task folder. Image resources that are discovered this way aren't cached, so if you replace one the new version will be used on the next run of the script.
+
+### Determining the unique resource being referenced
+
+Because `res://` URLs (and regular resource paths) combine the app and all plug-ins into a single virtual file system, you may occasionally run into cases where you get a different resource than the one you were expecting. Sometimes this is a cached version (in which case you can clear the cache). Sometimes, though, you will want to determine exactly which resource is actually being matched to the URL. You can do this by calling [`ResourceKit.composeResourceURL(pathOrUrlString)`](assets/javadoc/resources/ResourceKit.html#composeResourceURL). This works with both resource paths and resource URL strings (basically a path with `res://` prepended to it). This method will return an absolute URL pointing to the exact resource loaded by the input parameter.
+
+### ⚠️ Accessing the class path root
+
+You can escape out of the `resources` folder to the root of the class path by adding an extra slash at the start of the URL. This URL refers to a file stored in the root of the plug-in bundle: `res:///at-the-root.txt`.
+
 
 ## Project URLs
 

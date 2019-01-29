@@ -8,19 +8,19 @@ Most plug-ins have some need for image resources, even if only to provide an ico
 
 Bitmap images can be stored using a number of file formats, which vary in how they represent colour information and how they compress the data to the reduce file size. PNG, JPEG, and JPEG2000 images are supported. Other common formats can be [converted](dm-convert-image.md) to one of these if needed.
 
-`ResourceKit.getImage(path)`  
+[`ResourceKit.getImage(path)`](assets/javadoc/resources/ResourceKit.html#getImage)  
 Loads and returns a bitmap image resource as a `BufferedImage` instance.
 
-`ResourceKit.getImageQuietly(path)`  
+[`ResourceKit.getImageQuietly(path)`](assets/javadoc/resources/ResourceKit.html#getImageQuietly)  
 Loads a bitmap image resource, but without setting a wait cursor. If the image fails to load, no error dialog is displayed.
 
-`ResourceKit.getImagesQuietly(path[])`  
+[`ResourceKit.getImagesQuietly(path[])`](assets/javadoc/resources/ResourceKit.html#getImagesQuietly)  
 Loads multiple images, in parallel if the device has multiple CPUs or cores. Returns an array of image results once all of the images have loaded (or failed to load).
 
-`ResourceKit.getThemedImage(path)`  
+[`ResourceKit.getThemedImage(path)`](assets/javadoc/resources/ResourceKit.html#getThemedImage)  
 Loads an image for use by the interface; the current theme will be given a chance to modify the image before it is returned.
 
-`ResourceKit.getIcon(path)`  
+[`ResourceKit.getIcon(path)`](assets/javadoc/resources/ResourceKit.html#getIcon)  
 Similar to `getThemedImage`, but the image is returned as an `Icon` instance (the form required by most user interface components).
 
 ### Alternatives using the `imageutils` script library
@@ -38,22 +38,22 @@ Loads a bitmap image resource from a local file.
 
 **File extensions:** `.svg`, `.svgz`
 
-Strange Eons is primarily bitmap-oriented, but it also has limited support for vector images. You can define a vector image yourself, using whatever drawing code you like, by implementing the `VectorImage` interface. You can also load and use SVG images through a `VectorImage` subclass, `SVGVectorImage`. Support for SVG images requires the **SVG Image Support** [core component](um-plugins-intro.md) to be installed.
+Strange Eons is primarily bitmap-oriented, but it also has limited support for vector images. You can define a vector image yourself, using whatever drawing code you like, by implementing the [VectorImage](assets/javadoc/ca/cgjennings/graphics/shapes/VectorImage.html) interface. You can also load and use SVG images through a VectorImage subclass, [SVGVectorImage](assets/javadoc/ca/cgjennings/graphics/shapes/SVGVectorImage.html). Support for SVG images requires the **SVG Image Support** [core component](um-plugins-intro.md) to be installed.
 
-`ResourceKit.getVectorImage(path)`  
-Returns an SVG image as a `VectorImage` instance. Note that some filter effects are not supported, and any script code in the SVG image will not be run.
+[`ResourceKit.getVectorImage(path)`](assets/javadoc/resources/ResourceKit.html#getVectorImage)  
+Returns an SVG image as a VectorImage instance. Note that some filter effects are not supported, and any script code in the SVG image will not be run.
 
-`ResourceKit.getVectorIcon(path, width, height)`  
-Returns an `Icon` that displays an SVG image resource at the specified size.
+[`ResourceKit.getVectorIcon(path, width, height)`](assets/javadoc/resources/ResourceKit.html#getVectorIcon)  
+Returns an Icon that displays an SVG image resource at the specified size.
 
-## The `StrangeImage` class
+## The StrangeImage class
 
-The `resources.StrangeImage` class is an abstraction that can be used to deal with either bitmap or vector images transparently.
+The [`resources.StrangeImage`](assets/javadoc/resources/StrangeImage.html) class is an abstraction that can be used to deal with either bitmap or vector images transparently.
 
-`StrangeImage.get(location)`  
-Returns a `StrangeImage` instance created from the data at the specified location. This can be a URL string, including a `res://` URL, or a local file path. Any string that would work in a portrait panel will also work as a location, except the empty string (which loads a default portrait).
+[`StrangeImage.get(location)`](assets/javadoc/resources/StrangeImage.html#get)  
+Returns a StrangeImage instance created from the data at the specified location. This can be a URL string, including a `res://` URL, or a local file path. Any string that would work in a portrait panel will also work as a location, except the empty string (which loads a default portrait).
 
-The `StrangeImage` class provides methods that can be used to get the underlying image’s nominal dimensions, paint the image in a graphics context, get a version of the image as either a `BufferedImage` or `VectorImage`, and more.
+The class provides methods that can be used to get the underlying image’s nominal dimensions, paint the image in a graphics context, get a version of the image as either a BufferedImage or VectorImage, and more.
 
 ## ⚠️ Resource creation scripts
 

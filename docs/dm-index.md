@@ -17,7 +17,7 @@
    6. Installation script
 4. **Additional resources (images, fonts, etc.)**
    1. [Resources](dm-resources.md)
-   2. [Accessing resources with `res://` and `project://` URLs](dm-special-urls.md)
+   2. [Resource `res://` and other special URLs](dm-special-urls.md)
    3. [Image resources](dm-res-image.md)
    4. [Font resources](dm-res-font.md)
    5. [Class map resources](dm-res-classmap.md)

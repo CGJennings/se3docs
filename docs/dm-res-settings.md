@@ -10,14 +10,14 @@ To *edit a settings resource*, double click the resource file in the project pan
 
 ## Accessing settings in a settings file
 
-The `Settings` class can be used to interpret values in the settings files in various ways, such as resource locations, numbers, rectangular regions, and more. To access the settings in a given resource, you can use:
+The [Settings](assets/javadoc/resources/Settings.html) class can be used to interpret values in the settings files in various ways, such as resource locations, numbers, rectangular regions, and more. To access the settings in a given resource, you can use:
 
 ```js
 let s = new Settings();
 s.addSettingsFrom(path);
 ```
 
-`Settings` instances *inherit* missing settings from a parent scope. If no scope is specified when creating the `Settings` instance, it will inherit from the global scope. To inherit from another scope, specify it in the constructor:
+Settings instances *inherit* missing settings from a parent scope. If no scope is specified when creating the Settings instance, it will inherit from the global scope. To inherit from another scope, specify it in the constructor:
 
 ```js
 let s = new Settings(diy.settings);

@@ -2,7 +2,7 @@
 
 When adding a new game, you may also wish to define a default table of [abbreviations](um-gc-abbreviations.md) so that users can insert stock phrases with a few keystrokes. This not only speeds up component development, but it helps ensure consistent wording and styling.
 
-When an abbreviation table is required, Strange Eons uses the `AbbreviationTableManager` class to load it. This first looks for a custom table defined by the user. If none is found, it looks for a default table in the `abbrev` resource folder, under the name `game-XX.settings`, where `XX` is the code of the relevant game.
+When an abbreviation table is required, Strange Eons uses the [AbbreviationTableManager](assets/javadoc/ca/cgjennings/apps/arkham/editors/AbbreviationTableManager.html) class to load it. This first looks for a custom table defined by the user. If none is found, it looks for a default table in the `abbrev` resource folder, under the name `game-XX.settings`, where `XX` is the code of the relevant game.
 
 Abbreviation tables use the same format as other [settings files](dm-res-settings.md): the keys are the abbreviations and the values are their matching expansions. For example:
 

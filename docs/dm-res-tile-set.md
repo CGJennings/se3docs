@@ -4,7 +4,7 @@
 
 A tile is a prefabricated object, usually art, that can be placed in a [deck](um-deck-adding-content.md ). Tiles are most commonly used to create an expansion board for a game, but creative developers will certainly find other uses for them. Tiles are listed in the deck editor's **Components** section and can be dragged and dropped onto the active deck page.
 
-To *register the contents of a tile set with Strange Eons*, call `gamedata.TileSet.add(path)` using the resource path of the tile set file. This can only be done in extension plug-ins.
+To *register the contents of a tile set with Strange Eons*, call [`gamedata.TileSet.add(path)`](assets/javadoc/gamedata/TileSet.html#add) using the resource path of the tile set file. This can only be done in extension plug-ins.
 
 ## File format
 
@@ -15,7 +15,7 @@ The format of tile set files is a variant of the format used for [settings files
 **Key:** None (first line of tile definition)  
 **Default:** None (a value is required)
 
-The first line of every tile definition is the the name of the tile as it will be listed in the deck editor. If the name begins with `@` then the actual name is found by looking up the rest of the line using `Language.string`.
+The first line of every tile definition is the the name of the tile as it will be listed in the deck editor. If the name begins with `@` then the actual name is found by looking up the rest of the key using [`Language.string(key)`](assets/javadoc/resources/Language.html#string).
 
 Sometimes a group of tiles is very similar and it is useful to number them as a sequence using a common name. An `@`-name that ends in /*n* (where *n* is a digit) will format the localized string with the value of *n*. For example, `@key/1` would look up the value of `key` in the UI string resources. If the value of this key is `"Tile %d"`, then the final name of this tile would be `"Tile 1"` after replacing the `%d` with the formatting digit `1`. Other tiles in the series would use the names `@key/2`, `@key/3`, and so on. 
 
@@ -26,7 +26,7 @@ Sometimes a group of tiles is very similar and it is useful to number them as a 
 **Key:** None (second line of tile definition)  
 **Default:** None (a value is required)
 
-The second line of a tile definition is the resource path of the image file (or resource creation script) used for the tile image. Alternately, the resource path can start with `script:` to name a script which implements the `TileProvider` interface.
+The second line of a tile definition is the resource path of the image file (or resource creation script) used for the tile image. Alternately, the resource path can start with `script:` to name a script which implements the [TileProvider](assets/javadoc/ca/cgjennings/apps/arkham/deck/item/TileProvider.html) interface.
 
 ### Resolution
 
@@ -89,4 +89,4 @@ A miscellaneous category.
 
 ### Client properties
 
-Special client properties can be assigned to a tile by adding keys with names that start with `client-`. These can be read by tool plug-ins to modify their behaviour or to configure the behaviour of `TileProvider` scripts. To set a client property in a tile set, add a property with a `client-*` key and the desired string value.
+Special client properties can be assigned to a tile by adding keys with names that start with `client-`. These can be read by tool plug-ins to modify their behaviour or to configure the behaviour of TileProvider scripts. To set a client property in a tile set, add a property with a `client-*` key and the desired string value.

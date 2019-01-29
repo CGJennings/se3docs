@@ -16,6 +16,6 @@ Translations are edited using the string table editor, which lists the keys defi
 
 To *translate a string*, choose its key in the key pane. Read the default value (or base language value when adding a regional translation), then enter or edit the translation in the Language (or Region) field.
 
-String tables are loaded and accessed using the `Language` class.
+String tables are loaded and accessed using the [Language](assets/javadoc/resources/Language.html) class.
 
 For more information on string tables and localization, refer to the [Translation Manual](tm-index).
