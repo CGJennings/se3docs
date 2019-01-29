@@ -23,4 +23,4 @@ Resources can also accessed using [URL](https://docs.oracle.com/javase/8/docs/ap
 new java.net.URL("res://jsimmons/superwhiz/data.bin").openStream();
 ```
 
-[More on `res://` URLs](dm-special-urls.md)
+Resource URLs are discussed in more detail in the next section.
