@@ -31,17 +31,17 @@
 
 ### Images
 
-To *convert or optimize a bitmap image*, right click and choose **Convert To/PNG**, **Convert To/JPEG**, or **Convert To/JPEG2000**. Adjust the quality and scan settings as desired, then choose **Convert**.
+To *convert or optimize a bitmap image*, right click and choose [**Convert To** and the desired format](dm-convert-image.md).
 
 |                       Icon                       | Type           | Extension(s)    | Notes                                                        |
 | :----------------------------------------------: | -------------- | --------------- | ------------------------------------------------------------ |
 |        ![image](images/project/image.png)        | JPEG           | `.jpg`          | widely supported [lossy bitmap image format](https://cgjennings.ca/articles/jpeg-compression.html); does not support transparency |
 |        ![image](images/project/image.png)        | JPEG2000       | `.jp2`          | lossy or lossless bitmap format commonly used in plug-ins to retain quality and reduce size |
 |        ![image](images/project/image.png)        | PNG            | `.png`          | widely supported lossless bitmap image format                |
-|                                                  | Windows Bitmap | `.bmp`, `.gif`  | widely supported legacy format                               |
-|                                                  | GIF            | `.bmp`, `.gif`  | widely supported obsolete format                             |
+|                                                  | Windows Bitmap | `.bmp`          | widely supported legacy format                               |
+|                                                  | GIF            | `.gif`          | widely supported legacy format                               |
 |                                                  | Photoshop      | `.psd`          | to *convert to a regular bitmap image*, double click to **View** then choose **Save As** |
-| ![vector-image](images/project/vector-image.png) | SVG            | `.svg`, `.svgz` | requires core component; limited support, always converted to fixed bitmap internally |
+| ![vector-image](images/project/vector-image.png) | SVG            | `.svg`, `.svgz` | requires core component ([details](dm-res-images.md))        |
 
 ## Plug-in files
 
@@ -78,6 +78,10 @@ To *examine a font*, double click on it.
 Plug-in bundles store the entire contents of a plug-in in a single file. This is the form in which plug-ins are normally stored and used by Strange Eons.
 
 To *edit the contents of a plug-in*, right click on the bundle and choose **Import** to convert the bundle into a plug-in task.
+
+To *create a bundle for a plug-in*, right click the plug-in task folder and choose **Make Plug-in Bundle**.
+
+To *pack a plug-in bundle*, right click the bundle and choose **Publish**. Double click the packed bundle to convert it back.
 
 |                        Icon                        | Type                     | Extension(s)           | Notes                                                        |
 | :------------------------------------------------: | ------------------------ | ---------------------- | ------------------------------------------------------------ |
