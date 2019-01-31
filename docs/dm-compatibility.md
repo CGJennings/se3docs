@@ -8,7 +8,7 @@ To make it easier to upgrade old components smoothly, DIY components include a s
 
 > Be aware that `version` is an **integer** property. Do not try to use fractional version numbers like 1.0, 1.1, 1.2 and so on. The fraction will be dropped, so these will all appear to be version 1!
 
-By assigning a new number each time you change the component in an incompatible way, you can tell which version of a component you are dealing with. You can then write an `onRead` function that checks this version number and makes any changes that are needed to bring the component up to date.
+By switching to a new number each time you change the component in an incompatible way, you can tell which version of a component you are dealing with. You can then write an `onRead` function that checks this version number and makes any changes that are needed to bring the component up to date.
 
 Here is an example of what that code can look like:
 
