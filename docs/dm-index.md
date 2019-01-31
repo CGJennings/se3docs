@@ -32,7 +32,7 @@
    3. [Script debugger](dm-debugger.md)
    4. The **Document Browser**
    5. [Converting and compressing images](dm-convert-image.md)
-   6. The **Draw Regions** action
+   6. [Draw Regions](dm-draw-regions.md)
 6. How to...
    7. Add support for a new game
       1. Registering the game
