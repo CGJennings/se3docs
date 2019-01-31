@@ -10,5 +10,5 @@
 4. Testing a translation
 5. General tips and guidelines
 6. Advanced topics
-   1. Translating plural forms
+   1. [Translating strings that use plural forms](tm-plurals.md)
    2. [Adding spelling support for a new language](tm-spelling.md)
