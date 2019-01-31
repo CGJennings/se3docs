@@ -27,40 +27,42 @@
    9. [Silhouette resources](dm-res-silhouette.md)
    10. [Default abbreviation table resources](dm-res-abbrv-table.md)
 5. **Development tools**
-   1. The plug-in authoring kit
-   2. [Source code editor](dm-code-editor.md)
-   3. [Script debugger](dm-debugger.md)
-   4. The **Document Browser**
-   5. [Converting and compressing images](dm-convert-image.md)
-   6. [Draw Regions](dm-draw-regions.md)
-6. How to...
-   7. Add support for a new game
+   1. [Code editor](dm-code-editor.md)
+   2. [Script debugger](dm-debugger.md)
+   3. [Converting and compressing images](dm-convert-image.md)
+   4. [Draw Regions](dm-draw-regions.md)
+6. **Development resources**
+   1. Plug-in authoring kit
+   2. Document browser
+7. **How to...**
+   1. [Register new games and game expansions](dm-register-game.md)
+   2. Add support for a new game
       1. Registering the game
       2. Registering expansions
          1. Custom expansion symbol templates
-   8. Add new game component types using script code
+   3. Add new game component types using script code
       1. Portraits
       2. Prefab components
       3. Bleed margins
       4. [Changing components without breaking old save files](dm-compatibility.md)
-   9. Access and modify existing components
+   4. Access and modify existing components
       1. Working with portraits
       2. Adding new marker silhouettes
-   10. Add new app commands and features
-       1. Extending the app menu
-       2. Extending the context bar
-       3. Extending **Preferences**
-   11. Work with the project system API
-       1. Getting and traversing the open project
-       2. Accessing project member files
-       3. The **Task** classes
-       4. The project view
-       5. Extending the project system
-          1. Adding **Task** actions to existing tasks
-          2. Adding new task types
-          3. Extending the **New...** action with new file types
-          4. Adding support for new file types
-          5. Adding new kinds of metadata to the properties view
+   5. Add new app commands and features
+      1. Extending the app menu
+      2. Extending the context bar
+      3. Extending **Preferences**
+   6. Work with the project system API
+      1. Getting and traversing the open project
+      2. Accessing project member files
+      3. The **Task** classes
+      4. The project view
+      5. Extending the project system
+         1. Adding **Task** actions to existing tasks
+         2. Adding new task types
+         3. Extending the **New...** action with new file types
+         4. Adding support for new file types
+         5. Adding new kinds of metadata to the properties view
 
 
 
