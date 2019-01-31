@@ -15,7 +15,7 @@
    4. Compiled plug-in skeleton
    5. Scripted plug-in skeleton
    6. [Installation scripts](dm-installation-script.md)
-4. **Additional resources (images, fonts, etc.)**
+4. **Additional plug-in resources (images, fonts, etc.)**
    1. [Resources](dm-resources.md)
    2. [Resource `res://` and other special URLs](dm-special-urls.md)
    3. [Image resources](dm-res-image.md)
@@ -36,23 +36,19 @@
    2. Document browser
 7. **How to...**
    1. [Register new games and game expansions](dm-register-game.md)
-   2. Add support for a new game
-      1. Registering the game
-      2. Registering expansions
-         1. Custom expansion symbol templates
-   3. Add new game component types using script code
+   2. Add new game component types using script code
       1. Portraits
       2. Prefab components
       3. Bleed margins
       4. [Changing components without breaking old save files](dm-compatibility.md)
-   4. Access and modify existing components
+   3. Access and modify existing components
       1. Working with portraits
       2. Adding new marker silhouettes
-   5. Add new app commands and features
+   4. Add new app commands and features
       1. Extending the app menu
       2. Extending the context bar
       3. Extending **Preferences**
-   6. Work with the project system API
+   5. Work with the project system API
       1. Getting and traversing the open project
       2. Accessing project member files
       3. The **Task** classes
@@ -63,6 +59,7 @@
          3. Extending the **New...** action with new file types
          4. Adding support for new file types
          5. Adding new kinds of metadata to the properties view
+   6. [Make the spelling checker ignore game terminology](dm-spelling-exclusions.md)
 
 
 
@@ -70,12 +67,9 @@
 
 
 
-How to guides temporary space
+How to guides temporary space  
 How to create a plug-in  
-How to use the source-level script debugger  
 How to develop a compiled plug-in  
 How to reduce a plug-in's footprint  
-How to create image resources from scripts  
 How to make the spelling checker ignore a game's special terminology  
-How to work with the document browser  
 
