@@ -4,7 +4,7 @@
 
 A string table stores translated text so that a plug-in, game component, or other feature can be used with different languages. A single collection of translatable strings is split over multiple files: one for the default translation (which is ideally English), and one for each translation.
 
-To *add a new string table*, right click in a project resource folder and choose **New|String Table**.
+To *add a new string table*, right click in a project resource folder and choose **New/String Table**.
 
 To *add a new translation to a string table*, right click one of the files in the translation and choose **Add Locale**. The name of the new string table file will be the same as the name of the base file containing the default strings but with the locale name concatenated to the end (such as `example.properties` and `example_fr.properties`).
 

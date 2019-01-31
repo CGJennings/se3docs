@@ -4,7 +4,7 @@
 
 Settings files are used to store a set of named string values. By reading in the settings files, you can refer to the settings by name instead of using the actual values. This makes it easier to modify the values consistently. Instead of hard-coding a value into your script, you look up the value by name everywhere it is used. If you decide to change the value later, you only need to update the definition in the `.settings` file and the new value will be used throughout your script without having to manually update each use. Many features in the DIY game components are built around reading configuration values from settings.
 
-To *create a new settings resource*, right click a folder inside a plug-in task and choose **New|Settings File**.
+To *create a new settings resource*, right click a folder inside a plug-in task and choose **New/Settings File**.
 
 To *edit a settings resource*, double click the resource file in the project pane to open the [code editor](dm-code-editor.md).
 

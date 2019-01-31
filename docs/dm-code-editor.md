@@ -10,7 +10,7 @@ The code editor is a syntax-highlighting text editor that is built into Strange 
 
 [Abbreviations](um-gc-abbreviations.md ) are short letter patterns you type in and then expand into longer text sequences by typing <kbd>Tab</kbd>. For example, in script code files you can type <kbd>f</kbd> <kbd>n</kbd> <kbd>Tab</kbd> to insert the skeleton of a new function definition. The available abbreviations match the type of file you are editing, and you can add new abbreviations of your own.
 
-To *edit the abbreviations used in the code editor*, choose **Source|Abbreviations**.
+To *edit the abbreviations used in the code editor*, choose **Source/Abbreviations**.
 
 ### Navigator
 
@@ -18,7 +18,7 @@ Depending on the type of file, a *navigator panel* may appear to the left of the
 
 To *jump to a destination listed in the navigator panel*, click on the panel entry.
 
-To *show or hide the navigator panel* in supported file types, choose **View|Navigator**.
+To *show or hide the navigator panel* in supported file types, choose **View/Navigator**.
 
 To *resize the navigator panel*, drag the bar between the panel and the text editing area.
 
