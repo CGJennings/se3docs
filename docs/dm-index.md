@@ -42,7 +42,7 @@
       1. Portraits
       2. Prefab components
       3. Bleed margins
-      4. Changing components without breaking old save files
+      4. [Changing components without breaking old save files](dm-compatibility.md)
    9. Access and modify existing components
       1. Working with portraits
       2. Adding new marker silhouettes

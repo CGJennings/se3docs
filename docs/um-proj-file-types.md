@@ -41,7 +41,7 @@ To *convert or optimize a bitmap image*, right click and choose [**Convert To** 
 |                                                  | Windows Bitmap | `.bmp`          | widely supported legacy format                               |
 |                                                  | GIF            | `.gif`          | widely supported legacy format                               |
 |                                                  | Photoshop      | `.psd`          | to *convert to a regular bitmap image*, double click to **View** then choose **Save As** |
-| ![vector-image](images/project/vector-image.png) | SVG            | `.svg`, `.svgz` | requires core component ([details](dm-res-images.md))        |
+| ![vector-image](images/project/vector-image.png) | SVG            | `.svg`, `.svgz` | requires core component ([details](dm-res-image.md))         |
 
 ## Plug-in files
 
