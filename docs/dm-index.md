@@ -32,7 +32,7 @@
    3. [Converting and compressing images](dm-convert-image.md)
    4. [Draw Regions](dm-draw-regions.md)
 6. **Development resources**
-   1. Plug-in authoring kit
+   1. [Plug-in authoring kit](dm-pak.md)
    2. Document browser
 7. **How to...**
    1. [Register new games and game expansions](dm-register-game.md)
@@ -70,6 +70,5 @@
 How to guides temporary space  
 How to create a plug-in  
 How to develop a compiled plug-in  
-How to reduce a plug-in's footprint  
-How to make the spelling checker ignore a game's special terminology  
+How to reduce a plug-in's footprint
 
