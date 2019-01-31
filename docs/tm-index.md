@@ -11,4 +11,4 @@
 5. General tips and guidelines
 6. Advanced topics
    1. Translating plural forms
-   2. Adding spelling support
+   2. [Adding spelling support for a new language](tm-spelling.md)
