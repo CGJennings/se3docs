@@ -1,0 +1,86 @@
+<!DOCTYPE html><html>
+<head>
+<title>Script Library Documentation extension</title>
+<style>
+body { font-family: sans-serif; font-size: 14pt; line-height: 1.1; }
+
+h1, h2, h3 { font-weight: bold }
+h1 { font-size: 16pt; margin-top: 4pt; margin-bottom: 4pt; }
+h2 { font-size: 14pt; margin-top: 28pt; margin-bottom: 2pt; }
+h3 { font-size: 12pt; margin-top: 18pt; margin-bottom: 2pt;  }
+
+a { color: #000077 }
+a:active { color: #770000 }
+
+tt, code { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt; color: #000077 }
+pre { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt;
+       margin: 48pt; margin-top: 2pt; margin-bottom: 10pt; padding: 6pt; background-color: #F9F9F9;
+       border-top: dashed 1pt #777777; border-bottom: dashed 1pt #777777; }
+table { border-width: 0px; border-collapse: collapse; padding: 0; margin: 8pt; margin-top: 2pt; margin-bottom: 10pt; }
+table.arglist { margin-left: 24pt; margin-right: 12pt }
+p { margin-top: 2pt; margin-bottom: 10pt; }
+
+div.indent { margin-left: 48pt; }
+
+div.toc { font-size: 90%; margin: 16px 16px 16px 16px; padding: 8px; background-color: #f7f7f7; border: #f7f7f7 solid 4px; border-radius: 8px; }
+
+td.arg { border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+td.argdesc { padding-left: 6px; border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+
+.PARAMLIST { font-weight: normal }
+.OPTIONAL { color: #888888; font-weight: normal }
+.CLASS, .STATIC, .RESTRICTED
+      { font-size: 80%; font-weight: normal; font-style: italic; margin-left: 8pt; padding-left: 4pt; border-left: dotted 1pt #007700 }
+.CLASS { color: #000099; border-left-color: #000099 }
+.STATIC { color: #009900; border-left-color: #009900 }
+.RESTRICTED { color: #990000; border-left-color: #990000 }
+
+.COMMENT1 { color: #737373 }
+.COMMENT2 { color: #737373; font-style: italic }
+.LITERAL1 { color: #ce7b00 }
+.LITERAL2 { color: #ce7b00 }
+.LITERAL3 { color: #ce7b00 }
+.LABEL { color: #000000 }
+.KEYWORD1 { color: #000099; font-weight: bold }
+.KEYWORD2 { color: #009900 }
+.KEYWORD3 { color: #0000da }
+.OPERATOR { color: #000000 }
+.INVALID { color: #b20000; font-style: italic }
+.SPECIAL1 { color: #000000; font-weight: bold }
+.SPECIAL2 { color: #000000; font-weight: bold }
+.SPECIAL3 { color: #000000; font-weight: bold }
+.SPECIAL4 { color: #000000; font-weight: bold }
+.SPECIAL5 { color: #000000; font-weight: bold }
+.SPECIAL6 { color: #000000; font-weight: bold }</style>
+</head>
+<body>
+<a name='top'><h1>extension</h1></a>
+<div class='toc'>
+<a href='#ConvertthisPluginintoanExtension'>Convert this Plug-in into an Extension</a><br>
+</div>
+<p>
+<h2><a name='ConvertthisPluginintoanExtension'>Convert this Plug-in into an Extension</a></h2>
+
+ When this library is included in a plug-in script, the script becomes
+ an extension. (It must still be packaged as a </tt>.seext</tt> bundle
+ to be discovered and loaded at the correct time.)
+<p>
+ This library defines a <tt>getPluginType()</tt> function that returns the
+ correct type for extensions and imports the following classes from the
+ <tt>gamedata</tt> package into the global namespace:
+<pre><span class='PLAIN'> Game</span>
+<span class='PLAIN'> Expansion</span>
+<span class='PLAIN'> ClassMap</span>
+<span class='PLAIN'> ExpansionSymbolTemplate</span>
+<span class='PLAIN'> AbstractExpansionSymbolTemplate</span>
+<span class='PLAIN'> SymbolVariantUtilities</span>
+<span class='PLAIN'> TileSet</span>
+<span class='PLAIN'> Silhouette</span></pre><p>
+ <b>Notes:</b> Extensions are loaded and executed before the program is
+ fully initialized. The variables <tt>Editor</tt> and
+ <tt>Component</tt> will be <tt>null</tt>. However, a valid
+ <tt>PluginContext</tt> object is provided. Extensions are never "activated"
+ by the user, so they do not require or use a <tt>run()</tt> function.
+
+<p style='margin-top: 20pt;'><a href='#top'>Contents</a></body>
+</html>

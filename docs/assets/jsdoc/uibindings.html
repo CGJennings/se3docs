@@ -1,0 +1,430 @@
+<!DOCTYPE html><html>
+<head>
+<title>Script Library Documentation uibindings</title>
+<style>
+body { font-family: sans-serif; font-size: 14pt; line-height: 1.1; }
+
+h1, h2, h3 { font-weight: bold }
+h1 { font-size: 16pt; margin-top: 4pt; margin-bottom: 4pt; }
+h2 { font-size: 14pt; margin-top: 28pt; margin-bottom: 2pt; }
+h3 { font-size: 12pt; margin-top: 18pt; margin-bottom: 2pt;  }
+
+a { color: #000077 }
+a:active { color: #770000 }
+
+tt, code { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt; color: #000077 }
+pre { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt;
+       margin: 48pt; margin-top: 2pt; margin-bottom: 10pt; padding: 6pt; background-color: #F9F9F9;
+       border-top: dashed 1pt #777777; border-bottom: dashed 1pt #777777; }
+table { border-width: 0px; border-collapse: collapse; padding: 0; margin: 8pt; margin-top: 2pt; margin-bottom: 10pt; }
+table.arglist { margin-left: 24pt; margin-right: 12pt }
+p { margin-top: 2pt; margin-bottom: 10pt; }
+
+div.indent { margin-left: 48pt; }
+
+div.toc { font-size: 90%; margin: 16px 16px 16px 16px; padding: 8px; background-color: #f7f7f7; border: #f7f7f7 solid 4px; border-radius: 8px; }
+
+td.arg { border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+td.argdesc { padding-left: 6px; border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+
+.PARAMLIST { font-weight: normal }
+.OPTIONAL { color: #888888; font-weight: normal }
+.CLASS, .STATIC, .RESTRICTED
+      { font-size: 80%; font-weight: normal; font-style: italic; margin-left: 8pt; padding-left: 4pt; border-left: dotted 1pt #007700 }
+.CLASS { color: #000099; border-left-color: #000099 }
+.STATIC { color: #009900; border-left-color: #009900 }
+.RESTRICTED { color: #990000; border-left-color: #990000 }
+
+.COMMENT1 { color: #737373 }
+.COMMENT2 { color: #737373; font-style: italic }
+.LITERAL1 { color: #ce7b00 }
+.LITERAL2 { color: #ce7b00 }
+.LITERAL3 { color: #ce7b00 }
+.LABEL { color: #000000 }
+.KEYWORD1 { color: #000099; font-weight: bold }
+.KEYWORD2 { color: #009900 }
+.KEYWORD3 { color: #0000da }
+.OPERATOR { color: #000000 }
+.INVALID { color: #b20000; font-style: italic }
+.SPECIAL1 { color: #000000; font-weight: bold }
+.SPECIAL2 { color: #000000; font-weight: bold }
+.SPECIAL3 { color: #000000; font-weight: bold }
+.SPECIAL4 { color: #000000; font-weight: bold }
+.SPECIAL5 { color: #000000; font-weight: bold }
+.SPECIAL6 { color: #000000; font-weight: bold }</style>
+</head>
+<body>
+<a name='top'><h1>uibindings</h1></a>
+<div class='toc'>
+<a href='#CreatebindingsbetweenuserinterfaceUIcontrolsandprivatesettingson'>Create bindings between user interface (<span class='PARAMLIST'>UI</span>) controls and private settings on</a><br>
+<a href='#BindingnameuiControlgameComponentsheetsToUpdate'>Binding(<span class='PARAMLIST'> name, uiControl, gameComponent, <span class='OPTIONAL'>[sheetsToUpdate]</span> </span>) <span class='CLASS'>constructor</span></a><br>
+<a href='#Bindingprototypeupdate'>Binding.prototype.update(<span class='PARAMLIST'></span>)</a><br>
+<a href='#BindingprototypeinitComponent'>Binding.prototype.initComponent(<span class='PARAMLIST'></span>)</a><br>
+<a href='#BindingprototypecontrolToSettingcontrol'>Binding.prototype.controlToSetting(<span class='PARAMLIST'> control </span>)</a><br>
+<a href='#BindingprototypesettingToControlvaluecontrol'>Binding.prototype.settingToControl(<span class='PARAMLIST'> value, control </span>)</a><br>
+<a href='#ActiveBindingnameuiControlgameComponentsheetsToUpdateBinding'>ActiveBinding(<span class='PARAMLIST'> name, uiControl, gameComponent, sheetsToUpdate </span>) : Binding <span class='CLASS'>constructor</span></a><br>
+<a href='#BindingseditorgameComponent'>Bindings(<span class='PARAMLIST'> editor, <span class='OPTIONAL'>[gameComponent]</span> </span>) <span class='CLASS'>constructor</span></a><br>
+<a href='#BindingsprototypeaddnamecontrolsheetsbindClass'>Bindings.prototype.add(<span class='PARAMLIST'> name, control, <span class='OPTIONAL'>[sheets]</span>, <span class='OPTIONAL'>[bindClass]</span> </span>)</a><br>
+<a href='#BindingsprototypeaddAllbindingArray'>Bindings.prototype.addAll(<span class='PARAMLIST'> bindingArray </span>)</a><br>
+<a href='#BindingsprototypecreateUpdateFunction'>Bindings.prototype.createUpdateFunction(<span class='PARAMLIST'></span>)</a><br>
+<a href='#BindingsprototypecreatePopulateFunction'>Bindings.prototype.createPopulateFunction(<span class='PARAMLIST'></span>)</a><br>
+<a href='#Bindingsprototypebind'>Bindings.prototype.bind(<span class='PARAMLIST'></span>)</a><br>
+<a href='#BindingsprototypetoString'>Bindings.prototype.toString(<span class='PARAMLIST'></span>)</a><br>
+<a href='#BindingsgetBindingClasscomponentClass'>Bindings.getBindingClass(<span class='PARAMLIST'> componentClass </span>) <span class='STATIC'>static</span></a><br>
+<a href='#BindingsregisterBindingClasscomponentClassbindingClass'>Bindings.registerBindingClass(<span class='PARAMLIST'> componentClass, bindingClass </span>) <span class='STATIC'>static</span></a><br>
+<a href='#CheckBoxBindingnameuiControlgameComponentsheetsToUpdateActiveBinding'>CheckBoxBinding(<span class='PARAMLIST'> name, uiControl, gameComponent, sheetsToUpdate </span>) : ActiveBinding <span class='CLASS'>constructor</span></a><br>
+<a href='#ListBindingnameuiControlgameComponentsheetsToUpdateActiveBinding'>ListBinding(<span class='PARAMLIST'> name, uiControl, gameComponent, sheetsToUpdate </span>) : ActiveBinding <span class='CLASS'>constructor</span></a><br>
+<a href='#ComboBoxBindingnameuiControlgameComponentsheetsToUpdateActiveBinding'>ComboBoxBinding(<span class='PARAMLIST'> name, uiControl, gameComponent, sheetsToUpdate </span>) : ActiveBinding <span class='CLASS'>constructor</span></a><br>
+<a href='#IndexedComboBoxBindingnameuiControlgameComponentsheetsToUpdateActiveBinding'>IndexedComboBoxBinding(<span class='PARAMLIST'> name, uiControl, gameComponent, sheetsToUpdate </span>) : ActiveBinding <span class='CLASS'>constructor</span></a><br>
+<a href='#SpinnerBindingnameuiControlgameComponentsheetsToUpdateActiveBinding'>SpinnerBinding(<span class='PARAMLIST'> name, uiControl, gameComponent, sheetsToUpdate </span>) : ActiveBinding <span class='CLASS'>constructor</span></a><br>
+<a href='#SliderBindingnameuiControlgameComponentsheetsToUpdateSpinnerBinding'>SliderBinding(<span class='PARAMLIST'> name, uiControl, gameComponent, sheetsToUpdate </span>) : SpinnerBinding <span class='CLASS'>constructor</span></a><br>
+<a href='#HSBPanelBindingnameuiControlgameComponentsheetsToUpdateActiveBinding'>HSBPanelBinding(<span class='PARAMLIST'> name, uiControl, gameComponent, sheetsToUpdate </span>) : ActiveBinding <span class='CLASS'>constructor</span></a><br>
+<a href='#ButtonGroupBindingnameuiControlgameComponentsheetsToUpdateActiveBinding'>ButtonGroupBinding(<span class='PARAMLIST'> name, uiControl, gameComponent, sheetsToUpdate </span>) : ActiveBinding <span class='CLASS'>constructor</span></a><br>
+</div>
+<p>
+<h2><a name='CreatebindingsbetweenuserinterfaceUIcontrolsandprivatesettingson'>Create bindings between user interface (<span class='PARAMLIST'>UI</span>) controls and private settings on</a></h2>
+
+ components.
+ Bindings automate the details of synchronizing the state of the user interface
+ controls with the state of an edited game component.
+ When the user manipulates a bound control, the new state is converted into a
+ setting string value and written to the component. When the component
+ is loaded into an editor that uses bound controls, the bound controls will
+ be set to match the setting value in the component.
+
+<p>
+<h2><a name='BindingnameuiControlgameComponentsheetsToUpdate'>Binding(<span class='PARAMLIST'> name, uiControl, gameComponent, <span class='OPTIONAL'>[sheetsToUpdate]</span> </span>) <span class='CLASS'>constructor</span></a></h2>
+
+ A <tt>Binding</tt> is an association between a UI component
+ and part of the game component's state, usually one of the game
+ component's private settings. When the UI component is activated
+ by the user, calling <tt>Binding.update()</tt> will convert the state
+ of the UI component into a game component setting and use this to
+ update the game component so that it matches the state of the UI component.
+ When the game component is loaded from a file, calling <tt>Binding.initComponent()</tt>
+ will read the game component's state and update the state of the
+ UI component to match it.
+<p>
+ When you create a binding, you provide a name, a UI control, a
+ game component, and an array of numbers. The array of numbers is a
+ list of card faces (0 for front, 1 for back, and so on)
+ that need to be updated when the bound state changes. For
+ example, if the bound state represented a monster's toughness, then
+ you would use <tt>[1]</tt>, because this information only appears on the
+ back of a monster token.
+<p>
+ <b>The Binding Process</b><br>
+ When the <tt>update()</tt> method is called,
+ it will first call <tt>controlToSetting()</tt> to convert the
+ state of the UI component into a setting value (a string).
+ It will then look in the private settings of the game component for
+ a setting with the provided name. If the setting does not exist or
+ is different from the the setting returned from <tt>controlToSetting()</tt>,
+ then it will copy the new value into the game component's private settings
+ and mark the sheets listed in the list of card faces as being out of date.
+ <tt>update()</tt> returns <tt>true</tt> if it updated the component.
+<p>
+ When the <tt>initComponent()</tt> method is called,
+ it will first fetch the named setting from the game component's
+ private settings and then call <tt>settingToControl()</tt> to
+ modify the state of the control to reflect the setting value.
+<p>
+ <b>Handling of <tt>SettingBackedControl</tt>s</b><br>
+ The <tt>arkham.diy.SettingBackedControl</tt> can be used to customize the
+ mapping between the component state and setting values. When the bound control
+ implements this interface, then <tt>update</tt> and <tt>initComponent</tt>
+ will call the <tt>fromSetting</tt> and <tt>toSetting</tt> methods provided
+ by the control instead of the default <tt>controlToSetting</tt> and
+ <tt>settingToControl</tt> methods provided by the binding class.
+ As an example of when this would be useful, consider the case where you
+ have a combo box of different options, and you want those options to be
+ localized into the game language. The default binding class will use the string
+ value of the selected option, so if a component is created in one language,
+ saved, and opened in another language, the value saved with the component
+ won't match any of the available options (since it is written in the original
+ language). Using <tt>SettingBackedControl</tt>, you could map each label to
+ a number or other neutral identifer instead. (Although, if the list of
+ options is fixed, you could use <tt>IndexedComboBoxBinding</tt> for this
+ purpose.)
+<p>
+ <b>Writing Binding Classes</b><br>
+ The <tt>Binding</tt> base class will copy the text that a user writes
+ in a text component to a private setting (for <tt>update()</tt>) and
+ will set the text in the component to the value of the private setting
+ (for <tt>initComponent()</tt>. For other kinds of components, you need to create
+ an appropriate subclass that knows about the specific kind of control
+ it is binding the game component state to. To create a subclass you
+ only need to override the <tt>controlToSetting()</tt> and
+ <tt>settingToControl()</tt> methods to handle the new type of control.
+ For example, the following binding will bind a checkbox to a yes/no
+ setting value in the game component:
+<pre><span class='PLAIN'> </span><span class='KEYWORD1'>function</span><span class='PLAIN'> CheckboxBinding( name, uiControl, gameComponent, sheetsToUpdate ) {</span>
+<span class='PLAIN'>     </span><span class='COMMENT1'>// call superclass constructor</span>
+<span class='PLAIN'>     Binding.call( </span><span class='KEYWORD1'>this</span><span class='PLAIN'>, name, uiControl, gameComponent, sheetsToUpdate );</span>
+<span class='PLAIN'> }</span>
+<span class='END_MARKER'></span>
+<span class='PLAIN'> CheckboxBinding.subclass( Binding );</span>
+<span class='END_MARKER'></span>
+<span class='PLAIN'> CheckboxBinding.prototype.toSetting = </span><span class='KEYWORD1'>function</span><span class='PLAIN'> controlToSetting( control ) {</span>
+<span class='PLAIN'>     </span><span class='KEYWORD1'>if</span><span class='PLAIN'>( control.selected )</span>
+<span class='PLAIN'>         </span><span class='KEYWORD1'>return</span><span class='PLAIN'> </span><span class='LITERAL2'>'yes'</span><span class='PLAIN'>;</span>
+<span class='PLAIN'>     </span><span class='KEYWORD1'>else</span>
+<span class='PLAIN'>         </span><span class='KEYWORD1'>return</span><span class='PLAIN'> </span><span class='LITERAL2'>'no'</span><span class='PLAIN'>;</span>
+<span class='PLAIN'> }</span>
+<span class='END_MARKER'></span>
+<span class='PLAIN'> CheckboxBinding.prototype.settingToControl = </span><span class='KEYWORD1'>function</span><span class='PLAIN'> settingToControl( control, value ) {</span>
+<span class='PLAIN'>     control.selected = value != </span><span class='KEYWORD1'>null</span><span class='PLAIN'> &amp;&amp; value.equals( </span><span class='LITERAL2'>'yes'</span><span class='PLAIN'> );</span>
+<span class='PLAIN'> }</span></pre><p>
+ If you wish to create more advanced binding behaviours, such as calling methods
+ on the game component instead of setting custom settings, you can override
+ <tt>update()</tt> and <tt>initComponent</tt>. It is critical that the <tt>update()</tt>
+ method returns <tt>true</tt> <i>if and only if</i> the setting is updated with a different
+ value.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> name </tt></td><td class='argdesc' valign='top'>the name of the binding; this is used as the setting key to bind the control to;      if the name starts with $, the actual key name will be determined by removing the      $ and replacing all underscore characters with dashes</td></tr>
+
+<tr><td class='arg' valign='top'><tt> uiControl </tt></td><td class='argdesc' valign='top'>the UI component that takes part in the binding</td></tr>
+
+<tr><td class='arg' valign='top'><tt> gameComponent </tt></td><td class='argdesc' valign='top'>the game component to bind with the UI component</td></tr>
+
+<tr><td class='arg' valign='top'><tt> sheetsToUpdate </tt></td><td class='argdesc' valign='top'>an aray of sheet indices that depend on the bound setting</td></tr>
+
+</table>
+
+<p>
+<h3><a name='Bindingprototypeupdate'>Binding.prototype.update(<span class='PARAMLIST'></span>)</a></h3>
+
+ Updates the UI component setting using the current value of the
+ control.
+<p>
+ returns <tt>true</tt> if the setting has changed
+
+<p>
+<h3><a name='BindingprototypeinitComponent'>Binding.prototype.initComponent(<span class='PARAMLIST'></span>)</a></h3>
+
+ Updates the UI component using the current setting value.
+
+<p>
+<h3><a name='BindingprototypecontrolToSettingcontrol'>Binding.prototype.controlToSetting(<span class='PARAMLIST'> control </span>)</a></h3>
+
+ Convert the state of the <tt>control</tt> to a setting string.
+ Subclasses override this to customize how the control's state is
+ represented in the game component's private settings.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> control </tt></td><td class='argdesc' valign='top'>the control whose state must be converted to a string</td></tr>
+
+</table>
+<p>
+ returns a string representing the state of the control
+
+<p>
+<h3><a name='BindingprototypesettingToControlvaluecontrol'>Binding.prototype.settingToControl(<span class='PARAMLIST'> value, control </span>)</a></h3>
+
+ Change the state of the <tt>control</tt> to reflect the provided
+ setting value.
+ Subclasses override this to customize how the control's state is
+ represented in the game component's private settings.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> value </tt></td><td class='argdesc' valign='top'>the string value to be represented by the control</td></tr>
+
+<tr><td class='arg' valign='top'><tt> control </tt></td><td class='argdesc' valign='top'>the UI component to modify</td></tr>
+
+</table>
+
+<p>
+<h2><a name='ActiveBindingnameuiControlgameComponentsheetsToUpdateBinding'>ActiveBinding(<span class='PARAMLIST'> name, uiControl, gameComponent, sheetsToUpdate </span>) : Binding <span class='CLASS'>constructor</span></a></h2>
+
+ An <tt>ActiveBinding</tt> is a type of binding that can determine for itself
+ when it needs to update the game component because of a change to the
+ state of the UI control. For example, the binding might install
+ a listener on the control that will be notified when the control is updated.
+ The listener would then call <tt>update()</tt> when it is notified of a
+ change by the control.
+<p>
+ To create a new type of active binding, you must subclass <tt>ActiveBinding</tt> and
+ override the <tt>installActivationHandler()</tt> method to make the binding
+ active. (Typically, this means adding a listener to <tt>this.control</tt>.)
+ This base class adds an <tt>ActionListener</tt> to <tt>this.control</tt>,
+ which is sufficient for many kinds of component.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> name </tt></td><td class='argdesc' valign='top'>the name of the binding; this is used as the setting key to bind the control to</td></tr>
+
+<tr><td class='arg' valign='top'><tt> uiControl </tt></td><td class='argdesc' valign='top'>the UI component that takes part in the binding</td></tr>
+
+<tr><td class='arg' valign='top'><tt> gameComponent </tt></td><td class='argdesc' valign='top'>the game component to bind with the UI component</td></tr>
+
+<tr><td class='arg' valign='top'><tt> sheetsToUpdate </tt></td><td class='argdesc' valign='top'>an array of sheet indices that depend on the bound setting</td></tr>
+
+</table>
+
+<p>
+<h2><a name='BindingseditorgameComponent'>Bindings(<span class='PARAMLIST'> editor, <span class='OPTIONAL'>[gameComponent]</span> </span>) <span class='CLASS'>constructor</span></a></h2>
+
+ A collection of bindings for a group of custom controls in
+ <tt>editor</tt> that are bound to settings in <tt>gameComponent</tt>.
+ If <tt>gameComponent</tt> is not specified, the game component currently
+ installed in the editor will be used.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> editor </tt></td><td class='argdesc' valign='top'>the editor that will contain the bound controls</td></tr>
+
+<tr><td class='arg' valign='top'><tt> gameComponent </tt></td><td class='argdesc' valign='top'>the game component that that will be edited using the controls</td></tr>
+
+</table>
+
+<p>
+<h3><a name='BindingsprototypeaddnamecontrolsheetsbindClass'>Bindings.prototype.add(<span class='PARAMLIST'> name, control, <span class='OPTIONAL'>[sheets]</span>, <span class='OPTIONAL'>[bindClass]</span> </span>)</a></h3>
+
+ Create a new <tt>Binding</tt> of type <tt>bindClass</tt> and add it to
+ this set of bindings. The binding is created as if by calling
+ <tt>new bindClass( name, control, gameComponent, sheets )</tt>.
+ (If <tt>control</tt> is a scroll pane, then the component contained by
+ the scroll pane will be bound rather than the scroll pane itself.)
+<p>
+ If <tt>bindClass</tt> is not specified, then a default class will be
+ searched for <tt>Bindings.getBindingClass</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> name </tt></td><td class='argdesc' valign='top'>the setting key to use for the binding</td></tr>
+
+<tr><td class='arg' valign='top'><tt> control </tt></td><td class='argdesc' valign='top'>the UI control that will be used to edit the setting</td></tr>
+
+<tr><td class='arg' valign='top'><tt> sheetsToUpdate </tt></td><td class='argdesc' valign='top'>an array of sheet indices that depend on the bound setting</td></tr>
+
+<tr><td class='arg' valign='top'><tt> bindClass </tt></td><td class='argdesc' valign='top'>the optional <tt>Binding</tt> contructor to be used to create the binding</td></tr>
+
+</table>
+
+<p>
+<h3><a name='BindingsprototypeaddAllbindingArray'>Bindings.prototype.addAll(<span class='PARAMLIST'> bindingArray </span>)</a></h3>
+
+ Adds multiple bindings to this set of bindings. The arguments to
+ this method are arrays of binding arguments as they would appear
+ when calling <tt>Bindings.add()</tt>. For example:
+<pre><span class='PLAIN'> bindings.bindAll(</span>
+<span class='PLAIN'>     [ </span><span class='LITERAL2'>'determination'</span><span class='PLAIN'>, detmCtrl, [0] ],</span>
+<span class='PLAIN'>     [ </span><span class='LITERAL2'>'special-effect'</span><span class='PLAIN'>, effectField, [1] ],</span>
+<span class='PLAIN'>     [ </span><span class='LITERAL2'>'hint'</span><span class='PLAIN'>, hintField, [0,1] ]</span>
+<span class='PLAIN'> );</span></pre><p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> bindingArray </tt></td><td class='argdesc' valign='top'>an array of arrays of binding arguments</td></tr>
+
+</table>
+
+<p>
+<h3><a name='BindingsprototypecreateUpdateFunction'>Bindings.prototype.createUpdateFunction(<span class='PARAMLIST'></span>)</a></h3>
+
+ Returns a function that will call <tt>update()</tt> for all of the
+ bindings in this set.
+<p>
+ returns an update function for these bindings
+
+<p>
+<h3><a name='BindingsprototypecreatePopulateFunction'>Bindings.prototype.createPopulateFunction(<span class='PARAMLIST'></span>)</a></h3>
+
+ Returns a function that will call <tt>initComponent()</tt> for all of the
+ bindings in this set.
+<p>
+ returns a field populator function for these bindings
+
+<p>
+<h3><a name='Bindingsprototypebind'>Bindings.prototype.bind(<span class='PARAMLIST'></span>)</a></h3>
+
+<p>
+ Creates and install listeners on the editor associated with this
+ <tt>Bindings</tt> instance that will bind the editor controls
+ with the component settings.
+
+<p>
+<h3><a name='BindingsprototypetoString'>Bindings.prototype.toString(<span class='PARAMLIST'></span>)</a></h3>
+
+<p>
+ Returns a string representation of all of the bindings associated with this
+ <tt>Bindings</tt> instance.
+
+<p>
+<h3><a name='BindingsgetBindingClasscomponentClass'>Bindings.getBindingClass(<span class='PARAMLIST'> componentClass </span>) <span class='STATIC'>static</span></a></h3>
+
+ Returns the default binding class for a component of type
+ <tt>componentClass</tt>. If there is no default binding class for
+ the component class, this method returns <tt>null</tt>.
+<p>
+ If <tt>componentClass</tt> itself does not have a registered
+ binding class, then this method will search up the chain of
+ superclasses of the component's class and return the first
+ registered binding class it finds.
+
+<p>
+<h3><a name='BindingsregisterBindingClasscomponentClassbindingClass'>Bindings.registerBindingClass(<span class='PARAMLIST'> componentClass, bindingClass </span>) <span class='STATIC'>static</span></a></h3>
+
+ Registers a subclass of <tt>Binding</tt> as the default binding class for
+ components of type <tt>componentClass</tt>, which may either be a Java
+ <tt>Class</tt> object or a string that names a Java class.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> componentClass </tt></td><td class='argdesc' valign='top'>a type of component that will be bound using <tt>bindingClass</tt></td></tr>
+
+<tr><td class='arg' valign='top'><tt> bindingClass </tt></td><td class='argdesc' valign='top'>a constructor for a binding class that can convert between setting strings and component state</td></tr>
+
+</table>
+
+<p>
+<h2><a name='CheckBoxBindingnameuiControlgameComponentsheetsToUpdateActiveBinding'>CheckBoxBinding(<span class='PARAMLIST'> name, uiControl, gameComponent, sheetsToUpdate </span>) : ActiveBinding <span class='CLASS'>constructor</span></a></h2>
+
+ Binds <tt>swing.JCheckBox</tt> to a yes/no setting that can be fetched with
+ <tt>gameComponent.settings.getYesNo( name )</tt>.
+
+<p>
+<h2><a name='ListBindingnameuiControlgameComponentsheetsToUpdateActiveBinding'>ListBinding(<span class='PARAMLIST'> name, uiControl, gameComponent, sheetsToUpdate </span>) : ActiveBinding <span class='CLASS'>constructor</span></a></h2>
+
+ Binds <tt>swing.JList</tt>s.
+
+<p>
+<h2><a name='ComboBoxBindingnameuiControlgameComponentsheetsToUpdateActiveBinding'>ComboBoxBinding(<span class='PARAMLIST'> name, uiControl, gameComponent, sheetsToUpdate </span>) : ActiveBinding <span class='CLASS'>constructor</span></a></h2>
+
+ Binds <tt>swing.JComboBox</tt>es using the <tt>toString()</tt> value of the
+ options in the combo box.
+
+<p>
+<h2><a name='IndexedComboBoxBindingnameuiControlgameComponentsheetsToUpdateActiveBinding'>IndexedComboBoxBinding(<span class='PARAMLIST'> name, uiControl, gameComponent, sheetsToUpdate </span>) : ActiveBinding <span class='CLASS'>constructor</span></a></h2>
+
+ Binds <tt>swing.JComboBox</tt>es using the index of the selected item.
+ This type of binding must be explicitly requested by passing this as the
+ optional binding class to <tt>Bindings.add</tt>.
+<p>
+ <b>Note:</b> This cannot be used with editable combo boxes.
+
+<p>
+<h2><a name='SpinnerBindingnameuiControlgameComponentsheetsToUpdateActiveBinding'>SpinnerBinding(<span class='PARAMLIST'> name, uiControl, gameComponent, sheetsToUpdate </span>) : ActiveBinding <span class='CLASS'>constructor</span></a></h2>
+
+ Binds <tt>swing.JSpinner</tt>s that use integer models (including those made
+ with the <tt>spinner()</tt> function in the <tt>uicontrols</tt> library)
+ to an integer digit string that can be fetched with
+ <tt>gameComponent.settings.getInt( name )</tt>.
+
+<p>
+<h2><a name='SliderBindingnameuiControlgameComponentsheetsToUpdateSpinnerBinding'>SliderBinding(<span class='PARAMLIST'> name, uiControl, gameComponent, sheetsToUpdate </span>) : SpinnerBinding <span class='CLASS'>constructor</span></a></h2>
+
+ Binds <tt>swing.JSlider</tt>s
+ to an integer digit string that can be fetched with
+ <tt>gameComponent.settings.getInt( name )</tt>.
+
+<p>
+<h2><a name='HSBPanelBindingnameuiControlgameComponentsheetsToUpdateActiveBinding'>HSBPanelBinding(<span class='PARAMLIST'> name, uiControl, gameComponent, sheetsToUpdate </span>) : ActiveBinding <span class='CLASS'>constructor</span></a></h2>
+
+ Binds <tt>arkham.HSBPanel</tt>s to a comma-separated list of hue, saturation, and
+ brightness values. Hue is represented as a relative angle (in degrees); saturation
+ and brightness and represented as numbers between 0 and 1 (inclusive).
+ Tints can be fetched as an array of three <tt>float</tt> values by calling
+ <tt>Settings.tint( gameComponent.settings.get( name ) )</tt>.
+ The returned array represents the tint in the same format as that used by
+ a tint filters, which expresses the hue as an angle between 0 and 1.
+
+<p>
+<h2><a name='ButtonGroupBindingnameuiControlgameComponentsheetsToUpdateActiveBinding'>ButtonGroupBinding(<span class='PARAMLIST'> name, uiControl, gameComponent, sheetsToUpdate </span>) : ActiveBinding <span class='CLASS'>constructor</span></a></h2>
+
+ Binds a button group to a set of user-defined values. The button group
+ must be a special subclass of <tt>swing.ButtonGroup</tt>, which can be
+ created using the <tt>buttonGroup</tt> function in the <tt>uicontrols</tt> library.
+ When the button group is created, each button in the group is associated with
+ a specific setting value. This binding maps between those values and the
+ selection state of buttons in the group.
+
+<p style='margin-top: 20pt;'><a href='#top'>Contents</a></body>
+</html>

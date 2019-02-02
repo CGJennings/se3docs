@@ -1,0 +1,122 @@
+<!DOCTYPE html><html>
+<head>
+<title>Script Library Documentation uiutils</title>
+<style>
+body { font-family: sans-serif; font-size: 14pt; line-height: 1.1; }
+
+h1, h2, h3 { font-weight: bold }
+h1 { font-size: 16pt; margin-top: 4pt; margin-bottom: 4pt; }
+h2 { font-size: 14pt; margin-top: 28pt; margin-bottom: 2pt; }
+h3 { font-size: 12pt; margin-top: 18pt; margin-bottom: 2pt;  }
+
+a { color: #000077 }
+a:active { color: #770000 }
+
+tt, code { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt; color: #000077 }
+pre { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt;
+       margin: 48pt; margin-top: 2pt; margin-bottom: 10pt; padding: 6pt; background-color: #F9F9F9;
+       border-top: dashed 1pt #777777; border-bottom: dashed 1pt #777777; }
+table { border-width: 0px; border-collapse: collapse; padding: 0; margin: 8pt; margin-top: 2pt; margin-bottom: 10pt; }
+table.arglist { margin-left: 24pt; margin-right: 12pt }
+p { margin-top: 2pt; margin-bottom: 10pt; }
+
+div.indent { margin-left: 48pt; }
+
+div.toc { font-size: 90%; margin: 16px 16px 16px 16px; padding: 8px; background-color: #f7f7f7; border: #f7f7f7 solid 4px; border-radius: 8px; }
+
+td.arg { border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+td.argdesc { padding-left: 6px; border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+
+.PARAMLIST { font-weight: normal }
+.OPTIONAL { color: #888888; font-weight: normal }
+.CLASS, .STATIC, .RESTRICTED
+      { font-size: 80%; font-weight: normal; font-style: italic; margin-left: 8pt; padding-left: 4pt; border-left: dotted 1pt #007700 }
+.CLASS { color: #000099; border-left-color: #000099 }
+.STATIC { color: #009900; border-left-color: #009900 }
+.RESTRICTED { color: #990000; border-left-color: #990000 }
+
+.COMMENT1 { color: #737373 }
+.COMMENT2 { color: #737373; font-style: italic }
+.LITERAL1 { color: #ce7b00 }
+.LITERAL2 { color: #ce7b00 }
+.LITERAL3 { color: #ce7b00 }
+.LABEL { color: #000000 }
+.KEYWORD1 { color: #000099; font-weight: bold }
+.KEYWORD2 { color: #009900 }
+.KEYWORD3 { color: #0000da }
+.OPERATOR { color: #000000 }
+.INVALID { color: #b20000; font-style: italic }
+.SPECIAL1 { color: #000000; font-weight: bold }
+.SPECIAL2 { color: #000000; font-weight: bold }
+.SPECIAL3 { color: #000000; font-weight: bold }
+.SPECIAL4 { color: #000000; font-weight: bold }
+.SPECIAL5 { color: #000000; font-weight: bold }
+.SPECIAL6 { color: #000000; font-weight: bold }</style>
+</head>
+<body>
+<a name='top'><h1>uiutils</h1></a>
+<div class='toc'>
+<a href='#Lowlevelutilityfunctionsformanipulatingtheuserinterface'>Low-level utility functions for manipulating the user interface.</a><br>
+<a href='#UIUtilsfindComponentByNameparentname'>UIUtils.findComponentByName(<span class='PARAMLIST'> parent, name </span>) <span class='STATIC'>static</span></a><br>
+<a href='#UIUtilsprintTreeparent'>UIUtils.printTree(<span class='PARAMLIST'> parent </span>) <span class='STATIC'>static</span></a><br>
+<a href='#UIUtilsfindWindowc'>UIUtils.findWindow(<span class='PARAMLIST'> c </span>) <span class='STATIC'>static</span></a><br>
+</div>
+<p>
+<h3><a name='Lowlevelutilityfunctionsformanipulatingtheuserinterface'>Low-level utility functions for manipulating the user interface.</a></h3>
+
+ This library defines an object, <tt>UIUtils</tt> that
+ can be used to modify user interface components in a window
+ such as a component editor.
+
+<p>
+<h3><a name='UIUtilsfindComponentByNameparentname'>UIUtils.findComponentByName(<span class='PARAMLIST'> parent, name </span>) <span class='STATIC'>static</span></a></h3>
+
+ Returns the child component of <tt>parent</tt> with the specified
+ <tt>name</tt> (or <tt>parent</tt> itself if it matches). If no
+ child component matches the name, returns <tt>null</tt>.
+<p>
+ <b>Example:</b><br>
+<pre><span class='PLAIN'> </span><span class='KEYWORD1'>var</span><span class='PLAIN'> parent = UIUtils.findComponentByName( </span><span class='KEYWORD2'>Eons</span><span class='PLAIN'>.window, </span><span class='LITERAL1'>"fileMenu"</span><span class='PLAIN'> );</span>
+<span class='PLAIN'> </span><span class='KEYWORD1'>var</span><span class='PLAIN'> menuItem = </span><span class='KEYWORD1'>new</span><span class='PLAIN'> swing.JMenuItem( </span><span class='LITERAL1'>"Now You See Me"</span><span class='PLAIN'> );</span>
+<span class='PLAIN'> menuItem.toolTipText = </span><span class='LITERAL1'>"Choose me to remove me from the menu"</span><span class='PLAIN'>;</span>
+<span class='PLAIN'> menuItem.addActionListener( </span><span class='KEYWORD1'>function</span><span class='PLAIN'>( event ) {</span>
+<span class='PLAIN'>     parent.remove( menuItem );</span>
+<span class='PLAIN'> });</span>
+<span class='PLAIN'> parent.add( menuItem );</span></pre><p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> parent </tt></td><td class='argdesc' valign='top'>the root of the component tree to search</td></tr>
+
+<tr><td class='arg' valign='top'><tt> name </tt></td><td class='argdesc' valign='top'>the name to search for</td></tr>
+
+</table>
+<p>
+ returns the subcomponent of <tt>parent</tt> with the specified <tt>name</tt>, or <tt>null</tt>
+
+<p>
+<h3><a name='UIUtilsprintTreeparent'>UIUtils.printTree(<span class='PARAMLIST'> parent </span>) <span class='STATIC'>static</span></a></h3>
+
+ Prints the tree of components with the root <tt>parent</tt> to the console.
+ For each component, the component's name is printed (or &lt;?&gt;
+ if it has no name), followed by a colon and the component's class name.
+<p>
+ <b>Example:</b><br>
+<pre><span class='PLAIN'> UIUtils.printTree( </span><span class='KEYWORD2'>Editor</span><span class='PLAIN'>.contentPane );</span></pre><p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> parent </tt></td><td class='argdesc' valign='top'>the root of the component tree to print</td></tr>
+
+</table>
+<p>
+ prints a component tree
+
+<p>
+<h3><a name='UIUtilsfindWindowc'>UIUtils.findWindow(<span class='PARAMLIST'> c </span>) <span class='STATIC'>static</span></a></h3>
+
+ Given a component, returns the window that the component is contained in.
+ This may be <tt>null</tt> if the component has not been added to a window.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> c </tt></td><td class='argdesc' valign='top'>the component to find the window of</td></tr>
+
+</table>
+<p>
+ returns the window that contains the component
+
+<p style='margin-top: 20pt;'><a href='#top'>Contents</a></body>
+</html>

@@ -1,0 +1,860 @@
+<!DOCTYPE html><html>
+<head>
+<title>Script Library Documentation diy</title>
+<style>
+body { font-family: sans-serif; font-size: 14pt; line-height: 1.1; }
+
+h1, h2, h3 { font-weight: bold }
+h1 { font-size: 16pt; margin-top: 4pt; margin-bottom: 4pt; }
+h2 { font-size: 14pt; margin-top: 28pt; margin-bottom: 2pt; }
+h3 { font-size: 12pt; margin-top: 18pt; margin-bottom: 2pt;  }
+
+a { color: #000077 }
+a:active { color: #770000 }
+
+tt, code { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt; color: #000077 }
+pre { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt;
+       margin: 48pt; margin-top: 2pt; margin-bottom: 10pt; padding: 6pt; background-color: #F9F9F9;
+       border-top: dashed 1pt #777777; border-bottom: dashed 1pt #777777; }
+table { border-width: 0px; border-collapse: collapse; padding: 0; margin: 8pt; margin-top: 2pt; margin-bottom: 10pt; }
+table.arglist { margin-left: 24pt; margin-right: 12pt }
+p { margin-top: 2pt; margin-bottom: 10pt; }
+
+div.indent { margin-left: 48pt; }
+
+div.toc { font-size: 90%; margin: 16px 16px 16px 16px; padding: 8px; background-color: #f7f7f7; border: #f7f7f7 solid 4px; border-radius: 8px; }
+
+td.arg { border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+td.argdesc { padding-left: 6px; border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+
+.PARAMLIST { font-weight: normal }
+.OPTIONAL { color: #888888; font-weight: normal }
+.CLASS, .STATIC, .RESTRICTED
+      { font-size: 80%; font-weight: normal; font-style: italic; margin-left: 8pt; padding-left: 4pt; border-left: dotted 1pt #007700 }
+.CLASS { color: #000099; border-left-color: #000099 }
+.STATIC { color: #009900; border-left-color: #009900 }
+.RESTRICTED { color: #990000; border-left-color: #990000 }
+
+.COMMENT1 { color: #737373 }
+.COMMENT2 { color: #737373; font-style: italic }
+.LITERAL1 { color: #ce7b00 }
+.LITERAL2 { color: #ce7b00 }
+.LITERAL3 { color: #ce7b00 }
+.LABEL { color: #000000 }
+.KEYWORD1 { color: #000099; font-weight: bold }
+.KEYWORD2 { color: #009900 }
+.KEYWORD3 { color: #0000da }
+.OPERATOR { color: #000000 }
+.INVALID { color: #b20000; font-style: italic }
+.SPECIAL1 { color: #000000; font-weight: bold }
+.SPECIAL2 { color: #000000; font-weight: bold }
+.SPECIAL3 { color: #000000; font-weight: bold }
+.SPECIAL4 { color: #000000; font-weight: bold }
+.SPECIAL5 { color: #000000; font-weight: bold }
+.SPECIAL6 { color: #000000; font-weight: bold }</style>
+</head>
+<body>
+<a name='top'><h1>diy</h1></a>
+<div class='toc'>
+<a href='#Acomponenttypethatiscontrolledbyscriptcode'>A component type that is controlled by script code.</a><br>
+<a href='#DIYscriptFileResourcegameCodedebug'>DIY(<span class='PARAMLIST'> scriptFileResource, <span class='OPTIONAL'>[gameCode]</span>, <span class='OPTIONAL'>[debug]</span> </span>) <span class='CLASS'>constructor</span></a><br>
+<a href='#creatediy'>create(<span class='PARAMLIST'> diy </span>)</a><br>
+<a href='#createInterfacediyeditor'>createInterface(<span class='PARAMLIST'> diy, editor </span>)</a><br>
+<a href='#createFrontPainterdiysheet'>createFrontPainter(<span class='PARAMLIST'> diy, sheet </span>)</a><br>
+<a href='#createBackPainterdiysheet'>createBackPainter(<span class='PARAMLIST'> diy, sheet </span>)</a><br>
+<a href='#paintFrontgdiysheet'>paintFront(<span class='PARAMLIST'> g, diy, sheet </span>)</a><br>
+<a href='#paintBackgdiysheet'>paintBack(<span class='PARAMLIST'> g, diy, sheet </span>)</a><br>
+<a href='#onCleardiy'>onClear(<span class='PARAMLIST'> diy </span>)</a><br>
+<a href='#onReaddiyobjectInputStream'>onRead(<span class='PARAMLIST'> diy, objectInputStream </span>)</a><br>
+<a href='#onWritediyobjectOutputStream'>onWrite(<span class='PARAMLIST'> diy, objectOutputStream </span>)</a><br>
+<a href='#testDIYScriptgameCode'>testDIYScript(<span class='PARAMLIST'> <span class='OPTIONAL'>[gameCode]</span> </span>)</a><br>
+<a href='#DIYcreateTestInstancehandler'>DIY.createTestInstance(<span class='PARAMLIST'> handler </span>) <span class='STATIC'>static</span></a><br>
+<a href='#DIYSheet'>DIYSheet <span class='CLASS'>class</span></a><br>
+<a href='#DIYSheetapplyQualityHintsg'>DIYSheet.applyQualityHints(<span class='PARAMLIST'> g </span>)</a><br>
+<a href='#DIYSheettemplateResolution'>DIYSheet.templateResolution</a><br>
+<a href='#DIYSheetpaintingResolution'>DIYSheet.paintingResolution</a><br>
+<a href='#DIYSheethighResolutionRendering'>DIYSheet.highResolutionRendering</a><br>
+<a href='#DIYSheetpaintImagegimageKeyxy'>DIYSheet.paintImage(<span class='PARAMLIST'> g, imageKey, x, y </span>)</a><br>
+<a href='#DIYSheetpaintImagegimageKeyxywidthheight'>DIYSheet.paintImage(<span class='PARAMLIST'> g, imageKey, x, y, width, height </span>)</a><br>
+<a href='#DIYSheetpaintImagegsharedKey'>DIYSheet.paintImage(<span class='PARAMLIST'> g, sharedKey </span>)</a><br>
+<a href='#DIYSheetpaintImagegimageKeyregionKey'>DIYSheet.paintImage(<span class='PARAMLIST'> g, imageKey, regionKey </span>)</a><br>
+<a href='#DIYSheetpaintTemplateImageg'>DIYSheet.paintTemplateImage(<span class='PARAMLIST'> g </span>)</a><br>
+<a href='#DIYSheetpaintPortraitg'>DIYSheet.paintPortrait(<span class='PARAMLIST'> g </span>)</a><br>
+<a href='#DIYSheetpaintMarkerPortraitg'>DIYSheet.paintMarkerPortrait(<span class='PARAMLIST'> g </span>)</a><br>
+<a href='#DIYSheetdrawTitlegtextregionfontsizealignment'>DIYSheet.drawTitle(<span class='PARAMLIST'> g, text, region, font, size, alignment </span>)</a><br>
+<a href='#DIYSheetfitTitlegtextregionfontmaxSizealignment'>DIYSheet.fitTitle(<span class='PARAMLIST'> g, text, region, font, maxSize, alignment </span>)</a><br>
+<a href='#DIYSheetdrawOutlinedTitlegtextregionfontmaxSizeoutlineSizetextColoroutlineColoralignmentoutlineUnderneath'>DIYSheet.drawOutlinedTitle(<span class='PARAMLIST'> g, text, region, font, maxSize, outlineSize, textColor, outlineColor, alignment, outlineUnderneath </span>)</a><br>
+<a href='#DIYSheetdrawRotatedTitlegtextregionfontmaxSizealignmentturns'>DIYSheet.drawRotatedTitle(<span class='PARAMLIST'> g, text, region, font, maxSize, alignment, turns </span>)</a><br>
+<a href='#DIYSheetdrawRegionBoxgregion'>DIYSheet.drawRegionBox(<span class='PARAMLIST'> g, region </span>)</a><br>
+</div>
+<p>
+<h3><a name='Acomponenttypethatiscontrolledbyscriptcode'>A component type that is controlled by script code.</a></h3>
+
+ The DIY library defines a number of useful constants and the
+ <tt>testDIYScript()</tt> function, but most of the functionality is
+ provided by the <tt>DIY</tt> and <tt>DIYSheet</tt> classes.
+ This document provides an introduction to the <tt>DIY</tt> class.
+ For more complete information please refer to the pages for these classes
+ in the Strange Eons API section of the API browser.
+
+<p>
+<h2><a name='DIYscriptFileResourcegameCodedebug'>DIY(<span class='PARAMLIST'> scriptFileResource, <span class='OPTIONAL'>[gameCode]</span>, <span class='OPTIONAL'>[debug]</span> </span>) <span class='CLASS'>constructor</span></a></h2>
+
+ Create a new <tt>DIY</tt> component using the script stored in <tt>scriptFileResource</tt>.
+ The script file must define the functions <tt>create</tt>, <tt>createInterface</tt>,
+ <tt>createFrontPainter</tt>, <tt>createBackPainter</tt>, <tt>paintFront</tt>,
+ <tt>paintBack</tt>, <tt>onRead</tt>, and <tt>onWrite</tt>, as described below.
+<p>
+ A DIY component is not usually created directly, but is created by the
+ New Component Dialog from DIY class map entries. (Or, during testing, created
+ by the <tt>testDIYScript()</tt> function.)
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> scriptFileResource </tt></td><td class='argdesc' valign='top'>the URL of the script file that defines the component</td></tr>
+
+<tr><td class='arg' valign='top'><tt> gameCode </tt></td><td class='argdesc' valign='top'>the short code identifying the game the component is for</td></tr>
+
+<tr><td class='arg' valign='top'><tt> debug </tt></td><td class='argdesc' valign='top'>if true, a breakpoint will be set at the start of the script</td></tr>
+
+</table>
+
+<p>
+<h3><a name='creatediy'>create(<span class='PARAMLIST'> diy </span>)</a></h3>
+
+ This function is called when the component is first created
+ (before the <tt>DIY</tt> constructor returns).
+ The function serves two basic purposes. First, it must set the DIY's
+ basic configuration properties (number of sheets,
+ the base image to use for the card, and so on).
+ Second, it must set default values for all of
+ the properties that the user will be able to edit later
+ (like Name, Gender, Speed&mdash;whatever is appropriate for the card).
+<p>
+ The following are the basic configuration properties for
+ a <tt>DIY</tt> component. These properties can only be set inside of the
+ DIY's <tt>create()</tt> function (or inside of its <tt>onRead()</tt>):
+<p>
+ <div class='indent'>
+ <b>DIY.verison</b> (default <tt>1</tt>)<br>
+ Sets the version of this component type that is created by this script.
+ See <tt>onRead</tt> for a description of how a new version of an extension
+ can be made backwards compatible. Note that this is property is an integer
+ value. If you assign a value like "1.2" it will be silently rounded down.
+<p>
+ <b>DIY.extensionName</b> (default <tt>null</tt>)<br>
+ If set, this will be displayed to the user as part of the error message
+ if the script file cannot be found. If a user opens a component for which
+ the script file is not present, this allows Strange Eons to direct them
+ to the extension they need to install in order to open the file.
+<p>
+ <b>DIY.faceStyle</b> (default: <tt>FaceStyle.PLAIN_BACK</tt>)<br>
+ This controls the number and type of faces (sides) that the component provides.
+ The following values are possible:
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> FaceStyle.ONE_FACE </tt></td><td class='argdesc' valign='top'>The component has only one face.</td></tr>
+
+<tr><td class='arg' valign='top'><tt> FaceStyle.PLAIN_BACK </tt></td><td class='argdesc' valign='top'>The component has a front face and a plain back face      (a fixed image that is drawn automatically).</td></tr>
+
+<tr><td class='arg' valign='top'><tt> FaceStyle.SHARED_FACE </tt></td><td class='argdesc' valign='top'>The component has two faces, but they are identical.</td></tr>
+
+<tr><td class='arg' valign='top'><tt> FaceStyle.TWO_FACES </tt></td><td class='argdesc' valign='top'>The component has two different faces.</td></tr>
+
+<tr><td class='arg' valign='top'><tt> FaceStyle.CARD_AND_MARKER </tt></td><td class='argdesc' valign='top'>The component has three faces (four in practice);      the first two faces are typically the front and back of a card, while the      third is one side of a marker (with identical obverse side). If the component      has a portrait key set (see below), then the card and marker will share a      potrait. This is most commonly used for character cards with matching      character markers.</td></tr>
+
+<tr><td class='arg' valign='top'><tt> FaceStyle.FOUR_FACES </tt></td><td class='argdesc' valign='top'>The component has four faces; for example, two closely      related cards or a folding panel.</td></tr>
+
+</table>
+<p>
+ If the style is set to <tt>ONE_FACE</tt> or <tt>SHARED_FACE</tt>, then any
+ properties that pertain to the card's back face (such as <tt>backTemplateKey</tt>)
+ will be ignored and <tt>paintBack()</tt> will never be called. If the style is
+ set to <tt>PLAIN_BACK</tt>, then the <tt>backTemplateKey</tt> should point to
+ an image resource for the back of the card. In this case again, <tt>paintBack()</tt>
+ will not be called (the card back will be created automatically from the image
+ resource). If the style is set to anything other than <tt>CARD_AND_MARKER</tt>,
+ then attempting to change or read any property associated with the market
+ will typically throw an <tt>IllegalStateException</tt>.
+<p>
+ <b>DIY.frontTemplateKey</b> (default: <tt>diy-front-sheet</tt>)<br>
+ This is the base name for a group of settings keys that describe the template
+ image for the front face of the component. The template image determines the
+ size of the component and is normally painted on the face to provide the
+ component's background. The following keys can be defined, but only the
+ first is required (where <tt><i>xxx</i></tt> is the base name provided by
+ <tt>frontTemplateKey</tt>):
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> <i>xxx</i>-template </tt></td><td class='argdesc' valign='top'>The resource file that contains the image.</td></tr>
+
+<tr><td class='arg' valign='top'><tt> <i>xxx</i>-ppi </tt></td><td class='argdesc' valign='top'>If present, the resolution of the template image in      pixels per inch (2.54cm) (default is <tt>150</tt>).</td></tr>
+
+<tr><td class='arg' valign='top'><tt> <i>xxx</i>-expsym-region </tt></td><td class='argdesc' valign='top'>If present, the region where the expansion      symbol is drawn (default is no expansion symbol). (It is also possible      to add additional keys to position specific expansions.)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> <i>xxx</i>-expsym-invert </tt></td><td class='argdesc' valign='top'>The index of the expansion symbol variant to use      by default (the default is index 0).</td></tr>
+
+<tr><td class='arg' valign='top'><tt> <i>xxx</i>-upsample </tt></td><td class='argdesc' valign='top'>A factor to multiply the resolution by for previews      (default is <tt>1.0</tt>; usually only changed when a component      has very small text, about 6 points or less)</td></tr>
+
+</table>
+<p>
+ The template image for a face can be drawn in its respective paint function
+ (<tt>paintFront</tt> or <tt>paintBack</tt>) by calling
+ <tt>sheet.paintTemplateImage( g )</tt>.
+<p>
+ <b>DIY.backTemplateKey</b> (default: <tt>diy-front-sheet</tt>)<br>
+ This property works the same as <tt>frontTemplateKey</tt>, but it controls
+ the template image for the back face rather than the front. The property
+ is ignored if the face style is <tt>FaceStyle.ONE_FACE</tt> or
+ <tt>FaceStyle.SHARED_FACE</tt>.
+<p>
+ <b>Note</b><br>
+ For faces after the first two, you must set the key using the
+ <tt>setTemplateKey( index, templateKey )</tt> function, which allows you to
+ set any face's template by its index. The properties <tt>frontTemplateKey</tt>
+ and <tt>backTemplateKey</tt> are just shorthand for setting the faces with
+ indices 0 and 1, respectively. For example, to set the template key for
+ the marker in a <tt>CARD_AND_MARKER</tt> component, you would use an index
+ of 2.
+<p>
+ <b>DIY.portraitKey</b> (default: <tt>null</tt>)<br>
+ If this is not <tt>null</tt>, then the card has a portrait image and the
+ editor will provide a tab for editing the portrait settings. The value is
+ the base name of a setting key. To use a portrait, the following settings
+ must also be defined (where <tt><i>xxx</i></tt> is the base name provided by
+ <tt>portraitKey</tt>):
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> <i>xxx</i>-portrait-template </tt></td><td class='argdesc' valign='top'>The resource file that contains the      default portrait image.</td></tr>
+
+<tr><td class='arg' valign='top'><tt> <i>xxx</i>-portrait-clip-region </tt></td><td class='argdesc' valign='top'>The region where the portrait      will be drawn on the card.</td></tr>
+
+</table>
+<p>
+ In addition, the following settings are optional. If they are not present, then
+ the portrait will default to a pan of (0,0) and the scale will be determined
+ automatically using the size of the portrait image and the clip region.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> <i>xxx</i>-portrait-scale </tt></td><td class='argdesc' valign='top'>The scale setting for the default portrait      image (where 1 = 100%).</td></tr>
+
+<tr><td class='arg' valign='top'><tt> <i>xxx</i>-portrait-panx </tt></td><td class='argdesc' valign='top'>The number of units by which the default      image is shifted horizontally (usually 0).</td></tr>
+
+<tr><td class='arg' valign='top'><tt> <i>xxx</i>-portrait-pany </tt></td><td class='argdesc' valign='top'>The number of units by which the default      image is shifted vertically (usually 0).</td></tr>
+
+</table>
+<p>
+ <b>Note</b><br>
+ If the face style is <tt>FaceStyle.CARD_AND_MARKER</tt>, then you must
+ also define a clip region for the portrait as it is drawn on the marker,
+ and you may define scale and pan values for the default portrait image.
+ These keys use the same names as above, but replacing <i>portrait</i>
+ with <i>marker</i>. (The marker will use the same portrait image
+ as the card, but it will have its own scale and position.)
+<p>
+ <b>DIY.portraitBackgroundFilled</b> (default: <tt>true</tt>)</b><br>
+ If <tt>true</tt>, the portrait clip region will be filled in with solid
+ white before painting the portrait. This is usually set when the user is
+ expected to use portraits that have transparency, for example, if there is
+ a standard graphic that should appear behind the portrait image.
+<p>
+ <b>DIY.portraitScaleUsesMinimum</b> (default: <tt>false</tt>)</b><br>
+ This flag changes how the defualt scale is selected when the user chooses
+ a new portrait image. Normally, a portrait is scaled so that the
+ card's portrait clip region is just barely completely covered, so that no
+ background shows through. When this flag is set to <tt>true</tt>, the portrait
+ is scaled so that the entire image is just contained within the clip region.
+ This is useful when there is one standard background shared by all components
+ and the portraits themselves are a transparent "cut-out" that will be drawn over
+ this standard background.
+<p>
+ <b>DIY.portraitClipping</b> (default: <tt>true</tt>)</b><br>
+ If set to <tt>true</tt> (the default), then the portrait will be clipped to
+ the portrait clipping region: any part of the portrait that falls outside
+ of the clip region will not be drawn. When set to <tt>false</tt>, the
+ portrait clip region will only be used to determine the initial scale of a
+ portrait.
+<p>
+ <b>Note</b><br>
+ If the face style is <tt>FaceStyle.CARD_AND_MARKER</tt>, then you can also
+ control the background fill, default scaling method, and clipping for the
+ portrait when drawn on the marker using the same properties as above
+ but substituting <i>marker</i> for <i>portrait</i> in the property name.
+<p>
+ <b>DIY.customPortraitHandling</b> (default: <tt>false</tt>)<br>
+ If this is <tt>true</tt>, then the simplified portrait handling described above
+ will not be used. Instead, the DIY script must provide its own implementation
+ of the <tt>PortraitProvider</tt> interface (by implementing
+ the functions <tt>getPortraitCount</tt> and <tt>getPortrait( index )</tt>).
+ This allows you to create components with more complex portrait needs, such as
+ portraits that allow rotation, multiple portraits, or linked portraits
+ (a portrait that shares an image with another portrait, but has its own
+ pan and scale values, like the marker for a <tt>CARD_AND_MARKER</tt> component).
+<p>
+ If you wish to use custom portrait handling, then the methods for controlling
+ clipping, filling, and default scale will have no effect. However, you can
+ use the class <tt>DefaultPortriat</tt> to implement your custom portraits, which
+ provides analogous functionality.
+<p>
+ <b>Note:</b> When this is <tt>true</tt>, reading the <tt>portraitKey</tt>
+ will return <tt>null</tt> and attempting to change it to anything other than
+ <tt>null</tt> will result in an <tt>IllegalStateException</tt> being thrown.
+<p>
+ <b>DIY.transparentFaces</b> (default: <tt>false</tt>)</b><br>
+ This flag indicates that the face(s) of this card may contain transparent
+ and/or translucent pixels. This can be used to create faces with shaped
+ edges or holes. This flag should only be set when needed as transparent
+ faces require more processor and memory resources than opaque cards.
+<p>
+ <b>DIY.variableSizedFaces</b> (default: <tt>false</tt>)</b><br>
+ This flag indicates that the component may vary in size depending on its
+ content. The template image must be the maximum size that the card can
+ grow to. The final size of the face will be determined after it is painted by
+ cropping off any edges that are completely transparent (i.e., have an alpha value
+ of 0). Setting this flag to <tt>true</tt> automatically sets
+ <tt>DIY.transparentFaces</tt> to <tt>true</tt>.
+<p>
+ <b>DIY.deckSnappingHint</b> (default: <tt>DeckSnappingHint.CARD</tt>)</b><br>
+ This setting controls how this component will initially snap to other components
+ when it is in a deck. The possible values are:
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> DeckSnappingHint.CARD </tt></td><td class='argdesc' valign='top'>This is a card; it will have crop marks and snap      to other cards and the page grid.</td></tr>
+
+<tr><td class='arg' valign='top'><tt> DeckSnappingHint.TILE </tt></td><td class='argdesc' valign='top'>This is a tile (a basic building block for an      expansion board). It will not have crop marks and it will snap to      other tiles and the page grid.</td></tr>
+
+<tr><td class='arg' valign='top'><tt> DeckSnappingHint.OVERLAY </tt></td><td class='argdesc' valign='top'>This component is overlaid over other      components (usually tiles). Overlays do not snap to other components      or the page grid and do not have crop marks.</td></tr>
+
+<tr><td class='arg' valign='top'><tt> DeckSnappingHint.INLAY </tt></td><td class='argdesc' valign='top'>This is an inlay. Inlays snap to other inlays,      tiles and the page grid, but when they snap to objects other than      inlays they snap to the <i>inside</i> rather than the outside of the      snapping edge.</td></tr>
+
+<tr><td class='arg' valign='top'><tt> DeckSnappingHint.OTHER </tt></td><td class='argdesc' valign='top'>Objects with this hint snap only to other      objects with this hint. They are not given crop marks.</td></tr>
+
+</table>
+<p>
+ <b>DIY.bleedMargin</b> (default: 0)<br>
+ This indicates the size of an optional margin around the edges of a component
+ that is to be used as a bleed margin. A bleed margin is an area where the
+ graphics of a card continue outside of the normal boundary of the card.
+ This allows for imprecision when the card is cut by machine. If the machine
+ is misaligned by a small amount, the card content will be slightly off center but
+ it won't have a blank area along the edge(s) that would make the misalignment
+ obvious. When a margin value is set, the crop marks produced by the deck editor
+ are automatically adjusted accordingly.
+<p>
+ If a bleed margin is set, the same value is used on all four sides.
+ The size of the margin is measured in points (pt) and cannot be negative.
+ Typical bleed margin sizes in the publishing industry are 3 mm (8.5 pt)
+ or 1/8" (9 pt).
+<p>
+ Setting the margin value does not change the underlying graphics. You must
+ design your template image with a bleed margin in mind, adding pixels equal to
+ twice the margin size to both the width and height, and centering the "real"
+ card template in the larger space.
+ For example, if your template image is 150 DPI and you wish to include a
+ 9 pt margin, you must add:<br>
+ 150 pixels/in / 72 pt/in * 9 pt * 2 sides = 38 pixels (after rounding up)
+<p>
+ <b>DIY.highResolutionSubstitutionMode</b> (default: enabled)<br>
+ This controls whether high resolution image substitution is enabled.
+ When enabled, methods defined in <tt>DIYSheet</tt> that paint images
+ will automatically check for a copy of the image key that ends with
+ <tt>-hires</tt>. If that key exists, then that image will be substituted
+ when the card is being printed or exported at a resolution higher than
+ that of the card's template image. For example, suppose we provide the
+ following keys for a card's front template image:
+<pre><span class='PLAIN'> my-card-front-template = mycard/front-150.jp2</span>
+<span class='PLAIN'> my-card-front-dpi = 150</span>
+<span class='PLAIN'> my-card-front-template-hires = mycard/front-300.jp2</span></pre> Then when the card is printed or exported at more than 150 DPI, the
+ alternate template image will be substituted by
+ <tt>DIYSheet.paintTemplateImage</tt>.
+<p>
+ Changing this property allows you to force substitution on or off.
+ It is normally only changed for debugging purposes.
+ Unlike other properties listed here, this can be changed at any time.
+ The possible values are:
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> HighResolutionMode.DISABLE </tt></td><td class='argdesc' valign='top'>do not allow substitution</td></tr>
+
+<tr><td class='arg' valign='top'><tt> HighResolutionMode.ENABLE </tt></td><td class='argdesc' valign='top'>allow substitution using the normal rules</td></tr>
+
+<tr><td class='arg' valign='top'><tt> HighResolutionMode.FORCE </tt></td><td class='argdesc' valign='top'>always substitute if possible</td></tr>
+
+</table>
+<p>
+ <b>DIY.setCustomFoldMarks( faceIndex, foldMarkVectors )</b> (default: none)<br>
+ Defines custom fold marks for a card face. These will be drawn with the face
+ when it is added to a deck.
+ The <tt>faceIndex</tt> defines the card face (0=front, 1=back) to add marks
+ for, although usually such a card would only have a front side.
+ The array <tt>foldMarkVectors</tt> consists of one or more pairs of points
+ (four numbers in sequence) in the order (px,py),(dx,dy). The point (px,py)
+ indicates the location of the start of the fold mark
+ (assuming that the distance from the card to the fold mark is 0).
+ The point is measured realtive to the width and height of the card.
+ For example, (0.5, 0.0) is located at the middle of the top edge of the card.
+ The point (dx,dy) is a unit vector that indicates the direction of the
+ mark. For example, the unit vector (0,-1) points straight up.
+ </div>
+
+<p>
+<h3><a name='createInterfacediyeditor'>createInterface(<span class='PARAMLIST'> diy, editor </span>)</a></h3>
+
+ This function is called when the component is installed in an editor.
+ It allows you to build an interface to edit your component with, and
+ to install that interface on the editor. In most cases, you will use
+ a <tt>Bindings</tt> instance to link UI controls to private settings
+ on the card or other variables so that the component will be automatically
+ updated and redrawn as the user edits the component.
+ One exception to be aware of is that the editor for a
+ DIY component includes the special method <tt>setNameField( JTextComponent )</tt>.
+ If you set this to one of the text fields in your user interface, then it
+ will update the <tt>name</tt> field of the component for you automatically,
+ and users will be able to correctly use <tt>&lt;name&gt;</tt> tags in the
+ component's markup.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> diy </tt></td><td class='argdesc' valign='top'>the custom component</td></tr>
+
+<tr><td class='arg' valign='top'><tt> editor </tt></td><td class='argdesc' valign='top'>the editor that the UI should be added to</td></tr>
+
+</table>
+
+<p>
+<h3><a name='createFrontPainterdiysheet'>createFrontPainter(<span class='PARAMLIST'> diy, sheet </span>)</a></h3>
+
+ This function is called before the front sheet is painted for the
+ first time, and is called again if a new set of sheets is created for
+ the component. It allows you to initialize painting resources that
+ depend on the sheet being painted.
+<p>
+ If the component has more than two faces, this method will be called once
+ for each even-numbered face (0, 2, and so on). You can determine the
+ index of the face being initialized with <tt>sheet.sheetIndex</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> diy </tt></td><td class='argdesc' valign='top'>the component being painted</td></tr>
+
+<tr><td class='arg' valign='top'><tt> sheet </tt></td><td class='argdesc' valign='top'>the sheet instance that is responsible for drawing this face of the component</td></tr>
+
+</table>
+
+<p>
+<h3><a name='createBackPainterdiysheet'>createBackPainter(<span class='PARAMLIST'> diy, sheet </span>)</a></h3>
+
+ This function is called before the back sheet is painted for the
+ first time, and is called again if a new set of sheets is created for
+ the component. It allows you to initialize painting resources that
+ depend on the sheet being painted. If the face style of the component
+ is other than <tt>FaceStyle.TWO_FACES</tt>, this method is never called.
+<p>
+ If the component has more than two faces, this method will be called once
+ for each odd-numbered face (1, 3, and so on). You can determine the
+ index of the face being initialized with <tt>sheet.sheetIndex</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> diy </tt></td><td class='argdesc' valign='top'>the component being painted</td></tr>
+
+<tr><td class='arg' valign='top'><tt> sheet </tt></td><td class='argdesc' valign='top'>the sheet instance that is responsible for drawing this face of      the component</td></tr>
+
+</table>
+
+<p>
+<h3><a name='paintFrontgdiysheet'>paintFront(<span class='PARAMLIST'> g, diy, sheet </span>)</a></h3>
+
+ This function is called when the front face of your component needs to be
+ painted.
+<p>
+ The graphics context <tt>g</tt> will be scaled to the resolution of
+ the card's template image (usually 150 pixels per inch/2.54 cm). This means
+ that 1 unit in the graphics context is equivalent to 1 pixel on your template
+ image. (If for some reason you need to know the true resolution that the card
+ is being drawn at, you can read it from <tt>sheet.effectiveSheetDotsPerInch</tt>.)
+<p>
+ If the component has more than two faces, this method will be called once
+ for each even-numbered face (0, 2, and so on). You can determine the
+ index of the face being initialized with <tt>sheet.sheetIndex</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> g </tt></td><td class='argdesc' valign='top'>a <tt>Graphics2D</tt> context that can be used to paint the card face</td></tr>
+
+<tr><td class='arg' valign='top'><tt> diy </tt></td><td class='argdesc' valign='top'>the component being painted</td></tr>
+
+<tr><td class='arg' valign='top'><tt> sheet </tt></td><td class='argdesc' valign='top'>the sheet instance that is responsible for drawing this face of      the component; it offers useful helper methods that can simplify painting</td></tr>
+
+</table>
+
+<p>
+<h3><a name='paintBackgdiysheet'>paintBack(<span class='PARAMLIST'> g, diy, sheet </span>)</a></h3>
+
+ This function is called when the back face of your component needs to be
+ painted.  If the face style of the component is other than
+ <tt>FaceStyle.TWO_FACES</tt>, this method is never called.
+<p>
+ If the component has more than two faces, this method will be called once
+ for each odd-numbered face (1, 3, and so on). You can determine the
+ index of the face being initialized with <tt>sheet.sheetIndex</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> g </tt></td><td class='argdesc' valign='top'>a <tt>Graphics2D</tt> context that can be used to paint the card face</td></tr>
+
+<tr><td class='arg' valign='top'><tt> diy </tt></td><td class='argdesc' valign='top'>the component being painted</td></tr>
+
+<tr><td class='arg' valign='top'><tt> sheet </tt></td><td class='argdesc' valign='top'>the sheet instance that is responsible for drawing this face of      the component; it offers useful helper methods that can simplify painting</td></tr>
+
+</table>
+
+<p>
+<h3><a name='onCleardiy'>onClear(<span class='PARAMLIST'> diy </span>)</a></h3>
+
+ This function is called when the user issues the <b>Clear</b> command to reset
+ the component to an empty state. It should be defined to set all of the
+ component's properties to a valid but "empty" value. The exact meaning of
+ empty is left up to the component designer. The card's name field
+ will be set to an empty string automatically, although you can change this
+ to something else in your <tt>onClear</tt> function. Any expansion symbol
+ set on the card will also be removed.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> diy </tt></td><td class='argdesc' valign='top'>the component being cleared</td></tr>
+
+</table>
+
+<p>
+<h3><a name='onReaddiyobjectInputStream'>onRead(<span class='PARAMLIST'> diy, objectInputStream </span>)</a></h3>
+
+ This function is called when your component is read from a stream disk,
+ such as when the user opens an <tt>.eon</tt> file containing your card or
+ adds it to a deck.
+<p>
+ One use of this function is to upgrade old cards if you introduce a
+ new version of the component. Here is the basic process for upgrading a card:
+ The <tt>DIY</tt> object has an integer <tt>version</tt> field which contains the
+ value 1 by default. When you introduce a new version of your component,
+ set this field to the next higher number in your <tt>create()</tt> function.
+ When the card is read in, check the version number and upgrade it if it is
+ from an older version.
+ For example, the second version of your component would include code like
+ this:
+<pre><span class='PLAIN'> </span><span class='KEYWORD1'>function</span><span class='PLAIN'> create( diy ) {</span>
+<span class='PLAIN'>     diy.version = 2;</span>
+<span class='PLAIN'> }</span>
+<span class='PLAIN'> </span><span class='COMMENT1'>// ...</span>
+<span class='PLAIN'> </span><span class='KEYWORD1'>function</span><span class='PLAIN'> onRead( diy, objectInputStream ) {</span>
+<span class='PLAIN'>    </span><span class='KEYWORD1'>if</span><span class='PLAIN'>( diy.version &lt; 2 ) {</span>
+<span class='PLAIN'>        </span><span class='COMMENT1'>// set settings that are new in v2 to a default value</span>
+<span class='PLAIN'>        </span><span class='COMMENT1'>// ...</span>
+<span class='PLAIN'>        diy.version = 2; </span><span class='COMMENT1'>// this card is now the latest version</span>
+<span class='PLAIN'>    }</span>
+<span class='PLAIN'> }</span></pre><table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt>  diy </tt></td><td class='argdesc' valign='top'>the component being read from disk</td></tr>
+
+<tr><td class='arg' valign='top'><tt>  objectInputStream </tt></td><td class='argdesc' valign='top'>the stream from which the card is being loaded; for advanced use only</td></tr>
+
+</table>
+
+<p>
+<h3><a name='onWritediyobjectOutputStream'>onWrite(<span class='PARAMLIST'> diy, objectOutputStream </span>)</a></h3>
+
+ This function is called when your component is written to file, for example,
+ when the user saves the component from the editor.
+ It is provided for advanced use only.
+
+<p>
+<h3><a name='testDIYScriptgameCode'>testDIYScript(<span class='PARAMLIST'> <span class='OPTIONAL'>[gameCode]</span> </span>)</a></h3>
+
+ Create and display a test instance <tt>DIY</tt> using functions in the
+ current script. This function is useful when developing a new <tt>DIY</tt>
+ custom component. For example, you can write the script functions for the
+ component in the Quickscript window, add <tt>testDIYScript()</tt> to the
+ end of the script, run the file, and an editor will be created and added
+ based on your script functions. (Be sure to remove the test function before
+ placing the script in your plug-in.)
+<p>
+ If this function is left in a plug-in bundle, it will display a warning
+ (if script warnings are enabled), but otherwise it has no effect.
+ It will only create a test component if run directly from a script editor.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> gameCode </tt></td><td class='argdesc' valign='top'>an optional code for the game this component is from;             this is needed if you wish to test expansion symbol painting             or inherit from the game's master settings</td></tr>
+
+</table>
+
+<p>
+<h3><a name='DIYcreateTestInstancehandler'>DIY.createTestInstance(<span class='PARAMLIST'> handler </span>) <span class='STATIC'>static</span></a></h3>
+
+ Create a <tt>DIY</tt> instance for testing purposes. Note that if this
+ instance is saved to a file, you will not be able to reopen the file.
+ This method lets you create a <tt>DIY</tt> without reference to an external
+ script file. To create the test instance, you must provide an implementation
+ of the <tt>arkham.diy.Handler</tt> interface, which contains the same functions
+ as those that would be present in an external script file. For example:
+<pre><span class='PLAIN'> </span><span class='KEYWORD1'>var</span><span class='PLAIN'> diy = DIY.createTestInstance( </span><span class='KEYWORD1'>new</span><span class='PLAIN'> arkham.diy.Handler() {</span>
+<span class='PLAIN'>     create: </span><span class='KEYWORD1'>function</span><span class='PLAIN'>() { println( </span><span class='LITERAL1'>"create"</span><span class='PLAIN'> ); },</span>
+<span class='PLAIN'>     createInterface: </span><span class='KEYWORD1'>function</span><span class='PLAIN'>() { println( </span><span class='LITERAL1'>"createInterface"</span><span class='PLAIN'> ); },</span>
+<span class='PLAIN'>     createFrontPainter: </span><span class='KEYWORD1'>function</span><span class='PLAIN'>() { println( </span><span class='LITERAL1'>"createFrontPainter"</span><span class='PLAIN'> ); },</span>
+<span class='PLAIN'>     createBackPainter: </span><span class='KEYWORD1'>function</span><span class='PLAIN'>() { println( </span><span class='LITERAL1'>"createBackPainter"</span><span class='PLAIN'> ); },</span>
+<span class='PLAIN'>     paintFront: </span><span class='KEYWORD1'>function</span><span class='PLAIN'>() { println( </span><span class='LITERAL1'>"paintFront"</span><span class='PLAIN'> ); },</span>
+<span class='PLAIN'>     paintBack: </span><span class='KEYWORD1'>function</span><span class='PLAIN'>() { println( </span><span class='LITERAL1'>"paintBack"</span><span class='PLAIN'> ); },</span>
+<span class='PLAIN'>     onClear: </span><span class='KEYWORD1'>function</span><span class='PLAIN'>() { println( </span><span class='LITERAL1'>"onClear"</span><span class='PLAIN'> ); },</span>
+<span class='PLAIN'>     onRead: </span><span class='KEYWORD1'>function</span><span class='PLAIN'>() { println( </span><span class='LITERAL1'>"onRead"</span><span class='PLAIN'> ); },</span>
+<span class='PLAIN'>     onWrite: </span><span class='KEYWORD1'>function</span><span class='PLAIN'>() { println( </span><span class='LITERAL1'>"onWrite"</span><span class='PLAIN'> ); },</span>
+<span class='PLAIN'> });</span>
+<span class='PLAIN'> </span><span class='KEYWORD1'>var</span><span class='PLAIN'> ed = diy.createDefaultEditor();</span>
+<span class='PLAIN'> </span><span class='KEYWORD2'>Eons</span><span class='PLAIN'>.addEditor( ed );</span></pre> See <tt>testDIYScript()</tt>
+
+<p>
+<h2><a name='DIYSheet'>DIYSheet <span class='CLASS'>class</span></a></h2>
+
+ This is the class of all objects that are passed to a DIY card using the
+ <tt>sheet</tt> argument. You do not create <tt>DIYSheets</tt> yourself;
+ this is handled automatically. For a complete description, see the
+ <a href='javadoc:ca/cgjennings/apps/arkham/diy/DIYSheet'>DIYSheet class documentation</a>.
+ The following list is a summary of commonly used properties and methods
+ available through sheet objects:
+
+<p>
+<h3><a name='DIYSheetapplyQualityHintsg'>DIYSheet.applyQualityHints(<span class='PARAMLIST'> g </span>)</a></h3>
+
+ This method can be called from a painting function to initialize a
+ graphics context in a standardized way based on the current rendering target
+ and quality. For example, it may enable high quality image interpolation
+ when exporting a card.
+ You do not need to call this for the graphics context that is passed to
+ your painting function, as it will already be initialized unless the
+ advanced feature <code>DIY.OPT_NO_QUALITY_INIT</code> is set.
+ However, it is useful if you need to create other graphics contents,
+ for example, if you create a draw on a temporary image.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> g </tt></td><td class='argdesc' valign='top'>the graphics context to initialize</td></tr>
+
+</table>
+
+<p>
+<h3><a name='DIYSheettemplateResolution'>DIYSheet.templateResolution</a></h3>
+
+ The base resolution of the face. If no resolution key was set for the template
+ image, this will be 150 pixels per inch (approximately 59 pixels per cm).
+ The physical size (in inches) of the face is equal to the width and height of the
+ template image (in pixels) divided by the resolution. (If the face is
+ transparent, the size is determined <i>after</i> trimming transparent edges.)
+
+<p>
+<h3><a name='DIYSheetpaintingResolution'>DIYSheet.paintingResolution</a></h3>
+
+ The resolution that the sheet is set to render at, as opposed to the
+ "natural" resolution of the template image that was set when the DIY
+ was created. For example, if the user is exporting the card at 300 ppi,
+ then this will be 300.
+
+<p>
+<h3><a name='DIYSheethighResolutionRendering'>DIYSheet.highResolutionRendering</a></h3>
+
+ This property is <tt>true</tt> if high resolution substitution is active.
+ The value is only guaranteed to be accurate when called from
+ <tt>paintFront</tt> or <tt>paintBack</tt>.
+
+<p>
+<h3><a name='DIYSheetpaintImagegimageKeyxy'>DIYSheet.paintImage(<span class='PARAMLIST'> g, imageKey, x, y </span>)</a></h3>
+
+ Paints an image at its normal size at the specified location.
+ This method will perform automatic high resolution image substitution
+ if there is a key with same name as <code>key</code> but with
+ <code>"-hires"</code> appended.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> g </tt></td><td class='argdesc' valign='top'>the graphics context to use for painting</td></tr>
+
+<tr><td class='arg' valign='top'><tt> imageKey </tt></td><td class='argdesc' valign='top'>the settings key of the image</td></tr>
+
+<tr><td class='arg' valign='top'><tt> x </tt></td><td class='argdesc' valign='top'>the horizontal offset from the left side of the template image</td></tr>
+
+<tr><td class='arg' valign='top'><tt> y </tt></td><td class='argdesc' valign='top'>the vertical offset from the top edge of the template image</td></tr>
+
+</table>
+
+<p>
+<h3><a name='DIYSheetpaintImagegimageKeyxywidthheight'>DIYSheet.paintImage(<span class='PARAMLIST'> g, imageKey, x, y, width, height </span>)</a></h3>
+
+ Paints an image at the specified location and size.
+ This method will perform automatic high resolution image substitution
+ if there is a key with same name as <code>key</code> but with
+ <code>"-hires"</code> appended.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> g </tt></td><td class='argdesc' valign='top'>the graphics context to use for painting</td></tr>
+
+<tr><td class='arg' valign='top'><tt> imageKey </tt></td><td class='argdesc' valign='top'>the settings key of the image</td></tr>
+
+<tr><td class='arg' valign='top'><tt> x </tt></td><td class='argdesc' valign='top'>the horizontal offset from the left side of the template image</td></tr>
+
+<tr><td class='arg' valign='top'><tt> y </tt></td><td class='argdesc' valign='top'>the vertical offset from the top edge of the template image</td></tr>
+
+<tr><td class='arg' valign='top'><tt> width </tt></td><td class='argdesc' valign='top'>the width of the painted image; the image is resized to fit if required</td></tr>
+
+<tr><td class='arg' valign='top'><tt> height </tt></td><td class='argdesc' valign='top'>the height of the painted image; the image is resized to fit if required</td></tr>
+
+</table>
+
+<p>
+<h3><a name='DIYSheetpaintImagegsharedKey'>DIYSheet.paintImage(<span class='PARAMLIST'> g, sharedKey </span>)</a></h3>
+
+ Paints an image at a location and size that are taken from a region
+ setting. The image resource is determined from the value of
+ <tt>sharedKey</tt>, while the region is obtained by appending
+ <tt>"-region"</tt> to the shared key name.
+ This method will perform automatic high resolution image
+ substitution if there is a key with same name as <code>sharedKey</code> but with
+ <code>"-hires"</code> appended.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> g </tt></td><td class='argdesc' valign='top'>the graphics context to use for painting</td></tr>
+
+<tr><td class='arg' valign='top'><tt> sharedKey </tt></td><td class='argdesc' valign='top'>the settings key of the image, and base name of the region key</td></tr>
+
+</table>
+
+<p>
+<h3><a name='DIYSheetpaintImagegimageKeyregionKey'>DIYSheet.paintImage(<span class='PARAMLIST'> g, imageKey, regionKey </span>)</a></h3>
+
+ Paints an image at a location and size that are taken from a region
+ setting. This method will perform automatic high resolution image
+ substitution if there is a key with same name as <tt>key</tt> but with
+ <tt>"-hires"</tt> appended.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> g </tt></td><td class='argdesc' valign='top'>the graphics context to use for painting</td></tr>
+
+<tr><td class='arg' valign='top'><tt> imageKey </tt></td><td class='argdesc' valign='top'>the settings key of the image</td></tr>
+
+<tr><td class='arg' valign='top'><tt> regionKey </tt></td><td class='argdesc' valign='top'>the settings key of the region where the image should be      drawn, without the <tt>"-region"</tt> suffix</td></tr>
+
+</table>
+
+<p>
+<h3><a name='DIYSheetpaintTemplateImageg'>DIYSheet.paintTemplateImage(<span class='PARAMLIST'> g </span>)</a></h3>
+
+ Paints the card template image that was set when the card was created.
+ This method will perform automatic high resolution image substitution
+ if there is a key with same name as the template key but with
+ <code>"-hires"</code> appended.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> g </tt></td><td class='argdesc' valign='top'>the graphics context to use for painting</td></tr>
+
+</table>
+
+<p>
+<h3><a name='DIYSheetpaintPortraitg'>DIYSheet.paintPortrait(<span class='PARAMLIST'> g </span>)</a></h3>
+
+ Paints the standard portrait using the settings keys specified during
+ DIY creation and the current portrait settings.
+
+<p>
+<h3><a name='DIYSheetpaintMarkerPortraitg'>DIYSheet.paintMarkerPortrait(<span class='PARAMLIST'> g </span>)</a></h3>
+
+ Paints the standard portrait using the portrait settings for the marker.
+ If the face style is not <tt>CARD_AND_MARKER</tt>, this will throw an
+ <tt>IllegalStateException</tt>.
+
+<p>
+<h3><a name='DIYSheetdrawTitlegtextregionfontsizealignment'>DIYSheet.drawTitle(<span class='PARAMLIST'> g, text, region, font, size, alignment </span>)</a></h3>
+
+ Draws a string within the specified region. This can be used to draw
+ fixed titles. (Unlike a markup box, it does not process any tags.)
+ The text will be centered vertically and will be aligned
+ horizontally according to the value of <tt>alignment</tt>.
+ This is one of: <tt>DIYSheet.ALIGN_LEFT</tt>, <tt>DIYSheet.ALIGN_CENTER</tt>,
+ <tt>DIYSheet.ALIGN_RIGHT</tt>, <tt>DIYSheet.ALIGN_LEADING</tt>, or
+ <tt>DIYSheet.ALIGN_TRAILING</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> g </tt></td><td class='argdesc' valign='top'>the graphics context to use for painting</td></tr>
+
+<tr><td class='arg' valign='top'><tt> text </tt></td><td class='argdesc' valign='top'>the string to draw</td></tr>
+
+<tr><td class='arg' valign='top'><tt> region </tt></td><td class='argdesc' valign='top'>the region to draw the text in</td></tr>
+
+<tr><td class='arg' valign='top'><tt> font </tt></td><td class='argdesc' valign='top'>the font to use</td></tr>
+
+<tr><td class='arg' valign='top'><tt> size </tt></td><td class='argdesc' valign='top'>the point size of the text</td></tr>
+
+<tr><td class='arg' valign='top'><tt> alignment </tt></td><td class='argdesc' valign='top'>the horizontal alignment of the text within <tt>region</tt></td></tr>
+
+</table>
+
+<p>
+<h3><a name='DIYSheetfitTitlegtextregionfontmaxSizealignment'>DIYSheet.fitTitle(<span class='PARAMLIST'> g, text, region, font, maxSize, alignment </span>)</a></h3>
+
+ Draws a string within the specified region. This is equivalent to
+ <tt>drawTitle</tt>, except that if the text is too large for
+ the rectangle at the requested size, it will be shrunk to fit.
+ This is one of: <tt>DIYSheet.ALIGN_LEFT</tt>, <tt>DIYSheet.ALIGN_CENTER</tt>,
+ <tt>DIYSheet.ALIGN_RIGHT</tt>, <tt>DIYSheet.ALIGN_LEADING</tt>, or
+ <tt>DIYSheet.ALIGN_TRAILING</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> g </tt></td><td class='argdesc' valign='top'>the graphics context to use for painting</td></tr>
+
+<tr><td class='arg' valign='top'><tt> text </tt></td><td class='argdesc' valign='top'>the string to draw</td></tr>
+
+<tr><td class='arg' valign='top'><tt> region </tt></td><td class='argdesc' valign='top'>the region to draw the text in</td></tr>
+
+<tr><td class='arg' valign='top'><tt> font </tt></td><td class='argdesc' valign='top'>the font to use</td></tr>
+
+<tr><td class='arg' valign='top'><tt> maxSize </tt></td><td class='argdesc' valign='top'>the maximum point size of the text</td></tr>
+
+<tr><td class='arg' valign='top'><tt> alignment </tt></td><td class='argdesc' valign='top'>the horizontal alignment of the text within <tt>region</tt></td></tr>
+
+</table>
+
+<p>
+<h3><a name='DIYSheetdrawOutlinedTitlegtextregionfontmaxSizeoutlineSizetextColoroutlineColoralignmentoutlineUnderneath'>DIYSheet.drawOutlinedTitle(<span class='PARAMLIST'> g, text, region, font, maxSize, outlineSize, textColor, outlineColor, alignment, outlineUnderneath </span>)</a></h3>
+
+ Draws a string within the specified region. This is similar to
+ <tt>fitTitle</tt>, but each glyph (character) will be outlined in another colour.
+ The text will be centered vertically and will be aligned
+ horizontally according to the value of <tt>alignment</tt>.
+ This is one of: <tt>DIYSheet.ALIGN_LEFT</tt>, <tt>DIYSheet.ALIGN_CENTER</tt>,
+ <tt>DIYSheet.ALIGN_RIGHT</tt>, <tt>DIYSheet.ALIGN_LEADING</tt>, or
+ <tt>DIYSheet.ALIGN_TRAILING</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> g </tt></td><td class='argdesc' valign='top'>the graphics context to use for painting</td></tr>
+
+<tr><td class='arg' valign='top'><tt> text </tt></td><td class='argdesc' valign='top'>the string to draw</td></tr>
+
+<tr><td class='arg' valign='top'><tt> region </tt></td><td class='argdesc' valign='top'>the region to draw the text in</td></tr>
+
+<tr><td class='arg' valign='top'><tt> font </tt></td><td class='argdesc' valign='top'>the font to use</td></tr>
+
+<tr><td class='arg' valign='top'><tt> maxSize </tt></td><td class='argdesc' valign='top'>the point size of the text</td></tr>
+
+<tr><td class='arg' valign='top'><tt> outlineSize </tt></td><td class='argdesc' valign='top'>the size of the outline</td></tr>
+
+<tr><td class='arg' valign='top'><tt> textColor </tt></td><td class='argdesc' valign='top'>the colour of the glyph interiors</td></tr>
+
+<tr><td class='arg' valign='top'><tt> outlineColor </tt></td><td class='argdesc' valign='top'>the colour of the glyph outlines</td></tr>
+
+<tr><td class='arg' valign='top'><tt> alignment </tt></td><td class='argdesc' valign='top'>the horizontal alignment of the text within <tt>region</tt></td></tr>
+
+</table>
+ outlineUnderneath: if <tt>true</tt>, the outline is drawn under the text,      otherwise over it
+
+<p>
+<h3><a name='DIYSheetdrawRotatedTitlegtextregionfontmaxSizealignmentturns'>DIYSheet.drawRotatedTitle(<span class='PARAMLIST'> g, text, region, font, maxSize, alignment, turns </span>)</a></h3>
+
+ Draws a string within the specified region but the text is rotated the
+ specified number of 90 degree anticlockwise turns. The constants
+ <tt>DIYSheet.ROTATE_NONE</tt>, <tt>DIYSheet.ROTATE_LEFT</tt>,
+ <tt>DIYSheet.ROTATE_RIGHT</tt>, and <tt>DIYSheet.ROTATE_UPSIDE_DOWN</tt>
+ may also be used to specify an orientation.
+ The text is drawn as a single line and it does not interpret markup tags.
+ The interpretation of alignment is rotated along with the text.
+ For example, if the text is rotated left, then a left alignment will
+ align the text to the bottom of the region.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> g </tt></td><td class='argdesc' valign='top'>the graphics context to use for painting</td></tr>
+
+<tr><td class='arg' valign='top'><tt> text </tt></td><td class='argdesc' valign='top'>the string to draw</td></tr>
+
+<tr><td class='arg' valign='top'><tt> region </tt></td><td class='argdesc' valign='top'>the region to draw the text in</td></tr>
+
+<tr><td class='arg' valign='top'><tt> font </tt></td><td class='argdesc' valign='top'>the font to use</td></tr>
+
+<tr><td class='arg' valign='top'><tt> maxSize </tt></td><td class='argdesc' valign='top'>the maximum point size of the text</td></tr>
+
+<tr><td class='arg' valign='top'><tt> alignment </tt></td><td class='argdesc' valign='top'>the horizontal alignment of the text within <tt>region</tt></td></tr>
+
+</table>
+
+<p>
+<h3><a name='DIYSheetdrawRegionBoxgregion'>DIYSheet.drawRegionBox(<span class='PARAMLIST'> g, region </span>)</a></h3>
+
+ Draws a highlight box around a region. Sometimes useful for debugging.
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> g </tt></td><td class='argdesc' valign='top'>the graphics context to use for painting</td></tr>
+
+<tr><td class='arg' valign='top'><tt> text </tt></td><td class='argdesc' valign='top'>the string to draw</td></tr>
+
+<tr><td class='arg' valign='top'><tt> region </tt></td><td class='argdesc' valign='top'>the region to highlight</td></tr>
+
+</table>
+
+<p style='margin-top: 20pt;'><a href='#top'>Contents</a></body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html><html>
+<head>
+<title>Script Library Documentation random</title>
+<style>
+body { font-family: sans-serif; font-size: 14pt; line-height: 1.1; }
+
+h1, h2, h3 { font-weight: bold }
+h1 { font-size: 16pt; margin-top: 4pt; margin-bottom: 4pt; }
+h2 { font-size: 14pt; margin-top: 28pt; margin-bottom: 2pt; }
+h3 { font-size: 12pt; margin-top: 18pt; margin-bottom: 2pt;  }
+
+a { color: #000077 }
+a:active { color: #770000 }
+
+tt, code { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt; color: #000077 }
+pre { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt;
+       margin: 48pt; margin-top: 2pt; margin-bottom: 10pt; padding: 6pt; background-color: #F9F9F9;
+       border-top: dashed 1pt #777777; border-bottom: dashed 1pt #777777; }
+table { border-width: 0px; border-collapse: collapse; padding: 0; margin: 8pt; margin-top: 2pt; margin-bottom: 10pt; }
+table.arglist { margin-left: 24pt; margin-right: 12pt }
+p { margin-top: 2pt; margin-bottom: 10pt; }
+
+div.indent { margin-left: 48pt; }
+
+div.toc { font-size: 90%; margin: 16px 16px 16px 16px; padding: 8px; background-color: #f7f7f7; border: #f7f7f7 solid 4px; border-radius: 8px; }
+
+td.arg { border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+td.argdesc { padding-left: 6px; border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+
+.PARAMLIST { font-weight: normal }
+.OPTIONAL { color: #888888; font-weight: normal }
+.CLASS, .STATIC, .RESTRICTED
+      { font-size: 80%; font-weight: normal; font-style: italic; margin-left: 8pt; padding-left: 4pt; border-left: dotted 1pt #007700 }
+.CLASS { color: #000099; border-left-color: #000099 }
+.STATIC { color: #009900; border-left-color: #009900 }
+.RESTRICTED { color: #990000; border-left-color: #990000 }
+
+.COMMENT1 { color: #737373 }
+.COMMENT2 { color: #737373; font-style: italic }
+.LITERAL1 { color: #ce7b00 }
+.LITERAL2 { color: #ce7b00 }
+.LITERAL3 { color: #ce7b00 }
+.LABEL { color: #000000 }
+.KEYWORD1 { color: #000099; font-weight: bold }
+.KEYWORD2 { color: #009900 }
+.KEYWORD3 { color: #0000da }
+.OPERATOR { color: #000000 }
+.INVALID { color: #b20000; font-style: italic }
+.SPECIAL1 { color: #000000; font-weight: bold }
+.SPECIAL2 { color: #000000; font-weight: bold }
+.SPECIAL3 { color: #000000; font-weight: bold }
+.SPECIAL4 { color: #000000; font-weight: bold }
+.SPECIAL5 { color: #000000; font-weight: bold }
+.SPECIAL6 { color: #000000; font-weight: bold }</style>
+</head>
+<body>
+<a name='top'><h1>random</h1></a>
+<div class='toc'>
+<a href='#Randomselectionandnumbergeneration'>Random selection and number generation</a><br>
+<a href='#random'>random</a><br>
+<a href='#Randomseed'>Random(<span class='PARAMLIST'> seed </span>) <span class='CLASS'>constructor</span></a><br>
+<a href='#Randomprototypenumber'>Random.prototype.number(<span class='PARAMLIST'></span>)</a><br>
+<a href='#Randomprototypepickmn'>Random.prototype.pick(<span class='PARAMLIST'> m, n </span>)</a><br>
+<a href='#RandomprototypepickOtherThanmnexcluded'>Random.prototype.pickOtherThan(<span class='PARAMLIST'> m, n, excluded </span>)</a><br>
+<a href='#Randomprototyped6'>Random.prototype.d6(<span class='PARAMLIST'></span>)</a><br>
+<a href='#RandomprototyperollDicenshowDice'>Random.prototype.rollDice(<span class='PARAMLIST'> <span class='OPTIONAL'>[n]</span>, <span class='OPTIONAL'>[showDice]</span> </span>)</a><br>
+<a href='#Arrayprototypepick'>Array.prototype.pick(<span class='PARAMLIST'></span>)</a><br>
+<a href='#ArrayprototypepickOtherThanexcluded'>Array.prototype.pickOtherThan(<span class='PARAMLIST'> excluded </span>)</a><br>
+<a href='#Arrayprototypeshuffle'>Array.prototype.shuffle(<span class='PARAMLIST'></span>)</a><br>
+</div>
+<p>
+<h2><a name='Randomselectionandnumbergeneration'>Random selection and number generation</a></h2>
+
+
+<p>
+<h2><a name='random'>random</a></h2>
+
+ A shared global instance of <tt>Random</tt>.
+
+<p>
+<h2><a name='Randomseed'>Random(<span class='PARAMLIST'> seed </span>) <span class='CLASS'>constructor</span></a></h2>
+
+ A constructor to create a new <tt>Random</tt> object.
+ If a <tt>seed</tt> is given, the random number generator will use it as an
+ initial seed value. This makes the number sequence it generates reproducable
+ for testing purposes.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> seed </tt></td><td class='argdesc' valign='top'>optional seed value</td></tr>
+
+</table>
+
+<p>
+<h3><a name='Randomprototypenumber'>Random.prototype.number(<span class='PARAMLIST'></span>)</a></h3>
+
+ Returns a random number between 0 (inclusive) and 1 (exclusive).
+ Effectively the same as <tt>Math.random()</tt>, but uses the random number
+ generator of this <tt>Random</tt> object.
+
+<p>
+<h3><a name='Randomprototypepickmn'>Random.prototype.pick(<span class='PARAMLIST'> m, n </span>)</a></h3>
+
+ Returns a random integer between <tt>m</tt> (inclusive) and <tt>n</tt>
+ (inclusive).
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> m </tt></td><td class='argdesc' valign='top'>one end of the range</td></tr>
+
+<tr><td class='arg' valign='top'><tt> n </tt></td><td class='argdesc' valign='top'>the other end of the range</td></tr>
+
+</table>
+
+<p>
+<h3><a name='RandomprototypepickOtherThanmnexcluded'>Random.prototype.pickOtherThan(<span class='PARAMLIST'> m, n, excluded </span>)</a></h3>
+
+ Returns a random integer between <tt>m</tt> (inclusive) and <tt>n</tt>
+ (inclusive), but excluding the value of <tt>excluded</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> m </tt></td><td class='argdesc' valign='top'>one end of the range</td></tr>
+
+<tr><td class='arg' valign='top'><tt> n </tt></td><td class='argdesc' valign='top'>the other end of the range</td></tr>
+
+<tr><td class='arg' valign='top'><tt> excluded </tt></td><td class='argdesc' valign='top'>a value that will never be returned</td></tr>
+
+</table>
+
+<p>
+<h3><a name='Randomprototyped6'>Random.prototype.d6(<span class='PARAMLIST'></span>)</a></h3>
+
+ Returns the result of rolling a simulated 6-sided die.
+ A convenience for <tt>Random.pick( 1, 6 )</tt>.
+
+<p>
+<h3><a name='RandomprototyperollDicenshowDice'>Random.prototype.rollDice(<span class='PARAMLIST'> <span class='OPTIONAL'>[n]</span>, <span class='OPTIONAL'>[showDice]</span> </span>)</a></h3>
+
+ Simulates rolling <tt>n</tt> dice. If <tt>showDice</tt> is <tt>true</tt>,
+ an image of each die result is printed to the console.
+ The values rolled are returned in an array.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> n </tt></td><td class='argdesc' valign='top'>the optional number of dice to roll (default is 1, must be non-negative)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> showDice </tt></td><td class='argdesc' valign='top'>if <tt>true</tt>, the results are printed to the console graphically (default is <tt>true</tt>)</td></tr>
+
+</table>
+<p>
+ returns an array containing the <tt>n</tt> numbers that were rolled
+
+<p>
+<h3><a name='Arrayprototypepick'>Array.prototype.pick(<span class='PARAMLIST'></span>)</a></h3>
+
+ Randomly returns one element of the array.
+ The random selection is made using <tt>random</tt>.
+ An extension to all <tt>Array</tt> objects.
+
+<p>
+<h3><a name='ArrayprototypepickOtherThanexcluded'>Array.prototype.pickOtherThan(<span class='PARAMLIST'> excluded </span>)</a></h3>
+
+ Randomly returns one element of the array other than any element equal
+ to <tt>excluded</tt>.
+ An extension to all <tt>Array</tt> objects.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> excluded </tt></td><td class='argdesc' valign='top'>a value that will never be returned</td></tr>
+
+</table>
+
+<p>
+<h3><a name='Arrayprototypeshuffle'>Array.prototype.shuffle(<span class='PARAMLIST'></span>)</a></h3>
+
+ Shuffles the contents of an array into random order.
+ An extension to all <tt>Array</tt> objects.
+
+<p style='margin-top: 20pt;'><a href='#top'>Contents</a></body>
+</html>

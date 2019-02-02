@@ -1,0 +1,745 @@
+<!DOCTYPE html><html>
+<head>
+<title>Script Library Documentation common</title>
+<style>
+body { font-family: sans-serif; font-size: 14pt; line-height: 1.1; }
+
+h1, h2, h3 { font-weight: bold }
+h1 { font-size: 16pt; margin-top: 4pt; margin-bottom: 4pt; }
+h2 { font-size: 14pt; margin-top: 28pt; margin-bottom: 2pt; }
+h3 { font-size: 12pt; margin-top: 18pt; margin-bottom: 2pt;  }
+
+a { color: #000077 }
+a:active { color: #770000 }
+
+tt, code { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt; color: #000077 }
+pre { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt;
+       margin: 48pt; margin-top: 2pt; margin-bottom: 10pt; padding: 6pt; background-color: #F9F9F9;
+       border-top: dashed 1pt #777777; border-bottom: dashed 1pt #777777; }
+table { border-width: 0px; border-collapse: collapse; padding: 0; margin: 8pt; margin-top: 2pt; margin-bottom: 10pt; }
+table.arglist { margin-left: 24pt; margin-right: 12pt }
+p { margin-top: 2pt; margin-bottom: 10pt; }
+
+div.indent { margin-left: 48pt; }
+
+div.toc { font-size: 90%; margin: 16px 16px 16px 16px; padding: 8px; background-color: #f7f7f7; border: #f7f7f7 solid 4px; border-radius: 8px; }
+
+td.arg { border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+td.argdesc { padding-left: 6px; border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+
+.PARAMLIST { font-weight: normal }
+.OPTIONAL { color: #888888; font-weight: normal }
+.CLASS, .STATIC, .RESTRICTED
+      { font-size: 80%; font-weight: normal; font-style: italic; margin-left: 8pt; padding-left: 4pt; border-left: dotted 1pt #007700 }
+.CLASS { color: #000099; border-left-color: #000099 }
+.STATIC { color: #009900; border-left-color: #009900 }
+.RESTRICTED { color: #990000; border-left-color: #990000 }
+
+.COMMENT1 { color: #737373 }
+.COMMENT2 { color: #737373; font-style: italic }
+.LITERAL1 { color: #ce7b00 }
+.LITERAL2 { color: #ce7b00 }
+.LITERAL3 { color: #ce7b00 }
+.LABEL { color: #000000 }
+.KEYWORD1 { color: #000099; font-weight: bold }
+.KEYWORD2 { color: #009900 }
+.KEYWORD3 { color: #0000da }
+.OPERATOR { color: #000000 }
+.INVALID { color: #b20000; font-style: italic }
+.SPECIAL1 { color: #000000; font-weight: bold }
+.SPECIAL2 { color: #000000; font-weight: bold }
+.SPECIAL3 { color: #000000; font-weight: bold }
+.SPECIAL4 { color: #000000; font-weight: bold }
+.SPECIAL5 { color: #000000; font-weight: bold }
+.SPECIAL6 { color: #000000; font-weight: bold }</style>
+</head>
+<body>
+<a name='top'><h1>common</h1></a>
+<div class='toc'>
+<a href='#Standardlibraryofcommonlyusedfunctions'>Standard library of commonly used functions.</a><br>
+<a href='#PredefinedGlobalConstantsandVariables'>Predefined Global Constants and Variables</a><br>
+<a href='#useLibrarylibrary'>useLibrary(<span class='PARAMLIST'> library </span>)</a><br>
+<a href='#exit'>exit(<span class='PARAMLIST'></span>)</a><br>
+<a href='#Errorerrorexception'>Error.error(<span class='PARAMLIST'> <span class='OPTIONAL'>[exception]</span> </span>) <span class='STATIC'>static</span></a><br>
+<a href='#ErrorwarnmessagestackFrame'>Error.warn(<span class='PARAMLIST'> <span class='OPTIONAL'>[message]</span>, <span class='OPTIONAL'>[stackFrame]</span> </span>) <span class='STATIC'>static</span></a><br>
+<a href='#ErrordeprecatedmessagestackFrame'>Error.deprecated(<span class='PARAMLIST'> <span class='OPTIONAL'>[message]</span>, <span class='OPTIONAL'>[stackFrame]</span> </span>)</a><br>
+<a href='#ErrorhandleUncaughtexception'>Error.handleUncaught(<span class='PARAMLIST'> exception </span>) <span class='STATIC'>static</span></a><br>
+<a href='#promptpromptMessageinitialValue'>prompt(<span class='PARAMLIST'> <span class='OPTIONAL'>[promptMessage]</span>, <span class='OPTIONAL'>[initialValue]</span> </span>)</a><br>
+<a href='#confirmpromptMessagetitle'>confirm(<span class='PARAMLIST'> promptMessage, <span class='OPTIONAL'>[title]</span> </span>)</a><br>
+<a href='#confirmconfirmpromptMessagetitle'>confirm.confirm(<span class='PARAMLIST'> promptMessage, <span class='OPTIONAL'>[title]</span> </span>) <span class='STATIC'>static</span></a><br>
+<a href='#confirmyesnopromptMessagetitle'>confirm.yesno(<span class='PARAMLIST'> promptMessage, <span class='OPTIONAL'>[title]</span> </span>) <span class='STATIC'>static</span></a><br>
+<a href='#confirmchoosepromptMessagetitleoption1option2'>confirm.choose(<span class='PARAMLIST'> promptMessage, title, option1, <span class='OPTIONAL'>[option2]</span>, ... </span>) <span class='STATIC'>static</span></a><br>
+<a href='#alertmessageisErrorMessage'>alert(<span class='PARAMLIST'> message, <span class='OPTIONAL'>[isErrorMessage]</span> </span>)</a><br>
+<a href='#sleepmsDelay'>sleep(<span class='PARAMLIST'> <span class='OPTIONAL'>[msDelay]</span> </span>)</a><br>
+<a href='#Console'>Console</a><br>
+<a href='#Consoleprint'>Console.print(<span class='PARAMLIST'></span>) <span class='STATIC'>static</span></a><br>
+<a href='#Consoleprintln'>Console.println(<span class='PARAMLIST'></span>) <span class='STATIC'>static</span></a><br>
+<a href='#ConsoleprintfformatStirngvalues'>Console.printf(<span class='PARAMLIST'> formatStirng, <span class='OPTIONAL'>[values...]</span> </span>) <span class='STATIC'>static</span></a><br>
+<a href='#ConsoleprintImageimage'>Console.printImage(<span class='PARAMLIST'> image </span>) <span class='STATIC'>static</span></a><br>
+<a href='#ConsoleprintComponentcomponent'>Console.printComponent(<span class='PARAMLIST'> component </span>) <span class='STATIC'>static</span></a><br>
+<a href='#ConsoleprintHTMLhtml'>Console.printHTML(<span class='PARAMLIST'> html </span>) <span class='STATIC'>static</span></a><br>
+<a href='#Consoleclear'>Console.clear(<span class='PARAMLIST'></span>) <span class='STATIC'>static</span></a><br>
+<a href='#Consolehistory'>Console.history(<span class='PARAMLIST'></span>) <span class='STATIC'>static</span></a><br>
+<a href='#Consolevisible'>Console.visible <span class='STATIC'>static</span></a><br>
+<a href='#Consolequeue'>Console.queue(<span class='PARAMLIST'></span>) <span class='STATIC'>static</span></a><br>
+<a href='#Consoleflush'>Console.flush(<span class='PARAMLIST'></span>) <span class='STATIC'>static</span></a><br>
+<a href='#Consoleout'>Console.out <span class='STATIC'>static</span> <span class='RESTRICTED'>read-only</span></a><br>
+<a href='#Consoleerr'>Console.err <span class='STATIC'>static</span> <span class='RESTRICTED'>read-only</span></a><br>
+<a href='#printobj'>print(<span class='PARAMLIST'> obj </span>)</a><br>
+<a href='#printlnobj'>println(<span class='PARAMLIST'> obj </span>)</a><br>
+<a href='#stringkeyargs'>string(<span class='PARAMLIST'> key, <span class='OPTIONAL'>[args...]</span> </span>)</a><br>
+<a href='#gstringkeyargs'>gstring(<span class='PARAMLIST'> key, <span class='OPTIONAL'>[args...]</span> </span>)</a><br>
+<a href='#sprintfformatStringargs'>sprintf(<span class='PARAMLIST'> formatString, <span class='OPTIONAL'>[args...]</span> </span>)</a><br>
+<a href='#printfformatStringargs'>printf(<span class='PARAMLIST'> formatString, <span class='OPTIONAL'>[args...]</span> </span>)</a><br>
+<a href='#useSettingssource'>useSettings(<span class='PARAMLIST'> source </span>)</a><br>
+<a href='#key'>$(<span class='PARAMLIST'> key </span>) <span class='STATIC'>static</span></a><br>
+<a href='#useInterfaceLanguagelanguage'>useInterfaceLanguage(<span class='PARAMLIST'> <span class='OPTIONAL'>[language]</span> </span>)</a><br>
+<a href='#key'>@(<span class='PARAMLIST'> key </span>) <span class='STATIC'>static</span></a><br>
+<a href='#useGameLanguagelanguage'>useGameLanguage(<span class='PARAMLIST'> <span class='OPTIONAL'>[language]</span> </span>)</a><br>
+<a href='#key'>#(<span class='PARAMLIST'> key </span>) <span class='STATIC'>static</span></a><br>
+<a href='#Patch'>Patch</a><br>
+<a href='#Patchapplykey1value1key2value2'>Patch.apply(<span class='PARAMLIST'> <span class='OPTIONAL'>[key1, value1]</span>, <span class='OPTIONAL'>[key2, value2]</span>, ... </span>) <span class='STATIC'>static</span></a><br>
+<a href='#Patchrestorekey1key2'>Patch.restore(<span class='PARAMLIST'> <span class='OPTIONAL'>[key1]</span>, <span class='OPTIONAL'>[key2]</span>, ... </span>) <span class='STATIC'>static</span></a><br>
+<a href='#Patchtemporarykey1value1key2value2'>Patch.temporary(<span class='PARAMLIST'> <span class='OPTIONAL'>[key1, value1]</span>, <span class='OPTIONAL'>[key2, value2]</span>, ... </span>) <span class='STATIC'>static</span></a><br>
+<a href='#Patchcardcomponentkey1value1key2value2'>Patch.card(<span class='PARAMLIST'> component, <span class='OPTIONAL'>[key1, value1]</span>, <span class='OPTIONAL'>[key2, value2]</span>, ... </span>) <span class='STATIC'>static</span></a><br>
+<a href='#PatchcardFromcomponentresource'>Patch.cardFrom(<span class='PARAMLIST'> component, resource </span>) <span class='STATIC'>static</span></a><br>
+<a href='#PatchcardRestorecomponentkey1key2'>Patch.cardRestore(<span class='PARAMLIST'> component, key1, <span class='OPTIONAL'>[key2]</span>, ... </span>) <span class='STATIC'>static</span></a><br>
+</div>
+<p>
+<h3><a name='Standardlibraryofcommonlyusedfunctions'>Standard library of commonly used functions.</a></h3>
+
+
+<p>
+<h2><a name='PredefinedGlobalConstantsandVariables'>Predefined Global Constants and Variables</a></h2>
+
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> Global </tt></td><td class='argdesc' valign='top'>a reference to the global scope of the script; sometimes needed      to specify a global variable when a local variable has the same name,      but can also be used to look up global variable programmatically, e.g.:      <tt>println( Global['$recent_file_' + 1] );</tt></td></tr>
+
+</table>
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> Eons </tt></td><td class='argdesc' valign='top'>a reference to the <a href='javadoc:ca/cgjennings/apps/arkham/StrangeEons'>main application</a></td></tr>
+
+<tr><td class='arg' valign='top'><tt> Editor </tt></td><td class='argdesc' valign='top'>a reference to the <a href='javadoc:ca/cgjennings/apps/arkham/StrangeEonsEditor'>active editor</a></td></tr>
+
+<tr><td class='arg' valign='top'><tt> Component </tt></td><td class='argdesc' valign='top'>a reference to the <a href='javadoc:ca/cgjennings/apps/arkham/component/GameComponent'>component</a>      currently edited by <tt>Editor</tt>, if any</td></tr>
+
+<tr><td class='arg' valign='top'><tt> PluginContext </tt></td><td class='argdesc' valign='top'>a reference to the plugin context instance for this script</td></tr>
+
+<tr><td class='arg' valign='top'><tt> sourcefile </tt></td><td class='argdesc' valign='top'>the source file of the script being executed</td></tr>
+
+</table>
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> ca </tt></td><td class='argdesc' valign='top'>convenience for the <tt>ca</tt> root package</td></tr>
+
+<tr><td class='arg' valign='top'><tt> arkham </tt></td><td class='argdesc' valign='top'>convenience for the      <tt><a href='javadoc:ca/cgjennings/apps/arkham/'>ca.cgjennings.apps.arkham</a></tt>      package</td></tr>
+
+<tr><td class='arg' valign='top'><tt> resources </tt></td><td class='argdesc' valign='top'>convenience for the <tt><a href='javadoc:resources/'>resources</a></tt></td></tr>
+
+<tr><td class='arg' valign='top'><tt> swing </tt></td><td class='argdesc' valign='top'>convenience for the <tt><a href='javadoc:javax/swing/'>javax.swing</a></tt> package</td></tr>
+
+</table>
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> Colour (or Color) </tt></td><td class='argdesc' valign='top'>a <a href='javadoc:resources/Settings.Colour'>subclass of      <tt>java.awt.Color</tt></a> that is easily written to and read from settings</td></tr>
+
+<tr><td class='arg' valign='top'><tt> Font </tt></td><td class='argdesc' valign='top'>the Font class (<tt>java.awt.Font</tt>)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> Region </tt></td><td class='argdesc' valign='top'>a <a href='javadoc:resources/Settings.Region'>subclass of      <tt>java.awt.Rectangle</tt></a> that is easily written to and read from settings</td></tr>
+
+<tr><td class='arg' valign='top'><tt> Region2D </tt></td><td class='argdesc' valign='top'>a <a href='javadoc:resources/Settings.Region2D'>subclass of      <tt>java.awt.Rectangle2D</tt></a> that is easily written to and read from settings</td></tr>
+
+<tr><td class='arg' valign='top'><tt> URL </tt></td><td class='argdesc' valign='top'>convenience for <tt>java.net.URL</tt></td></tr>
+
+</table>
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> ResourceKit </tt></td><td class='argdesc' valign='top'>convenience for <tt><a href='javadoc:resources/ResourceKit'>resources.ResourceKit</a></tt></td></tr>
+
+<tr><td class='arg' valign='top'><tt> Language </tt></td><td class='argdesc' valign='top'>convenience for <tt><a href='javadoc:resources/Language'>resources.Language</a></tt></td></tr>
+
+<tr><td class='arg' valign='top'><tt> Settings </tt></td><td class='argdesc' valign='top'>the class (<tt><a href='javadoc:resources/Settings'>resources.Settings</a></tt>)      used to store setting keys and their values</td></tr>
+
+</table>
+
+<p>
+<h3><a name='useLibrarylibrary'>useLibrary(<span class='PARAMLIST'> library </span>)</a></h3>
+
+ Import the objects, functions, and variables defined by a library into the
+ current script. The value of <tt>library</tt> may either be the simple name
+ of a built-in library or the URL of a script file. Libraries may safely
+ be imported multiple times; subsequent calls to <tt>uselibrary</tt> with
+ the same <tt>library</tt> argument will be ignored.
+<p>
+ <b>Examples:</b>
+<pre><span class='PLAIN'> </span><span class='COMMENT1'>// import the standard library "markup"</span>
+<span class='PLAIN'> </span><span class='COMMENT1'>// (/resources/libraries/markup.js)</span>
+<span class='PLAIN'> </span><span class='KEYWORD2'>useLibrary</span><span class='PLAIN'>( </span><span class='LITERAL2'>'markup'</span><span class='PLAIN'> );</span>
+<span class='PLAIN'> </span><span class='COMMENT1'>// import a custom library from a plug-in</span>
+<span class='PLAIN'> </span><span class='COMMENT1'>// (/resources/myname/myplugin/mylib.js)</span>
+<span class='PLAIN'> </span><span class='KEYWORD2'>useLibrary</span><span class='PLAIN'>( </span><span class='LITERAL2'>'res://myname/myplugin/mylib.js'</span><span class='PLAIN'> );</span></pre><p>
+ The <tt>common</tt> library is automatically imported into every script.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> library </tt></td><td class='argdesc' valign='top'>the built-in library name or a URL</td></tr>
+
+</table>
+
+<p>
+<h3><a name='exit'>exit(<span class='PARAMLIST'></span>)</a></h3>
+
+ Stops executing the script running in the current thread.
+
+<p>
+<h3><a name='Errorerrorexception'>Error.error(<span class='PARAMLIST'> <span class='OPTIONAL'>[exception]</span> </span>) <span class='STATIC'>static</span></a></h3>
+
+ Indicates an error condition by throwing an exception. The argument can be
+ a JavaScript <i>or</i> Java excpeption.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> exception </tt></td><td class='argdesc' valign='top'>a message string, JavaScript <tt>Error</tt>, or Java              <tt>Throwable</tt> object to throw</td></tr>
+
+</table>
+
+<p>
+<h3><a name='ErrorwarnmessagestackFrame'>Error.warn(<span class='PARAMLIST'> <span class='OPTIONAL'>[message]</span>, <span class='OPTIONAL'>[stackFrame]</span> </span>) <span class='STATIC'>static</span></a></h3>
+
+ If script warnings are enabled, issues a warning with <tt>message</tt>
+ as the warning text. The optional <tt>stackFrame</tt> parameter indicates
+ the relative stack frame to indicate as the location (file and line number)
+ of the warning. The default is -1, which reports the line of the direct caller
+ to <tt>warn</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> warning </tt></td><td class='argdesc' valign='top'>a warning message string to be printed as a script warning</td></tr>
+
+<tr><td class='arg' valign='top'><tt> stackFrame </tt></td><td class='argdesc' valign='top'>the optional relative stack frame position to report as the source</td></tr>
+
+</table>
+
+<p>
+<h3><a name='ErrordeprecatedmessagestackFrame'>Error.deprecated(<span class='PARAMLIST'> <span class='OPTIONAL'>[message]</span>, <span class='OPTIONAL'>[stackFrame]</span> </span>)</a></h3>
+
+ If script warnings are enabled, warns that a deprecated feature has been
+ used. Marking a feature as deprecated warns that it may be removed in a
+ future version. The optional <tt>stackFrame</tt> parameter indicates
+ the relative stack frame to indicate as the location (file and line number)
+ of the warning. The default is -1, which reports the line that called
+ <tt>deprecated</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> message </tt></td><td class='argdesc' valign='top'>an optional message describing the deprecated feature</td></tr>
+
+<tr><td class='arg' valign='top'><tt> stackFrame </tt></td><td class='argdesc' valign='top'>the optional relative stack frame position to report as the source</td></tr>
+
+</table>
+
+<p>
+<h3><a name='ErrorhandleUncaughtexception'>Error.handleUncaught(<span class='PARAMLIST'> exception </span>) <span class='STATIC'>static</span></a></h3>
+
+ Prints a standard error message to the console to describe an exception.
+ This function can be called to handle uncaught script errors in script code
+ that "escapes" the execution of the script that defined it, such as a
+ Java interface implementation.
+<p>
+ When a script is executed, exceptions that are thrown are caught and displayed
+ in the console as if the entire script were surrounded by a special
+ <tt>try</tt>-<tt>catch</tt> pair. However, when you implement a Java class
+ or interface with script code, the function(s) that implement the Java object
+ "escape" from this try-catch. For example, suppose you create an
+ <tt>ActionListener</tt>, add it to a <tt>JButton</tt>, and then add the
+ button to the application window with <tt>Eons.addCustomComponent</tt>.
+ The script ends, but the listener still exists because it is attached to the
+ button and the button still exists. If the listener function throws an exception,
+ you will not see the error message. To get an error message from this listener,
+ surround the listener code with a <tt>try</tt>/<tt>catch</tt> and call this
+ function with the thrown exception. For example:
+<pre><span class='PLAIN'> </span><span class='KEYWORD1'>let</span><span class='PLAIN'> button = </span><span class='KEYWORD1'>new</span><span class='PLAIN'> swing.JButton( </span><span class='LITERAL2'>'Press Me!'</span><span class='PLAIN'> );</span>
+<span class='PLAIN'> button.addActionListener( </span><span class='KEYWORD1'>function</span><span class='PLAIN'> listener() {</span>
+<span class='PLAIN'>     </span><span class='KEYWORD1'>try</span><span class='PLAIN'> {</span>
+<span class='PLAIN'>         println( </span><span class='LITERAL2'>'You pressed me!'</span><span class='PLAIN'> );</span>
+<span class='PLAIN'>     } </span><span class='KEYWORD1'>catch</span><span class='PLAIN'>( ex ) {</span>
+<span class='PLAIN'>         </span><span class='KEYWORD2'>Error</span><span class='PLAIN'>.handleUncaught( ex );</span>
+<span class='PLAIN'>     }</span>
+<span class='PLAIN'> });</span>
+<span class='PLAIN'> </span><span class='KEYWORD2'>Eons</span><span class='PLAIN'>.window.addCustomComponent( button );</span></pre><p>
+ <b>Note:</b> Although you could use an anonymous function to create this
+ listener (<tt>function(){...}</tt>), if you give it a name then that that name
+ will appear in the stack trace of any error messages.
+
+<p>
+<h3><a name='promptpromptMessageinitialValue'>prompt(<span class='PARAMLIST'> <span class='OPTIONAL'>[promptMessage]</span>, <span class='OPTIONAL'>[initialValue]</span> </span>)</a></h3>
+
+ Prompts the user for input and returns the result.
+ This function displays a dialog box with a text field in which the user
+ may enter text. If the user presses OK, the entered text is returned.
+ If the user cancels the dialog, <tt>null</tt> is returned.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> promptMessage </tt></td><td class='argdesc' valign='top'>an optional prompt to display</td></tr>
+
+<tr><td class='arg' valign='top'><tt> initialValue </tt></td><td class='argdesc' valign='top'>an optional default value to fill in the text field</td></tr>
+
+</table>
+<p>
+ returns the string entered by the user, or <tt>null</tt> if the dialog
+     is cancelled
+
+<p>
+<h3><a name='confirmpromptMessagetitle'>confirm(<span class='PARAMLIST'> promptMessage, <span class='OPTIONAL'>[title]</span> </span>)</a></h3>
+
+ Displays a dialog box containing the promptMessage text along with OK and Cancel
+ buttons. Returns <tt>true</tt> if the user selects OK, or <tt>false</tt> otherwise.
+ The <tt>confirm()</tt> function is commonly supported by Web browsers with
+ JavaScript support. To complement this functionality, two additional
+ variants are available: <tt>confirm.yesno</tt> for Yes/No questions,
+ and <tt>confirm.choose</tt> to choose from a set of custom options.
+ These are both described in detail below.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> promptMessage </tt></td><td class='argdesc' valign='top'>the prompt text to display</td></tr>
+
+<tr><td class='arg' valign='top'><tt> title </tt></td><td class='argdesc' valign='top'>an optional title for the prompt window</td></tr>
+
+</table>
+<p>
+ returns <tt>true</tt> if user selects OK
+
+<p>
+<h3><a name='confirmconfirmpromptMessagetitle'>confirm.confirm(<span class='PARAMLIST'> promptMessage, <span class='OPTIONAL'>[title]</span> </span>) <span class='STATIC'>static</span></a></h3>
+
+ This is equivalent to <tt>confirm( promptMessage, title )</tt>. It is
+ provided as a parallel to <tt>confirm.yesno</tt> and
+ <tt>confirm.choose</tt>.
+
+<p>
+<h3><a name='confirmyesnopromptMessagetitle'>confirm.yesno(<span class='PARAMLIST'> promptMessage, <span class='OPTIONAL'>[title]</span> </span>) <span class='STATIC'>static</span></a></h3>
+
+ Display a dialog box containing the promptMessage text along with Yes and No
+ buttons. Returns <tt>true</tt> if the user selects Yes, or <tt>false</tt> otherwise.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> promptMessage </tt></td><td class='argdesc' valign='top'>the prompt text to display</td></tr>
+
+<tr><td class='arg' valign='top'><tt> title </tt></td><td class='argdesc' valign='top'>an optional title for the prompt window</td></tr>
+
+</table>
+<p>
+ returns <tt>true</tt> if user selects Yes
+
+<p>
+<h3><a name='confirmchoosepromptMessagetitleoption1option2'>confirm.choose(<span class='PARAMLIST'> promptMessage, title, option1, <span class='OPTIONAL'>[option2]</span>, ... </span>) <span class='STATIC'>static</span></a></h3>
+
+ Display a dialog box with buttons for each of <tt>option1</tt>, <tt>option2</tt>,
+ and so on.
+ If the user chooses one of the options, the index of the option is returned
+ (0 for <tt>option1</tt>, 1 for <tt>option2</tt>, and so on).
+ If the user closes the dialog without making a selection, <tt>-1</tt>
+ is returned instead.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> promptMessage </tt></td><td class='argdesc' valign='top'>the prompt text to display</td></tr>
+
+<tr><td class='arg' valign='top'><tt> title </tt></td><td class='argdesc' valign='top'>a title for the prompt window (may be <tt>null</tt>)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> options </tt></td><td class='argdesc' valign='top'>a list of one or more options to display</td></tr>
+
+</table>
+<p>
+ returns the selected option's index, or <tt>-1</tt>
+
+<p>
+<h3><a name='alertmessageisErrorMessage'>alert(<span class='PARAMLIST'> message, <span class='OPTIONAL'>[isErrorMessage]</span> </span>)</a></h3>
+
+ Displays a message in a dialog box. The user must press the <i>OK</i> button
+ to continue. This is not generally a user-friendly act and should only
+ be used if the user must acknowledge something before being allowed to
+ continue using the application.
+<p>
+ The message dialog is normally formatted as a warning message.
+ If the <tt>isErrorMessage</tt> flag is <tt>true</tt>, it will be
+ formatted as an error message instead. (Exactly what this means
+ depends on the platform and selected theme, but typically the
+ resulting dialog box will feature a different
+ icon for warnings than for errors.)
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> message </tt></td><td class='argdesc' valign='top'>the message to display</td></tr>
+
+<tr><td class='arg' valign='top'><tt> isErrorMessage </tt></td><td class='argdesc' valign='top'>an optional flag; if <tt>true</tt>, an error dialog is displayed</td></tr>
+
+</table>
+
+<p>
+<h3><a name='sleepmsDelay'>sleep(<span class='PARAMLIST'> <span class='OPTIONAL'>[msDelay]</span> </span>)</a></h3>
+
+ Pauses script execution for a period of time. Returns <tt>true</tt> if you <tt>interrupt()</tt>
+ the thread from another thread while it is sleeping, otherwise returns <tt>false</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> delay </tt></td><td class='argdesc' valign='top'>the length of time to pause, in milliseconds (default is 1000)</td></tr>
+
+</table>
+
+<p>
+<h2><a name='Console'>Console</a></h2>
+
+ The console object allows you to interact with the Script Output
+ Console window.
+
+<p>
+<h3><a name='Consoleprint'>Console.print(<span class='PARAMLIST'></span>) <span class='STATIC'>static</span></a></h3>
+
+ Prints an object to the script console. This is identical to the global
+ <tt>print</tt> function.
+
+<p>
+<h3><a name='Consoleprintln'>Console.println(<span class='PARAMLIST'></span>) <span class='STATIC'>static</span></a></h3>
+
+ Prints an object to the script console. This is identical to the global
+ <tt>println</tt> function.
+
+<p>
+<h3><a name='ConsoleprintfformatStirngvalues'>Console.printf(<span class='PARAMLIST'> formatStirng, <span class='OPTIONAL'>[values...]</span> </span>) <span class='STATIC'>static</span></a></h3>
+
+ Prints a formatted string to the script console. This is identical to the global
+ <tt>printf</tt> function.
+
+<p>
+<h3><a name='ConsoleprintImageimage'>Console.printImage(<span class='PARAMLIST'> image </span>) <span class='STATIC'>static</span></a></h3>
+
+ Prints an image or icon (subclass of
+ <a href='javadoc:java/awt/Image.html'>java.awt.Image</a>
+ or
+ <a href='javadoc:java/awt/Icon.html'>java.awt.Icon</a>)
+ to <tt>Console.out</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> image </tt></td><td class='argdesc' valign='top'>an image or icon object to be inserted into the console text</td></tr>
+
+</table>
+
+<p>
+<h3><a name='ConsoleprintComponentcomponent'>Console.printComponent(<span class='PARAMLIST'> component </span>) <span class='STATIC'>static</span></a></h3>
+
+ Prints a user interface component (a subclass of
+ <a href='javadoc:java/awt/Component.html'>java.awt.Component</a>)
+ to <tt>Console.out</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> image </tt></td><td class='argdesc' valign='top'>an image or icon object to be inserted into the console text</td></tr>
+
+</table>
+
+<p>
+<h3><a name='ConsoleprintHTMLhtml'>Console.printHTML(<span class='PARAMLIST'> html </span>) <span class='STATIC'>static</span></a></h3>
+
+ Prints a string of HTML markup to the console as formatted text. The level
+ of HTML support is equivalent to that provided by Swing <tt>JLabel</tt>s.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> html </tt></td><td class='argdesc' valign='top'>a string of HTML markup to be parsed, formatted, and inserted</td></tr>
+
+</table>
+
+<p>
+<h3><a name='Consoleclear'>Console.clear(<span class='PARAMLIST'></span>) <span class='STATIC'>static</span></a></h3>
+
+ Clears the script console.
+
+<p>
+<h3><a name='Consolehistory'>Console.history(<span class='PARAMLIST'></span>) <span class='STATIC'>static</span></a></h3>
+
+ Returns the current text of the script console history
+
+<p>
+<h3><a name='Consolevisible'>Console.visible <span class='STATIC'>static</span></a></h3>
+
+ Boolean property that controls whether the console window is visible.
+
+<p>
+<h3><a name='Consolequeue'>Console.queue(<span class='PARAMLIST'></span>) <span class='STATIC'>static</span></a></h3>
+
+ Buffers output to <tt>Console.out</tt> until a matching call to <tt>flush()</tt>.
+ This method should be surrounded with a <tt>try</tt>...<tt>finally</tt> block
+ to ensure that the matching call to <tt>flush()</tt> is always performed.
+
+<p>
+<h3><a name='Consoleflush'>Console.flush(<span class='PARAMLIST'></span>) <span class='STATIC'>static</span></a></h3>
+
+ Immediately flushes pending writes to <tt>Console.out</tt>. If output is
+ currently being buffered due to a call to <tt>queue()</tt>, buffering ends
+ and the accumulated output is written to the console.
+
+<p>
+<h3><a name='Consoleout'>Console.out <span class='STATIC'>static</span> <span class='RESTRICTED'>read-only</span></a></h3>
+
+ A <tt>java.io.PrintWriter</tt> that can be used to write to the
+ console window's output stream.
+
+<p>
+<h3><a name='Consoleerr'>Console.err <span class='STATIC'>static</span> <span class='RESTRICTED'>read-only</span></a></h3>
+
+ A <tt>java.io.PrintWriter</tt> that can be used to write to the
+ console window's error stream.
+
+<p>
+<h3><a name='printobj'>print(<span class='PARAMLIST'> obj </span>)</a></h3>
+
+ Prints an object to the script console. You may pass multiple arguments
+ to this function; the arguments will be printed in sequence as if they
+ printed by multiple print statements.
+<p>
+ This is a cover for <tt>Console.print</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> obj </tt></td><td class='argdesc' valign='top'>an object for which a string representation should be printed</td></tr>
+
+</table>
+
+<p>
+<h3><a name='printlnobj'>println(<span class='PARAMLIST'> obj </span>)</a></h3>
+
+ Prints an object to the script console, followed by a newline.
+ You may pass multiple arguments to this function; the arguments
+ will be printed in sequence as if by multiple <tt>print</tt> calls,
+ then followed by a newline.
+<p>
+ This is a cover for <tt>Console.println</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> obj </tt></td><td class='argdesc' valign='top'>an object for which a string representation should be printed</td></tr>
+
+</table>
+
+<p>
+<h3><a name='stringkeyargs'>string(<span class='PARAMLIST'> key, <span class='OPTIONAL'>[args...]</span> </span>)</a></h3>
+
+ Returns the localized user interface string for a string key.
+ If the key is undefined an error message string is returned
+ instead.
+<p>
+ If the user interface string is a format string, it may be formatted by
+ passing additional arguments. Note that <tt>Number</tt> arguments are converted
+ to <tt>java.lang.Double</tt>s; to fill <tt>%d</tt> format arguments you
+ must explicitly convert the <tt>Number</tt> to a Java <tt>Integer</tt>
+ or <tt>Long</tt> (you can use <tt><i>n</i>.toInt()</tt>).
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> key </tt></td><td class='argdesc' valign='top'>a user interface text key</td></tr>
+
+<tr><td class='arg' valign='top'><tt> args </tt></td><td class='argdesc' valign='top'>zero or more arguments used to format the string</td></tr>
+
+</table>
+<p>
+ returns the formatted, localized string mapped to by the key
+
+<p>
+<h3><a name='gstringkeyargs'>gstring(<span class='PARAMLIST'> key, <span class='OPTIONAL'>[args...]</span> </span>)</a></h3>
+
+ Returns the localized game string for a string key.
+ If the key is undefined an error message string is returned
+ instead.
+<p>
+ If the user interface string is a format string, it may be formatted by
+ passing additional arguments. Note that <tt>Number</tt> arguments are converted
+ to <tt>java.lang.Double</tt>s; to fill <tt>%d</tt> format arguments you
+ must explicitly convert the <tt>Number</tt> to a Java <tt>Integer</tt>
+ or <tt>Long</tt> (you can use <tt><i>n</i>.toInt()</tt>).
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> key </tt></td><td class='argdesc' valign='top'>a user interface text key</td></tr>
+
+<tr><td class='arg' valign='top'><tt> args </tt></td><td class='argdesc' valign='top'>zero or more arguments used to format the string</td></tr>
+
+</table>
+<p>
+ returns the formatted, localized string mapped to by the key
+
+<p>
+<h3><a name='sprintfformatStringargs'>sprintf(<span class='PARAMLIST'> formatString, <span class='OPTIONAL'>[args...]</span> </span>)</a></h3>
+
+ Returns a string formatted using C-style printf syntax.
+ See <a href='javadoc:java/util/Formatter.html#syntax'>Formatter Syntax</a>
+ for details. Note that <tt>Number</tt> arguments are converted to <tt>java.lang.Double</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> formatString </tt></td><td class='argdesc' valign='top'>the string to be formatted using the arguments</td></tr>
+
+<tr><td class='arg' valign='top'><tt> args </tt></td><td class='argdesc' valign='top'>a list of zero or more arguments used to format the string</td></tr>
+
+</table>
+<p>
+ returns a formatted string using the specified format string and arguments.
+
+<p>
+<h3><a name='printfformatStringargs'>printf(<span class='PARAMLIST'> formatString, <span class='OPTIONAL'>[args...]</span> </span>)</a></h3>
+
+<p>
+ Print a formatted string to the console using C-style printf syntax.
+ See <a href='javadoc:java/util/Formatter.html#syntax'>Formatter Syntax</a>
+ for details. Note that <tt>Number</tt> arguments are converted to <tt>java.lang.Double</tt>.
+ If you wish to use the <tt>%d</tt> format, convert the number to <tt>java.lang.Integer</tt>
+ using its <tt>toInt()</tt> function.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> formatString </tt></td><td class='argdesc' valign='top'>the string to be formatted using the arguments</td></tr>
+
+<tr><td class='arg' valign='top'><tt> args </tt></td><td class='argdesc' valign='top'>a list of zero or more arguments used to format the string</td></tr>
+
+</table>
+
+<p>
+<h3><a name='useSettingssource'>useSettings(<span class='PARAMLIST'> source </span>)</a></h3>
+
+ Sets the <tt>Settings</tt> object that will be used to get and set
+ settings using the <tt>$<i>setting_name</i></tt> syntax. Starting
+ with Strange Eons 2.00.5, script code may read and write settings
+ using global variables that start with a dollar sign ($) followed
+ by the setting name. Setting names that include the hyphen character
+ should use an underscore instead of a hyphen since hyphens are not
+ legal in JavaScript identifiers. For example, to print the value of
+ <tt>stamina-text-region</tt>, one would write:
+<pre><span class='PLAIN'> println( </span><span class='LITERAL5'>$stamina_text_region</span><span class='PLAIN'> );</span></pre><p>
+ By default, a script that uses this syntax will read and write the
+ global (shared) settings, except for DIY scripts
+ which use the private settings of their DIY game component object.
+ This function allows you to choose a different <tt>Settings</tt>
+ object to use. The value of <tt>source</tt> can either be a
+ <tt>Settings</tt> object, which will be used directly, or
+ else a game component, in which case the private settings of that
+ component will be used. If <tt>source</tt> is <tt>null</tt> or
+ <tt>undefined</tt>, then shared settings will be used.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> source </tt></td><td class='argdesc' valign='top'>the settings to use for <tt>$</tt> script variables</td></tr>
+
+</table>
+
+<p>
+<h2><a name='key'>$(<span class='PARAMLIST'> key </span>) <span class='STATIC'>static</span></a></h2>
+
+ Looks up the value of a key named by the string argument in the current
+ <tt>$</tt>-notation settings. This allows you to describe a key
+ algorithmically using consistent notation.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> key </tt></td><td class='argdesc' valign='top'>a string whose value is the desired setting key</td></tr>
+
+</table>
+
+<p>
+<h3><a name='useInterfaceLanguagelanguage'>useInterfaceLanguage(<span class='PARAMLIST'> <span class='OPTIONAL'>[language]</span> </span>)</a></h3>
+
+ Sets the <a href='javadoc:resources/Language'>Language</a> used
+ to look up interface strings with the <tt>@<i>key_name</i></tt>
+ syntax. By default this is <tt>Language.getInterface()</tt>.
+ The <tt>@</tt>-syntax is the same as the <tt>$</tt>-syntax for
+ settings, except that it looks up localized interface strings.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> language </tt></td><td class='argdesc' valign='top'>the localized string source to use</td></tr>
+
+</table>
+
+<p>
+<h2><a name='key'>@(<span class='PARAMLIST'> key </span>) <span class='STATIC'>static</span></a></h2>
+
+ Looks up the value of an interface string key in the current <tt>@</tt>-notation
+ language. This allows you to describe a key algorithmically while
+ still using consistent notation.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> key </tt></td><td class='argdesc' valign='top'>a string whose value is the desired interface language key</td></tr>
+
+</table>
+
+<p>
+<h3><a name='useGameLanguagelanguage'>useGameLanguage(<span class='PARAMLIST'> <span class='OPTIONAL'>[language]</span> </span>)</a></h3>
+
+ Sets the <a href='javadoc:resources/Language'>Language</a> used
+ to look up game strings with the <tt>#<i>key_name</i></tt>
+ syntax. By default this is <tt>Language.getGame()</tt>.
+ The <tt>#</tt>-syntax is the same as the <tt>$</tt>-syntax for
+ settings, except that it looks up localized game strings.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> language </tt></td><td class='argdesc' valign='top'>the localized string source to use</td></tr>
+
+</table>
+
+<p>
+<h2><a name='key'>#(<span class='PARAMLIST'> key </span>) <span class='STATIC'>static</span></a></h2>
+
+ Looks up the value of a game string key in the current <tt>#</tt>-notation
+ language. This allows you to describe a key algorithmically while
+ still using consistent notation.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> key </tt></td><td class='argdesc' valign='top'>a string whose value is the desired game language key</td></tr>
+
+</table>
+
+<p>
+<h2><a name='Patch'>Patch</a></h2>
+
+ The <tt>Patch</tt> object contains static helper methods that modify
+ (or restore) settings.
+ This can be used to fix user issues or to modify program behaviour at
+ runtime, and to create new card types based on existing cards.
+
+<p>
+<h3><a name='Patchapplykey1value1key2value2'>Patch.apply(<span class='PARAMLIST'> <span class='OPTIONAL'>[key1, value1]</span>, <span class='OPTIONAL'>[key2, value2]</span>, ... </span>) <span class='STATIC'>static</span></a></h3>
+
+ Writes zero or more pairs of settings values to user settings and then
+ saves user settings to disk. The new values will override the default
+ values for the application and game language.
+<p>
+ The arguments must be a sequence of key, value pairs. If the number of
+ arguments is not even, an exception is thrown.
+ For example:
+<pre><span class='PLAIN'> </span><span class='KEYWORD2'>Patch</span><span class='PLAIN'>.apply( </span><span class='LITERAL2'>'encounter-bright-adjust'</span><span class='PLAIN'>, </span><span class='LITERAL2'>'1'</span><span class='PLAIN'> )</span></pre><p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> key1, value1,&nbsp;... </tt></td><td class='argdesc' valign='top'>pairs of key and value strings that name the keys to                      be modified and their new values</td></tr>
+
+</table>
+
+<p>
+<h3><a name='Patchrestorekey1key2'>Patch.restore(<span class='PARAMLIST'> <span class='OPTIONAL'>[key1]</span>, <span class='OPTIONAL'>[key2]</span>, ... </span>) <span class='STATIC'>static</span></a></h3>
+
+ Deletes zero or more user settings and then writes user settings to disk.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> key1,&nbsp;... </tt></td><td class='argdesc' valign='top'>the names of the keys whose values should be restored</td></tr>
+
+</table>
+
+<p>
+<h3><a name='Patchtemporarykey1value1key2value2'>Patch.temporary(<span class='PARAMLIST'> <span class='OPTIONAL'>[key1, value1]</span>, <span class='OPTIONAL'>[key2, value2]</span>, ... </span>) <span class='STATIC'>static</span></a></h3>
+
+ Changes zero or more pairs of settings values until the end of the current
+ session. The settings will return to their previous value the next time
+ the application runs.
+<p>
+ The arguments must be a sequence of key, value pairs. If the number of
+ arguments is not even, an exception is thrown.
+<p>
+ Assigning a value to a setting using the <tt>$</tt>-notation is normally
+ equivalent to calling this function unless the script is a DIY component
+ or <tt>usesettings</tt> has been called.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> key1, value1,&nbsp;... </tt></td><td class='argdesc' valign='top'>pairs of key and value strings</td></tr>
+
+</table>
+
+<p>
+<h3><a name='Patchcardcomponentkey1value1key2value2'>Patch.card(<span class='PARAMLIST'> component, <span class='OPTIONAL'>[key1, value1]</span>, <span class='OPTIONAL'>[key2, value2]</span>, ... </span>) <span class='STATIC'>static</span></a></h3>
+
+ Modifies the private settings of a component.
+ These settings apply only to <tt>component</tt> and are saved and loaded
+ with it.
+ This can be used by extensions to create custom components based on
+ existing card types by modifying their images, text, regions, and so on.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> component </tt></td><td class='argdesc' valign='top'>the game component to modify</td></tr>
+
+<tr><td class='arg' valign='top'><tt> key1, value1, ... </tt></td><td class='argdesc' valign='top'>pairs of key and value strings</td></tr>
+
+</table>
+
+<p>
+<h3><a name='PatchcardFromcomponentresource'>Patch.cardFrom(<span class='PARAMLIST'> component, resource </span>) <span class='STATIC'>static</span></a></h3>
+
+ Modifies the private settings of a component by merging in all of the settings
+ stored in a resource file.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> component </tt></td><td class='argdesc' valign='top'>the game component to modify</td></tr>
+
+<tr><td class='arg' valign='top'><tt> resource </tt></td><td class='argdesc' valign='top'>the path to a resource file from which settings will be read</td></tr>
+
+</table>
+
+<p>
+<h3><a name='PatchcardRestorecomponentkey1key2'>Patch.cardRestore(<span class='PARAMLIST'> component, key1, <span class='OPTIONAL'>[key2]</span>, ... </span>) <span class='STATIC'>static</span></a></h3>
+
+ Removes one or more private settings from a component, restoring them to
+ their default value.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> component </tt></td><td class='argdesc' valign='top'>the game component to modify</td></tr>
+
+<tr><td class='arg' valign='top'><tt> key1,&nbsp;... </tt></td><td class='argdesc' valign='top'>the names of the keys whose values should be restored</td></tr>
+
+</table>
+
+<p style='margin-top: 20pt;'><a href='#top'>Contents</a></body>
+</html>

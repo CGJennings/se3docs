@@ -1,0 +1,461 @@
+<!DOCTYPE html><html>
+<head>
+<title>Script Library Documentation imageutils</title>
+<style>
+body { font-family: sans-serif; font-size: 14pt; line-height: 1.1; }
+
+h1, h2, h3 { font-weight: bold }
+h1 { font-size: 16pt; margin-top: 4pt; margin-bottom: 4pt; }
+h2 { font-size: 14pt; margin-top: 28pt; margin-bottom: 2pt; }
+h3 { font-size: 12pt; margin-top: 18pt; margin-bottom: 2pt;  }
+
+a { color: #000077 }
+a:active { color: #770000 }
+
+tt, code { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt; color: #000077 }
+pre { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt;
+       margin: 48pt; margin-top: 2pt; margin-bottom: 10pt; padding: 6pt; background-color: #F9F9F9;
+       border-top: dashed 1pt #777777; border-bottom: dashed 1pt #777777; }
+table { border-width: 0px; border-collapse: collapse; padding: 0; margin: 8pt; margin-top: 2pt; margin-bottom: 10pt; }
+table.arglist { margin-left: 24pt; margin-right: 12pt }
+p { margin-top: 2pt; margin-bottom: 10pt; }
+
+div.indent { margin-left: 48pt; }
+
+div.toc { font-size: 90%; margin: 16px 16px 16px 16px; padding: 8px; background-color: #f7f7f7; border: #f7f7f7 solid 4px; border-radius: 8px; }
+
+td.arg { border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+td.argdesc { padding-left: 6px; border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+
+.PARAMLIST { font-weight: normal }
+.OPTIONAL { color: #888888; font-weight: normal }
+.CLASS, .STATIC, .RESTRICTED
+      { font-size: 80%; font-weight: normal; font-style: italic; margin-left: 8pt; padding-left: 4pt; border-left: dotted 1pt #007700 }
+.CLASS { color: #000099; border-left-color: #000099 }
+.STATIC { color: #009900; border-left-color: #009900 }
+.RESTRICTED { color: #990000; border-left-color: #990000 }
+
+.COMMENT1 { color: #737373 }
+.COMMENT2 { color: #737373; font-style: italic }
+.LITERAL1 { color: #ce7b00 }
+.LITERAL2 { color: #ce7b00 }
+.LITERAL3 { color: #ce7b00 }
+.LABEL { color: #000000 }
+.KEYWORD1 { color: #000099; font-weight: bold }
+.KEYWORD2 { color: #009900 }
+.KEYWORD3 { color: #0000da }
+.OPERATOR { color: #000000 }
+.INVALID { color: #b20000; font-style: italic }
+.SPECIAL1 { color: #000000; font-weight: bold }
+.SPECIAL2 { color: #000000; font-weight: bold }
+.SPECIAL3 { color: #000000; font-weight: bold }
+.SPECIAL4 { color: #000000; font-weight: bold }
+.SPECIAL5 { color: #000000; font-weight: bold }
+.SPECIAL6 { color: #000000; font-weight: bold }</style>
+</head>
+<body>
+<a name='top'><h1>imageutils</h1></a>
+<div class='toc'>
+<a href='#Supporttoolsforcreatingimagesandimageresources'>Support tools for creating images and image resources.</a><br>
+<a href='#Constants'>Constants</a><br>
+<a href='#ImageUtilscreatewidthheighthasTransparency'>ImageUtils.create(<span class='PARAMLIST'> width, height, <span class='OPTIONAL'>[hasTransparency]</span> </span>) <span class='STATIC'>static</span></a><br>
+<a href='#ImageUtilscreateForResolutiondpiwidthheighthasTransparency'>ImageUtils.createForResolution(<span class='PARAMLIST'> dpi, width, height, <span class='OPTIONAL'>[hasTransparency]</span> </span>) <span class='STATIC'>static</span></a><br>
+<a href='#ImageUtilsgetrelativeURLcacheResultquietly'>ImageUtils.get(<span class='PARAMLIST'> relativeURL, <span class='OPTIONAL'>[cacheResult]</span>, <span class='OPTIONAL'>[quietly]</span> </span>) <span class='STATIC'>static</span></a><br>
+<a href='#ImageUtilsgetIconrelativeURLunthemed'>ImageUtils.getIcon(<span class='PARAMLIST'> relativeURL, <span class='OPTIONAL'>[unthemed]</span> </span>) <span class='STATIC'>static</span></a><br>
+<a href='#ImageUtilscreateIconimagesize'>ImageUtils.createIcon(<span class='PARAMLIST'> image, <span class='OPTIONAL'>[size]</span> </span>)</a><br>
+<a href='#ImageUtilscopyimage'>ImageUtils.copy(<span class='PARAMLIST'> image </span>)</a><br>
+<a href='#ImageUtilsstitchimage1image2stitchEdge'>ImageUtils.stitch(<span class='PARAMLIST'> image1, image2, stitchEdge </span>) <span class='STATIC'>static</span></a><br>
+<a href='#ImageUtilsresizeimagewidthheightfast'>ImageUtils.resize(<span class='PARAMLIST'> image, width, height, <span class='OPTIONAL'>[fast]</span> </span>) <span class='STATIC'>static</span></a><br>
+<a href='#ImageUtilsfitimagewidthheightfast'>ImageUtils.fit(<span class='PARAMLIST'> image, width, height, <span class='OPTIONAL'>[fast]</span> </span>) <span class='STATIC'>static</span></a><br>
+<a href='#ImageUtilscropimagexywidthheight'>ImageUtils.crop(<span class='PARAMLIST'> image, x, y, width, height </span>) <span class='STATIC'>static</span></a><br>
+<a href='#ImageUtilspadimagetopleftbottomright'>ImageUtils.pad(<span class='PARAMLIST'> image, top, <span class='OPTIONAL'>[left, bottom, right]</span> </span>) <span class='STATIC'>static</span></a><br>
+<a href='#ImageUtilstintimagehsb'>ImageUtils.tint(<span class='PARAMLIST'> image, h, s, b </span>) <span class='STATIC'>static</span></a><br>
+<a href='#ImageUtilsmirrorimagehorizvert'>ImageUtils.mirror(<span class='PARAMLIST'> image, <span class='OPTIONAL'>[horiz]</span>, <span class='OPTIONAL'>[vert]</span> </span>) <span class='STATIC'>static</span></a><br>
+<a href='#ImageUtilsinvertimage'>ImageUtils.invert(<span class='PARAMLIST'> image </span>) <span class='STATIC'>static</span></a><br>
+<a href='#ImageUtilsdesaturateimage'>ImageUtils.desaturate(<span class='PARAMLIST'> image </span>) <span class='STATIC'>static</span></a><br>
+<a href='#ImageUtilsreadfile'>ImageUtils.read(<span class='PARAMLIST'> file </span>) <span class='STATIC'>static</span></a><br>
+<a href='#ImageUtilswriteimagefileformatqualityprogressivedpi'>ImageUtils.write(<span class='PARAMLIST'> image, file, <span class='OPTIONAL'>[format]</span>, <span class='OPTIONAL'>[quality]</span>, <span class='OPTIONAL'>[progressive]</span>, <span class='OPTIONAL'>[dpi]</span> </span>) <span class='STATIC'>static</span></a><br>
+<a href='#FileFormatConstants'>File Format Constants</a><br>
+<a href='#ImageUtilssaveimagedefaultFileparent'>ImageUtils.save(<span class='PARAMLIST'> image, <span class='OPTIONAL'>[defaultFile]</span>, <span class='OPTIONAL'>[parent]</span> </span>) <span class='STATIC'>static</span></a><br>
+<a href='#ImageUtilsviewimagetitlemodalparent'>ImageUtils.view(<span class='PARAMLIST'> image, <span class='OPTIONAL'>[title]</span>, <span class='OPTIONAL'>[modal]</span>, <span class='OPTIONAL'>[parent]</span> </span>) <span class='STATIC'>static</span></a><br>
+</div>
+<p>
+<h3><a name='Supporttoolsforcreatingimagesandimageresources'>Support tools for creating images and image resources.</a></h3>
+
+ This library defines an object, <tt>ImageUtils</tt>, which contains utility
+ methods for working with images. It is mostly used by resource creation
+ scripts. A resource creation script replaces a resource file with
+ a script capable of generating that resource. The script must define
+ a function, <tt>createResource()</tt> that returns the new resource.
+<p>
+ One way to use an image resource creation scripts is to break
+ a large image into smaller ones in such a way that they can be stored
+ more efficiently. This reduces the download footprint of the program.
+ A good example is an image that is mostly opaque with a small transparent
+ area. Transparent images are not stored as efficiently as non-transparent
+ ones, so it may be more efficient to split the image into two or more pieces
+ and store each in a separate file. The pieces are then combined into the
+ final image at runtime by the resource creation script.
+
+<p>
+<h2><a name='Constants'>Constants</a></h2>
+
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> ImageUtils.STITCH_HORIZONTAL </tt></td><td class='argdesc' valign='top'>indicates that images should be stitched from left to right</td></tr>
+
+<tr><td class='arg' valign='top'><tt> ImageUtils.STITCH_VERTICAL </tt></td><td class='argdesc' valign='top'>indicates that images should be stitched from top to bottom</td></tr>
+
+</table>
+
+<p>
+<h3><a name='ImageUtilscreatewidthheighthasTransparency'>ImageUtils.create(<span class='PARAMLIST'> width, height, <span class='OPTIONAL'>[hasTransparency]</span> </span>) <span class='STATIC'>static</span></a></h3>
+
+ Create an image that is <tt>width</tt> pixels by <tt>height</tt> pixels.
+ If <tt>hasTransparency</tt> is <tt>true</tt>, the image will have an alpha
+ channel (allowing transparency and translucency), otherwise the image is
+ opaque.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> width </tt></td><td class='argdesc' valign='top'>the image width, in pixels</td></tr>
+
+<tr><td class='arg' valign='top'><tt> height </tt></td><td class='argdesc' valign='top'>the image height, in pixels</td></tr>
+
+<tr><td class='arg' valign='top'><tt> hasTransparency </tt></td><td class='argdesc' valign='top'>if <tt>true</tt>, create an alpha channel for the image      (default is <tt>false</tt>)</td></tr>
+
+</table>
+<p>
+ returns a <tt>BufferedImage</tt> with the requested parameters
+
+<p>
+<h3><a name='ImageUtilscreateForResolutiondpiwidthheighthasTransparency'>ImageUtils.createForResolution(<span class='PARAMLIST'> dpi, width, height, <span class='OPTIONAL'>[hasTransparency]</span> </span>) <span class='STATIC'>static</span></a></h3>
+
+ Create an image that is <tt>width</tt> points by <tt>height</tt> points.
+ The conversion of points into pixels is determined by <tt>dpi</tt>, the
+ number of dots (pixels) per inch.
+ If <tt>hasTransparency</tt> is <tt>true</tt>, the image will have an alpha
+ channel (allowing transparency and translucency), otherwise the image is
+ opaque.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> dpi </tt></td><td class='argdesc' valign='top'>the image resolution, in dots (pixels) per inch</td></tr>
+
+<tr><td class='arg' valign='top'><tt> width </tt></td><td class='argdesc' valign='top'>the image width, in points</td></tr>
+
+<tr><td class='arg' valign='top'><tt> height </tt></td><td class='argdesc' valign='top'>the image height, in points</td></tr>
+
+<tr><td class='arg' valign='top'><tt> hasTransparency </tt></td><td class='argdesc' valign='top'>if <tt>true</tt>, create an alpha channel for the image      (default is <tt>false</tt>)</td></tr>
+
+</table>
+<p>
+ returns a <tt>BufferedImage</tt> with the requested parameters
+
+<p>
+<h3><a name='ImageUtilsgetrelativeURLcacheResultquietly'>ImageUtils.get(<span class='PARAMLIST'> relativeURL, <span class='OPTIONAL'>[cacheResult]</span>, <span class='OPTIONAL'>[quietly]</span> </span>) <span class='STATIC'>static</span></a></h3>
+
+ Obtain an image from the Strange Eons resources. If the image cannot be
+ obtained, <tt>null</tt> is returned. Typically this indicates that the
+ URL is incorrect.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> relativeURL </tt></td><td class='argdesc' valign='top'>a URL string relative to the <tt>resources</tt> folder</td></tr>
+
+<tr><td class='arg' valign='top'><tt> cacheResult </tt></td><td class='argdesc' valign='top'>if <tt>true</tt>, the image may be cached to speed future      requests (default is <tt>true</tt>)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> quietly </tt></td><td class='argdesc' valign='top'>if <tt>true</tt>, no error message is displayed if loading fails      (default is <tt>false</tt>, i.e., display a message)</td></tr>
+
+</table>
+<p>
+ returns the image resource as a <tt>BufferedImage</tt>, or <tt>null</tt>
+
+<p>
+<h3><a name='ImageUtilsgetIconrelativeURLunthemed'>ImageUtils.getIcon(<span class='PARAMLIST'> relativeURL, <span class='OPTIONAL'>[unthemed]</span> </span>) <span class='STATIC'>static</span></a></h3>
+
+ Create an <tt>Icon</tt> from an image resource, suitable for use with Swing
+ components. If the icon cannot be obtained, <tt>null</tt> is returned.
+ Typically, this indicates that the URL is incorrect. (Note that is
+ usually safe to set a component's Icon to <tt>null</tt>, as it is
+ interpreted as setting no icon.)
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> relativeURL </tt></td><td class='argdesc' valign='top'>a URL string relative to the <tt>resources</tt> folder</td></tr>
+
+<tr><td class='arg' valign='top'><tt> unthemed </tt></td><td class='argdesc' valign='top'>if <tt>true</tt>, then the current theme will not be allowed      to substitute a different image (default is <tt>false</tt>)</td></tr>
+
+</table>
+<p>
+ returns the image resource as a <tt>javax.swing.ImageIcon</tt>, or <tt>null</tt>
+
+<p>
+<h3><a name='ImageUtilscreateIconimagesize'>ImageUtils.createIcon(<span class='PARAMLIST'> image, <span class='OPTIONAL'>[size]</span> </span>)</a></h3>
+
+ Creates an icon from an existing image. The icon will be resized to fit
+ within <tt>size</tt> by <tt>size</tt> pixels.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> image </tt></td><td class='argdesc' valign='top'>the image to use in the icon</td></tr>
+
+<tr><td class='arg' valign='top'><tt> size </tt></td><td class='argdesc' valign='top'>the target size for the icon (default is 16)</td></tr>
+
+</table>
+<p>
+ returns an icon that displays the image and is the requested size
+
+<p>
+<h3><a name='ImageUtilscopyimage'>ImageUtils.copy(<span class='PARAMLIST'> image </span>)</a></h3>
+
+ Returns a new copy of <tt>image</tt>. If you are going to draw on an image
+ that you obtained from resources, it is important to work with a copy
+ or you will corrupt the shared version stored in the image cache.
+<p>
+ returns a copy of the source image
+
+<p>
+<h3><a name='ImageUtilsstitchimage1image2stitchEdge'>ImageUtils.stitch(<span class='PARAMLIST'> image1, image2, stitchEdge </span>) <span class='STATIC'>static</span></a></h3>
+
+ Returns a new image that combines two source images by "stitching" them
+ together along an edge. If <tt>stitchEdge</tt> is <tt>ImageUtils.STITCH_HORIZONTAL</tt>,
+ then the right edge of <tt>image1</tt> will be stitched to the left edge of
+ <tt>image2</tt>. If <tt>stitchEdge</tt> is <tt>ImageUtils.STITCH_VERTICAL</tt>,
+ then the bottom edge of <tt>image1</tt> will be stitched to the top edge of
+ <tt>image2</tt> If either source image has transparency, then the returned
+ image will also; otherwise it is opaque.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> image1 </tt></td><td class='argdesc' valign='top'>the first <tt>BufferedImage</tt> to be stitched</td></tr>
+
+<tr><td class='arg' valign='top'><tt> image2 </tt></td><td class='argdesc' valign='top'>the second <tt>BufferedImage</tt> to be stitched</td></tr>
+
+<tr><td class='arg' valign='top'><tt> stitchEdge </tt></td><td class='argdesc' valign='top'>a constant indicating which edges to join</td></tr>
+
+</table>
+<p>
+ returns a <tt>BufferedImage</tt> that joins the source images at their edges
+
+<p>
+<h3><a name='ImageUtilsresizeimagewidthheightfast'>ImageUtils.resize(<span class='PARAMLIST'> image, width, height, <span class='OPTIONAL'>[fast]</span> </span>) <span class='STATIC'>static</span></a></h3>
+
+ Create a copy of a <tt>BufferedImage</tt> that is resampled at a new size,
+ either smaller or larger in either dimension.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> image </tt></td><td class='argdesc' valign='top'>the image to create a resized copy of</td></tr>
+
+<tr><td class='arg' valign='top'><tt> width </tt></td><td class='argdesc' valign='top'>the width of the new image, in pixels</td></tr>
+
+<tr><td class='arg' valign='top'><tt> height </tt></td><td class='argdesc' valign='top'>the height of the new image, in pixels</td></tr>
+
+<tr><td class='arg' valign='top'><tt> fast </tt></td><td class='argdesc' valign='top'>an optional hint; if <tt>true</tt>, lower quality but faster      resampling is performed (default is <tt>false</tt>)</td></tr>
+
+</table>
+<p>
+ returns a resized copy of <tt>image</tt>
+
+<p>
+<h3><a name='ImageUtilsfitimagewidthheightfast'>ImageUtils.fit(<span class='PARAMLIST'> image, width, height, <span class='OPTIONAL'>[fast]</span> </span>) <span class='STATIC'>static</span></a></h3>
+
+ Ensures that <tt>image</tt> is as large as it can be and still fit within
+ <tt>width</tt> and <tt>height</tt> pixels, without changing the aspect
+ ratio. If the image already just fits, it is returned.
+ Otherwise a new, resized image is returned.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> image </tt></td><td class='argdesc' valign='top'>the image to fit within the space</td></tr>
+
+<tr><td class='arg' valign='top'><tt> width </tt></td><td class='argdesc' valign='top'>the maximum width of the resized image</td></tr>
+
+<tr><td class='arg' valign='top'><tt> height </tt></td><td class='argdesc' valign='top'>the maximum height of the resized image</td></tr>
+
+<tr><td class='arg' valign='top'><tt> fast </tt></td><td class='argdesc' valign='top'>if <tt>true</tt> a faster but lower quality algorithm is used      (default is <tt>false</tt>)</td></tr>
+
+</table>
+
+<p>
+<h3><a name='ImageUtilscropimagexywidthheight'>ImageUtils.crop(<span class='PARAMLIST'> image, x, y, width, height </span>) <span class='STATIC'>static</span></a></h3>
+
+ Create an image by cropping a source image. The resulting image
+ will consist of the subimage of the source image that starts at pixel
+ (<tt>x</tt>,<tt>y</tt>) in the source image and is <tt>width</tt> by
+ <tt>height</tt> pixels in size. Either <tt>width</tt> or <tt>height</tt>
+ (or both) may be less than 1, in which case the width will be set to
+ the number of pixels from the upper-left corner of the crop to the edge.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> image </tt></td><td class='argdesc' valign='top'>the source image, which is not changed</td></tr>
+
+<tr><td class='arg' valign='top'><tt> x </tt></td><td class='argdesc' valign='top'>the x-coordinate of the upper-left corner of the region to retain in the destination</td></tr>
+
+<tr><td class='arg' valign='top'><tt> y </tt></td><td class='argdesc' valign='top'>the y-coordinate of the upper-left corner of the region to retain in the destination</td></tr>
+
+<tr><td class='arg' valign='top'><tt> width </tt></td><td class='argdesc' valign='top'>the width of the region to retain in the destination</td></tr>
+
+<tr><td class='arg' valign='top'><tt> height </tt></td><td class='argdesc' valign='top'>the height of the region to retain in the destination</td></tr>
+
+</table>
+
+<p>
+<h3><a name='ImageUtilspadimagetopleftbottomright'>ImageUtils.pad(<span class='PARAMLIST'> image, top, <span class='OPTIONAL'>[left, bottom, right]</span> </span>) <span class='STATIC'>static</span></a></h3>
+
+ Returns a padded copy of the image that adds magins of the given sizes to
+ the outside of the image. The margins may be negative, in which case rows
+ or columns will be removed from the relevant edge. If only the <tt>top</tt>
+ margin size is given, then the same margin will be used on all four sides.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> image </tt></td><td class='argdesc' valign='top'>a <tt>BufferedImage</tt> to pad</td></tr>
+
+<tr><td class='arg' valign='top'><tt> top </tt></td><td class='argdesc' valign='top'>the number of pixels to add to the top edge</td></tr>
+
+<tr><td class='arg' valign='top'><tt> left </tt></td><td class='argdesc' valign='top'> the number of pixels to add to the left edge</td></tr>
+
+<tr><td class='arg' valign='top'><tt> bottom </tt></td><td class='argdesc' valign='top'>the number of pixels to add to the bottom edge</td></tr>
+
+<tr><td class='arg' valign='top'><tt> right </tt></td><td class='argdesc' valign='top'>the number of pixels to add to the right edge</td></tr>
+
+</table>
+<p>
+ returns a padded copy of <tt>image</tt>
+
+<p>
+<h3><a name='ImageUtilstintimagehsb'>ImageUtils.tint(<span class='PARAMLIST'> image, h, s, b </span>) <span class='STATIC'>static</span></a></h3>
+
+ Returns a tinted copy of an image. The value of <tt>h</tt> is a relative
+ number of degrees. The hue of each pixel in the source image will be
+ shifted by <tt>h</tt> degrees around the HSB colour wheel; a value of
+ 0 leaves the hue unchanged. The value of <tt>s</tt> is a saturation factor;
+ each pixel's saturation will be multiplied by this value. A value of 0 will
+ convert the image to greyscale. A value of 1 will leave the saturation
+ unchanged. The value of <tt>b</tt> is a brightness factor. Each pixel's
+ brightness will be multiplied by this value. A value of 0 will set each
+ pixel's brightness to 0, resulting in a black image. A value of 1 will leave
+ the brightness unchanged.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> image </tt></td><td class='argdesc' valign='top'>the image to tint</td></tr>
+
+<tr><td class='arg' valign='top'><tt> h </tt></td><td class='argdesc' valign='top'>the hue shift to apply</td></tr>
+
+<tr><td class='arg' valign='top'><tt> s </tt></td><td class='argdesc' valign='top'>the saturation factor to apply</td></tr>
+
+<tr><td class='arg' valign='top'><tt> b </tt></td><td class='argdesc' valign='top'>the brightness factor to apply</td></tr>
+
+</table>
+<p>
+ returns a tinted copy of <tt>image</tt>
+
+<p>
+<h3><a name='ImageUtilsmirrorimagehorizvert'>ImageUtils.mirror(<span class='PARAMLIST'> image, <span class='OPTIONAL'>[horiz]</span>, <span class='OPTIONAL'>[vert]</span> </span>) <span class='STATIC'>static</span></a></h3>
+
+ Returns a new <tt>BufferedImage</tt> that is a mirror image of <tt>image</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> image </tt></td><td class='argdesc' valign='top'>a <tt>BufferedImage</tt> to mirror</td></tr>
+
+<tr><td class='arg' valign='top'><tt> horiz </tt></td><td class='argdesc' valign='top'>if <tt>true</tt>, flip horizontally (default is <tt>true</tt>)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> vert </tt></td><td class='argdesc' valign='top'>if <tt>true</tt>, flip vertically (default is <tt>false</tt>)</td></tr>
+
+</table>
+<p>
+ returns a mirrored copy of <tt>image</tt>
+
+<p>
+<h3><a name='ImageUtilsinvertimage'>ImageUtils.invert(<span class='PARAMLIST'> image </span>) <span class='STATIC'>static</span></a></h3>
+
+ Returns a copy of the image with all of the pixels inverted.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> image </tt></td><td class='argdesc' valign='top'>the image to invert</td></tr>
+
+</table>
+<p>
+ returns the inverse image
+
+<p>
+<h3><a name='ImageUtilsdesaturateimage'>ImageUtils.desaturate(<span class='PARAMLIST'> image </span>) <span class='STATIC'>static</span></a></h3>
+
+ Returns a copy of the image converted to greyscale.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> image </tt></td><td class='argdesc' valign='top'>the image to desaturate</td></tr>
+
+</table>
+<p>
+ returns the desaturated image
+
+<p>
+<h3><a name='ImageUtilsreadfile'>ImageUtils.read(<span class='PARAMLIST'> file </span>) <span class='STATIC'>static</span></a></h3>
+
+ Read and return an image from a file.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> file </tt></td><td class='argdesc' valign='top'>the name of the file to read</td></tr>
+
+</table>
+<p>
+ returns the image, or throws an error if reading fails
+
+<p>
+<h3><a name='ImageUtilswriteimagefileformatqualityprogressivedpi'>ImageUtils.write(<span class='PARAMLIST'> image, file, <span class='OPTIONAL'>[format]</span>, <span class='OPTIONAL'>[quality]</span>, <span class='OPTIONAL'>[progressive]</span>, <span class='OPTIONAL'>[dpi]</span> </span>) <span class='STATIC'>static</span></a></h3>
+
+ Write an image to a file. The value of <tt>format</tt> is a string that
+ describes the desired image format. The values "png", "jpg", or "jp2" are
+ all acceptable and use one of the three standard Strange Eons image formats
+ (PNG, JPEG, and JPEG 2000). In addition, the value "gif" will create a
+ file in GIF89a format, while "bmp" will create a Windows BMP file.
+ If <tt>format</tt> is not defined, it defaults to "png".
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> image </tt></td><td class='argdesc' valign='top'>the image to write</td></tr>
+
+<tr><td class='arg' valign='top'><tt> file </tt></td><td class='argdesc' valign='top'>the file to write to; either a file name string or a <tt>File</tt> object</td></tr>
+
+<tr><td class='arg' valign='top'><tt> format </tt></td><td class='argdesc' valign='top'>a string describing the format to write the image in      (default is <tt>"png"</tt>)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> quality </tt></td><td class='argdesc' valign='top'>a value between 0 and 1 (inclusive) to control compression quality      (higher is better quality, -1 for default)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> progressive </tt></td><td class='argdesc' valign='top'>if <tt>true</tt> requests an image that can be displayed      progressively as it downloads (default is <tt>false</tt>)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> ppi </tt></td><td class='argdesc' valign='top'>if supported by the image encoder, the image's metadata will      indicate that this is the resolution of the image (in pixels per inch)</td></tr>
+
+</table>
+
+<p>
+<h2><a name='FileFormatConstants'>File Format Constants</a></h2>
+
+ Constants that can be passed as <tt>format</tt> values to
+ <tt>ImageUtils.write</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> ImageUtils.FORMAT_PNG </tt></td><td class='argdesc' valign='top'>the PNG (png) image format</td></tr>
+
+<tr><td class='arg' valign='top'><tt> ImageUtils.FORMAT_JPEG </tt></td><td class='argdesc' valign='top'>the JPEG (jpg) image format</td></tr>
+
+<tr><td class='arg' valign='top'><tt> ImageUtils.FORMAT_JPEG2000 </tt></td><td class='argdesc' valign='top'>the JPEG2000 (jp2) image format</td></tr>
+
+<tr><td class='arg' valign='top'><tt> ImageUtils.FORMAT_BMP </tt></td><td class='argdesc' valign='top'>the BMP (bmp) image format</td></tr>
+
+<tr><td class='arg' valign='top'><tt> ImageUtils.FORMAT_GIF </tt></td><td class='argdesc' valign='top'>the GIF89a (gif) image format</td></tr>
+
+</table>
+
+<p>
+<h3><a name='ImageUtilssaveimagedefaultFileparent'>ImageUtils.save(<span class='PARAMLIST'> image, <span class='OPTIONAL'>[defaultFile]</span>, <span class='OPTIONAL'>[parent]</span> </span>) <span class='STATIC'>static</span></a></h3>
+
+<p>
+ Prompts the user to choose a file, then saves <tt>image</tt> to the selected
+ file. If no <tt>defaultFile</tt> is specified, then a default location
+ is selected based on the last saved file, or if no image file has been saved
+ previously, a platform-specific default location is used. The value of
+ <tt>defaultFile</tt> may either be a <tt>java.io.File</tt> object, or else
+ it can be another object whose string representation is a valid path on this
+ platform.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> image </tt></td><td class='argdesc' valign='top'>the image to be written</td></tr>
+
+<tr><td class='arg' valign='top'><tt> defaultFile </tt></td><td class='argdesc' valign='top'>an optional default location to save to</td></tr>
+
+<tr><td class='arg' valign='top'><tt> parent </tt></td><td class='argdesc' valign='top'>an optional parent for the file chooser; defaults to the main      application window</td></tr>
+
+</table>
+<p>
+ returns the <tt>java.io.File</tt> that was saved, or <tt>null</tt> if the      user cancelled the save operation
+
+<p>
+<h3><a name='ImageUtilsviewimagetitlemodalparent'>ImageUtils.view(<span class='PARAMLIST'> image, <span class='OPTIONAL'>[title]</span>, <span class='OPTIONAL'>[modal]</span>, <span class='OPTIONAL'>[parent]</span> </span>) <span class='STATIC'>static</span></a></h3>
+
+ Display an image in an image viewer window.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> image </tt></td><td class='argdesc' valign='top'>a <tt>BufferedImage</tt> to display</td></tr>
+
+<tr><td class='arg' valign='top'><tt> title </tt></td><td class='argdesc' valign='top'>an optional title for the view window</td></tr>
+
+<tr><td class='arg' valign='top'><tt> modal </tt></td><td class='argdesc' valign='top'>if <tt>true</tt>, the viewer should be modal          (blocks the application until closed)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> parent </tt></td><td class='argdesc' valign='top'>an optional parent for the file chooser; defaults to the main      application window</td></tr>
+
+</table>
+
+<p style='margin-top: 20pt;'><a href='#top'>Contents</a></body>
+</html>

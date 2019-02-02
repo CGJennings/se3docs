@@ -1,0 +1,499 @@
+<!DOCTYPE html><html>
+<head>
+<title>Script Library Documentation uilayout</title>
+<style>
+body { font-family: sans-serif; font-size: 14pt; line-height: 1.1; }
+
+h1, h2, h3 { font-weight: bold }
+h1 { font-size: 16pt; margin-top: 4pt; margin-bottom: 4pt; }
+h2 { font-size: 14pt; margin-top: 28pt; margin-bottom: 2pt; }
+h3 { font-size: 12pt; margin-top: 18pt; margin-bottom: 2pt;  }
+
+a { color: #000077 }
+a:active { color: #770000 }
+
+tt, code { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt; color: #000077 }
+pre { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt;
+       margin: 48pt; margin-top: 2pt; margin-bottom: 10pt; padding: 6pt; background-color: #F9F9F9;
+       border-top: dashed 1pt #777777; border-bottom: dashed 1pt #777777; }
+table { border-width: 0px; border-collapse: collapse; padding: 0; margin: 8pt; margin-top: 2pt; margin-bottom: 10pt; }
+table.arglist { margin-left: 24pt; margin-right: 12pt }
+p { margin-top: 2pt; margin-bottom: 10pt; }
+
+div.indent { margin-left: 48pt; }
+
+div.toc { font-size: 90%; margin: 16px 16px 16px 16px; padding: 8px; background-color: #f7f7f7; border: #f7f7f7 solid 4px; border-radius: 8px; }
+
+td.arg { border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+td.argdesc { padding-left: 6px; border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+
+.PARAMLIST { font-weight: normal }
+.OPTIONAL { color: #888888; font-weight: normal }
+.CLASS, .STATIC, .RESTRICTED
+      { font-size: 80%; font-weight: normal; font-style: italic; margin-left: 8pt; padding-left: 4pt; border-left: dotted 1pt #007700 }
+.CLASS { color: #000099; border-left-color: #000099 }
+.STATIC { color: #009900; border-left-color: #009900 }
+.RESTRICTED { color: #990000; border-left-color: #990000 }
+
+.COMMENT1 { color: #737373 }
+.COMMENT2 { color: #737373; font-style: italic }
+.LITERAL1 { color: #ce7b00 }
+.LITERAL2 { color: #ce7b00 }
+.LITERAL3 { color: #ce7b00 }
+.LABEL { color: #000000 }
+.KEYWORD1 { color: #000099; font-weight: bold }
+.KEYWORD2 { color: #009900 }
+.KEYWORD3 { color: #0000da }
+.OPERATOR { color: #000000 }
+.INVALID { color: #b20000; font-style: italic }
+.SPECIAL1 { color: #000000; font-weight: bold }
+.SPECIAL2 { color: #000000; font-weight: bold }
+.SPECIAL3 { color: #000000; font-weight: bold }
+.SPECIAL4 { color: #000000; font-weight: bold }
+.SPECIAL5 { color: #000000; font-weight: bold }
+.SPECIAL6 { color: #000000; font-weight: bold }</style>
+</head>
+<body>
+<a name='top'><h1>uilayout</h1></a>
+<div class='toc'>
+<a href='#Classesthatassistwithlayingoutauserinterface'>Classes that assist with laying out a user interface.</a><br>
+<a href='#AbstractContainercontrols'>AbstractContainer(<span class='PARAMLIST'> <span class='OPTIONAL'>[controls...]</span> </span>)</a><br>
+<a href='#AbstractContainerrealized'>AbstractContainer.realized <span class='RESTRICTED'>read-only</span></a><br>
+<a href='#AbstractContainertitle'>AbstractContainer.title</a><br>
+<a href='#AbstractContainereditorTabWrapping'>AbstractContainer.editorTabWrapping</a><br>
+<a href='#AbstractContainereditorTabScrolling'>AbstractContainer.editorTabScrolling</a><br>
+<a href='#AbstractContainerprototyperealizeabstract'>AbstractContainer.prototype.realize(<span class='PARAMLIST'></span>) <span class='OPTIONAL'>[abstract]</span></a><br>
+<a href='#AbstractContainerprototypeaddcontrol'>AbstractContainer.prototype.add(<span class='PARAMLIST'> <span class='OPTIONAL'>[control...]</span> </span>)</a><br>
+<a href='#AbstractContainerprototypeplacecontrolhint'>AbstractContainer.prototype.place(<span class='PARAMLIST'> <span class='OPTIONAL'>[control, hint...]</span> </span>)</a><br>
+<a href='#AbstractContainerprototypegetControlindex'>AbstractContainer.prototype.getControl(<span class='PARAMLIST'> index </span>)</a><br>
+<a href='#AbstractContainerprototypegetHintindex'>AbstractContainer.prototype.getHint(<span class='PARAMLIST'> index </span>)</a><br>
+<a href='#AbstractContainerprototypegetControlCount'>AbstractContainer.prototype.getControlCount(<span class='PARAMLIST'></span>)</a><br>
+<a href='#AbstractContainerprototypeaddToEditoreditortitleheartbeatListenerfieldPopulationListenertabIndex'>AbstractContainer.prototype.addToEditor(<span class='PARAMLIST'> editor, <span class='OPTIONAL'>[title]</span>, <span class='OPTIONAL'>[heartbeatListener]</span>, <span class='OPTIONAL'>[fieldPopulationListener]</span>, <span class='OPTIONAL'>[tabIndex]</span> </span>)</a><br>
+<a href='#AbstractContainerfindEditorTabPaneeditor'>AbstractContainer.findEditorTabPane(<span class='PARAMLIST'> editor </span>) <span class='STATIC'>static</span></a><br>
+<a href='#AbstractContainerprototypecreateDialogtitleokTextcancelTexticonmodal'>AbstractContainer.prototype.createDialog(<span class='PARAMLIST'> <span class='OPTIONAL'>[title]</span>, <span class='OPTIONAL'>[okText]</span>, <span class='OPTIONAL'>[cancelText]</span>, <span class='OPTIONAL'>[icon]</span>, <span class='OPTIONAL'>[modal]</span> </span>) {</a><br>
+<a href='#AbstractContainerprototypetest'>AbstractContainer.prototype.test(<span class='PARAMLIST'></span>)</a><br>
+<a href='#RowcontrolAbstractContainer'>Row(<span class='PARAMLIST'> <span class='OPTIONAL'>[control...]</span> </span>) : AbstractContainer</a><br>
+<a href='#RowsetAlignmentalignment'>Row.setAlignment(<span class='PARAMLIST'> alignment </span>)</a><br>
+<a href='#RowgetAlignment'>Row.getAlignment(<span class='PARAMLIST'></span>)</a><br>
+<a href='#StackcontrolAbstractContainer'>Stack(<span class='PARAMLIST'> <span class='OPTIONAL'>[control...]</span> </span>) : AbstractContainer</a><br>
+<a href='#FixedGridcolumnscontrolsAbstractContainer'>FixedGrid(<span class='PARAMLIST'> columns, <span class='OPTIONAL'>[controls...]</span> </span>) : AbstractContainer</a><br>
+<a href='#FixedGridgetColumns'>FixedGrid.getColumns(<span class='PARAMLIST'></span>)</a><br>
+<a href='#FixedGridsetColumns'>FixedGrid.setColumns(<span class='PARAMLIST'></span>)</a><br>
+<a href='#GridconstraintscolConstraintsrowConstraintsAbstractContainer'>Grid(<span class='PARAMLIST'> <span class='OPTIONAL'>[constraints]</span>, <span class='OPTIONAL'>[colConstraints]</span>, <span class='OPTIONAL'>[rowConstraints]</span> </span>) : AbstractContainer</a><br>
+<a href='#TypeGridhgapvgapAbstractContainer'>TypeGrid(<span class='PARAMLIST'> <span class='OPTIONAL'>[hgap]</span>, <span class='OPTIONAL'>[vgap]</span> </span>) : AbstractContainer</a><br>
+<a href='#TabPanecontrolAbstractContainer'>TabPane(<span class='PARAMLIST'> <span class='OPTIONAL'>[control...]</span> </span>) : AbstractContainer</a><br>
+<a href='#TabPanesmallTabs'>TabPane.smallTabs</a><br>
+<a href='#SplitterverticalSplitleftrightAbstractContainer'>Splitter(<span class='PARAMLIST'> <span class='OPTIONAL'>[verticalSplit]</span>, <span class='OPTIONAL'>[left]</span>, <span class='OPTIONAL'>[right]</span> </span>) : AbstractContainer</a><br>
+</div>
+<p>
+<h3><a name='Classesthatassistwithlayingoutauserinterface'>Classes that assist with laying out a user interface.</a></h3>
+
+ User interfaces created using these
+ classes can be displayed as dialogs, added as tabs to a game component
+ editor, or realized into generic containers. Containers can be
+ nested to create complex interface layouts.
+<p>
+ See the plug-in authoring kit for examples that use this library.
+
+<p>
+<h3><a name='AbstractContainercontrols'>AbstractContainer(<span class='PARAMLIST'> <span class='OPTIONAL'>[controls...]</span> </span>)</a></h3>
+
+ An <tt>AbstractContainer</tt> is a base class for other classes in this
+ library. An <tt>AbstractContainer</tt> manages a list of objects and
+ can <i>realize</i> these objects into a grouping of user interface controls.
+<p>
+ When a container is realized, the control objects that have been added to
+ it will be converted into user interface widgets and laid out in a panel
+ or other user interface object.
+ A given container can only be realized once; attempting to realize the
+ container again will throw an exception.
+<p>
+ Any kind of object may be added to an <tt>AbstractContainer</tt>.
+ Interface components are added unchanged, and other objects are converted
+ into an interface component when the container is realized.
+ The standard conversions are as follows:
+ <ul>
+ <li> <tt>AbstractContainer</tt>s are converted into a control or group of
+      controls by calling the container's <tt>realize</tt> function
+      (in fact, this works for any object with a <tt>realize</tt> function)
+ <li> icons and images are converted into icon labels
+ <li> other kinds of objects are first converted to a string by calling their
+      <tt>toString</tt> function, and then that string is added as a label control
+ </ul>
+<p>
+ Some kinds of containers can have controls added with "hints" that affect
+ how the control is laid out. Controls are added with hints using the
+ <tt>place</tt> method. Adding controls using the <tt>add</tt> method will
+ add it with a default hint (<tt>null</tt>).
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> controls </tt></td><td class='argdesc' valign='top'>an optional list of controls that will be added to the container</td></tr>
+
+</table>
+
+<p>
+<h3><a name='AbstractContainerrealized'>AbstractContainer.realized <span class='RESTRICTED'>read-only</span></a></h3>
+
+ This read-only property is <tt>true</tt> if this container was previously
+ realized, which means that realizing it again will throw an exception.
+<p>
+ <tt>true</tt> is this container has been realized
+
+<p>
+<h3><a name='AbstractContainertitle'>AbstractContainer.title</a></h3>
+
+ This property defines a title for the container. If a title is set,
+ the realized UI panel will be placed in a border titled using this text.
+ Some types of container may ignore this setting.
+<p>
+ a title string to use for the container
+
+<p>
+<h3><a name='AbstractContainereditorTabWrapping'>AbstractContainer.editorTabWrapping</a></h3>
+
+ This boolean property affects how a container will be added to a
+ component editor when calling <tt>addToEditor</tt>. If <tt>true</tt>
+ (the default), then the container will be nested inside of a
+ panel. The panel will be laid out with <tt>BorderLayout</tt> and the
+ container will be placed in the <tt>NORTH</tt> position. This produces
+ a more consistent layout by preventing the container from expanding to
+ cover the entire extent of the tab.
+
+<p>
+<h3><a name='AbstractContainereditorTabScrolling'>AbstractContainer.editorTabScrolling</a></h3>
+
+ This boolean property affects how a container will be added to a
+ component editor when calling <tt>addToEditor</tt>. If <tt>true</tt>,
+ then the container will be wrapped in a scroll pane that enables vertical
+ scrolling. If the editor is not tall enough to display all of the
+ controls in a tab, a scroll bar will automatically appear to allow the
+ user to scroll to unreachable controls. If <tt>false</tt> (the default),
+ then the controls will be clipped to the bottom of their tab.
+
+<p>
+<h3><a name='AbstractContainerprototyperealizeabstract'>AbstractContainer.prototype.realize(<span class='PARAMLIST'></span>) <span class='OPTIONAL'>[abstract]</span></a></h3>
+
+ Convert this container into a user interface component that groups together
+ the controls that have been added to it. (Typically the returned object
+ is a <tt>swing.JPanel</tt>, but this is not required.)
+<p>
+ This method is not defined in <tt>AbstractContainer</tt> and will
+ throw an exception if called. Sublasses must override this method.
+
+<p>
+<h3><a name='AbstractContainerprototypeaddcontrol'>AbstractContainer.prototype.add(<span class='PARAMLIST'> <span class='OPTIONAL'>[control...]</span> </span>)</a></h3>
+
+ Adds zero or more control objects to this container. The added objects
+ will all be given a default hint value that allows this container
+ to lay the control out as it sees fit.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> control&nbsp;... </tt></td><td class='argdesc' valign='top'>controls to be added with the component's default                     placement rules</td></tr>
+
+</table>
+<p>
+ returns this container
+
+<p>
+<h3><a name='AbstractContainerprototypeplacecontrolhint'>AbstractContainer.prototype.place(<span class='PARAMLIST'> <span class='OPTIONAL'>[control, hint...]</span> </span>)</a></h3>
+
+ Adds zero or more control objects to this container, using hints to
+ control the layout. Not all <tt>AbstractContainer</tt>s use hints.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> control, hint&nbsp;... </tt></td><td class='argdesc' valign='top'>pairs of controls to be added and their associated                           placement hints</td></tr>
+
+</table>
+<p>
+ returns this container
+
+<p>
+<h3><a name='AbstractContainerprototypegetControlindex'>AbstractContainer.prototype.getControl(<span class='PARAMLIST'> index </span>)</a></h3>
+
+ Returns the control at position <tt>index</tt> in the list of controls
+ maintained by this container.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> index </tt></td><td class='argdesc' valign='top'>the index of the control</td></tr>
+
+</table>
+<p>
+ returns the requested control or throws an error if <tt>index</tt> is invalid
+
+<p>
+<h3><a name='AbstractContainerprototypegetHintindex'>AbstractContainer.prototype.getHint(<span class='PARAMLIST'> index </span>)</a></h3>
+
+ Returns the hint for the control at position <tt>index</tt> in the list of controls
+ maintained by this container.
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> index </tt></td><td class='argdesc' valign='top'>the index of the control</td></tr>
+
+</table>
+<p>
+ returns the requested control hint or throws an error if <tt>index</tt> is invalid
+
+<p>
+<h3><a name='AbstractContainerprototypegetControlCount'>AbstractContainer.prototype.getControlCount(<span class='PARAMLIST'></span>)</a></h3>
+
+ Returns the number of controls in this container.
+<p>
+ returns the number of added controls
+
+<p>
+<h3><a name='AbstractContainerprototypeaddToEditoreditortitleheartbeatListenerfieldPopulationListenertabIndex'>AbstractContainer.prototype.addToEditor(<span class='PARAMLIST'> editor, <span class='OPTIONAL'>[title]</span>, <span class='OPTIONAL'>[heartbeatListener]</span>, <span class='OPTIONAL'>[fieldPopulationListener]</span>, <span class='OPTIONAL'>[tabIndex]</span> </span>)</a></h3>
+
+ Realizes this container as a user interface control and adds it
+ to a component editor as a new tab.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> editor </tt></td><td class='argdesc' valign='top'>the <tt>StrangeEonsEditor</tt> to add this to</td></tr>
+
+<tr><td class='arg' valign='top'><tt> title </tt></td><td class='argdesc' valign='top'>an optional title for the tab that will be added</td></tr>
+
+<tr><td class='arg' valign='top'><tt> heartbeatListener </tt></td><td class='argdesc' valign='top'> an optional function that is called every update heartbeat</td></tr>
+
+<tr><td class='arg' valign='top'><tt> fieldPopulationListener </tt></td><td class='argdesc' valign='top'>an optional function that is called when the controls should be populated with data from the component</td></tr>
+
+<tr><td class='arg' valign='top'><tt> tabIndex </tt></td><td class='argdesc' valign='top'>an optional index at which to insert the stack in the list of tabs</td></tr>
+
+</table>
+<p>
+ returns the user interface element that contains the converted stack controls
+
+<p>
+<h3><a name='AbstractContainerfindEditorTabPaneeditor'>AbstractContainer.findEditorTabPane(<span class='PARAMLIST'> editor </span>) <span class='STATIC'>static</span></a></h3>
+
+ Returns the <tt>JTabbedPane</tt> instance that houses the primary editing
+ controls for <tt>editor</tt>. Returns <tt>null</tt> if an appropriate
+ tab pane cannot be found.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> editor </tt></td><td class='argdesc' valign='top'>the <tt>StrangeEonsEditor</tt> to search for a tab pane</td></tr>
+
+</table>
+
+<p>
+<h3><a name='AbstractContainerprototypecreateDialogtitleokTextcancelTexticonmodal'>AbstractContainer.prototype.createDialog(<span class='PARAMLIST'> <span class='OPTIONAL'>[title]</span>, <span class='OPTIONAL'>[okText]</span>, <span class='OPTIONAL'>[cancelText]</span>, <span class='OPTIONAL'>[icon]</span>, <span class='OPTIONAL'>[modal]</span> </span>) {</a></h3>
+
+ Realizes this container and places the resulting component in a dialog box.
+ The returned dialog box can be displayed by calling its <tt>showDialog()</tt>
+ method. In addition to the full suite of methods provided by <tt>swing.JDialog</tt>,
+ the returned dialog box offers the following methods:
+<p>
+ <div class='indent'>
+ <b>int getCloseButton()</b><br>
+ Returns the button pressed by the user to close the dialog:<br>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt>      -1 </tt></td><td class='argdesc' valign='top'>dialog still open (possible if modeless), or user closed window</td></tr>
+
+<tr><td class='arg' valign='top'><tt>       &nbsp;0 </tt></td><td class='argdesc' valign='top'>user pressed Cancel button</td></tr>
+
+<tr><td class='arg' valign='top'><tt>       &nbsp;1 </tt></td><td class='argdesc' valign='top'>user pressed OK button</td></tr>
+
+</table>
+<p>
+ <b>JButton getOKButton()</b><br>
+ Returns the dialog box's OK button (or <tt>null</tt> if it doesn't have one).
+<p>
+ <b>JButton getCancelButton()</b><br>
+ Returns the dialog box's Cancel button (or <tt>null</tt> if it doesn't have one).
+<p>
+ <b>int showDialog()</b><br>
+ Displays the dialog. If the dialog is modeless, the method returns
+ immediately. If it is modal, the script stops until the user closes
+ the dialog, and the returned value indicates the button used to close
+ the dialog (see the description of <tt>getCloseButton()</tt>.
+<p>
+ <b>Component getContent()</b><br>
+ Return the component that was realized by the container when the dialog
+ was created.
+ </div>
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> title </tt></td><td class='argdesc' valign='top'>an optional title for the dialog window</td></tr>
+
+<tr><td class='arg' valign='top'><tt> okText </tt></td><td class='argdesc' valign='top'>optional text to use for the OK button; <tt>null</tt> for default text, "" to hide button</td></tr>
+
+<tr><td class='arg' valign='top'><tt> cancelText </tt></td><td class='argdesc' valign='top'>optional text to use for the Cancel button; <tt>null</tt> for default text, "" to hide button</td></tr>
+
+<tr><td class='arg' valign='top'><tt> icon </tt></td><td class='argdesc' valign='top'>an optional icon that will be placed next to the content (<tt>null</tt> for no icon)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> modal </tt></td><td class='argdesc' valign='top'>optional flag; if <tt>true</tt>, the script stops running until the dialog is closed</td></tr>
+
+</table>
+<p>
+ returns the new dialog box
+
+<p>
+<h3><a name='AbstractContainerprototypetest'>AbstractContainer.prototype.test(<span class='PARAMLIST'></span>)</a></h3>
+
+ Tests the layout of an <tt>AbstractContainer</tt> by realizing it and
+ displaying the result in a simple dialog.
+
+<p>
+<h3><a name='RowcontrolAbstractContainer'>Row(<span class='PARAMLIST'> <span class='OPTIONAL'>[control...]</span> </span>) : AbstractContainer</a></h3>
+
+<p>
+ Creates a new <tt>Row</tt> container, which organizes controls into a
+ horizontal row. Controls in this container will accept a non-negative
+ numeric hint that adjusts the size of the gap between the hinted control
+ and the previous control. The default hints will provide a gap of 0 for the
+ first control and 1 for subsequent controls. Each unit of gap inserts
+ a small indentation.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> control </tt></td><td class='argdesc' valign='top'>a list of zero or more controls to be added to the new <tt>Row</tt></td></tr>
+
+</table>
+
+<p>
+<h3><a name='RowsetAlignmentalignment'>Row.setAlignment(<span class='PARAMLIST'> alignment </span>)</a></h3>
+
+ Set the alignment of the row within the parent container;
+ left-justified if -1, centered if 0, right-justified if 1.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> alignment </tt></td><td class='argdesc' valign='top'>the alignment value to set</td></tr>
+
+</table>
+
+<p>
+<h3><a name='RowgetAlignment'>Row.getAlignment(<span class='PARAMLIST'></span>)</a></h3>
+
+ Returns the alignment setting of the row.
+
+<p>
+<h3><a name='StackcontrolAbstractContainer'>Stack(<span class='PARAMLIST'> <span class='OPTIONAL'>[control...]</span> </span>) : AbstractContainer</a></h3>
+
+ Creates a new <tt>Stack</tt> object, which organizes controls into a vertical
+ stack. This container does not use hints.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> control </tt></td><td class='argdesc' valign='top'>a list of zero or more controls to be added to the new <tt>Stack</tt></td></tr>
+
+</table>
+
+<p>
+<h3><a name='FixedGridcolumnscontrolsAbstractContainer'>FixedGrid(<span class='PARAMLIST'> columns, <span class='OPTIONAL'>[controls...]</span> </span>) : AbstractContainer</a></h3>
+
+ Creates a new <tt>FixedGrid</tt> object, which organizes controls into a simple
+ grid. All cells in a grid column have the same width, and all cells in a grid
+ row have the same height. This container recognizes a single hint, the string
+ <tt>"wrap"</tt>. A component with this hint will end the current row of controls
+ and start a new row with the next control added.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> columns </tt></td><td class='argdesc' valign='top'>the number of column grids</td></tr>
+
+<tr><td class='arg' valign='top'><tt> control </tt></td><td class='argdesc' valign='top'>a list of zero or more controls to be added to the new <tt>Stack</tt></td></tr>
+
+</table>
+
+<p>
+<h3><a name='FixedGridgetColumns'>FixedGrid.getColumns(<span class='PARAMLIST'></span>)</a></h3>
+
+ Returns the number of columns in this grid.
+
+<p>
+<h3><a name='FixedGridsetColumns'>FixedGrid.setColumns(<span class='PARAMLIST'></span>)</a></h3>
+
+ Sets the number of columns to use when realizing the container.
+
+<p>
+<h2><a name='GridconstraintscolConstraintsrowConstraintsAbstractContainer'>Grid(<span class='PARAMLIST'> <span class='OPTIONAL'>[constraints]</span>, <span class='OPTIONAL'>[colConstraints]</span>, <span class='OPTIONAL'>[rowConstraints]</span> </span>) : AbstractContainer</a></h2>
+
+ Creates a new <tt>Grid</tt> object, which organizes controls using a highly
+ flexible grid. The layout is controlled using strings that describe the
+ desired layout options.
+ <a href="http://www.migcalendar.com/miglayout/cheatsheet.html">See this
+ summary of the the hint string syntax for details.</a>
+<p>
+ <b>Example:</b>
+<pre><span class='PLAIN'> </span><span class='KEYWORD1'>var</span><span class='PLAIN'> grid = </span><span class='KEYWORD1'>new</span><span class='PLAIN'> Grid();</span>
+<span class='PLAIN'> grid.place(</span>
+<span class='PLAIN'>     </span><span class='LITERAL1'>"Name"</span><span class='PLAIN'>, </span><span class='LITERAL1'>""</span><span class='PLAIN'>,</span>
+<span class='PLAIN'>     textField(), </span><span class='LITERAL1'>"wrap, span, grow"</span><span class='PLAIN'>,</span>
+<span class='PLAIN'>     </span><span class='LITERAL1'>"Ability"</span><span class='PLAIN'>, </span><span class='LITERAL1'>""</span><span class='PLAIN'>,</span>
+<span class='PLAIN'>     textField( </span><span class='LITERAL1'>""</span><span class='PLAIN'>, 15 ), </span><span class='LITERAL1'>"grow"</span><span class='PLAIN'>,</span>
+<span class='PLAIN'>     </span><span class='LITERAL1'>"Modifier"</span><span class='PLAIN'>, </span><span class='LITERAL1'>""</span><span class='PLAIN'>,</span>
+<span class='PLAIN'>     textField( </span><span class='LITERAL1'>""</span><span class='PLAIN'>, 10 ), </span><span class='LITERAL1'>"grow"</span>
+<span class='PLAIN'> );</span>
+<span class='PLAIN'> grid.createDialog().showDialog();</span></pre><p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt>  layoutConstraints </tt></td><td class='argdesc' valign='top'>optional global constraints on the layout</td></tr>
+
+<tr><td class='arg' valign='top'><tt>  columnConstraints </tt></td><td class='argdesc' valign='top'>optional constraints on the grid columns</td></tr>
+
+<tr><td class='arg' valign='top'><tt>  rowConstraints </tt></td><td class='argdesc' valign='top'>optional constraints on the grid rows</td></tr>
+
+</table>
+<p>
+  returns a new <tt>Grid</tt> containter
+
+<p>
+<h2><a name='TypeGridhgapvgapAbstractContainer'>TypeGrid(<span class='PARAMLIST'> <span class='OPTIONAL'>[hgap]</span>, <span class='OPTIONAL'>[vgap]</span> </span>) : AbstractContainer</a></h2>
+
+ Creates a new <tt>TypeGrid</tt> object, which organizes controls similarly
+ to a typewritten page. A <tt>TypeGrid</tt> is easier to use, but less
+ flexible than, a <tt>Grid</tt> container.
+ The layout is controlled using strings that describe the
+ desired layout options. The following constraint strings are available:
+<p>
+ <table border=0>
+ <tr><td>br</td><td>Insert a line break before this control</td></tr>
+ <tr><td>p</td><td>Insert a paragraph break before this control</td></tr>
+ <tr><td>tab</td><td>Align control to a tab stop</td></tr>
+ <tr><td>hfill</td><td>Cause control to fill the available horizontal space</td></tr>
+ <tr><td>vfill</td><td>Cause control to fill the available vertical space (may be used once per container)</td></tr>
+ <tr><td>left</td><td>Align subsequent controls to the left edge of the container (this is the default)</td></tr>
+ <tr><td>right</td><td>Align subsequent controls to the right edge of the container</td></tr>
+ <tr><td>center</td><td>Center subsequent controls horizontally</td></tr>
+ <tr><td>vtop</td><td>Align controls to the top of the container (this is the default)</td></tr>
+ <tr><td>vcenter</td><td>Align controls to the vertical center of the container</td></tr>
+ </table>
+<p>
+ <b>Example:</b>
+<pre><span class='PLAIN'> </span><span class='KEYWORD1'>var</span><span class='PLAIN'> typeGrid = </span><span class='KEYWORD1'>new</span><span class='PLAIN'> TypeGrid();</span>
+<span class='PLAIN'> typeGrid.place(</span>
+<span class='PLAIN'>     </span><span class='LITERAL1'>"&lt;html&gt;&lt;b&gt;&lt;u&gt;Registration"</span><span class='PLAIN'>, </span><span class='LITERAL1'>"center"</span><span class='PLAIN'>,</span>
+<span class='PLAIN'>     </span><span class='LITERAL1'>"Name"</span><span class='PLAIN'>, </span><span class='LITERAL1'>"p left"</span><span class='PLAIN'>,</span>
+<span class='PLAIN'>     textField( </span><span class='LITERAL1'>""</span><span class='PLAIN'>, 30 ), </span><span class='LITERAL1'>"tab hfill"</span><span class='PLAIN'>,</span>
+<span class='PLAIN'>     </span><span class='LITERAL1'>"Age"</span><span class='PLAIN'>, </span><span class='LITERAL1'>"br"</span><span class='PLAIN'>,</span>
+<span class='PLAIN'>     textField( </span><span class='LITERAL1'>""</span><span class='PLAIN'>, 3 ), </span><span class='LITERAL1'>"tab"</span><span class='PLAIN'>,</span>
+<span class='PLAIN'>     </span><span class='LITERAL1'>"Gender"</span><span class='PLAIN'>, </span><span class='LITERAL1'>"br"</span><span class='PLAIN'>,</span>
+<span class='PLAIN'>     comboBox( [</span><span class='LITERAL1'>"Male"</span><span class='PLAIN'>,</span><span class='LITERAL1'>"Female"</span><span class='PLAIN'>,</span><span class='LITERAL1'>"Other"</span><span class='PLAIN'>] ), </span><span class='LITERAL1'>"tab"</span>
+<span class='PLAIN'> );</span>
+<span class='PLAIN'> typeGrid.createDialog( </span><span class='LITERAL1'>"Demo"</span><span class='PLAIN'>, </span><span class='LITERAL1'>"Register"</span><span class='PLAIN'>, </span><span class='KEYWORD1'>null</span><span class='PLAIN'>, </span><span class='KEYWORD1'>null</span><span class='PLAIN'> ).showDialog();</span></pre><p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt>  layoutConstraints </tt></td><td class='argdesc' valign='top'>optional global constraints on the layout</td></tr>
+
+<tr><td class='arg' valign='top'><tt>  columnConstraints </tt></td><td class='argdesc' valign='top'>optional constraints on the grid columns</td></tr>
+
+<tr><td class='arg' valign='top'><tt>  rowConstraints </tt></td><td class='argdesc' valign='top'>optional constraints on the grid rows</td></tr>
+
+</table>
+<p>
+  returns a new <tt>TypeGrid</tt> containter
+
+<p>
+<h3><a name='TabPanecontrolAbstractContainer'>TabPane(<span class='PARAMLIST'> <span class='OPTIONAL'>[control...]</span> </span>) : AbstractContainer</a></h3>
+
+ Creates a new <tt>TabPane</tt> object, which organizes controls into a set of
+ tabs with mutually exclusive visibility. Each control added will be shown on a
+ separate tab. For this reason, the added controls are usually other containers.
+ The hint supplied for each added control will be used as the label for the tab.
+ If no hint is given, a series of dummy names ("Tab 1", "Tab 2", etc.), will be used.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> control </tt></td><td class='argdesc' valign='top'>a list of zero or more controls to be added to the new <tt>TabPane</tt></td></tr>
+
+</table>
+
+<p>
+<h3><a name='TabPanesmallTabs'>TabPane.smallTabs</a></h3>
+
+ If set to <tt>true</tt>, then the tabbed pane will feature smaller tabs.
+
+<p>
+<h2><a name='SplitterverticalSplitleftrightAbstractContainer'>Splitter(<span class='PARAMLIST'> <span class='OPTIONAL'>[verticalSplit]</span>, <span class='OPTIONAL'>[left]</span>, <span class='OPTIONAL'>[right]</span> </span>) : AbstractContainer</a></h2>
+
+ Creates a new <tt>Splitter</tt> object, which creates a panel that separates
+ two controls by a splitter bar that can be dragged to change the relative
+ space that they are allotted.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> verticalSplit </tt></td><td class='argdesc' valign='top'>if <tt>true</tt>, the splitter divides the space into two     columns; otherwise it divides the space into two rows</td></tr>
+
+<tr><td class='arg' valign='top'><tt> left </tt></td><td class='argdesc' valign='top'>the first component</td></tr>
+
+<tr><td class='arg' valign='top'><tt> right </tt></td><td class='argdesc' valign='top'>the second component</td></tr>
+
+</table>
+<p>
+  returns a new <tt>Splitter</tt> container
+
+<p style='margin-top: 20pt;'><a href='#top'>Contents</a></body>
+</html>

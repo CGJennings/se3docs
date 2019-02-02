@@ -1,0 +1,143 @@
+<!DOCTYPE html><html>
+<head>
+<title>Script Library Documentation fontutils</title>
+<style>
+body { font-family: sans-serif; font-size: 14pt; line-height: 1.1; }
+
+h1, h2, h3 { font-weight: bold }
+h1 { font-size: 16pt; margin-top: 4pt; margin-bottom: 4pt; }
+h2 { font-size: 14pt; margin-top: 28pt; margin-bottom: 2pt; }
+h3 { font-size: 12pt; margin-top: 18pt; margin-bottom: 2pt;  }
+
+a { color: #000077 }
+a:active { color: #770000 }
+
+tt, code { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt; color: #000077 }
+pre { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt;
+       margin: 48pt; margin-top: 2pt; margin-bottom: 10pt; padding: 6pt; background-color: #F9F9F9;
+       border-top: dashed 1pt #777777; border-bottom: dashed 1pt #777777; }
+table { border-width: 0px; border-collapse: collapse; padding: 0; margin: 8pt; margin-top: 2pt; margin-bottom: 10pt; }
+table.arglist { margin-left: 24pt; margin-right: 12pt }
+p { margin-top: 2pt; margin-bottom: 10pt; }
+
+div.indent { margin-left: 48pt; }
+
+div.toc { font-size: 90%; margin: 16px 16px 16px 16px; padding: 8px; background-color: #f7f7f7; border: #f7f7f7 solid 4px; border-radius: 8px; }
+
+td.arg { border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+td.argdesc { padding-left: 6px; border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+
+.PARAMLIST { font-weight: normal }
+.OPTIONAL { color: #888888; font-weight: normal }
+.CLASS, .STATIC, .RESTRICTED
+      { font-size: 80%; font-weight: normal; font-style: italic; margin-left: 8pt; padding-left: 4pt; border-left: dotted 1pt #007700 }
+.CLASS { color: #000099; border-left-color: #000099 }
+.STATIC { color: #009900; border-left-color: #009900 }
+.RESTRICTED { color: #990000; border-left-color: #990000 }
+
+.COMMENT1 { color: #737373 }
+.COMMENT2 { color: #737373; font-style: italic }
+.LITERAL1 { color: #ce7b00 }
+.LITERAL2 { color: #ce7b00 }
+.LITERAL3 { color: #ce7b00 }
+.LABEL { color: #000000 }
+.KEYWORD1 { color: #000099; font-weight: bold }
+.KEYWORD2 { color: #009900 }
+.KEYWORD3 { color: #0000da }
+.OPERATOR { color: #000000 }
+.INVALID { color: #b20000; font-style: italic }
+.SPECIAL1 { color: #000000; font-weight: bold }
+.SPECIAL2 { color: #000000; font-weight: bold }
+.SPECIAL3 { color: #000000; font-weight: bold }
+.SPECIAL4 { color: #000000; font-weight: bold }
+.SPECIAL5 { color: #000000; font-weight: bold }
+.SPECIAL6 { color: #000000; font-weight: bold }</style>
+</head>
+<body>
+<a name='top'><h1>fontutils</h1></a>
+<div class='toc'>
+<a href='#Utilityfunctionsforworkingwithfontresources'>Utility functions for working with font resources</a><br>
+<a href='#FontUtilsfindMatchingFamilyfamiliesdefaultFamily'>FontUtils.findMatchingFamily(<span class='PARAMLIST'> families, <span class='OPTIONAL'>[defaultFamily]</span> </span>) <span class='STATIC'>static</span></a><br>
+<a href='#FontUtilsavailableFontFamilies'>FontUtils.availableFontFamilies(<span class='PARAMLIST'></span>) <span class='STATIC'>static</span></a><br>
+<a href='#FontUtilsregisterFontFamilykey'>FontUtils.registerFontFamily(<span class='PARAMLIST'> key </span>) <span class='STATIC'>static</span></a><br>
+<a href='#FontUtilsregisterFontFamilyFromResourcesresourceFile'>FontUtils.registerFontFamilyFromResources(<span class='PARAMLIST'> <span class='OPTIONAL'>[resourceFile...]</span> </span>) <span class='STATIC'>static</span></a><br>
+</div>
+<p>
+<h2><a name='Utilityfunctionsforworkingwithfontresources'>Utility functions for working with font resources</a></h2>
+
+<p>
+ <b>Note:</b> A development version of this library defined
+ utility functions in the global namespace. These functions are
+ still defined by this library, but they have been deprecated.
+ Use the versions in <tt>FontUtils</tt> instead.
+
+<p>
+<h3><a name='FontUtilsfindMatchingFamilyfamiliesdefaultFamily'>FontUtils.findMatchingFamily(<span class='PARAMLIST'> families, <span class='OPTIONAL'>[defaultFamily]</span> </span>) <span class='STATIC'>static</span></a></h3>
+
+ Returns a font family name that is available on this system.
+ The method for selecting a font is similar to that used by CSS and HTML:
+ The string <tt>families</tt> is a list of candidate font family names
+ separated by commas, and this function returns the first available entry.
+ For example, <tt>FontUtils.findMatchingFamily( "Bookman Old
+ Style,Times" )</tt> would return <tt>Bookman Old Style</tt> if that family
+ was available. If not then it would return <tt>Times</tt> if that family was available.
+ If none of the typefaces in <tt>families</tt> is available, then <tt>defaultFamily</tt>
+ is returned (which may be <tt>null</tt>).
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> families </tt></td><td class='argdesc' valign='top'>a string listing candidate families</td></tr>
+
+<tr><td class='arg' valign='top'><tt> defaultFamily </tt></td><td class='argdesc' valign='top'>an optional default to use if no family matches      (may be <tt>null</tt>; if not specified will use the default body family)</td></tr>
+
+</table>
+<p>
+ Returns the first available font family, or the default value.
+
+<p>
+<h3><a name='FontUtilsavailableFontFamilies'>FontUtils.availableFontFamilies(<span class='PARAMLIST'></span>) <span class='STATIC'>static</span></a></h3>
+
+ Returns a list of the available font families on this system.
+ This will include fonts that have been successfully registered with
+ <tt>FontUtils.registerFontFamily</tt> or
+ <tt>FontUtils.registerFontFamilyFromResources</tt>.
+
+<p>
+<h3><a name='FontUtilsregisterFontFamilykey'>FontUtils.registerFontFamily(<span class='PARAMLIST'> key </span>) <span class='STATIC'>static</span></a></h3>
+
+ Create a typeface family by creating fonts from font files. The files
+ are found by looking up the setting <tt>key</tt> using the same
+ <tt>Settings</tt> provider as is used for <tt>$</tt> variables.
+ The value of this key must be a comma-separated list of font file
+ resources.
+<p>
+ Entries after the first will use the same resource path as the first
+ entry if they do not include a '/' character. For example, the following
+ list would load a family of two fonts located in the <tt>foo/fonts</tt>
+ resource folder: <tt>foot/fonts/bar_regular.ttf, bar_italic.ttf</tt>.
+<p>
+ Supported font formats include TrueType (<tt>.ttf</tt>), OpenType (<tt>.otf</tt>),
+ and PostScript Type 1 fonts.
+ The file extension used for the resource file name must be correct
+ for the format of the font resource, or font creation will fail.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> key </tt></td><td class='argdesc' valign='top'>the setting key containing the list of font files</td></tr>
+
+</table>
+<p>
+ returns the font family name of the registered family
+
+<p>
+<h3><a name='FontUtilsregisterFontFamilyFromResourcesresourceFile'>FontUtils.registerFontFamilyFromResources(<span class='PARAMLIST'> <span class='OPTIONAL'>[resourceFile...]</span> </span>) <span class='STATIC'>static</span></a></h3>
+
+ Create a typeface family directly from a list of resource files instead of
+ reading a list from a key. Instead of passing in a list of separate file
+ arguments, you can also pass in a string containing a comma-separated
+ list of resources as if it were the value of a font family key.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> resourceFile </tt></td><td class='argdesc' valign='top'>one or more arguments denoting location of the font files     that make up the family</td></tr>
+
+</table>
+<p>
+ returns the font family name of the registered family
+
+<p style='margin-top: 20pt;'><a href='#top'>Contents</a></body>
+</html>

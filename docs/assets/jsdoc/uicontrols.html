@@ -1,0 +1,473 @@
+<!DOCTYPE html><html>
+<head>
+<title>Script Library Documentation uicontrols</title>
+<style>
+body { font-family: sans-serif; font-size: 14pt; line-height: 1.1; }
+
+h1, h2, h3 { font-weight: bold }
+h1 { font-size: 16pt; margin-top: 4pt; margin-bottom: 4pt; }
+h2 { font-size: 14pt; margin-top: 28pt; margin-bottom: 2pt; }
+h3 { font-size: 12pt; margin-top: 18pt; margin-bottom: 2pt;  }
+
+a { color: #000077 }
+a:active { color: #770000 }
+
+tt, code { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt; color: #000077 }
+pre { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt;
+       margin: 48pt; margin-top: 2pt; margin-bottom: 10pt; padding: 6pt; background-color: #F9F9F9;
+       border-top: dashed 1pt #777777; border-bottom: dashed 1pt #777777; }
+table { border-width: 0px; border-collapse: collapse; padding: 0; margin: 8pt; margin-top: 2pt; margin-bottom: 10pt; }
+table.arglist { margin-left: 24pt; margin-right: 12pt }
+p { margin-top: 2pt; margin-bottom: 10pt; }
+
+div.indent { margin-left: 48pt; }
+
+div.toc { font-size: 90%; margin: 16px 16px 16px 16px; padding: 8px; background-color: #f7f7f7; border: #f7f7f7 solid 4px; border-radius: 8px; }
+
+td.arg { border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+td.argdesc { padding-left: 6px; border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+
+.PARAMLIST { font-weight: normal }
+.OPTIONAL { color: #888888; font-weight: normal }
+.CLASS, .STATIC, .RESTRICTED
+      { font-size: 80%; font-weight: normal; font-style: italic; margin-left: 8pt; padding-left: 4pt; border-left: dotted 1pt #007700 }
+.CLASS { color: #000099; border-left-color: #000099 }
+.STATIC { color: #009900; border-left-color: #009900 }
+.RESTRICTED { color: #990000; border-left-color: #990000 }
+
+.COMMENT1 { color: #737373 }
+.COMMENT2 { color: #737373; font-style: italic }
+.LITERAL1 { color: #ce7b00 }
+.LITERAL2 { color: #ce7b00 }
+.LITERAL3 { color: #ce7b00 }
+.LABEL { color: #000000 }
+.KEYWORD1 { color: #000099; font-weight: bold }
+.KEYWORD2 { color: #009900 }
+.KEYWORD3 { color: #0000da }
+.OPERATOR { color: #000000 }
+.INVALID { color: #b20000; font-style: italic }
+.SPECIAL1 { color: #000000; font-weight: bold }
+.SPECIAL2 { color: #000000; font-weight: bold }
+.SPECIAL3 { color: #000000; font-weight: bold }
+.SPECIAL4 { color: #000000; font-weight: bold }
+.SPECIAL5 { color: #000000; font-weight: bold }
+.SPECIAL6 { color: #000000; font-weight: bold }</style>
+</head>
+<body>
+<a name='top'><h1>uicontrols</h1></a>
+<div class='toc'>
+<a href='#Conveniencefunctionsthatcreateuserinterfacecontrols'>Convenience functions that create user interface controls.</a><br>
+<a href='#textFieldtextcolumnslistenerspellingChecked'>textField(<span class='PARAMLIST'> <span class='OPTIONAL'>[text]</span>, <span class='OPTIONAL'>[columns]</span>, <span class='OPTIONAL'>[listener]</span>, <span class='OPTIONAL'>[spellingChecked]</span> </span>)</a><br>
+<a href='#textAreatextrowscolumnsscrollspellingChecked'>textArea(<span class='PARAMLIST'> <span class='OPTIONAL'>[text]</span>, <span class='OPTIONAL'>[rows]</span>, <span class='OPTIONAL'>[columns]</span>, <span class='OPTIONAL'>[scroll]</span>, <span class='OPTIONAL'>[spellingChecked]</span> </span>)</a><br>
+<a href='#codeAreatextpreferredWidthpreferredHeight'>codeArea(<span class='PARAMLIST'> <span class='OPTIONAL'>[text]</span>, <span class='OPTIONAL'>[preferredWidth]</span>, <span class='OPTIONAL'>[preferredHeight]</span> </span>)</a><br>
+<a href='#buttonlabeliconlistener'>button(<span class='PARAMLIST'> <span class='OPTIONAL'>[label]</span>, <span class='OPTIONAL'>[icon]</span>, <span class='OPTIONAL'>[listener]</span> </span>)</a><br>
+<a href='#repeaterButtonlabeliconlistener'>repeaterButton(<span class='PARAMLIST'> <span class='OPTIONAL'>[label]</span>, <span class='OPTIONAL'>[icon]</span>, <span class='OPTIONAL'>[listener]</span> </span>)</a><br>
+<a href='#toggleButtonlabeliconselectedlistener'>toggleButton(<span class='PARAMLIST'> <span class='OPTIONAL'>[label]</span>, <span class='OPTIONAL'>[icon]</span>, <span class='OPTIONAL'>[selected]</span>, <span class='OPTIONAL'>[listener]</span> </span>)</a><br>
+<a href='#radioButtonlabelselectedlistener'>radioButton(<span class='PARAMLIST'> <span class='OPTIONAL'>[label]</span>, <span class='OPTIONAL'>[selected]</span>, <span class='OPTIONAL'>[listener]</span> </span>)</a><br>
+<a href='#buttonGroupbuttonssettingValues'>buttonGroup(<span class='PARAMLIST'> buttons, <span class='OPTIONAL'>[settingValues]</span> </span>)</a><br>
+<a href='#cycleButtonlabelssettingValues'>cycleButton(<span class='PARAMLIST'> labels, <span class='OPTIONAL'>[settingValues]</span> </span>)</a><br>
+<a href='#checkBoxlabelselectedlistener'>checkBox(<span class='PARAMLIST'> <span class='OPTIONAL'>[label]</span>, <span class='OPTIONAL'>[selected]</span>, <span class='OPTIONAL'>[listener]</span> </span>)</a><br>
+<a href='#comboBoxitemslistener'>comboBox(<span class='PARAMLIST'> <span class='OPTIONAL'>[items]</span>, <span class='OPTIONAL'>[listener]</span> </span>)</a><br>
+<a href='#autocompletionFielditemssort'>autocompletionField(<span class='PARAMLIST'> items, <span class='OPTIONAL'>[sort]</span> </span>)</a><br>
+<a href='#listControlitemslistenerscroll'>listControl(<span class='PARAMLIST'> <span class='OPTIONAL'>[items]</span>, <span class='OPTIONAL'>[listener]</span>, <span class='OPTIONAL'>[scroll]</span> </span>)</a><br>
+<a href='#labeltextlabelFor'>label(<span class='PARAMLIST'> <span class='OPTIONAL'>[text]</span>, <span class='OPTIONAL'>[labelFor]</span> </span>)</a><br>
+<a href='#noteLabeltext'>noteLabel(<span class='PARAMLIST'> <span class='OPTIONAL'>[text]</span> </span>)</a><br>
+<a href='#separatorvertical'>separator(<span class='PARAMLIST'> <span class='OPTIONAL'>[vertical]</span> </span>)</a><br>
+<a href='#hyperlinktexturl'>hyperlink(<span class='PARAMLIST'> <span class='OPTIONAL'>[text]</span>, url </span>)</a><br>
+<a href='#helpButtonurlOrWikiPage'>helpButton(<span class='PARAMLIST'> urlOrWikiPage </span>)</a><br>
+<a href='#tipButtontext'>tipButton(<span class='PARAMLIST'> text </span>)</a><br>
+<a href='#spinnerminmaxstepSizeinitialValuelistener'>spinner(<span class='PARAMLIST'> <span class='OPTIONAL'>[min]</span>, <span class='OPTIONAL'>[max]</span>, <span class='OPTIONAL'>[stepSize]</span>, <span class='OPTIONAL'>[initialValue]</span>, <span class='OPTIONAL'>[listener]</span> </span>)</a><br>
+<a href='#sliderminmaxinitialValuevalueLabelPairslistener'>slider(<span class='PARAMLIST'> <span class='OPTIONAL'>[min]</span>, <span class='OPTIONAL'>[max]</span>, <span class='OPTIONAL'>[initialValue]</span>, <span class='OPTIONAL'>[valueLabelPairs]</span>, <span class='OPTIONAL'>[listener]</span> </span>)</a><br>
+<a href='#tintPanel'>tintPanel(<span class='PARAMLIST'></span>)</a><br>
+<a href='#portraitPanelgcportraitIndextitle'>portraitPanel(<span class='PARAMLIST'> gc, <span class='OPTIONAL'>[portraitIndex]</span>, <span class='OPTIONAL'>[title]</span> </span>)</a><br>
+<a href='#noMarkupcontrol'>noMarkup(<span class='PARAMLIST'> control </span>)</a><br>
+</div>
+<p>
+<h3><a name='Conveniencefunctionsthatcreateuserinterfacecontrols'>Convenience functions that create user interface controls.</a></h3>
+
+ These functions make it easy to create UI controls to add to a container
+ layout. See the plug-in authoring kit for examples that use this library.
+
+<p>
+<h3><a name='textFieldtextcolumnslistenerspellingChecked'>textField(<span class='PARAMLIST'> <span class='OPTIONAL'>[text]</span>, <span class='OPTIONAL'>[columns]</span>, <span class='OPTIONAL'>[listener]</span>, <span class='OPTIONAL'>[spellingChecked]</span> </span>)</a></h3>
+
+ Returns a new <tt>swing.JTextField</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> text </tt></td><td class='argdesc' valign='top'>optional initial text for the field (default is an empty string)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> columns </tt></td><td class='argdesc' valign='top'>an optional number of columns for the width of the field (default is 0)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> listener </tt></td><td class='argdesc' valign='top'>an optional function that will be called when enter is pressed in      the field (default is no listener)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> spellingChecked </tt></td><td class='argdesc' valign='top'>if <tt>true</tt>, live spelling checking will be performed      on the contents of the field (default is <tt>true</tt>)</td></tr>
+
+</table>
+<p>
+ returns the new text field
+
+<p>
+<h3><a name='textAreatextrowscolumnsscrollspellingChecked'>textArea(<span class='PARAMLIST'> <span class='OPTIONAL'>[text]</span>, <span class='OPTIONAL'>[rows]</span>, <span class='OPTIONAL'>[columns]</span>, <span class='OPTIONAL'>[scroll]</span>, <span class='OPTIONAL'>[spellingChecked]</span> </span>)</a></h3>
+
+ Returns a new <tt>JTextArea</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> text </tt></td><td class='argdesc' valign='top'>optional initial text for the text area (default is an empty string)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> rows </tt></td><td class='argdesc' valign='top'>an optional number of rows for the width of the text area (default is 0)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> columns </tt></td><td class='argdesc' valign='top'>an optional number of columns for the width of the text area (default is 0)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> scroll </tt></td><td class='argdesc' valign='top'>if <tt>true</tt>, a scroll pane will be wrapped around the text      area and returned</td></tr>
+
+<tr><td class='arg' valign='top'><tt> spellingChecked </tt></td><td class='argdesc' valign='top'>if <tt>true</tt>, live spelling checking will be performed      on the contents of the field (default is <tt>true</tt>)</td></tr>
+
+</table>
+<p>
+ returns the new text area, or the scroll pane that contains the text area
+     if <tt>scroll</tt> is <tt>true</tt>
+
+<p>
+<h3><a name='codeAreatextpreferredWidthpreferredHeight'>codeArea(<span class='PARAMLIST'> <span class='OPTIONAL'>[text]</span>, <span class='OPTIONAL'>[preferredWidth]</span>, <span class='OPTIONAL'>[preferredHeight]</span> </span>)</a></h3>
+
+ Returns a new script editor control. The code area object
+ includes an <tt>execute()</tt> function that will run the script code
+ contained in the editor.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> text </tt></td><td class='argdesc' valign='top'>optional initial text for the code area</td></tr>
+
+<tr><td class='arg' valign='top'><tt> preferredWidth </tt></td><td class='argdesc' valign='top'>an optional preferred width for the control (default is 400)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> preferredHeight </tt></td><td class='argdesc' valign='top'>an optional preferred height for the control (default is 300)</td></tr>
+
+</table>
+<p>
+ returns the new code editor
+
+<p>
+<h3><a name='buttonlabeliconlistener'>button(<span class='PARAMLIST'> <span class='OPTIONAL'>[label]</span>, <span class='OPTIONAL'>[icon]</span>, <span class='OPTIONAL'>[listener]</span> </span>)</a></h3>
+
+ Returns a new <tt>swing.JButton</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> label </tt></td><td class='argdesc' valign='top'>an optional text label for the button</td></tr>
+
+<tr><td class='arg' valign='top'><tt> icon </tt></td><td class='argdesc' valign='top'>an optional icon for the button</td></tr>
+
+<tr><td class='arg' valign='top'><tt> listener </tt></td><td class='argdesc' valign='top'>an optional function that will be called when the button is pressed</td></tr>
+
+</table>
+<p>
+ returns the new button
+
+<p>
+<h3><a name='repeaterButtonlabeliconlistener'>repeaterButton(<span class='PARAMLIST'> <span class='OPTIONAL'>[label]</span>, <span class='OPTIONAL'>[icon]</span>, <span class='OPTIONAL'>[listener]</span> </span>)</a></h3>
+
+ Returns a new button that continues to send notify the listener at intervals
+ as long as it is pressed down. The rate of listener notifications
+ increases the longer the button is held down. The button tracks the modifier
+ keys that are held down while repeating and passes these through the
+ <tt>ActionEvent</tt>s that it generates. (For example, the portrait panel
+ nudge controls jump in bigger steps if <i>Shift</i> is held down.)
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> label </tt></td><td class='argdesc' valign='top'>an optional text label for the button</td></tr>
+
+<tr><td class='arg' valign='top'><tt> icon </tt></td><td class='argdesc' valign='top'>an optional icon for the button</td></tr>
+
+<tr><td class='arg' valign='top'><tt> listener </tt></td><td class='argdesc' valign='top'>an optional function that will be called when the button is pressed</td></tr>
+
+</table>
+<p>
+ returns the new button
+
+<p>
+<h3><a name='toggleButtonlabeliconselectedlistener'>toggleButton(<span class='PARAMLIST'> <span class='OPTIONAL'>[label]</span>, <span class='OPTIONAL'>[icon]</span>, <span class='OPTIONAL'>[selected]</span>, <span class='OPTIONAL'>[listener]</span> </span>)</a></h3>
+
+ Returns a new <tt>swing.JToggleButton</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> label </tt></td><td class='argdesc' valign='top'>an optional text label for the button</td></tr>
+
+<tr><td class='arg' valign='top'><tt> icon </tt></td><td class='argdesc' valign='top'>an optional icon for the button</td></tr>
+
+<tr><td class='arg' valign='top'><tt> selected </tt></td><td class='argdesc' valign='top'>if <tt>true</tt>, the box is initially selected</td></tr>
+
+<tr><td class='arg' valign='top'><tt> listener </tt></td><td class='argdesc' valign='top'>an optional function that will be called when the button is pressed</td></tr>
+
+</table>
+<p>
+ returns the new button
+
+<p>
+<h3><a name='radioButtonlabelselectedlistener'>radioButton(<span class='PARAMLIST'> <span class='OPTIONAL'>[label]</span>, <span class='OPTIONAL'>[selected]</span>, <span class='OPTIONAL'>[listener]</span> </span>)</a></h3>
+
+ Returns a new <tt>swing.JRadioButton</tt>. Radio buttons are use to represent
+ a group of options of which only one can be selected at a time.
+ To define the members of such a group, first create the buttons and then
+ call <a href='#buttonGroupbuttonsvalues'>buttonGroup( arrayOfButtonsToGroup )</a>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> label </tt></td><td class='argdesc' valign='top'>an optional text label for the button</td></tr>
+
+<tr><td class='arg' valign='top'><tt> selected </tt></td><td class='argdesc' valign='top'>if <tt>true</tt>, the box is initially selected</td></tr>
+
+<tr><td class='arg' valign='top'><tt> listener </tt></td><td class='argdesc' valign='top'>an optional function that will be called when the button is pressed</td></tr>
+
+</table>
+<p>
+ returns the new radio button
+
+<p>
+<h3><a name='buttonGroupbuttonssettingValues'>buttonGroup(<span class='PARAMLIST'> buttons, <span class='OPTIONAL'>[settingValues]</span> </span>)</a></h3>
+
+ Returns a new button group for a group of buttons. Button groups are used
+ to link together a set of related toggle buttons or radio buttons so that
+ only one button in the group can be selected at a time. The optional
+ <tt>settingValues</tt> argument is a list of setting values to associate with
+ the buttons in the group. If it is supplied, then the returned button group
+ can be bound using a <tt>Bindings</tt> instance, and selecting a button
+ in the group will change the bound setting to the corresponding element
+ in <tt>settingValues</tt>. If the <tt>settingValues</tt> argument is not
+ supplied, then a plain button group that does not support binding is returned.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> buttons </tt></td><td class='argdesc' valign='top'>an array of buttons to be grouped together for mutually exclusive selection</td></tr>
+
+<tr><td class='arg' valign='top'><tt> values </tt></td><td class='argdesc' valign='top'>an optional array of setting values (strings) to map the buttons to</td></tr>
+
+</table>
+
+<p>
+<h3><a name='cycleButtonlabelssettingValues'>cycleButton(<span class='PARAMLIST'> labels, <span class='OPTIONAL'>[settingValues]</span> </span>)</a></h3>
+
+ Returns a new cycle button that will rotate through the specified labels
+ when pressed. Cycle buttons are suitable for use with a very small number
+ of options, preferably 2, when the user can easily guess what the
+ other options in the set are. An example of this is a button to select
+ a gender. If the optional setting values are provided, they will be used
+ to map the selected label to and from a setting value when the control
+ is bound using a <tt><a href='scriptdoc:uibindings'>Bindings</a></tt>
+ instance.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> buttons </tt></td><td class='argdesc' valign='top'>an array of labels for the button to rotate through when pressed</td></tr>
+
+<tr><td class='arg' valign='top'><tt> values </tt></td><td class='argdesc' valign='top'>an optional array of setting values (strings) to map the labels to</td></tr>
+
+</table>
+
+<p>
+<h3><a name='checkBoxlabelselectedlistener'>checkBox(<span class='PARAMLIST'> <span class='OPTIONAL'>[label]</span>, <span class='OPTIONAL'>[selected]</span>, <span class='OPTIONAL'>[listener]</span> </span>)</a></h3>
+
+ Returns a new <tt>swing.JCheckBox</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> label </tt></td><td class='argdesc' valign='top'>an optional text label for the button</td></tr>
+
+<tr><td class='arg' valign='top'><tt> selected </tt></td><td class='argdesc' valign='top'>if <tt>true</tt>, the box is initially checked</td></tr>
+
+<tr><td class='arg' valign='top'><tt> listener </tt></td><td class='argdesc' valign='top'>an optional function that will be called when the box is checked or unchecked</td></tr>
+
+</table>
+<p>
+ returns the new check box
+
+<p>
+<h3><a name='comboBoxitemslistener'>comboBox(<span class='PARAMLIST'> <span class='OPTIONAL'>[items]</span>, <span class='OPTIONAL'>[listener]</span> </span>)</a></h3>
+
+ Returns a new <tt>swing.JComboBox</tt> containing the given list of <tt>list</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> items </tt></td><td class='argdesc' valign='top'>an array of items for the user to choose from (default is an empty list)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> listener </tt></td><td class='argdesc' valign='top'>an optional listener that is called when the selected item changes</td></tr>
+
+</table>
+
+<p>
+<h3><a name='autocompletionFielditemssort'>autocompletionField(<span class='PARAMLIST'> items, <span class='OPTIONAL'>[sort]</span> </span>)</a></h3>
+
+ Create a text field with a drop-down autocompletion list.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> items </tt></td><td class='argdesc' valign='top'>an array of items that the field will use to offer autocompletion choices</td></tr>
+
+<tr><td class='arg' valign='top'><tt> sorted </tt></td><td class='argdesc' valign='top'>an optional flag indicating that the item list should be sorted,      which allows faster autocompletion</td></tr>
+
+</table>
+<p>
+ returns a new, editable <tt>swing.JComboBox</tt> with autocompletion support
+
+<p>
+<h3><a name='listControlitemslistenerscroll'>listControl(<span class='PARAMLIST'> <span class='OPTIONAL'>[items]</span>, <span class='OPTIONAL'>[listener]</span>, <span class='OPTIONAL'>[scroll]</span> </span>)</a></h3>
+
+ Returns a new <tt>swing.JList</tt> containing the given list of <tt>items</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> items </tt></td><td class='argdesc' valign='top'>an array of items for the user to choose from (default is an empty list)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> listener </tt></td><td class='argdesc' valign='top'>an optional listener that is called when the selected item changes</td></tr>
+
+<tr><td class='arg' valign='top'><tt> scroll </tt></td><td class='argdesc' valign='top'>if <tt>true</tt>, a scroll pane will be wrapped around the list      control and returned</td></tr>
+
+</table>
+<p>
+ returns the new list control, or the scroll pane that contains the list control
+     if <tt>scroll</tt> is <tt>true</tt>
+
+<p>
+<h3><a name='labeltextlabelFor'>label(<span class='PARAMLIST'> <span class='OPTIONAL'>[text]</span>, <span class='OPTIONAL'>[labelFor]</span> </span>)</a></h3>
+
+ Returns a new <tt>JLabel</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> text </tt></td><td class='argdesc' valign='top'>initial label text (default is an empty string)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> labelFor </tt></td><td class='argdesc' valign='top'>the component that this labels; this is used to determine which</td></tr>
+
+</table>
+     control to activate if the label has a mnemonic key set
+<p>
+ returns a new label
+
+<p>
+<h3><a name='noteLabeltext'>noteLabel(<span class='PARAMLIST'> <span class='OPTIONAL'>[text]</span> </span>)</a></h3>
+
+ Returns a new note label, a label with a smaller than usual
+ font size that can be used to add remarks, tips, or other
+ secondary information.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> text </tt></td><td class='argdesc' valign='top'>the text of the note label</td></tr>
+
+</table>
+<p>
+ returns a new label with a smaller font
+
+<p>
+<h3><a name='separatorvertical'>separator(<span class='PARAMLIST'> <span class='OPTIONAL'>[vertical]</span> </span>)</a></h3>
+
+ Returns a new separator, a dividing line that can be used to
+ visually separate groups of controls.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> vertical </tt></td><td class='argdesc' valign='top'>if <tt>true</tt> the separator is a vertical line rather than      the default horizontal</td></tr>
+
+</table>
+<p>
+ returns a new separator
+
+<p>
+<h3><a name='hyperlinktexturl'>hyperlink(<span class='PARAMLIST'> <span class='OPTIONAL'>[text]</span>, url </span>)</a></h3>
+
+ Returns a new hyperlink label.
+ This is a label with underlined blue text that opens
+ a URL in the user's default browser when clicked.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> text </tt></td><td class='argdesc' valign='top'>an optional text label (default is to use <tt>url</tt>)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> url </tt></td><td class='argdesc' valign='top'>the URL to visit when the label is clicked</td></tr>
+
+</table>
+<p>
+ returns the new hyperlink label
+
+<p>
+<h3><a name='helpButtonurlOrWikiPage'>helpButton(<span class='PARAMLIST'> urlOrWikiPage </span>)</a></h3>
+
+ Returns a new help button. A help button displays as a small purple
+ help icon. When clicked on, it opens a help page in the user's default
+ browser. If <tt>url</tt> contains a colon (':') then it is assumed to be a
+ complete URL for the page to be opened. Otherwise, it is assumed to be the
+ title of a page in the Strange Eons Wiki.
+ For example, <tt>"User Manual"</tt> would open the contents page
+ of the user manual.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> urlOrWikiPage </tt></td><td class='argdesc' valign='top'>the URL or the title of a Wiki page to open when the button is clicked</td></tr>
+
+</table>
+<p>
+ returns the new help button
+
+<p>
+<h3><a name='tipButtontext'>tipButton(<span class='PARAMLIST'> text </span>)</a></h3>
+
+ Returns a new tip button. A tip button displays as a small lantern icon.
+ When the pointer is moved over the icon, a small pop-up window displays
+ the tip text.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> text </tt></td><td class='argdesc' valign='top'>the text to display when the pointer is moved over the tip icon</td></tr>
+
+</table>
+<p>
+ returns the new tip button
+
+<p>
+<h3><a name='spinnerminmaxstepSizeinitialValuelistener'>spinner(<span class='PARAMLIST'> <span class='OPTIONAL'>[min]</span>, <span class='OPTIONAL'>[max]</span>, <span class='OPTIONAL'>[stepSize]</span>, <span class='OPTIONAL'>[initialValue]</span>, <span class='OPTIONAL'>[listener]</span> </span>)</a></h3>
+
+ Creates a new spinner control that can be set to one of
+ a range of integer values between <tt>min</tt> and <tt>max</tt>, inclusive.
+ Each click of a spinner arrow will add or subtract <tt>stepSize</tt>
+ from the current value.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> min </tt></td><td class='argdesc' valign='top'>the minimum value that the spinner will allow (default is 1)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> max </tt></td><td class='argdesc' valign='top'>the maximum value that the spinner will allow (default is 10)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> stepSize </tt></td><td class='argdesc' valign='top'>the amount added to the current value by clicking an arrow button (default is 1)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> initialValue </tt></td><td class='argdesc' valign='top'>the initial value stored in the spinner (default is <tt>min</tt>)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> listener </tt></td><td class='argdesc' valign='top'>an optional listener (<tt>swing.event.ChangeListener</tt>) that will be called when the value changes</td></tr>
+
+</table>
+
+<p>
+<h3><a name='sliderminmaxinitialValuevalueLabelPairslistener'>slider(<span class='PARAMLIST'> <span class='OPTIONAL'>[min]</span>, <span class='OPTIONAL'>[max]</span>, <span class='OPTIONAL'>[initialValue]</span>, <span class='OPTIONAL'>[valueLabelPairs]</span>, <span class='OPTIONAL'>[listener]</span> </span>)</a></h3>
+
+ Creates a new slider control that can be set to one of
+ a range of integer values between <tt>min</tt> and <tt>max</tt>, inclusive.
+ If <tt>valueLabelPairs</tt> is supplied, it must be an array where the
+ even indices are slider positions and the odd indices are labels.
+ The control will display the requested labels at the indicated positions.
+ For example: <tt>[1, "Low", 6, "Medium", 10, "High"]</tt> would display the
+ labels "Low", "Medium", and "High" at positions 1, 6, and 10 on the slider,
+ respectively.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> min </tt></td><td class='argdesc' valign='top'>the minimum value that the slider will allow (default is 1)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> max </tt></td><td class='argdesc' valign='top'>the maximum value that the slider will allow (default is 10)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> stepSize </tt></td><td class='argdesc' valign='top'>the amount added to the current value by clicking an arrow button (default is 1)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> valueLabelPairs </tt></td><td class='argdesc' valign='top'>an array that associates slider positions with labels</td></tr>
+
+<tr><td class='arg' valign='top'><tt> listener </tt></td><td class='argdesc' valign='top'>an optional listener (<tt>swing.event.ChangeListener</tt>) that will be called when the value changes</td></tr>
+
+</table>
+
+<p>
+<h3><a name='tintPanel'>tintPanel(<span class='PARAMLIST'></span>)</a></h3>
+
+ Creates a new control panel for adjusting tints.
+
+<p>
+<h3><a name='portraitPanelgcportraitIndextitle'>portraitPanel(<span class='PARAMLIST'> gc, <span class='OPTIONAL'>[portraitIndex]</span>, <span class='OPTIONAL'>[title]</span> </span>)</a></h3>
+
+ Creates a portrait panel that allows the user to choose and adjust a portrait
+ image. For DIY components, note that if you use the standard simple method
+ of adding a portrait, the portrait panel will be created and linked up for you.
+ If you use the custom portrait handling option, you'll need to create and
+ add portrait panels yourself.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> gc </tt></td><td class='argdesc' valign='top'>the <tt>PortraitProvider</tt> (usually a game component, such as a DIY)      that provides the portrait model</td></tr>
+
+<tr><td class='arg' valign='top'><tt> portraitIndex </tt></td><td class='argdesc' valign='top'>the index of the portrait for a portrait provider      with multiple portraits (default is 0)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> title </tt></td><td class='argdesc' valign='top'>an optional title for the panel; if not specified, a localized default</td></tr>
+
+</table>
+     title will be provided
+
+<p>
+<h3><a name='noMarkupcontrol'>noMarkup(<span class='PARAMLIST'> control </span>)</a></h3>
+
+ Calling this function on a UI control will prevent that control from
+ becoming a markup target. Apply this function to text fields when you
+ do not want the user to be able to insert text into them using the Markup
+ menu. The function returns the control, so it can be used transparently
+ when creating a control:
+ <pre>var field = noMarkup( textField( '42', 4 ) );</pre>
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> control </tt></td><td class='argdesc' valign='top'>the UI control to prevent from accepting markup</td></tr>
+
+</table>
+
+<p style='margin-top: 20pt;'><a href='#top'>Contents</a></body>
+</html>

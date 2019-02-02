@@ -1,0 +1,184 @@
+<!DOCTYPE html><html>
+<head>
+<title>Script Library Documentation cards</title>
+<style>
+body { font-family: sans-serif; font-size: 14pt; line-height: 1.1; }
+
+h1, h2, h3 { font-weight: bold }
+h1 { font-size: 16pt; margin-top: 4pt; margin-bottom: 4pt; }
+h2 { font-size: 14pt; margin-top: 28pt; margin-bottom: 2pt; }
+h3 { font-size: 12pt; margin-top: 18pt; margin-bottom: 2pt;  }
+
+a { color: #000077 }
+a:active { color: #770000 }
+
+tt, code { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt; color: #000077 }
+pre { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt;
+       margin: 48pt; margin-top: 2pt; margin-bottom: 10pt; padding: 6pt; background-color: #F9F9F9;
+       border-top: dashed 1pt #777777; border-bottom: dashed 1pt #777777; }
+table { border-width: 0px; border-collapse: collapse; padding: 0; margin: 8pt; margin-top: 2pt; margin-bottom: 10pt; }
+table.arglist { margin-left: 24pt; margin-right: 12pt }
+p { margin-top: 2pt; margin-bottom: 10pt; }
+
+div.indent { margin-left: 48pt; }
+
+div.toc { font-size: 90%; margin: 16px 16px 16px 16px; padding: 8px; background-color: #f7f7f7; border: #f7f7f7 solid 4px; border-radius: 8px; }
+
+td.arg { border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+td.argdesc { padding-left: 6px; border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+
+.PARAMLIST { font-weight: normal }
+.OPTIONAL { color: #888888; font-weight: normal }
+.CLASS, .STATIC, .RESTRICTED
+      { font-size: 80%; font-weight: normal; font-style: italic; margin-left: 8pt; padding-left: 4pt; border-left: dotted 1pt #007700 }
+.CLASS { color: #000099; border-left-color: #000099 }
+.STATIC { color: #009900; border-left-color: #009900 }
+.RESTRICTED { color: #990000; border-left-color: #990000 }
+
+.COMMENT1 { color: #737373 }
+.COMMENT2 { color: #737373; font-style: italic }
+.LITERAL1 { color: #ce7b00 }
+.LITERAL2 { color: #ce7b00 }
+.LITERAL3 { color: #ce7b00 }
+.LABEL { color: #000000 }
+.KEYWORD1 { color: #000099; font-weight: bold }
+.KEYWORD2 { color: #009900 }
+.KEYWORD3 { color: #0000da }
+.OPERATOR { color: #000000 }
+.INVALID { color: #b20000; font-style: italic }
+.SPECIAL1 { color: #000000; font-weight: bold }
+.SPECIAL2 { color: #000000; font-weight: bold }
+.SPECIAL3 { color: #000000; font-weight: bold }
+.SPECIAL4 { color: #000000; font-weight: bold }
+.SPECIAL5 { color: #000000; font-weight: bold }
+.SPECIAL6 { color: #000000; font-weight: bold }</style>
+</head>
+<body>
+<a name='top'><h1>cards</h1></a>
+<div class='toc'>
+<a href='#Virtualcarddecks'>Virtual card decks</a><br>
+<a href='#CardDeck'>CardDeck(<span class='PARAMLIST'></span>) <span class='CLASS'>constructor</span></a><br>
+<a href='#CardDeckprototypetoString'>CardDeck.prototype.toString(<span class='PARAMLIST'></span>)</a><br>
+<a href='#CardDeckcreateFromArrayarrayLikeObject'>CardDeck.createFromArray(<span class='PARAMLIST'> arrayLikeObject </span>) <span class='STATIC'>static</span></a><br>
+<a href='#CardDeckprototypeshuffle'>CardDeck.prototype.shuffle(<span class='PARAMLIST'></span>)</a><br>
+<a href='#CardDeckprototypedraw'>CardDeck.prototype.draw(<span class='PARAMLIST'></span>)</a><br>
+<a href='#CardDeckprototypedrawFirstmatchFunction'>CardDeck.prototype.drawFirst(<span class='PARAMLIST'> matchFunction </span>)</a><br>
+<a href='#CardDeckprototypediscardcardcopies'>CardDeck.prototype.discard(<span class='PARAMLIST'> card, <span class='OPTIONAL'>[copies]</span> </span>)</a><br>
+<a href='#CardDeckprototypepeekindex'>CardDeck.prototype.peek(<span class='PARAMLIST'> <span class='OPTIONAL'>[index]</span> </span>)</a><br>
+<a href='#CardDeckprototypepullindex'>CardDeck.prototype.pull(<span class='PARAMLIST'> <span class='OPTIONAL'>[index]</span> </span>)</a><br>
+<a href='#CardDeckprototypesize'>CardDeck.prototype.size(<span class='PARAMLIST'></span>)</a><br>
+</div>
+<p>
+<h2><a name='Virtualcarddecks'>Virtual card decks</a></h2>
+
+ Adds the <tt>CardDeck</tt> class, a stack-like collection of objects that
+ supports operations typical of a deck of cards, such as shuffling, drawing from,
+ and discarding to.
+
+<p>
+<h2><a name='CardDeck'>CardDeck(<span class='PARAMLIST'></span>) <span class='CLASS'>constructor</span></a></h2>
+
+ Creates a new, empty deck of cards.
+
+<p>
+<h3><a name='CardDeckprototypetoString'>CardDeck.prototype.toString(<span class='PARAMLIST'></span>)</a></h3>
+
+ Returns a string consisting of a comma separated list of the cards in
+ this card deck.
+<p>
+ returns a string listing the contents of this <tt>CardDeck</tt>
+
+<p>
+<h3><a name='CardDeckcreateFromArrayarrayLikeObject'>CardDeck.createFromArray(<span class='PARAMLIST'> arrayLikeObject </span>) <span class='STATIC'>static</span></a></h3>
+
+ Creates a new deck, using items from an array to populate it.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> arrayLikeObject </tt></td><td class='argdesc' valign='top'>an array or array-like object to copy from</td></tr>
+
+</table>
+<p>
+ returns a card deck consisting of objects copied from <tt>arrayLikeObject</tt>
+
+<p>
+<h3><a name='CardDeckprototypeshuffle'>CardDeck.prototype.shuffle(<span class='PARAMLIST'></span>)</a></h3>
+
+ Shuffles the cards in a deck into a random order.
+
+<p>
+<h3><a name='CardDeckprototypedraw'>CardDeck.prototype.draw(<span class='PARAMLIST'></span>)</a></h3>
+
+ Draws the top card off the deck. This removes the card from the deck;
+ to return the card, use <tt>CardDeck.discard</tt>. Drawing from an
+ empty deck throws an exception.
+<p>
+ removes and returns the top card from the deck
+
+<p>
+<h3><a name='CardDeckprototypedrawFirstmatchFunction'>CardDeck.prototype.drawFirst(<span class='PARAMLIST'> matchFunction </span>)</a></h3>
+
+ Searches the deck for the first <tt>card</tt> for which <tt>matchFunction(card)</tt>
+ returns <tt>true</tt>. If a matching card is found, removes it from the deck and
+ returns it. If there is no matching card, returns <tt>null</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> matchFunction </tt></td><td class='argdesc' valign='top'>a function that takes a card and returns <tt>true</tt> if      it is the type of card you wish to draw</td></tr>
+
+</table>
+<p>
+ returns the matching card (which is removed from the deck), or <tt>null</tt>
+
+<p>
+<h3><a name='CardDeckprototypediscardcardcopies'>CardDeck.prototype.discard(<span class='PARAMLIST'> card, <span class='OPTIONAL'>[copies]</span> </span>)</a></h3>
+
+ Adds <tt>card</tt> to the bottom of the deck.
+ It is not required that <tt>card</tt> have previously been drawn from
+ the deck. If <tt>copies</tt> is defined, then
+ that many copies are added, all identical.
+ The default value is 1.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> card </tt></td><td class='argdesc' valign='top'>the card to add to the deck</td></tr>
+
+<tr><td class='arg' valign='top'><tt> copies </tt></td><td class='argdesc' valign='top'>the optional number of copies to add to the deck</td></tr>
+
+</table>
+<p>
+ places card(s) on the bottom of the deck
+
+<p>
+<h3><a name='CardDeckprototypepeekindex'>CardDeck.prototype.peek(<span class='PARAMLIST'> <span class='OPTIONAL'>[index]</span> </span>)</a></h3>
+
+ Returns a card from the deck without removing it. If <tt>index</tt>
+ is not defined, then the card at the top of the deck is returned.
+ Otherwise, if <tt>index</tt> is 0 or positive, then the card at position
+ <tt>index</tt> is returned, where a position of 0 is the top of the deck,
+ 1 is the next card from the top, and so on. If <tt>index</tt> is negative,
+ then the cards are counted from the bottom of the deck: -1 is the last card,
+ -2 is the penultimate card, and so on.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> index </tt></td><td class='argdesc' valign='top'>the position of the card to peek at within the deck</td></tr>
+
+</table>
+<p>
+ returns the card at <tt>index</tt>
+
+<p>
+<h3><a name='CardDeckprototypepullindex'>CardDeck.prototype.pull(<span class='PARAMLIST'> <span class='OPTIONAL'>[index]</span> </span>)</a></h3>
+
+ Pulls a card from the deck from any position. The card at the requested position
+ is removed from the deck and returned. As with <tt>CardDeck.peek()</tt>,
+ a negative index may be used to count from the bottom of the deck.
+ If called without an <tt>index</tt> argument, this method is equivalent to
+ <tt>CardDeck.draw()</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> index </tt></td><td class='argdesc' valign='top'>the optional position of the card to remove from the deck</td></tr>
+
+</table>
+<p>
+ returns and removes the card at <tt>index</tt>
+
+<p>
+<h3><a name='CardDeckprototypesize'>CardDeck.prototype.size(<span class='PARAMLIST'></span>)</a></h3>
+
+ Returns the number of cards currently in this deck.
+
+<p style='margin-top: 20pt;'><a href='#top'>Contents</a></body>
+</html>

@@ -1,0 +1,1014 @@
+<!DOCTYPE html><html>
+<head>
+<title>Script Library Documentation markup</title>
+<style>
+body { font-family: sans-serif; font-size: 14pt; line-height: 1.1; }
+
+h1, h2, h3 { font-weight: bold }
+h1 { font-size: 16pt; margin-top: 4pt; margin-bottom: 4pt; }
+h2 { font-size: 14pt; margin-top: 28pt; margin-bottom: 2pt; }
+h3 { font-size: 12pt; margin-top: 18pt; margin-bottom: 2pt;  }
+
+a { color: #000077 }
+a:active { color: #770000 }
+
+tt, code { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt; color: #000077 }
+pre { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt;
+       margin: 48pt; margin-top: 2pt; margin-bottom: 10pt; padding: 6pt; background-color: #F9F9F9;
+       border-top: dashed 1pt #777777; border-bottom: dashed 1pt #777777; }
+table { border-width: 0px; border-collapse: collapse; padding: 0; margin: 8pt; margin-top: 2pt; margin-bottom: 10pt; }
+table.arglist { margin-left: 24pt; margin-right: 12pt }
+p { margin-top: 2pt; margin-bottom: 10pt; }
+
+div.indent { margin-left: 48pt; }
+
+div.toc { font-size: 90%; margin: 16px 16px 16px 16px; padding: 8px; background-color: #f7f7f7; border: #f7f7f7 solid 4px; border-radius: 8px; }
+
+td.arg { border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+td.argdesc { padding-left: 6px; border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+
+.PARAMLIST { font-weight: normal }
+.OPTIONAL { color: #888888; font-weight: normal }
+.CLASS, .STATIC, .RESTRICTED
+      { font-size: 80%; font-weight: normal; font-style: italic; margin-left: 8pt; padding-left: 4pt; border-left: dotted 1pt #007700 }
+.CLASS { color: #000099; border-left-color: #000099 }
+.STATIC { color: #009900; border-left-color: #009900 }
+.RESTRICTED { color: #990000; border-left-color: #990000 }
+
+.COMMENT1 { color: #737373 }
+.COMMENT2 { color: #737373; font-style: italic }
+.LITERAL1 { color: #ce7b00 }
+.LITERAL2 { color: #ce7b00 }
+.LITERAL3 { color: #ce7b00 }
+.LABEL { color: #000000 }
+.KEYWORD1 { color: #000099; font-weight: bold }
+.KEYWORD2 { color: #009900 }
+.KEYWORD3 { color: #0000da }
+.OPERATOR { color: #000000 }
+.INVALID { color: #b20000; font-style: italic }
+.SPECIAL1 { color: #000000; font-weight: bold }
+.SPECIAL2 { color: #000000; font-weight: bold }
+.SPECIAL3 { color: #000000; font-weight: bold }
+.SPECIAL4 { color: #000000; font-weight: bold }
+.SPECIAL5 { color: #000000; font-weight: bold }
+.SPECIAL6 { color: #000000; font-weight: bold }</style>
+</head>
+<body>
+<a name='top'><h1>markup</h1></a>
+<div class='toc'>
+<a href='#markupBoxsheetgenderAware'>markupBox(<span class='PARAMLIST'> sheet, <span class='OPTIONAL'>[genderAware]</span> </span>)</a><br>
+<a href='#markupBoxppigenderAware'>markupBox(<span class='PARAMLIST'> ppi, <span class='OPTIONAL'>[genderAware]</span> </span>)</a><br>
+<a href='#MarkupBox'>MarkupBox</a><br>
+<a href='#MarkupBoxppi'>MarkupBox(<span class='PARAMLIST'> ppi </span>) <span class='CLASS'>constructor</span></a><br>
+<a href='#MarkupBoxdrawgregion'>MarkupBox.draw(<span class='PARAMLIST'> g, region </span>)</a><br>
+<a href='#MarkupBoxConstants'>MarkupBox Constants</a><br>
+<a href='#MarkupBoxsetStyleForTagtagNamestyle'>MarkupBox.setStyleForTag(<span class='PARAMLIST'> tagName, style </span>)</a><br>
+<a href='#MarkupBoxgetStyleForTagtagName'>MarkupBox.getStyleForTag(<span class='PARAMLIST'> tagName </span>)</a><br>
+<a href='#MarkupBoxsetParametricStyleForTagtagNamefactory'>MarkupBox.setParametricStyleForTag(<span class='PARAMLIST'> tagName, factory </span>)</a><br>
+<a href='#MarkupBoxgetParametricStyleForTagtagName'>MarkupBox.getParametricStyleForTag(<span class='PARAMLIST'> tagName </span>)</a><br>
+<a href='#MarkupBoxsetReplacementForTagtagNamereplacement'>MarkupBox.setReplacementForTag(<span class='PARAMLIST'> tagName, replacement </span>)</a><br>
+<a href='#MarkupBoxgetReplacementForTagtagName'>MarkupBox.getReplacementForTag(<span class='PARAMLIST'> tagName </span>)</a><br>
+<a href='#MarkupBoxremoveTagtagName'>MarkupBox.removeTag(<span class='PARAMLIST'> tagName </span>)</a><br>
+<a href='#MarkupBoxremoveAllTags'>MarkupBox.removeAllTags(<span class='PARAMLIST'></span>)</a><br>
+<a href='#MarkupBoxsetDefaultStylestyle'>MarkupBox.setDefaultStyle(<span class='PARAMLIST'> style </span>)</a><br>
+<a href='#MarkupBoxgetDefaultStyle'>MarkupBox.getDefaultStyle(<span class='PARAMLIST'></span>)</a><br>
+<a href='#MarkupBoxsetAlignmentalignment'>MarkupBox.setAlignment(<span class='PARAMLIST'> alignment </span>)</a><br>
+<a href='#MarkupBoxgetAlignment'>MarkupBox.getAlignment(<span class='PARAMLIST'></span>)</a><br>
+<a href='#MarkupBoxsetHeadlineAlignmentalignment'>MarkupBox.setHeadlineAlignment(<span class='PARAMLIST'> alignment </span>)</a><br>
+<a href='#MarkupBoxgetHeadlineAlignment'>MarkupBox.getHeadlineAlignment(<span class='PARAMLIST'></span>)</a><br>
+<a href='#MarkupBoxsetTabWidthtabWidthInInches'>MarkupBox.setTabWidth(<span class='PARAMLIST'> tabWidthInInches </span>)</a><br>
+<a href='#MarkupBoxgetTabWidth'>MarkupBox.getTabWidth(<span class='PARAMLIST'></span>)</a><br>
+<a href='#MarkupBoxsetTabWidthstabWidthsInInches'>MarkupBox.setTabWidths(<span class='PARAMLIST'> tabWidthsInInches<span class='OPTIONAL'>[]</span> </span>)</a><br>
+<a href='#MarkupBoxgetTabWidths'>MarkupBox.getTabWidths(<span class='PARAMLIST'></span>)</a><br>
+<a href='#MarkupBoxsetTextFittingfittingStyle'>MarkupBox.setTextFitting(<span class='PARAMLIST'> fittingStyle </span>)</a><br>
+<a href='#MarkupBoxgetTextFitting'>MarkupBox.getTextFitting(<span class='PARAMLIST'></span>)</a><br>
+<a href='#MarkupBoxsetScalingLimitfactor'>MarkupBox.setScalingLimit(<span class='PARAMLIST'> factor </span>)</a><br>
+<a href='#MarkupBoxgetScalingLimit'>MarkupBox.getScalingLimit(<span class='PARAMLIST'></span>)</a><br>
+<a href='#MarkupBoxsetLineTightnesstightness'>MarkupBox.setLineTightness(<span class='PARAMLIST'> tightness </span>)</a><br>
+<a href='#MarkupBoxgetLineTightness'>MarkupBox.getLineTightness(<span class='PARAMLIST'></span>)</a><br>
+<a href='#MarkupBoxsetTightnessLimitminTightness'>MarkupBox.setTightnessLimit(<span class='PARAMLIST'> minTightness </span>)</a><br>
+<a href='#MarkupBoxgetTightnessLimit'>MarkupBox.getTightnessLimit(<span class='PARAMLIST'></span>)</a><br>
+<a href='#MarkupBoxsetPageShapeshape'>MarkupBox.setPageShape(<span class='PARAMLIST'> shape </span>)</a><br>
+<a href='#MarkupBoxgetPageShape'>MarkupBox.getPageShape(<span class='PARAMLIST'></span>)</a><br>
+<a href='#MarkupBoxsetMarkupTextmarkup'>MarkupBox.setMarkupText(<span class='PARAMLIST'> markup </span>)</a><br>
+<a href='#MarkupBoxgetMarkupText'>MarkupBox.getMarkupText(<span class='PARAMLIST'></span>)</a><br>
+<a href='#MarkupBoxparseLibrarylibraryString'>MarkupBox.parseLibrary(<span class='PARAMLIST'> libraryString </span>)</a><br>
+<a href='#MarkupBoxdrawgregion'>MarkupBox.draw(<span class='PARAMLIST'> g, region </span>)</a><br>
+<a href='#MarkupBoxdrawAsSingleLinegregion'>MarkupBox.drawAsSingleLine(<span class='PARAMLIST'> g, region </span>)</a><br>
+<a href='#MarkupBoxmeasuregregion'>MarkupBox.measure(<span class='PARAMLIST'> g, region </span>)</a><br>
+<a href='#GenderMarkupBoxMarkupBox'>GenderMarkupBox : MarkupBox</a><br>
+<a href='#GenderMarkupBoxsetGenderuseRightSideText'>GenderMarkupBox.setGender(<span class='PARAMLIST'> useRightSideText </span>)</a><br>
+<a href='#GenderMarkupBoxgetGender'>GenderMarkupBox.getGender(<span class='PARAMLIST'></span>)</a><br>
+<a href='#updateNameTagsmarkupboxgameComponent'>updateNameTags(<span class='PARAMLIST'> markupbox, gameComponent </span>)</a><br>
+<a href='#TextStyle'>TextStyle</a><br>
+<a href='#TextStyle'>TextStyle(<span class='PARAMLIST'></span>) <span class='CLASS'>constructor</span></a><br>
+<a href='#TextStylekey1value1key2value2'>TextStyle(<span class='PARAMLIST'> key1, value1, <span class='OPTIONAL'>[key2, value2, ...]</span> </span>) <span class='CLASS'>constructor</span></a><br>
+<a href='#TextStyleaddkey1value1key2value2'>TextStyle.add(<span class='PARAMLIST'> key1, value1, <span class='OPTIONAL'>[key2, value2, ...]</span> </span>)</a><br>
+<a href='#TextStyleaddtextStyle'>TextStyle.add(<span class='PARAMLIST'> textStyle </span>)</a><br>
+<a href='#TextStylegetkey'>TextStyle.get(<span class='PARAMLIST'> key </span>)</a><br>
+<a href='#TextStyleremovekey'>TextStyle.remove(<span class='PARAMLIST'> key </span>)</a><br>
+<a href='#StyleAttributes'>Style Attributes</a><br>
+<a href='#FAMILY'>FAMILY</a><br>
+<a href='#WEIGHT'>WEIGHT</a><br>
+<a href='#WIDTH'>WIDTH</a><br>
+<a href='#POSTURE'>POSTURE</a><br>
+<a href='#SIZE'>SIZE</a><br>
+<a href='#SUPERSCRIPT'>SUPERSCRIPT</a><br>
+<a href='#COLOURorCOLOR'>COLOUR (<span class='PARAMLIST'>or COLOR</span>)</a><br>
+<a href='#BGCOLOURorBGCOLOR'>BGCOLOUR (<span class='PARAMLIST'>or BGCOLOR</span>)</a><br>
+<a href='#UNDERLINE'>UNDERLINE</a><br>
+<a href='#STRIKETHROUGH'>STRIKETHROUGH</a><br>
+<a href='#SWAPCOLOURSorSWAPCOLORS'>SWAP_COLOURS (<span class='PARAMLIST'>or SWAP_COLORS</span>)</a><br>
+<a href='#LIGATURES'>LIGATURES</a><br>
+<a href='#TRACKING'>TRACKING</a><br>
+<a href='#PageShape'>PageShape <span class='CLASS'>class</span></a><br>
+<a href='#PageShapegetLeftInsety1y2'>PageShape.getLeftInset(<span class='PARAMLIST'> y1, y2 </span>)</a><br>
+<a href='#PageShapegetRightInsety1y2'>PageShape.getRightInset(<span class='PARAMLIST'> y1, y2 </span>)</a><br>
+<a href='#PageShapedebugDrawgrect'>PageShape.debugDraw(<span class='PARAMLIST'> g, rect </span>)</a><br>
+<a href='#PageShapeRECTANGLESHAPE'>PageShape.RECTANGLE_SHAPE</a><br>
+<a href='#PageShapeInsetShape'>PageShape.InsetShape <span class='CLASS'>class</span></a><br>
+<a href='#PageShapeInsetShapeleftInsetrightInset'>PageShape.InsetShape(<span class='PARAMLIST'> leftInset, rightInset </span>) <span class='CLASS'>constructor</span></a><br>
+<a href='#PageShapeCupShape'>PageShape.CupShape <span class='CLASS'>class</span></a><br>
+<a href='#PageShapeCupShapei1i2yi3i4'>PageShape.CupShape(<span class='PARAMLIST'> i1, i2, y, i3, i4 </span>) <span class='CLASS'>constructor</span></a><br>
+<a href='#PageShapeCompoundShape'>PageShape.CompoundShape <span class='CLASS'>class</span></a><br>
+<a href='#PageShapeCompoundShapetopShapeybottomShape'>PageShape.CompoundShape(<span class='PARAMLIST'> topShape, y, bottomShape </span>) <span class='CLASS'>constructor</span></a><br>
+<a href='#PageShapeMergedShape'>PageShape.MergedShape <span class='CLASS'>class</span></a><br>
+<a href='#PageShapeMergedShapeshape1shape2'>PageShape.MergedShape(<span class='PARAMLIST'> shape1, shape2 </span>) <span class='CLASS'>constructor</span></a><br>
+<a href='#PageShapeGeometricShapeoutline'>PageShape.GeometricShape(<span class='PARAMLIST'> outline </span>) <span class='CLASS'>constructor</span></a><br>
+</div>
+<p>
+<h3><a name='markupBoxsheetgenderAware'>markupBox(<span class='PARAMLIST'> sheet, <span class='OPTIONAL'>[genderAware]</span> </span>)</a></h3>
+
+ Creates a new markup renderer that can lay out text marked up with
+ Strange Eons tags. The renderer will be set up for use with
+ <tt>sheet</tt>, a DIY card face object.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> sheet </tt></td><td class='argdesc' valign='top'>a character sheet object, such as that passed to <tt>DIY.createFrontPainter()</tt></td></tr>
+
+<tr><td class='arg' valign='top'><tt> genderAware </tt></td><td class='argdesc' valign='top'>if <tt>true</tt> a <tt>GenderMarkupBox</tt> is returned</td></tr>
+
+</table>
+
+<p>
+<h3><a name='markupBoxppigenderAware'>markupBox(<span class='PARAMLIST'> ppi, <span class='OPTIONAL'>[genderAware]</span> </span>)</a></h3>
+
+ Creates a new markup renderer. The renderer will be set up for rendering
+ at a resolution of <tt>dpi</tt> pixels per inch.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> ppi </tt></td><td class='argdesc' valign='top'>the rendering resolution in pixels per inch</td></tr>
+
+<tr><td class='arg' valign='top'><tt> genderAware </tt></td><td class='argdesc' valign='top'>if <tt>true</tt> a <tt>GenderMarkupBox</tt> is returned</td></tr>
+
+</table>
+
+<p>
+<h2><a name='MarkupBox'>MarkupBox</a></h2>
+
+ An object capable of laying out styled text by parsing plain text that is
+ marked up with HTML-like tags.
+ To create an object of this class, it is normally recommended that you use
+ the <tt>markupBox( sheet )</tt> function, which will set the correct
+ resolution and define standard tags.
+<p>
+ <b>Note:</b> Because it is based on a Java class, you may use the JavaScript engine's
+ getter/setter syntax with a <tt>MarkupBox</tt>. For example, instead of
+ <tt>box.setDefaultStyle( style );</tt> you can write
+ <tt>box.defaultStyle = style;</tt>
+
+<p>
+<h2><a name='MarkupBoxppi'>MarkupBox(<span class='PARAMLIST'> ppi </span>) <span class='CLASS'>constructor</span></a></h2>
+
+ This constructor creates a default markup renderer which draws at the
+ specified resolution.
+ Rather than using a constructor, <tt>MarkupBox</tt>es are usually created
+ indirectly with the <tt>markupBox( sheet )</tt> helper function.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> ppi </tt></td><td class='argdesc' valign='top'>the assumed resolution for drawing, in pixels per inch</td></tr>
+
+</table>
+
+<p>
+<h3><a name='MarkupBoxdrawgregion'>MarkupBox.draw(<span class='PARAMLIST'> g, region </span>)</a></h3>
+
+ Lays out and draws the current markup text within the specified region.
+ Returns the y-coordinate where the next line of text would start.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> g </tt></td><td class='argdesc' valign='top'>the graphics context to use for drawing</td></tr>
+
+<tr><td class='arg' valign='top'><tt> region </tt></td><td class='argdesc' valign='top'>the area in which to draw text; this may be a <tt>Region</tt> or a <tt>java.awt.geom.Rectangle2D</tt></td></tr>
+
+</table>
+
+<p>
+<h2><a name='MarkupBoxConstants'>MarkupBox Constants</a></h2>
+
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> FIT_NONE </tt></td><td class='argdesc' valign='top'>do not try to fit text that is too long to fit in the given region</td></tr>
+
+<tr><td class='arg' valign='top'><tt> FIT_SCALE_TEXT </tt></td><td class='argdesc' valign='top'>fit long text by shrinking it down</td></tr>
+
+<tr><td class='arg' valign='top'><tt> FIT_TIGHTEN_LINE_SPACING </tt></td><td class='argdesc' valign='top'>fit long text by reducing line spacing</td></tr>
+
+<tr><td class='arg' valign='top'><tt> FIT_BOTH </tt></td><td class='argdesc' valign='top'>fit text by shrinking it and reducing the space between lines</td></tr>
+
+<tr><td class='arg' valign='top'><tt> LAYOUT_LEFT </tt></td><td class='argdesc' valign='top'>left-align lines of text</td></tr>
+
+<tr><td class='arg' valign='top'><tt> LAYOUT_CENTER </tt></td><td class='argdesc' valign='top'>center lines of text</td></tr>
+
+<tr><td class='arg' valign='top'><tt> LAYOUT_RIGHT </tt></td><td class='argdesc' valign='top'>right-align lines of text</td></tr>
+
+<tr><td class='arg' valign='top'><tt> LAYOUT_TOP </tt></td><td class='argdesc' valign='top'>vertically align text to the top of the region</td></tr>
+
+<tr><td class='arg' valign='top'><tt> LAYOUT_MIDDLE </tt></td><td class='argdesc' valign='top'>vertically center text within the region</td></tr>
+
+<tr><td class='arg' valign='top'><tt> LAYOUT_BOTTOM </tt></td><td class='argdesc' valign='top'>vertically align text to the bottom of the region</td></tr>
+
+<tr><td class='arg' valign='top'><tt> LAYOUT_JUSTIFY </tt></td><td class='argdesc' valign='top'>lines will be justified to fit the width of the region</td></tr>
+
+</table>
+
+<p>
+<h3><a name='MarkupBoxsetStyleForTagtagNamestyle'>MarkupBox.setStyleForTag(<span class='PARAMLIST'> tagName, style </span>)</a></h3>
+
+ Sets the style associated with a non-parametric tag.
+ If a style was set previously for this tag, it will be replaced by the new
+ style. If a replacement was associated with this tag, the replacement will be removed.
+ Do not include the angle brackets in the tag name.
+<p>
+ For example:
+<pre><span class='PLAIN'> </span><span class='KEYWORD1'>var</span><span class='PLAIN'> style = </span><span class='KEYWORD1'>new</span><span class='PLAIN'> TextStyle( WEIGHT, WEIGHT_LIGHT );</span>
+<span class='PLAIN'> box.setStyleForTag( </span><span class='LITERAL1'>"light"</span><span class='PLAIN'>, style );</span></pre><p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> tagName </tt></td><td class='argdesc' valign='top'>the name of the tag pair (<tt>&lt;<i>tagName</i>&gt; ... <tt>&lt;/<i>tagName</i>&gt;)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> style </tt></td><td class='argdesc' valign='top'>the <tt>TextStyle</tt> to be applied for this pair</td></tr>
+
+</table>
+
+<p>
+<h3><a name='MarkupBoxgetStyleForTagtagName'>MarkupBox.getStyleForTag(<span class='PARAMLIST'> tagName </span>)</a></h3>
+
+ Returns the <tt>TextStyle</tt> associated with the tag, or null if the tag does not
+ have a non-parametric style set (including if it has a replacement or
+ parametric style set).
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> tagName </tt></td><td class='argdesc' valign='top'>the name of the tag (without angle brackets) to fetch the style of</td></tr>
+
+</table>
+<p>
+ Returns the style for the requested tag, or <tt>null</tt> if it has no,
+ or a different kind, of definition.
+
+<p>
+<h3><a name='MarkupBoxsetParametricStyleForTagtagNamefactory'>MarkupBox.setParametricStyleForTag(<span class='PARAMLIST'> tagName, factory </span>)</a></h3>
+
+ Sets a parameter-based style for the given tag. When this tag occurs in the
+ markup text, the factory will be used to create the actual style based on
+ the tag's parameters. This is an advanced feature.
+<p>
+ The <tt>factory</tt> argument is an object that implements the interface
+ <tt>ca.cgjennings.layout.ParametricStyleFactory</tt>. This interface consists
+ of a single method:
+ <pre>TextStyle createStyle( java.lang.String[] parameters )</pre>
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> tagName </tt></td><td class='argdesc' valign='top'>the name of the tag (without angle brackets) to set the factory for</td></tr>
+
+<tr><td class='arg' valign='top'><tt> factory </tt></td><td class='argdesc' valign='top'>a <tt>ParametricStyleFactory</tt> to be used to generate styles for this tag</td></tr>
+
+</table>
+
+<p>
+<h3><a name='MarkupBoxgetParametricStyleForTagtagName'>MarkupBox.getParametricStyleForTag(<span class='PARAMLIST'> tagName </span>)</a></h3>
+
+ Returns the <tt>ParametricStyleFactory</tt> associated with the tag,
+ or <tt>null</tt> if the tag does not have a style set (including if it has
+ a replacement or style set).
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> tagName </tt></td><td class='argdesc' valign='top'>the name of the tag (without angle brackets) to get the factory for</td></tr>
+
+</table>
+<p>
+ Returns the factory for the requested tag, or <tt>null</tt> if it has no,
+ or a different kind, of definition.
+
+<p>
+<h3><a name='MarkupBoxsetReplacementForTagtagNamereplacement'>MarkupBox.setReplacementForTag(<span class='PARAMLIST'> tagName, replacement </span>)</a></h3>
+
+ Sets a replacement string to be associated with a particular tag.
+ When this exact tag (not including angle brackets) occurs in the markup text,
+ it will be replaced by the replacement string.
+<p>
+ For example:
+<pre><span class='PLAIN'> box.setReplacementForTag( </span><span class='LITERAL1'>"copyright"</span><span class='PLAIN'>, </span><span class='LITERAL1'>"©"</span><span class='PLAIN'> );</span></pre><p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> tagName </tt></td><td class='argdesc' valign='top'>the name of the replacement tag</td></tr>
+
+<tr><td class='arg' valign='top'><tt> replacement </tt></td><td class='argdesc' valign='top'>the text to replace the tag with</td></tr>
+
+</table>
+
+<p>
+<h3><a name='MarkupBoxgetReplacementForTagtagName'>MarkupBox.getReplacementForTag(<span class='PARAMLIST'> tagName </span>)</a></h3>
+
+ Returns the replacement String associated with the tag, or <tt>null</tt>
+ if the tag does not have a replacement set (including if it has a style
+ or parametric style set).
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> tagName </tt></td><td class='argdesc' valign='top'>the name of the tag to return the replacement string for</td></tr>
+
+</table>
+<p>
+ Returns the replacement string for the tag, or <tt>null</tt> if it has no,
+ or a different kind, of definition.
+
+<p>
+<h3><a name='MarkupBoxremoveTagtagName'>MarkupBox.removeTag(<span class='PARAMLIST'> tagName </span>)</a></h3>
+
+ Removes any style or replacement associated with this tag.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> tagName </tt></td><td class='argdesc' valign='top'>the name of the tag to be undefined</td></tr>
+
+</table>
+
+<p>
+<h3><a name='MarkupBoxremoveAllTags'>MarkupBox.removeAllTags(<span class='PARAMLIST'></span>)</a></h3>
+
+ Removes all style and replacement definitions.
+
+<p>
+<h3><a name='MarkupBoxsetDefaultStylestyle'>MarkupBox.setDefaultStyle(<span class='PARAMLIST'> style </span>)</a></h3>
+
+ Sets the base style that is applied to text when no other tags affect it.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> style </tt></td><td class='argdesc' valign='top'>the <tt>TextStyle</tt> that is applied to all text by default</td></tr>
+
+</table>
+
+<p>
+<h3><a name='MarkupBoxgetDefaultStyle'>MarkupBox.getDefaultStyle(<span class='PARAMLIST'></span>)</a></h3>
+
+ Returns the default style, which is the style that is applied to text when
+ no other tags are in effect. By modifying this style you can control what
+ "normal" text looks like.
+<p>
+ For example:
+<pre><span class='PLAIN'> box.defaultStyle = </span><span class='KEYWORD1'>new</span><span class='PLAIN'> TextStyle(</span>
+<span class='PLAIN'>     FAMILY, bodyFamily,</span>
+<span class='PLAIN'>     SIZE,   7,</span>
+<span class='PLAIN'>     WEIGHT, WEIGHT_BOLD</span>
+<span class='PLAIN'> );</span></pre><p>
+ You can also modify the default style instead of replacing it. The following
+ changes just the size without affecting other attributes:
+<pre><span class='PLAIN'> box.defaultStyle.add( SIZE, 10 );</span></pre><p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> style </tt></td><td class='argdesc' valign='top'>the <tt>TextStyle</tt> that is applied to all text by default</td></tr>
+
+</table>
+
+<p>
+<h3><a name='MarkupBoxsetAlignmentalignment'>MarkupBox.setAlignment(<span class='PARAMLIST'> alignment </span>)</a></h3>
+
+ Sets the horizontal and vertical alignment of text within a drawn rectangle.
+ This is the logical <i>or</i> of one of <tt>LAYOUT_LEFT</tt>, <tt>LAYOUT_RIGHT</tt>,
+ or <tt>LAYOUT_CENTER</tt> with one of <tt>LAYOUT_TOP</tt>, <tt>LAYOUT_BOTTOM</tt>,
+ or <tt>LAYOUT_MIDDLE</tt>. In addition, if the <tt>LAYOUT_JUSTIFY</tt> bit
+ is set, then paragraphs will be fully justified so that they fill the
+ entire region width.
+<p>
+ For example:
+<pre><span class='PLAIN'> box.alignment = LAYOUT_CENTER | LAYOUT_TOP | LAYOUT_JUSTIFY;</span></pre><p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> alignment </tt></td><td class='argdesc' valign='top'>a bitmask of alignment options</td></tr>
+
+</table>
+
+<p>
+<h3><a name='MarkupBoxgetAlignment'>MarkupBox.getAlignment(<span class='PARAMLIST'></span>)</a></h3>
+
+ Returns the alignment bitmask that describes how text is laid out within
+ a drawn rectangle.
+<p>
+ For example:
+<pre><span class='PLAIN'> </span><span class='KEYWORD1'>if</span><span class='PLAIN'>( (box.alignment &amp; LAYOUT_LEFT) != 0 ) println( </span><span class='LITERAL1'>"left-aligned text"</span><span class='PLAIN'> );</span></pre><p>
+ Returns the current alignment value.
+
+<p>
+<h3><a name='MarkupBoxsetHeadlineAlignmentalignment'>MarkupBox.setHeadlineAlignment(<span class='PARAMLIST'> alignment </span>)</a></h3>
+
+ Sets the horizontal alignment used for text in headline tags (<tt>&lt;h1&gt;</tt>,
+ <tt>&lt;h2&gt;</tt>, and so on). This is similar to <tt>setAlignment()</tt>,
+ but only the horizontal alignment value is used.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> alignment </tt></td><td class='argdesc' valign='top'>a horizontal alignment option</td></tr>
+
+</table>
+
+<p>
+<h3><a name='MarkupBoxgetHeadlineAlignment'>MarkupBox.getHeadlineAlignment(<span class='PARAMLIST'></span>)</a></h3>
+
+ Returns the current horizontal alignment setting for heading tags.
+
+<p>
+<h3><a name='MarkupBoxsetTabWidthtabWidthInInches'>MarkupBox.setTabWidth(<span class='PARAMLIST'> tabWidthInInches </span>)</a></h3>
+
+ Sets the distance, in inches, between tab stops.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> tabWidthInInches </tt></td><td class='argdesc' valign='top'>the default gap between tab stops</td></tr>
+
+</table>
+
+<p>
+<h3><a name='MarkupBoxgetTabWidth'>MarkupBox.getTabWidth(<span class='PARAMLIST'></span>)</a></h3>
+
+ Returns the default distance, in inches, between tab stops.
+ If multiple stops have been set, this returns the first tab width.
+ It is equivalent to <tt>getTabWidths()[0]</tt>.
+
+<p>
+<h3><a name='MarkupBoxsetTabWidthstabWidthsInInches'>MarkupBox.setTabWidths(<span class='PARAMLIST'> tabWidthsInInches<span class='OPTIONAL'>[]</span> </span>)</a></h3>
+
+ Sets the distance, in inches, between tab stops.
+ This method accepts multiple tab positions as an array, which sets a
+ series of variable-width tab stops instead of a fixed tab size.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> tabWidthsInInches[] </tt></td><td class='argdesc' valign='top'>the default gap between tab stops</td></tr>
+
+</table>
+
+<p>
+<h3><a name='MarkupBoxgetTabWidths'>MarkupBox.getTabWidths(<span class='PARAMLIST'></span>)</a></h3>
+
+ Returns an array of tab widths, in inches. If only one stop has been set,
+ perhaps using <tt>setTabWidth</tt>, then the length of the array is 1.
+
+<p>
+<h3><a name='MarkupBoxsetTextFittingfittingStyle'>MarkupBox.setTextFitting(<span class='PARAMLIST'> fittingStyle </span>)</a></h3>
+
+ Sets the fitting methods that will be used to shrink text that is too long
+ to fit in the text region. One of <tt>FIT_NONE</tt>,
+ <tt>FIT_TIGHTEN_LINE_SPACING</tt>, <tt>FIT_SCALE_TEXT</tt>, or <tt>FIT_BOTH</tt>.
+
+<p>
+<h3><a name='MarkupBoxgetTextFitting'>MarkupBox.getTextFitting(<span class='PARAMLIST'></span>)</a></h3>
+
+ Returns the current text fitting method.
+
+<p>
+<h3><a name='MarkupBoxsetScalingLimitfactor'>MarkupBox.setScalingLimit(<span class='PARAMLIST'> factor </span>)</a></h3>
+
+ Sets the limit for shrinking text so that it can be scaled down to no more
+ than <tt>factor</tt> * 100% of original size.
+
+<p>
+<h3><a name='MarkupBoxgetScalingLimit'>MarkupBox.getScalingLimit(<span class='PARAMLIST'></span>)</a></h3>
+
+ Returns the current scaling limit for text shrinking.
+
+<p>
+<h3><a name='MarkupBoxsetLineTightnesstightness'>MarkupBox.setLineTightness(<span class='PARAMLIST'> tightness </span>)</a></h3>
+
+ Sets how tightly lines are grouped together. For normal line spacing, use
+ 1.0; double-spaced lines would be 2.0. Values less than 1 reduce the standard
+ amount of space between lines; at 0 the bottom of one line will normally touch
+ or overlap the top of the next. The exact effect of this setting depends somewhat
+ on the font being used.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> tightness </tt></td><td class='argdesc' valign='top'>the tightness of interline spacing (normally 1.0)</td></tr>
+
+</table>
+
+<p>
+<h3><a name='MarkupBoxgetLineTightness'>MarkupBox.getLineTightness(<span class='PARAMLIST'></span>)</a></h3>
+
+ Returns the current line tightness.
+
+<p>
+<h3><a name='MarkupBoxsetTightnessLimitminTightness'>MarkupBox.setTightnessLimit(<span class='PARAMLIST'> minTightness </span>)</a></h3>
+
+ Sets the minimum line tightness that can be used when line spacing is reduced
+ to fit long text.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> minTightness </tt></td><td class='argdesc' valign='top'>the smallest amount that line tightness can be reduced to when fitting text</td></tr>
+
+</table>
+
+<p>
+<h3><a name='MarkupBoxgetTightnessLimit'>MarkupBox.getTightnessLimit(<span class='PARAMLIST'></span>)</a></h3>
+
+ Returns the current line tightness limit.
+
+<p>
+<h3><a name='MarkupBoxsetPageShapeshape'>MarkupBox.setPageShape(<span class='PARAMLIST'> shape </span>)</a></h3>
+
+ Sets the <tt>PageShape</tt> that lines of text will conform to.
+ A <tt>PageShape</tt> is used to flow text around other elements of a component.
+ The default shape is <tt>PageShape.RECTANGLE_SHAPE</tt>, which simply uses the
+ sides of the region passed to the <tt>draw</tt> method.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> shape </tt></td><td class='argdesc' valign='top'>the desired <tt>PageShape</tt></td></tr>
+
+</table>
+
+<p>
+<h3><a name='MarkupBoxgetPageShape'>MarkupBox.getPageShape(<span class='PARAMLIST'></span>)</a></h3>
+
+ Returns the <tt>PageShape</tt> that will be used to shape lines of text.
+
+<p>
+<h3><a name='MarkupBoxsetMarkupTextmarkup'>MarkupBox.setMarkupText(<span class='PARAMLIST'> markup </span>)</a></h3>
+
+ Sets the markup text that will be used when laying out text.
+
+<p>
+<h3><a name='MarkupBoxgetMarkupText'>MarkupBox.getMarkupText(<span class='PARAMLIST'></span>)</a></h3>
+
+ Returns the current markup text that will be used when laying out text.
+
+<p>
+<h3><a name='MarkupBoxparseLibrarylibraryString'>MarkupBox.parseLibrary(<span class='PARAMLIST'> libraryString </span>)</a></h3>
+
+ Processes a markup string, retaining only any definitions that are created
+ using <tt>&lt;define&gt;</tt> tags. Once some markup text (other than a library)
+ is parsed, all definitions will be cleared again.
+ Therefore, libraries must be parsed again before <i>each</i> call to
+ <tt>setMarkupText</tt>.
+<p>
+ This method clears the current markup text.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> libraryString </tt></td><td class='argdesc' valign='top'>a string containing markup definitions (like a case book library)</td></tr>
+
+</table>
+
+<p>
+<h3><a name='MarkupBoxdrawgregion'>MarkupBox.draw(<span class='PARAMLIST'> g, region </span>)</a></h3>
+
+ Lays out and draws the current markup text within the specified region.
+<p>
+ Returns the y-coordinate where the next line of text would be drawn.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> g </tt></td><td class='argdesc' valign='top'>the graphics context to use for drawing</td></tr>
+
+<tr><td class='arg' valign='top'><tt> region </tt></td><td class='argdesc' valign='top'>the area in which to draw text; this may be a <tt>Region</tt> or a <tt>java.awt.geom.Rectangle2D</tt></td></tr>
+
+</table>
+
+<p>
+<h3><a name='MarkupBoxdrawAsSingleLinegregion'>MarkupBox.drawAsSingleLine(<span class='PARAMLIST'> g, region </span>)</a></h3>
+
+ Lays out and draws the current markup text within the specified region.
+ The renderer will not insert line breaks into the text at the end of a line,
+ but will instead shrink the text as needed to fit the line within the width
+ of the given region. (If the source text contains hard line breaks then the
+ resulting layout will still consist of multiple lines, but only the width
+ of the last line will be used to determine the scale of the text.)
+<p>
+ Returns the width of the last line.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> g </tt></td><td class='argdesc' valign='top'>the graphics context to use for drawing</td></tr>
+
+<tr><td class='arg' valign='top'><tt> region </tt></td><td class='argdesc' valign='top'>the area in which to draw text; this may be a <tt>Region</tt> or a <tt>java.awt.geom.Rectangle2D</tt></td></tr>
+
+</table>
+
+<p>
+<h3><a name='MarkupBoxmeasuregregion'>MarkupBox.measure(<span class='PARAMLIST'> g, region </span>)</a></h3>
+
+ Lays out the current markup text without drawing it, returning the height
+ of the text.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> g </tt></td><td class='argdesc' valign='top'>the graphics context to use for drawing</td></tr>
+
+<tr><td class='arg' valign='top'><tt> region </tt></td><td class='argdesc' valign='top'>the area in which to lay out the ; this may be a <tt>Region</tt> or a <tt>java.awt.geom.Rectangle2D</tt></td></tr>
+
+</table>
+
+<p>
+<h2><a name='GenderMarkupBoxMarkupBox'>GenderMarkupBox : MarkupBox</a></h2>
+
+ A <tt>GenderMarkupBox</tt> is a subclass of <tt>MarkupBox</tt>
+ that includes a boolean "gender" attribute. Tags that include a slash
+ in the middle (&lt;like/this&gt;) will be converted into the text before
+ the slash (if gender is <tt>false</tt>) or into the text after the slash (if gender
+ is <tt>true</tt>). This allows you to use markup that is sensitive to some binary
+ property, like a character's gender: <tt>&lt;His/Her&gt; monkey bit
+ &lt;him/her&gt;</tt>. Since tags are closed with tag names that start with
+ a slash, a dash is used to indicate an empty string (as in
+ <tt>prophet&lt;-/ess&gt;</tt>).
+
+<p>
+<h3><a name='GenderMarkupBoxsetGenderuseRightSideText'>GenderMarkupBox.setGender(<span class='PARAMLIST'> useRightSideText </span>)</a></h3>
+
+ Sets the markup box's gender, which controls which text from slash
+ divided gender tags will be used.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> useRightSideText </tt></td><td class='argdesc' valign='top'>if <tt>true</tt>, the text after the slash is used</td></tr>
+
+</table>
+
+<p>
+<h3><a name='GenderMarkupBoxgetGender'>GenderMarkupBox.getGender(<span class='PARAMLIST'></span>)</a></h3>
+
+ Returns the markup box's current gender. If <tt>true</tt>, the text
+ after the slash is used for tags that include a slash.
+
+<p>
+<h3><a name='updateNameTagsmarkupboxgameComponent'>updateNameTags(<span class='PARAMLIST'> markupbox, gameComponent </span>)</a></h3>
+
+ Updates a <tt>MarkupBox</tt>'s <tt>&lt;name&gt;</tt> family of tags using
+ a component's current name. Call this at the start of your painting function
+ before drawing a box's text if you want name tags to work properly. This
+ function sets all of the name tags (<tt>&lt;name&gt;</tt>,
+ <tt>&lt;lastname&gt;</tt>, <tt>&lt;fullname&gt;</tt>) based simply on the
+ component's standard name. For more complete control, use
+ <tt>sheet.setNamesForRenderer( markupbox, firstName, lastName, fullName )</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> markupbox </tt></td><td class='argdesc' valign='top'>the <tt>MarkupBox</tt> to update</td></tr>
+
+<tr><td class='arg' valign='top'><tt> gameComponent </tt></td><td class='argdesc' valign='top'>the component (such as a <tt>DIY</tt> instance) to extract a name from</td></tr>
+
+</table>
+<p>
+
+<p>
+<h2><a name='TextStyle'>TextStyle</a></h2>
+
+ A <tt>TextStyle</tt> consists of one or more style attributes that can be
+ applied to text. Style attributes consist of a style key and an appropriate
+ value. If an attribute is added to a text style and the style already contains
+ an attribute with the same key, the new attribute replaces the old one.
+ (For example, if you add a new font family attribute to a style, it replaces the old
+ family, although other attributes such as size and weight would remain the same.)
+
+<p>
+<h2><a name='TextStyle'>TextStyle(<span class='PARAMLIST'></span>) <span class='CLASS'>constructor</span></a></h2>
+
+ This constructor creates a new, empty style.
+
+<p>
+<h3><a name='TextStylekey1value1key2value2'>TextStyle(<span class='PARAMLIST'> key1, value1, <span class='OPTIONAL'>[key2, value2, ...]</span> </span>) <span class='CLASS'>constructor</span></a></h3>
+
+ This constructor creates a text style that combines the listed style attributes.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> key1, value1,&nbsp;... </tt></td><td class='argdesc' valign='top'>pairs of text attribute keys and values</td></tr>
+
+</table>
+
+<p>
+<h3><a name='TextStyleaddkey1value1key2value2'>TextStyle.add(<span class='PARAMLIST'> key1, value1, <span class='OPTIONAL'>[key2, value2, ...]</span> </span>)</a></h3>
+
+ Merges the listed style attributes into this text style.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> key1, value1,&nbsp;... </tt></td><td class='argdesc' valign='top'>pairs of text attribute keys and values</td></tr>
+
+</table>
+
+<p>
+<h3><a name='TextStyleaddtextStyle'>TextStyle.add(<span class='PARAMLIST'> textStyle </span>)</a></h3>
+
+ Merges the style represented by <tt>textStyle</tt> into this text style.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> textStyle </tt></td><td class='argdesc' valign='top'>a model <tt>TextStyle</tt> style whose settings will be copied              into this style</td></tr>
+
+</table>
+
+<p>
+<h3><a name='TextStylegetkey'>TextStyle.get(<span class='PARAMLIST'> key </span>)</a></h3>
+
+ Returns the value for the given style attribute key that will be set by this
+ style, or <tt>null</tt> if it does not modify that attribute.
+
+<p>
+<h3><a name='TextStyleremovekey'>TextStyle.remove(<span class='PARAMLIST'> key </span>)</a></h3>
+
+ Removes the style attribute with this key from this text style.
+
+<p>
+<h2><a name='StyleAttributes'>Style Attributes</a></h2>
+
+ Following are the style attribute keys (and the permitted values) that can
+ be set on a text style.
+
+<p>
+<h2><a name='FAMILY'>FAMILY</a></h2>
+
+ The value of this attribute is a string that names the font family to be used.
+ The following "standard family names" are defined for convenience:
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> FAMILY_BODY </tt></td><td class='argdesc' valign='top'>the standard Strange Eons body text font, if the core fonts      library is installed (and otherwise a stand-in font)</td></tr>
+
+<tr><td class='arg' valign='top'><tt> FAMILY_SERIF </tt></td><td class='argdesc' valign='top'>a default serif family</td></tr>
+
+<tr><td class='arg' valign='top'><tt> FAMILY_SANS_SERIF </tt></td><td class='argdesc' valign='top'>a default sans-serif family</td></tr>
+
+<tr><td class='arg' valign='top'><tt> FAMILY_MONOSPACED </tt></td><td class='argdesc' valign='top'>a default monospace family</td></tr>
+
+</table>
+
+<p>
+<h2><a name='WEIGHT'>WEIGHT</a></h2>
+
+ The value of this attribute controls the weight of text. Not all weights
+ may have visible effect. The following standard weights are defined
+ (medium is the "normal" weight):
+<pre><span class='PLAIN'> WEIGHT_EXTRALIGHT</span>
+<span class='PLAIN'> WEIGHT_LIGHT</span>
+<span class='PLAIN'> WEIGHT_DEMILIGHT</span>
+<span class='PLAIN'> WEIGHT_REGULAR</span>
+<span class='PLAIN'> WEIGHT_SEMIBOLD</span>
+<span class='PLAIN'> WEIGHT_MEDIUM</span>
+<span class='PLAIN'> WEIGHT_DEMIBOLD</span>
+<span class='PLAIN'> WEIGHT_BOLD</span>
+<span class='PLAIN'> WEIGHT_HEAVY</span>
+<span class='PLAIN'> WEIGHT_EXTRABOLD</span>
+<span class='PLAIN'> WEIGHT_ULTRABOLD</span></pre><p>
+ <b>Note:</b> The correctness of this attribute relies
+ on underlying support from the platform and JRE. Some weights may have no
+ effect. (The regular and bold weights should always be available.)
+
+<p>
+<h2><a name='WIDTH'>WIDTH</a></h2>
+
+ The value of this attribute controls the width of text. The following
+ standard widths are defined (regular is the "normal" width):
+<pre><span class='PLAIN'> WIDTH_CONDENSED</span>
+<span class='PLAIN'> WIDTH_SEMICONDENSED</span>
+<span class='PLAIN'> WIDTH_REGULAR</span>
+<span class='PLAIN'> WIDTH_SEMIEXTENDED</span>
+<span class='PLAIN'> WIDTH_EXTENDED</span></pre>
+<p>
+<h2><a name='POSTURE'>POSTURE</a></h2>
+
+ The value of this attribute controls the posture of text.
+ The following standard postures are defined
+ (regular is the "normal" posture, oblique is the standard
+ italic posture):
+<pre><span class='PLAIN'> POSTURE_REGULAR</span>
+<span class='PLAIN'> POSTURE_OBLIQUE</span></pre>
+<p>
+<h2><a name='SIZE'>SIZE</a></h2>
+
+ The value of this attribute is a number that controls the point size of text.
+
+<p>
+<h2><a name='SUPERSCRIPT'>SUPERSCRIPT</a></h2>
+
+ The absolute value of this attribute is a number that specifies the number of levels
+ of superscripting or subscripting that are in effect (normally 0, positive
+ values specify superscripting, negative values specify subscripting). The
+ following standard values are defined:
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> SUPERSCRIPT_SUPER </tt></td><td class='argdesc' valign='top'>one level of superscript</td></tr>
+
+<tr><td class='arg' valign='top'><tt> SUPERSCRIPT_SUB </tt></td><td class='argdesc' valign='top'>one level of subscript</td></tr>
+
+</table>
+
+<p>
+<h2><a name='COLOURorCOLOR'>COLOUR (<span class='PARAMLIST'>or COLOR</span>)</a></h2>
+
+ A <tt>java.awt.Paint</tt> object that controls the text colour.
+
+<p>
+<h2><a name='BGCOLOURorBGCOLOR'>BGCOLOUR (<span class='PARAMLIST'>or BGCOLOR</span>)</a></h2>
+
+ A <tt>java.awt.Paint</tt> object that controls the background colour
+ of text.
+
+<p>
+<h2><a name='UNDERLINE'>UNDERLINE</a></h2>
+
+ This attribute's value controls text underlining. The standard value
+ <tt>UNDERLINE_ON</tt> is defined.
+
+<p>
+<h2><a name='STRIKETHROUGH'>STRIKETHROUGH</a></h2>
+
+ This attribute's value controls text strikethrough. The standard value
+ <tt>STRIKETHROUGH_ON</tt> is defined.
+
+<p>
+<h2><a name='SWAPCOLOURSorSWAPCOLORS'>SWAP_COLOURS (<span class='PARAMLIST'>or SWAP_COLORS</span>)</a></h2>
+
+ This attribute's value controls whether the foreground and background colours
+ are swapped. The standard value
+ <tt>SWAP_COLOURS_ON</tt> is defined.
+
+<p>
+<h2><a name='LIGATURES'>LIGATURES</a></h2>
+
+ This attribute's value controls whether automatic ligature replacement is
+ enabled. The standard value <tt>LIGATURES_ON</tt> is defined.
+
+<p>
+<h2><a name='TRACKING'>TRACKING</a></h2>
+
+ The value of this attribute is a number that controls tracking (spacing between
+ letters). A value of 0 provides standard letter spacing. Positive values
+ increase the space between letters, while negative values move them closer
+ together. The following standard values are defined:
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> TRACKING_TIGHT </tt></td><td class='argdesc' valign='top'>provide tighter (i.e., closer together) than normal tracking</td></tr>
+
+<tr><td class='arg' valign='top'><tt> TRACKING_LOOSE </tt></td><td class='argdesc' valign='top'>provide looser than normal tracking</td></tr>
+
+</table>
+
+<p>
+<h2><a name='PageShape'>PageShape <span class='CLASS'>class</span></a></h2>
+
+ Shapes the left and right margins of drawn text.
+ A shape is defined in terms of insets relative to the original margins.
+ A <tt>MarkupBox</tt> will query the <tt>PageShape</tt> with a range of Y-positions
+ covered by a line of text, and the shape must return the narrowest (largest)
+ inset within that range.
+ Positive inset values always reduce the margins; negative values increase
+ them. A zero inset leaves the margin unchanged.
+<p>
+ To create a new shape, subclass <tt>PageShape</tt> and override
+ <tt>getLeftInset</tt> and <tt>getRightInset</tt>. Optionally, you can
+ also override <tt>debugDraw</tt> to draw lines indicating how the margins
+ have changed. If you do not override this method, then no margin lines
+ (dashed blue lines) will be drawn when the <i>Show Regions</i> plug-in is
+ activated.
+<p>
+ In addition to creating your own shapes, a number of predefined shapes
+ are also available to handle common cases.
+
+<p>
+<h3><a name='PageShapegetLeftInsety1y2'>PageShape.getLeftInset(<span class='PARAMLIST'> y1, y2 </span>)</a></h3>
+
+ Returns the narrowest (maximum) left edge inset between <tt>y1</tt> and <tt>y2</tt>.
+ When calling this method, the condition <tt>y1 &lt;= y2</tt> must hold.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> y1 </tt></td><td class='argdesc' valign='top'>the top Y-coordinate in the range</td></tr>
+
+<tr><td class='arg' valign='top'><tt> y2 </tt></td><td class='argdesc' valign='top'>the bottom Y-coordinate in the range</td></tr>
+
+</table>
+
+<p>
+<h3><a name='PageShapegetRightInsety1y2'>PageShape.getRightInset(<span class='PARAMLIST'> y1, y2 </span>)</a></h3>
+
+ Returns the narrowest (maximum) right edge inset between <tt>y1</tt> and <tt>y2</tt>.
+ When calling this method, the condition <tt>y1 &lt;= y2</tt> must hold.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> y1 </tt></td><td class='argdesc' valign='top'>the top Y-coordinate in the range</td></tr>
+
+<tr><td class='arg' valign='top'><tt> y2 </tt></td><td class='argdesc' valign='top'>the bottom Y-coordinate in the range</td></tr>
+
+</table>
+
+<p>
+<h3><a name='PageShapedebugDrawgrect'>PageShape.debugDraw(<span class='PARAMLIST'> g, rect </span>)</a></h3>
+
+ Called when a markup box is drawn and <i>Show Regions</i> is activated.
+ This method should draw lines or curves to indicate the shape visually.
+ The passed-in graphics context will already have been initialized with
+ an appropriate stroke, paint, and transform.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> g </tt></td><td class='argdesc' valign='top'>a <tt>Graphicsa2D</tt> instance that has been initialized with an appropriate scale and style</td></tr>
+
+<tr><td class='arg' valign='top'><tt> rect </tt></td><td class='argdesc' valign='top'>the text drawing region to use to draw the margins for</td></tr>
+
+</table>
+
+<p>
+<h3><a name='PageShapeRECTANGLESHAPE'>PageShape.RECTANGLE_SHAPE</a></h3>
+
+ A shared immutable instance of a <tt><a href='#PageShape'>PageShape</a></tt> that defines the default
+ shape for text: insets are always 0, so text conforms to the region passed
+ to <tt>draw</tt>.
+
+<p>
+<h3><a name='PageShapeInsetShape'>PageShape.InsetShape <span class='CLASS'>class</span></a></h3>
+
+ A <code>PageShape</code> that modifies that standard margin by a constant
+ amount for all Y-positions. This is often useful when creating a
+ <code>CompoundShape</code>.
+
+<p>
+<h3><a name='PageShapeInsetShapeleftInsetrightInset'>PageShape.InsetShape(<span class='PARAMLIST'> leftInset, rightInset </span>) <span class='CLASS'>constructor</span></a></h3>
+
+ Creates a new <tt>PageShape.InsetShape</tt> with constant margin insets
+ defined by <tt>leftMargin</tt> and <tt>rightMargin</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> leftMargin </tt></td><td class='argdesc' valign='top'>the number of units to offset the left edge of the text region</td></tr>
+
+<tr><td class='arg' valign='top'><tt> rightMargin </tt></td><td class='argdesc' valign='top'>the number of units to offset the right edge of the text region</td></tr>
+
+</table>
+
+<p>
+<h3><a name='PageShapeCupShape'>PageShape.CupShape <span class='CLASS'>class</span></a></h3>
+
+ A <code>PageShape</code> that is optimized for the most common case:
+ a rectangle that becomes wider or narrower after a certain y-point
+ is reached, e.g.:
+<p>
+<pre><span class='PLAIN'> i1        i2              i1      i2</span>
+<span class='PLAIN'>  +--------+                +------+</span>
+<span class='PLAIN'>  |        |                |      |</span>
+<span class='PLAIN'>  |        |       or       |      |</span>
+<span class='PLAIN'>  +--+  +--+  y          +--+      |  y</span>
+<span class='PLAIN'>     |  |                |         |</span>
+<span class='PLAIN'>     +--+                +---------+</span>
+<span class='PLAIN'>    i3  i4              i3         i4 (same as i2)</span></pre>
+<p>
+<h3><a name='PageShapeCupShapei1i2yi3i4'>PageShape.CupShape(<span class='PARAMLIST'> i1, i2, y, i3, i4 </span>) <span class='CLASS'>constructor</span></a></h3>
+
+ Creates a new <tt>PageShape.CupShape</tt> that switches from insets
+ <tt>i1, i2</tt> to <tt>i3, i4</tt> at Y-position <tt>y</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> i1 </tt></td><td class='argdesc' valign='top'>the left inset to use in the top part of the shape</td></tr>
+
+<tr><td class='arg' valign='top'><tt> i2 </tt></td><td class='argdesc' valign='top'>the right inset to use in the top part of the shape</td></tr>
+
+<tr><td class='arg' valign='top'><tt> y </tt></td><td class='argdesc' valign='top'>the Y-coordinate at which the insets switch from top to bottom</td></tr>
+
+<tr><td class='arg' valign='top'><tt> i3 </tt></td><td class='argdesc' valign='top'>the left inset to use in the bottom part of the shape</td></tr>
+
+<tr><td class='arg' valign='top'><tt> i4 </tt></td><td class='argdesc' valign='top'>the right inset to use in the bottom part of the shape</td></tr>
+
+</table>
+
+<p>
+<h3><a name='PageShapeCompoundShape'>PageShape.CompoundShape <span class='CLASS'>class</span></a></h3>
+
+ A <tt>PageShape</tt> that switches between two <tt>PageShape</tt>s
+ at a specified Y-position. This may be used to build more complex shapes
+ from simpler ones. Either or both of the shapes may themselves
+ be <tt>CompoundShape</tt>s.
+<p>
+ The following example uses a compound shape to create a "plus" or
+ "double cup" shape, that is, a cup shape that flows around decorations
+ in up to four corners (as opposed to <tt>PageShape.CupShape</tt>, which
+ handles no more than two:
+<pre><span class='PLAIN'> </span><span class='COMMENT1'>// Create a "double cup" shape with this form:</span>
+<span class='PLAIN'> </span><span class='COMMENT1'>//</span>
+<span class='PLAIN'> </span><span class='COMMENT1'>//                 i1    i2</span>
+<span class='PLAIN'> </span><span class='COMMENT1'>//                 +------+</span>
+<span class='PLAIN'> </span><span class='COMMENT1'>//                 |      |</span>
+<span class='PLAIN'> </span><span class='COMMENT1'>//             0 +-+      +-+ 0  y1</span>
+<span class='PLAIN'> </span><span class='COMMENT1'>//               |          |</span>
+<span class='PLAIN'> </span><span class='COMMENT1'>//             0 +---+  +---+ 0  y2</span>
+<span class='PLAIN'> </span><span class='COMMENT1'>//                   |  |</span>
+<span class='PLAIN'> </span><span class='COMMENT1'>//                   +--+</span>
+<span class='PLAIN'> </span><span class='COMMENT1'>//                  i3  i4</span>
+<span class='END_MARKER'></span>
+<span class='PLAIN'> </span><span class='KEYWORD1'>new</span><span class='PLAIN'> PageShape.CompoundShape(</span>
+<span class='PLAIN'>     </span><span class='KEYWORD1'>new</span><span class='PLAIN'> PageShape.CupShape( i1, i2, y1, 0, 0 ),</span>
+<span class='PLAIN'>     y2,</span>
+<span class='PLAIN'>     </span><span class='KEYWORD1'>new</span><span class='PLAIN'> PageShape.InsetShape( i3, i4 )</span>
+<span class='PLAIN'> );</span></pre>
+<p>
+<h3><a name='PageShapeCompoundShapetopShapeybottomShape'>PageShape.CompoundShape(<span class='PARAMLIST'> topShape, y, bottomShape </span>) <span class='CLASS'>constructor</span></a></h3>
+
+ Creates a new <tt>PageShape.CompoundShape</tt> that uses <tt>topShape</tt>
+ until the Y-position <tt>y</tt> is reached, then switches to <tt>bottomShape</tt>.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> topShape </tt></td><td class='argdesc' valign='top'>the shape to use until <tt>y</tt> is reached</td></tr>
+
+<tr><td class='arg' valign='top'><tt> y </tt></td><td class='argdesc' valign='top'>the Y-position at which to switch shapes</td></tr>
+
+<tr><td class='arg' valign='top'><tt> bottomShape </tt></td><td class='argdesc' valign='top'>the shape to use after <tt>y</tt> is reached</td></tr>
+
+</table>
+
+<p>
+<h3><a name='PageShapeMergedShape'>PageShape.MergedShape <span class='CLASS'>class</span></a></h3>
+
+ A shape that merges two source shapes into a single shape.
+ The resulting shape always uses the narrowest margin
+ of the two source shapes at any given Y-position.
+ For example, to ensure that a shape never has a negative
+ inset (which lets text escape from the drawing region),
+ merge it with <tt>PageShape.RECTANGLE_SHAPE</tt>.
+
+<p>
+<h3><a name='PageShapeMergedShapeshape1shape2'>PageShape.MergedShape(<span class='PARAMLIST'> shape1, shape2 </span>) <span class='CLASS'>constructor</span></a></h3>
+
+ Creates a new <tt>PageShape.MergedShape</tt> that merges
+ <tt>shape1</tt> and <tt>shape2</tt> into a single shape.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> shape1 </tt></td><td class='argdesc' valign='top'>a <tt>PageShape</tt></td></tr>
+
+<tr><td class='arg' valign='top'><tt> shape2 </tt></td><td class='argdesc' valign='top'>a second <tt>PageShape</tt> to be combined with <tt>shape1</tt></td></tr>
+
+</table>
+
+<p>
+<h3><a name='PageShapeGeometricShapeoutline'>PageShape.GeometricShape(<span class='PARAMLIST'> outline </span>) <span class='CLASS'>constructor</span></a></h3>
+
+ A <tt>PageShape</tt> that redefines margins to match a shape used for
+ drawing (that is, a
+ <tt><a href='javadoc:java/awt/Shape.html'>java.awt.Shape</a></tt>).
+ This allows you to fit margins to an arbitrary polygon, an ellipse, etc. The
+ margins at a given Y point will be adjusted to touch the leftmost and
+ rightmost points on the shape at that Y position. If needed, the shape must
+ be transformed so that it intersects the text drawing region prior to
+ creating the <tt>PageShape</tt>. Creating a <tt>GeometricShape</tt> is a
+ fairly expensive operation, especially compared to other <tt>PageShape</tt>s.
+ It is recommended that you create them ahead of time and reuse them where
+ possible, instead of creating them on the fly in your painting code.
+<p>
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> outline </tt></td><td class='argdesc' valign='top'>a <tt>Shape</tt> that defines an outline to create a <tt>PageShape</tt> from</td></tr>
+
+</table>
+
+<p style='margin-top: 20pt;'><a href='#top'>Contents</a></body>
+</html>

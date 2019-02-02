@@ -1,0 +1,182 @@
+<!DOCTYPE html><html>
+<head>
+<title>Script Library Documentation project</title>
+<style>
+body { font-family: sans-serif; font-size: 14pt; line-height: 1.1; }
+
+h1, h2, h3 { font-weight: bold }
+h1 { font-size: 16pt; margin-top: 4pt; margin-bottom: 4pt; }
+h2 { font-size: 14pt; margin-top: 28pt; margin-bottom: 2pt; }
+h3 { font-size: 12pt; margin-top: 18pt; margin-bottom: 2pt;  }
+
+a { color: #000077 }
+a:active { color: #770000 }
+
+tt, code { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt; color: #000077 }
+pre { font-family: Consolas, Inconsolata, Monospaced; font-size: 13pt;
+       margin: 48pt; margin-top: 2pt; margin-bottom: 10pt; padding: 6pt; background-color: #F9F9F9;
+       border-top: dashed 1pt #777777; border-bottom: dashed 1pt #777777; }
+table { border-width: 0px; border-collapse: collapse; padding: 0; margin: 8pt; margin-top: 2pt; margin-bottom: 10pt; }
+table.arglist { margin-left: 24pt; margin-right: 12pt }
+p { margin-top: 2pt; margin-bottom: 10pt; }
+
+div.indent { margin-left: 48pt; }
+
+div.toc { font-size: 90%; margin: 16px 16px 16px 16px; padding: 8px; background-color: #f7f7f7; border: #f7f7f7 solid 4px; border-radius: 8px; }
+
+td.arg { border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+td.argdesc { padding-left: 6px; border-bottom-width: 1pt; border-bottom-style: dotted; border-bottom-color: #dddddd }
+
+.PARAMLIST { font-weight: normal }
+.OPTIONAL { color: #888888; font-weight: normal }
+.CLASS, .STATIC, .RESTRICTED
+      { font-size: 80%; font-weight: normal; font-style: italic; margin-left: 8pt; padding-left: 4pt; border-left: dotted 1pt #007700 }
+.CLASS { color: #000099; border-left-color: #000099 }
+.STATIC { color: #009900; border-left-color: #009900 }
+.RESTRICTED { color: #990000; border-left-color: #990000 }
+
+.COMMENT1 { color: #737373 }
+.COMMENT2 { color: #737373; font-style: italic }
+.LITERAL1 { color: #ce7b00 }
+.LITERAL2 { color: #ce7b00 }
+.LITERAL3 { color: #ce7b00 }
+.LABEL { color: #000000 }
+.KEYWORD1 { color: #000099; font-weight: bold }
+.KEYWORD2 { color: #009900 }
+.KEYWORD3 { color: #0000da }
+.OPERATOR { color: #000000 }
+.INVALID { color: #b20000; font-style: italic }
+.SPECIAL1 { color: #000000; font-weight: bold }
+.SPECIAL2 { color: #000000; font-weight: bold }
+.SPECIAL3 { color: #000000; font-weight: bold }
+.SPECIAL4 { color: #000000; font-weight: bold }
+.SPECIAL5 { color: #000000; font-weight: bold }
+.SPECIAL6 { color: #000000; font-weight: bold }</style>
+</head>
+<body>
+<a name='top'><h1>project</h1></a>
+<div class='toc'>
+<a href='#SupportLibraryforExtendingtheProjectSystem'>Support Library for Extending the Project System</a><br>
+<a href='#PredfinedGlobalVariables'>Predfined Global Variables</a><br>
+<a href='#TrackedRegistryregFnunregFnconstructor'>TrackedRegistry(<span class='PARAMLIST'> regFn, unregFn </span>) <span class='OPTIONAL'>[constructor]</span></a><br>
+<a href='#TrackedRegistryregisterentity'>TrackedRegistry.register(<span class='PARAMLIST'> entity </span>)</a><br>
+<a href='#TrackedRegistryunregister'>TrackedRegistry.unregister(<span class='PARAMLIST'></span>)</a><br>
+<a href='#TrackedRegistryunregisterAll'>TrackedRegistry.unregisterAll(<span class='PARAMLIST'></span>)</a><br>
+<a href='#ActionRegistry'>ActionRegistry</a><br>
+<a href='#NewActionRegistry'>NewActionRegistry</a><br>
+<a href='#OpenerRegistry'>OpenerRegistry</a><br>
+<a href='#MetadataRegistry'>MetadataRegistry</a><br>
+<a href='#NewTaskTypeRegistry'>NewTaskTypeRegistry</a><br>
+<a href='#unregisterAll'>unregisterAll(<span class='PARAMLIST'></span>)</a><br>
+<a href='#testProjectScript'>testProjectScript(<span class='PARAMLIST'></span>)</a><br>
+</div>
+<p>
+<h2><a name='SupportLibraryforExtendingtheProjectSystem'>Support Library for Extending the Project System</a></h2>
+
+ This library provides a set of functions that make it easier to add new
+ features to the project system. Everything that you register using these
+ methods will be tracked, so that it can be unregistered in a single step.
+ For example code, see the Project Examples folder of the plug-in authoring
+ kit.
+
+<p>
+<h2><a name='PredfinedGlobalVariables'>Predfined Global Variables</a></h2>
+
+<p>
+ The <tt><a href='javadoc:ca/cgjennings/apps/arkham/project/package-summary'
+ >arkham.project</a></tt> package is imported into the name space, as is
+ the class <tt><a href='javadoc:java/io/File'>java.io.File</a></tt>.
+ The constant <tt>ProjectUtils</tt> is also defined to be the class
+ <tt><a href='javadoc:ca/cgjennings/apps/arkham/project/ProjectUtilities'
+ >ProjectUtilities</a></tt>, to match the naming conventions used in other
+ script libraries.
+
+<p>
+<h2><a name='TrackedRegistryregFnunregFnconstructor'>TrackedRegistry(<span class='PARAMLIST'> regFn, unregFn </span>) <span class='OPTIONAL'>[constructor]</span></a></h2>
+
+ A tracked registry registers and unregisters objects in some kind of registry,
+ and also tracks the registered objects so that they can all be unregistered
+ at once. Registry trackers are used by the rest of the project library to track
+ various project entities.
+<table border=0 cellpadding=2 cellspacing=0 class='arglist'><tr><td class='arg' valign='top'><tt> regFn </tt></td><td class='argdesc' valign='top'>the function to call to perform registration</td></tr>
+
+<tr><td class='arg' valign='top'><tt> unregFn </tt></td><td class='argdesc' valign='top'>the function to call to perform unregistration</td></tr>
+
+</table>
+
+<p>
+<h3><a name='TrackedRegistryregisterentity'>TrackedRegistry.register(<span class='PARAMLIST'> entity </span>)</a></h3>
+
+ Registers an entity with this tracker by calling the <tt>regFn</tt>
+ used to create the tracker. Any arguments passed to the function
+ will be passed to <tt>regFn</tt>, including <tt>entity</tt>.
+
+<p>
+<h3><a name='TrackedRegistryunregister'>TrackedRegistry.unregister(<span class='PARAMLIST'></span>)</a></h3>
+
+ Unregisters an entity with this tracker by calling the <tt>unregFn</tt>
+ used to create the tracker.
+
+<p>
+<h3><a name='TrackedRegistryunregisterAll'>TrackedRegistry.unregisterAll(<span class='PARAMLIST'></span>)</a></h3>
+
+ Unregisters all tracked entities.
+
+<p>
+<h2><a name='ActionRegistry'>ActionRegistry</a></h2>
+
+ A tracked registry of project actions. Project actions are commands
+ that can be applied to the selected project file(s). The register
+ function takes a task action and (optionally), a priority value. The
+ priority determines the order of the action in the project view's
+ context menu. The default is <tt>Actions.PRIORITY_DEFAULT</tt>.
+
+<p>
+<h2><a name='NewActionRegistry'>NewActionRegistry</a></h2>
+
+ A tracked registry of child actions of the New action.
+ These are actions that will appear as suboptions of the <b>New</b> menu
+ in a project. The register function takes a task action and (optionally)
+ an action (or the name of an action) that this action should be inserted after.
+
+<p>
+<h2><a name='OpenerRegistry'>OpenerRegistry</a></h2>
+
+ A tracked registry of internal openers. Internal openers are used by the
+ Open action to open files inside of the application. A new internal
+ opener can be used to support opening new kinds of file.
+
+<p>
+<h2><a name='MetadataRegistry'>MetadataRegistry</a></h2>
+
+ A tracked registry of project metadata sources. A metatdata source
+ provides metadata for a particular file type. This includes the
+ icon used for the file type in the project view, and the information
+ listed on the Properties tab when files of that type are selected.
+
+<p>
+<h2><a name='NewTaskTypeRegistry'>NewTaskTypeRegistry</a></h2>
+
+ A tracked registry of <b>NewTaskType</b>s. New task types are used to add
+ support for new kinds of task folders.
+
+<p>
+<h3><a name='unregisterAll'>unregisterAll(<span class='PARAMLIST'></span>)</a></h3>
+
+ This function unregisters all entities that have been registered
+ with <i>any</i> <tt>TrackedRegistry</tt>.
+ It is typically called in a plug-in's <tt>unload()</tt> function.
+
+<p>
+<h3><a name='testProjectScript'>testProjectScript(<span class='PARAMLIST'></span>)</a></h3>
+
+ When run directly from a script editor, this function calls the script's
+ run() function, then creates an Unregister button that will call the script's
+ unload() function (which should in turn call <tt>unregisterAll()</tt>).
+ When developing a project plug-in, it is important to unregister changes
+ you make to the project system before re-running your script, because many
+ elements in the project system can only be registered once. For example, only
+ one task action with a given name can be registered at a given time.
+
+<p style='margin-top: 20pt;'><a href='#top'>Contents</a></body>
+</html>
