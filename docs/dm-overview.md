@@ -37,7 +37,7 @@ Most of the tools you need are already built into Strange Eons. You will probabl
 
 #### Graphics apps
 
-For graphics editing, there are several commercial and free applications to choose from. Some free choices include [Krita](http://krita.org) and [GIMP](https://www.gimp.org/). Photoshop is a well-known commercial app.
+For graphics editing, there are several commercial and free applications to choose from. Some free choices include [Krita](http://krita.org) and [GIMP](https://www.gimp.org/). Photoshop is a well-known commercial app. For [vector graphics](dm-res-image.md#vector-images), [Inkscape](https://inkscape.org/) is a free SVG editor.
 
 #### Font apps
 
