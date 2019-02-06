@@ -14,7 +14,7 @@
    6. [Installation scripts](dm-installation-script.md)
 3. **APIs**
    1. [Script library API](dm-script-api.md)
-   2. Java class API
+   2. [Java class API](dm-java-api.md)
 4. **Settings**
 5. **Additional plug-in resources (images, fonts, etc.)**
    1. [Resources](dm-resources.md)
