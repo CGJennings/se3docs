@@ -39,6 +39,7 @@
    10. [Printing components](um-gc-print.md)
    11. [Exporting images](um-gc-export.md)
    12. [Play testing and improving your designs](um-gc-play-testing.md)
+   13. [The marker and token editor](um-token-editor.md)
 5. **Card decks and game boards**
    1. [The deck editor](um-deck-intro.md)
    2. [Adding content to a deck](um-deck-adding-content)
