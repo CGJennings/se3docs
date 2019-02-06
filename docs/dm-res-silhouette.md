@@ -2,7 +2,11 @@
 
 **File extension:** `.silhouettes`
 
-The marker and token editor is a built-in game component editor that can be used to design simple shaped playing pieces. The playing piece shapes are defined using *silhouettes*. These are greyscale images in which black areas are considered inside of the shape and white areas are outside of the shape. The size of the playing piece shape is determined by the silhouette image size: the silhouette’s image resolution is taken to be 150 ppi (pixels per inch). New shapes can be added to the editor by defining a `.silhouette` file.
+The marker and token editor is a built-in game component editor that can be used to design simple shaped playing pieces. The playing piece shapes are defined using *silhouettes*. These are greyscale images in which black areas are considered inside of the shape and white areas are outside of the shape. The size of the playing piece shape is determined by the silhouette image size: the silhouette’s image resolution is taken to be 150 ppi (pixels per inch). The following silhouette image would therefore describe a square with rounded corners, with sides approximately 1 inch or 2.5 cm long:
+
+![A sample silhouette](images/silhouette.png)
+
+New shapes are added to the editor by defining a `.silhouette` file. The format of that file is described below.
 
 To *register the contents of a silhouette file with Strange Eons*, call [`gamedata.Silhouette.add(path)`](assets/javadoc/gamedata/Silhouette.html#add) using the resource path of the file. This can only be done in extension plug-ins.
 
