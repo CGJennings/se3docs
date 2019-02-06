@@ -2,12 +2,12 @@
 
 # Developer manual contents
 
-1. [Overview of plug-in authoring](dm-overview.md)
+1. **Getting started**
+   1. [Overview of plug-in authoring](dm-overview.md)
+   2. [My First Plug-in](dm-first-plugin.md)
 2. Important concepts, definitions, and resources
-   1. Script libraries
-   2. The Strange Eons API
-   3. Lockdown
-   4. Settings
+   1. Lockdown
+   2. Settings
 3. Anatomy of a plug-in
    1. Plug-in types
    2. Plug-in bundles and task folders
@@ -15,7 +15,11 @@
    4. Compiled plug-in skeleton
    5. Scripted plug-in skeleton
    6. [Installation scripts](dm-installation-script.md)
-4. **Additional plug-in resources (images, fonts, etc.)**
+4. **APIs**
+   1. [Script library API](dm-script-api.md)
+   2. Java class API
+5. **Settings**
+6. **Additional plug-in resources (images, fonts, etc.)**
    1. [Resources](dm-resources.md)
    2. [Resource `res://` and other special URLs](dm-special-urls.md)
    3. [Image resources](dm-res-image.md)
@@ -26,19 +30,19 @@
    8. [Tile set resources](dm-res-tile-set.md)
    9. [Silhouette resources](dm-res-silhouette.md)
    10. [Default abbreviation table resources](dm-res-abbrv-table.md)
-5. **Development tools**
+7. **Development tools**
    1. [Code editor](dm-code-editor.md)
    2. [Script debugger](dm-debugger.md)
    3. [Converting and compressing images](dm-convert-image.md)
    4. [Draw Regions](dm-draw-regions.md)
-6. **Development resources**
+8. **Development resources**
    1. [Plug-in authoring kit](dm-pak.md)
    2. Document browser
-7. **How to...**
+9. **How to...**
    1. [Register new games and game expansions](dm-register-game.md)
-   2. Add new game component types using script code
+   2. [Create new game component types](dm-diy.md)
       1. Portraits
-      2. Prefab components
+      2. [Prefab components](dm-diy-prefab.md)
       3. Bleed margins
       4. [Changing components without breaking old save files](dm-compatibility.md)
    3. Access and modify existing components
@@ -60,10 +64,6 @@
          4. Adding support for new file types
          5. Adding new kinds of metadata to the properties view
    6. [Make the spelling checker ignore game terminology](dm-spelling-exclusions.md)
-
-
-
-
 
 
 
