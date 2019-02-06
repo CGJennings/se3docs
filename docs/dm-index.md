@@ -5,21 +5,18 @@
 1. **Getting started**
    1. [Overview of plug-in authoring](dm-overview.md)
    2. [My First Plug-in](dm-first-plugin.md)
-2. Important concepts, definitions, and resources
-   1. Lockdown
-   2. Settings
-3. Anatomy of a plug-in
-   1. Plug-in types
+2. **Anatomy of a plug-in**
+   1. [Plug-in types](dm-plugin-types.md)
    2. Plug-in bundles and task folders
    3. [The root file](dm-eons-plugin.md)
    4. Compiled plug-in skeleton
    5. Scripted plug-in skeleton
    6. [Installation scripts](dm-installation-script.md)
-4. **APIs**
+3. **APIs**
    1. [Script library API](dm-script-api.md)
    2. Java class API
-5. **Settings**
-6. **Additional plug-in resources (images, fonts, etc.)**
+4. **Settings**
+5. **Additional plug-in resources (images, fonts, etc.)**
    1. [Resources](dm-resources.md)
    2. [Resource `res://` and other special URLs](dm-special-urls.md)
    3. [Image resources](dm-res-image.md)
@@ -30,15 +27,15 @@
    8. [Tile set resources](dm-res-tile-set.md)
    9. [Silhouette resources](dm-res-silhouette.md)
    10. [Default abbreviation table resources](dm-res-abbrv-table.md)
-7. **Development tools**
+6. **Development tools**
    1. [Code editor](dm-code-editor.md)
    2. [Script debugger](dm-debugger.md)
    3. [Converting and compressing images](dm-convert-image.md)
    4. [Draw Regions](dm-draw-regions.md)
-8. **Development resources**
+7. **Development resources**
    1. [Plug-in authoring kit](dm-pak.md)
    2. Document browser
-9. **How to...**
+8. **How to...**
    1. [Register new games and game expansions](dm-register-game.md)
    2. [Create new game component types](dm-diy.md)
       1. Portraits
