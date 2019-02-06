@@ -2,7 +2,7 @@
 
 The marker and token editor is built into Strange Eons and does not require any additional plug-ins to use. To design a marker or token, choose **File/New** and in the **Tokens, Markers, or Resources** category, choose **Game Marker or Token**.
 
-![marker-editor](images\marker-editor.png)
+![The marker and token editor](images/marker-editor.png)
 
 ## Choosing a silhouette
 
