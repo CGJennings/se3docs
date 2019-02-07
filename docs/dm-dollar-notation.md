@@ -42,7 +42,7 @@ println($x + $x);
 
 Since `$x` only accepts strings, the `1` is first converted to the string `"1.0"`. As a result, the expression `$x + $x` will concatenate two copies of string together, resulting in `"1.01.0"`.
 
-## Live settings ($)
+## Live settings
 
 While setting values are always strings, they are used to encode a variety of other data types, including specialized types like regions and colours. To make working with such settings more convenient, you start the variable name with `$$` instead of `$`. A setting starting with `$$` will reflect the setting value as a special kind of object which lets you interpret the value as different data types through its properties.
 
