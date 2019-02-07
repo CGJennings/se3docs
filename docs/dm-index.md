@@ -38,7 +38,7 @@
 8. **How to...**
    1. [Register new games and game expansions](dm-register-game.md)
    2. [Create new game component types](dm-diy.md)
-      1. Portraits
+      1. [Portraits](dm-diy-portraits.md)
       2. [Prefab components](dm-diy-prefab.md)
       3. Bleed margins
       4. [Changing components without breaking old save files](dm-compatibility.md)

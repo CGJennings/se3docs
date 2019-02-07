@@ -63,3 +63,19 @@ A related problem arises when you change how you use an existing setting. You mi
 ### Configuration changes
 
 A third kind of incompatible change is a change in the basic DIY configuration, for example, switching to a more complex `FaceStyle`. For this reason, properties that can normally only be set during the `onCreate` function can also be modified in `onRead`. Although changing the properties themselves is simple, properly updating the component will typically also involve adding or converting other features as described above.
+
+### Changing the base key name of a DefaultPortrait
+
+This is actually not all that common, but it does require special handling. DefaultPortrait objects are used to perform custom handling of [portraits in a DIY component](dm-diy-portraits.md). If the base key name of a portrait changes between versions, you need to replace the old DefaultPortrait that is read from the file a new one that is created by calling code similar to the following:
+
+```js
+function onRead(diy, ois) {
+    // ...
+    portrait = ois.readObject();
+    if(diy.version < VERSION_THAT_THE_KEY_NAME_CHANGED) {
+        // replace the old portrait we just read in with an instance using the new key
+        portrait = new DefaultPortrait(portrait, "new-base-key");
+    }
+}
+```
+
