@@ -12,10 +12,15 @@
    4. Compiled plug-in skeleton
    5. Scripted plug-in skeleton
    6. [Installation scripts](dm-installation-script.md)
-3. **APIs**
+3. **APIs and examples**
    1. [Script library API](dm-script-api.md)
    2. [Java class API](dm-java-api.md)
+   3. [Plug-in authoring kit](dm-pak.md)
 4. **Settings**
+   1. [Setting basics](dm-settings.md)
+   2. [Setting hierarchies](dm-setting-hierarchies.md)
+   3. [Setting collections](dm-setting-collections.md)
+   4. [$-notation](dm-dollar-notation.md)
 5. **Additional plug-in resources (images, fonts, etc.)**
    1. [Resources](dm-resources.md)
    2. [Resource `res://` and other special URLs](dm-special-urls.md)
@@ -32,10 +37,8 @@
    2. [Script debugger](dm-debugger.md)
    3. [Converting and compressing images](dm-convert-image.md)
    4. [Draw Regions](dm-draw-regions.md)
-7. **Development resources**
-   1. [Plug-in authoring kit](dm-pak.md)
-   2. Document browser
-8. **How to...**
+   5. [Setting Explorer](dm-setting-explorer.md)
+7. **How to...**
    1. [Register new games and game expansions](dm-register-game.md)
    2. [Create new game component types](dm-diy.md)
       1. [Portraits](dm-diy-portraits.md)
@@ -43,8 +46,6 @@
       3. [Bleed margins](dm-diy-bleed-margins.md)
       4. [Changing components without breaking old save files](dm-compatibility.md)
    3. Access and modify existing components
-      1. Working with portraits
-      2. Adding new marker silhouettes
    4. Add new app commands and features
       1. Extending the app menu
       2. Extending the context bar
@@ -54,13 +55,13 @@
       2. Accessing project member files
       3. The **Task** classes
       4. The project view
-      5. Extending the project system
-         1. Adding **Task** actions to existing tasks
-         2. Adding new task types
-         3. Extending the **New...** action with new file types
-         4. Adding support for new file types
-         5. Adding new kinds of metadata to the properties view
-   6. [Make the spelling checker ignore game terminology](dm-spelling-exclusions.md)
+   5. Extend the project system
+      1. Adding **Task** actions to existing tasks
+      2. Adding new task types
+      3. Extending the **New...** action with new file types
+      4. Adding support for new file types
+      5. Adding new kinds of metadata to the properties view
+   7. [Make the spelling checker ignore game terminology](dm-spelling-exclusions.md)
 
 
 
