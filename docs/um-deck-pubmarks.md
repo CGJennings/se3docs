@@ -41,7 +41,7 @@ Bleed margins are an extra margin added around the outside of a card face or oth
 
 ### Designs with bleed margins
 
-Plug-in developers have the option of including a bleed margin when creating a new component. Most components in Strange Eons are not designed with a bleed margin, but plug-in developers have the option of including one. When a component defines a bleed margin, the crop marks in the deck editor are adjusted automatically.
+Plug-in developers have the option of [including a bleed margin](dm-diy-bleed-margins.md) when creating a new component. Most components in Strange Eons are not designed with a bleed margin, but plug-in developers have the option of including one. When a component defines a bleed margin, the crop marks in the deck editor are adjusted automatically.
 
 ### Faking bleed margins
 

@@ -40,7 +40,7 @@
    2. [Create new game component types](dm-diy.md)
       1. [Portraits](dm-diy-portraits.md)
       2. [Prefab components](dm-diy-prefab.md)
-      3. Bleed margins
+      3. [Bleed margins](dm-diy-bleed-margins.md)
       4. [Changing components without breaking old save files](dm-compatibility.md)
    3. Access and modify existing components
       1. Working with portraits
