@@ -18,7 +18,26 @@ settings.set("keyname", value);
 $keyname = value;
 ```
 
-## Key name translation
+To look up a value by from string key, you can use `$(key)` to keep your notation more consistent:
+
+```js
+keyname = "image-region-" + (side === -1 ? "left" : "right");
+
+// instead of
+value = settings.get(keyname);
+// or
+value = global["$" + keyname];
+// you can write
+value = $(keyname);
+```
+
+## Choosing a setting source
+
+A $ variable is always resolved against a particular collection of [Settings](assets/javadoc/resources/Settings.html). By default this is usually the global shared setting space obtained from `Settings.getShared()`. In DIY scripts, the default is the private settings of the DIY component itself (`diy.settings`). You can switch $-notation to use a different source by passing it to the `useSettings(source)` function. This can be passed a Settings instance, a game component (to use its private settings), or null/undefined to use the global shared settings.
+
+## How $-notation differs
+
+### Key name translation
 
 Many settings include `-` in the key name. This is an issue since this is not a valid character in setting names. (The convention of using `-` in key names predates the addition of $-notation by several years.) As a workaround for this, when using `$` notation the `_` character is translated to `-`. Hence:
 
@@ -29,9 +48,9 @@ value = settings.get("key-with-hyphen");
 value = $key_with_hyphen;
 ```
 
-Key names that use `_` or characters that are illegal in JavaScript variable names cannot use $-notation and must be accessed directly through a Settings instance.
+Key names that use either `_` or characters that are [not allowed in variable names](https://developer.mozilla.org/bm/docs/Web/JavaScript/Guide/Grammar_and_types#Variables) cannot use $-notation and must be accessed directly through a Settings instance.
 
-## Type coercion
+### Type coercion
 
 Since settings values are always stored as strings, any value that is assigned to a $-variable will first be converted to a string. Assigning non-string values may cause unexpected issues. For example, the following code does not print two as you might expect:
 
