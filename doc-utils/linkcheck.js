@@ -32,19 +32,15 @@ let reportProblem = (function() {
 })();
 
 
-// For each source file:
-//   - find all the links in the text
-//   - check that the link target exists
-//   - cross the link target off the orphans list
-for(let filename of sources) {
-  let text = fs.readFileSync( path.resolve(SOURCE_DIR, filename), {encoding: 'utf8'} );
-  let linkRegex = /\]\(([-\w\d]+\.md)/g;
-  let match;
-
+function checkForPlaceholder(filename, text) {
   if(text.trim().length === 0) {
     reportProblem( filename, 'empty placeholder');
   }
+}
 
+function checkForBrokenLinks(filename, text) {
+  let linkRegex = /\]\(([-\w\d]+\.md)/g;
+  let match;
   do {
     match = linkRegex.exec(text);
     if(match) {
@@ -57,6 +53,31 @@ for(let filename of sources) {
       }
     }
   } while(match);
+}
+
+function checkForWindowsPaths(filename, text) {
+  let pathRegex = /\]\([^)]*\\/g;
+  let match;
+  do {
+    match = pathRegex.exec(text);
+    if(match) {
+      let target = match[1];
+      if(sources.indexOf(target) < 0 ) {
+        reportProblem(filename, 'detected Windows-style path (\\) in link or reference');
+      }
+    }
+  } while(match);
+}
+
+// For each source file:
+//   - find all the links in the text
+//   - check that the link target exists
+//   - cross the link target off the orphans list
+for(let filename of sources) {
+  let text = fs.readFileSync( path.resolve(SOURCE_DIR, filename), {encoding: 'utf8'} );
+  checkForPlaceholder(filename, text);
+  checkForBrokenLinks(filename, text);
+  checkForWindowsPaths(filename, text);  
 }
 
 orphans.forEach( (f,i,a) => reportProblem(f, 'not linked to by any file') );

@@ -4,7 +4,7 @@
 
 Plug-ins that add new kinds of game components will often also want to provide custom fonts for the text on those components. In principle, you should be able to bundle TrueType, OpenType, and PostScript Type1 font resources. In practice, some font files may not work as expected. The easiest way to investigate a particular font is to copy it into a project and then double click the font file. This will open the Strange Eons typeface viewer to check compatibility. TrueType fonts (`.ttf`) are generally the most reliable.
 
-![The typeface viewer dialog](images\font-viewer.png)
+![The typeface viewer dialog](images/font-viewer.png)
 
 ## Raw Font instances
 

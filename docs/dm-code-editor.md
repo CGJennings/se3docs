@@ -2,7 +2,7 @@
 
 The code editor is a syntax-highlighting text editor that is built into Strange Eons. It is used to edit a number of text-based resource file types that are used in projects and plug-ins, including script code, HTML, settings files, and more. Plug-in developers can also extend the editor to support other file types.
 
-![A code editor window](D:\se3docs\docs\images\code-editor.jpg)
+![A code editor window](images/code-editor.jpg)
 
 ## Features
 
