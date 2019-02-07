@@ -97,7 +97,7 @@ diy.settings.set("my-card-face-dpi", "300");
 diy.settings.set("my-card-face-expsym-region", "320,600,75,75");
 ```
 
-This gets boring to type and hard to read after a while, so there is a shortcut: you can access the card’s settings as if they were regular variables. To do this you just write `$` followed by the setting name. However, since `-` means “subtract” in JavaScript, you have to write any `-` characters as `_` instead. So the equivalent of the above is:
+This gets boring to type and hard to read after a while, so there is a shortcut: with [$-notation](dm-dollar-notation.md) you can access the card’s settings as if they were regular variables. To do this you just write `$` followed by the setting name. However, since `-` means “subtract” in JavaScript, you have to write any `-` characters as `_` instead. So the equivalent of the above is:
 
 ```js
 $my_card_face_template = "my-card/front-face.jpg";
