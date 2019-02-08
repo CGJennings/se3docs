@@ -31,6 +31,11 @@ let reportProblem = (function() {
   }
 })();
 
+function removeOrphan(filename) {
+  let i = orphans.indexOf(filename);
+  if(i >= 0) orphans.splice(i, 1);
+}
+
 
 function checkForPlaceholder(filename, text) {
   if(text.trim().length === 0) {
@@ -48,8 +53,7 @@ function checkForBrokenLinks(filename, text) {
       if(sources.indexOf(target) < 0 ) {
         reportProblem(filename, `broken link to ${target}`);
       } else {
-        let i = orphans.indexOf(target);
-        if(i >= 0) orphans.splice(i, 1);
+        removeOrphan(target);
       }
     }
   } while(match);
@@ -80,6 +84,7 @@ for(let filename of sources) {
   checkForWindowsPaths(filename, text);  
 }
 
+removeOrphan("index.md");
 orphans.forEach( (f,i,a) => reportProblem(f, 'not linked to by any file') );
 
 console.log(`\n${totalProblems} problem(s) found\n`)
