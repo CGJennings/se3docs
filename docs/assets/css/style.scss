@@ -52,7 +52,7 @@ ol ol, ul ol {
 #header a {
   color: rgba(255,255,255,0.92);
   margin-left: 2em;
-  word-wrap: none;
+  white-space: nowrap;
 }
 /* Highlight the link that takes reader to the index of the current manual. */
 #header a.current-index {
@@ -64,7 +64,7 @@ ol ol, ul ol {
     margin-right: 1em;
     margin-left: -1em; /* counter (#header a) margin */
   }
-  #header > a {
+  #header a {
     display: none;
     margin-left: 1em;
   }
