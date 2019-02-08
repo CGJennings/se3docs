@@ -115,6 +115,18 @@ ol ol, ul ol {
 
 /* Generated table of contents */
 
+.toc {
+  float: right;
+  background: #fff;
+  font-size: 0.8rem;
+  padding: 3rem 1rem 1rem 3rem;
+}
+@media screen and (max-width: 800px) {
+  .toc {
+    float: none;
+    padding: 1rem;
+  }
+}
 .toc ul {
   list-style-type: none;
   padding-left: 1em;
