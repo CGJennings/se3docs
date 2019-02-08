@@ -1,4 +1,4 @@
-# Changing components without breaking old save files
+# Change components without breaking old save files
 
 Sooner or later you'll want to add new features to your DIY component, or alter an existing feature. Ideally, the updated version of your plug-in should be *backwards compatible*. That is, users should still be able to read files saved using the older version of the component in the new version of the plug-in. That way, users don't have to recreate their work.
 

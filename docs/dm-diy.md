@@ -1,4 +1,4 @@
-# Create new game component types
+# Create new DIY game component types
 
 This section focuses on creating new game component types using script code. Scripted game components are also known as *DIY components*, and the infrastructure for creating them is generally called the *DIY system*.
 

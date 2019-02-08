@@ -1,4 +1,4 @@
-# Adding portraits to game components
+# Add portraits to game components
 
 A [portrait](um-gc-portraits.md) is a user-supplied image that appears on a game component, such as a card illustration. There are two ways to add portraits to a [DIY component](dm-diy.md). Using the simple method, you add support by defining some additional keys for the component. The advanced method lets you handle everything yourself for maximum flexibility. Both methods are covered below.
 
