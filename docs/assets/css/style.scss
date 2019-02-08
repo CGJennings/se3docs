@@ -112,3 +112,10 @@ ol ol, ul ol {
 .contents {
   float: right;
 }
+
+/* Generated table of contents */
+
+.toc ul {
+  list-style-type: none;
+  padding-left: 1em;
+}

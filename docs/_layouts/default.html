@@ -16,6 +16,7 @@
       <a id="tm-index" href="tm-index.html">translation manual</a>
     </div>
     <div class="container-lg px-3 my-5 markdown-body">
+      <nav id="toc"></nav>
 
       {{ content }}
 
@@ -25,6 +26,7 @@
         These docs are open source. {% github_edit_link "Improve this page" %}.
       </div>
     </div>
+    <script src="assets/js/toc.js"></script>
     <script src="assets/js/footer.js"></script>
     <script src="{{ "assets/js/anchor.min.js" | relative_url }}"></script>
     <script>anchors.add();</script>
