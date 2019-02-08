@@ -58,16 +58,21 @@ ol ol, ul ol {
 #header a.current-index {
   text-decoration: underline;
 }
-/* Hide all but index and current manual link if screen <= 800px */
+/* Make header more compact and only show title, doc index, and current manual links if screen <= 800px */
 @media screen and (max-width: 800px) {
+  #header strong {
+    margin-right: 1em;
+    margin-left: -1em; /* counter (#header a) margin */
+  }
   #header > a {
     display: none;
+    margin-left: 1em;
   }
   #header > #doc-index , #header > a.current-index {
     display: inline;
   }
 }
-/* Only show index link if screen <= 450px */
+/* Make header only show title and doc index link if screen <= 450px */
 @media screen and (max-width: 450px) {
   #header > a.current-index {
     display: none;
