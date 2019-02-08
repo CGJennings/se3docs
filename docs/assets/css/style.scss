@@ -131,3 +131,11 @@ ol ol, ul ol {
   list-style-type: none;
   padding-left: 1em;
 }
+/* momentarily highlight header after user jumps to it from TOC */
+:target {
+  animation: target-highlight 3s 1;
+}
+@keyframes target-highlight {
+   0% { background-color: rgba(255,143,0,.3); }
+   100% { background-color: rgba(0,0,0,0); }
+}
