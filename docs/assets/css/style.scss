@@ -65,8 +65,10 @@ ol ol, ul ol {
     margin-left: -1em; /* counter (#header a) margin */
   }
   #header a {
-    display: none;
     margin-left: 1em;
+  }
+  #header > a {
+    display: none;
   }
   #header > #doc-index , #header > a.current-index {
     display: inline;
