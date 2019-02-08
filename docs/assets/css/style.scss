@@ -133,7 +133,7 @@ ol ol, ul ol {
 }
 /* momentarily highlight header after user jumps to it from TOC */
 :target {
-  animation: target-highlight 3s ease-out 0s 1;
+  animation: target-highlight 2s ease-out 0s 1;
 }
 @keyframes target-highlight {
    0% {
