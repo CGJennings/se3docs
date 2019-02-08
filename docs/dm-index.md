@@ -11,7 +11,7 @@
    3. [The root file](dm-eons-plugin.md)
    4. Compiled plug-in skeleton
    5. Scripted plug-in skeleton
-   6. [Installation scripts](dm-installation-script.md)
+   6. [Installation notes and scripts](dm-installation.md)
 3. **APIs and examples**
    1. [Script library API](dm-script-api.md)
    2. [Java class API](dm-java-api.md)
