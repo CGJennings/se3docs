@@ -52,21 +52,22 @@ ol ol, ul ol {
 #header a {
   color: rgba(255,255,255,0.92);
   margin-left: 2em;
+  word-wrap: none;
 }
 /* Highlight the link that takes reader to the index of the current manual. */
 #header a.current-index {
   text-decoration: underline;
 }
-/* Hide all but current manual link if screen <= 800px */
+/* Hide all but index and current manual link if screen <= 800px */
 @media screen and (max-width: 800px) {
-  #header>a {
+  #header > a {
     display: none;
   }
-  #header > a.current-index {
+  #header > #doc-index , #header > a.current-index {
     display: inline;
   }
 }
-/* Only show title link if screen <= 450px */
+/* Only show index link if screen <= 450px */
 @media screen and (max-width: 450px) {
   #header > a.current-index {
     display: none;
