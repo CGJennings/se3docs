@@ -137,15 +137,15 @@ ol ol, ul ol {
 }
 @keyframes target-highlight {
    0% {
-     text-shadow: 0 0 0rem #ff6f00;
+    text-shadow: -1px -1px 5rem rgba(255,255,0,0), 0 0 5rem rgba(255,255,0,0), 1px 1px 5rem rgba(255,255,0,0);
      color: #ff6f00;
    }
-   50% {
-    text-shadow: 0 0 1rem #ff6f00;
+   25% {
+    text-shadow: -1px -1px 1px #ff6f00, 0 0 1px #ff6f00, 1px 1px 1px #ff6f00;
     color: #ff6f00;
    }
    100% {
-     text-shadow: 0 0 5rem rgba(255,1111,0,0);
+     text-shadow: -1px -1px 5rem rgba(255,255,0,0), 0 0 5rem rgba(255,255,0,0), 1px 1px 5rem rgba(255,255,0,0);
      color: #24292e;
    }
 }
