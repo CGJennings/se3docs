@@ -139,3 +139,11 @@ ol ol, ul ol {
    0% { background-color: rgba(255,143,0,.3); }
    100% { background-color: rgba(0,0,0,0); }
 }
+h2::before, h3::before, h4::before, h5::before, h6::before {
+  display: block;
+  content: " ";
+  margin-top: -3.5rem;
+  height: 3.5rem;
+  visibility: hidden;
+  pointer-events: none;
+}
