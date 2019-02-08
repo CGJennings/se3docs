@@ -1,6 +1,6 @@
 # Installation on other platforms
 
-This page describes the steps needed to install Strange Eons on Linux-based PCs.
+This page describes the steps needed to install Strange Eons on PCs based on Linux, Solaris, and other *nix systems that support desktop Java.
 
 ## System requirements
 
@@ -43,7 +43,17 @@ At least 2 GB of RAM recommended.
    java -cp strange-eons.selibrary register
    ```
 
-   >To register for all users instead of yourself, try the `--allusers` option. The registration tool requires that you have the package `xdg-utils` installed. Recent builds of popular Linux distros should already include it, but if yours does not you can install it yourself. A typical command to do this is `sudo apt-get install xdg-utils`; check the documentation for your distro for more information. If needed, you can specify the location of `xdg-utils` with the `--xdg` option. The `--uninstall` option can be used to remove a previous registration. (Use `--help` option for a complete list of options.)
+   For a list of additional options accepted by `register`, run it with the `--help` option. A few of the most important are:
+   
+   `--allusers` to attempt to install for all users and not just yourself (typically requires root access)
+   
+   `--uninstall` to undo a previous registration
+   
+   `--xdg` to specify the location of the `xdg-utils` used to complete the registration (see below)
+   
+   
+   
+   >The registration tool requires that you have the package `xdg-utils` installed. Recent builds of popular Linux distros should already include it, but if yours does not you can install it yourself. A typical command to do this is `sudo apt-get install xdg-utils`; check the documentation for your distro for more information.
 
 
 
