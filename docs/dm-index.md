@@ -9,9 +9,7 @@
    1. [Plug-in types](dm-plugin-types.md)
    2. Plug-in bundles and task folders
    3. [The root file](dm-eons-plugin.md)
-   4. Compiled plug-in skeleton
-   5. Scripted plug-in skeleton
-   6. [Installation notes and scripts](dm-installation.md)
+   4. [Installation notes and scripts](dm-installation.md)
 3. **APIs and examples**
    1. [Script library API](dm-script-api.md)
    2. [Java class API](dm-java-api.md)
@@ -40,28 +38,24 @@
    5. [Setting Explorer](dm-setting-explorer.md)
 7. **How to...**
    1. [Register new games and game expansions](dm-register-game.md)
-   2. [Create new game component types](dm-diy.md)
-      1. [Portraits](dm-diy-portraits.md)
-      2. [Prefab components](dm-diy-prefab.md)
-      3. [Bleed margins](dm-diy-bleed-margins.md)
-      4. [Changing components without breaking old save files](dm-compatibility.md)
-   3. Access and modify existing components
-   4. Add new app commands and features
+   2. [DIY components: create new game component types](dm-diy.md)
+   3. [Add portraits to DIY components](dm-diy-portraits.md)
+   4. [Add bleed margins to DIY components](dm-diy-bleed-margins.md)
+   5. [Change DIY components without breaking old save files](dm-compatibility.md)
+   6. [Prefab components: create new component types without code](dm-diy-prefab.md)
+   7. Access and modify existing components
+   8. Add new app commands and features
       1. Extending the app menu
       2. Extending the context bar
       3. Extending **Preferences**
-   5. Work with the project system API
-      1. Getting and traversing the open project
-      2. Accessing project member files
-      3. The **Task** classes
-      4. The project view
-   5. Extend the project system
+   9. [Access the open project and its files](dm-project.md)
+   10. Extend the project system
       1. Adding **Task** actions to existing tasks
       2. Adding new task types
       3. Extending the **New...** action with new file types
       4. Adding support for new file types
       5. Adding new kinds of metadata to the properties view
-   7. [Make the spelling checker ignore game terminology](dm-spelling-exclusions.md)
+   11. [Make the spelling checker ignore game terminology](dm-spelling-exclusions.md)
 
 
 
