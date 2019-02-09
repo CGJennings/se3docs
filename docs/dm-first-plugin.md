@@ -26,14 +26,14 @@ This will create a new, empty task folder named *My First Plugin*, then open the
 
 ![New Plug-in dialog page 1](images/new-plugin-1.png)
 
-The plug-in wizard is extensible. One the first page, you choose the kind of plug-in you want to make and this determines which wizard you will use. However, only one wizard "kit" is included in the base installation of Strange Eons, **Basic Plug-in**.
+The plug-in wizard is extensible. Developers can add different "kits" to help create plug-ins for different circumstances. On this first page, you are choosing which kit you want to use through the rest of the process. The rest of the pages you see depend on the selected kit. However, only one kit is built in to the app, **Basic Plug-in**:
 
 1. Select **Basic Plug-in** if it is not already selected.
 2. Choose **Continue**.
 
 ### Plug-in wizard, page 2
 
-On the second page of the wizard, you choose the type of plug-in you want to create. Choosing one of the types will display a brief description of that choice to the right. For this example, you will create an activated plug-in (a plug-in that the user *activates* from the **Toolbox** menu). However, extension plug-ins are the most commonly created type, and the type you would create if you wanted to define new kinds of game components.
+On the second page of the wizard, you choose the [type of plug-in](dm-plugin-types.md) you want to create. Choosing one of the types will display a brief description of that choice to the right. For this example, you will create an activated plug-in (a plug-in that the user *activates* from the **Toolbox** menu). However, extension plug-ins are the most commonly created type, and the type you would create if you wanted to define [new kinds of game components](dm-diy.md).
 
 ![New Plug-in dialog page 2](images/new-plugin-2.png)
 
@@ -57,7 +57,8 @@ On the fourth and final page of the wizard, you provide a few details about the 
 
 1. In the **Plug-in Name** field, enter `My First Plug-in`. This will automatically fill in some of the other fields with suggested values.
 2. In the **Description** field, enter `A simple example` or another short description.
-3. Drag and drop an image file onto the **Plug-in Icon** image chooser. You can use this: ![sample icon](images/my-first-plugin-icon.png)
+3. Drag and drop an image file onto the **Plug-in Icon** image chooser (or click it to choose a file).  
+   *You can use this:* ![sample icon](images/my-first-plugin-icon.png)
 4. You can leave the **Bundle Name** and **Script Name** fields set to the defaults generated from the **Plug-in Name**.
 5. In the **Location** field, enter `resources/example`. If this was a real plug-in, in place of `example` you would enter the unique string you want to use to prevent file conflicts with other plug-ins.
 6. Choose **Finish**. The plug-in task folder will be filled in with some starter files and the wizard will close.
@@ -84,7 +85,7 @@ To *install a bundle from a project*, double click the bundle file and choose **
 
 Once installed, the plug-in will be loaded. Since this is an *activated* plug-in, its purpose is to add a new command to the **Toolbox** menu. You will be able to find it listed there now. If you choose the item, the `run()` function in the plug-in script will be called, printing a message to the script console. Once you are done, [uninstall the plug-in](um-plugins-manager.md#uninstalling-a-plug-in).
 
-## Testing the plug-in
+## Testing a plug-in
 
 Often, a plug-in bundle can't be installed multiple times without restarting Strange Eons. To make development easier, you can test plug-ins using a separate test edition of Strange Eons. Once you are done testing, you can close it and pick up where you left off. However, depending on the type of plug-in you are developing, there are usually ways to avoid having to fully install the plug-in. For example, in an activated plug-in you could temporarily add code to the script to call `run()` and then test the script by running it directly from the code editor.
 
