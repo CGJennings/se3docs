@@ -49,12 +49,7 @@
       2. Extending the context bar
       3. Extending **Preferences**
    9. [Access the open project and its files](dm-project.md)
-   10. Extend the project system
-      1. Adding **Task** actions to existing tasks
-      2. Adding new task types
-      3. Extending the **New...** action with new file types
-      4. Adding support for new file types
-      5. Adding new kinds of metadata to the properties view
+   10. [Extend the project system](dm-project-ext.md)
    11. [Make the spelling checker ignore game terminology](dm-spelling-exclusions.md)
 
 
