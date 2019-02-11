@@ -137,7 +137,7 @@ ol ol, ul ol {
 }
 @keyframes target-highlight {
    0% {
-    text-shadow: -1px -1px 5rem rgba(255,255,0,0), 0 0 5rem rgba(255,255,0,0), 1px 1px 5rem rgba(255,255,0,0);
+    text-shadow: -1px -1px 5rem rgba(255,111,0,0), 0 0 5rem rgba(255,111,0,0), 1px 1px 5rem rgba(255,111,0,0);
      color: #ff6f00;
    }
    25% {
@@ -145,7 +145,7 @@ ol ol, ul ol {
     color: #ff6f00;
    }
    100% {
-     text-shadow: -1px -1px 5rem rgba(255,255,0,0), 0 0 5rem rgba(255,255,0,0), 1px 1px 5rem rgba(255,255,0,0);
+     text-shadow: -1px -1px 5rem rgba(255,111,0,0), 0 0 5rem rgba(255,111,0,0), 1px 1px 5rem rgba(255,111,0,0);
      color: #24292e;
    }
 }
