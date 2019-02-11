@@ -83,7 +83,7 @@ where `[options...]` is the list of options you want to use, separated by spaces
 
 To use the same options every time you run Strange Eons, right click on the shortcut icon that you use to start Strange Eons and choose **Properties**. Look for the field labelled **Target**. In this field you will find something like `"C:\Program Files\Strange Eons\bin\strangeeons.exe"`. Edit this by adding a space, then the list of options you wish to set (all after the `.exe"`).
 
-## On macOS
+### On macOS
 
 Open **Terminal** and use a command of the following form to run Strange Eons with command line options:
 
@@ -93,7 +93,7 @@ open "/Applications/Strange Eons.app" --args [options...]
 
 where `[options...]` is the list of options you want to use, separated by spaces. For VM options, you must put `-J` in front of the option name. To change the VM options permanently, right click the app icon in **Finder** and choose **Show Package Contents**. In the folder that opens, navigate into `Contents`, then open the `Info.plist` file, and find the appropriate entry.
 
-## On Linux and other platforms
+### On Linux and other platforms
 
 When starting the app from the command line, use the following template:
 
