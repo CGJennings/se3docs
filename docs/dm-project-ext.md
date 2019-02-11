@@ -130,6 +130,8 @@ Typically, a single MetadataSource is shared by all files of the given type (or 
 
 Within a project, users organize their work into various *task folders*. Each represents a different kind of activity related to the project. The available task actions and other features are tailored to the specific task folder that contains the selected project member.
 
+> If you are interested in adding a new wizard for creating plug-ins, check the documentation for [PluginTask](assets/javadoc/ca/cgjennings/apps/arkham/project/PluginTask.html), [PluginWizardDialog](assets/javadoc/ca/cgjennings/apps/arkham/project/PluginWizardDialog.html), and [PluginWizardDialog.WizardKit](assets/javadoc/ca/cgjennings/apps/arkham/project/PluginWizardDialog.WizardKit.html).
+
 To create a new kind of task folder, subclass the abstract [NewTaskType](assets/javadoc/ca/cgjennings/apps/arkham/project/NewTaskType.html) class. You will override some or all of the following:
 
 `getLabel()`  
@@ -157,4 +159,6 @@ NewTaskType.register(myNewTaskType);
 ```
 
 The new task folder type will then appear in the list of options in the **Add Task** dialog.
+
+
 
