@@ -42,17 +42,7 @@ The **Bundle Priority** value lets you change the order that bundles of the same
 
 > If your bundle contains multiple plug-ins, the bundle priority applies to all of them. Plug-ins with the same priority are started in an unspecified order chosen by Strange Eons. Therefore, if you need to ensure that two or more plug-ins are loaded in a certain order, put them in different bundles and give them different bundle priorities.
 
-The **Install Script** control lets you choose a script file in the plug-in to use as an installation script. An installation script is run when the bundle is installed or uninstalled from within the app. (If users manually copy the file into the plug-in folder, or delete the bundle file from the plug-in folder, the script won't run.) Most plug-ins do not require any special installation steps, so this can be left set to **none**.
-
-An installation script must contain functions that implement the `InstallationActions` interface, which defines two methods:
-
-`void install( PluginBundle bundle )`
-Called just after the bundle is copied to the plug-in folder, and before any plug-ins within it are started.
-
-`void uninstall( PluginBundle bundle )`
-Called just before the plug-in bundle is deleted during uninstallation.
-
-Do not assume that the user interface is available when these scripts run. Do not assume that any other classes or resources in the bundle are loaded or available when the script runs.
+The **Install Script** control lets you choose a script file in the plug-in to use as an [installation script](dm-installation.md). An installation script is run when the bundle is installed or uninstalled from within the app. (If users manually copy the file into the plug-in folder, or delete the bundle file from the plug-in folder, the script won't run.) Most plug-ins do not require any special installation steps, so this can be left set to **none**.
 
 #### Languages
 

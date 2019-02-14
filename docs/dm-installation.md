@@ -19,7 +19,10 @@ A plug-in bundle can have at most one installation script, declared with the `in
 An installation script must define functions that match the methods declared in the [InstallationActions](assets/javadoc/ca/cgjennings/apps/arkham/plugins/InstallationActions.html) interface. Namely:
 
 `install(pluginBundle)`  
-Called just after the bundle is copied to the plug-in folder during installation. No plug-ins in the bundle have been instantiated at this point. Generally the plug-in will not have been loaded, so you cannot expect any classes or resources from the bundle to be available to the installation script.
+Called just after the bundle is copied to the plug-in folder during installation. No plug-ins in the bundle have been instantiated at this point.
 
 `uninstall(pluginBundle)`  
-Called just before the bundle is deleted during uninstallation. Plug-ins that were uninstalled on a previous run are often deleted the next time the app starts up, before Strange Eons is completely loaded. Therefore you cannot rely on the full API being available (but standard Java classes will be available). The plug-in will not have been loaded, so you also cannot expect any classes or resources from the bundle to be available to the installation script.
+Called just before the bundle is deleted during uninstallation. Be aware that plug-ins that were uninstalled on a previous run are often deleted the next time the app starts up.
+
+> **Important**  
+> When these scripts run, the plug-in is generally not loaded and the app may be starting up: Do not assume that the user interface is available. Do not assume that any other classes or resources in the bundle are loaded or available. Do not expect the full [API](dm-java-api.md) to be available (though standard Java classes are safe).)
