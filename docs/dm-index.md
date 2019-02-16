@@ -35,7 +35,8 @@
    2. [Script debugger](dm-debugger.md)
    3. [Converting and compressing images](dm-convert-image.md)
    4. [Draw Regions](dm-draw-regions.md)
-   5. [Setting Explorer](dm-setting-explorer.md)
+   5. [Typeface (font file) viewer](dm-type-viewer.md)
+   6. [Setting Explorer](dm-setting-explorer.md)
 7. **How to...**
    1. [Register new games and game expansions](dm-register-game.md)
    2. [DIY components: create new game component types](dm-diy.md)
