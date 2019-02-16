@@ -9,7 +9,6 @@
    1. [Plug-in types](dm-plugin-types.md)
    2. Plug-in bundles and task folders
    3. [The root file](dm-eons-plugin.md)
-   4. [Installation notes and scripts](dm-installation.md)
 3. **APIs and examples**
    1. [Script library API](dm-script-api.md)
    2. [Java class API](dm-java-api.md)
@@ -30,6 +29,7 @@
    8. [Tile set resources](dm-res-tile-set.md)
    9. [Silhouette resources](dm-res-silhouette.md)
    10. [Default abbreviation table resources](dm-res-abbrv-table.md)
+   11. [Installation notes and scripts](dm-installation.md)
 6. **Development tools**
    1. [Code editor](dm-code-editor.md)
    2. [Script debugger](dm-debugger.md)
@@ -57,6 +57,5 @@
 
 How to guides temporary space  
 How to create a plug-in  
-How to develop a compiled plug-in  
 How to reduce a plug-in's footprint
 
