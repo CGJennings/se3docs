@@ -47,6 +47,33 @@ Classes related to text layout (markup boxes).
 [`ca.cgjennings.ui.*`](assets/javadoc/ca/cgjennings/ui/package-summary.html)   
 Classes for custom user interface components and related utilities.
 
+## Developing a compiled plug-in
+
+Develop a plug-in using Java is a matter of setting up your IDE appropriately. The exact steps needed to set up a given IDE vary, but the process is generally straightforward. Here is what's involved:
+
+1. Create a new project in your IDE.
+2. Set the source and binary formats to something suitable (e.g., JDK 8).
+3. Set the default encoding to UTF-8.
+4. Add `strange-eons.selibrary` (from the Strange Eons install folder) as a JAR library for the project.
+5. Set the build options to produce a JAR file of your project. This will be your plug-in bundle. Note the name and location of the file.
+6. Set the run options to start `strangeeons` (in the default package) as the main class. In the VM options, enter a suitable memory limit such as `-Xmx2g`.
+7. Modify the build script for your project so that it copies the JAR file produced after building to your plug-in folder. For example, for an Ant-based project on Windows you might add something like the following (just before `</project>`):
+
+```xml
+<property environment="env"/>
+<target name="-post-jar"> 
+    <copy file="${dist.dir}/myplugin.jar" tofile="${env.USERPROFILE}/.strange-eons-plugins/myplugin.seext"/>
+</target>
+```
+
+> For other platforms, replace `USERPROFILE` with `HOME`. Ensure the file extension of the copied file is appropriate for the plug-in type (`.seext`, `.seplugin`, etc.).
+
+8. Create a [root file](dm-eons-plugin.md). One way is to create an empty plug-in in a project and edit the root file there, then copy it to your project folder. (You could also make your development folder double as a project and edit the root file directly.) Enter the intended fully qualified class name for your main plug-in class. Make sure the root file also has a catalogue ID.
+9. Set up packages. You will want a unique package name starting in `resources` for your [images and other resources](dm-resources.md). Also add the package for your plug-in class.
+10. Add a new source file for your class, and make the resulting class extend `AbstractPlugin`. Using your IDEs autocompletion or import fixing tools should add the correct package import if you have correctly added Strange Eons as a library.
+11. Use your IDEs "override method" tool to add skeleton code for the plug-in methods you want to override.
+12. Fill in just enough code that you can build the project, then you can test your build and run settings. If the IDE successfully builds the plug-in it should create a JAR of the result, copy that to your plug-in folder (with appropriate extension), and start Strange Eons (which will then load your copied JAR as if it were any other plug-in).
+
 ## Accessing the Java API from script code
 
 Despite having similar names and some common syntax, Java and JavaScript are different languages. Calling into the Java API is usually a smooth experience, but when there is friction between the two languages the result can be confusing. This section will help you code more efficiently and solve some of the most common issues you may encounter.

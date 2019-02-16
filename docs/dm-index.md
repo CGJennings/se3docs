@@ -45,14 +45,13 @@
    4. [Add bleed margins to DIY components](dm-diy-bleed-margins.md)
    5. [Change DIY components without breaking old save files](dm-compatibility.md)
    6. [Prefab components: create new component types without code](dm-diy-prefab.md)
-   7. Access and modify existing components
-   8. [Access the open project and its files](dm-project.md)
-   9. [Extend the project system](dm-project-ext.md)
-   10. [Extend the **Preferences** dialog](dm-preferences.md)
-   11. [Customize the context bar](dm-context-bar.md)
-   12. [Extend the app menu](dm-app-menu.md)
-   13. [Use and define application commands](dm-app-commands.md)
-   14. [Make the spelling checker ignore game terminology](dm-spelling-exclusions.md)
+   7. [Access the open project and its files](dm-project.md)
+   8. [Extend the project system](dm-project-ext.md)
+   9. [Extend the **Preferences** dialog](dm-preferences.md)
+   10. [Customize the context bar](dm-context-bar.md)
+   11. [Extend the app menu](dm-app-menu.md)
+   12. [Use and define application commands](dm-app-commands.md)
+   13. [Make the spelling checker ignore game terminology](dm-spelling-exclusions.md)
 
 
 
