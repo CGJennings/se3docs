@@ -44,13 +44,13 @@
    5. [Change DIY components without breaking old save files](dm-compatibility.md)
    6. [Prefab components: create new component types without code](dm-diy-prefab.md)
    7. Access and modify existing components
-   8. Add new app commands and features
-      1. [Extend the app menu](dm-app-menu.md)
-      2. [Customize the context bar](dm-context-bar.md)
-      3. [Extend the **Preferences** dialog](dm-preferences.md)
-   9. [Access the open project and its files](dm-project.md)
-   10. [Extend the project system](dm-project-ext.md)
-   11. [Make the spelling checker ignore game terminology](dm-spelling-exclusions.md)
+   8. [Access the open project and its files](dm-project.md)
+   9. [Extend the project system](dm-project-ext.md)
+   10. [Extend the **Preferences** dialog](dm-preferences.md)
+   11. [Customize the context bar](dm-context-bar.md)
+   12. [Extend the app menu](dm-app-menu.md)
+   13. [Use and define application commands](dm-app-commands.md)
+   14. [Make the spelling checker ignore game terminology](dm-spelling-exclusions.md)
 
 
 

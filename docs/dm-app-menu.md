@@ -1,6 +1,6 @@
 # Extend the application menus
 
-There is a simple mechanism for extending the main application menus. Each menu (**File**, **Edit** and so on) reserves a standard area for adding custom items. The method [`StrangeEonsAppWindow.addMenuItem(targetMenu, item)`](assets/javadoc/ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#addMenuItem-ca.cgjennings.apps.arkham.StrangeEonsAppWindow.AppMenu-javax.swing.JComponent-) is used to add new items. This method takes two parameters, an enum value (of type [StrangeEonsAppWindow.AppMenu](assets/javadoc/ca/cgjennings/apps/arkham/StrangeEonsAppWindow.AppMenu.html)) that specifies *which* menu to extend, and the menu item itself. For example:
+There is a simple mechanism for extending the main application menus. Each menu (**File**, **Edit** and so on) reserves a standard area for adding custom items. The method [`StrangeEonsAppWindow.addMenuItem(targetMenu, item)`](assets/javadoc/ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#addMenuItem-ca.cgjennings.apps.arkham.StrangeEonsAppWindow.AppMenu-javax.swing.JComponent-) is used to add new items. This method takes two parameters, an enum value (of type [StrangeEonsAppWindow.AppMenu](assets/javadoc/ca/cgjennings/apps/arkham/StrangeEonsAppWindow.AppMenu.html)) that specifies *which* menu to extend, and the menu item itself. For example:
 
 ```js
 importClass(arkham.StrangeEonsAppWindow.AppMenu);
