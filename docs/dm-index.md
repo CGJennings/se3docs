@@ -45,9 +45,9 @@
    6. [Prefab components: create new component types without code](dm-diy-prefab.md)
    7. Access and modify existing components
    8. Add new app commands and features
-      1. Extending the app menu
-      2. Extending the context bar
-      3. Extending **Preferences**
+      1. [Extend the app menu](dm-app-menu.md)
+      2. [Customize the context bar](dm-context-bar.md)
+      3. Add a custom section to the **Preferences** dialog
    9. [Access the open project and its files](dm-project.md)
    10. [Extend the project system](dm-project-ext.md)
    11. [Make the spelling checker ignore game terminology](dm-spelling-exclusions.md)
