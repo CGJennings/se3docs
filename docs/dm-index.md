@@ -47,7 +47,7 @@
    8. Add new app commands and features
       1. [Extend the app menu](dm-app-menu.md)
       2. [Customize the context bar](dm-context-bar.md)
-      3. Add a custom section to the **Preferences** dialog
+      3. [Extend the **Preferences** dialog](dm-preferences.md)
    9. [Access the open project and its files](dm-project.md)
    10. [Extend the project system](dm-project-ext.md)
    11. [Make the spelling checker ignore game terminology](dm-spelling-exclusions.md)
