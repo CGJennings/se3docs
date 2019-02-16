@@ -37,6 +37,7 @@
    4. [Draw Regions](dm-draw-regions.md)
    5. [Typeface (font file) viewer](dm-type-viewer.md)
    6. [Setting Explorer](dm-setting-explorer.md)
+   7. [Memory use and cache control](dm-memory.md)
 7. **How to...**
    1. [Register new games and game expansions](dm-register-game.md)
    2. [DIY components: create new game component types](dm-diy.md)
