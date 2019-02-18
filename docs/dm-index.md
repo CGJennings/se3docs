@@ -7,19 +7,15 @@
    2. [Plug-in types](dm-plugin-types.md)
    3. [My First Plug-in](dm-first-plugin.md)
    4. [The root file](dm-eons-plugin.md)
-
 2. **APIs and examples**
    1. [Script library API](dm-script-api.md)
    2. [Java class API](dm-java-api.md)
    3. [Plug-in authoring kit](dm-pak.md)
-
 3. **Settings**
-
    1. [Setting basics](dm-settings.md)
    2. [Setting hierarchies](dm-setting-hierarchies.md)
    3. [Setting collections](dm-setting-collections.md)
    4. [$-notation](dm-dollar-notation.md)
-
 4. **Additional plug-in resources (images, fonts, etc.)**
    1. [Resources](dm-resources.md)
    2. [Resource `res://` and other special URLs](dm-special-urls.md)
@@ -32,7 +28,6 @@
    9. [Silhouette resources](dm-res-silhouette.md)
    10. [Default abbreviation table resources](dm-res-abbrv-table.md)
    11. [Installation notes and scripts](dm-installation.md)
-
 5. **Development tools**
    1. [Quickscript and the script console](dm-quickscript.md)
    2. [Code editor](dm-code-editor.md)
@@ -42,7 +37,6 @@
    6. [Typeface (font file) viewer](dm-type-viewer.md)
    7. [Setting Explorer](dm-setting-explorer.md)
    8. [Memory use and cache control](dm-memory.md)
-
 6. **How to...**
    1. [Register new games and game expansions](dm-register-game.md)
    2. [DIY components: create new game component types](dm-diy.md)
@@ -57,10 +51,3 @@
    11. [Extend the app menu](dm-app-menu.md)
    12. [Use and define application commands](dm-app-commands.md)
    13. [Make the spelling checker ignore game terminology](dm-spelling-exclusions.md)
-
-
-
-How to guides temporary space  
-How to create a plug-in  
-How to reduce a plug-in's footprint
-
