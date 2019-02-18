@@ -82,7 +82,7 @@ Adds a new radio button with the specified `label`. The button will be part of t
 Starts a new radio button group, which becomes the new *current button group*.
 
 `addUnmanagedControl(JComponent uc)`  
-Adds a component that will not be automatically mapped to setting values; handling this control and any related settings values will be up to you. You can subclass FillInPreferenceCategory and override `loadSettings()`, `storeSettings()`, and `isRestartRequired()` as needed.
+Adds a component that will not be automatically mapped to setting values; handling this control and any related settings values will be up to you. You can subclass FillInPreferenceCategory and override `loadSettings()`, `storeSettings()`, and `isRestartRequired()` as needed. The [Plug-in Authoring Kit](dm-pak.md) includes an [example](https://github.com/CGJennings/se3docs/blob/master/Plug-in%20Authoring%20Kit/Code%20Snippets%20and%20Demos/custom-preferences.js) that demonstrates how to accomplish this.
 
 `addHelp(String helpPage, String label, boolean isWikiPage)`  
 Adds a help button that will open a Web page; if `isWikiPage` is `true`, the button will open a page in the standard documentation whose name is given by `helpPage`.
