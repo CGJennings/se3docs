@@ -50,4 +50,5 @@
    10. [Customize the context bar](dm-context-bar.md)
    11. [Extend the app menu](dm-app-menu.md)
    12. [Use and define application commands](dm-app-commands.md)
-   13. [Make the spelling checker ignore game terminology](dm-spelling-exclusions.md)
+   13. [Register an export container](dm-export-container.md)
+   14. [Make the spelling checker ignore game terminology](dm-spelling-exclusions.md)
