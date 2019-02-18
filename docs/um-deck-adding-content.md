@@ -56,6 +56,20 @@ Many deck objects snap to a slightly different location than the point you drop 
 
 To *drop a dragged object without snapping*, hold <kbd>Ctrl</kbd> as you release the mouse button.
 
+## Moving objects precisely
+
+The floating Precise Deck Location window allows you to set the location and (for supported objects) size with entering precise numeric values.
+
+![precise deck location window](images/deck-precise-location.png)
+
+To *display the Precise Deck Location floating window*, choose the **Window/Precise Deck Location** menu item.
+
+To *change the unit used for measurements in the window*, select the desired unit from the **Units** dropdown.
+
+To *set the horizontal and vertical position of an object precisely*, select it and then enter the distance from the left edge of the page in the **x** field and the distance from the top edge of the page in the **y** field of the floating window.
+
+To *set the size of a resizable object precisely*, select it and then enter the dimensions in the **width** and **height** fields of the floating window.
+
 ## Deleting objects
 
 To *delete objects from the page*, first select the desired object(s). Then press <kbd>Delete</kbd> or <kbd>Backspace</kbd>.
