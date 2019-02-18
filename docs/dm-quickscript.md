@@ -47,7 +47,7 @@ for(let i=10; i>0; --i) {
 println("Blastoff!");
 ```
 
-The `print` function prints a representation of the object(s) passed to it to the console. The `println` function behaves the same way but automatically starts a new line afterward. The `printf` function behaves like the similarly named C function. Example:
+The `print` function prints a representation of the object(s) passed to it to the console. The `println` function behaves the same way but automatically starts a new line afterward. The `printf` function behaves like the similarly-named C function. Example:
 
 ```js
 printf("Grade: %.0f percent\n", 97.8);
