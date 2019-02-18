@@ -31,6 +31,8 @@ To *edit the text in a text box*, double click the text box. Enter the desired [
 
 To *change the box size* click the box, then drag one of the corners.
 
+> If no resize corners or rotation handles are shown when you select an applicable object, choose **View/Object Handles** from the menu to turn them back on.
+
 ### Adding a custom tile (image)
 
 To *add a custom tile*, drag and drop the **Custom Tile** from the **Tools** list onto the page.
