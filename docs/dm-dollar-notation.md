@@ -39,16 +39,20 @@ A $ variable is always resolved against a particular collection of [Settings](as
 
 ### Key name translation
 
-Many settings include `-` in the key name. This is an issue since this is not a valid character in setting names. (The convention of using `-` in key names predates the addition of $-notation by several years.) As a workaround for this, when using `$` notation the `_` character is translated to `-`. Hence:
+Many settings include `-` in the key name. This is normally not allowed as part of a script identifier, but is allowed when using $-notation (as well as #- and @-notation). However, older versions of Strange Eons did not support this and instead used the workaround of translating the `_` character to `-`. To remain compatible with old code, this translation is still performed. Hence:
 
 ```js
 // instead of
 value = settings.get("key-with-hyphen");
-// you would write
+// you could write
 value = $key_with_hyphen;
+// but in all recent versions of Strange Eons you can also simply write
+value = $key-with-hyphen;
+// but if the key name really has an underscore (or other illegal character) you'd use, e.g.:
+value = settings.get("key_with underscores and_spaces");
 ```
 
-Key names that use either `_` or characters that are [not allowed in variable names](https://developer.mozilla.org/bm/docs/Web/JavaScript/Guide/Grammar_and_types#Variables) cannot use $-notation and must be accessed directly through a Settings instance.
+As shown in the example, key names that use either `_` or characters that are [not allowed in variable names](https://developer.mozilla.org/bm/docs/Web/JavaScript/Guide/Grammar_and_types#Variables) cannot use $-notation and must be accessed directly through a Settings instance.
 
 ### Type coercion
 
