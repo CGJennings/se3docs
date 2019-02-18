@@ -64,7 +64,7 @@ Subsequent controls will be indented one level or a previous indentation moved b
 Adds a check box tied to the setting `key`; if `invert` is true then the check box with show the reverse of the setting key value (if the setting value is false, the box will be checked and vice-versa).
 
 `addDropDown(String key, String[] labels, String[] values)`  
-Adds a drop down menu tied to the setting `key`; the given `labels` are shown to the user in the drop down, while the given `values` are the matching setting values. For example, if the `values` are `["ch0", "ch1"]` and the `labels` are `["Option 1", "Option 2"]`, then a setting value of `ch1` will appear in the drop down as *Option 2*.
+Adds a dropdown menu tied to the setting `key`; the given `labels` are shown to the user in the dropdown, while the given `values` are the matching setting values. For example, if the `values` are `["ch0", "ch1"]` and the `labels` are `["Option 1", "Option 2"]`, then a setting value of `ch1` will appear in the dropdown as *Option 2*.
 
 `addRange(String key, String label, int min, int max, int stepSize)`  
 Adds a numeric field tied to the setting `key` that accepts integer values between `min` and `max` inclusive and which can be stepped through in `stepSize` increments.

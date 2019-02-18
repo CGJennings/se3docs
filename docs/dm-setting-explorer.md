@@ -12,7 +12,7 @@ To *choose which setting hierarchy* the window displays, choose it from the **So
 
 The setting table can display keys inherited from all ancestors, just the immediate parent, or only keys directly defined in the selected Settings instance. Inherited keys are listed in grey, while directly defined keys are listed in white.
 
-To *choose whether settings inherited from ancestors are displayed in the table*, choose an option from the **Parent settings to list** drop down.
+To *choose whether settings inherited from ancestors are displayed in the table*, choose an option from the **Parent settings to list** dropdown.
 
 To *view a tree showing how a key's value changes up the hierarchy*, select the key name in the table. The inheritance tree is shown on the right under **Value Inheritance**.
 

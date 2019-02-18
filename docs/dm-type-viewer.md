@@ -34,4 +34,4 @@ For example, to find all quotation characters, enter `quot` in the search field 
 
 ### Displayed character ranges
 
-By default, the viewer shows only the characters in the Unicode *Basic Multilingual Plane*. This includes almost all of the characters used in modern languages, and will usually suffice. The drop down list in the upper right corner of the dialog can be used to switch to the full Unicode range when required.
+By default, the viewer shows only the characters in the Unicode *Basic Multilingual Plane*. This includes almost all of the characters used in modern languages, and will usually suffice. The dropdown list in the upper right corner of the dialog can be used to switch to the full Unicode range when required.

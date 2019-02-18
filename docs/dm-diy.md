@@ -158,7 +158,7 @@ For example, a character card might have a attribute for “race” (human, elf,
 Fortunately, Strange Eons provides a number of script libraries to make this process fairly painless:
 
 [uicontrols](assets/jsdoc/uicontrols.html)  
-Defines functions for creating UI controls like text fields, drop down boxes, and so on.
+Defines functions for creating UI controls like text fields, dropdown boxes, and so on.
 
 [uilayout](assets/jsdoc/uilayout.html)  
 Defines functions for arranging UI controls in groups.
