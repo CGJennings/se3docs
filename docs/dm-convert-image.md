@@ -61,3 +61,11 @@ The main disadvantage of JPEG2000 compared to other formats is that the compress
 ## Converting Photoshop PSD files
 
 Photoshop PSD (`.psd`) files are not directly supported by the **Convert To** action. Strange Eons does not regard them as image files because they are not simple bitmaps but rather a composite of layers and effects. However, most PSD files can be viewed and converted indirectly using the image viewer tool: double click the PSD file in the project to open it, then choose the **Save As** button. It is recommended that you start by saving the image as a PNG image since that is lossless. Once in PNG format, use **Convert To** as you would for any other PNG image to complete the conversion as desired.
+
+## Reducing a plug-in's footprint
+
+You can significantly reduce the download size of a plug-in by simply converting the image resources to high quality JPEG2000 images. Almost all images will compress smaller as JPEG2000s, the main exception being some small icons. The best targets are images with fine detail, like photographs or textured art. Start by setting the quality slider to about 74% and check the resulting file size. In most cases you won't be able to see any difference at this setting, but for small images you need to start higher to avoid artifacts. (You can also set the slider to 100% to reproduce the original image exactly, but the savings in file size is typically much smaller.)
+
+Once you have replaced your original images with `.jp2`s, you should move the originals to another folder outside of the plug-in task so you still have them for reference but they will no longer be included in the final bundle. Use the [project search field](um-proj-search.md) to find instances of the old file names and replace them with their new `.jp2` counterparts.
+
+> If you have a lot of small PNG icons to compress and their JPEG2000 counterparts are larger, use the [PNG Packer plug-in](https://github.com/CGJennings/se3docs/blob/master/Plug-in%20Authoring%20Kit/Project%20Examples/PNG%20Packer/resources/cgj/PNGPack.js) included with the [Plug-in Authoring Kit](dm-pak.md) to pack every PNG image in a folder with a single click.

@@ -4,21 +4,23 @@
 
 1. **Getting started**
    1. [Overview of plug-in authoring](dm-overview.md)
-   2. [My First Plug-in](dm-first-plugin.md)
-2. **Anatomy of a plug-in**
-   1. [Plug-in types](dm-plugin-types.md)
-   2. Plug-in bundles and task folders
-   3. [The root file](dm-eons-plugin.md)
-3. **APIs and examples**
+   2. [Plug-in types](dm-plugin-types.md)
+   3. [My First Plug-in](dm-first-plugin.md)
+   4. [The root file](dm-eons-plugin.md)
+
+2. **APIs and examples**
    1. [Script library API](dm-script-api.md)
    2. [Java class API](dm-java-api.md)
    3. [Plug-in authoring kit](dm-pak.md)
-4. **Settings**
+
+3. **Settings**
+
    1. [Setting basics](dm-settings.md)
    2. [Setting hierarchies](dm-setting-hierarchies.md)
    3. [Setting collections](dm-setting-collections.md)
    4. [$-notation](dm-dollar-notation.md)
-5. **Additional plug-in resources (images, fonts, etc.)**
+
+4. **Additional plug-in resources (images, fonts, etc.)**
    1. [Resources](dm-resources.md)
    2. [Resource `res://` and other special URLs](dm-special-urls.md)
    3. [Image resources](dm-res-image.md)
@@ -30,7 +32,8 @@
    9. [Silhouette resources](dm-res-silhouette.md)
    10. [Default abbreviation table resources](dm-res-abbrv-table.md)
    11. [Installation notes and scripts](dm-installation.md)
-6. **Development tools**
+
+5. **Development tools**
    1. [Quickscript and the script console](dm-quickscript.md)
    2. [Code editor](dm-code-editor.md)
    3. [Script debugger](dm-debugger.md)
@@ -39,7 +42,8 @@
    6. [Typeface (font file) viewer](dm-type-viewer.md)
    7. [Setting Explorer](dm-setting-explorer.md)
    8. [Memory use and cache control](dm-memory.md)
-7. **How to...**
+
+6. **How to...**
    1. [Register new games and game expansions](dm-register-game.md)
    2. [DIY components: create new game component types](dm-diy.md)
    3. [Add portraits to DIY components](dm-diy-portraits.md)
