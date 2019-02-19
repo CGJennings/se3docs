@@ -12,3 +12,5 @@
 6. Advanced topics
    1. [Translating strings that use plural forms](tm-plurals.md)
    2. [Adding spelling support for a new language](tm-spelling.md)
+7. **Appendix**
+   1. [Table of locale codes](tm-locales.md)
