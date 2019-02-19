@@ -2,15 +2,15 @@
 
 # Translation manual contents
 
-1. Introduction to Strange Eons localization
-   1. Locale codes
-   2. String tables
-2. The string table editor
-3. Starting a new translation
-4. Testing a translation
-5. General tips and guidelines
-6. Advanced topics
-   1. [Translating strings that use plural forms](tm-plurals.md)
-   2. [Adding spelling support for a new language](tm-spelling.md)
-7. **Appendix**
+1. **Introduction**
+   1. [Overview of localization](tm-intro.md)
+   2. [Adding a new translation](tm-add-new.md)
+   3. Testing a translation
+2. **How to...**
+   1. [Handle %-format strings](tm-printf-strings.md)
+   2. [Fit translated text](tm-fitting-text.md)
+   3. [Work around fonts that don't support the target locale](tm-fonts.md)
+   4. [Translate strings that use plural forms](tm-plurals.md)
+   5. [Add spelling support for a new language](tm-spelling.md)
+3. **Appendix**
    1. [Table of locale codes](tm-locales.md)

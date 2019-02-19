@@ -1,4 +1,4 @@
-# Adding spelling support for a new language
+# Add spelling support for a new language
 
 A number of steps are required to add spelling support for a new language. However, if it is done carefully then it only needs to be done once. It is fairly easy to find or make a list of correctly spelled words for a basic dictionary. The more difficult part is providing the information needed to help the spelling system to quickly generate good suggestions for misspelled words. For that you‘ll need to gather the following:
 

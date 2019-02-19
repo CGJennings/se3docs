@@ -1,4 +1,4 @@
-# Translating strings that use plural forms
+# Translate strings that use plural forms
 
 Most languages use different word forms for nouns depending on the number of objects being referred to. For example, in English one writes *one donkey* but *two donkeys*. The rule in English is that the single form is used when there is one object, and the plural is used in all other cases (including zero). Other languages can have different rules, and some even use more than one plural form.
 
