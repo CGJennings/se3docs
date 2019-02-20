@@ -2,6 +2,8 @@
 
 The process of adding support for multiple languages to a plug-in is called *localization* (also internationalization, translation). Strange Eons supports localization for both the main application and its plug-ins, although not all plug-ins are designed to support localization.
 
+> In a computer program, a bit of text is often called a *string* (as in, *a string of letters*.). You will often see the terms "text" and "string" used interchangeably in this manual.
+
 ## How localization works
 
 To prepare a plug-in for localization, the plug-in author must make it to refer to text *indirectly.* Instead of writing code that tells Strange Eons *print the word "'hello"*, the author will write something like *print the text for a greeting in the current language*. This process must be done for each bit of text that is needed, and so to tell them apart the plug-in author will assign each one a unique label called a *key*. The key is a placeholder that stands in for the final text, because the plug-in won't know what the final text is until the code is actually running (because the choice depends on which languages are active).
@@ -16,7 +18,9 @@ Each translation is stored in a separate file. The file will have the same name 
 
 ## Locales
 
-The suffix added to different translations is called a *locale code*. A [locale code](tm-locales.md) describes combines a *language* with an optional *region* (often called a *country* though this is not always strictly correct). For example, *English* is a locale (with code `en`), as are the regional variants *Canadian English* (with code `en_CA`) and *Australian English* (with code `en_AU`).
+The suffix added to different translations is called a *locale code*. A [locale code](tm-locales.md) combines a *language* with an optional *region* (the region is often called a *country*, though this is not always strictly correct). For example, *English* is a locale (with code `en`), as are the regional variants *Canadian English* (with code `en_CA`) and *Australian English* (with code `en_AU`).
+
+> All language codes are written the lower case letters *a&ndash;z* while all region codes use the upper case letters *A&ndash;Z*. The character between them is an underscore (_). Locale codes can include other features not mentioned here, but they are not used with Strange Eons.
 
 Just as undefined keys in a language-specific file inherit their value from the default translation, region-specific variants inherit from their base language. For example, consider this example set of string tables (the format is `key = value`):
 
