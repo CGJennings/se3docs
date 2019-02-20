@@ -6,16 +6,16 @@ Expansions are discrete add-on products for an existing game. They typically add
 
 Classes related to games and expansions are defined in the `gamedata` package. When writing a plug-in script, you can call `useLibrary("extension")` to import them in one go. Then you can simply refer to them by their class name (for example, `Game` instead of `gamedata.Game`). Here is a summary of some of the most commonly used classes:
 
-[Game](https://cgjennings.github.io/se3docs/assets/javadoc/gamedata/Game.html)  
+[Game](assets/javadoc/gamedata/Game.html)  
 Represents a unique game. Can be used to register new games or look up information about existing games.
 
-[Expansion](https://cgjennings.github.io/se3docs/assets/javadoc/gamedata/Expansion.html)  
+[Expansion](assets/javadoc/gamedata/Expansion.html)  
 Represents an expansion for a game. Can be used to register new expansions or look up information about existing expansions.
 
-[ExpansionSymbolTemplate](https://cgjennings.github.io/se3docs/assets/javadoc/gamedata/ExpansionSymbolTemplate.html)  
-This can optionally be used by games to provide information about different variants used by expansion symbols. For example, some games might have both light and dark variants of their expansion symbols, with each component using the variant that best suits its design. The helper class [AbstractExpansionSymbolTemplate](https://cgjennings.github.io/se3docs/assets/javadoc/gamedata/AbstractExpansionSymbolTemplate.html) makes it easier to define a template of your own.
+[ExpansionSymbolTemplate](assets/javadoc/gamedata/ExpansionSymbolTemplate.html)  
+This can optionally be used by games to provide information about different variants used by expansion symbols. For example, some games might have both light and dark variants of their expansion symbols, with each component using the variant that best suits its design. The helper class [AbstractExpansionSymbolTemplate](assets/javadoc/gamedata/AbstractExpansionSymbolTemplate.html) makes it easier to define a template of your own.
 
-[ClassMap](https://cgjennings.github.io/se3docs/assets/javadoc/gamedata/ClassMap.html)  
+[ClassMap](assets/javadoc/gamedata/ClassMap.html)  
 Class maps are used to register new kinds of game components. Each entry in a [class map file](dm-res-classmap.md) includes a section for specifying the game that the component belongs to.
 
 ## Games
@@ -81,7 +81,7 @@ The name of the expansion (in the game language, if you support multiple languag
 A image, typically [loaded from the plug-in’s resources](dm-res-image.md), used to represent the expansion in the user interface. If `null`, a default image is used.
 
 `symbols`  
-An array of images to use when drawing the expansion’s symbol on game components. There should be one image for each variant specified by the game’s [ExpansionSymbolTemplate](https://cgjennings.github.io/se3docs/assets/javadoc/gamedata/ExpansionSymbolTemplate.html).
+An array of images to use when drawing the expansion’s symbol on game components. There should be one image for each variant specified by the game’s [ExpansionSymbolTemplate](assets/javadoc/gamedata/ExpansionSymbolTemplate.html).
 
 > The main plug-in for a game will typically register expansions for any official expansions that are available. Users can also define their own [custom expansions](um-gc-expansions.md#custom-expansions).
 
@@ -97,7 +97,7 @@ In most cases, Strange Eons can handle the details expansion symbol painting for
 
 The built-in painting mechanism is suitable for most games. The following checklist summarizes what you need to do to take advantage of it:
 
-1. Register your game, if applicable. If you want to use symbol variants other than the default, define a custom [ExpansionSymbolTemplate](https://cgjennings.github.io/se3docs/assets/javadoc/gamedata/ExpansionSymbolTemplate.html) that describes them and register that along with the game.
+1. Register your game, if applicable. If you want to use symbol variants other than the default, define a custom [ExpansionSymbolTemplate](assets/javadoc/gamedata/ExpansionSymbolTemplate.html) that describes them and register that along with the game.
 2. Register any standard expansions for the game, defining an icon (for the user interface) and a symbol image (for the components, one for each variant).
 3. For any component face that should display an expansion symbol, add a settings key with the same base name as the face’s template key but ending in `-expsym-region` instead of `-template`. Set the value of this key to the region where the symbol should be painted.
 4. If the component should use one the variant symbol designs by default, also add a settings key with the suffix `-expsym-invert` and set it to the numeric index of the default variant.
@@ -113,7 +113,7 @@ The built-in expansion symbol painting algorithm proceeds as follows:
 3. Get the matching Game instance by calling `Game.get(code)`.
 4. Get the ExpansionSymbolTemplate for the game by calling `Game.getSymbolTemplate()`.
 5. If the template’s `isCustomDrawn()` method returns `true`, the procedure ends here.
-6. Determine which expansions are actively assigned to the component by reading the `active-expansion` settings key. See [`Expansion.getComponentExpansionSymbols`](https://cgjennings.github.io/se3docs/assets/javadoc/gamedata/Expansion.html#getComponentExpansionSymbols-ca.cgjennings.apps.arkham.component.GameComponent-). If this key is not defined, it is equivalent to having the `"NX"` no expansion value.
+6. Determine which expansions are actively assigned to the component by reading the `active-expansion` settings key. See [`Expansion.getComponentExpansionSymbols`](assets/javadoc/gamedata/Expansion.html#getComponentExpansionSymbols-ca.cgjennings.apps.arkham.component.GameComponent-). If this key is not defined, it is equivalent to having the `"NX"` no expansion value.
 7. If one or more expansions are set, determine which variant to use. First check is the user has specified a variant by looking up the setting key `active-variant `. If not, look up the `-expsym-invert` key, which defines the numeric index of the default variant when present. If all else fails, variant 0 will be used.
 8. Once the expansion code(s) and symbol design variant are known, look up the Expansion for each of the active expansions by calling `Expansion.get(expansionCode)`. For each expansion, if it exists, get the correct expansion symbol to paint by calling `Expansion.getSymbol(variantIndex)`.
 9. By default, the drawing region for the symbol is the one given by the `-expsym-region` key. However, if the more specific key `-expsym-EXP-region` (where `EXP` is the code of the active expansion), then that region is used instead.
@@ -144,7 +144,7 @@ This dialog shows a row of symbol graphics, one for each variant, and allows the
 
 ### Optional automatic symbol generation
 
-To make it easier for users to generate a complete set of symbols in the New Expansion dialog, templates can optionally generate an entire set of variants from one sample image. To enable this,  `canGenerateVariantsAutomatically()` must return `true`. In this case, when the user supplies a sample image the method `generateVariant(sampleImage, index)` will be called to generate each symbol variant in turn. The class [SymbolVariantUtilities](https://cgjennings.github.io/se3docs/assets/javadoc/gamedata/SymbolVariantUtilities.html) defines some helper methods that can help you implement a symbol generator.
+To make it easier for users to generate a complete set of symbols in the New Expansion dialog, templates can optionally generate an entire set of variants from one sample image. To enable this,  `canGenerateVariantsAutomatically()` must return `true`. In this case, when the user supplies a sample image the method `generateVariant(sampleImage, index)` will be called to generate each symbol variant in turn. The class [SymbolVariantUtilities](assets/javadoc/gamedata/SymbolVariantUtilities.html) defines some helper methods that can help you implement a symbol generator.
 
 ### Logical variants versus visual variants
 
@@ -152,4 +152,4 @@ Strange Eons allows games to distinguish between *visual variants* (different ex
 
 The **Expansion/Variant** menu lists the available *logical* variants, and these must be mapped to *visual* variants when the symbol is painted. The default symbol painting procedure simply assumes that the logical and visual variants correspond exactly: choosing a logical variant in the list implicitly selects the visual variant with the same index.
 
-If you wish to distinguish between logical and visual variants, you must implement the following methods: `getLogicalVariantCount()`, `getLogicalVariantIcon(index)`, and `getLogicalVariantName(index)`. The base implementation in [AbstractExpansionMenuTemplate](https://cgjennings.github.io/se3docs/assets/javadoc/gamedata/AbstractExpansionSymbolTemplate.html) simply forwards to the visual equivalents of these methods (`getVariantCount()`, `getVariantIcon(index)`, and `getVariantName(index)`). Note that icons and names for the visual variants are still required for some features, such as the New Expansion dialog.
+If you wish to distinguish between logical and visual variants, you must implement the following methods: `getLogicalVariantCount()`, `getLogicalVariantIcon(index)`, and `getLogicalVariantName(index)`. The base implementation in [AbstractExpansionMenuTemplate](assets/javadoc/gamedata/AbstractExpansionSymbolTemplate.html) simply forwards to the visual equivalents of these methods (`getVariantCount()`, `getVariantIcon(index)`, and `getVariantName(index)`). Note that icons and names for the visual variants are still required for some features, such as the New Expansion dialog.
