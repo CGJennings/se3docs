@@ -5,7 +5,7 @@
 1. **Introduction**
    1. [Overview of localization](tm-intro.md)
    2. [Adding a new translation](tm-add-new.md)
-   3. Testing a translation
+   3. [Testing a translation](tm-testing.md)
 2. **How to...**
    1. [Handle %-format strings](tm-printf-strings.md)
    2. [Fit translated text](tm-fitting-text.md)
