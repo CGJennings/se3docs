@@ -278,7 +278,7 @@ If you are editing a file that belongs to a plug-in task folder in a project, th
 
 ### Test Plug-in
 
-If you are editing a file that belongs to a plug-in task folder in a project, this will open the **Test Plug-in&& dialog.
+If you are editing a file that belongs to a plug-in task folder in a project, this will open the [**Test Plug-in** dialog](dm-test-plugin.md).
 
 ### Remove Trailing Spaces
 

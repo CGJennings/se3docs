@@ -225,4 +225,4 @@ DIY scripts can often be tested without all the effort of building and testing t
 
 > When updating an existing plug-in, you should [uninstall the older version](um-plugins-manager.md) so it doesn't interfere.
 
-For a more accurate test of the plug-in, right click on its task folder or bundle and choose **Test Plug-in**. This will launch a separate copy of Strange Eons which will load your plug-in as if it was installed. The test instance uses a special brown-green theme so it is easy to identify.
+For a more accurate test of the plug-in, right click on its task folder or bundle and choose [**Test Plug-in**](dm-test-plugin.md). This will launch a separate copy of Strange Eons which will load your plug-in as if it was installed. The test instance uses a special brown-green theme so it is easy to identify.

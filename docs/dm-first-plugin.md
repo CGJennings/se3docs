@@ -87,6 +87,6 @@ Once installed, the plug-in will be loaded. Since this is an *activated* plug-in
 
 ## Testing a plug-in
 
-Often, a plug-in bundle can't be installed multiple times without restarting Strange Eons. To make development easier, you can test plug-ins using a separate test edition of Strange Eons. Once you are done testing, you can close it and pick up where you left off. However, depending on the type of plug-in you are developing, there are usually ways to avoid having to fully install the plug-in. For example, in an activated plug-in you could temporarily add code to the script to call `run()` and then test the script by running it directly from the code editor.
+Often, a plug-in bundle can't be installed multiple times without restarting Strange Eons. To make development easier, you can [test plug-ins](dm-test-plugin.md) using a separate test edition of Strange Eons. Once you are done testing, you can close it and pick up where you left off. However, depending on the type of plug-in you are developing, there are usually ways to avoid having to fully install the plug-in. For example, in an activated plug-in you could temporarily add code to the script to call `run()` and then test the script by running it directly from the code editor.
 
 To *test a plug-in*, right clicking on a task folder or bundle and choose **Test Plug-in**.

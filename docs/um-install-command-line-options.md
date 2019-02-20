@@ -21,7 +21,7 @@ Sets the game language to the given locale, such as `en_CA` for Canadian English
 Sets the game language to the given locale.
 
 `--plugintest bundlefile`
-Runs the application in plug-in test mode in order to test the given bundle file. The bundle will be loaded as if it were the plug-in folder. This is usually used indirectly, by using the **Test Plug-in** project command.
+Runs the application in [plug-in test mode](dm-test-plugin.md) in order to test the given bundle file. The bundle will be loaded as if it were the plug-in folder. This is usually used indirectly, by using the [**Test Plug-in** project command](dm-test-plugin.md).
 
 `--resetprefs`
 Resets user preferences to their default values.
@@ -30,7 +30,7 @@ Resets user preferences to their default values.
 Migrates compatible preferences from Strange Eons 1 or 2, if available. This normally happens automatically when SE3 is run for the first time; this option forces the migration to be run again, overwriting any options that have changed in the meantime.
 
 `--loglevel level`
-Sets the minimum logging level. This determines the level of detail used to report certain events, for debugging or informational purposes. Possible levels include `OFF`, `SEVERE`, `WARNING`, `INFO`, `CONFIG`, and `ALL`.
+Sets the minimum logging level. This determines the level of detail used to report certain events, for debugging or informational purposes. Possible levels include `OFF`, `SEVERE`, `WARNING`, `INFO`, `CONFIG`, `FINE`, and `ALL`.
 
 `--resfolder path`
 Adds the files in the specified path to the application as if they were internal resources.

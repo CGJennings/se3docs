@@ -89,6 +89,6 @@ function task() {
 Thread.run(task);
 ```
 
-### Dumping the application log
+### Viewing the application log
 
 The application log contains debugging information and traces of uncaught exceptions from the entire application (not just your script code). You can print the tail end of the log in the console window by right clicking over it and choosing **Print Application Log**. The log level can be controlled from a [command line option](um-install-command-line-options.md#standard-options). For more complete access to the log, install the **Developer Tools** plug-in (`eonscat:6574`)  and choose **Window/Log Viewer**.
