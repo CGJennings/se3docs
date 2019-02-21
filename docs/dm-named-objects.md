@@ -57,7 +57,7 @@ For most plug-ins, a good place to create a named object used across that plug-i
 
 ## Accessing the database from Java
 
-Java code can also access the named object database, but the API is different:
+Java code can also [access](assets/javadoc/ca/cgjennings/apps/arkham/StrangeEons.html#getNamedObjects--) the [named object database](assets/javadoc/ca/cgjennings/apps/arkham/NamedObjectDatabase.html), but the API is different:
 
 ```java
 StrangeEons app = StrangeEons.getApplication();

@@ -20,7 +20,7 @@ Each translation is stored in a separate file. The file will have the same name 
 
 The suffix added to different translations is called a *locale code*. A [locale code](tm-locales.md) combines a *language* with an optional *region* (the region is often called a *country*, though this is not always strictly correct). For example, *English* is a locale (with code `en`), as are the regional variants *Canadian English* (with code `en_CA`) and *Australian English* (with code `en_AU`).
 
-> All language codes are written the lower case letters *a&ndash;z* while all region codes use the upper case letters *A&ndash;Z*. The character between them is an underscore (_). Locale codes can include other features not mentioned here, but they are not used with Strange Eons.
+> All language codes use the lower case letters *a&ndash;z* while all region codes use the upper case letters *A&ndash;Z*. The character between them is an underscore (_). Locale codes can include other features not mentioned here, but they are not used with Strange Eons.
 
 Just as undefined keys in a language-specific file inherit their value from the default translation, region-specific variants inherit from their base language. For example, consider this example set of string tables (the format is `key = value`):
 
