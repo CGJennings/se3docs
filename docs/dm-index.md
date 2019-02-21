@@ -28,6 +28,7 @@
    9. [Silhouette resources](dm-res-silhouette.md)
    10. [Default abbreviation table resources](dm-res-abbrv-table.md)
    11. [Installation notes and scripts](dm-installation.md)
+   12. [Named objects](dm-named-objects.md)
 5. **Development tools**
    1. [Quickscript and the script console](dm-quickscript.md)
    2. [Code editor](dm-code-editor.md)
