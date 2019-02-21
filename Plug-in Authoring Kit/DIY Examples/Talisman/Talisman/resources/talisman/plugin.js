@@ -19,7 +19,7 @@ importClass( gamedata.SymbolVariantUtilities );
  */
 function initialize() {
 	// Try to set up the plug-in; if anything throws an exception we
-	// will return false, which tells Strange Eons not to conrinue
+	// will return false, which tells Strange Eons not to continue
 	// loading the plug-in.
 	try {
 		const uiLang = Language.getInterface();
@@ -39,7 +39,7 @@ function initialize() {
 		registerGame();
 		registerOfficialExpansions();
 		
-		// now that the game is regsietered, we can add the
+		// now that the game is registered, we can add the
 		// default settings to use for new cards
 		Game.get( 'TAL' ).masterSettings.addSettingsFrom( 'talisman/base.settings' );
 		
@@ -155,7 +155,7 @@ function createExpansionSymbolTemplate() {
 			},
 			icons: null,
 
-			// two logical variants: part of an epansion, or requires an expansion
+			// two logical variants: part of an expansion, or requires an expansion
 						
 			getLogicalVariantCount: function getLogicalVariantCount() {
 				return 3;
@@ -208,7 +208,7 @@ function createExpansionSymbolTemplate() {
 				// exactly what we want if variant == 0
 				if( variant != 0 ) {
 					// for variant 1 or 2:
-					// convert to white, then add either a shaodw or a gold outline
+					// convert to white, then add either a shadow or a gold outline
 					if( SU.isMonochrome( bi ) ) {
 						bi = SU.recolor( bi, Color.WHITE );
 					}

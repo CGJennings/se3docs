@@ -7,8 +7,8 @@
  
 importClass( arkham.ContextBar );
 
-// Context bar buttons implement the ContextBar.Button interface:
-//   javadoc:ca/cgjennings/apps/arkham/ContextBar.Button
+// Context bar buttons implement the ContextBar.Button interface.
+//
 // The following code creates a JavaScript object that implements
 // the most important methods:
 
@@ -45,9 +45,8 @@ var button = {
 	// wrong, then it should be visible but not enabled. (For example, if the
 	// command acts on the current selection, but nothing is selected.)
 	//
-	// The context parameter is an instance of ContextBar.Context:
-	//   javadoc:ca/cgjennings/apps/arkham/ContextBar.Context
-	// It provides helper methods to assist in implementing these functions.
+	// The context parameter is an instance of ContextBar.Context;
+	// it provides helper methods to assist in implementing these functions.
 	//
 	// The implementation for this example simply checks that the context
 	// bar is attached to a multi-line markup target in a game component editor

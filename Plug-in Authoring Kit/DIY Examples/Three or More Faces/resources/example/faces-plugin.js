@@ -1,7 +1,7 @@
 useLibrary( 'extension' );
 
 function getName() {
-    return 'Three and Four Face Exampes';
+    return 'Three and Four Face Examples';
 }
 
 function getDescription() {

@@ -17,11 +17,6 @@
 // This could be improved by using a third party library
 // such as Apache Commons Net for a more robust FTP API.
 //
-// Change Log:
-// Jun 12 2012  created
-// Jan  7 2013  added isFileFormatSupported due to change in
-//              ExportContainer interface
-//
 
 useLibrary( 'uilayout' );
 importClass( java.lang.UnsupportedOperationException );
@@ -105,7 +100,7 @@ function createExportContainer() {
 		// returns the text used to describe the container to the user
 		toString : function toString() { return 'FTP server'; },
 		
-		// returns a unique internal identifer for the container type
+		// returns a unique internal identifier for the container type
 		getIdentifier : function getIdentifier() { return CONTAINER_ID; },
 		
 		// returns true if the container has extra options that can be
@@ -228,7 +223,7 @@ function createExportContainer() {
  * Shows a dialog that can be used to configure an FTP session.
  * Returns null if the user cancels the dialog, or else returns
  * an object with the following properties:
- * host : the FTP server hostname
+ * host : the FTP server host name
  * port : the port (default is 21)
  * dir : the remote working directory
  * user : the login name (null for anonymous FTP)

@@ -1,7 +1,7 @@
 /*
      Talisman Purchase Card Component
      
-     Talisman cards with portraits have the interesting fetaure that they
+     Talisman cards with portraits have the interesting feature that they
      come in two different layouts: one for a short amount of text that shows
      more of the illustration, and one for longer texts. To recreate this
      the script will measure the height of the card text before rendering and

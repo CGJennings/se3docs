@@ -8,7 +8,7 @@
  *
  * If you wish to compare performance at different optimization
  * levels, run this in Quickscript, then open preferences,
- * change the optimizaton level, and run it again. Note that
+ * change the optimization level, and run it again. Note that
  * optimization levels 1 and 2 currently have the same effect 
  * (2 is reserved for possible future use).
  *
@@ -235,7 +235,7 @@ function hanoi_puzzle() {
 
 /**
  * runTests()
- * Repeatedly times each function in <tt>tests</tt>,
+ * Repeatedly times each function in tests,
  * printing the name of each test and its best time.
  */
 function runTests() {

@@ -78,6 +78,6 @@ function createAction() {
 		}
 	};
 	// Create and return a Java object that subclasses TaskAction using
-	// the script object md5Action:
+	// the script object psdAction:
 	return new JavaAdapter( TaskAction, psdAction );
 }

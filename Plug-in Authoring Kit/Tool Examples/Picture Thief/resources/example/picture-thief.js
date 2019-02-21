@@ -35,7 +35,7 @@ function getName() {
 
 /**
  * getDescription()
- * Returns the longform description of the plug-in.
+ * Returns the long-form description of the plug-in.
  */
 function getDescription() {
 	return @picthief_desc;

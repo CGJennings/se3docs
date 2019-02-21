@@ -3,4 +3,5 @@
 #longer appear to be a project/task in Strange Eons.
 #Wed Feb 20 21:16:01 EST 2019
 type=PLUGIN
-bundle-file=InstallScriptDemo.seplugin
+clean-ext=class
+bundle-file=LocalizationExample.seplugin

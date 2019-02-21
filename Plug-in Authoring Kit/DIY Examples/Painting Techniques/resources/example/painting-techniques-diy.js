@@ -573,7 +573,7 @@ createGlow.op.strength = 2;
  * createShadow( source, inner, colour, opacity, blur, angle, distance )
  * Returns a copy of the source image that includes a shadow.
  *
- * source : the image to appply a shadow to
+ * source : the image to apply a shadow to
  * outer : if true, an outer (drop) shadow will be created (as if source is above the image plane)
  * colour: the hexadecimal colour value of the shadow (default is black, 0x000000)
  * opacity : the opacity of the shadow, from 0 to 1

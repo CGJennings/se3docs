@@ -28,7 +28,7 @@ function getVersion() {
 }
 
 function getPluginType() {
-	// INJECTED because we will add our own cutom menu item
+	// INJECTED because we will add our own custom menu item
 	// to the view menu rather than using the Toolbox menu
 	return arkham.plugins.Plugin.INJECTED;
 }
@@ -37,11 +37,11 @@ function initialize() {
 }
 
 // a custom menu item added to the View menu
-// to control whether synching is enabled
+// to control whether syncing is enabled
 var menuItem;
 
 // listens for changes to the active editor
-// so it can synch the project selection
+// so it can sync the project selection
 var editorListener;
 
 // listens for changes in the open project;
@@ -52,7 +52,7 @@ var editorListener;
 var projListener;
 
 // listens for changes to the project selection
-// so it can synch the selected editor
+// so it can sync the selected editor
 var selListener;
 
 // tracks the view that the selection listener is
@@ -61,7 +61,7 @@ var attachedView;
 
 function run() {
 	// if this is being run for the first time, there
-	// is no default for the synch option so we enable it
+	// is no default for the sync option so we enable it
 	if( Settings.user.get( SETTING_KEY ) == null ) {
 		Settings.user.set( SETTING_KEY, 'yes' );
 	}	
@@ -104,7 +104,7 @@ function installMenuItem() {
  */
 function uninstallMenuItem() {
 	if( menuItem == null ) return;
-	// store whether synching is enabled as the new default
+	// store whether syncing is enabled as the new default
 	Settings.user.set( SETTING_KEY, menuItem.selected ? 'yes' : 'no' );
 	// remove the menu item from the app window
 	Eons.window.removeMenuItem( AppMenu.VIEW, menuItem );
@@ -113,21 +113,21 @@ function uninstallMenuItem() {
 
 /**
  * A convenience function that returns true if the plug-in
- * is completely installed and synching is enabled.
+ * is completely installed and syncing is enabled.
  */
 function isEnabled() {
 	return menuItem != null && menuItem.selected;
 }
 
 /**
- * Installs an editor listener that is called when the selcted tab changes
+ * Installs an editor listener that is called when the selected tab changes
  * and will update the selected project member accordingly.
  */
 function installEditorListener() {
 	if( editorListener != null ) uninstallEditorListener();
 	editorListener = new StrangeEonsEditor.EditorListener {
 		editorSelected: function editorSelected( ed ) {
-			// check is synching enabled and there is a new editor
+			// check is syncing enabled and there is a new editor
 			if( ed == null || !isEnabled() ) return;
 			// check if the editor has a file
 			var f = ed.file;

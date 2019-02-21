@@ -147,7 +147,7 @@ importClass( ca.cgjennings.graphics.ImageUtilities );
  }
  
  // makes a kernel from a list of arrays; used to parse the
- // convolve filter param
+ // convolve filter parameter
  function makeKernel( data ) {
  	var rows = data.length;
  	var cols = data[0].length;
