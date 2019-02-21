@@ -10,11 +10,11 @@ The first time you use Strange Eons, it will prompt you to open the [plug-in cat
 
 You can re-open the [catalogue](um-plugins-catalogue.md) at any time using the **Toolbox/Catalogue** menu item.
 
-### Core components
+### <a id="core"></a>Core components
 
 The first time you run Strange Eons and open the plug-in catalogue, the catalogue will also silently preselect a special set of plug-ins called core components. *Don't worry about it*, just let it install them along with everything else.
 
-> <a id="core"></a>If being told *not* to worry makes you worry *more*, here are the details:
+> If being told *not* to worry makes you worry *more*, here are the details:
 >
 > Core components provide part of the basic functionality of Strange Eons, but don't change very often. Making them a separate download means that you won't have to re-download them every time you update the application. Strange Eons has been designed so that it can still run without these core components, but with reduced functionality.
 
