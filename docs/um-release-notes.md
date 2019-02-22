@@ -8,16 +8,17 @@
 * Typeface viewer/insert character dialog:
   * highlight the following cell types using different colours: control characters, unassigned code points, code points not present in the selected font;
   * rows with no assigned Unicode code points are hidden;
-  * you can enter a hexadecimal code point (e.g., `u+2c7e`) in the search field to go to that code point (or the nearest valid row).
+  * enter a hexadecimal code point (e.g., `u+2c7e`) in the search field to go to that code point (or the nearest valid row).
 
 ### API changes
 
 - Added `HSBPanel.setTitle`/`getTitle` to change `tintPanel` title label.
-- Deprecated `JHelpButton.setWikiPage`; this now forwards to `setHelpPage`.
-- Method `FillInPreferenceCategory.addHelp` no longer takes third argument (old code will still work).
 - Added `StrangeEons.getUrlForDocPage` to get a URL for a page in the se3docs site give its base file name (e.g., `"dm-preferences"`).
+- Method `FillInPreferenceCategory.addHelp` no longer takes third argument (old code will still work).
+- Deprecated `JHelpButton.setWikiPage`; this now forwards to `setHelpPage`.
 - Removed `arkham.project.PluginWizard` (superseded by `PluginWizardDialog`).
 - Removed deprecated `arkham.dialog.prefs.SBOrderedList`.
+- Removed `PlatformSupport.isOSXMinorVersionAtLeast`, `isUsingAquaDerivedLookAndFeel`, `isUsingOSXSystemLookAndFeel`, `isUsingQuaquaLookAndFeel`.
 
 ### Bug fixes
 
