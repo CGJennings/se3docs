@@ -8,9 +8,18 @@ To *preview a font file*, double click it in the project pane to open it in the 
 
 ## Exploring the available characters
 
-The main area of the viewer consists of a table of Unicode code points. Pink cells indicate code points that are *not supported* by the font. The remaining cells display the glyph (character shape) that the font specifies for that code point. Each row of the table covers 16 code points. The heading at the start of each row gives a base offset for the row. The code point for a given character can be calculated by adding its position in the row to this base. For example, the code point for A is 0x41 (U+0041). The character, code point, and Unicode name can also be seen by hovering over the glyph's cell with the mouse pointer.
+The main area of the viewer consists of a table in which each cell is a Unicode *code point* (a code number for a character). Each row of the table covers 16 code points. The heading at the start of each row gives a base offset for the row. The code point for a given character can be calculated by adding its position in the row to this base. For example, the code point for A is U+0041. You will find it in the `4x` row in column `1`. The character, code point, and Unicode name can also be seen by hovering over the glyph's cell with the mouse pointer.
 
-> Assuming the Core Typefaces plug-in is installed, the unsupported pink cells will contain a representative character of the relevant code block in a rectangular frame. Otherwise it will display the font's missing character (`.notdef`) glyph, an empty box colloquially referred to as "tofu".
+The colour of a cell indicates its status. Characters that are supported by the viewed font are shown in the cell for the appropriate code pint using dark text on a light background. Code points that do not represent printable characters supported by the font use other colours:
+
+<div class="box" style="background:#ef9a9a"></div> **Missing glyph**  
+The code point is not supported by the font. (The viewer will try to display a fallback from another font so you can see which character is missing.)
+
+<div class="box" style="background:#a5d6a7"></div> **Control code**  
+The code point is a non-printable control code, not a character.
+
+<div class="box" style="background:#90a4ae"></div> **Unassigned**  
+The code point has not been assigned a meaning under the Unicode standard. A character may or may not be assigned to this slot in the future. (If a whole row is unassigned, it is skipped in the table.)
 
 ### Previewing characters and text
 
@@ -31,6 +40,8 @@ You can search for characters by matching against their official Unicode name. E
 To *cycle through all matches*, choose **Find Next** repeatedly.
 
 For example, to find all quotation characters, enter `quot` in the search field and use **Find Next** to select each match in turn.
+
+> If you know the hexadecimal code point of the character you want to find, you can enter it directly in the search field. For example, to jump to the *non-breaking space* character, enter either `u+a0` or `0xa0`.  Letter case doesn't matter, and neither do leading zeros (so `U+00A0` has the same effect).
 
 ### Displayed character ranges
 

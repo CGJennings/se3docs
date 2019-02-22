@@ -157,3 +157,12 @@ h2::before, h3::before, h4::before, h5::before, h6::before {
   visibility: hidden;
   pointer-events: none;
 }
+
+/* Use to create an inline box that illustrates a colour used in the interface, e.g., <div class="box" style="background:#f00"></div> */
+.box {
+  width: 1.1rem;
+  height: 1.1rem;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-bottom: -0.2rem;
+}
