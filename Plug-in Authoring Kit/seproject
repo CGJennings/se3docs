@@ -1,11 +1,9 @@
-#WARNING:
-#If this file is deleted then this folder will no
-#longer appear to be a project/task in Strange Eons.
-#Wed Feb 20 21:16:01 EST 2019
-first-row=0
-open-folders=\:Minimal Examples\:Minimal Examples/Localization\:Minimal Examples/Localization/resources\:Minimal Examples/Localization/resources/example
-res-id=example
-notes=
-type=PROJECT
-minver=3726
-selected-members=\:Minimal Examples/Localization/resources/example/localization.js
+# WARNING: If this file is deleted, Strange Eons will no longer
+# see this as a project/task folder!
+first-row = 0
+selected-members = :Minimal Examples
+open-folders = 
+notes = 
+res-id = example
+minver = 3726
+type = PROJECT

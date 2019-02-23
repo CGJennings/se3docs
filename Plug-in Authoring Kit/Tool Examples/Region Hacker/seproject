@@ -1,7 +1,5 @@
-#WARNING:
-#If this file is deleted then this folder will no
-#longer appear to be a project/task in Strange Eons.
-#Wed Feb 20 21:16:01 EST 2019
-type=PLUGIN
-clean-ext=class
-bundle-file=RegionHacker.seplugin
+# WARNING: If this file is deleted, Strange Eons will no longer
+# see this as a project/task folder!
+clean-ext = class
+bundle-file = RegionHacker.seplugin
+type = PLUGIN
