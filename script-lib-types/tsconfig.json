@@ -1,0 +1,6 @@
+{
+    "compilerOptions": {
+        // do not import any libs!
+        "lib": []
+    }
+}
