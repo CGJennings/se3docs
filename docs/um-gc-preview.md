@@ -17,3 +17,7 @@ You can change the quality of previews from the **View** menu. On most systems, 
 ## Backdrop
 
 You can change the background behind the preview area using **View/Preview Backdrop**. The available options are **Dark** (the default), **Light**, and **Checked**. The **Checked** option (shown above) can be useful when working with shaped or translucent components.
+
+## Ink Saver
+
+You can switch to a simplified rendering of your game component using **View/Ink Saver**. By default, this renders only the component's text and shapes on a white background. (Some components may optionally render other elements.) Note that this option is global, and also affects printing and exporting.

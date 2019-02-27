@@ -6,7 +6,8 @@ The following changes are planned for inclusion in the next update. This list is
 
 ### Updates and changes
 
-* Updated help links to point to the new [documentation pages](index.md).
+* Ink Saver, a new rendering mode that ensures that only the bare minimum is drawn. The standard behaviour (which some components may customize) is to draw a solid white background, text, and shapes (no images).
+* Help buttons now link to the new [documentation pages](index.md).
 * [Typeface viewer](dm-type-viewer.md)/insert character dialog:
   * highlight the following cell types using different colours: control characters, unassigned code points, code points not present in the selected font;
   * rows with no assigned Unicode code points are hidden;
