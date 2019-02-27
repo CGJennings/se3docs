@@ -44,18 +44,14 @@ At least 2 GB of RAM recommended.
    ```
 
    For a list of additional options accepted by `register`, run it with the `--help` option. A few of the most important are:
-   
+
    `--allusers` to attempt to install for all users and not just yourself (typically requires root access)
-   
+
    `--uninstall` to undo a previous registration
-   
+
    `--xdg` to specify the location of the `xdg-utils` used to complete the registration (see below)
-   
-   
-   
+
    >The registration tool requires that you have the package `xdg-utils` installed. Recent builds of popular Linux distros should already include it, but if yours does not you can install it yourself. A typical command to do this is `sudo apt-get install xdg-utils`; check the documentation for your distro for more information.
-
-
 
 ## Troubleshooting
 
