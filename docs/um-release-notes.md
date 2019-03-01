@@ -9,6 +9,7 @@ The following changes are planned for inclusion in the next update. This list is
 * Ink Saver, a new rendering mode that ensures that only the bare minimum is drawn. The standard behaviour (which some components may customize) is to draw a solid white background, text, and shapes (no images).
 * The ["Readme" Web page](um-gc-export.md#the-readme-file) that is included with exported images has been rewritten to modern Web standards, including support for printing and mobile devices.
 * Help buttons now link to the new [documentation pages](index.md).
+* The recent file menu now lists projects before other files; within each section the items are still listed from most to least recently used.
 * [Typeface viewer](dm-type-viewer.md)/insert character dialog:
   * highlight the following cell types using different colours: control characters, unassigned code points, code points not present in the selected font;
   * rows with no assigned Unicode code points are hidden;
