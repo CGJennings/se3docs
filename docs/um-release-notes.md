@@ -140,3 +140,12 @@ In addition to the above you can expect many more bug fixes and performance impr
 * Fixed an issue with immediate repainting of the script console when running code from the UI thread.
 * Command line help for [`register`](um-install-other.md), used to register the app via `xdg-utils` (for Linux-based systems) did not list the `--uninstall` option.
 * The [**Image Export**](um-gc-export.md) dialog must not allow "combining faces" and "excluding simple faces" to be selected at the same time.
+* Opening a `project:` URL when no project is open should throw a suitable FileNotFound exception.
+
+### Java 9+ compatibility
+
+Officially, Strange Eons currently requires Java 8, but work is underway to support Java 9 and later. Here is a summary of the current status:
+
+* The major known obstacles have been solved; SE can be started under Java 9.
+* When starting SE from the command line, the option <code>-javaagent:<i>&lt;path to strange-eons.selibrary&gt;</i></code> must be added.
+* Further work is required for Java 11 due to the removal of some APIs.
