@@ -2,6 +2,8 @@
 
 Most game components can be exported as images using the **File/Export** menu item. You can then choose how the images will be packaged and choose how you will use the images to let Strange Eons choose the best format options for you.
 
+> [Ink Saver mode](um-gc-preview.md#ink-saver) applies to all printed and exported images. Be sure to turn it off before exporting your final version!
+
 ![the image export dialog](images/export.png)
 
 The first step is to choose a **Destination**. This determines how the files are stored. Two destinations are built in:
@@ -59,6 +61,32 @@ When checked, front and back faces of the same component will be joined into a s
 
 Many game components have a simple back face that consists of a either a fixed image or are an identical copy of the front face. Checking this option skips these simple faces.
 
+> The *Combine front and back faces* and *Exclude simple back faces* can't be selected at the same time.
+
 ### Add bleed margin to game components without one
 
 If the component design does not include a bleed margin, Strange Eons will synthesize a fake one. Not all component types support this option.
+
+## The "Readme" file
+
+Along with your images, the export will also include a Web page with a file name ending in "Readme". This can be a great way to share your content. You can put a printable version of your component on the Web just copying this file (and the exported images) onto a Web server!
+
+### Viewing the component
+
+Opening the Web page in your browser will display the name, any design comments you may have added, and previews of each of the exported images.
+
+![the readme file](images/export-readme-1.png)
+
+> If you export to an image type that is not widely supported by Web browsers, you will see a list of download links for each of the images instead. For best results, choose PNG or JPEG.
+
+Clicking on an image will display a larger version. Clicking again, or pressing <kbd>Esc</kbd>, will return to the previous view.
+
+![the readme file](images/export-readme-2.png)
+
+### Printing the component
+
+Your exported component can also be printed from readme page, just by choosing the **Print** button.  The result should print at the correct size, although it may use more pages than Strange Eons would when printing the same file. If the printed size is wrong, check for a setting like "Scale", which should be set to 100%. You may also want to turn off any header/footer options and adjust margins to fit more content on the page.
+
+> If images are split over two pages (but smaller than the physical page size), your browser does not correctly support the `page-break-inside` CSS property. You will need to update the browser or use a different one.
+
+![printing from the readme file](images/export-readme-3.png)
