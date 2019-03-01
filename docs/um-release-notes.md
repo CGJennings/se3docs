@@ -7,6 +7,7 @@ The following changes are planned for inclusion in the next update. This list is
 ### Updates and changes
 
 * Ink Saver, a new rendering mode that ensures that only the bare minimum is drawn. The standard behaviour (which some components may customize) is to draw a solid white background, text, and shapes (no images).
+* The ["Readme" Web page](um-gc-export.md#the-readme-file) that is included with exported images has been rewritten to modern Web standards, including support for printing and mobile devices.
 * Help buttons now link to the new [documentation pages](index.md).
 * [Typeface viewer](dm-type-viewer.md)/insert character dialog:
   * highlight the following cell types using different colours: control characters, unassigned code points, code points not present in the selected font;
@@ -137,3 +138,4 @@ In addition to the above you can expect many more bug fixes and performance impr
 * [Root file editor](dm-eons-plugin.md): Changing the list of interface languages does not update the description language combo.
 * Fixed an issue with immediate repainting of the script console when running code from the UI thread.
 * Command line help for [`register`](um-install-other.md), used to register the app via `xdg-utils` (for Linux-based systems) did not list the `--uninstall` option.
+* The [**Image Export**](um-gc-export.md) dialog must not allow "combining faces" and "excluding simple faces" to be selected at the same time.
