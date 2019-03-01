@@ -79,7 +79,7 @@ Opening the Web page in your browser will display the name, any design comments 
 
 > If you export to an image type that is not widely supported by Web browsers, you will see a list of download links for each of the images instead. For best results, choose PNG or JPEG.
 
-Clicking on an image will display a larger version. Clicking again, or pressing <kbd>Esc</kbd>, will return to the previous view.
+Clicking on an image or pressing <kbd>Space</kbd> will display a larger version. You can press <kbd>←</kbd> and <kbd>→</kbd> to move between images. Clicking again, or pressing <kbd>Esc</kbd>, will return to the previous view. 
 
 ![the readme file](images/export-readme-2.png)
 
