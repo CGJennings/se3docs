@@ -6,7 +6,7 @@ The following changes are planned for inclusion in the next update. This list is
 
 ### Updates and changes
 
-* Ink Saver, a new rendering mode that ensures that only the bare minimum is drawn. The standard behaviour (which some components may customize) is to draw a solid white background, text, and shapes (no images).
+* [Ink Saver](um-gc-preview.md#ink-saver), a new rendering mode which ensures that only the bare minimum is drawn. The standard behaviour (which some components may customize) is to draw a solid white background, text, and shapes (no images).
 * The ["Readme" Web page](um-gc-export.md#the-readme-file) that is included with exported images has been rewritten to modern Web standards, including support for printing and mobile devices.
 * Help buttons now link to the new [documentation pages](index.md).
 * The recent file menu now lists projects before other files; within each section the items are still listed from most to least recently used.
@@ -45,7 +45,7 @@ f = x => x*x - 1;
 // notice: the right side of the => is an expression
 // that will implicitly be "return"ed
 
-// if the function takes multiple arguments
+// if the function takes multiple arguments (or no arguments)
 f = (x,y) => x*x + y - 1;
 
 // if the function requires multiple statements or
@@ -57,6 +57,8 @@ f = (x) => {
 // functional programming is much more convenient
 evenNumbers = [0,1,2,3,4,5].map(v => 2*v);
 ```
+
+Note that arrow functions cannot be used to [implement Java interfaces](dm-java-api.md#implementing-interfaces) as they capture the `this` value from the enclosing scope.
 
 #### Method definitions
 
@@ -130,6 +132,7 @@ In addition to the above you can expect many more bug fixes and performance impr
 - Removed `arkham.project.PluginWizard` (superseded by `PluginWizardDialog`).
 - Removed deprecated `arkham.dialog.prefs.SBOrderedList`.
 - Removed `PlatformSupport.isOSXMinorVersionAtLeast`, `isUsingAquaDerivedLookAndFeel`, `isUsingOSXSystemLookAndFeel`, `isUsingQuaquaLookAndFeel`.
+- The `OPT_*` bit flags in DIY are now package private; the methods `getAdvancedFlags()`, `setAdvancedFlags` and `isAdvancedFlagAvailable` have been removed. Use the relevant public methods instead: `setTransparentFaces`, `setVariableSizedFaces`, `setPortraitBackgroundFilled`, `setMarkerBackgroundFilled`, `setPortraitScaleUsesMinimum`, `setMarkerScaleUsesMinimum`,  `setPortraitClipping`, `setMarkerClipping`, `setCustomPortraitHandling` and the complementary getters.
 
 ### Bug fixes
 
@@ -146,6 +149,6 @@ In addition to the above you can expect many more bug fixes and performance impr
 
 Officially, Strange Eons currently requires Java 8, but work is underway to support Java 9 and later. Here is a summary of the current status:
 
-* The major known obstacles have been solved; SE can be started under Java 9.
+* The major obstacles have been solved and SE can be started under Java 9.
 * When starting SE from the command line, the option <code>-javaagent:<i>&lt;path to strange-eons.selibrary&gt;</i></code> must be added.
-* Further work is required for Java 11 due to the removal of some APIs.
+* Further work is required for Java 10+ due to the removal of additional APIs.
