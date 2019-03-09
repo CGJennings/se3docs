@@ -16,6 +16,8 @@ The following changes are planned for inclusion in the next update. This list is
   * enter a hexadecimal code point (e.g., `u+2c7e`) in the search field to go to that code point (or the nearest valid row).
 * [Projects](um-proj-intro..md) stored in a version control system will no longer want to commit their project and task folder settings (`seproject` files) every time the project closes.
 * The layout of the [root file editor](dm-eons-plugin.md) has been reorganized to better fit small screens.
+* The `--plugintest` command line option can now be passed multiple test bundles separated by the path separator character (`;` on Windows, `:` elsewhere).
+* 
 
 ### Script library updates
 
