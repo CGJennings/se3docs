@@ -11,17 +11,17 @@ The following changes are planned for inclusion in the next update. This list is
 * Help buttons now link to the new [documentation pages](index.md).
 * The recent file menu now lists projects before other files; within each section the items are still listed from most to least recently used.
 * [Typeface viewer](dm-type-viewer.md)/insert character dialog:
+  * press <kbd>Enter</kbd> (<kbd>Shift</kbd>+<kbd>Enter</kbd>) to move to the next (previous) character supported by the selected font;
   * highlight the following cell types using different colours: control characters, unassigned code points, code points not present in the selected font;
   * rows with no assigned Unicode code points are hidden;
   * enter a hexadecimal code point (e.g., `u+2c7e`) in the search field to go to that code point (or the nearest valid row).
 * [Projects](um-proj-intro..md) stored in a version control system will no longer want to commit their project and task folder settings (`seproject` files) every time the project closes.
 * The layout of the [root file editor](dm-eons-plugin.md) has been reorganized to better fit small screens.
 * The `--plugintest` command line option can now be passed multiple test bundles separated by the path separator character (`;` on Windows, `:` elsewhere).
-* 
 
 ### Script library updates
 
-* The `sprintf`-style script library functions will now coerce numeric conversions when possible. This means that, for example, you can now pass a regular JS number to a `"%d"` conversion and it will not throw an exception. It is also now possible to pass a Locale or Language as the first argument to localize formatting (previously the interface locale was always used). Passing a locale of `null` as the first argument will prevent all localization.
+* The `sprintf`-style script library functions will now coerce numeric conversions when possible. This means that, for example, you can now pass a regular JS number to a `"%d"` conversion and it will not throw an exception. It is also now possible to pass a Locale or Language as the first argument to localize formatting (previously the interface locale was always used). Passing a locale of `null` as the first argument will prevent localization.
 
 * Calling `@(keyStr, formatArgs...)` or `#(keyStr, formatArgs...)` will format interface and language strings (respectively). Previously, this was done by calling `string` and `gstring` (which still works). In other words, the following are now all equivalent:
 
@@ -135,6 +135,8 @@ In addition to the above you can expect many more bug fixes and performance impr
 - Removed deprecated `arkham.dialog.prefs.SBOrderedList`.
 - Removed `PlatformSupport.isOSXMinorVersionAtLeast`, `isUsingAquaDerivedLookAndFeel`, `isUsingOSXSystemLookAndFeel`, `isUsingQuaquaLookAndFeel`.
 - The `OPT_*` bit flags in DIY are now package private; the methods `getAdvancedFlags()`, `setAdvancedFlags` and `isAdvancedFlagAvailable` have been removed. Use the relevant public methods instead: `setTransparentFaces`, `setVariableSizedFaces`, `setPortraitBackgroundFilled`, `setMarkerBackgroundFilled`, `setPortraitScaleUsesMinimum`, `setMarkerScaleUsesMinimum`,  `setPortraitClipping`, `setMarkerClipping`, `setCustomPortraitHandling` and the complementary getters.
+- The following classes have been removed: GestureToolkit, GestureEvent, GestureListener, GestureEventAdapter, GestureCommand.
+- In class PluginBundlePublisher, methods that used to take a ProgressListener parameter no longer do, as the underlying infrastructure needed to support this has removed in newer versions of Java.
 
 ### Bug fixes
 
@@ -152,5 +154,5 @@ In addition to the above you can expect many more bug fixes and performance impr
 Officially, Strange Eons currently requires Java 8, but work is underway to support Java 9 and later. Here is a summary of the current status:
 
 * The major obstacles have been solved and SE can be started under Java 9.
-* When starting SE from the command line, the option <code>-javaagent:<i>&lt;path to strange-eons.selibrary&gt;</i></code> must be added.
+* When starting SE from the command line, the option <code>-javaagent:<em>&lt;path to strange-eons.selibrary&gt;</em></code> must be added.
 * Further work is required for Java 10+ due to the removal of additional APIs.
