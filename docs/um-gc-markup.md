@@ -53,20 +53,37 @@ Some tags accept *parameters*, extra information that alters the behaviour of th
 
 `<tt>`<span style="font-family:monospace">typewriter type</span>`</tt>`
 
-`<family "name">`...`</family>` use the font family with the specified name
+`<family "name">`...`</family>`
 
-`<body>`...`</body>` use the main body font family
+Uses the font family with the specified name.
 
-`<size pt>`...`</size>` use font size of *pt* points  
-`<size n%>`...`</size>` use font size that is *n*% of current size
+`<body>`...`</body>` 
 
-`<width w>`...`</width>` use a font width of *w*, one of: `condensed`, `semicondensed`, `regular`, `semiextended`, `extended`
+Uses the main body font family.
 
-`<tracking n>`...`</tracking>` adjust letter spacing by *n*; useful values are about -0.1 to 0.2 and a value of 0 means no change
+`<size pt>`...`</size>`
 
-`<no ligatures>`...`</no ligatures>` prevent ligature substitution (replacement letter shapes that improve readability when certain letters appear together)
+Uses a font size of *pt* points.
 
-`<no kerning>`...`</no kerning>` do not kern this section; kerning adjusts the spacing between pairs letters to balance the negative space between them
+`<size n%>`...`</size>`
+
+Uses a font size that is *n*% of current size.
+
+`<width w>`...`</width>`
+
+Uses a font width of *w*, one of: `condensed`, `semicondensed`, `regular`, `semiextended`, `extended`.
+
+`<tracking n>`...`</tracking>` 
+
+Adjusts letter spacing by *n*; useful values are about -0.1 to 0.2 and a value of 0 means no change.
+
+`<no ligatures>`...`</no ligatures>`
+
+Prevents ligature substitution (replacement letter shapes that improve readability when certain letters appear together).
+
+`<no kerning>`...`</no kerning>`
+
+Prevents kerning; kerning adjusts the spacing between pairs letters to balance the negative space between them.
 
 ### Text colour
 
@@ -75,19 +92,21 @@ Some tags accept *parameters*, extra information that alters the behaviour of th
 `<colour #rrggbb>`...`</colour>`  
 `<color #rrggbb>`...`</color>`
 
-Sets text colour using hexadecimal red, green, and blue values, each from 00 to ff. For example, `<colour #ff0000>` would produce pure red text.
+Sets the text colour using hexadecimal red, green, and blue values, each from 00 to ff. For example, `<colour #ff0000>` would produce pure red text.
 
 `<colour #aarrggbb>`...`</colour>`  
 `<color #aarrggbb>`...`</color>`
 
-Sets text colour using hexadecimal alpha (opacity), red, green, and blue values, each from 00 to ff.
+Sets the text colour using hexadecimal alpha (opacity), red, green, and blue values, each from 00 to ff.
 
 `<colour hue saturation brightness>`...`</colour>`  
 `<color hue saturation brightness>`...`</color>`
 
 Sets the text colour from hue (colour wheel angle, 0–360°), saturation (0–1), and brightness (0–1) values. This is the same colour model used by a [tint control](um-gc-tints.md).
 
-You can also use these named colour tags: `<black>`, `<grey>`, `<gray>`, `<dark grey>`, `<dark gray>`, `<light grey>`, `<light gray>`, `<white>`, `<red>`, `<orange>`, `<yellow>`, `<green>`, `<blue>`, `<purple>`, `<brown>`. Plug-ins may also define new game-specific colour tags, or redefine the existing tags.
+You can also use these named colour tags: `<black>`, `<grey>`, `<gray>`, `<dark grey>`, `<dark gray>`, `<light grey>`, `<light gray>`, `<white>`, `<red>`, `<orange>`, `<yellow>`, `<green>`, `<blue>`, `<purple>`, `<brown>`.
+
+> Plug-ins may define new game-specific colour tags, or redefine the existing tags.
 
 Use `<bgcolour>` instead of `<colour>` to change the text background.
 
@@ -97,25 +116,31 @@ Use `<bgcolour>` instead of `<colour>` to change the text background.
 
 `<h2>`...`</h2>` subheading
 
+> Headings and subheadings often have a specific purpose in a game component. For example, a heading might be used to introduce new rules.
+
 ### Lines and paragraphs
 
 `<left>`, `<center>`, `<right>`
 
-Align subsequent lines to the left, center, or right. If a paragraph starts with characters from a language written right-to-left, the meaning of `<left>` and `<right>` switches.
+Aligns subsequent lines to the left, center, or right, respectively. If a paragraph starts with characters from a language written right-to-left, the meaning of `<left>` and `<right>` switches.
 
-`<tabwidth w1 [w2...]>`  
-Set tab stops width the width(s) *w1*, *w2* and so on. Any number may be specified. If there are not enough to cover the entire line, they will repeat as needed. For example, `<tabwidth 0.5in 1in 0.25in>` will set tab stops at 0.5 inches, 1.5 inches, 1.75 inches, 2.25 inches, 3.75 inches, 4 inches, and so on.
+`<tabwidth w1 [w2...]>`
 
-`<tight>`, `<loose>`  
-Decrease or increase the leading (space between lines).
+Sets tab stops at widths *w1*, *w2* and so on. Any number may be specified. If there are not enough to cover the entire line, they will repeat as needed. For example, `<tabwidth 0.5in 1in 0.25in>` will set tab stops at 0.5 inches, 1.5 inches, 1.75 inches, 2.25 inches, 3.75 inches, 4 inches, and so on.
+
+`<tight>`, `<loose>`
+
+Decreases or increases the leading (space between lines).
 
 ### Whole text
 
-`<top>`, `<middle>`, `<bottom>`  
-Align the whole text to the top, middle or bottom of the text box.
+`<top>`, `<middle>`, `<bottom>`
 
-`<ragged>`, `<justified>`  
-Change all lines to either ragged (unjustified), or full justified.
+Aligns the whole text to the top, middle or bottom of the text box, respectively.
+
+`<ragged>`, `<justified>`
+
+Changes all lines to either ragged (unjustified), or full justified.
 
 ### Punctuation and symbols
 
@@ -176,13 +201,13 @@ Insert an image from a local file. Notice that quotes are used because the path 
 
 Games often define their own custom tags to do things like insert rule icons. Check the documentation for the plug-in. You might also wish to check if you the plug-in provides buttons for the [context bar](um-ui-context-bar.md).
 
-### Variable tags
+## Variable tags
 
 Variable tags are replaced by values from other parts of the component. Which variables are defined is up to the plug-in developer, but `<name>` will nearly always print the name of the component. If the component uses separate fields for given and family names, then `<name>` will usually be set to print the first name, `<lastname>` the family name, and `<fullname>` will print both together.
 
-### Gender neutral tags
+## Gender-adaptive tags
 
-Some components allow you to specify a gender and then use tags whose text adapts automatically to the selected gender. These have the form `<m/f>` where `m` is the masculine text and `f` is the feminine:
+Some components allow you to specify a gender and then use tags to adapt text automatically to the selected gender. These have the form `<m/f>` where `m` is the masculine text and `f` is the feminine:
 
 `<He/She> became the High Priest<-/ess> of Set.`
 
@@ -198,18 +223,18 @@ Repeats *text* a total of *n* times. The text can contain markup tags.
 
 `<define tagname replacement>`
 
-Define a macro tag `<tagname>` that will be replaced by the text *replacement*. As with all parameters, if the *replacement* contains spaces it must be put in quotes (`"`). If the quoted material itself contains a quote, then it must be escaped: `\"`.
+Defines a macro tag `<tagname>` that will be replaced by the text *replacement*. As with all parameters, if the *replacement* contains spaces it must be put in quotes (`"`). If the quoted material itself contains a quote, then it must be escaped: `\"`.
 
 The newly defined tag can be passed parameters. The value of the *n*th parameter can be inserted into the replacement text by including `@n;` in the replacement text. For example: `<define bi "<b><i>@1;</i></b>">` defines a tag `<bi>` that takes 1 parameter and puts it inside both a `<b>` and `<i>` tag. So `<bi "hello you">` would be replaced with `<b><i>hello you</i></b>`.
 
-### Script code
+### ⚠️ Script code
 
 `<script url [param1 param2...]>`
 
-Execute a script, calling its `main()` function. If it returns a non-null value, that value is converted to a string and used to replace the `<script>` tag as if it were a macro.
+Runs a script, calling its `main()` function. If it returns a non-null value, that value is converted to a string and used to replace the `<script>` tag as if it were a macro.
 
 `<eval expression>`
 
-Evaluates the expression that is passed to and uses the result to replace the `<eval>` tag as if it were a macro. Example: `<eval "Math.pow(2,10).toFixed(0)">`
+Evaluates the expression that is passed to and uses the result to replace the `<eval>` tag as if it were a macro. Example: `<eval "Math.pow(2,10).toFixed(0);">`
 
 Use caution: tags that run script code can significantly slow down redrawing. If the script contains bugs it could even cause the app to freeze.  They are intended mainly for components that need to make complex use of the markup system and will be redrawn infrequently.
