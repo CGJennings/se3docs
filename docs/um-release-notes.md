@@ -6,6 +6,26 @@ The following changes are planned for inclusion in the next update. This list is
 
 ### Updates and changes
 
+* Further work on rewriting the script libraries to separate documentation from the libraries themselves and rewrite them in the more modern JS allowed by the recent engine update.
+
+### Notices
+
+* The **Document Browser** are considered deprecated. API documentation will be accessible from a regular browser.
+
+### Java 9+ compatibility
+
+Officially, Strange Eons currently requires Java 8, but work is underway to support Java 9 and later. Here is a summary of the current status:
+
+- The major obstacles have been solved and SE can be started under Java 9 starting with build 3970.
+- When starting SE from the command line, the option <code>-javaagent:<em>path/to/strange-eons.selibrary</em></code> must be added.
+- Further work is required for Java 10+ due to the removal of additional APIs.
+
+## Build 3970
+
+This is an **early access beta release**.
+
+### Updates and changes
+
 * [Ink Saver](um-gc-preview.md#ink-saver), a new rendering mode which ensures that only the bare minimum is drawn. The standard behaviour (which some components may customize) is to draw a solid white background, text, and shapes (no images).
 * The ["Readme" Web page](um-gc-export.md#the-readme-file) that is included with exported images has been rewritten to modern Web standards, including support for printing and mobile devices.
 * Help buttons now link to the new [documentation pages](index.md).
@@ -141,18 +161,10 @@ In addition to the above you can expect many more bug fixes and performance impr
 ### Bug fixes
 
 * In the [**Test Plug-in**](dm-test-plugin) dialog, only explicitly selected locales are passed to the test instance (entering a locale code directly in the text field had no effect).
-* Script function `Console.printComponent` failed due to argument name mismatch.
+* Script function `Console.printComponent` failed due to an argument name mismatch.
 * [**Quickscript**](dm-quickscript.md): Printing of the return value could evaluate a Scriptable outside of a JS context.
 * [Root file editor](dm-eons-plugin.md): Changing the list of interface languages does not update the description language combo.
 * Fixed an issue with immediate repainting of the script console when running code from the UI thread.
 * Command line help for [`register`](um-install-other.md), used to register the app via `xdg-utils` (for Linux-based systems) did not list the `--uninstall` option.
 * The [**Image Export**](um-gc-export.md) dialog must not allow "combining faces" and "excluding simple faces" to be selected at the same time.
 * Opening a `project:` URL when no project is open should throw a suitable FileNotFound exception.
-
-### Java 9+ compatibility
-
-Officially, Strange Eons currently requires Java 8, but work is underway to support Java 9 and later. Here is a summary of the current status:
-
-* The major obstacles have been solved and SE can be started under Java 9.
-* When starting SE from the command line, the option <code>-javaagent:<em>&lt;path to strange-eons.selibrary&gt;</em></code> must be added.
-* Further work is required for Java 10+ due to the removal of additional APIs.
