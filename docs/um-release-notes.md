@@ -10,7 +10,7 @@ The following changes are planned for inclusion in the next update. This list is
 
 ### Notices
 
-* The **Document Browser** are considered deprecated. API documentation will be accessible from a regular browser.
+* The **Document Browser** is considered deprecated. API documentation will be accessible from a regular browser.
 
 ### Java 9+ compatibility
 
