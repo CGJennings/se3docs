@@ -1,6 +1,6 @@
 # Exporting images
 
-Most game components can be exported as images using the **File/Export** menu item. You can then choose how the images will be packaged and choose how you will use the images to let Strange Eons choose the best format options for you.
+Most game components can be exported as images using the **File/Export** menu item. You can choose how the images will be packaged (for example, you might combine them into a ZIP archive). You can also choose options such as the image format and resolution, either manually or automatically based on the intended use.
 
 > [Ink Saver mode](um-gc-preview.md#ink-saver) applies to all printed and exported images. Be sure to turn it off before exporting your final version!
 
@@ -85,7 +85,7 @@ Clicking on an image or pressing <kbd>Space</kbd> will display a larger version.
 
 ### Printing the component
 
-Your exported component can also be printed from readme page, just by choosing the **Print** button.  The result should print at the correct size, although it may use more pages than Strange Eons would when printing the same file. If the printed size is wrong, check for a setting like "Scale", which should be set to 100%. You may also want to turn off any header/footer options and adjust margins to fit more content on the page.
+Your exported component can also be printed from the Readme page, just by choosing the **Print** button.  The result should print at the correct size, although it may use more pages than Strange Eons would when printing the same file. If the printed size is wrong, check for a setting like "Scale" in the browser's print options, which should be set to 100%. You may also want to switch to landscape layout, turn off any header/footer options, and adjust margins to fit more content on the page.
 
 > If images are split over two pages (but smaller than the physical page size), your browser does not correctly support the `page-break-inside` CSS property. You will need to update the browser or use a different one.
 
