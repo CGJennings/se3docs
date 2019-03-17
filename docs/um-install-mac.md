@@ -18,6 +18,6 @@ At least 2 GB of RAM recommended.
 
 ## Troubleshooting
 
-Installation problems are rare but frustrating. If the installer fails to start or reports a corrupt file, it usually means that the file did not download correctly. Try downloading it again.
+Installation problems are rare but frustrating. If the installer fails to start or reports a corrupt file, it usually means that the file did not download correctly. Try downloading it again. If it fails again, it may be corrupt on the server: [please report the issue](<https://cgjennings.ca/contact.html> ).
 
 For other issues, refer to the [Troubleshooting](um-install-troubleshooting.md) page.
