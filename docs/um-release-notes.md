@@ -7,10 +7,15 @@ The following changes are planned for inclusion in the next update. This list is
 ### Updates and changes
 
 * Further work on rewriting the script libraries to separate documentation from the libraries themselves and rewrite them in the more modern JS allowed by the recent engine update.
+* `StrangeEons.fileBugReport` updated to link to a partially completed contact form; this also affects the **Help/Report a Bug** menu item.
 
 ### Notices
 
-* The **Document Browser** is considered deprecated. API documentation will be accessible from a regular browser.
+* The **Document Browser** is considered deprecated. In a future version, API documentation will be accessible from the system Web browser.
+
+### Bug fixes
+
+* Help links to Miriam's Basement that used `HELP_CONTEXT_PROPERTY` on a specific UI control were missed when updating links.
 
 ### Java 9+ compatibility
 
