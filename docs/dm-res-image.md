@@ -55,6 +55,6 @@ Returns a StrangeImage instance created from the data at the specified location.
 
 The class provides methods that can be used to get the underlying image’s nominal dimensions, paint the image in a graphics context, get a version of the image as either a BufferedImage or VectorImage, and more.
 
-## ⚠️ Resource creation scripts
+## Resource creation scripts
 
-When using `ResourceKit.getImage` or `ImageUtils.get`, if the image path ends in `.js`, it will be loaded as a script file, run, and its `createResource()` function invoked. This function should return the desired image resource. This can be used to save space when the image can be generated dynamically. For example, if the image is a mirror image of another image resource, a resource script could load the other resource, flip it using the `imageutils` library, and return the flipped image.
+When using `ResourceKit.getImage` or `ImageUtils.get`, if the image path ends in `.js`, it will be loaded as a script file, run, and its `createResource()` function invoked. This function should return the desired image resource. This can be used to save space when the image can be generated dynamically. For example, if the image is a mirror image of another image resource, a resource script could load the other resource, flip it using the `imageutils` library, and return the flipped image. Or, an image that is mostly transparent could be created on the fly by loading an image of the non-transparent area and combining it with a blank image.
