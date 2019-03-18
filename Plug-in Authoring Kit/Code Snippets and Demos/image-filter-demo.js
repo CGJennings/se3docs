@@ -189,16 +189,11 @@ function normalizeParameter( array ) {
 // Shows documentation for the selected filter
 function showJavaDoc() {
 	if( filterBox.selectedIndex < 1 ) return;
-	var addr = 'javadoc:ca/cgjennings/graphics/filters/' + filterBox.selectedItem;
-	if( showJavaDoc.browser && showJavaDoc.browser.showing ) {
-		showJavaDoc.browser.URL = addr;
-		showJavaDoc.browser.select();
-	} else {
-		showJavaDoc.browser = new arkham.editors.APIBrowser( addr );
-		Eons.addEditor( showJavaDoc.browser );
-	}
+	let url = 'https://cgjennings.github.io/se3docs/assets/javadoc/'
+	        +'ca/cgjennings/graphics/filters/'
+	        + filterBox.selectedItem;
+	java.awt.Desktop.desktop.browse(new java.net.URI(url));
 }
-showJavaDoc.browser = null;
 
 
 
