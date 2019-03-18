@@ -46,15 +46,15 @@ okBtn.addActionListener(
 	function actionPerformed() {		
 		println( '\nHey there, ' + nameField.text + '.' );
 		print( 'Tell me, have you seen the yellow sign? ' );
-		Console.out.insertImage( yellowSign );
+		Console.printImage( yellowSign );
 		println();
-		Console.out.insertHTML( '<b><i>Well you have now!</i></b>' );
+		Console.printHTML( '<b><i>Well you have now!</i></b>' );
 		println();
 	}
 );
 
 print( 'Name: ' );
-Console.out.insertComponent( nameField );
+Console.printComponent( nameField );
 print( '   ' );
-Console.out.insertComponent( okBtn );
+Console.printComponent( okBtn );
 println( '   ' );
