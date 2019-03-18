@@ -254,7 +254,7 @@ function createInterface( diy, editor ) {
 	s2Combo.maximumRowCount = 16;
 	combinerCombo = comboBox( combinerNames );	
 	alignCombo = comboBox( alignmentNames );
-	alignCombo.selectedIndex = 3;
+	alignCombo.selectedIndex = 1;
 	var showRegion = checkBox( 'Show Region Box and Page Shape', true );
 	var showDecorations = checkBox( 'Show Corner Decorations', true );
 	var field = textArea( '', 7 );
