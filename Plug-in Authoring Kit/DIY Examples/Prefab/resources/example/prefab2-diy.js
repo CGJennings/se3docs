@@ -18,11 +18,11 @@ pfBaseKey = 'demo2';
 function afterCreateFrontPainter( diy, sheet ) {
 	// set a custom page shape on the content layout box,
 	// which was created just before this function was called
-	var textRegion = $$demo2_content_region.region2D;
-	var ellipse = new java.awt.geom.Ellipse2D.Double(
+	let textRegion = $$demo2_content_region.region2D;
+	let ellipse = new java.awt.geom.Ellipse2D.Double(
 		textRegion.x, textRegion.y, textRegion.width, textRegion.height
 	);
-	var shape = new PageShape.GeometricShape( ellipse, textRegion );
+	let shape = new PageShape.GeometricShape( ellipse, textRegion );
 	pfContentBox.pageShape = shape;
 }
 

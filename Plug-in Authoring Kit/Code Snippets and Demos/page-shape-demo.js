@@ -16,13 +16,13 @@ useLibrary( 'imageutils' );
 importClass( java.awt.AlphaComposite );
 
 
-var textBox, s1Combo, s2Combo, combinerCombo, alignCombo, codeEditor;
+let textBox, s1Combo, s2Combo, combinerCombo, alignCombo, codeEditor;
 
-var decoration = ImageUtils.resize(
+let decoration = ImageUtils.resize(
 	ImageUtils.get( 'icons/black-fedora.png' ),
 	48, 72
 );
-var decorationFlipped = ca.cgjennings.graphics.ImageUtilities.flip(
+let decorationFlipped = ca.cgjennings.graphics.ImageUtilities.flip(
 	decoration, false, true
 );
 
@@ -30,7 +30,7 @@ var decorationFlipped = ca.cgjennings.graphics.ImageUtilities.flip(
 // This is the region that is used to draw the text;
 // the PageShape will be used to shape the left and
 // right margins of this region.
-var textRegion = new Region( 20, 20, 200, 340 );
+let textRegion = new Region( 20, 20, 200, 340 );
 
 // This function creates custom PageShapes
 // by subclassing PageShape.
@@ -39,14 +39,14 @@ function makeHexShape( region, insetFactor, topOnly ) {
 		region = region.clone();
 		region.height *= 2;
 	}
-	var ry0 = region.y;
-	var ry1 = region.y + region.height/2;
-	var ry2 = region.y + region.height;
+	let ry0 = region.y;
+	let ry1 = region.y + region.height/2;
+	let ry2 = region.y + region.height;
 	if( insetFactor <= 0 || insetFactor >= 0.5 )
 		throw new Error( 'insetFactor must be between 0 and 0.5 (exclusive)' );
-	var iMax = region.width * insetFactor;
+	let iMax = region.width * insetFactor;
 
-	var shape = {
+	let shape = {
 		lerp : function lerp( y ) {
 			return 1 - (y - ry0) / (ry1 - ry0);
 		},
@@ -71,7 +71,7 @@ function makeHexShape( region, insetFactor, topOnly ) {
 			return this.getInset( y1, y2 );
 		},
 		debugDraw: function debugDraw( g, r ) {
-			var li = new java.awt.geom.Line2D.Double(
+			let li = new java.awt.geom.Line2D.Double(
 					region.x + region.width * insetFactor,
 					region.y,
 					region.x,
@@ -99,11 +99,11 @@ function makeHexShape( region, insetFactor, topOnly ) {
 // by building a geometric shape and passing it
 // to PageShape.GeometricShape.
 function makeWaveShape( region, amplitude, inset ) {
-	var x = region.x + inset;
-	var y = region.y;
-	var w = region.width - inset*2;
-	var h = region.height;
-	var path = new java.awt.geom.Path2D.Double();
+	let x = region.x + inset;
+	let y = region.y;
+	let w = region.width - inset*2;
+	let h = region.height;
+	let path = new java.awt.geom.Path2D.Double();
 	
 	path.moveTo( x, y );
 	path.curveTo( x - amplitude, y+h/3,
@@ -120,7 +120,7 @@ function makeWaveShape( region, amplitude, inset ) {
 	return new PageShape.GeometricShape( path, region );
 }
 
-var shapeNames = [
+let shapeNames = [
 	'Rectangle (Default)',
 	'Inset (both)',
 	'Inset (right only)',
@@ -136,9 +136,9 @@ var shapeNames = [
 	'<html><b>Custom Code'
 ];
 
-var CUSTOM_CODE = shapeNames.length - 1;
+let CUSTOM_CODE = shapeNames.length - 1;
 
-var shapes = [
+let shapes = [
 	PageShape.RECTANGLE_SHAPE,
 	new PageShape.InsetShape( 32, 32 ),
 	new PageShape.InsetShape(  0, 32 ),
@@ -159,21 +159,21 @@ var shapes = [
 	PageShape.RECTANGLE_SHAPE
 ];
 
-var combinerNames = [
+let combinerNames = [
 	'None (Main Shape Only)',
 	'CompoundShape',
 	'MergedShape',
 	'Interpolation'
 ];
 
-var alignmentNames = [
+let alignmentNames = [
 	'Left',
 	'Centered',
 	'Right',
 	'Justified'
 ];
 
-var alignments = [
+let alignments = [
 	LAYOUT_LEFT|LAYOUT_TOP,
 	LAYOUT_LEFT|LAYOUT_TOP,
 	LAYOUT_CENTER|LAYOUT_TOP,
@@ -186,13 +186,13 @@ var alignments = [
 
 // Returns a PageShape based on the current controls
 function createShape() {
-	var i1 = s1Combo.selectedIndex;
-	var i2 = s2Combo.selectedIndex;
-	var method = combinerCombo.selectedIndex;
+	let i1 = s1Combo.selectedIndex;
+	let i2 = s2Combo.selectedIndex;
+	let method = combinerCombo.selectedIndex;
 	if( i1 < 0 || i2 < 0 || method < 0 ) return null;
 	
 	if( i1 == CUSTOM_CODE || i2 == CUSTOM_CODE ) {
-		var result = eval(
+		let result = eval(
 			'try { ' + codeEditor.text + ' } catch(e) { error.handleUncaught(e); }'
 		);
 		if( !(result instanceof PageShape) ) {
@@ -201,20 +201,20 @@ function createShape() {
 		shapes[CUSTOM_CODE] = result;
 	}
 	
-	var shape = shapes[i1];
+	let shape = shapes[i1];
 	switch( method ) {
 		case 0:
 			break;
 		case 1:
-			var y = textRegion.y + textRegion.height/2;
+			let y = textRegion.y + textRegion.height/2;
 			shape = new PageShape.CompoundShape( shape, y, shapes[i2] );
 			break;
 		case 2:
 			shape = new PageShape.MergedShape( shape, shapes[i2] );
 			break;
 		case 3:
-			var s1 = shape, s2 = shapes[i2];
-			var interpolator = {
+			let s1 = shape, s2 = shapes[i2];
+			let interpolator = {
 				getLeftInset: function getLeftInset( y1, y2 ) {
 					return (s1.getLeftInset( y1, y2 ) + s2.getLeftInset( y1, y2 )) / 2;
 				},
@@ -247,7 +247,7 @@ function create( diy ) {
 }
 
 function createInterface( diy, editor ) {
-	var panel = new Stack();
+	let panel = new Stack();
 	s1Combo = comboBox( shapeNames );
 	s1Combo.maximumRowCount = 16;
 	s2Combo = comboBox( shapeNames );
@@ -255,10 +255,10 @@ function createInterface( diy, editor ) {
 	combinerCombo = comboBox( combinerNames );	
 	alignCombo = comboBox( alignmentNames );
 	alignCombo.selectedIndex = 1;
-	var showRegion = checkBox( 'Show Region Box and Page Shape', true );
-	var showDecorations = checkBox( 'Show Corner Decorations', true );
-	var field = textArea( '', 7 );
-	var secondaryShapeLabel = new swing.JLabel( 'Secondary Shape' );
+	let showRegion = checkBox( 'Show Region Box and Page Shape', true );
+	let showDecorations = checkBox( 'Show Corner Decorations', true );
+	let field = textArea( '', 7 );
+	let secondaryShapeLabel = new swing.JLabel( 'Secondary Shape' );
 	codeEditor = codeArea( '', 100, 140 );
 	
 	panel.add( 'Main Shape', s1Combo );
@@ -271,13 +271,13 @@ function createInterface( diy, editor ) {
 	panel.add( ' ', 'Custom Code Editor', codeEditor );
 	
 	combinerCombo.addActionListener( function() {
-		var enable = combinerCombo.selectedIndex > 0;
+		let enable = combinerCombo.selectedIndex > 0;
 		secondaryShapeLabel.enabled = enable;
 		s2Combo.enabled = enable;
 	} );
 	combinerCombo.selectedIndex = 0;
 		
-	var bindings = new Bindings( editor, diy );
+	let bindings = new Bindings( editor, diy );
 	// we add bindings for the combo boxes just to get it to redraw
 	// the card when the user makes a selection
 	bindings.add( 's1', s1Combo );
@@ -307,7 +307,7 @@ function paintFront( g, diy, sheet ) {
 	textBox.pageShape = createShape();
 	textBox.alignment = alignments[ alignCombo.selectedIndex+1 ];
 	
-	var oldDebug = textBox.DEBUG;
+	let oldDebug = textBox.DEBUG;
 	textBox.DEBUG = Settings.yesNo($sr);
 	textBox.draw( g, textRegion );
 	textBox.DEBUG = oldDebug;
@@ -319,10 +319,10 @@ function paintFront( g, diy, sheet ) {
 	if( Settings.yesNo($sd) ) {
 		g.setComposite( AlphaComposite.SrcOver.derive(0.66) );
 		//g.clip( textRegion );
-		var dw = decoration.width;
-		var dh = decoration.height;
-		var x2 = sheet.templateWidth - dw;
-		var y2 = sheet.templateHeight - dh;
+		let dw = decoration.width;
+		let dh = decoration.height;
+		let x2 = sheet.templateWidth - dw;
+		let y2 = sheet.templateHeight - dh;
 		g.drawImage( decorationFlipped, 0, 0, null );
 		g.drawImage( decorationFlipped, x2, 0, null );
 		g.drawImage( decoration, 0, y2, null );

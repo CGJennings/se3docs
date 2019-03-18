@@ -30,9 +30,9 @@ if( sourcefile == 'Quickscript' ) {
 
 const Talisman = Eons.namedObjects.Talisman;
 
-var titleBox;
-var specialTextBox;
-var startBox;
+let titleBox;
+let specialTextBox;
+let startBox;
 
 /**
  * create( diy )
@@ -93,7 +93,7 @@ function onClear() {
  * set on it yet.
  */
 function createInterface( diy, editor ) {
-	var nameField = textField();
+	let nameField = textField();
 	diy.nameField = nameField;
 
 	// The bindings object links the controls in the component
@@ -101,38 +101,38 @@ function createInterface( diy, editor ) {
 	// user changes a control, the setting is updated; when the
 	// component is opened, the state of the settings is copied
 	// to the controls.
-	var bindings = new Bindings( editor, diy );
+	let bindings = new Bindings( editor, diy );
 
 	// Background panel
-	var bkgPanel = new Grid( '', '[min:pref][0:pref,grow,fill][0:pref][0:pref]', '');
+	let bkgPanel = new Grid( '', '[min:pref][0:pref,grow,fill][0:pref][0:pref]', '');
 	bkgPanel.setTitle( @tal_content );
 	bkgPanel.place( @tal_title, '', nameField, 'growx, span, wrap' );
 
-	var alignmentCombo = createAlignmentCombo();
+	let alignmentCombo = createAlignmentCombo();
 	bindings.add( 'Alignment', alignmentCombo, [0] );
 	
-	var startCombo = createStartCombo();
+	let startCombo = createStartCombo();
 	bindings.add( 'Start', startCombo, [0] );
 	
 	bkgPanel.place( @tal_start, '', startCombo, 'width pref+16lp, growx',   @tal_alignment, 'gap unrel', alignmentCombo, 'width pref+16lp, wrap' );
 
 	// Character base
-	var baseCombo = createBaseCombo();
+	let baseCombo = createBaseCombo();
 	bkgPanel.place( @tal_char_base, '', baseCombo, 'width pref+16lp, wrap para' );
 	bindings.add( 'Base', baseCombo, [0] );
 
 	// Statistics panel
 	// Create a grid that will be centered within the panel overall,
 	//     and controls in each of the four columns will be centered in the column
-	var statsPanel = new Grid( 'center, fillx, insets 0', '[center][center][center][center]' );
+	let statsPanel = new Grid( 'center, fillx, insets 0', '[center][center][center][center]' );
 	statsPanel.place(
 		noteLabel(@tal_strength), 'gap unrel', noteLabel(@tal_craft), 'gap unrel',
 				noteLabel(@tal_life), 'gap unrel', noteLabel(@tal_fate), 'gap unrel, wrap 1px'
 	);
 	// the $Settings to store the stats in
-	var statSettings = ['Strength', 'Craft', 'Life', 'Fate' ];	
+	let statSettings = ['Strength', 'Craft', 'Life', 'Fate' ];	
 	// the range of possible values for each stat
-	var statItems = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '-'];
+	let statItems = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '-'];
 	for( let i=0; i<4; ++i ) {
 		let combo = comboBox( statItems );
 		statsPanel.place( combo, 'growx, width pref+16lp, gap unrel' + (i==3 ? ', wrap' : '') );
@@ -144,7 +144,7 @@ function createInterface( diy, editor ) {
 	bkgPanel.place( separator(), 'span, growx, wrap para' );
 	
 	// Special Abilities
-	var specialTextField = textArea( '', 17, 15, true );
+	let specialTextField = textArea( '', 17, 15, true );
 	bkgPanel.place( @tal_abilities, 'span, wrap' );
 	bkgPanel.place( specialTextField, 'span, gap para, growx, wrap' );
 	bindings.add( 'SpecialText', specialTextField, [0] );
@@ -198,8 +198,8 @@ function createInterface( diy, editor ) {
 	Talisman.customizePortraitStencil( diy, ImageUtils.get( $char_front_overlay ), R('portrait-true-clip') );
 	/*
 	// Equivalent code:
-	var stencil = ImageUtils.get( $char_front_overlay );
-	var region = R('portrait-true-clip');
+	let stencil = ImageUtils.get( $char_front_overlay );
+	let region = R('portrait-true-clip');
 	stencil = AbstractPortrait.createStencil( stencil, region );
 	diy.setPortraitClipStencil( stencil );
 	diy.setPortraitClipStencilRegion( region );
@@ -270,7 +270,7 @@ function paintFront( g, diy, sheet ) {
 	// default portrait size is always based on the portrait's
 	// clip region. Now we are ready to paint the portrait,
 	// so we need to install our own (larger) clip region.
-	var oldClip = g.getClip();
+	let oldClip = g.getClip();
 	g.clip( new Region( $char_portrait_true_clip_region ) );
 	paintCharacterBase( g, $Base );
 	sheet.paintPortrait( g );
@@ -403,10 +403,10 @@ function onWrite() {}
  * is bound to will be set to one of G, N, or E for good, neutral, or evil.
  */
 function createAlignmentCombo() {
-	var labels = [#tal_align_G, #tal_align_N, #tal_align_E];
-	var icons = ['good', 'neutral', 'evil'];
-	var values = ['G', 'N', 'E'];
-	var items = [];
+	let labels = [#tal_align_G, #tal_align_N, #tal_align_E];
+	let icons = ['good', 'neutral', 'evil'];
+	let values = ['G', 'N', 'E'];
+	let items = [];
 	
 	for( let i=0; i<labels.length; ++i ) {
 		icons[i] = ImageUtils.createIcon( ImageUtils.get( 'talisman/icons/' + icons[i] + '.png' ), 18 );
@@ -425,9 +425,9 @@ function createAlignmentCombo() {
  */
 function createStartCombo() {
 	// create a combo containing all game strings of the form tal-start-<n>
-	var items = [];
+	let items = [];
 	for( let i=0; ; ++i ) {
-		var key = 'tal-start-' + i.toInt();
+		let key = 'tal-start-' + i.toInt();
 		if( !Language.getGame().isKeyDefined( key ) ) break;
 		items[i] = Language.game.get( key );
 	}
@@ -444,11 +444,11 @@ function createStartCombo() {
 function createBaseCombo() {
 	// Get the list of bases from $char_bases, put 'none,' at the
 	// start and split it up on the commas
-	var bases = ('none,' + $char_bases).split( ',' );
+	let bases = ('none,' + $char_bases).split( ',' );
 	// For each base name, create a list item that displays the
 	// localized base name but sets the setting to the internal
 	// name ('field', 'path', 'cobbles', etc.).
-	var items = [];
+	let items = [];
 	for( let i=0; i<bases.length; ++i ) {
 		items[i] = new ListItem( bases[i], @('tal-char-base-' + bases[i]) );
 	}
@@ -464,7 +464,7 @@ function createBaseCombo() {
  * 'char-' prefix or '-region' suffix.
  */
 function R( nametag ) {
-	var value = $('char-' + nametag + '-region');
+	let value = $('char-' + nametag + '-region');
 	if( value == null ) {
 		throw new Error( 'region not defined: ' + nametag );
 	}

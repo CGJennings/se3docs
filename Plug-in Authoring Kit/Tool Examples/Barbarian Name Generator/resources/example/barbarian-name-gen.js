@@ -18,12 +18,12 @@ function run() {
 	// Get the game component currently being edited (null
 	// if the selected tab isn't a game component), then
 	// change the component's name and redraw the preview.
-	var component = Eons.activeGameComponent;
+	let component = Eons.activeGameComponent;
 	if( component != null ) {
 		// generate the name and set it on the component
 		component.name = generateName();
 		// copy the change to the component back to the editor
-		var editor = Eons.activeEditor;
+		let editor = Eons.activeEditor;
 		editor.populateFieldsFromComponent();
 		// update the editor's preview display
 		editor.redrawPreview();
@@ -32,24 +32,24 @@ function run() {
 
 // These arrays are lists of name fragments we will assemble
 // in various ways to generate our names:
-var syllables = [
+let syllables = [
 	'Ack', 'Bar', 'Bog', 'Dak', 'Grak', 'Grug', 'Hurt',
 	'Juk', 'Kag', 'Krak', 'Kruk', 'Lak', 'Mug', 'Morg', 'Nok',
 	'Pog', 'Pok', 'Rak', 'Sog', 'Sok', 'Targ', 'Zog', 'Zug'
 ];
  
-var optionalSyllables = [
+let optionalSyllables = [
 	'-ak', '-awk', '-ek', '-ik', '-ok', '-uk', '-yk', '-yuk'
 ];
  
-var familyNouns = [
+let familyNouns = [
 	'Bear', 'Blood', 'Cave', 'Chunk', 'Dark', 'Ear', 'Foot',
 	'Gob', 'Gorg', 'Grub', 'Gut', 'Head', 'Horse', 'Ik', 'Larg',
 	'Moon', 'Nob-', 'Ogre', 'Orc', 'Pole', 'Snake', 'Spear',
 	'Sun', 'Tree', 'Troll'
 ];
  
-var familyVerbs = [
+let familyVerbs = [
 	'axe', 'bite', 'burn', 'burst', 'cut', 'fight', 'gash',
 	'gorge', 'gore', 'growl', 'gush', 'hit', 'hurt', 'hunt',
 	'kill', 'lance', 'punch', 'rend', 'rip', 'smash',
@@ -61,7 +61,7 @@ var familyVerbs = [
  * Returns a randomly generated name.
  */
 function generateName() {
-	var first, second = '', family = '';
+	let first, second = '', family = '';
  
 	// Choose a first syllable for the name:
 	first = syllables.pick();

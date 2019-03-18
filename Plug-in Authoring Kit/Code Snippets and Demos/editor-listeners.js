@@ -10,7 +10,7 @@ importClass( arkham.StrangeEonsAppWindow );
 importClass( arkham.StrangeEonsEditor );
 
 // This is a listener that is called when a new editor is added.
-var editorAdded = new StrangeEonsAppWindow.EditorAddedListener() {
+let editorAdded = new StrangeEonsAppWindow.EditorAddedListener() {
 	editorAdded: function editorAdded( editor ) {
 		println( 'editor added: ' + editor );
 		if( !targetEditor ) {
@@ -25,7 +25,7 @@ var editorAdded = new StrangeEonsAppWindow.EditorAddedListener() {
 // selected, unselected, or closed---it applies to any
 // editor because we register it with the application,
 // not a particular editor.
-var allEditors = new StrangeEonsEditor.EditorListener() {
+let allEditors = new StrangeEonsEditor.EditorListener() {
 	editorSelected: function editorSelected( editor ) {
 		println( 'editor selected: ' + editor );
 	},
@@ -47,7 +47,7 @@ var allEditors = new StrangeEonsEditor.EditorListener() {
 // is selected, unselected, or closed---it applies to only
 // one editor because we register it on that editor, not
 // the entire application.
-var specificEditor = new StrangeEonsEditor.EditorListener() {
+let specificEditor = new StrangeEonsEditor.EditorListener() {
 	editorSelected: function editorSelected( editor ) {
 		println( 'specific editor selected: ' + editor );
 	},
@@ -69,11 +69,11 @@ var specificEditor = new StrangeEonsEditor.EditorListener() {
 // if there is no editor when we run the script, the
 // code we wrote for the EditorAddedListener will
 // add it to the first editor we create.
-var targetEditor = Editor;
+let targetEditor = Editor;
 
 // Add a toolbar button that will uninstall the listeners
 // we register when it is clicked.
-var killSwitch = new swing.JButton( 'Remove Listeners' );
+let killSwitch = new swing.JButton( 'Remove Listeners' );
 killSwitch.addActionListener( function shutdown() {
 	try {
 		Eons.window.removeEditorListener( allEditors );

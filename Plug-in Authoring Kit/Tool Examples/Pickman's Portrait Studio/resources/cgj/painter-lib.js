@@ -14,7 +14,7 @@ importPackage( ca.cgjennings.graphics.filters );
  * <code>hueShift, satBoost, briAdjust, conAdjust, levels, radius,
  * sketch, insensitivity, strength</code>.
  */
-var Painter = {
+let Painter = {
 	hueShift: 0.125,
 	satBoost: 1.55,
 	briAdjust: 0,
@@ -26,7 +26,7 @@ var Painter = {
 	strength: 4,
 
 	paint: function paint( image ) {
-		var painted = this.colourAndLighting( image );
+		let painted = this.colourAndLighting( image );
 		painted = this.paintEffect( painted );
 		if( this.sketch ) {
 			painted = this.sketchEffect( painted, image );
@@ -64,7 +64,7 @@ var Painter = {
 		// source image, then convert the edges into greyscale,
 		// and convert that to a black image with those greyscale
 		// values as the alpha channel
-		var sketchTemp = this.greyFilt.filter( original, null );
+		let sketchTemp = this.greyFilt.filter( original, null );
 		if( this.insensitivity > 0 ) {
 			this.sensitivityFilt.radius = this.insensitivity;
 			sketchTemp = this.sensitivityFilt.filter( sketchTemp, null );
@@ -73,12 +73,12 @@ var Painter = {
 		sketchTemp = this.outlineFilt.filter( sketchTemp, ImageUtils.create( im.width, im.height, true ) );
 		this.imageStats.analyze( sketchTemp );
 
-		var minA = this.imageStats.alphaMin / 255;
-		var avgA = this.imageStats.alphaMean / 255;
-		var maxA = this.imageStats.alphaMax / 255;
+		let minA = this.imageStats.alphaMin / 255;
+		let avgA = this.imageStats.alphaMean / 255;
+		let maxA = this.imageStats.alphaMax / 255;
 
-		var newMax = 0.5 + this.strength * 0.10;
-		var newAvg = avgA / maxA * newMax;
+		let newMax = 0.5 + this.strength * 0.10;
+		let newAvg = avgA / maxA * newMax;
 		newAvg += newAvg * this.strength/4;
 		newAVg = Math.min( newMax, newAvg );
 

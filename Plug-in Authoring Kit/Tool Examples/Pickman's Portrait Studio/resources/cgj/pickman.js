@@ -21,16 +21,16 @@ importClass( javax.swing.JMenuItem );
 
 // Stores the dialog window, which is lazily created the first time
 // that the plug-in is activated.
-var dialog;
+let dialog;
 // Tab component that previews the original image.
-var photoViewer;
+let photoViewer;
 // Tab component that previews the painted image.
-var paintingViewer;
+let paintingViewer;
 
 // Stores the original and painted version of the image.
-var source, dest;
+let source, dest;
 // Tracks the game component, if any, that the source image came from.
-var portraitIsFrom;
+let portraitIsFrom;
 
 
 /*
@@ -74,14 +74,14 @@ function run() {
 
 
 function createDialog() {
-	var d = new swing.JDialog( Eons.window, 'Pickman\'s Portrait Studio', true );
-	var previewSize = new java.awt.Dimension( 600, 400 );
+	let d = new swing.JDialog( Eons.window, 'Pickman\'s Portrait Studio', true );
+	let previewSize = new java.awt.Dimension( 600, 400 );
 	photoViewer = new arkham.ImageViewer();
 	photoViewer.setPreferredSize( previewSize );
 	paintingViewer = new arkham.ImageViewer();
 	paintingViewer.setPreferredSize( previewSize );
 
-	var imageTab = new swing.JTabbedPane();
+	let imageTab = new swing.JTabbedPane();
 	imageTab.addTab( 'Painted', paintingViewer );
 	imageTab.addTab( 'Original', photoViewer );
 	imageTab.setBorder( swing.BorderFactory.createMatteBorder( 0,2,0,0, Color.BLACK ) );
@@ -93,7 +93,7 @@ function createDialog() {
 	// then updates the painting if the source slider
 	// has been released by the user
 	function listener( handlerFunction ) {
-		var li = function listener( event ) {
+		let li = function listener( event ) {
 			try {
 				handlerFunction();
 				if( event == null || !event.source.model.valueIsAdjusting ) {
@@ -106,36 +106,36 @@ function createDialog() {
 		return li;
 	}
 
-	var changeHue = listener( function changeHueLi() {
+	let changeHue = listener( function changeHueLi() {
 		Painter.hueShift = hueSlider.value/1000 - 0.5;
 	} );
-	var changeSatBoost = listener( function changeSatBoostLi() {
+	let changeSatBoost = listener( function changeSatBoostLi() {
 		Painter.satBoost = satSlider.value/500;
 	} );
-	var changeBriAdjust = listener( function changeBriAdjustLi() {
+	let changeBriAdjust = listener( function changeBriAdjustLi() {
 		Painter.briAdjust = briSlider.value/1000;
 	} );
-	var changeConAdjust = listener( function changeConAdjustLi() {
+	let changeConAdjust = listener( function changeConAdjustLi() {
 		Painter.conAdjust = conSlider.value/1000;
 	} );
-	var changeSmear = listener( function changeSmearLi() {
+	let changeSmear = listener( function changeSmearLi() {
 		Painter.radius = smearSlider.value;
 	} );
-	var changeLevels = listener( function changeLevelsLi() {
+	let changeLevels = listener( function changeLevelsLi() {
 		Painter.levels = 1 << levelsSlider.value;
 	} );
-	var changeSensitivity = listener( function changeSensitivityLi() {
+	let changeSensitivity = listener( function changeSensitivityLi() {
 		Painter.insensitivity = 3 - sensitivitySlider.value;
 	} );
-	var changeStrength = listener( function changeStrengthLi() {
+	let changeStrength = listener( function changeStrengthLi() {
 		Painter.strength = strengthSlider.value;
 	} );
-	var changeBlend = listener( function changeBlendLi() {
+	let changeBlend = listener( function changeBlendLi() {
 		Painter.blending = blendSlider.value;
 	} );
 	function changeMode() {
 		try {
-			var sel = modeCombo.selectedIndex;
+			let sel = modeCombo.selectedIndex;
 			if( sel < 0 ) return;
 			if( sel == 0 ) {
 				Painter.composite = java.awt.AlphaComposite.SrcOver;
@@ -151,19 +151,19 @@ function createDialog() {
 
 
 
-	var colourPanel = new Grid( '', '[][grow,fill][fill]', '' );
+	let colourPanel = new Grid( '', '[][grow,fill][fill]', '' );
 
-	var hueSlider = slider(
+	let hueSlider = slider(
 		0, 1000, 500+125,
-		[0,'-180°', 250,'-90°', 500,'0°', 750,'+90°', 1000,'+180°'],
+		[0,'-180\u00b0', 250,'-90\u00b0', 500,'0\u00b0', 750,'+90\u00b0', 1000,'+180\u00b0'],
 		changeHue
 	);
 	hueSlider.majorTickSpacing = 500;
 	hueSlider.minorTickSpacing = 50;
 	hueSlider.paintTicks = true;
-	var hueSpinner = createLinkedSpinner( hueSlider, function(v) (v-500)*360/1000, function(v) (v*1000/360)+500 );
+	let hueSpinner = createLinkedSpinner( hueSlider, function(v) (v-500)*360/1000, function(v) (v*1000/360)+500 );
 
-	var satSlider = slider(
+	let satSlider = slider(
 		0, 1000, 0.55*500 + 500,
 		[0,'0%', 500,'100%', 1000,'200%'],
 		changeSatBoost
@@ -171,9 +171,9 @@ function createDialog() {
 	satSlider.majorTickSpacing = 500;
 	satSlider.minorTickSpacing = 50;
 	satSlider.paintTicks = true;
-	var satSpinner = createLinkedSpinner( satSlider, function(v) v/5, function(v) v*5 );
+	let satSpinner = createLinkedSpinner( satSlider, function(v) v/5, function(v) v*5 );
 
-	var briSlider = slider(
+	let briSlider = slider(
 		-1000, 1000, 0,
 		[-1000,'-100%', 0,'0%', 1000,'100%'],
 		changeBriAdjust
@@ -181,9 +181,9 @@ function createDialog() {
 	briSlider.majorTickSpacing = 1000;
 	briSlider.minorTickSpacing = 100;
 	briSlider.paintTicks = true;
-	var briSpinner = createLinkedSpinner( briSlider );
+	let briSpinner = createLinkedSpinner( briSlider );
 
-	var conSlider = slider(
+	let conSlider = slider(
 		-1000, 1000, 0,
 		[-1000,'-100%', 0,'0%', 1000,'100%'],
 		changeConAdjust
@@ -191,7 +191,7 @@ function createDialog() {
 	conSlider.majorTickSpacing = 1000;
 	conSlider.minorTickSpacing = 100;
 	conSlider.paintTicks = true;
-	var conSpinner = createLinkedSpinner( conSlider );
+	let conSpinner = createLinkedSpinner( conSlider );
 
 	colourPanel.place(
 		'Colour',     '', hueSlider, '', hueSpinner, 'wrap',
@@ -203,14 +203,14 @@ function createDialog() {
 
 
 
-	var paintPanel = new TypeGrid();
+	let paintPanel = new TypeGrid();
 
-	var smearSlider = slider( 1, 8, 5, null, changeSmear );
+	let smearSlider = slider( 1, 8, 5, null, changeSmear );
 	smearSlider.majorTickSpacing = 1;
 	smearSlider.paintTicks = true;
 	smearSlider.snapToTicks = true;
 	smearSlider.paintLabels = true;
-	var levelsSlider = slider(
+	let levelsSlider = slider(
 		1, 8, 5,
 		[ 1,'2', 2,'4', 3,'8', 4,'16', 5,'32', 6,'64', 7,'128', 8,'256'],
 		changeLevels
@@ -226,9 +226,9 @@ function createDialog() {
 
 
 
-	var sketchPanel = new TypeGrid();
+	let sketchPanel = new TypeGrid();
 
-	var sketchCheck = checkBox(
+	let sketchCheck = checkBox(
 		'Draw sketch lines', true,
 		function sketchCheckLi() {
 			Painter.sketch = sketchCheck.selected;
@@ -236,18 +236,18 @@ function createDialog() {
 			updatePainting();
 		}
 	);
-	var sensitivitySlider = slider( 0, 3, 0, [0,'Low', 3,'High'], changeSensitivity );
+	let sensitivitySlider = slider( 0, 3, 0, [0,'Low', 3,'High'], changeSensitivity );
 	sensitivitySlider.paintTicks = true;
 	sensitivitySlider.majorTickSpacing = 1;
 	sensitivitySlider.snapToTicks = true;
-	var strengthSlider = slider( 0, 4, 4, [0,'Low', 4,'High'], changeStrength );
+	let strengthSlider = slider( 0, 4, 4, [0,'Low', 4,'High'], changeStrength );
 	strengthSlider.paintTicks = true;
 	strengthSlider.majorTickSpacing = 1;
 	strengthSlider.snapToTicks = true;
 
 	// these sliders are placed on their own subpanel so we can enable/disable
 	// them as a single unit when sketchCheck changes
-	var sketchSettingPanel = new TypeGrid();
+	let sketchSettingPanel = new TypeGrid();
 	sketchSettingPanel.place (
 		'Sensitivity', '', sensitivitySlider, 'tab hfill',
 		'Strength', 'br', strengthSlider, 'tab hfill'
@@ -265,10 +265,10 @@ function createDialog() {
 
 
 
-	var resetPanel = new Row();
-	var reset = button( 'Reset All', null, function resetLi() {
+	let resetPanel = new Row();
+	let reset = button( 'Reset All', null, function resetLi() {
 		// prevent repainting every time an individual value is reset
-		var auto = updatePainting.auto;
+		let auto = updatePainting.auto;
 		updatePainting.auto = false;
 		hueSlider.value = 500;
 		satSlider.value = 500;
@@ -286,17 +286,17 @@ function createDialog() {
 	resetPanel.add( reset );
 	resetPanel.setAlignment(1);
 
-	var outputPanel = new Row();
-	var openBtn = button( '&Open...', null, openImageFile );
-	var getBtn = button( '&Get from Component', null, getPortrait );
-	var setBtn = button( '&Apply to Component', null, setPortrait );
-	var saveBtn = button( '&Save As...', null, saveImageFile );
+	let outputPanel = new Row();
+	let openBtn = button( '&Open...', null, openImageFile );
+	let getBtn = button( '&Get from Component', null, getPortrait );
+	let setBtn = button( '&Apply to Component', null, setPortrait );
+	let saveBtn = button( '&Save As...', null, saveImageFile );
 	outputPanel.add( openBtn, getBtn, setBtn, saveBtn );
 	outputPanel.setAlignment(1);
 
-	var repaintPanel = new Row();
-	var nowBtn = button( 'Repaint Now' , null, function nowBtnLi() { updatePainting(true); } );
-	var autoCheck = checkBox( 'Repaint automatically', true, function autoCheckLi() {
+	let repaintPanel = new Row();
+	let nowBtn = button( 'Repaint Now' , null, function nowBtnLi() { updatePainting(true); } );
+	let autoCheck = checkBox( 'Repaint automatically', true, function autoCheckLi() {
 		updatePainting.auto = !updatePainting.auto;
 		updatePainting();
 	});
@@ -310,7 +310,7 @@ function createDialog() {
 		setBtn.enabled = enable;
 	};
 
-	var adjustmentTab = new swing.JTabbedPane();
+	let adjustmentTab = new swing.JTabbedPane();
 	adjustmentTab.addTab( 'Colour', colourPanel.realize() );
 	adjustmentTab.addTab( 'Painting', paintPanel.realize() );
 	adjustmentTab.addTab( 'Sketch Lines', sketchPanel ); // already realized
@@ -318,7 +318,7 @@ function createDialog() {
 	resetPanel = resetPanel.realize();
 	resetPanel.setBorder( swing.BorderFactory.createEmptyBorder( 24, 8, 16, 8 ) );
 
-	var controlStack = new Stack (
+	let controlStack = new Stack (
 		adjustmentTab,
 		resetPanel,
 		separator(),
@@ -334,7 +334,7 @@ function createDialog() {
 	// embed the controls in the north side of another panel;
 	// this keeps the controls at the bottom of the window when
 	// the dialog is resized
-	var controlPanel = new swing.JPanel();
+	let controlPanel = new swing.JPanel();
 	controlPanel.setLayout( new BorderLayout() );
 	controlPanel.add( controlStack, BorderLayout.NORTH );
 
@@ -374,7 +374,7 @@ function createDialog() {
 
 // createDialog() stores a function here that can be used to enable/disable
 // the controls that require a game component with a valid portrait.
-var enablePortraitButtons;
+let enablePortraitButtons;
 
 
 
@@ -387,7 +387,7 @@ function updateImage( im ) {
 		if( im != null ) {
 			// resize very large images to reduce processing time
 			// and keep outline effects to a reasonable size
-			var MAX = 5*300; // 5" x 300 dpi
+			let MAX = 5*300; // 5" x 300 dpi
 			if( im.width > MAX || im.height > MAX ) {
 				im = ImageUtils.fit( im, MAX, MAX );
 			}
@@ -433,7 +433,7 @@ updatePainting.auto = true;
  */
 function openImageFile( event ) {
 	try {
-		var f = resources.ResourceKit.showImageFileDialog( event.source );
+		let f = resources.ResourceKit.showImageFileDialog( event.source );
 		if( f != null ) {
 			loadImageFile( f );
 		}
@@ -463,7 +463,7 @@ function saveImageFile( event ) {
  */
 function loadImageFile( f ) {
 	try {
-		var im = ImageUtils.read( f );
+		let im = ImageUtils.read( f );
 		if( im == null ) {
 			ErrorDialog.displayError( 'Not a supported image format', null );
 		} else {
@@ -486,13 +486,13 @@ function loadImageFile( f ) {
  */
 function getPortrait( event ) {
 	function apply( index ) {
-		var gc = Portraits.getProvider();
+		let gc = Portraits.getProvider();
 		source = Portraits.getPortrait( gc, index );
 		portraitIsFrom = gc;
 		updateImage( source );		
 	}
 		
-	var list = Portraits.listSettablePortraits();
+	let list = Portraits.listSettablePortraits();
 	if( list.length == 1 ) {
 		apply( list[0] );
 	} else {
@@ -509,7 +509,7 @@ function setPortrait( event ) {
 		Portraits.setPortrait( Editor, index, dest, portraitIsFrom == Component );
 	}
 
-	var list = Portraits.listSettablePortraits();
+	let list = Portraits.listSettablePortraits();
 	if( list.length == 1 ) {
 		apply( list[0] );
 	} else {
@@ -533,17 +533,17 @@ function showPortraitMenu( parent, list, apply ) {
 		};
 	}	
 	
-	var menu = new JPopupMenu();
+	let menu = new JPopupMenu();
 	for( let i=0; i<list.length; ++i ) {
-		var image = Portraits.getPortrait( Portraits.getProvider(), list[i] );
+		let image = Portraits.getPortrait( Portraits.getProvider(), list[i] );
 		image = ImageUtils.createIcon( image, 48 );
-		var item = new JMenuItem( image );
+		let item = new JMenuItem( image );
 		item.addActionListener( makeListener( list[i] ) );
 		menu.add( item );
 	}
-	var parentSize = parent.getSize();
-	var menuSize = menu.getPreferredSize();
-	var insets = parent.getInsets();
+	let parentSize = parent.getSize();
+	let menuSize = menu.getPreferredSize();
+	let insets = parent.getInsets();
 	menu.show( parent, parentSize.width - menuSize.width - insets.right, insets.top - menuSize.height );
 }
 
@@ -559,11 +559,11 @@ function createLinkedSpinner( slider, toSpinner, toSlider ) {
 		toSlider = function(v) v*10;
 	}
 	
-	var min = slider.minimum;
-	var max = slider.maximum;
-	var val = slider.value;
+	let min = slider.minimum;
+	let max = slider.maximum;
+	let val = slider.value;
 
-	var updating = 0;
+	let updating = 0;
 
 	function spinnerChanged( event ) {
 		if( updating == 0 ) {
@@ -581,7 +581,7 @@ function createLinkedSpinner( slider, toSpinner, toSlider ) {
 		}
 	}
 	
-	var sp = spinner( toSpinner(min), toSpinner(max), 1, toSpinner(val), spinnerChanged );
+	let sp = spinner( toSpinner(min), toSpinner(max), 1, toSpinner(val), spinnerChanged );
 	sp.setBorder( swing.BorderFactory.createEmptyBorder( 0, 0, 16, 0 ) );
 	slider.addChangeListener( sliderChanged );
 	return sp;

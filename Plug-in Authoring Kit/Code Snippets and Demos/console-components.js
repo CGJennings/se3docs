@@ -36,11 +36,11 @@
 useLibrary( 'imageutils' );
 importPackage( javax.swing );
 
-var nameField = new JTextField();
-var okBtn = new JButton( 'OK' );
+let nameField = new JTextField();
+let okBtn = new JButton( 'OK' );
 
 // A project: URL locates files in the currently open project
-var yellowSign = ImageUtils.get( 'project:Code Snippets and Demos/yellow-sign.png', true );
+let yellowSign = ImageUtils.get( 'project:Code Snippets and Demos/yellow-sign.png', true );
 
 okBtn.addActionListener(
 	function actionPerformed() {		

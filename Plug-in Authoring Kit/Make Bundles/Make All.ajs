@@ -36,12 +36,12 @@ function make( pluginTask ) {
 
 	// 1. Find out what the bundle will be called
 
-	var name = settings.get( makeAction.KEY_BUNDLE_FILE );
+	let name = settings.get( makeAction.KEY_BUNDLE_FILE );
 	if( name == null ) {
 		println( 'Warning: task ' + pluginTask + ' has never been built before; skipping make' );
 		return;
 	}
-	var bundle = new File( pluginTask.parent.file, name );
+	let bundle = new File( pluginTask.parent.file, name );
 	
 	// 2. Ask the MakeBundle action we looked up to make the bundle
 
@@ -53,7 +53,7 @@ function make( pluginTask ) {
 	
 	// 3. Move the new bundle to the same folder as this script
 
-	var dest = new File( member.parent.file, name );
+	let dest = new File( member.parent.file, name );
 	ProjectUtilities.moveFile( bundle, dest );
 	
 	// 4. As we make each bundle, show it in the project tree
@@ -61,7 +61,7 @@ function make( pluginTask ) {
 	// update the parent's tree immediately, so it detects the new file
 	member.parent.synchronize();
 	// find the Member instance for the new file
-	var destMember = member.parent.findChild( dest );
+	let destMember = member.parent.findChild( dest );
 	project.view.ensureVisible( destMember );
 }
 
@@ -96,7 +96,7 @@ function isPluginTask( m ) {
 
 // returns true if any child of this member contains a .java or .class file
 function childContainsJavaCode( member ) {
-	var kids = member.getChildren();
+	let kids = member.getChildren();
 	for( let i=0; i<kids.length; ++i ) {
 		if( kids[i].isFolder() ) {
 			if( childContainsJavaCode( kids[i] ) ) return true;
@@ -121,9 +121,9 @@ function forAll( parent, somethingToDo ) {
 		error( 'missing somethingToDo' );
 	}
 
-	var i;
-	var child;
-	var children = parent.getChildren();
+	let i;
+	let child;
+	let children = parent.getChildren();
 
     for( i=0; i<children.length; ++i ) {
 		child = children[i];

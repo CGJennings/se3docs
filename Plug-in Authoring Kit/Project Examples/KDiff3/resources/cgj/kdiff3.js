@@ -43,14 +43,14 @@ function unload() {
 	}
 }
 
-var customAction;
+let customAction;
 
 // Creates a TaskAction for the new command.
 function createAction() {
 	// We need to create a temporary object and then use JavaAdapter because
 	// we need to create an object that overrides a concrete class
 	// (rather than implementing a method).
-	var kd3Action = {
+	let kd3Action = {
 		appliesToSelection: function appliesToSelection( members ) {
 			// unlike the built-in task action, KDiff3 can operate on
 			// 2 *or* 3 files, and it also works on folders
@@ -58,7 +58,7 @@ function createAction() {
 			
 			// we need to check that all of the files are the same type,
 			// and that the type is either a text file or a folder
-			var m0Type = fileType( members[0] );
+			let m0Type = fileType( members[0] );
 			if( m0Type == INVALID ) return false;
 
 			for( let i=1; i<members.length; ++i ) {
@@ -78,7 +78,7 @@ function createAction() {
 	};
 	// create a Java object that subclasses SpecializedAction using
 	// the script object kd3Action:
-	var specialAction = new JavaAdapter( SpecializedAction, kd3Action );
+	let specialAction = new JavaAdapter( SpecializedAction, kd3Action );
 	// install the action as a specialization of the existing file comparison action
 	specialAction.install( 'comparefiles' );
 	return specialAction;
@@ -90,7 +90,7 @@ function kdiff3( members ) {
 		throw new Error( 'must specify 2 or 3 members' );
 	}
 	// build an array representing the command we want to run and its arguments
-	var args = [ Settings.user.get( EXE_KEY, getDefaultBinaryLocation() ) ];
+	let args = [ Settings.user.get( EXE_KEY, getDefaultBinaryLocation() ) ];
 	for( let i=0; i<members.length; ++i ) {
 		args[ args.length ] = members[i].file.absolutePath;
 	}
@@ -99,7 +99,7 @@ function kdiff3( members ) {
 	try {
 		java.lang.Runtime.getRuntime().exec( args );
 	} catch( ex ) {
-		var path = prompt( 'Please provide the full path to the KDiff3 binary:', getBinaryLocation() );
+		let path = prompt( 'Please provide the full path to the KDiff3 binary:', getBinaryLocation() );
 		if( path != null ) {
 			Settings.user.set( EXE_KEY, path );
 			kdiff3( members );
@@ -133,7 +133,7 @@ const FOLDER = 1;
 // Identifies the basic type of a member. (Only text files and folders
 // can be compared.)
 function fileType( member ) {
-	var type = INVALID;
+	let type = INVALID;
 	if( member.isFolder() ) {
 		type = FOLDER;
 	} else if( member.metadataSource.getDefaultCharset( member ) != null ) {

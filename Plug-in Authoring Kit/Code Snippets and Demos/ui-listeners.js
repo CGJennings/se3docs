@@ -9,7 +9,7 @@
  
 useLibrary( 'ui' );
 
-var c1, c2, panel;
+let c1, c2, panel;
 c1 = checkBox( 'Check box', true, function listener( actionEvent ) {
 	try {
 		// disable the second check box if the first check box

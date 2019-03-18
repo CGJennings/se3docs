@@ -29,24 +29,24 @@ function registerExpansion( code, baseKey, customWhite, customGold ) {
 
 	// add expansions to the Talisman game if available,
 	// but fall back to the All Games game if not (for testing)
-	var gameInstalled = true;
-	var game = Game.get( Eons.namedObjects.Talisman.GAME_CODE );
+	let gameInstalled = true;
+	let game = Game.get( Eons.namedObjects.Talisman.GAME_CODE );
 	if( game == null ) {
 		gameInstalled = false;
 		game = Game.get( Game.ALL_GAMES_CODE );
 	}
 
 	const folder = 'talisman/expansions/';
-	var blackImage = ImageUtils.get( folder + baseKey + '.jp2' );
-	var whiteImage;
-	var goldImage;
+	let blackImage = ImageUtils.get( folder + baseKey + '.jp2' );
+	let whiteImage;
+	let goldImage;
 
 	// for testing when the game is not installed
 	if( !gameInstalled ) {
 		whiteImage = blackImage;
 		goldImage = blackImage;
 	} else {
-		var template = game.symbolTemplate;
+		let template = game.symbolTemplate;
 		if( customWhite ) {
 			whiteImage = ImageUtils.get( folder + baseKey + '-white.jp2' );
 		} else {

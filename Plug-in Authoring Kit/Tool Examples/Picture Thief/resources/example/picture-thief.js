@@ -69,9 +69,9 @@ function run() {
 
 	// Create one window for each portrait; the Image.view function creates a preview
 	// window that includes an option to save the image to a file.
-	for( var i=0; i<Component.portraitCount; ++i ) {
-		var title = sprintf( '%s %.0f', Component.getFullName(), i+1 );
-		var portrait = Component.getPortrait(i);
+	for( let i=0; i<Component.portraitCount; ++i ) {
+		let title = sprintf( '%s %.0f', Component.getFullName(), i+1 );
+		let portrait = Component.getPortrait(i);
 		// check that this has a unique image and is not linked to another portrait:
 		// for example, it will skip an Investigator's token, which uses the same
 		// image as the investigator portrait but a different scale and position
@@ -88,7 +88,7 @@ function run() {
  * or disabled accordingly.
  */
 function isUsable() {
-	var component = Eons.activeGameComponent;
+	let component = Eons.activeGameComponent;
 	return component != null
 		&& component instanceof PortraitProvider
 		&& component.portraitCount != 0;

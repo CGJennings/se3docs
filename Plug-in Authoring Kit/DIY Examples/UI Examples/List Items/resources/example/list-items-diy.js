@@ -22,11 +22,11 @@ importClass( arkham.diy.ListItem );
 // the label shown to the user, the setting value that the item maps to
 // on the component, and an optional image resource to use for an icon.
 function makeItems( itemTemplates ) {
-	var items = [];
+	let items = [];
 	for( let i=0; i<itemTemplates.length; ++i ) {
 		// each entry is an array with either two or three elements:
 		// the label shown to the user, the settings value, and (optionally) an icon
-		var template = itemTemplates[i];
+		let template = itemTemplates[i];
 		if( template.length == 2 ) {
 			items[i] = new ListItem( template[0], template[1] );
 		} else if( template.length == 3 ) {
@@ -50,18 +50,18 @@ function create( diy ) {
 }
 
 function createInterface( diy, editor ) {
-	var stack = new Stack();
+	let stack = new Stack();
 
 	// List items that include icons:
-	var boxItems = [
+	let boxItems = [
 		['GREEK_ALPHA', 'Alpha', ImageUtils.getIcon( 'example/a.png' ) ],
 		['GREEK_BETA', 'Beta',  ImageUtils.getIcon( 'example/b.png' ) ],
 		['GREEK_GAMMA', 'Gamma', ImageUtils.getIcon( 'example/g.png' ) ]
 	];
-	var box = new comboBox( makeItems( boxItems ) );
+	let box = new comboBox( makeItems( boxItems ) );
 
 	// List items whose text label is a localized string:
-	var listItems = [
+	let listItems = [
 		['L', 'Left'],
 		['R', 'Right'],
 		['C', 'Center'],
@@ -69,10 +69,10 @@ function createInterface( diy, editor ) {
 		['B', 'Bottom'],
 		['M', 'Middle'],
 	];
-	var list = new listControl( makeItems( listItems ), null, true );
+	let list = new listControl( makeItems( listItems ), null, true );
 	stack.add( box, list );
 	
-	var bindings = new Bindings( editor, diy );
+	let bindings = new Bindings( editor, diy );
 	bindings.add( 'BoxValue', box, [0] );
 	bindings.add( 'ListValue', list, [0] );
 	stack.addToEditor( editor, 'Lists', null, null, 0 );
@@ -102,9 +102,9 @@ function paintBack( g, diy, sheet ) {}
 
 // Draws text in the top or bottom of the face
 function drawText( g, text, sheet, drawInTopHalf ) {
-	var w = sheet.templateWidth;
-	var h = sheet.templateHeight;
-	var region;
+	let w = sheet.templateWidth;
+	let h = sheet.templateHeight;
+	let region;
 	
 	if( drawInTopHalf ) {
 		region = new Region( 32, 0, w-64, h/2 );

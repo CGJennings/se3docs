@@ -83,7 +83,7 @@ function createOpener() {
 				if( !confirm.yesno( 'Unpack ' + file.name + ' here?', 'Zip Archive' ) ) {
 					return;
 				}
-				var parent = new File( file.parentFile, file.name.substring( 0, file.name.length() - 4 ) );
+				let parent = new File( file.parentFile, file.name.substring( 0, file.name.length() - 4 ) );
 				parent = ProjectUtilities.getAvailableFile( parent );
 				parent.mkdirs();
 				if( !parent.isDirectory() ) {
@@ -91,14 +91,14 @@ function createOpener() {
 					return;
 				}
 
-				var inStream;
-				var zip = new JarFile( file );
+				let inStream;
+				let zip = new JarFile( file );
 				try {
-					var entries = zip.entries();
+					let entries = zip.entries();
 					while( entries.hasMoreElements() ) {
-						var entry = entries.nextElement();	
-						var name = entry.name;
-						var ofile = new File( parent, localizePath( name ) );
+						let entry = entries.nextElement();	
+						let name = entry.name;
+						let ofile = new File( parent, localizePath( name ) );
 						if( name.endsWith( '/' ) ) {
 							ofile.mkdirs();
 						} else {
@@ -115,9 +115,9 @@ function createOpener() {
 					if( inStream ) inStream.close();
 					zip.close();
 				}
-				var project = Eons.getOpenProject();
+				let project = Eons.getOpenProject();
 				if( project != null ) {
-					var parentMember = project.findMember( file.parentFile );
+					let parentMember = project.findMember( file.parentFile );
 					// update the tree view for the parent folder
 					// immediately so the user doesn't have to wait for
 					// the new files to be discovered
@@ -141,7 +141,7 @@ function createAction() {
 	// We need to create a temporary object and then use JavaAdapter because
 	// we are overriding a method in a concrete class, not implementing
 	// an interface.	
-	var zipAction = {
+	let zipAction = {
 		getLabel: function getLabel() {
 			return 'Compress';
 		},
@@ -165,7 +165,7 @@ function createAction() {
 			members = ProjectUtilities.merge( members );
 			if( members.length == 0 ) return;
 			
-			var parent = members[0].parent;
+			let parent = members[0].parent;
 			for( let i=1; i<members.length; ++i ) {
 				if( members[i].parent != parent ) {
 					parent = null;
@@ -177,10 +177,10 @@ function createAction() {
 			}
 			
 			// copy selected members into archive
-			var zipFile = new File( parent.file, 'Archive.zip' );
+			let zipFile = new File( parent.file, 'Archive.zip' );
 			zipFile = ProjectUtilities.getAvailableFile( zipFile );
 
-			var archive = ProjectUtilities.createPluginBundleArchive( zipFile, false );
+			let archive = ProjectUtilities.createPluginBundleArchive( zipFile, false );
 			try {
 				for( let i=0; i<members.length; ++i ) {
 					ProjectUtilities.copyToArchive(
@@ -219,8 +219,8 @@ function createAction() {
 // It can also extend the "Properties" tab in the project view
 // with new kinds of information specific to the file type.
 function createMetadataSource() {
-	var zipIcon = ImageUtils.getIcon( 'cgj/zip-tools.png' );
-	var zipMetadata = {
+	let zipIcon = ImageUtils.getIcon( 'cgj/zip-tools.png' );
+	let zipMetadata = {
 		appliesTo: function appliesTo( member ) {
 			return ProjectUtilities.matchExtension( member, 'zip' );
 		},
@@ -237,18 +237,18 @@ function createMetadataSource() {
 			// files (name, type, size, modification time).
 			this.super$fillInMetadataImpl( member, consumer );
 
-			var zip = null;
+			let zip = null;
 			try {
 				zip = new JarFile( member.file );
-				var fileCount = 0;
-				var uncompressedSize = 0;
-				var entries = zip.entries();
+				let fileCount = 0;
+				let uncompressedSize = 0;
+				let entries = zip.entries();
 				while( entries.hasMoreElements() ) {
-					var entry = entries.nextElement();
+					let entry = entries.nextElement();
 					// Skip folder entries in the archive
 					if( !entry.name.endsWith( '/' ) ) {
 						++fileCount;
-						var size = entry.size;
+						let size = entry.size;
 						if( size < 0 ) uncompressedSize = -1;
 						if( uncompressedSize >= 0 ) uncompressedSize += size;
 					}

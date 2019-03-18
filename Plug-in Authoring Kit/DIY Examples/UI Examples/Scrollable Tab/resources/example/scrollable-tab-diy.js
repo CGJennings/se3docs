@@ -25,14 +25,14 @@ function create( diy ) {
 }
 
 function createInterface( diy, editor ) {
-	var stack = new Stack();
+	let stack = new Stack();
 
 	// this is all we need to do to make the stack scrollable
 	// when added to an editor's tabs
 	stack.editorTabScrolling = true;
 	
-	for( var i=1; i<=50; ++i ) {
-		var r = new Row();
+	for( let i=1; i<=50; ++i ) {
+		let r = new Row();
 		r.add( 'Label ' + i, textField( 'Field ' + i ) );
 		stack.add( r );
 	}

@@ -49,7 +49,7 @@ function createAction() {
 	// We need to create a temporary object and then use JavaAdapter because
 	// we are overriding a method in a concrete class, not implementing
 	// an interface.
-	var psdAction = {
+	let psdAction = {
 		getLabel: function getLabel() {
 			return 'Extract Layers';
 		},

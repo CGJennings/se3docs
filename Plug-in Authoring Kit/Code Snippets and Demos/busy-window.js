@@ -35,7 +35,7 @@ Thread.busyWindow( task1 );
 
 function task2( callback ) {
 	callback.maximumProgress = 15;
-	for( var i=0; i<=15; ++i ) {
+	for( let i=0; i<=15; ++i ) {
 		callback.currentProgress = i;
 		sleep( 100 );
 	}
@@ -52,7 +52,7 @@ Thread.busyWindow( task2, 'Making Progress...' );
 
 function task3( callback ) {
 	callback.maximumProgress = 100;
-	for( var i=0; i<=100; ++i ) {
+	for( let i=0; i<=100; ++i ) {
 		if( i == 50 ) {
 			callback.title = 'Phase II';
 		}
@@ -78,7 +78,7 @@ Thread.busyWindow( task3, 'Phase I' );
  
 function task4( callback ) {
 	callback.maximumProgress = 1000;
-	for( var i=0; i<=1000; ++i ) {
+	for( let i=0; i<=1000; ++i ) {
 		// quit if the user presses Cancel
 		if( callback.cancelled ) return;
 		callback.currentProgress = i;

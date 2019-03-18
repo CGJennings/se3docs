@@ -16,7 +16,7 @@ importClass( arkham.component.DefaultPortrait );
 const REGION_1 = '75,16,96,96';
 const REGION_2 = '100,200,32,72';
 
-var portrait;
+let portrait;
 
 function getPortraitCount() {
 	return 1;
@@ -44,7 +44,7 @@ function create( diy ) {
 }
 
 function createInterface( diy, editor ) {
-	var stack = new Stack();
+	let stack = new Stack();
 
 	function movePortrait() {
 		if( toggle.isSelected() ) {
@@ -64,7 +64,7 @@ function createInterface( diy, editor ) {
 		portPanel.portrait = portrait;
 	}
 			
-	var toggle = toggleButton(
+	let toggle = toggleButton(
 			"Move portrait", null,
 			// whether the button is initially selected
 			$roving_portrait_clip_region === REGION_2,
@@ -72,7 +72,7 @@ function createInterface( diy, editor ) {
 			movePortrait
 	);
 
-	var portPanel = portraitPanel( diy, 0 );
+	let portPanel = portraitPanel( diy, 0 );
 	portPanel.panelTitle = 'Rover';
 	
 	stack.add( toggle, portPanel );

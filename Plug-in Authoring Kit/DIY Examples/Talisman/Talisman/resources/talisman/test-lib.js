@@ -12,8 +12,8 @@
 
 importClass( gamedata.Game );
 
-var settings;
-var talismanGame = Game.get( 'TAL' );
+let settings;
+let talismanGame = Game.get( 'TAL' );
 if( talismanGame != null ) {
 	settings = talismanGame.masterSettings;
 } else {
@@ -42,7 +42,7 @@ useLibrary( 'project:DIY Examples/Talisman/Talisman/resources/talisman/namedobj.
 // Load our string tables. When a string table is loaded
 // directly from a project: source, it is allowed to replace
 // strings with the same keys
-var projBase = 'project:DIY Examples/Talisman/Talisman/resources/talisman/text/';
+let projBase = 'project:DIY Examples/Talisman/Talisman/resources/talisman/text/';
 Language.getGame().addStrings( projBase + 'game' );
 Language.getGame().addStrings( projBase + 'common' );
 Language.getInterface().addStrings( projBase + 'ui' );

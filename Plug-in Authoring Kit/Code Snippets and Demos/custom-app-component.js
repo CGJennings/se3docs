@@ -29,9 +29,9 @@ add( button( 'Remove' ) );
 // Add a text field that prints a message and then
 // removes itself (and its text label) when the
 // user presses Return within the field.
-var label = label( 'Enter your name:' );
+let label = label( 'Enter your name:' );
 Eons.window.addCustomComponent( label );
-var field = textField( '', 20, function actionListener() {
+let field = textField( '', 20, function actionListener() {
 	println( 'Hello, ' + field.text );
 	Eons.window.removeCustomComponent( label );
 	Eons.window.removeCustomComponent( field );

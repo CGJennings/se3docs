@@ -16,7 +16,7 @@ function getVersion() {
 // plug-in is set to a higher priority than this plug-in in its root
 // file (eons-plugin), the main Talisman plug is guaranteed to be
 // started first if installed.
-var talismanGame = Game.get( 'TAL' );
+let talismanGame = Game.get( 'TAL' );
 
 if( game != null ) {
 	// add the keys needed to activate high resolution mode

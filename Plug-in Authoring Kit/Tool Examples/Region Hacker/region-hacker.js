@@ -44,9 +44,9 @@ function isUsable() {
  * returns the editor. Otherwise returns null.
  */
 function getEditor() {
-	var editor = Eons.activeEditor;
+	let editor = Eons.activeEditor;
 	if( editor == null ) return null;
-	var component = editor.gameComponent;
+	let component = editor.gameComponent;
 	if( component == null ) return null;
 	// decks and case books have no sheets
 	try {
@@ -71,7 +71,7 @@ function changeFontSize( comp, dSize ) {
 	if( !(comp instanceof swing.JComponent) ) {
 		comp = new swing.JLabel( comp.toString() );
 	}
-	var font = comp.font;
+	let font = comp.font;
 	font = font.deriveFont( font.size2D + dSize );
 	comp.font = font;
 	return comp;
@@ -88,8 +88,8 @@ function changeFontSize( comp, dSize ) {
  */
 function getRegionKeys( component ) {
 	function appendRegionKeys( list, keys ) {
-		var filter = /\-region$/;
-		var suffixLength = '-region'.length;
+		let filter = /\-region$/;
+		let suffixLength = '-region'.length;
 		for( let i=0; i<keys.length; ++i ) {
 			if( filter.test( keys[i] ) ) {
 				regionKeys.add( keys[i].substring( 0, keys[i].length() - suffixLength ) );
@@ -97,8 +97,8 @@ function getRegionKeys( component ) {
 		}
 	}
 
-	var regionKeys = new java.util.TreeSet();
-	var settingsChain = [ component.settings ];
+	let regionKeys = new java.util.TreeSet();
+	let settingsChain = [ component.settings ];
 	while( settingsChain[ settingsChain.length-1 ].parent != null ) {
 		settingsChain[ settingsChain.length ] = settingsChain[ settingsChain.length-1 ].parent;
 	}
@@ -115,28 +115,28 @@ function getRegionKeys( component ) {
  * Creates and displays a region hacker for the current component.
  */
 function run() {
-	var editor = getEditor();
+	let editor = getEditor();
 	if( editor == null ) {
 		alert( 'Select a component editor first', true );
 		return;
 	}
 
-	var component = editor.gameComponent;
-	var sheets = component.sheets;
-	var settings = component.settings;
-	var regionKeys = getRegionKeys( component );
+	let component = editor.gameComponent;
+	let sheets = component.sheets;
+	let settings = component.settings;
+	let regionKeys = getRegionKeys( component );
 
 	// create the hacker window
-	var regionPanel = new Grid( 'fillx' );
-	var regionField = autocompletionField( regionKeys, true );
-	var xField = changeFontSize( spinner( -1000, 9999, 1, 0, updateEditedRegion ), -2);
-	var yField = changeFontSize( spinner( -1000, 9999, 1, 0, updateEditedRegion ), -2);
-	var wField = changeFontSize( spinner(     1, 9999, 1, 1, updateEditedRegion ), -2);
-	var hField = changeFontSize( spinner(     1, 9999, 1, 1, updateEditedRegion ), -2);
-	var doNotUpdatePicker = false;
+	let regionPanel = new Grid( 'fillx' );
+	let regionField = autocompletionField( regionKeys, true );
+	let xField = changeFontSize( spinner( -1000, 9999, 1, 0, updateEditedRegion ), -2);
+	let yField = changeFontSize( spinner( -1000, 9999, 1, 0, updateEditedRegion ), -2);
+	let wField = changeFontSize( spinner(     1, 9999, 1, 1, updateEditedRegion ), -2);
+	let hField = changeFontSize( spinner(     1, 9999, 1, 1, updateEditedRegion ), -2);
+	let doNotUpdatePicker = false;
 
-	var closeBtn = button( @close, null, function actionPerformed( evt ) { dialog.dispose(); } );
-	var mousePos = new swing.JLabel( 'x: , y: ' );
+	let closeBtn = button( @close, null, function actionPerformed( evt ) { dialog.dispose(); } );
+	let mousePos = new swing.JLabel( 'x: , y: ' );
 
 	// sets the current region in the spinner fields
 	function setRegion( r ) {
@@ -156,7 +156,7 @@ function run() {
 
 	// A RegionChooser is a component that displays a zoomable, scrollable view of an
 	// image and allows a region to be defined over it using a pointing device.
-	var picker = new RegionChooser();
+	let picker = new RegionChooser();
 	picker.addRegionChangeListener( function regionChanged( source, region ) {
 		doNotUpdatePicker = true;
 		try {
@@ -167,7 +167,7 @@ function run() {
 	});
 	
 	function mouseMovedHandler( evt ) {
-		var p = picker.mousePosition;
+		let p = picker.mousePosition;
 		if( p != null ) {
 			picker.viewToModel( p, p );
 			mousePos.text = 'x: ' + p.x + ', y: ' + p.y;
@@ -181,7 +181,7 @@ function run() {
 	});
 
 	picker.regionColor = new Color( 0xff0044 );
-	var zoom = new spinner( 1, 32, 1, 1, function actionPerformed( evt ) {
+	let zoom = new spinner( 1, 32, 1, 1, function actionPerformed( evt ) {
 		picker.zoom = evt.source.value;
 	} );
 	// update our control if user changes zoom directly with mouse
@@ -197,8 +197,8 @@ function run() {
 	// call to this is made when the window first gains focus (see below).
 	function updatePickerImage() {
 		if( getEditor() != editor ) return;
-		var sheet = editor.selectedSheet;
-		var image = sheet.paint(
+		let sheet = editor.selectedSheet;
+		let image = sheet.paint(
 			arkham.sheet.RenderTarget.PREVIEW,
 			sheet.templateResolution
 		);
@@ -207,7 +207,7 @@ function run() {
 
 	// Copy the current key and value to the clipboard.
 	function copy( use$Format ) {
-		var r = getRegion();
+		let r = getRegion();
 		if( use$Format ) {
 			ScrapBook.text = '$' + regionField.selectedItem.replace( '-', '_' ) + "_region = '"
 				+ r.x + ',' + r.y + ',' + r.width + ',' + r.height + "';\n";
@@ -220,8 +220,8 @@ function run() {
 	// Change the edited region to the current regionField combo box value.
 	function changeEditedRegion() {
 		try {
-			var value = settings.get( regionField.selectedItem + '-region' );
-			var region;
+			let value = settings.get( regionField.selectedItem + '-region' );
+			let region;
 			if( value == null ) {
 				value = '';
 				region = new Region(-1,-1,1,1);
@@ -246,9 +246,9 @@ function run() {
 		changedUpdate: changeEditedRegion
 	});
 
-	var writeToCompBtn = button( '&Write Setting to Component', null, function write() {
-		var r = getRegion();
-		var value = '' + r.x + ',' + r.y + ',' + r.width + ',' + r.height;
+	let writeToCompBtn = button( '&Write Setting to Component', null, function write() {
+		let r = getRegion();
+		let value = '' + r.x + ',' + r.y + ',' + r.width + ',' + r.height;
 		settings.set( regionField.selectedItem + '-region', value );
 		editor.forceRerender();
 		updatePickerImage();
@@ -262,16 +262,16 @@ function run() {
 	);
 	regionPanel.title = 'Region';
 
-	var copySettingBtn = button( 'Copy &Setting', null, function() { copy( false ); } );
+	let copySettingBtn = button( 'Copy &Setting', null, function() { copy( false ); } );
 	copySettingBtn.toolTipText = '<html>Copy as a key and value for a setting file<br><tt>key = x,y,w,h';
-	var copy$NotationBtn = button( 'Copy $ &Code', null, function() { copy( true ); } );
+	let copy$NotationBtn = button( 'Copy $ &Code', null, function() { copy( true ); } );
 	copy$NotationBtn.toolTipText = '<html>Copy as a script variable assignment using $-notation<br><tt>$key = \'x,y,w,h\'';
 
 
-	var zoomRow = new Grid( 'insets 0, fillx' );
+	let zoomRow = new Grid( 'insets 0, fillx' );
 	zoomRow.place( mousePos, 'left, growx', changeFontSize( 'Zoom', -2 ), 'split 2, right', changeFontSize( zoom, -2 ), 'wrap' );
 
-	var panel = new Grid( 'fillx' );
+	let panel = new Grid( 'fillx' );
 	panel.place(
 		zoomRow.realize(), 'span, growx, wrap, gapbottom unrel',
 		regionPanel, 'span, growx, wrap',
@@ -280,16 +280,16 @@ function run() {
 	);
 
 		
-	var pickerScroll = new swing.JScrollPane( picker );
+	let pickerScroll = new swing.JScrollPane( picker );
 	pickerScroll.border = swing.BorderFactory.createMatteBorder( 0, 0, 1, 0, Color.GRAY );
 
-	var dialogPanel = new Grid( 'fillx', '', '' );
+	let dialogPanel = new Grid( 'fillx', '', '' );
 	dialogPanel.place(
 		pickerScroll, 'h 200px, push 100 100, grow 100 100, wrap',
 		panel, 'south, growy 0'
 	);
 
-	var dialog = new swing.JDialog( Eons.window, false );
+	let dialog = new swing.JDialog( Eons.window, false );
 	dialog.title = getName() + ' (' + component.fullName + ')';
 	dialog.resizable = true;
 	dialog.setContentPane( dialogPanel.realize() );
@@ -302,7 +302,7 @@ function run() {
 	} );
 	// initialize the value field and selected region
 	changeEditedRegion();
-	var tabPane = AbstractContainer.findEditorTabPane( editor );
+	let tabPane = AbstractContainer.findEditorTabPane( editor );
 	if( tabPane ) dialog.setLocationRelativeTo( tabPane );
 	ca.cgjennings.ui.JUtilities.makeUtilityWindow( dialog );
 	dialog.visible = true;

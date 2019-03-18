@@ -4,7 +4,7 @@
  * This script demonstrates how to add a new
  * context bar button.
  */
- 
+
 importClass( arkham.ContextBar );
 
 // Context bar buttons implement the ContextBar.Button interface.
@@ -12,7 +12,7 @@ importClass( arkham.ContextBar );
 // The following code creates a JavaScript object that implements
 // the most important methods:
 
-var button = {
+let button = {
 	// Note: this cannot be called "icon" or an odd thing happens:
 	// after we turn this into a Java object, this.getIcon() and
 	// this.icon will mean the same thing, so if we call this property
@@ -63,7 +63,7 @@ var button = {
 	// Called when the button is activated.
 	actionPerformed : function actionPerformed( actionEvent ) {
 		try {
-			var mt = Eons.markupTarget;
+			let mt = Eons.markupTarget;
 			mt.selectNone();
 			mt.selectedText = "\n  |\\      _,,,--,,_  ,)\n  /,`.-'`'   -,  ;-;;'\n"
 							+ " |,4-  ) )-,_ ) /\\\n'---''(_/--' (_/-'\n";
@@ -84,7 +84,7 @@ ContextBar.registerButton( button );
 // unregister the button, so you can experiment with the button code.
 // (Otherwise, since only one button with a given ID can be registered at
 // a time, rerunning the script would fail.)
-var unregisterButton = new swing.JButton( 'Unregister' );
+let unregisterButton = new swing.JButton( 'Unregister' );
 unregisterButton.addActionListener( function(ae) {
 	Eons.window.removeCustomComponent( unregisterButton );
 	ContextBar.unregisterButton( button );

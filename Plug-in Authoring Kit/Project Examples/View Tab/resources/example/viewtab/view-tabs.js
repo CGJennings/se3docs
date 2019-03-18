@@ -7,7 +7,7 @@
 
 useLibrary( 'project' );
 
-var tabRegistry = null;
+let tabRegistry = null;
 
 function getName() {
 	return 'View Tabs Example';
@@ -46,10 +46,10 @@ function run() {
 
 		// Creates a new object that implements the ViewTab interface, which
 		// we can then register
-		var tab = new ViewTab {
+		let tab = new ViewTab {
 			createViewForProject: function createViewForProject( projectView, project ) {
 				try {
-					var view = new swing.JLabel( 'Example View' );
+					let view = new swing.JLabel( 'Example View' );
 					view.opaque = true;
 					view.background = Color.WHITE;
 					view.horizontalAlignment = swing.JLabel.CENTER;

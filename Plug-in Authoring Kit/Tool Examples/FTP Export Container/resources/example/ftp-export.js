@@ -55,13 +55,13 @@ function run() {
     	unload();
     }
     // Create and register the container
-    var ec = createExportContainer();
+    let ec = createExportContainer();
     Eons.registerExportContainer( ec );
 }
 
 function unload() {
 	// Unregister our export container if it is registered
-	var ec = findRegisteredContainer( CONTAINER_ID );
+	let ec = findRegisteredContainer( CONTAINER_ID );
 	if( ec != null ) {
 		Eons.unregisterExportContainer( ec );
 	}
@@ -76,7 +76,7 @@ function unload() {
  * returns the registered instance. Otherwise, returns null.
  */
 function findRegisteredContainer( id ) {
-	var containers = Eons.registeredExportContainers;
+	let containers = Eons.registeredExportContainers;
 	for( let i=0; i<containers.length; ++i ) {
 		if( id == containers[i].identifier ) return containers[i];
 	}
@@ -92,7 +92,7 @@ function findRegisteredContainer( id ) {
  * interface and exports files via FTP.
  */
 function createExportContainer() {
-	var ec = {
+	let ec = {
 		// this is an object that stores the information needed to
 		// manage the current export session; see showExportDialog()
 		session : null,
@@ -156,7 +156,7 @@ function createExportContainer() {
 		// file will be written to
 		addEntry : function addEntry( fileName ) {
 			this.checkOpen();
-			var url = this.createURL( fileName );
+			let url = this.createURL( fileName );
 			return url.openConnection().outputStream;
 		},
 
@@ -189,8 +189,8 @@ function createExportContainer() {
 		// creates a URL that can be used to upload a file using the
 		// current FTP session parameters
 		createURL : function createURL( fileName ) {
-			var s = this.session;
-			var url = 'ftp://';
+			let s = this.session;
+			let url = 'ftp://';
 			// add login credentials for non-anonymous access
 			if( s.user != null ) {
 			  url += encodeURIComponent(s.user) + ':' + encodeURIComponent(s.pass) + '@';
@@ -202,8 +202,8 @@ function createExportContainer() {
 		// a helper function that splits a path on '/' and
 		// encodes each segment individually		
 		encodePath : function encodePath( path ) {
-			var encoded = '';
-			var segments = path.split( '/' );
+			let encoded = '';
+			let segments = path.split( '/' );
 			for( let i=0; i<segments.length; ++i ) {
 				if( i > 0 ) encoded += '/';
 				encoded += encodeURIComponent(segments[i]);
@@ -230,22 +230,22 @@ function createExportContainer() {
  * pass : the login password
  */
 function showSessionDialog() {
-	var session = {};
-	var s = PluginContext.settings;
+	let session = {};
+	let s = PluginContext.settings;
 	
-	var dir = new swing.JTextField( s.get( 'dir', '/' ), 25 );
+	let dir = new swing.JTextField( s.get( 'dir', '/' ), 25 );
 	
-	var host = new swing.JTextField( s.get( 'host', '' ), 20 );
-	var port = new swing.JTextField( 4 );
+	let host = new swing.JTextField( s.get( 'host', '' ), 20 );
+	let port = new swing.JTextField( 4 );
 	port.horizontalAlignment = swing.JTextField.TRAILING;
 	port.document = ca.cgjennings.ui.FilteredDocument.createDigitDocument();
 	port.text = s.get( 'port', '21' );
 
-	var loginPanel = new TypeGrid();	
-	var user = new swing.JTextField( s.get( 'user', '' ), 15 );
-	var pw = s.get( 'pass' );
+	let loginPanel = new TypeGrid();	
+	let user = new swing.JTextField( s.get( 'user', '' ), 15 );
+	let pw = s.get( 'pass' );
 	if( pw ) pw = resources.RawSettings.unobfuscate( pw );
-	var pass = new swing.JPasswordField( pw, 15 );
+	let pass = new swing.JPasswordField( pw, 15 );
 	pass.echoChar = '\u2022';
 	loginPanel.place(
 		'User', 'br',     user, 'tab',
@@ -253,7 +253,7 @@ function showSessionDialog() {
 	);
 	loginPanel = loginPanel.realize();
 
-	var anon = new swing.JCheckBox( 'Use anonymous FTP' );
+	let anon = new swing.JCheckBox( 'Use anonymous FTP' );
 	anon.addActionListener( function anonActionPerformed() {
 		ca.cgjennings.ui.JUtilities.enableTree( loginPanel, !anon.selected );
 	});
@@ -263,7 +263,7 @@ function showSessionDialog() {
 		anon.doClick(0);
 	}
 
-	var hostPanel = new TypeGrid();	
+	let hostPanel = new TypeGrid();	
 	hostPanel.place(
 		'Host', '', host, 'tab hfill', 'Port', '', port, '',
 		anon, 'p',
@@ -271,17 +271,17 @@ function showSessionDialog() {
 	);
 	hostPanel.title = 'FTP Server';
 	
-	var destPanel = new TypeGrid();
+	let destPanel = new TypeGrid();
 	destPanel.place(
 		'Server folder where files will be stored:', '',
 		dir, 'br hfill'
 	);
 	destPanel.title = 'Destination';
 	
-	var layout = new Stack();
+	let layout = new Stack();
 	layout.add( hostPanel, destPanel );
 	
-	var dlg = layout.createDialog( getName(), 'Upload', null, null, true );
+	let dlg = layout.createDialog( getName(), 'Upload', null, null, true );
 	if( dlg.showDialog() < 1 ) return null;
 
 	useSettings( s );

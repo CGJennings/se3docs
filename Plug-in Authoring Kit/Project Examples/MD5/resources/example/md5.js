@@ -42,7 +42,7 @@ function createAction() {
 	// We need to create a temporary object and then use JavaAdapter because
 	// we are overriding a method in a concrete class, not implementing
 	// an interface.	
-	var md5Action = {
+	let md5Action = {
 		getLabel: function getLabel() {
 			return 'Print MD5 Checksum';
 		},
@@ -56,7 +56,7 @@ function createAction() {
 			return member != null && !member.isFolder();
 		},
 		perform: function perform( project, task, member ) {
-			var md5 = arkham.plugins.catalog.MD5Checksum.forFile( member.file );
+			let md5 = arkham.plugins.catalog.MD5Checksum.forFile( member.file );
 			printf( '%s: %s\n', member.name, md5.checksumString );
 		}		
 	};

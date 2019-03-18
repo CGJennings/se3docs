@@ -137,7 +137,7 @@ importClass( ca.cgjennings.graphics.ImageUtilities );
  
  // a list of filters for which the source image
  // should be filtered BEFORE it is padded 
- var filterBeforeList = [
+ let filterBeforeList = [
  	MarginFilter, StencilFilter
  ];
  
@@ -149,9 +149,9 @@ importClass( ca.cgjennings.graphics.ImageUtilities );
  // makes a kernel from a list of arrays; used to parse the
  // convolve filter parameter
  function makeKernel( data ) {
- 	var rows = data.length;
- 	var cols = data[0].length;
- 	var unrolled = [];
+ 	let rows = data.length;
+ 	let cols = data[0].length;
+ 	let unrolled = [];
  	for( let r=0; r<rows; ++r ) {
  		let el = data[r];
  		for( let c=0; c<cols; ++c ) {
@@ -200,15 +200,15 @@ function showJavaDoc() {
 
 
 
-var curFilter = null;
+let curFilter = null;
 
 // Called when the filter or filter parameters change to
 // update the filtered image in the interface.
 function updateImage( filter ) {
 	// create a new filtered image
-	var base = ImageUtils.get( 'icons/application/update.png' );
+	let base = ImageUtils.get( 'icons/application/update.png' );
 	
-	var padFirst = true;
+	let padFirst = true;
 	for( let f=0; f<filterBeforeList.length; ++f ) {
 		if( filter instanceof filterBeforeList[f] ) {
 			padFirst = false;
@@ -216,10 +216,10 @@ function updateImage( filter ) {
 		}
 	}
 
-	var w = base.width;
-	var h = base.height;
-	var padW = w;
-	var padH = h;
+	let w = base.width;
+	let h = base.height;
+	let padW = w;
+	let padH = h;
 	if( padFirst ) {
 		base = ImageUtils.pad( base, padH, padW, padH, padW );
 	}
@@ -237,8 +237,8 @@ function updateImage( filter ) {
 	}
 	w = base.width;
 	h = base.height;	
-	var out = ImageUtils.create( w, h, true );
-	var g = out.createGraphics();
+	let out = ImageUtils.create( w, h, true );
+	let g = out.createGraphics();
 	try {
 		g.setPaint( updateImage.paint );
 		g.fillRect( 0, 0, w, h );
@@ -255,7 +255,7 @@ updateImage.paint = new ca.cgjennings.graphics.paints.CheckeredPaint();
 // an array of the controls that modify the current filter;
 // these have all the information needed to update the current
 // filter when its parameters change
-var filterControls = [];
+let filterControls = [];
 
 // Modifies the current filter with the values of the filter controls.
 function updateFilter() {
@@ -263,11 +263,11 @@ function updateFilter() {
 	setErrorMessage( null );
 	for( let i=0; i<filterControls.length; ++i ) {
 		try {
-			var name = filterControls[i].getClientProperty( 'pName' );
-			var array = filterControls[i].getClientProperty( 'pArray' );
-			var value = filterControls[i].text;
+			let name = filterControls[i].getClientProperty( 'pName' );
+			let array = filterControls[i].getClientProperty( 'pArray' );
+			let value = filterControls[i].text;
 			if( value == '' ) value = array[1];
-			var code = 'curFilter.' + name + ' = ' + array[0] + value + array[2] + ';';
+			let code = 'curFilter.' + name + ' = ' + array[0] + value + array[2] + ';';
 			eval( code );
 		} catch( ex ) {
 			setErrorMessage( ex );
@@ -297,17 +297,17 @@ function filterChanged( actionEvent ) {
 	filterControls = [];
 	
 	// install new filter controls, if any
-	var sel = filterBox.selectedIndex;
+	let sel = filterBox.selectedIndex;
 	if( sel >= 1 ) {
-		var filterDesc = filters[ sel-1 ];
+		let filterDesc = filters[ sel-1 ];
 		curFilter = eval( 'new ' + filterDesc.name + '();' );		
-		var grid = new TypeGrid();
+		let grid = new TypeGrid();
 		for( let p in filterDesc ) {
 			if( p == 'name' ) continue;
-			var array = normalizeParameter( filterDesc[p] );
+			let array = normalizeParameter( filterDesc[p] );
 			grid.place( p, 'br' );
-			var rows = array[3];
-			var ctrl;
+			let rows = array[3];
+			let ctrl;
 			if( rows == 1 ) {
 				ctrl = textField( array[1], 20 );
 			} else {
@@ -344,36 +344,36 @@ filterChanged.focusListener = new java.awt.event.FocusListener {
 
 
 // Build and display the user interface
-var imageLabel = label( null );
+let imageLabel = label( null );
 updateImage();
 
-var panel = new Grid( '', '', '' );
+let panel = new Grid( '', '', '' );
 panel.place( imageLabel, 'ax center, wrap unrel', '', 'pushx, wrap unrel' );
 
 // create the combo box of filters
-var options = [ 'None' ];
+let options = [ 'None' ];
 for( let f=0; f<filters.length; ++f ) {
 	options[ options.length ] = filters[f].name;
 }
-var filterBox = comboBox( options, filterChanged );
-var docBtn = button( 'Read &Docs', null, showJavaDoc );
+let filterBox = comboBox( options, filterChanged );
+let docBtn = button( 'Read &Docs', null, showJavaDoc );
 docBtn.enabled = false;
 panel.place( filterBox, 'ax center, split', docBtn, 'wrap' );
 
 // this is an empty container that we'll add the
 // filter parameter editing controls to
-var controlPanel = new swing.JPanel();
+let controlPanel = new swing.JPanel();
 panel.place( controlPanel, 'ax center, ay top, pushy, wrap' );
 
-var errorMessage = noteLabel( ' ' );
+let errorMessage = noteLabel( ' ' );
 errorMessage.foreground = Colour.RED;
 panel.place( errorMessage, 'ax center, wrap' );
 
-var updateBtn = button( '&Apply', null, function() { updateFilter(); updateImage( curFilter ); } );
+let updateBtn = button( '&Apply', null, function() { updateFilter(); updateImage( curFilter ); } );
 panel.place( updateBtn, 'ax center' );
 
-var dialog = panel.createDialog( 'Image Filter Demo', '', @close, null, false );
-var maxW=0, maxH=0;
+let dialog = panel.createDialog( 'Image Filter Demo', '', @close, null, false );
+let maxW=0, maxH=0;
 for( let f=0; f<filters.length; ++f ) {
 	filterBox.selectedIndex = f + 1;
 	dialog.pack();

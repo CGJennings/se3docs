@@ -26,7 +26,7 @@ if( sourcefile == 'Quickscript' ) {
 
 const Talisman = Eons.namedObjects.Talisman;
 
-var titleBox, typeBox, specialTextMeasurer, specialTextBox;
+let titleBox, typeBox, specialTextMeasurer, specialTextBox;
 
 /**
  * create( diy )
@@ -67,15 +67,15 @@ function onClear( diy ) {
  * set on it yet.
  */
 function createInterface( diy, editor ) {
-	var panel = new Grid( '', '[][grow,fill]' );
-	var bindings = new Bindings( editor, diy );
+	let panel = new Grid( '', '[][grow,fill]' );
+	let bindings = new Bindings( editor, diy );
 
-	var nameField = textField();
+	let nameField = textField();
 	diy.setNameField( nameField );
 	
-	var typeCombo = createTypeCombo();
-	var numberCombo = comboBox( [ ' ', '1', '2', '3', '4', '5', '6', '7', '8', '9' ] );
-	var specialTextArea = textArea( '', 10, 15, true );
+	let typeCombo = createTypeCombo();
+	let numberCombo = comboBox( [ ' ', '1', '2', '3', '4', '5', '6', '7', '8', '9' ] );
+	let specialTextArea = textArea( '', 10, 15, true );
 	
 	panel.place(
 		@tal_title, '', nameField, 'growx, wrap',
@@ -97,7 +97,7 @@ function createInterface( diy, editor ) {
 function createFrontPainter( diy, sheet ) {
 	// the component's private Settings (the same thing we
 	// are accessing with $Notation)
-	var s = diy.settings;
+	let s = diy.settings;
 	
 	titleBox = Talisman.titleBox( sheet, true, 9 );
 	typeBox = Talisman.titleBox( sheet, false, 6 );	
@@ -144,16 +144,16 @@ function createFrontPainter( diy, sheet ) {
 // the card face.
 function updateClipStencil( diy, useLongFormat ) {
 	if( this.currentlyLong === undefined || this.currentlyLong != useLongFormat ) {
-		var clipRegionKey = useLongFormat ? 'long-portrait-clip' : 'portrait-clip';
-		var stencilKey = diy.portraitKey + (useLongFormat ? '-long' : '') + '-front-template';
-		var stencil = ImageUtils.get( $(stencilKey) );
+		let clipRegionKey = useLongFormat ? 'long-portrait-clip' : 'portrait-clip';
+		let stencilKey = diy.portraitKey + (useLongFormat ? '-long' : '') + '-front-template';
+		let stencil = ImageUtils.get( $(stencilKey) );
 		Talisman.customizePortraitStencil( diy, stencil, R(clipRegionKey, true) );
 		this.currentlyLong = useLongFormat;
 	}
 }
 
 function paintFront( g, diy, sheet ) {
-	var settings = diy.settings;
+	let settings = diy.settings;
 
 	g.setPaint( Color.BLACK );
 
@@ -164,8 +164,8 @@ function paintFront( g, diy, sheet ) {
 	// See if the text is longer than the text region on the
 	// short version of the card, and set isLong accordingly.
 	specialTextBox.markupText = $SpecialText;
-	var textRegion = R('text', true);
-	var isLong = specialTextBox.measure( g, R('measure', true) ) > textRegion.height;
+	let textRegion = R('text', true);
+	let isLong = specialTextBox.measure( g, R('measure', true) ) > textRegion.height;
 
 	updateClipStencil( diy, isLong );
 	
@@ -217,8 +217,8 @@ function onWrite() {}
  * Returns a combo box of all of the different purchase card types.
  */
 function createTypeCombo() {
-	var types = ['O', 'M', 'F'];
-	var items = [];
+	let types = ['O', 'M', 'F'];
+	let items = [];
 	for( let i=0; i<types.length; ++i ) {
 		items[i] = new ListItem( types[i], #('tal-type-' + types[i]) );
 	}
@@ -235,7 +235,7 @@ function createTypeCombo() {
  * will be looked up instead of a purchase region.
  */
 function R( nametag, generic ) {
-	var value;
+	let value;
 	if( generic ) {
 		value = $('generic-' + nametag + '-region');
 	} else {

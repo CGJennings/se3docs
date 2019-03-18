@@ -62,7 +62,7 @@ $sanity-region = '-200,-200,100,100';
 // can be used to paint on the sheet; the game component being updated;
 // and the specific sheet of the game component that is being repainted.
 function onPaint( g, gc, sheet ) {
-	var font, region;
+	let font, region;
 
 	// This is called for every sheet (card face); we need to make
 	// sure that we are dealing with the *front* face since that

@@ -72,8 +72,8 @@ function create( diy ) {
 // for the token.
 function createInterface( diy, editor ) {}
 
-var foreground = new Colour( 0x3a330b );
-var nameBox, statsBox;
+let foreground = new Colour( 0x3a330b );
+let nameBox, statsBox;
 
 
 // When there are more than two faces, the createFrontPainter and
@@ -88,7 +88,7 @@ function createFrontPainter( diy, sheet ) {
 	if( sheet.sheetIndex == 0 ) {
 		// setup the front face of the card
 		nameBox = markupBox( sheet );
-		var style = nameBox.defaultStyle;
+		let style = nameBox.defaultStyle;
 		style.add(
 			FAMILY, FAMILY_BODY,
 			SIZE, 12,

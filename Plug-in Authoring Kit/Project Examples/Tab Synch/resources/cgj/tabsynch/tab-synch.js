@@ -38,26 +38,26 @@ function initialize() {
 
 // a custom menu item added to the View menu
 // to control whether syncing is enabled
-var menuItem;
+let menuItem;
 
 // listens for changes to the active editor
 // so it can sync the project selection
-var editorListener;
+let editorListener;
 
 // listens for changes in the open project;
 // whenever the current project changes,
 // we need to detach the selection listener
 // from the old project view (and add it to the one,
 // if any)
-var projListener;
+let projListener;
 
 // listens for changes to the project selection
 // so it can sync the selected editor
-var selListener;
+let selListener;
 
 // tracks the view that the selection listener is
 // attached to
-var attachedView;
+let attachedView;
 
 function run() {
 	// if this is being run for the first time, there
@@ -130,15 +130,15 @@ function installEditorListener() {
 			// check is syncing enabled and there is a new editor
 			if( ed == null || !isEnabled() ) return;
 			// check if the editor has a file
-			var f = ed.file;
+			let f = ed.file;
 			if( f == null ) return;
 			// check if there is a project view and if the file is in the project
-			var pv = Eons.window.openProjectView;
+			let pv = Eons.window.openProjectView;
 			if( pv == null ) return;
-			var m = pv.project.findMember( f );
+			let m = pv.project.findMember( f );
 			if( m == null ) return;
 			// check if the member is already selected; if not, change the selection
-			var sel = pv.selectedMembers;
+			let sel = pv.selectedMembers;
 			for( let i=0; i<sel.length; ++i ) {
 				if( sel[i] == m ) return;
 			}
@@ -171,11 +171,11 @@ function installProjectListener() {
 		projectSelectionChanged: function projectSelectionChanged( viewEvent ) {
 			if( !isEnabled() ) return;
 
-			var m = viewEvent.selection;
+			let m = viewEvent.selection;
 			if( m.length == 0 ) return;
 			// only consider the last-selected thing
 			m = m[ m.length-1 ];
-			var editors = Eons.window.getEditorsShowingFile( m.file );
+			let editors = Eons.window.getEditorsShowingFile( m.file );
 			if( editors.length == 0 ) return;
 			// if any editor showing the file is already selected,
 			// don't change the selection
@@ -227,7 +227,7 @@ function uninstallProjectListener() {
 function reattachSelectionListener() {
 	if( selListener == null ) return;
 
-	var pv = Eons.window.openProjectView;
+	let pv = Eons.window.openProjectView;
 	if( attachedView != pv ) {
 		if( attachedView != null ) {
 			attachedView.removeSelectionListener( selListener );

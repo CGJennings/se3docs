@@ -90,7 +90,7 @@ function registerGame() {
 	// the expansion symbol template; note that it differentiates
 	// between visual (design style) and logical (intended purpose)
 	// expansion symbol variants
-	var est = new AbstractExpansionSymbolTemplate() {
+	let est = new AbstractExpansionSymbolTemplate() {
 	};
 	
 	
@@ -171,7 +171,7 @@ function createExpansionSymbolTemplate() {
 			// returns the sample symbol
 			getDefaultSymbol: function getDefaultSymbol( n ) {
 				this.checkIndex( n );
-				var bi = ImageUtils.get( 'talisman/expansions/dungeon.jp2' );
+				let bi = ImageUtils.get( 'talisman/expansions/dungeon.jp2' );
 				if( n > 0 ) {
 					bi = this.generateVariant( bi, n );
 				}

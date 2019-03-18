@@ -26,8 +26,8 @@ function createInterface( diy, editor ) {
 	// changed; this will lead to the design support being
 	// asked to re-analyze the design, which in turn will
 	// cause our function to be called
-	var stack = new Stack();
-	var nameField = new textField();
+	let stack = new Stack();
+	let nameField = new textField();
 	stack.add( nameField );
 	diy.nameField = nameField;
 	
@@ -41,7 +41,7 @@ function createInterface( diy, editor ) {
 	// function that we defined above. That function
 	// will get called whenever the design support
 	// needs to be updated.
-	var support = new JavaAdapter( DesignSupport, {
+	let support = new JavaAdapter( DesignSupport, {
 		analysis: '',
 		changed: true,
 		valid: true,
@@ -60,7 +60,7 @@ function createInterface( diy, editor ) {
 		createSupportView: function createSupportView() {
 			// we can return any component we like,
 			// in this case we'll just return a simple label
-			var view = label();
+			let view = label();
 			view.horizontalAlignment = swing.JLabel.CENTER;
 			view.opaque = true;
 			view.background = new Color( 0xfaffc4 );

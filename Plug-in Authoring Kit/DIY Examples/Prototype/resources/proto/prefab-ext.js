@@ -7,7 +7,7 @@
 useLibrary( 'prefab' );
 
 // text box used to draw the deck label on the back
-var pfDeckBox;
+let pfDeckBox;
 
 function afterCreate( diy ) {
 	// change card type so we can print label on back
@@ -21,8 +21,8 @@ function afterCreate( diy ) {
 
 function afterCreateInterface( diy, editor, panel, bindings ) {
 	// add a control to change the deck label
-	var deckField = textArea( null, 5, 0, true );
-	var deckLabel = label( @app-deck );
+	let deckField = textArea( null, 5, 0, true );
+	let deckLabel = label( @app-deck );
 	deckLabel.labelFor = deckField;
 	bindings.add( 'Deck', deckField, [1] );
 	panel.place( deckLabel, 'p', deckField, 'br hfill' );
@@ -30,7 +30,7 @@ function afterCreateInterface( diy, editor, panel, bindings ) {
 
 function afterCreateBackPainter( diy, sheet ) {
 	// create a markup box to typeset the deck label
-	var baseKey = pfKey( '-name' );
+	let baseKey = pfKey( '-name' );
 	pfDeckBox = markupBox( sheet );
 	pfDeckBox.alignment = LAYOUT_CENTER | LAYOUT_MIDDLE;
 	pfSettings.getTextStyle( baseKey, pfDeckBox.defaultStyle );
@@ -52,7 +52,7 @@ paintBack = function paintBack( g, diy, sheet ) {
 	// print deck label
 	g.setPaint( Colour.BLACK );
 	pfDeckBox.markupText = $Deck;
-	var r = new Region( 20, 20, sheet.templateWidth-40, sheet.templateHeight-40 );
+	let r = new Region( 20, 20, sheet.templateWidth-40, sheet.templateHeight-40 );
 	pfDeckBox.draw( g, r );
 };
 

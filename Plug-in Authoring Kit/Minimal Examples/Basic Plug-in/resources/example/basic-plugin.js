@@ -67,7 +67,7 @@ function unload() {
    the plug-in is started. The ClipPlayer object will be used
    to play a bell sound when the plug-in is activated.
 */
-var bellClip = new ca.cgjennings.ui.ClipPlayer(
+let bellClip = new ca.cgjennings.ui.ClipPlayer(
 	new java.net.URL( 'res://example/bell.wav' ), false
 );
 

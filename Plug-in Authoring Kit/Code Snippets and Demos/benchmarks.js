@@ -28,22 +28,22 @@ importClass( java.lang.System );
  * that the function took to execute.
  */
 function time( func ) {
-	var start = System.nanoTime();
+	let start = System.nanoTime();
 	func();
-	var stop = System.nanoTime();
+	let stop = System.nanoTime();
 	return stop-start;
 }
 
 
 // Each element in this array is a test function to be timed:
-var tests = [
+const TESTS = [
 
 // use iteration to calc 99 factorial 10000 times
 function iterative_factorial() {
-	for( var r=0; r<10000; ++r ) {
+	for( let r=0; r<10000; ++r ) {
 		function fact( n ) {
-			var prod = 2;
-			for( var i=3; i<=n; ++i ) {
+			let prod = 2;
+			for( let i=3; i<=n; ++i ) {
 				prod *= i;
 			}
 		}
@@ -53,7 +53,7 @@ function iterative_factorial() {
 
 // use tail recursion to calc factorial
 function recursive_factorial() {
-	for( var r=0; r<10000; ++r ) {
+	for( let r=0; r<10000; ++r ) {
 		function fact( n ) {
 			if( n == 2 ) return 2;
 			return n * fact(n-1);
@@ -64,15 +64,15 @@ function recursive_factorial() {
 
 // use yield to calc factorial
 function generative_factorial() {
-	for( var r=0; r<10000; ++r ) {
+	for( let r=0; r<10000; ++r ) {
 		function fact() {
-			var prod = 1, i = 2;
+			let prod = 1, i = 2;
 			for( ;; ) {
 				yield prod *= i++;
 			}
 		}
-		var gen = fact();
-		for( var i=0; i<99; ++i ) {
+		let gen = fact();
+		for( let i=0; i<99; ++i ) {
 			gen.next();
 		}
 	}
@@ -80,11 +80,11 @@ function generative_factorial() {
 
 // implement a Java interface 100 times and call each instance 1000 times
 function interface_implementor() {
-	for( var r=0; r<100; ++r ) {
-		var listener = new java.awt.event.ActionListener() {
+	for( let r=0; r<100; ++r ) {
+		let listener = new java.awt.event.ActionListener() {
 			actionPerformed: function() { 1+1; }
 		};
-		for( var c=0; c<1000; ++c ) {
+		for( let c=0; c<1000; ++c ) {
 			listener.actionPerformed(null);
 		}
 	}
@@ -92,11 +92,11 @@ function interface_implementor() {
 
 // instantiate a JavaScript object with method 100 times and call each instance 1000 times
 function function_caller() {
-	for( var r=0; r<100; ++r ) {
-		var listener = new Object()  {
+	for( let r=0; r<100; ++r ) {
+		let listener = new Object()  {
 			actionPerformed: function() { 1+1; }
 		};
-		for( var c=0; c<1000; ++c ) {
+		for( let c=0; c<1000; ++c ) {
 			listener.actionPerformed(null);
 		}
 	}
@@ -105,9 +105,9 @@ function function_caller() {
 // evaluate an expression with common subexpressions 200000 times
 // optimization level 1 should eliminate common property access subexpressions
 function common_subexpression() {
-	var x = new Object();
+	let x = new Object();
 	x.property = 1;
-	for( var i=0; i<200000; ++i ) {
+	for( let i=0; i<200000; ++i ) {
 		x.property = (x.property + x.property) + (x.property + x.property) + x.property
 				+ (x.property + x.property) + (x.property + x.property) + x.property;
 	}
@@ -115,19 +115,19 @@ function common_subexpression() {
 
 // convert a number from a JavaScript object to a Java object and back 50000 times
 function object_conversion() {
-	var y = 0;
-	for( var i=0; i<50000; ++i ) {
-		var x = new java.lang.Integer(i&3);
+	let y = 0;
+	for( let i=0; i<50000; ++i ) {
+		let x = new java.lang.Integer(i&3);
 		y += x;
 	}
 },
 
 // swap two variables 500000 times using a temporary
 function temp_swap() {
-	var a = 1;
-	var b = 2;
-	for( var i=0; i<500000; ++i ) {
-		var t = a;
+	let a = 1;
+	let b = 2;
+	for( let i=0; i<500000; ++i ) {
+		let t = a;
 		a = b;
 		b = t;
 	}
@@ -135,36 +135,36 @@ function temp_swap() {
 
 // swap two variables 500000 times using destructuring assignment
 function destructuring_swap() {
-	var a = 1;
-	var b = 2;
-	for( var i=0; i<500000; ++i ) {
+	let a = 1;
+	let b = 2;
+	for( let i=0; i<500000; ++i ) {
 		[b, a] = [a, b];
 	}
 },
 
 // perform a string comparison 200000 times using JavaScript == operator
 function native_compare() {
-	var s = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-	var t = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX.';
-	for( var i=0; i<200000; ++i ) {
+	let s = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+	let t = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX.';
+	for( let i=0; i<200000; ++i ) {
 		s == t;
 	}
 },
 
 // perform a string comparison 200000 times using JavaScript method calls
 function native_call() {
-	var s = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
-	var t = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX.';
-	for( var i=0; i<200000; ++i ) {
+	let s = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
+	let t = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX.';
+	for( let i=0; i<200000; ++i ) {
 		s.equals( t );
 	}
 },
 
 // perform a string comparison 200000 times using Java String method calls
 function java_call() {
-	var s = new java.lang.String( 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' );
-	var t = new java.lang.String( 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX.' );
-	for( var i=0; i<200000; ++i ) {
+	let s = new java.lang.String( 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' );
+	let t = new java.lang.String( 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXX.' );
+	for( let i=0; i<200000; ++i ) {
 		s.equals( t );
 	}
 },
@@ -174,18 +174,18 @@ function java_call() {
 // need to manipulate an image you should use an image filter,
 // preferably compiled, unless the image is very small
 function unaccel_image_manip() {
-	var BI = java.awt.image.BufferedImage;
-	var w = 300, h = 300;
-	var im = new BI( w, h, BI.TYPE_INT_ARGB );
-	for( var y=0; y<h; ++y ) {
-		for( var x=0; x<w; ++x ) {
+	let BI = java.awt.image.BufferedImage;
+	let w = 300, h = 300;
+	let im = new BI( w, h, BI.TYPE_INT_ARGB );
+	for( let y=0; y<h; ++y ) {
+		for( let x=0; x<w; ++x ) {
 			// get the pixel at (x,y) and unpack it to separate
 			// alpha, red, green, and blue components
-			var argb = im.getRGB( x, y );
-			var b = argb & 0xff;
-			var g = (argb>>8) & 0xff;
-			var r = (argb>>16) & 0xff;
-			var a = (argb>>24) & 0xff;
+			let argb = im.getRGB( x, y );
+			let b = argb & 0xff;
+			let g = (argb>>8) & 0xff;
+			let r = (argb>>16) & 0xff;
+			let a = (argb>>24) & 0xff;
 			// invert the value of each component (0xff == 255)
 			a = 0xff-a;
 			r = 0xff-r;
@@ -239,12 +239,12 @@ function hanoi_puzzle() {
  * printing the name of each test and its best time.
  */
 function runTests() {
-	var reps = 5;
-	for( var t=0; t<tests.length; ++t ) {
-		printf( '%25s  ', tests[t].name );
-		var min = Number.MAX_VALUE;
-		for( var r=0; r<reps; ++r ) {
-			var dur = time( tests[t] );
+	const REPS = 5;
+	for( let t=0; t<TESTS.length; ++t ) {
+		printf( '%25s  ', TESTS[t].name );
+		let min = Number.MAX_VALUE;
+		for( let r=0; r<REPS; ++r ) {
+			let dur = time( TESTS[t] );
 			min = Math.min( min, dur );
 		}
 		// shortest time is closest to theoretical best

@@ -18,26 +18,26 @@ function create( diy ) {
 }
 
 function createInterface( diy, editor ) {
-	var stack = new Stack();
-	var bindings = new Bindings( editor, diy );
+	let stack = new Stack();
+	let bindings = new Bindings( editor, diy );
 	
-	var imagePanel = new TypeGrid();
+	let imagePanel = new TypeGrid();
 	imagePanel.setTitle( 'Base Image' );
 	
-	var imageCombo = comboBox( ['Fedora', 'Octopus', 'Logo', 'Magnifying Glass', 'Strange Coins', 'Abby'] );
+	let imageCombo = comboBox( ['Fedora', 'Octopus', 'Logo', 'Magnifying Glass', 'Strange Coins', 'Abby'] );
 	imagePanel.place( 'Image', '', imageCombo, 'tab' );
 	bumpComboSize( imageCombo );
 	bindings.add( 'image', imageCombo, [0] );
 
-	var angleField = spinner( 0, 359 );
+	let angleField = spinner( 0, 359 );
 	imagePanel.place( 'Angle', 'br', angleField, 'tab' );
 	bindings.add( 'angle', angleField, [0] );
 
-	var opacityField = spinner( 0, 100 );
+	let opacityField = spinner( 0, 100 );
 	imagePanel.place( 'Opacity', 'tab', opacityField, 'tab' );
 	bindings.add( 'opacity', opacityField, [0] );
 
-	var textureCombo = comboBox(
+	let textureCombo = comboBox(
 		['None', 'Red Paint', 'Linear Gradient', 'Radial Gradient',
 		 'Brushed Gold Texture', 'Leaf Texture', 'Leather Texture']
 	);
@@ -45,56 +45,56 @@ function createInterface( diy, editor ) {
 	bumpComboSize( textureCombo );
 	bindings.add( 'texture', textureCombo, [0] );
 
-	var filterPanel = new TypeGrid();
+	let filterPanel = new TypeGrid();
 	filterPanel.setTitle( 'Filter Effects' );
 	
-	var brLabels = [-100, '-100%', 0, '0', 100, '+100%'];
-	var briSlider = slider( -100, 100, 0, brLabels );
+	let brLabels = [-100, '-100%', 0, '0', 100, '+100%'];
+	let briSlider = slider( -100, 100, 0, brLabels );
 	filterPanel.place( 'Brightness', '', briSlider, 'tab hfill' );
 	bindings.add( 'brightness', briSlider, [0] );
 
-	var conSlider = slider( -100, 100, 0, brLabels );
+	let conSlider = slider( -100, 100, 0, brLabels );
 	filterPanel.place( 'Contrast', 'br', conSlider, 'tab hfill' );
 	bindings.add( 'contrast', conSlider, [0] );
 
-	var blurCombo = comboBox(
+	let blurCombo = comboBox(
 		['None', 'Box (Radius 2)', 'Gaussian (Radius 6)', 'Gaussian (Radius 12)',
 		 'Gaussian (Radius 24)', 'Sharpen', 'Find Outline', 'Emboss']
 	);
 	filterPanel.place( 'Convolution Filter', 'br', blurCombo, 'tab hfill' );
 	bindings.add( 'blur', blurCombo, [0] );
 
-	var filterCombo = comboBox(
+	let filterCombo = comboBox(
 		['None', 'Greyscale', 'Hue Shift', 'Saturation Boost',
 		 'Sepia Tone', 'Invert', 'Bloom', 'Checked', 'Oil Painting']
 	);
 	filterPanel.place( 'Colour Filter', 'br', filterCombo, 'tab hfill' );
 	bindings.add( 'filter', filterCombo, [0] );
 	
-	var shadowPanel = new TypeGrid();
+	let shadowPanel = new TypeGrid();
 	shadowPanel.setTitle( 'Shape Effects' );
 
-	var innerGlowCheck = checkBox( 'Add inner glow to image' );
+	let innerGlowCheck = checkBox( 'Add inner glow to image' );
 	shadowPanel.place( innerGlowCheck, 'br' );
 	bindings.add( 'innerGlow', innerGlowCheck, [0] );	
 	
-	var outerGlowCheck = checkBox( 'Add outer glow to image' );
+	let outerGlowCheck = checkBox( 'Add outer glow to image' );
 	shadowPanel.place( outerGlowCheck, 'br' );
 	bindings.add( 'outerGlow', outerGlowCheck, [0] );	
 	
-	var innerShadowCheck = checkBox( 'Add inner shadow to image' );
+	let innerShadowCheck = checkBox( 'Add inner shadow to image' );
 	shadowPanel.place( innerShadowCheck, 'br' );
 	bindings.add( 'innerShadow', innerShadowCheck, [0] );	
 
-	var shadowCheck = checkBox( 'Add drop shadow to image' );
+	let shadowCheck = checkBox( 'Add drop shadow to image' );
 	shadowPanel.place( shadowCheck, 'br' );
 	bindings.add( 'shadow', shadowCheck, [0] );
 	
-	var shAngleField = spinner( 0, 359 );
+	let shAngleField = spinner( 0, 359 );
 	shadowPanel.place( 'Angle', 'br', shAngleField, 'tab' );
 	bindings.add( 'shAngle', shAngleField, [0] );
 	
-	var shDistanceField = spinner( 0, 32 );
+	let shDistanceField = spinner( 0, 32 );
 	shadowPanel.place( 'Distance', 'tab', shDistanceField, 'tab' );
 	bindings.add( 'shDistance', shDistanceField, [0] );	
 			
@@ -104,13 +104,13 @@ function createInterface( diy, editor ) {
 
 
 
-	var compPanel = PorterDuffDemo.createUIPanel();
+	let compPanel = PorterDuffDemo.createUIPanel();
 	new Stack( compPanel ).addToEditor( editor, 'Porter-Duff', null, null, 1 );
 	
-	var blendPanel = BlendDemo.createUIPanel();	
+	let blendPanel = BlendDemo.createUIPanel();	
     new Stack( blendPanel ).addToEditor( editor, 'Blend Modes', null, null, 2 );
     
-    var strokePanel = StrokeDemo.createUIPanel();
+    let strokePanel = StrokeDemo.createUIPanel();
     new Stack( strokePanel ).addToEditor( editor, 'Strokes', null, null, 3 );
 }
 
@@ -131,15 +131,15 @@ function paintFront( g, diy, sheet ) {
 	
 	sheet.paintTemplateImage( g );
 	
-	var image = createImage();
+	let image = createImage();
 
-	var angleInRadians = $angle * Math.PI/180;
+	let angleInRadians = $angle * Math.PI/180;
 	
-	var AT = java.awt.geom.AffineTransform;	
+	let AT = java.awt.geom.AffineTransform;	
 	// create a transform that translates to where we
 	// want the image painted (middle of the card)
-	var template = sheet.templateImage;
-	var transform = AT.getTranslateInstance(
+	let template = sheet.templateImage;
+	let transform = AT.getTranslateInstance(
 		(template.width - image.width)/2,
 		(template.height - image.height)/2
 	);
@@ -164,7 +164,7 @@ function paintFront( g, diy, sheet ) {
 
 function createImage() {
 	// get base image selected by user
-	var res;
+	let res;
 	switch( $image ) {
 		case 'Fedora':
 			res = 'icons/black-fedora.png';
@@ -188,7 +188,7 @@ function createImage() {
 			res = 'icons/ui/error.png';
 			break;
 	}
-	var im = ImageUtils.get( res, true );
+	let im = ImageUtils.get( res, true );
 
 
 	// apply texturing if requested
@@ -205,13 +205,13 @@ function createImage() {
 			));
 			break;
 		case 'Radial Gradient':
-			var center = new java.awt.geom.Point2D.Float( im.width/2, im.height/2 );
-			var focus = new java.awt.geom.Point2D.Float( im.width/3, im.height/3 );
-			var radius = Math.min( im.width, im.height ) / 2;
-			var stops = [0, 0.33, 0.5, 0.66, 0.9, 1];
-			var colours = [Color.RED, Color.ORANGE, Color.YELLOW.darker(),
+			let center = new java.awt.geom.Point2D.Float( im.width/2, im.height/2 );
+			let focus = new java.awt.geom.Point2D.Float( im.width/3, im.height/3 );
+			let radius = Math.min( im.width, im.height ) / 2;
+			let stops = [0, 0.33, 0.5, 0.66, 0.9, 1];
+			let colours = [Color.RED, Color.ORANGE, Color.YELLOW.darker(),
 						   Color.GREEN.darker(), Color.BLUE, Color.MAGENTA];
-			var radialPaint = new java.awt.RadialGradientPaint(
+			let radialPaint = new java.awt.RadialGradientPaint(
 				center, radius, focus, stops, colours,
 				java.awt.MultipleGradientPaint.CycleMethod.REFLECT
 			);
@@ -236,8 +236,8 @@ function createImage() {
 	
 	// apply requested filters
 	
-	var bri = Number($brightness);
-	var con = Number($contrast);
+	let bri = Number($brightness);
+	let con = Number($contrast);
 	if( bri != 0 || con != 0 ) {
 		im = new ca.cgjennings.graphics.filters.BrightnessContrastFilter( bri/100, con/100 ).filter( im, null );
 	}
@@ -330,11 +330,11 @@ function createImage() {
  * or a <tt>Paint</tt>.
  */
 function createTexturedImage( source, texture ) {
-	var g = null;
+	let g = null;
 	// if texture is a kind of Paint or colour, create a texture image
 	// using the paint
 	if( texture instanceof java.awt.Paint ) {
-		var solidTexture = ImageUtils.create( source.width, source.height, true );
+		let solidTexture = ImageUtils.create( source.width, source.height, true );
 		try {
 			g = solidTexture.createGraphics();
 			g.setPaint( texture );
@@ -345,7 +345,7 @@ function createTexturedImage( source, texture ) {
 			g = null;
 		}
 	}
-	var dest = ImageUtils.create( source.width, source.height, true );
+	let dest = ImageUtils.create( source.width, source.height, true );
 	try {
 		g = dest.createGraphics();
 		g.drawImage( source, 0, 0, null );
@@ -367,7 +367,7 @@ function createTexturedImage( source, texture ) {
  * functions below.
  */
 function filterFunction( filter ) {
-	var f = function filter( source ) {
+	let f = function filter( source ) {
 		return filter.filter.filter( source, null );
 	};
 	f.filter = filter;
@@ -434,7 +434,7 @@ const createSepiaImage = filterFunction(
  * createInvertedImage( source )
  * Returns an inverted copy of the source image.
  */
-var createInvertedImage = filterFunction(
+let createInvertedImage = filterFunction(
 	new ca.cgjennings.graphics.filters.InversionFilter()
 );
 
@@ -446,7 +446,7 @@ var createInvertedImage = filterFunction(
  * createBloomImage( source )
  * Returns a copy of the source image with a bloom effect.
  */
-var createBloomImage = filterFunction(
+let createBloomImage = filterFunction(
 	new ca.cgjennings.graphics.filters.BloomFilter()
 );
 
@@ -454,7 +454,7 @@ var createBloomImage = filterFunction(
  * createCheckedImage( source )
  * Returns a copy of the source image with a checkered effect.
  */
-var createCheckedImage = filterFunction(
+let createCheckedImage = filterFunction(
 	new ca.cgjennings.graphics.filters.CheckeredScreenFilter( 8, 0.5, 1 )
 );
 
@@ -463,7 +463,7 @@ var createCheckedImage = filterFunction(
  * Returns a copy of the source image that simulates
  * the use of oil paints.
  */
-var createPaintedImage = filterFunction(
+let createPaintedImage = filterFunction(
 	new ca.cgjennings.graphics.filters.OilPaintingFilter()
 );
 
@@ -493,7 +493,7 @@ function createBlurredImage( im, radius, iterations ) {
 	
 	// Pad the source image to allow space for the edge pixels to
 	// blur onto.
-	var margin = radius * iterations;
+	let margin = radius * iterations;
 	im = ImageUtils.pad( im, margin, margin, margin, margin );
 	return this.op.filter( im, null );
 }
@@ -509,11 +509,11 @@ function createBlurredImage( im, radius, iterations ) {
  * kernel : an array of 9 values for the convolution kernel
  */
 function convolveFunction( kernel ) {
-	var f = function convolver( source ) {
+	let f = function convolver( source ) {
 		// create a new version of source with an empty margin around it
 		// so that pixels at the edges have space to blur into
-		var marginImage = ImageUtils.create( source.width+4, source.height+4, true );
-		var g;
+		let marginImage = ImageUtils.create( source.width+4, source.height+4, true );
+		let g;
 		try {
 			g = marginImage.createGraphics();
 			g.drawImage( source, 2, 2, null );
@@ -529,19 +529,19 @@ function convolveFunction( kernel ) {
 	return f;
 }
 
-var createSharpenedImage = convolveFunction(
+let createSharpenedImage = convolveFunction(
 	[    0, -1/2,    0,
 	  -1/2,    3, -1/2,
 	     0, -1/2,    0 ]
 );
 
-var createEdgeImage = convolveFunction(
+let createEdgeImage = convolveFunction(
 	[ -1, -1, -1,
 	  -1,  8, -1,
 	  -1, -1, -1 ]
 );
 
-var createEmbossedImage = convolveFunction(
+let createEmbossedImage = convolveFunction(
 	[ -2, -1, 0,
 	  -1,  1, 1,
 	   0,  1, 2 ]
@@ -556,7 +556,7 @@ function createGlow( source, outer ) {
 	// if applying an outer glow, we need to pad the area around the original image
 	// with extra (transparent) pixels so there is space for the glow to bleed onto
 	if( outer ) {
-		var margin = createGlow.op.distance + createGlow.op.iterations;
+		let margin = createGlow.op.distance + createGlow.op.iterations;
 		source = ca.cgjennings.graphics.ImageUtilities.pad( source, margin, margin, margin, margin );
 	}
 	createGlow.op.outerGlow = outer;
@@ -593,8 +593,8 @@ function createShadow( source, outer, colour, opacity, blur, angle, distance ) {
 	// Convert the angle from degrees to radians, then calculate the position
 	// of the shadow relative to the position of the source image.
 	angle *= -Math.PI/180;
-	var dx = Math.cos( angle ) * distance + 0.5;
-	var dy = Math.sin( angle ) * distance + 0.5;
+	let dx = Math.cos( angle ) * distance + 0.5;
+	let dy = Math.sin( angle ) * distance + 0.5;
 
 	// Create an image of the source's shadow. The shadow image is created
 	// using a glow filter set to not draw the source image. This allows us
@@ -604,24 +604,24 @@ function createShadow( source, outer, colour, opacity, blur, angle, distance ) {
 	createShadow.op.distance = blur;
 	createShadow.op.outerGlow = outer;
 	
-	var margin;
+	let margin;
 	if( outer ) {
 		margin = blur + createShadow.op.iterations;
 	} else {
 		margin = distance;
 	}
 	source = ca.cgjennings.graphics.ImageUtilities.pad( source, margin, margin, margin, margin );
-	var shadowImage = createShadow.op.filter( source, null );
+	let shadowImage = createShadow.op.filter( source, null );
 
 	// Combine the shadow and source image into a single result. To drop an outer (drop) shadow,
 	// we just draw the shadow and then draw the source image over it. To draw an inner shadow,
 	// we need to use SrcAtop mode so that only the part of the shadow image that intersects with
 	// the source image will be drawn.
-	var sourceOffset = outer ? distance : 0;
-	var dest = ImageUtils.create( source.width + sourceOffset*2, source.height + sourceOffset*2, true );
-	var g = dest.createGraphics();
+	let sourceOffset = outer ? distance : 0;
+	let dest = ImageUtils.create( source.width + sourceOffset*2, source.height + sourceOffset*2, true );
+	let g = dest.createGraphics();
 	try {
-		var oldComp = g.getComposite();
+		let oldComp = g.getComposite();
 		if( outer ) {
 			g.setComposite( java.awt.AlphaComposite.SrcOver.derive( opacity ) );
 			g.drawImage( shadowImage, sourceOffset + dx, sourceOffset + dy, null );
@@ -653,10 +653,10 @@ createShadow.op.sourceImagePainted = false;
  */
 function createTranslucentImage( source, opacity ) {
 	if( opacity >= 1 ) return source;
-	var im = ImageUtils.create( source.width, source.height, true );
+	let im = ImageUtils.create( source.width, source.height, true );
 	if( opacity <= 0 ) return im;
 
-	var g = im.createGraphics();
+	let g = im.createGraphics();
 	try {
 		g.composite = java.awt.AlphaComposite.SrcOver.derive( opacity );
 		g.drawImage( source, 0, 0, null );
@@ -672,7 +672,7 @@ function createTranslucentImage( source, opacity ) {
  * Demonstrates the various drawing app blending modes
  * added in 2.1a11.
  */
-var BlendDemo = {
+let BlendDemo = {
 	// size of the control that displays the source and blend images
 	SOURCE_SIZE: 64,
 	// size of the control that displays the blended output image
@@ -683,8 +683,8 @@ var BlendDemo = {
 		// Note: we can't use this.imageCombo.selectedIndex because the
 		//       conversion to an ActionListener object changes the
 		//       value of 'this' from BlendDemo to the proxy object.
-		var thiz = BlendDemo;
-		var size = thiz.DEST_SIZE;
+		let thiz = BlendDemo;
+		let size = thiz.DEST_SIZE;
 		switch( thiz.imageCombo.selectedIndex ) {
 			case -1:
 			case 0:
@@ -710,16 +710,16 @@ var BlendDemo = {
 
 	// updates the destination control using the currently selected blend mode
 	changeBlendMode : function changeBlendMode( actionEvent ) {
-		var thiz = BlendDemo; // (See above)
-		var sel = thiz.modeCombo.selectedItem;
+		let thiz = BlendDemo; // (See above)
+		let sel = thiz.modeCombo.selectedItem;
 		if( sel == null ) return;
 		
-		var className = '' + sel.toString().replace( ' ', '' );
+		let className = '' + sel.toString().replace( ' ', '' );
 		
-		var blender = ca.cgjennings.graphics.composites.BlendMode[className];
+		let blender = ca.cgjennings.graphics.composites.BlendMode[className];
 		
-		var dest = ImageUtils.create( thiz.bldImage.width, thiz.bldImage.height, true );
-		var g;
+		let dest = ImageUtils.create( thiz.bldImage.width, thiz.bldImage.height, true );
+		let g;
 		try {
 			g = dest.createGraphics();
 			g.drawImage( thiz.bldImage, 0, 0, null );
@@ -733,13 +733,13 @@ var BlendDemo = {
 
 	// create a source image for blending using a colour gradient
 	createBlendSource : function createBlendSource( x1, y1, x2, y2, size, col ) {
-		var im = ImageUtils.create( size, size, true );
-		var scale = size-1;
-		var paint = new java.awt.GradientPaint(
+		let im = ImageUtils.create( size, size, true );
+		let scale = size-1;
+		let paint = new java.awt.GradientPaint(
 			x1*scale, y1*scale, Color.BLACK,
 			x2*scale, y2*scale, col, true
 		);
-		var g = null;
+		let g = null;
 		try {
 			g = im.createGraphics();
 			g.setPaint( paint );
@@ -752,10 +752,10 @@ var BlendDemo = {
 	
 	// create a source image for blending using an image resource
 	createBlendImage : function createBlendImage( name, size ) {
-		var dest = ImageUtils.create( size, size, false );	
-		var im = ImageUtils.get( name, true );
+		let dest = ImageUtils.create( size, size, false );	
+		let im = ImageUtils.get( name, true );
 		
-		var g = null;
+		let g = null;
 		try {
 			g = dest.createGraphics();
 			// assumes im.width <= im.height
@@ -772,7 +772,7 @@ var BlendDemo = {
 
 	// creates a control to display a source, blend, or destination image
 	blendBox : function blendBox( size ) {
-		var bb = new swing.JLabel();
+		let bb = new swing.JLabel();
 	    bb.setPreferredSize( new java.awt.Dimension( size+2, size+2 ) );
 	    bb.border = swing.BorderFactory.createLineBorder( Color.GRAY, 1 );
 	    return bb;
@@ -781,7 +781,7 @@ var BlendDemo = {
 	// creates a panel of controls that can be used to interactively
 	// experiment with blending modes
 	createUIPanel : function createUIPanel() {
-		var blendPanel = new TypeGrid();
+		let blendPanel = new TypeGrid();
 		blendPanel.setTitle( 'Blend Mode Compositing Demo' );
 	
 		this.imageCombo = comboBox( ['Greyscale', 'Colour', 'Images'] );
@@ -818,14 +818,14 @@ var BlendDemo = {
 
 
 
-var PorterDuffDemo = new Object() {
+let PorterDuffDemo = new Object() {
 	SIZE: 256,
 	
 	createUIPanel: function createUIPanel() {
 		function makeImage( size, circle, c1, c2 ) {
 			size *= 2/3;
-			var src = ImageUtils.create( size, size, true );
-			var g = null;
+			let src = ImageUtils.create( size, size, true );
+			let g = null;
 			try {
 				g = src.createGraphics();
 				g.setPaint( new java.awt.GradientPaint(
@@ -857,7 +857,7 @@ var PorterDuffDemo = new Object() {
 		this.box = makeImage( this.SIZE, false, new Color( 0x5555ff ), new Color( 0xf7f7ff ) );
 		this.circle = makeImage( this.SIZE, true, new Color( 0xfff7f7 ), new Color( 0xff5555 ) );
 
-		var compPanel = new TypeGrid();
+		let compPanel = new TypeGrid();
 		compPanel.setTitle( 'Porter-Duff Compositing Demo' );
 		
 		this.compCombo = comboBox( [
@@ -887,16 +887,16 @@ var PorterDuffDemo = new Object() {
 		// when creating a proxy object from a function: define a variable
 		// as this outside of the function, then use the closure to access
 		// it from inside the function:
-		var thiz = this;
+		let thiz = this;
 		function changeComposition( event ) {
-			var rule = thiz.compCombo.selectedItem;
+			let rule = thiz.compCombo.selectedItem;
 			if( rule == null ) return;
 			
-			var dstOpacity = thiz.dstOpacity.value / 100;
-			var srcOpacity = thiz.srcOpacity.value / 100;
+			let dstOpacity = thiz.dstOpacity.value / 100;
+			let srcOpacity = thiz.srcOpacity.value / 100;
 			
-			var g = null;
-			var im = ImageUtils.create( thiz.SIZE, thiz.SIZE, true );
+			let g = null;
+			let im = ImageUtils.create( thiz.SIZE, thiz.SIZE, true );
 			try {
 				g = im.createGraphics();
 				g.setComposite( java.awt.AlphaComposite.SrcOver.derive( dstOpacity ) );
@@ -925,19 +925,19 @@ var PorterDuffDemo = new Object() {
 
 
 
-var StrokeDemo = new Object() {
+let StrokeDemo = new Object() {
 	SIZE: 256,
 	
 	createUIPanel: function createUIPanel() {
-		var strokePanel = new TypeGrid();
+		let strokePanel = new TypeGrid();
 		strokePanel.setTitle( 'Stroke Demo' );
-		var thiz = this;
+		let thiz = this;
 		
-		var width = spinner( 1, 8 );
-		var caps = comboBox( ['Butt', 'Round', 'Square'] );
-		var join = comboBox( ['Bevel', 'Miter', 'Round'] );
-		var limit = noMarkup( textField( '10.0', 4 ) );
-		var dash = noMarkup( textField( '8,3,4,3' ) );
+		let width = spinner( 1, 8 );
+		let caps = comboBox( ['Butt', 'Round', 'Square'] );
+		let join = comboBox( ['Bevel', 'Miter', 'Round'] );
+		let limit = noMarkup( textField( '10.0', 4 ) );
+		let dash = noMarkup( textField( '8,3,4,3' ) );
 		bumpComboSize( caps );
 		bumpComboSize( join );
 		
@@ -950,9 +950,9 @@ var StrokeDemo = new Object() {
 		
 		// create a stroke from the current control settings
 		function update() {
-			var s;
+			let s;
 			try {
-				var dashArray = dash.text.trim();
+				let dashArray = dash.text.trim();
 				if( dashArray.isEmpty() ) {
 					s = new java.awt.BasicStroke(
 						width.getValue().intValue(),
@@ -988,7 +988,7 @@ var StrokeDemo = new Object() {
 		// our simple star component doesn't
 		// obey the rules for handling borders,
 		// so we put it inside a panel that does
-		var starPanel = new swing.JPanel();
+		let starPanel = new swing.JPanel();
 		starPanel.add( starBox );
 		starPanel.border = swing.BorderFactory.createLineBorder( Color.GRAY, 1 );
 		starBox.setPreferredSize( new java.awt.Dimension( this.SIZE+2, this.SIZE+2 ) );
@@ -1001,7 +1001,7 @@ var StrokeDemo = new Object() {
 
 // a simple custom UI component that paints
 // a star shape 
-var starBox = new swing.JComponent() {
+let starBox = new swing.JComponent() {
 	pen: new java.awt.BasicStroke(1),
 	arms: 46,
 	
@@ -1021,24 +1021,24 @@ var starBox = new swing.JComponent() {
 			java.awt.RenderingHints.VALUE_ANTIALIAS_ON
 		);
 
-		var w = this.getWidth();
-		var h = this.getHeight();
+		let w = this.getWidth();
+		let h = this.getHeight();
 		
-		var cx = w/2;
-		var cy = h/2;
+		let cx = w/2;
+		let cy = h/2;
 		
-		var baseRadius = Math.min( w, h )/2;
-		var r1 = baseRadius * 0.5;
-		var r2 = baseRadius * 0.8;
-		var r3 = baseRadius * 0.4;
+		let baseRadius = Math.min( w, h )/2;
+		let r1 = baseRadius * 0.5;
+		let r2 = baseRadius * 0.8;
+		let r3 = baseRadius * 0.4;
 				
-		var maxAngle = 2*Math.PI;
-		var arc = maxAngle / this.arms;
-		var path = new java.awt.geom.Path2D.Float();
+		let maxAngle = 2*Math.PI;
+		let arc = maxAngle / this.arms;
+		let path = new java.awt.geom.Path2D.Float();
 		path.moveTo( cx + r2, cy );
-		for( var angle = 0; angle < maxAngle; angle += arc ) {
-			var innerAngle = angle + arc/2;
-			var outerAngle = angle + arc;
+		for( let angle = 0; angle < maxAngle; angle += arc ) {
+			let innerAngle = angle + arc/2;
+			let outerAngle = angle + arc;
 			path.lineTo( cx + r1 * Math.cos(innerAngle), cy + r1 * Math.sin(innerAngle) );
 			path.lineTo( cx + r2 * Math.cos(outerAngle), cy + r2 * Math.sin(outerAngle) );
 		}
@@ -1066,10 +1066,10 @@ var starBox = new swing.JComponent() {
 	},
 	
 	createPaint: function createPaint( outerColor, innerColor, radius, cx, cy, fx, fy ) {
-		var center = new java.awt.geom.Point2D.Float( cx, cy );
+		let center = new java.awt.geom.Point2D.Float( cx, cy );
 		if( fx === undefined ) fx = cx;
 		if( fy === undefined ) fy = cx;
-		var focus = new java.awt.geom.Point2D.Float( fx, fy );
+		let focus = new java.awt.geom.Point2D.Float( fx, fy );
 		return new java.awt.RadialGradientPaint(
 			center, radius, focus, [0, 1], [innerColor, outerColor],
 			java.awt.MultipleGradientPaint.CycleMethod.REFLECT
@@ -1084,7 +1084,7 @@ var starBox = new swing.JComponent() {
  */
 function bumpComboSize( box ) {
 	box.setPreferredSize( null );
-	var ps = box.getPreferredSize();
+	let ps = box.getPreferredSize();
 	ps.width += 20;
 	box.setPreferredSize( ps );
 }

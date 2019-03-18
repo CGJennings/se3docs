@@ -20,7 +20,7 @@ importClass( arkham.component.design.ConsequenceSet );
 
 
 function analyzeDesign( diy, sb ) {
-	var conseq = new ConsequenceSet( 'Observations in  Rhyme', Color.BLACK );
+	let conseq = new ConsequenceSet( 'Observations in  Rhyme', Color.BLACK );
 	// for this example, we will randomly add some consequences
 	if( Math.random() < 0.8 ) {
 		conseq.add( 'a very common point, well made' );
@@ -49,7 +49,7 @@ function analyzeDesign( diy, sb ) {
 	// whether the design is considered 'valid'
 	return true;
 }
-var lastConseq = null;
+let lastConseq = null;
 
 
 
@@ -63,8 +63,8 @@ function createInterface( diy, editor ) {
 	// changed; this will lead to the design support being
 	// asked to re-analyze the design, which in turn will
 	// cause our function to be called
-	var stack = new Stack();
-	var nameField = new textField();
+	let stack = new Stack();
+	let nameField = new textField();
 	stack.add( nameField );
 	diy.nameField = nameField;
 	
@@ -78,7 +78,7 @@ function createInterface( diy, editor ) {
 	// function that we defined above. That function
 	// will get called whenever the design support
 	// needs to be updated.
-	var support = new VerbalDesignSupportAdapter( diy, analyzeDesign );
+	let support = new VerbalDesignSupportAdapter( diy, analyzeDesign );
 	editor.designSupport = support;
 }
 

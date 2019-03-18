@@ -19,7 +19,7 @@ importClass( arkham.component.DefaultPortrait );
 // system, with the same patterns of settings keys and so on.
 
 // This array will store our portraits:
-var portraits = [];
+let portraits = [];
 
 // When you set the custom portrait option in your DIY, you
 // must implement the following two functions in your script:
@@ -90,7 +90,7 @@ function create( diy ) {
 }
 
 function createInterface( diy, editor ) {
-	var stack = new Stack();
+	let stack = new Stack();
 
 	// For this demo we don't need to create a Bindings object
 	// because DefaultPortrait takes care of updating the faces.
@@ -100,10 +100,10 @@ function createInterface( diy, editor ) {
 	// index of the portrait. It will use our getPortrait function
 	// to get the Portrait object with that index, and then create a panel
 	// suited to to the portrait.
-	var topPanel = portraitPanel( diy, 0 );
+	let topPanel = portraitPanel( diy, 0 );
 	// This sets the title displayed around the border of the panel:
 	topPanel.panelTitle = 'Top';
-	var bottomPanel = portraitPanel( diy, 1 );
+	let bottomPanel = portraitPanel( diy, 1 );
 	bottomPanel.panelTitle = 'Bottom';
 	
 	// To complete the link between the portraits, we need to tell the
@@ -142,7 +142,7 @@ function paintFront( g, diy, sheet ) {
 	// demo it would be just as easy to write
 	//    portraits[0].paint( g, target );
 	//    portraits[1].paint( g, target );
-	var target = sheet.getRenderTarget();
+	let target = sheet.getRenderTarget();
 	for( let i=0; i<portraits.length; ++i ) {
 		portraits[i].paint( g, target );
 	}

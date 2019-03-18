@@ -44,7 +44,7 @@ function createAction() {
 	// We need to create a temporary object and then use JavaAdapter because
 	// we are overriding a method in a concrete class, not implementing
 	// an interface.	
-	var pngAction = {
+	let pngAction = {
 		getLabel: function getLabel() {
 			return 'Pack PNG Images';
 		},
@@ -54,8 +54,8 @@ function createAction() {
 		appliesTo: function appliesTo( project, task, member ) {
 			member = ProjectUtilities.simplify( project, task, member );
 			if( member.isFolder() ) {
-				var kids = member.getChildren();
-				for( var i=0; i<kids.length; ++i ) {
+				let kids = member.getChildren();
+				for( let i=0; i<kids.length; ++i ) {
 					if( ProjectUtilities.matchExtension( kids[i], 'png' ) ) {
 						return true;
 					}
@@ -75,17 +75,17 @@ function createAction() {
 			}
 		},
 		performImpl: function performImpl( member ) {
-			var packed = 0;
-			var skipped = 0;
-			var inSize = 0;
-			var outSize = 0;
-			var kids = member.getChildren();
-			for( var i=0; i<kids.length; ++i ) {
+			let packed = 0;
+			let skipped = 0;
+			let inSize = 0;
+			let outSize = 0;
+			let kids = member.getChildren();
+			for( let i=0; i<kids.length; ++i ) {
 				if( ProjectUtilities.matchExtension( kids[i], 'png' ) ) {
-					var file = kids[i].file;
+					let file = kids[i].file;
 					// if the length can't be obtained, we can't tell if the
 					// file is smaller after repack
-					var inLength = file.length();
+					let inLength = file.length();
 					if( inLength < 1 ) {
 						++skipped;
 						continue;
@@ -94,14 +94,14 @@ function createAction() {
 					// so we can examine the repacked size
 					inSize += inLength;
 					try {
-						var bi = ImageUtils.read( file );
-						var buff = new java.io.ByteArrayOutputStream( inLength );
+						let bi = ImageUtils.read( file );
+						let buff = new java.io.ByteArrayOutputStream( inLength );
 						// write the image without extra metadata
 						javax.imageio.ImageIO.write( bi, 'png', buff );
 						if( buff.size() < inLength ) {
 							// rename the original file to a backup file name
 							// in case there is an error
-							var backup = new java.io.File( file.parentFile, 'backup_' + file.name );
+							let backup = new java.io.File( file.parentFile, 'backup_' + file.name );
 							backup = ProjectUtilities.getAvailableFile( backup );
 							if( !file.renameTo( backup ) ) {
 								alert( 'Failed to backup original: ' + kids[i], true );
@@ -135,7 +135,7 @@ function createAction() {
 }
 
 function showSummary( packed, skipped, inSize, outSize ) {
-	var panel = new TypeGrid();
+	let panel = new TypeGrid();
 	panel.place(
 		'<html><b>PNG Packer Summary', '',
 		'Repacked images:', 'p',	sprintf( '%.0f', packed ), 'tab',

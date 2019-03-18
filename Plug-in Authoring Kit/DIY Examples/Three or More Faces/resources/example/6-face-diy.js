@@ -36,7 +36,7 @@ function create( diy ) {
 	// them when the plug-in is started.)
 	const s = diy.settings;
 	for( let i=0; i<6; ++i ) {
-		var keyBase = 'face-' + i;
+		let keyBase = 'face-' + i;
 		// Create a setting key this face's template image:
 		s.set( keyBase + '-template', 'example/face' + i + '.jp2' ); 
 		// Set the template key; this is similar to
@@ -58,7 +58,7 @@ function createInterface( diy, editor ) {}
 
 // This region is used to print a description of the card face;
 // the same region is used for every face.
-var textRegion;
+let textRegion;
 
 
 // When there are more than two faces, the createFrontPainter and

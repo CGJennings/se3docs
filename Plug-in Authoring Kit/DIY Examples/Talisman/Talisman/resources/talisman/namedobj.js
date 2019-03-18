@@ -46,7 +46,7 @@ function TalismanObject() {
 	// Returns a string containing an image tag
 	const imageTag = function imageTag( resource, width, height, unit ) {
 		if( unit === undefined ) unit = 'pt';
-		var tag = '<image res://' + base + resource;
+		let tag = '<image res://' + base + resource;
 		if( width !== undefined ) tag += ' ' + width + unit;
 		if( height !== undefined ) tag += ' ' + height + unit;
 		return tag + '>';
@@ -68,7 +68,7 @@ function TalismanObject() {
 	 * size : font size
 	 */
 	this.titleBox = function titleBox( sheet, useTitleFamily, size ) {
-		var box = markupBox( sheet );
+		let box = markupBox( sheet );
 		
 		box.defaultStyle = new TextStyle(
 			FAMILY, useTitleFamily ? this.titleFamily : this.bodyFamily,
@@ -91,7 +91,7 @@ function TalismanObject() {
 	 * sheet : the sheet to create the box for
 	 */
 	this.bodyBox = function bodyBox( sheet ) {
-		var box = markupBox( sheet );
+		let box = markupBox( sheet );
 		
 		box.defaultStyle = new TextStyle(
 			FAMILY, this.bodyFamily,
@@ -126,8 +126,8 @@ function TalismanObject() {
      *          determine the initial size of a new portrait image selection).
      */
 	this.customizePortraitStencil = function customizePortraitStencil( diy, image, region, applyToMarker ) {
-		var stencilMethod = applyToMarker ? 'setMarkerClipStencil' : 'setPortraitClipStencil';
-		var regionMethod = applyToMarker ? 'setMarkerClipStencilRegion' : 'setPortraitClipStencilRegion';
+		let stencilMethod = applyToMarker ? 'setMarkerClipStencil' : 'setPortraitClipStencil';
+		let regionMethod = applyToMarker ? 'setMarkerClipStencilRegion' : 'setPortraitClipStencilRegion';
 
 		if( region != null ) {
 			// call setXXXClipStencilRegion
@@ -136,11 +136,11 @@ function TalismanObject() {
 		if( image != null ) {
 			// the region to use to create the stencil; either the one provided
 			// or the component's standard clip region
-			var r = region;
+			let r = region;
 			if( r == null ) r = diy.settings.getRegion(
 				diy.portraitKey + (applyToMarker ? '-marker' : '-portrait') + '-clip'
 			);
-			var stencil = arkham.component.AbstractPortrait.createStencil( image, region );
+			let stencil = arkham.component.AbstractPortrait.createStencil( image, region );
 			// call setXXXClipStencil
 			diy[ stencilMethod ]( stencil );
 		}
@@ -165,13 +165,13 @@ function TalismanObject() {
 	 * (e.g. /talisman/image.png,0,0).
 	 */
 	this.paintExpansionSymbol = function paintExpansionSymbol( g, diy, sheet, baseKey ) {
-		var s = diy.settings;
+		let s = diy.settings;
 		
 		// look up the logical variant (returns a setting string)
-		var type = s.getExpansionVariant( null );
+		let type = s.getExpansionVariant( null );
 		
 		// look up the expansion symbol(s) to draw
-		var exp = s.getExpansionCode();
+		let exp = s.getExpansionCode();
 		// return if set to base game: nothing to draw
 		if( 'NX' == exp ) return;
 
@@ -179,12 +179,12 @@ function TalismanObject() {
 		// member-of and required-by expansions, respectively;
 		// first, though, we're just grabbing the first two selected
 		// expansions
-		var mExp = null, rExp = null;
+		let mExp = null, rExp = null;
 
 		// we only draw the first selected expansion; 
 		// get a list of selected expansions and pick
 		// the first one that is registered (not null)
-		var selected = arkham.sheet.Sheet.parseExpansionList( exp );
+		let selected = arkham.sheet.Sheet.parseExpansionList( exp );
 		for( let i=0; i<selected.length; ++i ) {
 			if( selected[i] != null ) {
 				if( mExp == null ) {
@@ -239,18 +239,18 @@ function TalismanObject() {
 		baseKey += typeKey; // e.g., char-expsym or char-rqdsym
 		
 		// get the region to draw the symbol in
-		var region = s.getRegion( baseKey );
+		let region = s.getRegion( baseKey );
 		// if no region defined, no symbol is wanted
 		if( region == null ) return;
 
 		// if there is a -gem setting, we need to parse and paint it
-		var gem = s.get( baseKey + '-gem' );
+		let gem = s.get( baseKey + '-gem' );
 		if( gem != null ) {
 			// parse the gem value into an array with image, x, and y
 			gem = parseGem( gem );
 			
 			// there is a low-res version, check if the HD plug-in added a hi-res version
-			var hiresGem = s.get( baseKey + '-gem-hires' );
+			let hiresGem = s.get( baseKey + '-gem-hires' );
 			if( hiresGem != null ) {
 				// parse the hires key and replace the image, x, and y values
 				// for the lowres gem, but keep the same width and height
@@ -264,7 +264,7 @@ function TalismanObject() {
 		}
 		
 		// finally, draw the symbol itself
-		var symbol = sheet.getExpansionSymbol( exp, '0', region.width * sheet.scalingFactor );
+		let symbol = sheet.getExpansionSymbol( exp, '0', region.width * sheet.scalingFactor );
 		g.drawImage( symbol, region.x, region.y, region.width, region.height, null );		
 	}
 
@@ -275,7 +275,7 @@ function TalismanObject() {
 	 * paint the image at, and the image width and height in an array.
 	 */	
 	function parseGem( gemValue ) {
-		var tokens = gemValue.split( ',' );
+		let tokens = gemValue.split( ',' );
 		if( tokens.length != 3 ) {
 			throw new Error( 'bad gem ' + baseKey + '-gem: ' + gem );
 		}
@@ -287,7 +287,7 @@ function TalismanObject() {
 		// However, the array we got back from split cannot be resized
 		// (the gem value is Java string, so split returned a Java array).
 		// Therefore, we create a new (JavaScript) array to hold the result.
-		var image = ImageUtils.get( tokens[0] );
+		let image = ImageUtils.get( tokens[0] );
 		return [ image, tokens[1], tokens[2], image.width, image.height ];
 	}
 }

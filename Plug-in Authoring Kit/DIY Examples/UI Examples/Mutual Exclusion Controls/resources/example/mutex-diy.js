@@ -22,15 +22,15 @@ function create( diy ) {
 }
 
 function createInterface( diy, editor ) {
-	var bindings = new Bindings( editor, diy );
+	let bindings = new Bindings( editor, diy );
 
 	//
 	// Create a tab of radio buttons
 	//
 
-	var radioPanel = new TypeGrid();
+	let radioPanel = new TypeGrid();
 
-	var radioBtns = [
+	let radioBtns = [
 		radioButton( 'Cabbage' ),
 		radioButton( 'Tomato' ),
 		radioButton( 'Carrot' )
@@ -38,7 +38,7 @@ function createInterface( diy, editor ) {
 
 	// these are the values to be used for the setting for each
 	// of the above buttons
-	var radioValues = [
+	let radioValues = [
 		'green',
 		'red',
 		'orange'
@@ -52,7 +52,7 @@ function createInterface( diy, editor ) {
 	// Instead of binding to the buttons individually,
 	// as you would with other controls, you bind to
 	// the button group.
-	var radioGroup = buttonGroup( radioBtns, radioValues );
+	let radioGroup = buttonGroup( radioBtns, radioValues );
 	bindings.add( 'RadioValue', radioGroup, [0] );
 
 	for( let i=0; i<radioBtns.length; ++i ) {
@@ -70,21 +70,21 @@ function createInterface( diy, editor ) {
 	// Note that this is *exactly* the same process; the only difference
 	// is that we create toggle buttons instead of radio buttons.
 
-	var togglePanel = new TypeGrid();
+	let togglePanel = new TypeGrid();
 
-	var toggleBtns = [
+	let toggleBtns = [
 		toggleButton( 'Plum' ),
 		toggleButton( 'Banana' ),
 		toggleButton( 'Blueberry' )
 	];
 
-	var toggleValues = [
+	let toggleValues = [
 		'purple',
 		'yellow',
 		'blue'
 	];
 
-	var toggleGroup = buttonGroup( toggleBtns, toggleValues );
+	let toggleGroup = buttonGroup( toggleBtns, toggleValues );
 	bindings.add( 'ToggleValue', toggleGroup, [0] );
 
 	for( let i=0; i<toggleBtns.length; ++i ) {
@@ -99,8 +99,8 @@ function createInterface( diy, editor ) {
 	// Create a tab with a cycle button
 	//
 
-	var cyclePanel = new TypeGrid();
-	var cycleBtn = cycleButton( ['Water', 'Tea'], ['clear', 'brown'] );
+	let cyclePanel = new TypeGrid();
+	let cycleBtn = cycleButton( ['Water', 'Tea'], ['clear', 'brown'] );
 	cyclePanel.add( cycleBtn );
 	bindings.add( 'CycleValue', cycleBtn, [0] );
 	cyclePanel.addToEditor( editor, 'Cycle Button' );
@@ -117,9 +117,9 @@ function createInterface( diy, editor ) {
 	// just like a check box button.
 	//
 
-	var checkPanel = new TypeGrid();
-	var ungroupedToggleBtn = toggleButton( 'Typeset Content' );
-	var checkBtn = checkBox( 'Bold' );
+	let checkPanel = new TypeGrid();
+	let ungroupedToggleBtn = toggleButton( 'Typeset Content' );
+	let checkBtn = checkBox( 'Bold' );
 	bindings.add( 'ToggleBoolean', ungroupedToggleBtn, [0] );
 	bindings.add( 'CheckBoolean', checkBtn, [0] );
 	checkPanel.place( ungroupedToggleBtn, '', checkBtn, 'br' );
@@ -128,7 +128,7 @@ function createInterface( diy, editor ) {
 	bindings.bind();
 }
 
-var textBox;
+let textBox;
 
 function createFrontPainter( diy, sheet ) {
 	textBox = markupBox( sheet );

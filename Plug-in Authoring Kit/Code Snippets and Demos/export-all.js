@@ -26,7 +26,7 @@ const FORMAT = ImageUtils.FORMAT_PNG;
 
 // track the number of files converted so we know if we should tell
 // the user that there were no components
-var exports = 0;
+let exports = 0;
 
 // for everything in the same folder as this script...
 //    that matches the '.eon' extension...
@@ -42,18 +42,18 @@ function exportMember( m ) {
 		++exports;
 		
 		// load the game component
-		var gc = ResourceKit.getGameComponentFromFile( m.file, false );
+		let gc = ResourceKit.getGameComponentFromFile( m.file, false );
 		if( gc == null ) throw new Error();
 
 		// create the sheets that will paint the faces of the component
-		var sheets = gc.createDefaultSheets();
+		let sheets = gc.createDefaultSheets();
 		if( sheets == null ) return;
 		
 		// for each sheet, paint it at the resolution set at the top of the script
 		// and save it to a file
 		for( let i=0; i<sheets.length; ++i ) {
-			var bi = sheets[i].paint( arkham.sheet.RenderTarget.EXPORT, RESOLUTION );
-			var file = new File( m.parent.file, m + '-' + (i+1) + '.' + FORMAT );
+			let bi = sheets[i].paint( arkham.sheet.RenderTarget.EXPORT, RESOLUTION );
+			let file = new File( m.parent.file, m + '-' + (i+1) + '.' + FORMAT );
 			ImageUtils.write( bi, file, FORMAT, -1, false, RESOLUTION );
 		}
 	} catch( ex ) {
@@ -88,9 +88,9 @@ function forAll( parent, somethingToDo ) {
 		error( 'missing somethingToDo' );
 	}
 
-	var i;
-	var child;
-	var children = parent.getChildren();
+	let i;
+	let child;
+	let children = parent.getChildren();
 
     for( i=0; i<children.length; ++i ) {
 		child = children[i];
