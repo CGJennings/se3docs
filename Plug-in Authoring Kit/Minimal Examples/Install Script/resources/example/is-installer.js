@@ -10,7 +10,7 @@
    this demo we are printing messages to the
    standard output stream and playing a beep.
    
-   See javadoc:ca/cgjennings/apps/arkham/plugins/InstallationActions
+   See https://cgjennings.github.io/se3docs/dm-installation.html
    for additional details.
  */
 

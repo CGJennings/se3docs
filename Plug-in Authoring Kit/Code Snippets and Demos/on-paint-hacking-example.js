@@ -90,8 +90,8 @@ function onPaint( g, gc, sheet ) {
 	// location and size used for the Sanity attribute, replacing the
 	// calculated value (which was already drawn, but now appears off the
 	// card face area so it isn't visible) with our custom, fixed value.
-	// See javadoc:ca/cgjennings/apps/arkham/sheet/Sheet for details
-	// on the drawTitle method.
+	// See https://cgjennings.github.io/se3docs/assets/javadoc/ca/cgjennings/apps/arkham/sheet/Sheet
+	// for details on the drawTitle method.
 	g.setPaint( new Colour( $ah-black-colour ) );
 	// for demo purposes, draw the sanity value in red to make it stand out;
 	// if you were really customizing a component, you'd delete this line:

@@ -44,15 +44,7 @@ panel.createDialog( 'Test', '' ).showDialog();
 // Not all components use ActionListeners, but
 // Buttons, radio buttons, and check box buttons all do.
 // For other types of controls you may need other types
-// of listener. A good quick reference for most kinds
-// of control is the source of the uibindings library:
-//
-// scriptdoc:uibindings/source
-//
-// For more information on other control types and the
-// listeners they support, start here:
-//
-// javadoc:javax/swing/package-summary
+// of listener.
 // 
 // By the way, an even friendlier interface would remember
 // whether c2 was checked when c1 is unchecked, and then
