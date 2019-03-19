@@ -271,8 +271,6 @@ function updateFilter() {
 			eval( code );
 		} catch( ex ) {
 			setErrorMessage( ex );
-			code = 'curFilter.' + name + ' = ' + array[0] + array[1] + array[2] + ';';
-			eval( code );
 		}
 	}
 }

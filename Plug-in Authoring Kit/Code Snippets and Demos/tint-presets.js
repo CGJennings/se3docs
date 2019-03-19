@@ -18,7 +18,7 @@ function create( diy ) {
 
 function createInterface( diy, editor ) {
 	let panel = new Stack();
-	hsbPanel = tintPanel();
+	let hsbPanel = tintPanel();
 
 	// define the preset tint values to use
 	// (the user can still choose a custom tint if they wish)
