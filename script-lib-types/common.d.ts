@@ -6,6 +6,24 @@
  * it; it is automatically included in every script.
  */
 declare module common {
+    /**
+     * The global scope. This can be used to access a global variable that has been *aliased* by a local variable.
+     * 
+     * ```js
+     * let variable = 42;
+     * function anotherScope() {
+     *   let variable = "aliased";
+     *   println(variable); // prints aliased
+     *   println(self.variable); // prints 42
+     * }
+     * anotherScope();
+     * ```
+     */
+    const self: object;
+
+    /** The global scope. This is an alternate name for [[self]]. */
+    const global: object;
+
     /** A reference to the `java` root package. */
     const java: JavaPackage<"java">;
     /** A reference to the `javax` root package. */
@@ -29,25 +47,25 @@ declare module common {
     /** The [Settings.Colour](https://cgjennings.github.io/se3docs/assets/javadoc/resources/Settings.Colour.html) Java class. */
     type Color = JavaClass<"resources.Settings.Colour">;
 
-    /** The [Settings.Color](https://cgjennings.github.io/se3docs/assets/javadoc/resources/Settings.Colour.html) Java class. */    
+    /** The [Settings.Color](https://cgjennings.github.io/se3docs/assets/javadoc/resources/Settings.Colour.html) Java class. */
     type Colour = JavaClass<"resources.Settings.Colour">;
 
     /** The standard `java.awt.Font` class. */
     type Font = JavaClass<"java.awt.Font">;
 
-    /** The [Settings.Region](https://cgjennings.github.io/se3docs/assets/javadoc/resources/Settings.Region.html) Java class. */      
+    /** The [Settings.Region](https://cgjennings.github.io/se3docs/assets/javadoc/resources/Settings.Region.html) Java class. */
     type Region = JavaClass<"resources.Settings.Region">;
 
-    /** The [Settings.Region2D](https://cgjennings.github.io/se3docs/assets/javadoc/resources/Settings.Region2D.html) Java class. */   
+    /** The [Settings.Region2D](https://cgjennings.github.io/se3docs/assets/javadoc/resources/Settings.Region2D.html) Java class. */
     type Region2D = JavaClass<"resources.Settings.Region2D">;
 
     /** The standard `java.io.URL` class. */
     type URL = JavaClass<"java.io.URL">;
 
-    /** The [ResorceKit](https://cgjennings.github.io/se3docs/assets/javadoc/resources/ResourceKit.html) Java class. */ 
+    /** The [ResorceKit](https://cgjennings.github.io/se3docs/assets/javadoc/resources/ResourceKit.html) Java class. */
     type ResourceKit = JavaClass<"resources.ResourceKit">;
- 
-    /** The [Language](https://cgjennings.github.io/se3docs/assets/javadoc/resources/Language.html) Java class. */ 
+
+    /** The [Language](https://cgjennings.github.io/se3docs/assets/javadoc/resources/Language.html) Java class. */
     type Language = JavaClass<"resources.Language">;
 
     /** A reference to the main application object, an instance of the[StrangeEons](https://cgjennings.github.io/se3docs/assets/javadoc/ca/cgjennings/apps/arkham/StrangeEons.html) class. */
@@ -547,7 +565,7 @@ declare module common {
          * @param resourcePath the resource path of the settings to apply
          */
         cardFrom(component: JavaObject<"arkham.component.GameComponent">, resourcePath: string): void;
-    
+
         /**
          * Removes one or more private settings from a component,
          * resetting them to whatever value they inherit from the component's

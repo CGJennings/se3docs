@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
         // do not import any libs!
-        "lib": []
+        "lib": [],
+        "target": "es6"
     }
 }

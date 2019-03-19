@@ -105,6 +105,28 @@ declare module diy {
          */
         onRead(diy: DIY, oos: JavaObject<"ca.cgjennings.io.SEObjectInputStream">): void;
     }
+
+    /**
+     * Creates a test DIY instance using functions in the current script, adding
+     * an editor for it. (Loading and saving the test instance are not supported.)
+     * 
+     * This function is useful when developing a new DIY
+     * component. For example, you can write script functions for the
+     * component, add `testDIYScript()` to the end of the script, run the file,
+     * and test out the component without launching a plug-in test instance.
+     * In order to work correctly, settings and resources that the script relies
+     * on must still be visible to the script. (`ResourceKit`
+     * will search plug-in task folders in the open project for resources.)
+     *
+     * If this function is left in a plug-in bundle, it will display a warning
+     * if script warnings are enabled, but otherwise it has no effect.
+     * It will only create a test component if run directly from a script editor.
+     *
+     * @param gameCode an optional code indicating the game this component is from; 
+     *            this is needed if you wish to test expansion symbol painting 
+     *            or inherit from the game's master settings
+     */
+    function testDIYScript(gameCode?: string): void;
 }
 
 
