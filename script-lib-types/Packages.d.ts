@@ -115,7 +115,7 @@ declare interface JavaObject<T extends string> {
  * shortcuts to commonly used packages, including
  * `java`, `javax`, `swing` (short for `javax.swing`),
  * `ca` (root of most Strange Eons classes), `arkham`
- * (short for `ca.cgjennings.apps.arkham`, the most common used
+ * (short for `ca.cgjennings.apps.arkham`, the most commonly used
  * part of the API), `resources` (where `ResourceKit` and `Language` live), 
  * and `gamedata` (where the classes for parsing and registering new content
  * live).
