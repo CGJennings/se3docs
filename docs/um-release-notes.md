@@ -8,22 +8,31 @@ The following changes are planned for inclusion in the next update. This list is
 
 * Further work on rewriting the script libraries to separate documentation from the libraries themselves and rewrite them in the more modern JS allowed by the recent engine update.
 * `StrangeEons.fileBugReport` updated to link to a partially completed contact form; this also affects the **Help/Report a Bug** menu item.
+* The **Document Browser** is *deprecated*. In a future version, searchable API documentation will be accessible from the (system) Web browser. Plug-ins that rely on the document browser and associated text indexing classes will no longer work after this change.
 
-### Notices
+### Script library changes
 
-* The **Document Browser** is considered deprecated. In a future version, API documentation will be accessible from the system Web browser.
+* The constant `self` is set to the script's global scope for consistency with other JS environments.
+* The `debug` script library has been removed. A source-level debugger has been available for many years. The `uiutils` library has been removed. The most useful functionality from both libraries can be found in `utils.js` in the Plug-in Authoring Kit.
+* `ImageUtils.crop`: the `width` and `height` are now optional; if left off they default to include the remainder of the image.
+* `ImageUtils.tint`: corrected the (new version of the) documentation to state that the hue shift is measured in rotations, not degrees.
+* Added `ImageUtils.trim` (trims transparent pixels from image edges).
+* The **SE2 Compatibility Mode** option is *deprecated*. It is now disabled by default. In a future version, this option, and the additional script code that it loads (`*.ljs` files), will be removed. It is not believed that any current plug-ins rely on this mode.
 
 ### Bug fixes
 
 * Help links to Miriam's Basement that used `HELP_CONTEXT_PROPERTY` on a specific UI control were missed when updating links.
+* `confirm.yesno` was accidentally renamed `yesNo`.
+* `Console.printHTML` was accidentally renamed `printHTMLprintHTML`.
 
 ### Java 9+ compatibility
 
 Officially, Strange Eons currently requires Java 8, but work is underway to support Java 9 and later. Here is a summary of the current status:
 
 - The major obstacles have been solved and SE can be started under Java 9 starting with build 3970.
-- When starting SE from the command line, the option <code>-javaagent:<em>path/to/strange-eons.selibrary</em></code> must be added.
-- Further work is required for Java 10+ due to the removal of additional APIs.
+- SE can be built under Java 9 and Java 11 (except for errors related to JavaFX not being available).
+- When starting SE from the command line, the option <code>-javaagent:<em>path/to/strange-eons.selibrary</em></code> must be added. Starting with build 3970 the launcher executables for Windows and macOS have been modified to include this option.
+- The deprecation, for removal, of the Pack200 format and related tools will require reworking how plug-in bundles are stored on the server (and unpacked) at some point after Java 11.
 
 ## Build 3970
 

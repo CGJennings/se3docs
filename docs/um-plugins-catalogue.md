@@ -2,6 +2,8 @@
 
 The plug-in catalogue, available from the **Toolbox/Catalogue** menu, is used to install and update plug-ins. When the opened, it connects to the Strange Eons Web site and downloads the latest catalogue. You can then browse the available entries and choose which plug-ins to install.
 
+> If the catalogue fails to load, it may be due to a temporary network issue. *Try again later.* If you continue to have problems, you may need to adjust your [proxy settings](um-install-troubleshooting.md#proxy-settings).
+
 To *view more information about a listing*, click on its entry in the list. A description of the plug-in will be shown in the information pane to the right.
 
 To *install plug-ins*, check the boxes in their list entries, then choose **Download and Install**. Some plug-ins will display *installation notes*; click **Close** after reading them.

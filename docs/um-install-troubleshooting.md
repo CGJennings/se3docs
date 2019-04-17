@@ -1,5 +1,19 @@
 # Troubleshooting
 
+## Catalogue download issues
+
+Most problems related to downloading the [plug-in catalogue](um-plugins-catalogue.md) or plug-ins the catalogue are due to temporary network issues. If you have persistent problems while downloading a particular plug-in, [report it here](https://cgjennings.ca/contact.html). Problems with the plug-in itself are best reported to the plug-in author directly.
+
+### Proxy settings
+
+If you have persistent problems trying to download the plug-in catalogue itself (or you cannot download *any* plug-in), the problem may be related to the use of a *proxy* to access the Web. This is more likely if you are accessing the Web through a large organization such as a university.
+
+*To configure Strange Eons to access the catalogue through a proxy,* [open the **Preferences** dialog](um-ui=preferences.md), choose the **Plug-ins** category, and under **Plug-ins and Extensions/Catalogue**, choose the **Proxy Settings** button. There are four types of proxy connection to choose from: *None*, *Use System Settings*, *Use Proxy Server*, and *Use Authenticated Proxy Server*. The default is *Use System Settings*, which attempts to use settings from your operating system. The *None* option disables the use of a proxy server and attempts to access the Internet directly. The other two options both allow you to configure your proxy settings directly in Strange Eons. The only difference is that the *Authenticated* connection must be used if your proxy connection requires a user name and password.
+
+![The proxy settings dialog](images/preferences-proxy.png)
+
+If you are not sure whether you access the Internet through a proxy or what your proxy settings are, consult the intranet of your institution or ask a systems administrator.
+
 ## Graphics issues
 
 Some Windows machines have weird graphics glitches when running Strange Eons, such as bits of the interface not being drawn or being drawn in the wrong place. If this happens to you, try these steps:
