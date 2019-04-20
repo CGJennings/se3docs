@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -102,8 +104,8 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public interface <span class="typeNameLabel">QueriedAgnosticDialog</span>
 extends <a href="../../../ca/cgjennings/platform/AgnosticDialog.html" title="interface in ca.cgjennings.platform">AgnosticDialog</a></pre>
-<div class="block">A dialog may implement this instead of <a href="../../../ca/cgjennings/platform/AgnosticDialog.html" title="interface in ca.cgjennings.platform"><code>AgnosticDialog</code></a> to have
- more control over how the OK and Cancel buttons are modified.</div>
+<div class="block">A dialog may implement this instead of <a href="../../../ca/cgjennings/platform/AgnosticDialog.html" title="interface in ca.cgjennings.platform"><code>AgnosticDialog</code></a> to have more
+ control over how the OK and Cancel buttons are modified.</div>
 </li>
 </ul>
 </div>
@@ -161,19 +163,20 @@ extends <a href="../../../ca/cgjennings/platform/AgnosticDialog.html" title="int
 <pre>void&nbsp;performAgnosticButtonSwap(boolean&nbsp;swapped,
                                <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JButton.html?is-external=true" title="class or interface in javax.swing">JButton</a>&nbsp;newOKButton,
                                <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JButton.html?is-external=true" title="class or interface in javax.swing">JButton</a>&nbsp;newCancelButton)</pre>
-<div class="block">Called to swap the buttons of this agnostic dialog.
- When this interface is used, <a href="../../../ca/cgjennings/platform/PlatformSupport.html#makeAgnosticDialog-ca.cgjennings.platform.AgnosticDialog-javax.swing.JButton-javax.swing.JButton-"><code>PlatformSupport.makeAgnosticDialog(ca.cgjennings.platform.AgnosticDialog, javax.swing.JButton, javax.swing.JButton)</code></a>
- will not swap any of the properties of the buttons itself. Instead, it
- will call this method to allow this to perform the swap itself.
- <code>PlatformSupport</code> will still register listeners for
- <a href="../../../ca/cgjennings/platform/AgnosticDialog.html#handleOKAction-java.awt.event.ActionEvent-"><code>AgnosticDialog.handleOKAction(java.awt.event.ActionEvent)</code></a> and <a href="../../../ca/cgjennings/platform/AgnosticDialog.html#handleCancelAction-java.awt.event.ActionEvent-"><code>AgnosticDialog.handleCancelAction(java.awt.event.ActionEvent)</code></a>.
+<div class="block">Called to swap the buttons of this agnostic dialog. When this interface
+ is used, <a href="../../../ca/cgjennings/platform/PlatformSupport.html#makeAgnosticDialog-ca.cgjennings.platform.AgnosticDialog-javax.swing.JButton-javax.swing.JButton-"><code>PlatformSupport.makeAgnosticDialog(ca.cgjennings.platform.AgnosticDialog, javax.swing.JButton, javax.swing.JButton)</code></a> will not swap any of
+ the properties of the buttons itself. Instead, it will call this method
+ to allow this to perform the swap itself. <code>PlatformSupport</code>
+ will still register listeners for <a href="../../../ca/cgjennings/platform/AgnosticDialog.html#handleOKAction-java.awt.event.ActionEvent-"><code>AgnosticDialog.handleOKAction(java.awt.event.ActionEvent)</code></a>
+ and <a href="../../../ca/cgjennings/platform/AgnosticDialog.html#handleCancelAction-java.awt.event.ActionEvent-"><code>AgnosticDialog.handleCancelAction(java.awt.event.ActionEvent)</code></a>.
  <p>
- This method will always be called, even if the buttons are not being swapped
- from their reported order. This allows the implementer to simply place
- all initialization code for the buttons in this method, if desired.</div>
+ This method will always be called, even if the buttons are not being
+ swapped from their reported order. This allows the implementer to simply
+ place all initialization code for the buttons in this method, if desired.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>swapped</code> - <code>true</code> if the buttons should be swapped based on the order reported to <code>PlatformSupport</code></dd>
+<dd><code>swapped</code> - <code>true</code> if the buttons should be swapped based
+ on the order reported to <code>PlatformSupport</code></dd>
 <dd><code>newOKButton</code> - the button that should be made the "OK" button</dd>
 <dd><code>newCancelButton</code> - the button that should be made the "Cancel" button</dd>
 </dl>
@@ -199,6 +202,8 @@ extends <a href="../../../ca/cgjennings/platform/AgnosticDialog.html" title="int
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -117,18 +119,20 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  following conditions hold:
  <ol>
  <li> All of the computational units have similar performance characteristics
-      (multi-core CPUs, for example).
+ (multi-core CPUs, for example).
  <li> The problem is CPU-bound so that performance is predictable.
  <li> The problem can be broken down in roughly equal subproblems, each with
-      the same computational complexity. (Or, more generally, each subproblem
-      can be expected to complete in roughly the same amount of time.)
+ the same computational complexity. (Or, more generally, each subproblem can
+ be expected to complete in roughly the same amount of time.)
  </ol>
 
- <p>A typical pattern for using <code>SplitJoin</code> is as follows:
+ <p>
+ A typical pattern for using <code>SplitJoin</code> is as follows:
  <ol>
- <li>Obtain one of the available shared instances using <a href="../../../ca/cgjennings/algo/SplitJoin.html#getInstance--"><code>getInstance()</code></a>.
- <li>Call that instance's <a href="../../../ca/cgjennings/algo/SplitJoin.html#getIdealSplitCount--"><code>getIdealSplitCount()</code></a> to determine the number
- of subproblems to create.
+ <li>Obtain one of the available shared instances using
+ <a href="../../../ca/cgjennings/algo/SplitJoin.html#getInstance--"><code>getInstance()</code></a>.
+ <li>Call that instance's <a href="../../../ca/cgjennings/algo/SplitJoin.html#getIdealSplitCount--"><code>getIdealSplitCount()</code></a> to determine the
+ number of subproblems to create.
  <li>Create an array or collection or Runnables or Callables, each of which
  will complete one subproblem.
  <li>Use one of the <code>run</code> or <code>evaluate</code> methods to
@@ -213,8 +217,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/algo/SplitJoin.html#getIdealSplitCount--">getIdealSplitCount</a></span>()</code>
-<div class="block">Returns the ideal number of evenly divided subproblems to break
- problems into.</div>
+<div class="block">Returns the ideal number of evenly divided subproblems to break problems
+ into.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -250,8 +254,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/algo/SplitJoin.html#setHighPriorityThreadHint-boolean-">setHighPriorityThreadHint</a></span>(boolean&nbsp;enable)</code>
-<div class="block">Sets a hint as to whether the creation of higher than normal
- priority threads is allowed.</div>
+<div class="block">Sets a hint as to whether the creation of higher than normal priority
+ threads is allowed.</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
@@ -326,8 +330,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public abstract&nbsp;&lt;V&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;V&gt;&nbsp;evaluate(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html?is-external=true" title="class or interface in java.util.concurrent">Callable</a>&lt;V&gt;&gt;&nbsp;subproblems)
                               throws <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutionException.html?is-external=true" title="class or interface in java.util.concurrent">ExecutionException</a></pre>
 <div class="block">Submits subproblems for completion. Each subproblem is a callable that
- returns a value of type V. The return values of each subproblem will
- be returned in an array (in the same order as the subproblems).</div>
+ returns a value of type V. The return values of each subproblem will be
+ returned in an array (in the same order as the subproblems).</div>
 <dl>
 <dt><span class="paramLabel">Type Parameters:</span></dt>
 <dd><code>V</code> - the type of the value returned by each subproblem</dd>
@@ -337,8 +341,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd>the individual return values from each subproblem</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutionException.html?is-external=true" title="class or interface in java.util.concurrent">ExecutionException</a></code> - if at least one subproblem throws an
-     exception, then this method will wrap and throw one of those exceptions
-     (which one cannot be guaranteed)</dd>
+ exception, then this method will wrap and throw one of those exceptions
+ (which one cannot be guaranteed)</dd>
 </dl>
 </li>
 </ul>
@@ -349,9 +353,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>evaluateUnchecked</h4>
 <pre>public&nbsp;&lt;V&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;V&gt;&nbsp;evaluateUnchecked(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html?is-external=true" title="class or interface in java.util.concurrent">Callable</a>&lt;V&gt;&gt;&nbsp;subproblems)</pre>
-<div class="block">Submits subproblems as if by <code>evaluate( subproblems )</code>. However,
- if one of the subproblems throws an exception, it will be thrown as an
- unchecked <code>RuntimeException</code>.</div>
+<div class="block">Submits subproblems as if by <code>evaluate( subproblems )</code>.
+ However, if one of the subproblems throws an exception, it will be thrown
+ as an unchecked <code>RuntimeException</code>.</div>
 <dl>
 <dt><span class="paramLabel">Type Parameters:</span></dt>
 <dd><code>V</code> - the type of the value returned by each subproblem</dd>
@@ -374,12 +378,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>execute</h4>
 <pre>public abstract&nbsp;void&nbsp;execute(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task)</pre>
 <div class="block">Runs a <code>task</code>. The task may be run in another thread, in which
- case this method <i>will not wait</i> for the task to complete.
- The purpose of this method is to reuse a thread that would normally
- have been used for split-join tasks instead of creating a new
- <code>Thread</code> yourself. If there is an idle split-join thread
- available, then this method generally has lower overhead than creating
- a new thread.</div>
+ case this method <i>will not wait</i> for the task to complete. The
+ purpose of this method is to reuse a thread that would normally have been
+ used for split-join tasks instead of creating a new <code>Thread</code>
+ yourself. If there is an idle split-join thread available, then this
+ method generally has lower overhead than creating a new thread.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>task</code> - the task to run in another thread</dd>
@@ -408,15 +411,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getIdealSplitCount</h4>
 <pre>public&nbsp;int&nbsp;getIdealSplitCount()</pre>
-<div class="block">Returns the ideal number of evenly divided subproblems to break
- problems into. (Since the <code>SplitJoin</code> is unaware of the nature of
- the problem being solved, it cannot guarantee the accuracy of this
- value. However, if each subproblem performs the same amount of work,
- the returned value should be close to the ideal value.)</div>
+<div class="block">Returns the ideal number of evenly divided subproblems to break problems
+ into. (Since the <code>SplitJoin</code> is unaware of the nature of the
+ problem being solved, it cannot guarantee the accuracy of this value.
+ However, if each subproblem performs the same amount of work, the
+ returned value should be close to the ideal value.)</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the number of subproblems that a problem should be broken into
-      to achieve optimal wall clock execution times</dd>
+<dd>the number of subproblems that a problem should be broken into to
+ achieve optimal wall clock execution times</dd>
 </dl>
 </li>
 </ul>
@@ -442,16 +445,17 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>run</h4>
 <pre>public abstract&nbsp;void&nbsp;run(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&gt;&nbsp;subproblems)
                   throws <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutionException.html?is-external=true" title="class or interface in java.util.concurrent">ExecutionException</a></pre>
-<div class="block">Submits a collection of subproblems for completion. The subproblems will not return
- a result; if a return value is required for the join stage, submit
+<div class="block">Submits a collection of subproblems for completion. The subproblems will
+ not return a result; if a return value is required for the join stage,
+ submit
  <b>Callables</b> instead.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>subproblems</code> - the subproblems to complete</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutionException.html?is-external=true" title="class or interface in java.util.concurrent">ExecutionException</a></code> - if at least one subproblem throws an
-     exception, then this method will wrap and throw one of those exceptions
-     (which one cannot be guaranteed)</dd>
+ exception, then this method will wrap and throw one of those exceptions
+ (which one cannot be guaranteed)</dd>
 </dl>
 </li>
 </ul>
@@ -463,16 +467,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>run</h4>
 <pre>public abstract&nbsp;void&nbsp;run(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>[]&nbsp;subproblems)
                   throws <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutionException.html?is-external=true" title="class or interface in java.util.concurrent">ExecutionException</a></pre>
-<div class="block">Submits an array of subproblems for completion. The subproblems will not return
- a result; if a return value is required for the join stage, submit
+<div class="block">Submits an array of subproblems for completion. The subproblems will not
+ return a result; if a return value is required for the join stage, submit
  <b>Callable</b>s instead.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>subproblems</code> - the subproblems to complete</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutionException.html?is-external=true" title="class or interface in java.util.concurrent">ExecutionException</a></code> - if at least one subproblem throws an
-     exception, then this method will wrap and throw one of those exceptions
-     (which one cannot be guaranteed)</dd>
+ exception, then this method will wrap and throw one of those exceptions
+ (which one cannot be guaranteed)</dd>
 </dl>
 </li>
 </ul>
@@ -483,8 +487,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>runUnchecked</h4>
 <pre>public&nbsp;void&nbsp;runUnchecked(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&gt;&nbsp;subproblems)</pre>
-<div class="block">Submits subproblems as if by <code>run( subproblems )</code>. However,
- if one of the subproblems throws an exception, it will be thrown as an
+<div class="block">Submits subproblems as if by <code>run( subproblems )</code>. However, if
+ one of the subproblems throws an exception, it will be thrown as an
  unchecked <code>RuntimeException</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -503,8 +507,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>runUnchecked</h4>
 <pre>public&nbsp;void&nbsp;runUnchecked(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>[]&nbsp;subproblems)</pre>
-<div class="block">Submits subproblems as if by <code>run( subproblems )</code>. However,
- if one of the subproblems throws an exception, it will be thrown as an
+<div class="block">Submits subproblems as if by <code>run( subproblems )</code>. However, if
+ one of the subproblems throws an exception, it will be thrown as an
  unchecked <code>RuntimeException</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -523,14 +527,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>setHighPriorityThreadHint</h4>
 <pre>public static&nbsp;void&nbsp;setHighPriorityThreadHint(boolean&nbsp;enable)</pre>
-<div class="block">Sets a hint as to whether the creation of higher than normal
- priority threads is allowed. If <code>true</code>, then
- <code>SplitJoin</code> instances <i>may try</i> to creates threads with above
- average priority. Note that even if enabled, this is not guaranteed to
- have an effect.</div>
+<div class="block">Sets a hint as to whether the creation of higher than normal priority
+ threads is allowed. If <code>true</code>, then <code>SplitJoin</code>
+ instances <i>may try</i> to creates threads with above average priority.
+ Note that even if enabled, this is not guaranteed to have an effect.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>enable</code> - <code>true</code> to allow higher than normal priority threads</dd>
+<dd><code>enable</code> - <code>true</code> to allow higher than normal priority
+ threads</dd>
 </dl>
 </li>
 </ul>
@@ -543,18 +547,18 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public static&nbsp;void&nbsp;setParallelExecutionEnabled(boolean&nbsp;enable)</pre>
 <div class="block">Sets a hint as to whether to allow parallel execution of subproblems.
  This may be useful during debugging or to work around any hardware- or
- platform-specific issues that appear (such as CPU overheating).
- When set to <code>false</code>, future calls to <a href="../../../ca/cgjennings/algo/SplitJoin.html#getInstance--"><code>getInstance()</code></a>
- or <a href="../../../ca/cgjennings/algo/SplitJoin.html#createInstance--"><code>createInstance()</code></a>
+ platform-specific issues that appear (such as CPU overheating). When set
+ to <code>false</code>, future calls to <a href="../../../ca/cgjennings/algo/SplitJoin.html#getInstance--"><code>getInstance()</code></a> or
+ <a href="../../../ca/cgjennings/algo/SplitJoin.html#createInstance--"><code>createInstance()</code></a>
  <i>that create a new instance rather than share an existing one</i>
- will return a <code>SplitJoin</code> implementation that executes subproblems
- serially in the calling thread. To guarantee that all <code>SplitJoin</code>
- instances run serially, this must value must be set before the first call to
- <a href="../../../ca/cgjennings/algo/SplitJoin.html#getInstance--"><code>getInstance()</code></a>.</div>
+ will return a <code>SplitJoin</code> implementation that executes
+ subproblems serially in the calling thread. To guarantee that all
+ <code>SplitJoin</code> instances run serially, this must value must be
+ set before the first call to <a href="../../../ca/cgjennings/algo/SplitJoin.html#getInstance--"><code>getInstance()</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>enable</code> - allow parallel problem solving if <code>true</code>, disable
-     if <code>false</code> (default is <code>true</code>)</dd>
+<dd><code>enable</code> - allow parallel problem solving if <code>true</code>,
+ disable if <code>false</code> (default is <code>true</code>)</dd>
 </dl>
 </li>
 </ul>
@@ -578,6 +582,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

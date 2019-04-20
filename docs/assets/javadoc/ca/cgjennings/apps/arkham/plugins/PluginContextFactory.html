@@ -40,12 +40,14 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li>Prev&nbsp;Class</li>
-<li>Next&nbsp;Class</li>
+<li><a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginError.html" title="class in ca.cgjennings.apps.arkham.plugins"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?ca/cgjennings/apps/arkham/plugins/PluginContextFactory.html" target="_top">Frames</a></li>
@@ -205,12 +207,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  specified installed plug-in instance.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>ip</code> - the installed plug-in whose plug-in instance will use the context</dd>
-<dd><code>modifiers</code> - a bitmap of the modifier keys to indicate are currently pressed, or 0</dd>
+<dd><code>ip</code> - the installed plug-in whose plug-in instance will use the
+ context</dd>
+<dd><code>modifiers</code> - a bitmap of the modifier keys to indicate are currently
+ pressed, or 0</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a suitable plug-in context</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginException.html" title="class in ca.cgjennings.apps.arkham.plugins">PluginException</a></code> - if an exception occurs while accessing the plug-in</dd>
+<dd><code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginException.html" title="class in ca.cgjennings.apps.arkham.plugins">PluginException</a></code> - if an exception occurs while accessing the
+ plug-in</dd>
 </dl>
 </li>
 </ul>
@@ -232,7 +237,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd>a suitable plug-in context</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the plug-in is not being managed by
-     any installed plug-in</dd>
+ any installed plug-in</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/plugins/BundleInstaller.html#getInstalledPlugins--"><code>BundleInstaller.getInstalledPlugins()</code></a></dd>
 </dl>
@@ -245,10 +250,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>createDummyContext</h4>
 <pre>public static&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins">PluginContext</a>&nbsp;createDummyContext()</pre>
-<div class="block">Returns a dummy context. Dummy contexts are used when a script is
- run from a code editor. They provide basic functionality so that
- plug-in developers can test plug-in scripts by running the script
- directly from the editor.</div>
+<div class="block">Returns a dummy context. Dummy contexts are used when a script is run
+ from a code editor. They provide basic functionality so that plug-in
+ developers can test plug-in scripts by running the script directly from
+ the editor.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a dummy plug-in context</dd>
@@ -262,14 +267,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>createDummyContext</h4>
 <pre>public static&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins">PluginContext</a>&nbsp;createDummyContext(int&nbsp;modifiers)</pre>
-<div class="block">Returns a dummy context. Dummy contexts are used when a script is
- run from a code editor. They provide basic functionality so that
- plug-in developers can test plug-in scripts by running the script
- directly from the editor.</div>
+<div class="block">Returns a dummy context. Dummy contexts are used when a script is run
+ from a code editor. They provide basic functionality so that plug-in
+ developers can test plug-in scripts by running the script directly from
+ the editor.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>modifiers</code> - a bit mask of the modifier keys that the context will
-     report as being held down at activation</dd>
+ report as being held down at activation</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a dummy plug-in context</dd>
 </dl>
@@ -288,12 +293,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  managed by the specified installed plug-in instance.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>ip</code> - the installed plug-in whose plug-in instance will use the context</dd>
+<dd><code>ip</code> - the installed plug-in whose plug-in instance will use the
+ context</dd>
 <dd><code>p</code> - the plug-in to be probed</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a suitable plug-in context</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginException.html" title="class in ca.cgjennings.apps.arkham.plugins">PluginException</a></code> - if an exception occurs while accessing the plug-in</dd>
+<dd><code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginException.html" title="class in ca.cgjennings.apps.arkham.plugins">PluginException</a></code> - if an exception occurs while accessing the
+ plug-in</dd>
 </dl>
 </li>
 </ul>
@@ -304,9 +311,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>createProbeContext</h4>
 <pre>public static&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins">PluginContext</a>&nbsp;createProbeContext(<a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a>&nbsp;plugin)</pre>
-<div class="block">Creates a context suitable for probing a plug-in.
- The plug-in must be the active plug-in instance for an
- <a href="../../../../../ca/cgjennings/apps/arkham/plugins/InstalledPlugin.html" title="class in ca.cgjennings.apps.arkham.plugins"><code>InstalledPlugin</code></a>.</div>
+<div class="block">Creates a context suitable for probing a plug-in. The plug-in must be the
+ active plug-in instance for an <a href="../../../../../ca/cgjennings/apps/arkham/plugins/InstalledPlugin.html" title="class in ca.cgjennings.apps.arkham.plugins"><code>InstalledPlugin</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>plugin</code> - the plug-in to look up the installed plug-in for</dd>
@@ -314,7 +320,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd>a suitable plug-in context</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the plug-in is not being managed by
-     any installed plug-in</dd>
+ any installed plug-in</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/plugins/BundleInstaller.html#getInstalledPlugins--"><code>BundleInstaller.getInstalledPlugins()</code></a></dd>
 </dl>
@@ -340,12 +346,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li>Prev&nbsp;Class</li>
-<li>Next&nbsp;Class</li>
+<li><a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginError.html" title="class in ca.cgjennings.apps.arkham.plugins"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?ca/cgjennings/apps/arkham/plugins/PluginContextFactory.html" target="_top">Frames</a></li>

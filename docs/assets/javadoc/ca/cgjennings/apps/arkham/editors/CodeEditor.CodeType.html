@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -193,7 +195,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?i
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/editors/CodeEditor.CodeType.html#createNavigator-ca.cgjennings.apps.arkham.editors.CodeEditor-">createNavigator</a></span>(<a href="../../../../../ca/cgjennings/apps/arkham/editors/CodeEditor.html" title="class in ca.cgjennings.apps.arkham.editors">CodeEditor</a>&nbsp;ed)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../ca/cgjennings/ui/textedit/Tokenizer.html" title="class in ca.cgjennings.ui.textedit">Tokenizer</a></code></td>
+<td class="colFirst"><code>ca.cgjennings.ui.textedit.Tokenizer</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/editors/CodeEditor.CodeType.html#createTokenizer--">createTokenizer</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
@@ -223,8 +225,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?i
 <tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../ca/cgjennings/apps/arkham/editors/CodeEditor.CodeType.html" title="enum in ca.cgjennings.apps.arkham.editors">CodeEditor.CodeType</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/editors/CodeEditor.CodeType.html#normalize--">normalize</a></span>()</code>
-<div class="block">Normalizes the code type by converting variant types to
- their common base type.</div>
+<div class="block">Normalizes the code type by converting variant types to their common
+ base type.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
@@ -400,7 +402,7 @@ the order they are declared.</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>createTokenizer</h4>
-<pre>public&nbsp;<a href="../../../../../ca/cgjennings/ui/textedit/Tokenizer.html" title="class in ca.cgjennings.ui.textedit">Tokenizer</a>&nbsp;createTokenizer()</pre>
+<pre>public&nbsp;ca.cgjennings.ui.textedit.Tokenizer&nbsp;createTokenizer()</pre>
 </li>
 </ul>
 <a name="getAutomaticCharacterEscaping--">
@@ -464,22 +466,23 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>normalize</h4>
 <pre>public&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/editors/CodeEditor.CodeType.html" title="enum in ca.cgjennings.apps.arkham.editors">CodeEditor.CodeType</a>&nbsp;normalize()</pre>
-<div class="block">Normalizes the code type by converting variant types to
- their common base type. If the type is a more specialized
- version of an existing type, then this will return a simple
- common type. This is useful if you are interested in the basic
- file type and do not rely on information like the file extension,
- icon, or encoding. In particular, it is guaranteed that the
- tokenizer for the returned type will match the tokenizer of
- the original type.
+<div class="block">Normalizes the code type by converting variant types to their common
+ base type. If the type is a more specialized version of an existing
+ type, then this will return a simple common type. This is useful if
+ you are interested in the basic file type and do not rely on
+ information like the file extension, icon, or encoding. In
+ particular, it is guaranteed that the tokenizer for the returned type
+ will match the tokenizer of the original type.
 
- <p>This method performs the following conversions:
+ <p>
+ This method performs the following conversions:
  <ul>
  <li> All plain text types are converted to <code>PLAIN</code>.
  <li> All script types are converted to <code>JAVASCRIPT</code>.
  </ul>
 
- <p>Note that this list could change if new code types are added in
+ <p>
+ Note that this list could change if new code types are added in
  future versions):</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -549,6 +552,8 @@ for (CodeEditor.CodeType c : CodeEditor.CodeType.values())
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

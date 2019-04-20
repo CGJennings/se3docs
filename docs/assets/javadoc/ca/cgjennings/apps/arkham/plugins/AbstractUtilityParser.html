@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -111,8 +113,8 @@ var activeTableTab = "activeTableTab";
 <pre>public abstract class <span class="typeNameLabel">AbstractUtilityParser</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">This abstract base class is used to build tools that aid script code
- developers. It parses script files into an abstract syntax tree and
- then provides the tree root to the concrete subclass.</div>
+ developers. It parses script files into an abstract syntax tree and then
+ <a href="../../../../../ca/cgjennings/apps/arkham/plugins/AbstractUtilityParser.html#processTree-ca.cgjennings.script.mozilla.javascript.ast.AstRoot-">provides the tree root</a> to the concrete subclass.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -162,16 +164,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>protected abstract void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/AbstractUtilityParser.html#processTree-AstRoot-">processTree</a></span>(AstRoot&nbsp;rootNode)</code>
-<div class="block">This is called after each script is parsed to allow the utility
- access to the resulting abstract syntax tree.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/AbstractUtilityParser.html#processTree-ca.cgjennings.script.mozilla.javascript.ast.AstRoot-">processTree</a></span>(ca.cgjennings.script.mozilla.javascript.ast.AstRoot&nbsp;rootNode)</code>
+<div class="block">This is called after each script is parsed to allow the utility access to
+ the resulting abstract syntax tree.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/AbstractUtilityParser.html#setErrorReporter-ErrorReporter-">setErrorReporter</a></span>(ErrorReporter&nbsp;reporter)</code>
-<div class="block">Sets an error reporter that will be used to collect information about
- any syntax errors and warnings that are found during parsing.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/AbstractUtilityParser.html#setErrorReporter-ca.cgjennings.script.mozilla.javascript.ErrorReporter-">setErrorReporter</a></span>(ca.cgjennings.script.mozilla.javascript.ErrorReporter&nbsp;reporter)</code>
+<div class="block">Sets an error reporter that will be used to collect information about any
+ syntax errors and warnings that are found during parsing.</div>
 </td>
 </tr>
 </table>
@@ -228,39 +230,39 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
-<a name="processTree-AstRoot-">
+<a name="processTree-ca.cgjennings.script.mozilla.javascript.ast.AstRoot-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>processTree</h4>
-<pre>protected abstract&nbsp;void&nbsp;processTree(AstRoot&nbsp;rootNode)</pre>
-<div class="block">This is called after each script is parsed to allow the utility
- access to the resulting abstract syntax tree. In the event of
- a serious parser error that prevents the tree from being generated,
- the root node will be <code>null</code>.</div>
+<pre>protected abstract&nbsp;void&nbsp;processTree(ca.cgjennings.script.mozilla.javascript.ast.AstRoot&nbsp;rootNode)</pre>
+<div class="block">This is called after each script is parsed to allow the utility access to
+ the resulting abstract syntax tree. In the event of a serious parser
+ error that prevents the tree from being generated, the root node will be
+ <code>null</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>rootNode</code> - the root of the parse tree</dd>
 </dl>
 </li>
 </ul>
-<a name="setErrorReporter-ErrorReporter-">
+<a name="setErrorReporter-ca.cgjennings.script.mozilla.javascript.ErrorReporter-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>setErrorReporter</h4>
-<pre>protected&nbsp;void&nbsp;setErrorReporter(ErrorReporter&nbsp;reporter)</pre>
-<div class="block">Sets an error reporter that will be used to collect information about
- any syntax errors and warnings that are found during parsing. If no
- error reporter is set explicitly, then a new <a href="../../../../../ca/cgjennings/apps/arkham/plugins/NoOpErrorReporter.html" title="class in ca.cgjennings.apps.arkham.plugins"><code>NoOpErrorReporter</code></a>
- will be set automatically the first time that a script is
+<pre>protected&nbsp;void&nbsp;setErrorReporter(ca.cgjennings.script.mozilla.javascript.ErrorReporter&nbsp;reporter)</pre>
+<div class="block">Sets an error reporter that will be used to collect information about any
+ syntax errors and warnings that are found during parsing. If no error
+ reporter is set explicitly, then a new <a href="../../../../../ca/cgjennings/apps/arkham/plugins/NoOpErrorReporter.html" title="class in ca.cgjennings.apps.arkham.plugins"><code>NoOpErrorReporter</code></a> will be
+ set automatically the first time that a script is
  <a href="../../../../../ca/cgjennings/apps/arkham/plugins/AbstractUtilityParser.html#parse-java.lang.String-">parsed</a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>reporter</code> - the reporter to use; instances of <code>ErrorCollector</code>
-     will have the IDE versions of the error methods called</dd>
+ will have the IDE versions of the error methods called</dd>
 </dl>
 </li>
 </ul>
@@ -284,6 +286,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

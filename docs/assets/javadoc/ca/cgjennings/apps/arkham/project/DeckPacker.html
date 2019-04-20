@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -106,10 +108,9 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">DeckPacker</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block">A deck packer lays out a deck of game components automatically.
- The layout algorithm is a modified bin-packing algorithm that balances
- producing a minimal page count against grouping the objects in the deck
- sensibly.</div>
+<div class="block">A deck packer lays out a deck of game components automatically. The layout
+ algorithm is a modified bin-packing algorithm that balances producing a
+ minimal page count against grouping the objects in the deck sensibly.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.1</dd>
@@ -209,7 +210,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/project/DeckPacker.html#add-java.io.File-">add</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;gcFile)</code>
-<div class="block">Adds one copy of a game component stored in a file to the resulting layout.</div>
+<div class="block">Adds one copy of a game component stored in a file to the resulting
+ layout.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -314,8 +316,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/project/DeckPacker.html#setGroupingEnabled-boolean-">setGroupingEnabled</a></span>(boolean&nbsp;groupCardPairs)</code>
-<div class="block">Sets whether front and back faces should be grouped
- together.</div>
+<div class="block">Sets whether front and back faces should be grouped together.</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
@@ -365,10 +366,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>layoutDebug</h4>
 <pre>protected&nbsp;boolean layoutDebug</pre>
-<div class="block">Subclasses may set this to <code>true</code> during testing.
- If the subclass uses <a href="../../../../../ca/cgjennings/apps/arkham/project/DeckPacker.html#place-ca.cgjennings.apps.arkham.deck.Deck-int-ca.cgjennings.apps.arkham.project.DeckPacker.Card-double-double-"><code>place(ca.cgjennings.apps.arkham.deck.Deck, int, ca.cgjennings.apps.arkham.project.DeckPacker.Card, double, double)</code></a> to add cards, then a
- sequence of images will be displayed showing how each card
- is placed.</div>
+<div class="block">Subclasses may set this to <code>true</code> during testing. If the
+ subclass uses <a href="../../../../../ca/cgjennings/apps/arkham/project/DeckPacker.html#place-ca.cgjennings.apps.arkham.deck.Deck-int-ca.cgjennings.apps.arkham.project.DeckPacker.Card-double-double-"><code>place(ca.cgjennings.apps.arkham.deck.Deck, int, ca.cgjennings.apps.arkham.project.DeckPacker.Card, double, double)</code></a> to add cards, then a sequence of images will
+ be displayed showing how each card is placed.</div>
 </li>
 </ul>
 <a name="QUALITY_FIT">
@@ -414,10 +414,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>DeckPacker</h4>
 <pre>public&nbsp;DeckPacker()</pre>
-<div class="block">Creates a new deck packer. The layout initially contains no game components
- and will target PA4-sized paper (assuming that paper size is installed
- in the application settings, which it is unless explicitly removed).
- PA4 layouts can be printed on both North American letter and ISO A4 paper.</div>
+<div class="block">Creates a new deck packer. The layout initially contains no game
+ components and will target PA4-sized paper (assuming that paper size is
+ installed in the application settings, which it is unless explicitly
+ removed). PA4 layouts can be printed on both North American letter and
+ ISO A4 paper.</div>
 </li>
 </ul>
 </li>
@@ -435,13 +436,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>add</h4>
 <pre>public&nbsp;boolean&nbsp;add(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;gcFile)</pre>
-<div class="block">Adds one copy of a game component stored in a file to the resulting layout.
- This is a convenience for <code>add( gcFile, 1 )</code>.</div>
+<div class="block">Adds one copy of a game component stored in a file to the resulting
+ layout. This is a convenience for <code>add( gcFile, 1 )</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>gcFile</code> - the file containing the game component</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the game component file is <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the game component file is
+ <code>null</code></dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/project/DeckPacker.html#add-java.io.File-int-"><code>add(java.io.File, int)</code></a></dd>
 </dl>
@@ -457,20 +459,21 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                    int&nbsp;copies)</pre>
 <div class="block">Reads a game component from a file and adds it to the resulting layout.
  Some kinds of components, such as other decks, cannot be added to a deck.
- Adding components of this type will have no effect on the resulting layout,
- and this method will return <code>false</code> to signal that the component
- was skipped. If an error occurs while loading the file, an error message
- will be displayed, the file will be skipped, and this method will return
- <code>false</code>.</div>
+ Adding components of this type will have no effect on the resulting
+ layout, and this method will return <code>false</code> to signal that the
+ component was skipped. If an error occurs while loading the file, an
+ error message will be displayed, the file will be skipped, and this
+ method will return <code>false</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>gcFile</code> - the file containing the game component</dd>
 <dd><code>copies</code> - the number of copies of the game component to include</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the file has been successfully added and the
-     layout will change as a result</dd>
+ layout will change as a result</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the game component file is <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the game component file is
+ <code>null</code></dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the number of copies is negative</dd>
 </dl>
 </li>
@@ -482,8 +485,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>addCard</h4>
 <pre>protected final&nbsp;void&nbsp;addCard(<a href="../../../../../ca/cgjennings/apps/arkham/project/DeckPacker.Card.html" title="class in ca.cgjennings.apps.arkham.project">DeckPacker.Card</a>&nbsp;c)</pre>
-<div class="block">Adds a card to the internal list of cards to include in the layout.
- Can be used by subclasses that override <a href="../../../../../ca/cgjennings/apps/arkham/project/DeckPacker.html#addImpl-java.io.File-ca.cgjennings.apps.arkham.component.GameComponent-"><code>addImpl(java.io.File, ca.cgjennings.apps.arkham.component.GameComponent)</code></a>
+<div class="block">Adds a card to the internal list of cards to include in the layout. Can
+ be used by subclasses that override
+ <a href="../../../../../ca/cgjennings/apps/arkham/project/DeckPacker.html#addImpl-java.io.File-ca.cgjennings.apps.arkham.component.GameComponent-"><code>addImpl(java.io.File, ca.cgjennings.apps.arkham.component.GameComponent)</code></a>
  to post the <a href="../../../../../ca/cgjennings/apps/arkham/project/DeckPacker.Card.html" title="class in ca.cgjennings.apps.arkham.project"><code>DeckPacker.Card</code></a> groupings that they create. Cards added with
  this method will later be returned from
  <a href="../../../../../ca/cgjennings/apps/arkham/project/DeckPacker.html#getSortedCards-java.util.Comparator-"><code>getSortedCards(java.util.Comparator)</code></a>.</div>
@@ -501,9 +505,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>addImpl</h4>
 <pre>protected&nbsp;void&nbsp;addImpl(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;f,
                        <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>&nbsp;gc)</pre>
-<div class="block">Called by <a href="../../../../../ca/cgjennings/apps/arkham/project/DeckPacker.html#add-java.io.File-"><code>add(java.io.File)</code></a> to add a loaded game component to the layout.
- This method takes incoming game components and adds <a href="../../../../../ca/cgjennings/apps/arkham/project/DeckPacker.Card.html" title="class in ca.cgjennings.apps.arkham.project"><code>DeckPacker.Card</code></a> objects
- to the layout based on the game component's sheets.</div>
+<div class="block">Called by <a href="../../../../../ca/cgjennings/apps/arkham/project/DeckPacker.html#add-java.io.File-"><code>add(java.io.File)</code></a> to add a loaded game component to the layout. This
+ method takes incoming game components and adds <a href="../../../../../ca/cgjennings/apps/arkham/project/DeckPacker.Card.html" title="class in ca.cgjennings.apps.arkham.project"><code>DeckPacker.Card</code></a> objects to
+ the layout based on the game component's sheets.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>f</code> - the file associated with the game component</dd>
@@ -520,9 +524,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>cancel</h4>
 <pre>public final&nbsp;void&nbsp;cancel()</pre>
-<div class="block">Sets the cancellation flag. If a deck is being laid out, this will
- cause the layout algorithm to throw an exception. It can be called
- in response to user requests to cancel the layout operation.</div>
+<div class="block">Sets the cancellation flag. If a deck is being laid out, this will cause
+ the layout algorithm to throw an exception. It can be called in response
+ to user requests to cancel the layout operation.</div>
 </li>
 </ul>
 <a name="createLayout--">
@@ -532,8 +536,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>createLayout</h4>
 <pre>public&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/deck/Deck.html" title="class in ca.cgjennings.apps.arkham.deck">Deck</a>&nbsp;createLayout()</pre>
-<div class="block">Create a deck layout using the current cards and layout options.
- This method creates and returns a new deck.</div>
+<div class="block">Create a deck layout using the current cards and layout options. This
+ method creates and returns a new deck.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a new deck object containing the laid out cards</dd>
@@ -547,9 +551,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>createLayout</h4>
 <pre>public&nbsp;void&nbsp;createLayout(<a href="../../../../../ca/cgjennings/apps/arkham/deck/DeckEditor.html" title="class in ca.cgjennings.apps.arkham.deck">DeckEditor</a>&nbsp;deckEditor)</pre>
-<div class="block">Create a deck layout using the current cards and layout options.
- This method uses the deck of the supplied editor. The deck is expected to
- be new and empty.</div>
+<div class="block">Create a deck layout using the current cards and layout options. This
+ method uses the deck of the supplied editor. The deck is expected to be
+ new and empty.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>deckEditor</code> - the deck that will contain the laid out cards</dd>
@@ -580,8 +584,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Returns the paper type used to create the layout.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the paper type that determines the size of pages and margin
-     in the layout</dd>
+<dd>the paper type that determines the size of pages and margin in
+ the layout</dd>
 </dl>
 </li>
 </ul>
@@ -592,14 +596,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getSortedCards</h4>
 <pre>protected&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/project/DeckPacker.Card.html" title="class in ca.cgjennings.apps.arkham.project">DeckPacker.Card</a>[]&nbsp;getSortedCards(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util">Comparator</a>&lt;<a href="../../../../../ca/cgjennings/apps/arkham/project/DeckPacker.Card.html" title="class in ca.cgjennings.apps.arkham.project">DeckPacker.Card</a>&gt;&nbsp;comp)</pre>
-<div class="block">Returns an array of the cards that have been added for layout.
- If the comparator <code>comp</code> is non-<code>null</code>
- then it will be used to determine the sort order.
- Otherwise, a default sort order is used based on <code>Card</code>'s
- <code>Comparable</code> implementation. The default order is suited
- to the base implementation's bin packing algorithm.
- Subclasses may substitute a different comparison function suited for
- other algorithms.</div>
+<div class="block">Returns an array of the cards that have been added for layout. If the
+ comparator <code>comp</code> is non-<code>null</code> then it will be
+ used to determine the sort order. Otherwise, a default sort order is used
+ based on <code>Card</code>'s <code>Comparable</code> implementation. The
+ default order is suited to the base implementation's bin packing
+ algorithm. Subclasses may substitute a different comparison function
+ suited for other algorithms.</div>
 </li>
 </ul>
 <a name="isCancelled--">
@@ -659,15 +662,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>protected&nbsp;void&nbsp;layout(<a href="../../../../../ca/cgjennings/apps/arkham/deck/Deck.html" title="class in ca.cgjennings.apps.arkham.deck">Deck</a>&nbsp;deck)</pre>
 <div class="block">Lays out a prepared deck and set of cards. Subclasses may override this
  to use a different bin packing algorithm. The passed-in deck is the
- destination for the layout, and cannot be <code>null</code>.
- The paper size for the layout can be obtained by calling
+ destination for the layout, and cannot be <code>null</code>. The paper
+ size for the layout can be obtained by calling
  <code>deck.getPaperProperties()</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>deck</code> - the deck that should contain the details of the layout</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CancellationException.html?is-external=true" title="class or interface in java.util.concurrent">CancellationException</a></code> - if the cancellation flag was set while
-     computing the card layout</dd>
+ computing the card layout</dd>
 </dl>
 </li>
 </ul>
@@ -686,7 +689,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>deck</code> - the deck to place the component in</dd>
-<dd><code>pageIndex</code> - the index of the page within the deck; if the page does not exist it is created</dd>
+<dd><code>pageIndex</code> - the index of the page within the deck; if the page does
+ not exist it is created</dd>
 <dd><code>c</code> - the card to add</dd>
 <dd><code>x</code> - the x-coordinate to place the card at</dd>
 <dd><code>y</code> - the y-coordinate to place the card at</dd>
@@ -701,9 +705,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>prepareCard</h4>
 <pre>protected&nbsp;void&nbsp;prepareCard(<a href="../../../../../ca/cgjennings/apps/arkham/project/DeckPacker.Card.html" title="class in ca.cgjennings.apps.arkham.project">DeckPacker.Card</a>&nbsp;c)</pre>
 <div class="block">This method prepares cards for layout once all of the layout requirements
- are known. The base class fills in the width, height, and area for a card;
- if not making a double-sided deck, then the two faces of a double-sided
- card are treated as a single unit and the sizes are set appropriately.</div>
+ are known. The base class fills in the width, height, and area for a
+ card; if not making a double-sided deck, then the two faces of a
+ double-sided card are treated as a single unit and the sizes are set
+ appropriately.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>c</code> - the card to prepare</dd>
@@ -717,13 +722,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>setGroupingEnabled</h4>
 <pre>public&nbsp;void&nbsp;setGroupingEnabled(boolean&nbsp;groupCardPairs)</pre>
-<div class="block">Sets whether front and back faces should be grouped
- together.
- This has no effect if double-sided layout is enabled.</div>
+<div class="block">Sets whether front and back faces should be grouped together. This has no
+ effect if double-sided layout is enabled.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>groupCardPairs</code> - if <code>true</code>, front and back faces placed
-    side-by-side will be placed into a group</dd>
+ side-by-side will be placed into a group</dd>
 </dl>
 </li>
 </ul>
@@ -735,10 +739,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>setLayoutDoubleSided</h4>
 <pre>public&nbsp;void&nbsp;setLayoutDoubleSided(boolean&nbsp;doubleSided)</pre>
 <div class="block">Sets whether the layout will be designed for double-sided printing.
- Double-sided layouts place the front face of a component on an odd-numbered
- page, and the matching back face on the following page. The layout order
- of the following page is flipped horizontally so that they will line up
- correctly when printed.</div>
+ Double-sided layouts place the front face of a component on an
+ odd-numbered page, and the matching back face on the following page. The
+ layout order of the following page is flipped horizontally so that they
+ will line up correctly when printed.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>doubleSided</code> - if <code>true</code>, a double-sided layout is created</dd>
@@ -752,15 +756,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>setLayoutQuality</h4>
 <pre>public&nbsp;void&nbsp;setLayoutQuality(int&nbsp;quality)</pre>
-<div class="block">Sets the layout algorithm quality setting. The quality setting
- is a value between 0 and 9 inclusive, where lower values favour
- speed over quality, and higher values favour quality over speed.
- Higher quality layouts try harder to pack components more neatly
- and/or into a smaller number of pages.</div>
+<div class="block">Sets the layout algorithm quality setting. The quality setting is a value
+ between 0 and 9 inclusive, where lower values favour speed over quality,
+ and higher values favour quality over speed. Higher quality layouts try
+ harder to pack components more neatly and/or into a smaller number of
+ pages.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>quality</code> - the quality setting, from <a href="../../../../../ca/cgjennings/apps/arkham/project/DeckPacker.html#QUALITY_SPEED"><code>QUALITY_SPEED</code></a>
-   to <a href="../../../../../ca/cgjennings/apps/arkham/project/DeckPacker.html#QUALITY_FIT"><code>QUALITY_FIT</code></a></dd>
+<dd><code>quality</code> - the quality setting, from <a href="../../../../../ca/cgjennings/apps/arkham/project/DeckPacker.html#QUALITY_SPEED"><code>QUALITY_SPEED</code></a> to
+ <a href="../../../../../ca/cgjennings/apps/arkham/project/DeckPacker.html#QUALITY_FIT"><code>QUALITY_FIT</code></a></dd>
 </dl>
 </li>
 </ul>
@@ -776,7 +780,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>paper</code> - the paper type that determines the size of pages and margin
-     in the layout</dd>
+ in the layout</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the paper is <code>null</code></dd>
 </dl>
@@ -802,6 +806,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

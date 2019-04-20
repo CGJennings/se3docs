@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -139,23 +141,24 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTextFiel
  key combination. A typical application is allowing the user to define
  accelerator keys for commands.
 
- <p>By default, the field limits acceptable keys to those that make sense
- as accelerators: function keys, or other keys with at least one modifier
- (Ctrl, Alt, AltGr, or Meta). This filtering can be disabled.
- Subclasses may also implement their own policy for accepting or rejecting
- key strokes by overriding <a href="../../../ca/cgjennings/ui/JKeyStrokeField.html#filterKeyStroke-javax.swing.KeyStroke-"><code>filterKeyStroke(javax.swing.KeyStroke)</code></a>.
+ <p>
+ By default, the field limits acceptable keys to those that make sense as
+ accelerators: function keys, or other keys with at least one modifier (Ctrl,
+ Alt, AltGr, or Meta). This filtering can be disabled. Subclasses may also
+ implement their own policy for accepting or rejecting key strokes by
+ overriding <a href="../../../ca/cgjennings/ui/JKeyStrokeField.html#filterKeyStroke-javax.swing.KeyStroke-"><code>filterKeyStroke(javax.swing.KeyStroke)</code></a>.
 
- <p>Rejected key strokes are displayed to the user for as long as the
- key stroke is held down using the colours defined for selected text.
- (By default, this will display the rejected stroke in red.)
- When the rejected key stroke is released, the text will return to
- the last valid key stroke.
+ <p>
+ Rejected key strokes are displayed to the user for as long as the key stroke
+ is held down using the colours defined for selected text. (By default, this
+ will display the rejected stroke in red.) When the rejected key stroke is
+ released, the text will return to the last valid key stroke.
 
- <p>The <code>null</code> value is valid if there is no key stroke, as when
+ <p>
+ The <code>null</code> value is valid if there is no key stroke, as when
  editing the key for a command with no accelerator assigned. This is displayed
- as an empty field. By default, the Delete and Back Space keys will
- all set the current key stroke to <code>null</code> if they are pressed
- unmodified.</div>
+ as an empty field. By default, the Delete and Back Space keys will all set
+ the current key stroke to <code>null</code> if they are pressed unmodified.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../serialized-form.html#ca.cgjennings.ui.JKeyStrokeField">Serialized Form</a></dd>
@@ -224,8 +227,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTextFiel
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/ui/JKeyStrokeField.html#PROPERTY_KEY_STROKE_CHANGE">PROPERTY_KEY_STROKE_CHANGE</a></span></code>
-<div class="block">The name of a vetoable property that is fired when the the key stroke
- is about to change.</div>
+<div class="block">The name of a vetoable property that is fired when the the key stroke is
+ about to change.</div>
 </td>
 </tr>
 </table>
@@ -248,14 +251,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTextFiel
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;javax.swing.<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing">JComponent</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#accessibleContext" title="class or interface in javax.swing">accessibleContext</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#listenerList" title="class or interface in javax.swing">listenerList</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#TOOL_TIP_TEXT_KEY" title="class or interface in javax.swing">TOOL_TIP_TEXT_KEY</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#ui" title="class or interface in javax.swing">ui</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#UNDEFINED_CONDITION" title="class or interface in javax.swing">UNDEFINED_CONDITION</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#WHEN_ANCESTOR_OF_FOCUSED_COMPONENT" title="class or interface in javax.swing">WHEN_ANCESTOR_OF_FOCUSED_COMPONENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#WHEN_FOCUSED" title="class or interface in javax.swing">WHEN_FOCUSED</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#WHEN_IN_FOCUSED_WINDOW" title="class or interface in javax.swing">WHEN_IN_FOCUSED_WINDOW</a></code></li>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#listenerList" title="class or interface in javax.swing">listenerList</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#TOOL_TIP_TEXT_KEY" title="class or interface in javax.swing">TOOL_TIP_TEXT_KEY</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#ui" title="class or interface in javax.swing">ui</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#UNDEFINED_CONDITION" title="class or interface in javax.swing">UNDEFINED_CONDITION</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#WHEN_ANCESTOR_OF_FOCUSED_COMPONENT" title="class or interface in javax.swing">WHEN_ANCESTOR_OF_FOCUSED_COMPONENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#WHEN_FOCUSED" title="class or interface in javax.swing">WHEN_FOCUSED</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#WHEN_IN_FOCUSED_WINDOW" title="class or interface in javax.swing">WHEN_IN_FOCUSED_WINDOW</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="fields.inherited.from.class.java.awt.Component">
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;java.awt.<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true" title="class or interface in java.awt">Component</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#BOTTOM_ALIGNMENT" title="class or interface in java.awt">BOTTOM_ALIGNMENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#CENTER_ALIGNMENT" title="class or interface in java.awt">CENTER_ALIGNMENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#LEFT_ALIGNMENT" title="class or interface in java.awt">LEFT_ALIGNMENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#RIGHT_ALIGNMENT" title="class or interface in java.awt">RIGHT_ALIGNMENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#TOP_ALIGNMENT" title="class or interface in java.awt">TOP_ALIGNMENT</a></code></li>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#accessibleContext" title="class or interface in java.awt">accessibleContext</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#BOTTOM_ALIGNMENT" title="class or interface in java.awt">BOTTOM_ALIGNMENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#CENTER_ALIGNMENT" title="class or interface in java.awt">CENTER_ALIGNMENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#LEFT_ALIGNMENT" title="class or interface in java.awt">LEFT_ALIGNMENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#RIGHT_ALIGNMENT" title="class or interface in java.awt">RIGHT_ALIGNMENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#TOP_ALIGNMENT" title="class or interface in java.awt">TOP_ALIGNMENT</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="fields.inherited.from.class.javax.swing.SwingConstants">
@@ -286,9 +289,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTextFiel
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/ui/JKeyStrokeField.html#JKeyStrokeField--">JKeyStrokeField</a></span>()</code>
-<div class="block">Creates a new key stroke field that filters out "normal" keys
- that wouldn't be used for a command accelerator
- (see <a href="../../../ca/cgjennings/ui/JKeyStrokeField.html#filterKeyStroke-javax.swing.KeyStroke-"><code>filterKeyStroke(javax.swing.KeyStroke)</code></a>).</div>
+<div class="block">Creates a new key stroke field that filters out "normal" keys that
+ wouldn't be used for a command accelerator (see
+ <a href="../../../ca/cgjennings/ui/JKeyStrokeField.html#filterKeyStroke-javax.swing.KeyStroke-"><code>filterKeyStroke(javax.swing.KeyStroke)</code></a>).</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -320,8 +323,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTextFiel
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/KeyStroke.html?is-external=true" title="class or interface in javax.swing">KeyStroke</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/ui/JKeyStrokeField.html#fromDisplayString-java.lang.String-">fromDisplayString</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;s)</code>
-<div class="block">Returns a key stroke for a string that uses the same syntax as the
- text display in a KeyStrokeField.</div>
+<div class="block">Returns a key stroke for a string that uses the same syntax as the text
+ display in a KeyStrokeField.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -333,16 +336,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTextFiel
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/ui/JKeyStrokeField.html#isClearKey-javax.swing.KeyStroke-">isClearKey</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/KeyStroke.html?is-external=true" title="class or interface in javax.swing">KeyStroke</a>&nbsp;ks)</code>
-<div class="block">Returns <code>true</code> if the key stroke should be interpreted
- as a request to clear the field.</div>
+<div class="block">Returns <code>true</code> if the key stroke should be interpreted as a
+ request to clear the field.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/ui/JKeyStrokeField.html#isDefaultClearKeyEnabled--">isDefaultClearKeyEnabled</a></span>()</code>
-<div class="block">If <code>true</code>, then the Delete and Back Space
- keys (without modifiers) will all be interpreted as a request
- to set the key stroke to <code>null</code>, clearing the field.</div>
+<div class="block">If <code>true</code>, then the Delete and Back Space keys (without
+ modifiers) will all be interpreted as a request to set the key stroke to
+ <code>null</code>, clearing the field.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -435,10 +438,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTextFiel
 <li class="blockList">
 <h4>PROPERTY_KEY_STROKE_CHANGE</h4>
 <pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> PROPERTY_KEY_STROKE_CHANGE</pre>
-<div class="block">The name of a vetoable property that is fired when the the key stroke
- is about to change. This allows listeners to listen for selection changes
- or filter out unacceptable keys (by vetoing the change). For example,
- a tool that configures command keys might veto keys that are already in use.</div>
+<div class="block">The name of a vetoable property that is fired when the the key stroke is
+ about to change. This allows listeners to listen for selection changes or
+ filter out unacceptable keys (by vetoing the change). For example, a tool
+ that configures command keys might veto keys that are already in use.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../constant-values.html#ca.cgjennings.ui.JKeyStrokeField.PROPERTY_KEY_STROKE_CHANGE">Constant Field Values</a></dd>
@@ -460,9 +463,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTextFiel
 <li class="blockList">
 <h4>JKeyStrokeField</h4>
 <pre>public&nbsp;JKeyStrokeField()</pre>
-<div class="block">Creates a new key stroke field that filters out "normal" keys
- that wouldn't be used for a command accelerator
- (see <a href="../../../ca/cgjennings/ui/JKeyStrokeField.html#filterKeyStroke-javax.swing.KeyStroke-"><code>filterKeyStroke(javax.swing.KeyStroke)</code></a>).</div>
+<div class="block">Creates a new key stroke field that filters out "normal" keys that
+ wouldn't be used for a command accelerator (see
+ <a href="../../../ca/cgjennings/ui/JKeyStrokeField.html#filterKeyStroke-javax.swing.KeyStroke-"><code>filterKeyStroke(javax.swing.KeyStroke)</code></a>).</div>
 </li>
 </ul>
 <a name="JKeyStrokeField-boolean-">
@@ -472,9 +475,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTextFiel
 <li class="blockList">
 <h4>JKeyStrokeField</h4>
 <pre>public&nbsp;JKeyStrokeField(boolean&nbsp;filterPlainKeyStrokes)</pre>
-<div class="block">Creates a new key stroke field. If filterPlainKeyStrokes is true,
- then keys that are not sensible as command accelerator keys will
- be rejected.</div>
+<div class="block">Creates a new key stroke field. If filterPlainKeyStrokes is true, then
+ keys that are not sensible as command accelerator keys will be rejected.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>filterPlainKeyStrokes</code> - </dd>
@@ -496,20 +498,20 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTextFiel
 <li class="blockList">
 <h4>filterKeyStroke</h4>
 <pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/KeyStroke.html?is-external=true" title="class or interface in javax.swing">KeyStroke</a>&nbsp;filterKeyStroke(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/KeyStroke.html?is-external=true" title="class or interface in javax.swing">KeyStroke</a>&nbsp;ks)</pre>
-<div class="block">Accepts, rejects, or transforms key strokes.
- This method is called when a key stroke has been completed. It may either
- return the key stroke (to accept it), substitute a different key stroke,
- or return <code>null</code> to reject the key stroke. Subclasses may override
- this to customize the set of keys that are accepted. The default behaviour
- is to reject key strokes if they consist only of modifiers or if
- they do not include at least one modifier other than Shift
- (except for the function keys, which are always accepted).</div>
+<div class="block">Accepts, rejects, or transforms key strokes. This method is called when a
+ key stroke has been completed. It may either return the key stroke (to
+ accept it), substitute a different key stroke, or return
+ <code>null</code> to reject the key stroke. Subclasses may override this
+ to customize the set of keys that are accepted. The default behaviour is
+ to reject key strokes if they consist only of modifiers or if they do not
+ include at least one modifier other than Shift (except for the function
+ keys, which are always accepted).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>ks</code> - the key stroke to filter</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>null</code> to reject the key stroke, otherwise the
-     (possibly replaced) key stroke</dd>
+ (possibly replaced) key stroke</dd>
 </dl>
 </li>
 </ul>
@@ -520,14 +522,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTextFiel
 <li class="blockList">
 <h4>fromDisplayString</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/KeyStroke.html?is-external=true" title="class or interface in javax.swing">KeyStroke</a>&nbsp;fromDisplayString(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;s)</pre>
-<div class="block">Returns a key stroke for a string that uses the same syntax as the
- text display in a KeyStrokeField.</div>
+<div class="block">Returns a key stroke for a string that uses the same syntax as the text
+ display in a KeyStrokeField.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>s</code> - the string to parse</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the key stroke that matches the string, or <code>null</code>
-     if the string could not be parsed</dd>
+<dd>the key stroke that matches the string, or <code>null</code> if
+ the string could not be parsed</dd>
 </dl>
 </li>
 </ul>
@@ -540,8 +542,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTextFiel
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/KeyStroke.html?is-external=true" title="class or interface in javax.swing">KeyStroke</a>&nbsp;getKeyStroke()</pre>
 <div class="block">Gets the current key stroke. This is the most recent of: the key stoke
  set by <a href="../../../ca/cgjennings/ui/JKeyStrokeField.html#setKeyStroke-javax.swing.KeyStroke-"><code>setKeyStroke(javax.swing.KeyStroke)</code></a>, or the last key stroke typed by the user
- and accepted by <a href="../../../ca/cgjennings/ui/JKeyStrokeField.html#filterKeyStroke-javax.swing.KeyStroke-"><code>filterKeyStroke(javax.swing.KeyStroke)</code></a>. This value can be <code>null</code>,
- meaning that no key stroke has been set.</div>
+ and accepted by <a href="../../../ca/cgjennings/ui/JKeyStrokeField.html#filterKeyStroke-javax.swing.KeyStroke-"><code>filterKeyStroke(javax.swing.KeyStroke)</code></a>. This value can be
+ <code>null</code>, meaning that no key stroke has been set.</div>
 </li>
 </ul>
 <a name="isClearKey-javax.swing.KeyStroke-">
@@ -551,10 +553,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTextFiel
 <li class="blockList">
 <h4>isClearKey</h4>
 <pre>protected&nbsp;boolean&nbsp;isClearKey(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/KeyStroke.html?is-external=true" title="class or interface in javax.swing">KeyStroke</a>&nbsp;ks)</pre>
-<div class="block">Returns <code>true</code> if the key stroke should be interpreted
- as a request to clear the field.
- Subclasses may override this to change the keys used by the default
- key clearing mechanism.</div>
+<div class="block">Returns <code>true</code> if the key stroke should be interpreted as a
+ request to clear the field. Subclasses may override this to change the
+ keys used by the default key clearing mechanism.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>ks</code> - the key stroke that may be a clear key</dd>
@@ -570,9 +571,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTextFiel
 <li class="blockList">
 <h4>isDefaultClearKeyEnabled</h4>
 <pre>public&nbsp;boolean&nbsp;isDefaultClearKeyEnabled()</pre>
-<div class="block">If <code>true</code>, then the Delete and Back Space
- keys (without modifiers) will all be interpreted as a request
- to set the key stroke to <code>null</code>, clearing the field.</div>
+<div class="block">If <code>true</code>, then the Delete and Back Space keys (without
+ modifiers) will all be interpreted as a request to set the key stroke to
+ <code>null</code>, clearing the field.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if clear keys are enabled</dd>
@@ -590,7 +591,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTextFiel
  filtering policy.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if filtering is disabled or the key stroke is accepted</dd>
+<dd><code>true</code> if filtering is disabled or the key stroke is
+ accepted</dd>
 </dl>
 </li>
 </ul>
@@ -601,9 +603,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTextFiel
 <li class="blockList">
 <h4>setDefaultClearKeyEnabled</h4>
 <pre>public&nbsp;void&nbsp;setDefaultClearKeyEnabled(boolean&nbsp;enable)</pre>
-<div class="block">Enables or disables the clear key mechanism. This interprets
- Delete or Back Space as an attempt to clear the field.
- When pressed (unmodified), the key stroke will be set to <code>null</code>.</div>
+<div class="block">Enables or disables the clear key mechanism. This interprets Delete or
+ Back Space as an attempt to clear the field. When pressed (unmodified),
+ the key stroke will be set to <code>null</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>enable</code> - if the default key clearing mechanism should be applied</dd>
@@ -617,10 +619,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTextFiel
 <li class="blockList">
 <h4>setKeyStroke</h4>
 <pre>public&nbsp;void&nbsp;setKeyStroke(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/KeyStroke.html?is-external=true" title="class or interface in javax.swing">KeyStroke</a>&nbsp;ks)</pre>
-<div class="block">Sets the current key stroke to ks. Note that this may be used to set
- the keystroke to a value that would otherwise be invalid. The value
- <code>null</code> may be used to indicate that no key stroke is set,
- and will be displayed to the user as an empty string.</div>
+<div class="block">Sets the current key stroke to ks. Note that this may be used to set the
+ keystroke to a value that would otherwise be invalid. The value
+ <code>null</code> may be used to indicate that no key stroke is set, and
+ will be displayed to the user as an empty string.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>ks</code> - the key stroke to make current</dd>
@@ -636,12 +638,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTextFiel
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;toDisplayString(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/KeyStroke.html?is-external=true" title="class or interface in javax.swing">KeyStroke</a>&nbsp;ks)</pre>
 <div class="block">Converts a key stroke into a string with the same format used to display
  key strokes by a KeyStrokeField. This consists of a series of zero or
- more modifier key names with trailing plus symbols,
- followed by a key name for the non-modifier key
- (if any) as given by <code>KeyEvent.getKeyText()</code>.
- For example: Ctrl+Shift+ (only the control and shift modifiers are held),
- or Ctrl+Alt+X (two modifiers and the non-modifier X are held). A null
- key stroke is converted to the empty string.</div>
+ more modifier key names with trailing plus symbols, followed by a key
+ name for the non-modifier key (if any) as given by
+ <code>KeyEvent.getKeyText()</code>. For example: Ctrl+Shift+ (only the
+ control and shift modifiers are held), or Ctrl+Alt+X (two modifiers and
+ the non-modifier X are held). A null key stroke is converted to the empty
+ string.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>ks</code> - the key to convert</dd>
@@ -670,6 +672,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTextFiel
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

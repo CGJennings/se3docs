@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -112,8 +114,8 @@ var activeTableTab = "activeTableTab";
 <pre>public abstract class <span class="typeNameLabel">AbstractBaseTheme</span>
 extends <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in ca.cgjennings.ui.theme">Theme</a></pre>
 <div class="block">An abstract base class for creating new themes that are variants of the
- built-in themes. Methods are provided that allow you to create a theme
- with an alternative colour scheme with a minimum of effort.</div>
+ built-in themes. Methods are provided that allow you to create a theme with
+ an alternative colour scheme with a minimum of effort.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -177,8 +179,8 @@ extends <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in 
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>protected abstract void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/ui/theme/AbstractBaseTheme.html#initializeTheme--">initializeTheme</a></span>()</code>
-<div class="block">This is called to allow subclasses to customize the theme by calling
- the base theme's various protected "set" methods.</div>
+<div class="block">This is called to allow subclasses to customize the theme by calling the
+ base theme's various protected "set" methods.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -192,16 +194,16 @@ extends <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in 
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/ui/theme/AbstractBaseTheme.html#modifyLookAndFeelDefaults-javax.swing.UIDefaults-">modifyLookAndFeelDefaults</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/UIDefaults.html?is-external=true" title="class or interface in javax.swing">UIDefaults</a>&nbsp;defaults)</code>
-<div class="block">This method is called after the look and feel has been instantiated
- but before it has been installed and allows you to modify the look
- and feel's default properties.</div>
+<div class="block">This method is called after the look and feel has been instantiated but
+ before it has been installed and allows you to modify the look and feel's
+ default properties.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/ui/theme/AbstractBaseTheme.html#modifyManagerDefaults-javax.swing.UIDefaults-">modifyManagerDefaults</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/UIDefaults.html?is-external=true" title="class or interface in javax.swing">UIDefaults</a>&nbsp;defaults)</code>
-<div class="block">This method is called prior to instantiating the look and feel and
- allows you to modify the UI manager's default properties.</div>
+<div class="block">This method is called prior to instantiating the look and feel and allows
+ you to modify the UI manager's default properties.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -269,15 +271,15 @@ extends <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in 
 <tr id="i15" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/ui/theme/AbstractBaseTheme.html#setDocumentBackdropPainter-javax.swing.Painter-">setDocumentBackdropPainter</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Painter.html?is-external=true" title="class or interface in javax.swing">Painter</a>&nbsp;backdrop)</code>
-<div class="block">Sets the painter used to draw the backdrop of the document
- space when no documents are open.</div>
+<div class="block">Sets the painter used to draw the backdrop of the document space when no
+ documents are open.</div>
 </td>
 </tr>
 <tr id="i16" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/ui/theme/AbstractBaseTheme.html#setFocusRingBase-int-">setFocusRingBase</a></span>(int&nbsp;argb)</code>
-<div class="block">Sets the base colour used for the ring drawn around the control that
- has input focus.</div>
+<div class="block">Sets the base colour used for the ring drawn around the control that has
+ input focus.</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
@@ -388,11 +390,12 @@ extends <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in 
 <li class="blockList">
 <h4>getLookAndFeelClassName</h4>
 <pre>public final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getLookAndFeelClassName()</pre>
-<div class="block">Returns the look and feel class name. Subclasses may override
- this to use a custom look and feel.
+<div class="block">Returns the look and feel class name. Subclasses may override this to use
+ a custom look and feel.
 
- <p><code>AbstractBaseTheme</code> makes this method final, so the
- underlying look and feel cannot be changed.</div>
+ <p>
+ <code>AbstractBaseTheme</code> makes this method final, so the underlying
+ look and feel cannot be changed.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../ca/cgjennings/ui/theme/Theme.html#getLookAndFeelClassName--">getLookAndFeelClassName</a></code>&nbsp;in class&nbsp;<code><a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in ca.cgjennings.ui.theme">Theme</a></code></dd>
@@ -408,8 +411,8 @@ extends <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in 
 <li class="blockList">
 <h4>initializeTheme</h4>
 <pre>protected abstract&nbsp;void&nbsp;initializeTheme()</pre>
-<div class="block">This is called to allow subclasses to customize the theme by calling
- the base theme's various protected "set" methods.</div>
+<div class="block">This is called to allow subclasses to customize the theme by calling the
+ base theme's various protected "set" methods.</div>
 </li>
 </ul>
 <a name="matchFont-java.lang.String-int-int-">
@@ -421,18 +424,19 @@ extends <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in 
 <pre>protected static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html?is-external=true" title="class or interface in java.awt">Font</a>&nbsp;matchFont(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;families,
                                 int&nbsp;style,
                                 int&nbsp;size)</pre>
-<div class="block">Returns the font that is the best match for the given specification.
- The font is specified using a comma-separated list of font family names.
- The first font family that is available will be used; if no font in the
- list is available, then a default sans serif font family is used.</div>
+<div class="block">Returns the font that is the best match for the given specification. The
+ font is specified using a comma-separated list of font family names. The
+ first font family that is available will be used; if no font in the list
+ is available, then a default sans serif font family is used.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>families</code> - a comma-separated list of font family names</dd>
-<dd><code>style</code> - the font style bitmap, as per <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html?is-external=true#Font-java.lang.String-int-int-" title="class or interface in java.awt"><code>Font.Font(java.lang.String, int, int)</code></a></dd>
+<dd><code>style</code> - the font style bitmap, as per
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html?is-external=true#Font-java.lang.String-int-int-" title="class or interface in java.awt"><code>Font.Font(java.lang.String, int, int)</code></a></dd>
 <dd><code>size</code> - the point size of the font</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a font with the specified size and style whose family is the
-   first family in the list that is installed on this system</dd>
+ first family in the list that is installed on this system</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../resources/ResourceKit.html#findAvailableFontFamily-java.lang.String-java.lang.String-"><code>ResourceKit.findAvailableFontFamily(java.lang.String, java.lang.String)</code></a></dd>
 </dl>
@@ -446,9 +450,9 @@ extends <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in 
 <h4>modifyLookAndFeelDefaults</h4>
 <pre>public final&nbsp;void&nbsp;modifyLookAndFeelDefaults(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/UIDefaults.html?is-external=true" title="class or interface in javax.swing">UIDefaults</a>&nbsp;defaults)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../ca/cgjennings/ui/theme/Theme.html#modifyLookAndFeelDefaults-javax.swing.UIDefaults-">Theme</a></code></span></div>
-<div class="block">This method is called after the look and feel has been instantiated
- but before it has been installed and allows you to modify the look
- and feel's default properties.</div>
+<div class="block">This method is called after the look and feel has been instantiated but
+ before it has been installed and allows you to modify the look and feel's
+ default properties.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../ca/cgjennings/ui/theme/Theme.html#modifyLookAndFeelDefaults-javax.swing.UIDefaults-">modifyLookAndFeelDefaults</a></code>&nbsp;in class&nbsp;<code><a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in ca.cgjennings.ui.theme">Theme</a></code></dd>
@@ -465,8 +469,8 @@ extends <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in 
 <h4>modifyManagerDefaults</h4>
 <pre>public final&nbsp;void&nbsp;modifyManagerDefaults(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/UIDefaults.html?is-external=true" title="class or interface in javax.swing">UIDefaults</a>&nbsp;defaults)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../ca/cgjennings/ui/theme/Theme.html#modifyManagerDefaults-javax.swing.UIDefaults-">Theme</a></code></span></div>
-<div class="block">This method is called prior to instantiating the look and feel and
- allows you to modify the UI manager's default properties.</div>
+<div class="block">This method is called prior to instantiating the look and feel and allows
+ you to modify the UI manager's default properties.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../ca/cgjennings/ui/theme/Theme.html#modifyManagerDefaults-javax.swing.UIDefaults-">modifyManagerDefaults</a></code>&nbsp;in class&nbsp;<code><a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in ca.cgjennings.ui.theme">Theme</a></code></dd>
@@ -484,8 +488,8 @@ extends <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in 
 <pre>protected&nbsp;void&nbsp;set(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
                    <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;value)</pre>
 <div class="block">Sets the value of an arbitrary look and feel default key. This can be
- used to customize aspects of the theme that cannot be modified via existing
- helper methods.</div>
+ used to customize aspects of the theme that cannot be modified via
+ existing helper methods.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - the key name of the default to modify</dd>
@@ -502,8 +506,8 @@ extends <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in 
 <li class="blockList">
 <h4>setBackgroundBase</h4>
 <pre>protected&nbsp;void&nbsp;setBackgroundBase(int&nbsp;argb)</pre>
-<div class="block">Sets the base background colour. This primarily affects the
- background colour of panels and menus.</div>
+<div class="block">Sets the base background colour. This primarily affects the background
+ colour of panels and menus.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>argb</code> - RGB value of the base colour to use</dd>
@@ -517,8 +521,8 @@ extends <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in 
 <li class="blockList">
 <h4>setConsoleBackground</h4>
 <pre>protected&nbsp;void&nbsp;setConsoleBackground(int&nbsp;argb)</pre>
-<div class="block">Sets the background colour of the script output console.
- The background colour is only used if no painter is set.</div>
+<div class="block">Sets the background colour of the script output console. The background
+ colour is only used if no painter is set.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>argb</code> - RGB value of the base colour to use</dd>
@@ -633,8 +637,8 @@ extends <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in 
 <li class="blockList">
 <h4>setDocumentBackdropPainter</h4>
 <pre>protected&nbsp;void&nbsp;setDocumentBackdropPainter(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Painter.html?is-external=true" title="class or interface in javax.swing">Painter</a>&nbsp;backdrop)</pre>
-<div class="block">Sets the painter used to draw the backdrop of the document
- space when no documents are open.</div>
+<div class="block">Sets the painter used to draw the backdrop of the document space when no
+ documents are open.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>backdrop</code> - the empty document space backdrop</dd>
@@ -648,8 +652,8 @@ extends <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in 
 <li class="blockList">
 <h4>setFocusRingBase</h4>
 <pre>protected&nbsp;void&nbsp;setFocusRingBase(int&nbsp;argb)</pre>
-<div class="block">Sets the base colour used for the ring drawn around the control that
- has input focus.</div>
+<div class="block">Sets the base colour used for the ring drawn around the control that has
+ input focus.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>argb</code> - RGB value of the base colour to use</dd>
@@ -677,8 +681,8 @@ extends <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in 
 <li class="blockList">
 <h4>setForegroundBase</h4>
 <pre>protected&nbsp;void&nbsp;setForegroundBase(int&nbsp;argb)</pre>
-<div class="block">Sets the base colour used for controls. This primarily affects the
- colour of buttons and combo boxes.</div>
+<div class="block">Sets the base colour used for controls. This primarily affects the colour
+ of buttons and combo boxes.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>argb</code> - RGB value of the base colour to use</dd>
@@ -784,8 +788,8 @@ extends <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in 
  used for the alpha value.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>obeyAlphaBits</code> - if true, colour values are interpreted as ARGB values
-   rather than RGB values</dd>
+<dd><code>obeyAlphaBits</code> - if true, colour values are interpreted as ARGB
+ values rather than RGB values</dd>
 </dl>
 </li>
 </ul>
@@ -809,6 +813,8 @@ extends <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in 
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -107,13 +109,14 @@ var activeTableTab = "activeTableTab";
 <pre>public class <span class="typeNameLabel">Base64</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">A utility class for working with Base64 encoding.
- 
- 
- <p>This is based on public domain
- code written by <a href="http://iharder.net/base64">Robert Harder</a>.
- The main change is that the inner classes have been renamed, mainly because my
- IDE wants to add imports for them whenever I use an InputStream or OutputStream.
- Since this refactoring might cause conflicts with other code that also uses this class,
+
+
+ <p>
+ This is based on public domain code written by
+ <a href="http://iharder.net/base64">Robert Harder</a>. The main change is
+ that the inner classes have been renamed, mainly because my IDE wants to add
+ imports for them whenever I use an InputStream or OutputStream. Since this
+ refactoring might cause conflicts with other code that also uses this class,
  this version has been moved to a different package.</div>
 </li>
 </ul>
@@ -137,16 +140,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/Base64.Base64InputStream.html" title="class in ca.cgjennings.io">Base64.Base64InputStream</a></span></code>
 <div class="block">A <a href="../../../ca/cgjennings/io/Base64.Base64InputStream.html" title="class in ca.cgjennings.io"><code>Base64.Base64InputStream</code></a> will read data from another
- <tt>java.io.InputStream</tt>, given in the constructor,
- and encode/decode to/from Base64 notation on the fly.</div>
+ <tt>java.io.InputStream</tt>, given in the constructor, and encode/decode
+ to/from Base64 notation on the fly.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/Base64.Base64OutputStream.html" title="class in ca.cgjennings.io">Base64.Base64OutputStream</a></span></code>
 <div class="block">A <a href="../../../ca/cgjennings/io/Base64.Base64OutputStream.html" title="class in ca.cgjennings.io"><code>Base64.Base64OutputStream</code></a> will write data to another
- <tt>java.io.OutputStream</tt>, given in the constructor,
- and encode/decode to/from Base64 notation on the fly.</div>
+ <tt>java.io.OutputStream</tt>, given in the constructor, and
+ encode/decode to/from Base64 notation on the fly.</div>
 </td>
 </tr>
 </table>
@@ -203,8 +206,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/Base64.html#URL_SAFE">URL_SAFE</a></span></code>
-<div class="block">Encode using Base64-like encoding that is URL- and Filename-safe as described
- in Section 4 of RFC3548: 
+<div class="block">Encode using Base64-like encoding that is URL- and Filename-safe as
+ described in Section 4 of RFC3548:
  <a href="http://www.faqs.org/rfcs/rfc3548.html">http://www.faqs.org/rfcs/rfc3548.html</a>.</div>
 </td>
 </tr>
@@ -226,8 +229,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/Base64.html#decode-byte:A-">decode</a></span>(byte[]&nbsp;source)</code>
-<div class="block">Low-level access to decoding ASCII characters in
- the form of a byte array.</div>
+<div class="block">Low-level access to decoding ASCII characters in the form of a byte
+ array.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -236,23 +239,23 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
       int&nbsp;off,
       int&nbsp;len,
       int&nbsp;options)</code>
-<div class="block">Low-level access to decoding ASCII characters in
- the form of a byte array.</div>
+<div class="block">Low-level access to decoding ASCII characters in the form of a byte
+ array.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/Base64.html#decode-java.lang.String-">decode</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;s)</code>
-<div class="block">Decodes data from Base64 notation, automatically
- detecting gzip-compressed data and decompressing it.</div>
+<div class="block">Decodes data from Base64 notation, automatically detecting
+ gzip-compressed data and decompressing it.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/Base64.html#decode-java.lang.String-int-">decode</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;s,
       int&nbsp;options)</code>
-<div class="block">Decodes data from Base64 notation, automatically
- detecting gzip-compressed data and decompressing it.</div>
+<div class="block">Decodes data from Base64 notation, automatically detecting
+ gzip-compressed data and decompressing it.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -265,8 +268,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/Base64.html#decodeFromFile-java.lang.String-">decodeFromFile</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)</code>
-<div class="block">Convenience method for reading a base64-encoded
- file and decoding it.</div>
+<div class="block">Convenience method for reading a base64-encoded file and decoding it.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -279,8 +281,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/Base64.html#decodeToObject-java.lang.String-">decodeToObject</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;encodedObject)</code>
-<div class="block">Attempts to decode Base64 data and deserialize a Java
- Object within.</div>
+<div class="block">Attempts to decode Base64 data and deserialize a Java Object within.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
@@ -288,24 +289,23 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/Base64.html#decodeToObject-java.lang.String-int-java.lang.ClassLoader-">decodeToObject</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;encodedObject,
               int&nbsp;options,
               <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassLoader.html?is-external=true" title="class or interface in java.lang">ClassLoader</a>&nbsp;loader)</code>
-<div class="block">Attempts to decode Base64 data and deserialize a Java
- Object within.</div>
+<div class="block">Attempts to decode Base64 data and deserialize a Java Object within.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/Base64.html#encode-java.nio.ByteBuffer-java.nio.ByteBuffer-">encode</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;raw,
       <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;encoded)</code>
-<div class="block">Performs Base64 encoding on the <code>raw</code> ByteBuffer,
- writing it to the <code>encoded</code> ByteBuffer.</div>
+<div class="block">Performs Base64 encoding on the <code>raw</code> ByteBuffer, writing it
+ to the <code>encoded</code> ByteBuffer.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/Base64.html#encode-java.nio.ByteBuffer-java.nio.CharBuffer-">encode</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;raw,
       <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/CharBuffer.html?is-external=true" title="class or interface in java.nio">CharBuffer</a>&nbsp;encoded)</code>
-<div class="block">Performs Base64 encoding on the <code>raw</code> ByteBuffer,
- writing it to the <code>encoded</code> CharBuffer.</div>
+<div class="block">Performs Base64 encoding on the <code>raw</code> ByteBuffer, writing it
+ to the <code>encoded</code> CharBuffer.</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
@@ -341,8 +341,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i15" class="rowColor">
 <td class="colFirst"><code>static byte[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/Base64.html#encodeBytesToBytes-byte:A-">encodeBytesToBytes</a></span>(byte[]&nbsp;source)</code>
-<div class="block">Similar to <a href="../../../ca/cgjennings/io/Base64.html#encodeBytes-byte:A-"><code>encodeBytes(byte[])</code></a> but returns
- a byte array instead of instantiating a String.</div>
+<div class="block">Similar to <a href="../../../ca/cgjennings/io/Base64.html#encodeBytes-byte:A-"><code>encodeBytes(byte[])</code></a> but returns a byte array instead
+ of instantiating a String.</div>
 </td>
 </tr>
 <tr id="i16" class="altColor">
@@ -351,8 +351,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                   int&nbsp;off,
                   int&nbsp;len,
                   int&nbsp;options)</code>
-<div class="block">Similar to <a href="../../../ca/cgjennings/io/Base64.html#encodeBytes-byte:A-int-int-int-"><code>encodeBytes(byte[], int, int, int)</code></a> but returns
- a byte array instead of instantiating a String.</div>
+<div class="block">Similar to <a href="../../../ca/cgjennings/io/Base64.html#encodeBytes-byte:A-int-int-int-"><code>encodeBytes(byte[], int, int, int)</code></a> but returns a byte
+ array instead of instantiating a String.</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
@@ -365,23 +365,22 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i18" class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/Base64.html#encodeFromFile-java.lang.String-">encodeFromFile</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)</code>
-<div class="block">Convenience method for reading a binary file
- and base64-encoding it.</div>
+<div class="block">Convenience method for reading a binary file and base64-encoding it.</div>
 </td>
 </tr>
 <tr id="i19" class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/Base64.html#encodeObject-java.io.Serializable-">encodeObject</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>&nbsp;serializableObject)</code>
-<div class="block">Serializes an object and returns the Base64-encoded
- version of that serialized object.</div>
+<div class="block">Serializes an object and returns the Base64-encoded version of that
+ serialized object.</div>
 </td>
 </tr>
 <tr id="i20" class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/Base64.html#encodeObject-java.io.Serializable-int-">encodeObject</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>&nbsp;serializableObject,
             int&nbsp;options)</code>
-<div class="block">Serializes an object and returns the Base64-encoded
- version of that serialized object.</div>
+<div class="block">Serializes an object and returns the Base64-encoded version of that
+ serialized object.</div>
 </td>
 </tr>
 <tr id="i21" class="rowColor">
@@ -504,12 +503,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>URL_SAFE</h4>
 <pre>public static final&nbsp;int URL_SAFE</pre>
-<div class="block">Encode using Base64-like encoding that is URL- and Filename-safe as described
- in Section 4 of RFC3548: 
+<div class="block">Encode using Base64-like encoding that is URL- and Filename-safe as
+ described in Section 4 of RFC3548:
  <a href="http://www.faqs.org/rfcs/rfc3548.html">http://www.faqs.org/rfcs/rfc3548.html</a>.
- It is important to note that data encoded this way is <em>not</em> officially valid Base64, 
- or at the very least should not be called Base64 without also specifying that it is
- was encoded using the URL- and Filename-safe dialect.</div>
+ It is important to note that data encoded this way is <em>not</em>
+ officially valid Base64, or at the very least should not be called Base64
+ without also specifying that it is was encoded using the URL- and
+ Filename-safe dialect.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../constant-values.html#ca.cgjennings.io.Base64.URL_SAFE">Constant Field Values</a></dd>
@@ -532,13 +532,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>decode</h4>
 <pre>public static&nbsp;byte[]&nbsp;decode(byte[]&nbsp;source)
                      throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Low-level access to decoding ASCII characters in
- the form of a byte array. <strong>Ignores GUNZIP option, if
- it's set.</strong> This is not generally a recommended method,
- although it is used internally as part of the decoding process.
- Special case: if len = 0, an empty array is returned. Still,
- if you need more speed and reduced memory footprint (and aren't
- gzipping), consider this method.</div>
+<div class="block">Low-level access to decoding ASCII characters in the form of a byte
+ array. <strong>Ignores GUNZIP option, if it's set.</strong> This is not
+ generally a recommended method, although it is used internally as part of
+ the decoding process. Special case: if len = 0, an empty array is
+ returned. Still, if you need more speed and reduced memory footprint (and
+ aren't gzipping), consider this method.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - The Base64 encoded data</dd>
@@ -562,13 +561,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                             int&nbsp;len,
                             int&nbsp;options)
                      throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Low-level access to decoding ASCII characters in
- the form of a byte array. <strong>Ignores GUNZIP option, if
- it's set.</strong> This is not generally a recommended method,
- although it is used internally as part of the decoding process.
- Special case: if len = 0, an empty array is returned. Still,
- if you need more speed and reduced memory footprint (and aren't
- gzipping), consider this method.</div>
+<div class="block">Low-level access to decoding ASCII characters in the form of a byte
+ array. <strong>Ignores GUNZIP option, if it's set.</strong> This is not
+ generally a recommended method, although it is used internally as part of
+ the decoding process. Special case: if len = 0, an empty array is
+ returned. Still, if you need more speed and reduced memory footprint (and
+ aren't gzipping), consider this method.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - The Base64 encoded data</dd>
@@ -592,8 +590,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>decode</h4>
 <pre>public static&nbsp;byte[]&nbsp;decode(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;s)
                      throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Decodes data from Base64 notation, automatically
- detecting gzip-compressed data and decompressing it.</div>
+<div class="block">Decodes data from Base64 notation, automatically detecting
+ gzip-compressed data and decompressing it.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>s</code> - the string to decode</dd>
@@ -615,8 +613,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public static&nbsp;byte[]&nbsp;decode(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;s,
                             int&nbsp;options)
                      throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Decodes data from Base64 notation, automatically
- detecting gzip-compressed data and decompressing it.</div>
+<div class="block">Decodes data from Base64 notation, automatically detecting
+ gzip-compressed data and decompressing it.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>s</code> - the string to decode</dd>
@@ -660,13 +658,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>decodeFromFile</h4>
 <pre>public static&nbsp;byte[]&nbsp;decodeFromFile(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)
                              throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Convenience method for reading a base64-encoded
- file and decoding it.
+<div class="block">Convenience method for reading a base64-encoded file and decoding it.
 
- <p>As of v 2.3, if there is a error,
- the method will throw an java.io.IOException. <b>This is new to v2.3!</b>
- In earlier versions, it just returned false, but
- in retrospect that's a pretty poor way to handle it.</p></div>
+ <p>
+ As of v 2.3, if there is a error, the method will throw an
+ java.io.IOException. <b>This is new to v2.3!</b>
+ In earlier versions, it just returned false, but in retrospect that's a
+ pretty poor way to handle it.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>filename</code> - Filename for reading encoded data</dd>
@@ -690,10 +688,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                          throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Convenience method for decoding data to a file.
 
- <p>As of v 2.3, if there is a error,
- the method will throw an java.io.IOException. <b>This is new to v2.3!</b>
- In earlier versions, it just returned false, but
- in retrospect that's a pretty poor way to handle it.</p></div>
+ <p>
+ As of v 2.3, if there is a error, the method will throw an
+ java.io.IOException. <b>This is new to v2.3!</b>
+ In earlier versions, it just returned false, but in retrospect that's a
+ pretty poor way to handle it.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>dataToDecode</code> - Base64-encoded data as a string</dd>
@@ -714,8 +713,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;decodeToObject(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;encodedObject)
                              throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                                     <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a></pre>
-<div class="block">Attempts to decode Base64 data and deserialize a Java
- Object within. Returns <tt>null</tt> if there was an error.</div>
+<div class="block">Attempts to decode Base64 data and deserialize a Java Object within.
+ Returns <tt>null</tt> if there was an error.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>encodedObject</code> - The Base64 data to decode</dd>
@@ -724,8 +723,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if encodedObject is null</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if there is a general error</dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a></code> - if the decoded object is of a
-         class that cannot be found by the JVM</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a></code> - if the decoded object is of a class that
+ cannot be found by the JVM</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>1.5</dd>
 </dl>
@@ -742,10 +741,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                                     <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassLoader.html?is-external=true" title="class or interface in java.lang">ClassLoader</a>&nbsp;loader)
                              throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                                     <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a></pre>
-<div class="block">Attempts to decode Base64 data and deserialize a Java
- Object within. Returns <tt>null</tt> if there was an error.
- If <tt>loader</tt> is not null, it will be the class loader
- used when deserializing.</div>
+<div class="block">Attempts to decode Base64 data and deserialize a Java Object within.
+ Returns <tt>null</tt> if there was an error. If <tt>loader</tt> is not
+ null, it will be the class loader used when deserializing.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>encodedObject</code> - The Base64 data to decode</dd>
@@ -756,8 +754,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if encodedObject is null</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if there is a general error</dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a></code> - if the decoded object is of a 
-         class that cannot be found by the JVM</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a></code> - if the decoded object is of a class that
+ cannot be found by the JVM</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.3.4</dd>
 </dl>
@@ -771,11 +769,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>encode</h4>
 <pre>public static&nbsp;void&nbsp;encode(<a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;raw,
                           <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;encoded)</pre>
-<div class="block">Performs Base64 encoding on the <code>raw</code> ByteBuffer,
- writing it to the <code>encoded</code> ByteBuffer.
- This is an experimental feature. Currently it does not
- pass along any options (such as <a href="../../../ca/cgjennings/io/Base64.html#DO_BREAK_LINES"><code>DO_BREAK_LINES</code></a>
- or <a href="../../../ca/cgjennings/io/Base64.html#GZIP"><code>GZIP</code></a>.</div>
+<div class="block">Performs Base64 encoding on the <code>raw</code> ByteBuffer, writing it
+ to the <code>encoded</code> ByteBuffer. This is an experimental feature.
+ Currently it does not pass along any options (such as
+ <a href="../../../ca/cgjennings/io/Base64.html#DO_BREAK_LINES"><code>DO_BREAK_LINES</code></a> or <a href="../../../ca/cgjennings/io/Base64.html#GZIP"><code>GZIP</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>raw</code> - input buffer</dd>
@@ -793,11 +790,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>encode</h4>
 <pre>public static&nbsp;void&nbsp;encode(<a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a>&nbsp;raw,
                           <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/CharBuffer.html?is-external=true" title="class or interface in java.nio">CharBuffer</a>&nbsp;encoded)</pre>
-<div class="block">Performs Base64 encoding on the <code>raw</code> ByteBuffer,
- writing it to the <code>encoded</code> CharBuffer.
- This is an experimental feature. Currently it does not
- pass along any options (such as <a href="../../../ca/cgjennings/io/Base64.html#DO_BREAK_LINES"><code>DO_BREAK_LINES</code></a>
- or <a href="../../../ca/cgjennings/io/Base64.html#GZIP"><code>GZIP</code></a>.</div>
+<div class="block">Performs Base64 encoding on the <code>raw</code> ByteBuffer, writing it
+ to the <code>encoded</code> CharBuffer. This is an experimental feature.
+ Currently it does not pass along any options (such as
+ <a href="../../../ca/cgjennings/io/Base64.html#DO_BREAK_LINES"><code>DO_BREAK_LINES</code></a> or <a href="../../../ca/cgjennings/io/Base64.html#GZIP"><code>GZIP</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>raw</code> - input buffer</dd>
@@ -814,8 +810,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>encodeBytes</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;encodeBytes(byte[]&nbsp;source)</pre>
-<div class="block">Encodes a byte array into Base64 notation.
- Does not GZip-compress data.</div>
+<div class="block">Encodes a byte array into Base64 notation. Does not GZip-compress data.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - The data to convert</dd>
@@ -839,7 +834,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                           throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Encodes a byte array into Base64 notation.
  <p>
- Example options:<pre>
+ Example options:
+ <pre>
    GZIP: gzip-compresses object before encoding it.
    DO_BREAK_LINES: break lines at 76 characters
      <i>Note: Technically, this makes your encoding non-compliant.</i>
@@ -847,13 +843,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <p>
  Example: <code>encodeBytes( myData, Base64.GZIP )</code> or
  <p>
- Example: <code>encodeBytes( myData, Base64.GZIP | Base64.DO_BREAK_LINES )</code>
+ Example:
+ <code>encodeBytes( myData, Base64.GZIP | Base64.DO_BREAK_LINES )</code>
 
-  
- <p>As of v 2.3, if there is an error with the GZIP stream,
- the method will throw an java.io.IOException. <b>This is new to v2.3!</b>
- In earlier versions, it just returned a null value, but
- in retrospect that's a pretty poor way to handle it.</p></div>
+
+ <p>
+ As of v 2.3, if there is an error with the GZIP stream, the method will
+ throw an java.io.IOException. <b>This is new to v2.3!</b>
+ In earlier versions, it just returned a null value, but in retrospect
+ that's a pretty poor way to handle it.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - The data to convert</dd>
@@ -880,13 +878,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;encodeBytes(byte[]&nbsp;source,
                                  int&nbsp;off,
                                  int&nbsp;len)</pre>
-<div class="block">Encodes a byte array into Base64 notation.
- Does not GZip-compress data.
-  
- <p>As of v 2.3, if there is an error,
- the method will throw an java.io.IOException. <b>This is new to v2.3!</b>
- In earlier versions, it just returned a null value, but
- in retrospect that's a pretty poor way to handle it.</p></div>
+<div class="block">Encodes a byte array into Base64 notation. Does not GZip-compress data.
+
+ <p>
+ As of v 2.3, if there is an error, the method will throw an
+ java.io.IOException. <b>This is new to v2.3!</b>
+ In earlier versions, it just returned a null value, but in retrospect
+ that's a pretty poor way to handle it.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - The data to convert</dd>
@@ -896,7 +894,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd>The Base64-encoded data as a String</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if source array is null</dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if source array, offset, or length are invalid</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if source array, offset, or length are
+ invalid</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>1.4</dd>
 </dl>
@@ -915,7 +914,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                           throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Encodes a byte array into Base64 notation.
  <p>
- Example options:<pre>
+ Example options:
+ <pre>
    GZIP: gzip-compresses object before encoding it.
    DO_BREAK_LINES: break lines at 76 characters
      <i>Note: Technically, this makes your encoding non-compliant.</i>
@@ -923,13 +923,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <p>
  Example: <code>encodeBytes( myData, Base64.GZIP )</code> or
  <p>
- Example: <code>encodeBytes( myData, Base64.GZIP | Base64.DO_BREAK_LINES )</code>
+ Example:
+ <code>encodeBytes( myData, Base64.GZIP | Base64.DO_BREAK_LINES )</code>
 
-  
- <p>As of v 2.3, if there is an error with the GZIP stream,
- the method will throw an java.io.IOException. <b>This is new to v2.3!</b>
- In earlier versions, it just returned a null value, but
- in retrospect that's a pretty poor way to handle it.</p></div>
+
+ <p>
+ As of v 2.3, if there is an error with the GZIP stream, the method will
+ throw an java.io.IOException. <b>This is new to v2.3!</b>
+ In earlier versions, it just returned a null value, but in retrospect
+ that's a pretty poor way to handle it.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - The data to convert</dd>
@@ -941,7 +943,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if there is an error</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if source array is null</dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if source array, offset, or length are invalid</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if source array, offset, or length are
+ invalid</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.0</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -957,9 +960,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>encodeBytesToBytes</h4>
 <pre>public static&nbsp;byte[]&nbsp;encodeBytesToBytes(byte[]&nbsp;source)</pre>
-<div class="block">Similar to <a href="../../../ca/cgjennings/io/Base64.html#encodeBytes-byte:A-"><code>encodeBytes(byte[])</code></a> but returns
- a byte array instead of instantiating a String. This is more efficient
- if you're working with I/O streams and have large data sets to encode.</div>
+<div class="block">Similar to <a href="../../../ca/cgjennings/io/Base64.html#encodeBytes-byte:A-"><code>encodeBytes(byte[])</code></a> but returns a byte array instead
+ of instantiating a String. This is more efficient if you're working with
+ I/O streams and have large data sets to encode.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - The data to convert</dd>
@@ -983,9 +986,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                                         int&nbsp;len,
                                         int&nbsp;options)
                                  throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Similar to <a href="../../../ca/cgjennings/io/Base64.html#encodeBytes-byte:A-int-int-int-"><code>encodeBytes(byte[], int, int, int)</code></a> but returns
- a byte array instead of instantiating a String. This is more efficient
- if you're working with I/O streams and have large data sets to encode.</div>
+<div class="block">Similar to <a href="../../../ca/cgjennings/io/Base64.html#encodeBytes-byte:A-int-int-int-"><code>encodeBytes(byte[], int, int, int)</code></a> but returns a byte
+ array instead of instantiating a String. This is more efficient if you're
+ working with I/O streams and have large data sets to encode.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - The data to convert</dd>
@@ -997,7 +1000,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if there is an error</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if source array is null</dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if source array, offset, or length are invalid</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if source array, offset, or length are
+ invalid</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.3.1</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -1035,13 +1039,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>encodeFromFile</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;encodeFromFile(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filename)
                              throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Convenience method for reading a binary file
- and base64-encoding it.
+<div class="block">Convenience method for reading a binary file and base64-encoding it.
 
- <p>As of v 2.3, if there is a error,
- the method will throw an java.io.IOException. <b>This is new to v2.3!</b>
- In earlier versions, it just returned false, but
- in retrospect that's a pretty poor way to handle it.</p></div>
+ <p>
+ As of v 2.3, if there is a error, the method will throw an
+ java.io.IOException. <b>This is new to v2.3!</b>
+ In earlier versions, it just returned false, but in retrospect that's a
+ pretty poor way to handle it.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>filename</code> - Filename for reading binary data</dd>
@@ -1062,9 +1066,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>encodeObject</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;encodeObject(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>&nbsp;serializableObject)
                            throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Serializes an object and returns the Base64-encoded
- version of that serialized object.  
- 
+<div class="block">Serializes an object and returns the Base64-encoded version of that
+ serialized object.
+
  The object is not GZip-compressed before being encoded.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -1088,18 +1092,20 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;encodeObject(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>&nbsp;serializableObject,
                                   int&nbsp;options)
                            throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Serializes an object and returns the Base64-encoded
- version of that serialized object.
- 
+<div class="block">Serializes an object and returns the Base64-encoded version of that
+ serialized object.
+
  <p>
- Example options:<pre>
+ Example options:
+ <pre>
    GZIP: gzip-compresses object before encoding it.
    DO_BREAK_LINES: break lines at 76 characters
  </pre>
  <p>
  Example: <code>encodeObject( myObj, Base64.GZIP )</code> or
  <p>
- Example: <code>encodeObject( myObj, Base64.GZIP | Base64.DO_BREAK_LINES )</code></div>
+ Example:
+ <code>encodeObject( myObj, Base64.GZIP | Base64.DO_BREAK_LINES )</code></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>serializableObject</code> - The object to encode</dd>
@@ -1127,10 +1133,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                          throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Convenience method for encoding data to a file.
 
- <p>As of v 2.3, if there is a error,
- the method will throw an java.io.IOException. <b>This is new to v2.3!</b>
- In earlier versions, it just returned false, but
- in retrospect that's a pretty poor way to handle it.</p></div>
+ <p>
+ As of v 2.3, if there is a error, the method will throw an
+ java.io.IOException. <b>This is new to v2.3!</b>
+ In earlier versions, it just returned false, but in retrospect that's a
+ pretty poor way to handle it.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>dataToEncode</code> - byte array of data to encode in base64 form</dd>
@@ -1163,6 +1170,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

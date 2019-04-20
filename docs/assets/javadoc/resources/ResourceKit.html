@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../index-all.html">Index</a></li>
+<li><a href="../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -107,41 +109,46 @@ var activeTableTab = "activeTableTab";
 <pre>public class <span class="typeNameLabel">ResourceKit</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">The resource kit manages a virtual resource folder that combines resources
- from many sources (main application, installed plug-in bundles, project folder,
- etc.) into a single virtual file system. Resources in this file system are
- identified using a relative URL-like syntax with three parts (two of which
- are optional):
+ from many sources (main application, installed plug-in bundles, project
+ folder, etc.) into a single virtual file system. Resources in this file
+ system are identified using a relative URL-like syntax with three parts (two
+ of which are optional):
 
- <p><tt>[/] [folder/]* file.ext</tt>
+ <p>
+ <tt>[/] [folder/]* file.ext</tt>
  <ol>
  <li>The first part is the least used and most technical:<br>
-     If the first character is a slash (/), then the
-     identifier is absolute; otherwise the rest of the name is relative to
-     <code>/resources</code>. (Resources are normally stored in the <code>resources</code>
-     folder of the file system; however, sometimes it is useful to access
-     a resource that is in the classpath of the application or a plug-in bundle.
-     This can be done using an absolute identifier.)
- <li>The second part consists of zero or more folder names separated by slashes.
- <li>The third part, the only part which must be present, is the file identifier.
-     Note that a path that ends in a folder name instead of a file name
-     is not considered valid. The result of using such an identifier is undefined.
+ If the first character is a slash (/), then the identifier is absolute;
+ otherwise the rest of the name is relative to <code>/resources</code>.
+ (Resources are normally stored in the <code>resources</code> folder of the
+ file system; however, sometimes it is useful to access a resource that is in
+ the classpath of the application or a plug-in bundle. This can be done using
+ an absolute identifier.)
+ <li>The second part consists of zero or more folder names separated by
+ slashes.
+ <li>The third part, the only part which must be present, is the file
+ identifier. Note that a path that ends in a folder name instead of a file
+ name is not considered valid. The result of using such an identifier is
+ undefined.
  </ol>
 
  In order to locate the actual resource file for a resource name, call
  <a href="../resources/ResourceKit.html#composeResourceURL-java.lang.String-"><code>composeResourceURL(java.lang.String)</code></a> with the identifier. This will return a URL that
- can be used to access the resource, or <code>null</code> if the resource cannot
- be found.
+ can be used to access the resource, or <code>null</code> if the resource
+ cannot be found.
 
- <p>Alternatively, you can create a URL object for a resource using the
- special protocol <code>res:</code>, for example:<br>
+ <p>
+ Alternatively, you can create a URL object for a resource using the special
+ protocol <code>res:</code>, for example:<br>
  <code>URL u = new URL( "res://icons/application/256.png" );</code>
 
- <p>Note that the URLs produced with these two different methods are <b>not</b>
+ <p>
+ Note that the URLs produced with these two different methods are <b>not</b>
  the same. A <code>res:</code> URL is a URL for the virtual file system, while
  <code>composeResourceURL</code> returns a URL for the actual location of the
- file. In fact, when you try to access a <code>res:</code> URL's data using
- a method like <code>openStream</code>, the protocol handler will itself
- call <code>composeResourceURL</code> to find the file in question.</div>
+ file. In fact, when you try to access a <code>res:</code> URL's data using a
+ method like <code>openStream</code>, the protocol handler will itself call
+ <code>composeResourceURL</code> to find the file in question.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>1.0</dd>
@@ -202,7 +209,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/javax/print/attribute/PrintRequestAttributeSet.html?is-external=true" title="class or interface in javax.print.attribute">PrintRequestAttributeSet</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../resources/ResourceKit.html#createPrintRequestAttributeSet-java.awt.print.PrinterJob-">createPrintRequestAttributeSet</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/print/PrinterJob.html?is-external=true" title="class or interface in java.awt.print">PrinterJob</a>&nbsp;job)</code>
-<div class="block">Creates a new, mutable print request attribute set based on the 
+<div class="block">Creates a new, mutable print request attribute set based on the
  application preference settings.</div>
 </td>
 </tr>
@@ -217,8 +224,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html?is-external=true" title="class or interface in java.awt">Font</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../resources/ResourceKit.html#enableKerningAndLigatures-java.awt.Font-">enableKerningAndLigatures</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html?is-external=true" title="class or interface in java.awt">Font</a>&nbsp;font)</code>
 <div class="block">Returns a font instance that is equivalent to <code>font</code> but which
- will default to using kerning and ligatures (if available for the font and if supported
- by the particular rendering method).</div>
+ will default to using kerning and ligatures (if available for the font
+ and if supported by the particular rendering method).</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -232,9 +239,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../resources/ResourceKit.html#getBodyFamily--">getBodyFamily</a></span>()</code>
-<div class="block">Returns the family name of the <i>standard body font</i>:
- this is the default Times-like serif font that is the default font for
- markup on game components.</div>
+<div class="block">Returns the family name of the <i>standard body font</i>: this is the
+ default Times-like serif font that is the default font for markup on game
+ components.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -288,8 +295,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i14" class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../resources/ResourceKit.html#getImage-java.lang.String-">getImage</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;resource)</code>
-<div class="block">Given the path to a resource file containing an image, returns the
- image.</div>
+<div class="block">Given the path to a resource file containing an image, returns the image.</div>
 </td>
 </tr>
 <tr id="i15" class="rowColor">
@@ -353,8 +359,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast"><code><span class="memberNameLink"><a href="../resources/ResourceKit.html#getVectorIcon-java.lang.String-int-int-">getVectorIcon</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;resource,
              int&nbsp;iconWidth,
              int&nbsp;iconHeight)</code>
-<div class="block">Returns an icon that displays a vector image at the specified width
- and height.</div>
+<div class="block">Returns an icon that displays a vector image at the specified width and
+ height.</div>
 </td>
 </tr>
 <tr id="i24" class="altColor">
@@ -367,15 +373,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i25" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../resources/ResourceKit.html#initializeFileDialogs--">initializeFileDialogs</a></span>()</code>
-<div class="block">This method is called during startup to allow the resource kit to
- set up its shared file dialogs.</div>
+<div class="block">This method is called during startup to allow the resource kit to set up
+ its shared file dialogs.</div>
 </td>
 </tr>
 <tr id="i26" class="altColor">
 <td class="colFirst"><code>static boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../resources/ResourceKit.html#isFamilyRegistered-java.lang.String-">isFamilyRegistered</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;familyName)</code>
-<div class="block">Returns <code>true</code> if one or more fonts with the specified
- family name have been registered through <a href="../resources/ResourceKit.html#registerFont-java.lang.String-"><code>registerFont(java.lang.String)</code></a>.</div>
+<div class="block">Returns <code>true</code> if one or more fonts with the specified family
+ name have been registered through <a href="../resources/ResourceKit.html#registerFont-java.lang.String-"><code>registerFont(java.lang.String)</code></a>.</div>
 </td>
 </tr>
 <tr id="i27" class="rowColor">
@@ -394,9 +400,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i29" class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../resources/ResourceKit.html#makeStringHTMLSafe-java.lang.String-">makeStringHTMLSafe</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;string)</code>
-<div class="block">Makes a string safe for inclusion as literal HTML by escaping
- ampersands, less than symbols, and greater than symbols with their
- HTML entity expressions.</div>
+<div class="block">Makes a string safe for inclusion as literal HTML by escaping ampersands,
+ less than symbols, and greater than symbols with their HTML entity
+ expressions.</div>
 </td>
 </tr>
 <tr id="i30" class="altColor">
@@ -412,8 +418,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i32" class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../resources/ResourceKit.html#prepareNewImage-java.awt.Image-">prepareNewImage</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Image.html?is-external=true" title="class or interface in java.awt">Image</a>&nbsp;image)</code>
-<div class="block">Prepares a newly obtained image for use by ensuring that it is in
- the image format required by the application.</div>
+<div class="block">Prepares a newly obtained image for use by ensuring that it is in the
+ image format required by the application.</div>
 </td>
 </tr>
 <tr id="i33" class="rowColor">
@@ -576,42 +582,45 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Returns the URL of a resource from a path and file relative to a
  conceptual resources folder. The conceptual resources folder typically
  represents many different virtual folders, including the resources folder
- of the main application and that of any installed plug-in bundles.
- If the requested file cannot be found, <code>null</code> will be returned.
+ of the main application and that of any installed plug-in bundles. If the
+ requested file cannot be found, <code>null</code> will be returned.
 
- <p>The contents of the virtual resources folder are determined by
- searching for the requested file in the following locations (in order
- until a file is found):
+ <p>
+ The contents of the virtual resources folder are determined by searching
+ for the requested file in the following locations (in order until a file
+ is found):
  <ol>
- <li>If the resource path is actually an absolute URL then it is
-     converted to a URL object and returned, except that if it is a
-     <code>res://</code> URL the procedure continues as if the
-     <code>res://</code> prefix was not present. Absolute URLs
-     are indicated by the presence of a colon (:) in the identifier.
+ <li>If the resource path is actually an absolute URL then it is converted
+ to a URL object and returned, except that if it is a <code>res://</code>
+ URL the procedure continues as if the <code>res://</code> prefix was not
+ present. Absolute URLs are indicated by the presence of a colon (:) in
+ the identifier.
  <li>The contents of the user resource folder, if any.
- <li>The <code>resources</code> folders of the main application and
-     all installed plug-in bundles, in the order of installation.
- <li>The <code>resources</code> folder (if any) of all task folders
-     in the open project. Note that this URL is typically only valid
-     while the project is open.
+ <li>The <code>resources</code> folders of the main application and all
+ installed plug-in bundles, in the order of installation.
+ <li>The <code>resources</code> folder (if any) of all task folders in the
+ open project. Note that this URL is typically only valid while the
+ project is open.
  </ol>
 
- <p><b>Folders:</b> Resource identifiers can include relative paths,
- but the final part of the identifier must name a file, not a directory.
- The result of attempting to compose a resource URL that points to
- a directory, or of attempting to use such a URL should one be returned,
- if undefined.
+ <p>
+ <b>Folders:</b> Resource identifiers can include relative paths, but the
+ final part of the identifier must name a file, not a directory. The
+ result of attempting to compose a resource URL that points to a
+ directory, or of attempting to use such a URL should one be returned, if
+ undefined.
 
- <p><b>Case Sensitivity:</b> Because the virtual file system actually
- reads its files from a mixture of sources, file names may or may not
- be case sensitive depending on where the actual file is located.
- Therefore, you should always assume that resource identifiers are case
- sensitive.</div>
+ <p>
+ <b>Case Sensitivity:</b> Because the virtual file system actually reads
+ its files from a mixture of sources, file names may or may not be case
+ sensitive depending on where the actual file is located. Therefore, you
+ should always assume that resource identifiers are case sensitive.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>resource</code> - a file path relative to the virtual resources folder</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a URL that can be used to access the named resource, or <code>null</code></dd>
+<dd>a URL that can be used to access the named resource, or
+ <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -623,13 +632,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>createBleedBanner</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;createBleedBanner(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Image.html?is-external=true" title="class or interface in java.awt">Image</a>&nbsp;source)</pre>
 <div class="block">Returns a new image equivalent to the original but with an alpha gradient
- applied to the bottom edge. This method is used to create the bleed effect
- that is seen in the banner image found in the left margin of some dialogs,
- such as the dialog for creating new game component editors. Applying the
- alpha gradient as a separate step allows the images used for this purpose
- to be saved without an alpha channel, significantly reducing file size.
- It also ensures consistency even when the banner image may be supplied by
- a plug-in.</div>
+ applied to the bottom edge. This method is used to create the bleed
+ effect that is seen in the banner image found in the left margin of some
+ dialogs, such as the dialog for creating new game component editors.
+ Applying the alpha gradient as a separate step allows the images used for
+ this purpose to be saved without an alpha channel, significantly reducing
+ file size. It also ensures consistency even when the banner image may be
+ supplied by a plug-in.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the source banner image</dd>
@@ -647,11 +656,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>createPrintRequestAttributeSet</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/print/attribute/PrintRequestAttributeSet.html?is-external=true" title="class or interface in javax.print.attribute">PrintRequestAttributeSet</a>&nbsp;createPrintRequestAttributeSet(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/print/PrinterJob.html?is-external=true" title="class or interface in java.awt.print">PrinterJob</a>&nbsp;job)</pre>
-<div class="block">Creates a new, mutable print request attribute set based on the 
+<div class="block">Creates a new, mutable print request attribute set based on the
  application preference settings.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>job</code> - the printer job to create an attribute set for; may be <code>null</code></dd>
+<dd><code>job</code> - the printer job to create an attribute set for; may be
+ <code>null</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a print attribute set that reflects user preferences</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
@@ -667,8 +677,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>createWaitIcon</h4>
 <pre>public static&nbsp;<a href="../ca/cgjennings/ui/AnimatedIcon.html" title="class in ca.cgjennings.ui">AnimatedIcon</a>&nbsp;createWaitIcon(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing">JComponent</a>&nbsp;comp)</pre>
 <div class="block">Creates a new wait icon (an animated icon that indicates a lengthy
- delay). These icons are tied to a specific component, so a new one
- must be created whenever one is required.</div>
+ delay). These icons are tied to a specific component, so a new one must
+ be created whenever one is required.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>comp</code> - the component that the icon will be set on</dd>
@@ -685,17 +695,17 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>enableKerningAndLigatures</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html?is-external=true" title="class or interface in java.awt">Font</a>&nbsp;enableKerningAndLigatures(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html?is-external=true" title="class or interface in java.awt">Font</a>&nbsp;font)</pre>
 <div class="block">Returns a font instance that is equivalent to <code>font</code> but which
- will default to using kerning and ligatures (if available for the font and if supported
- by the particular rendering method). Note that this method is not
- needed for markup text drawn on components, as the markup system already
- provides its own support for kerning and ligatures, and it looks up
- fonts by family name rather than <code>Font</code> instance.</div>
+ will default to using kerning and ligatures (if available for the font
+ and if supported by the particular rendering method). Note that this
+ method is not needed for markup text drawn on components, as the markup
+ system already provides its own support for kerning and ligatures, and it
+ looks up fonts by family name rather than <code>Font</code> instance.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>font</code> - the font to modify</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a font instance that is equivalent to <code>font</code> but will
-     use kerning and ligatures when possible</dd>
+ use kerning and ligatures when possible</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the font is <code>null</code></dd>
 </dl>
@@ -714,7 +724,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>familyList</code> - a comma-separated list of family names</dd>
-<dd><code>defaultFamily</code> - the value to return if none of the listed families is available</dd>
+<dd><code>defaultFamily</code> - the value to return if none of the listed families
+ is available</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the first available font family, or <code>defaultFamily</code></dd>
 </dl>
@@ -727,14 +738,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getBodyFamily</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getBodyFamily()</pre>
-<div class="block">Returns the family name of the <i>standard body font</i>:
- this is the default Times-like serif font that is the default font for
- markup on game components. If the core typefaces library is
- installed, then this will return the core body font from that library.
- Otherwise, it will return a serif font that depends on the platform
- and available system fonts.
- (It is strongly recommended that the core typefaces library be installed
- so that game components will appear consistent across platforms.)</div>
+<div class="block">Returns the family name of the <i>standard body font</i>: this is the
+ default Times-like serif font that is the default font for markup on game
+ components. If the core typefaces library is installed, then this will
+ return the core body font from that library. Otherwise, it will return a
+ serif font that depends on the platform and available system fonts. (It
+ is strongly recommended that the core typefaces library be installed so
+ that game components will appear consistent across platforms.)</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the family name of the standard body font</dd>
@@ -750,9 +760,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html?is-external=true" title="class or interface in java.awt">Font</a>&nbsp;getBodyFont()</pre>
 <div class="block">Returns a <code>Font</code> instance for the <i>standard body font</i>:
  this is the default Times-like serif font that is the default font for
- markup on game components. It is normally accessed by its family
- name via <a href="../resources/ResourceKit.html#getBodyFamily--"><code>getBodyFamily()</code></a> rather than by <code>Font</code>.
- Please see the documentation for that method for further details.</div>
+ markup on game components. It is normally accessed by its family name via
+ <a href="../resources/ResourceKit.html#getBodyFamily--"><code>getBodyFamily()</code></a> rather than by <code>Font</code>. Please see the
+ documentation for that method for further details.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>an instance of the standard body font</dd>
@@ -784,9 +794,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html?is-external=true" title="class or interface in java.awt">Font</a>&nbsp;getFont(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;resource,
                            float&nbsp;pointSize)
                     throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Creates a single font from a file in the application resources.
- The font is not registered, meaning that it is not visible to the rest
- of the application if looked up by its family name.</div>
+<div class="block">Creates a single font from a file in the application resources. The font
+ is not registered, meaning that it is not visible to the rest of the
+ application if looked up by its family name.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>resource</code> - the font resource file</dd>
@@ -795,7 +805,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the resource is <code>null</code></dd>
 <dd><code><a href="../ca/cgjennings/io/InvalidFileFormatException.html" title="class in ca.cgjennings.io">InvalidFileFormatException</a></code> - if the resource is not a supported
-     font file format or the font is corrupt</dd>
+ font file format or the font is corrupt</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/FileNotFoundException.html?is-external=true" title="class or interface in java.io">FileNotFoundException</a></code> - if the resource file does not exist</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if an I/O error occurs while creating the font</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -812,8 +822,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getGameComponentFromFile</h4>
 <pre>public static&nbsp;<a href="../ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>&nbsp;getGameComponentFromFile(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</pre>
 <div class="block">Reads a <a href="../ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component"><code>GameComponent</code></a> from a file. If an error occurs while
- reading or creating the component, an error message will be displayed
- to the user as if the component was opened using the <b>File|Open</b>
+ reading or creating the component, an error message will be displayed to
+ the user as if the component was opened using the <b>File|Open</b>
  command, and <code>null</code> will be returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -834,15 +844,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public static&nbsp;<a href="../ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>&nbsp;getGameComponentFromFile(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file,
                                                      boolean&nbsp;reportError)</pre>
 <div class="block">Reads a <a href="../ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component"><code>GameComponent</code></a> from a file. If an error occurs while
- reading or creating the component, and <code>reportError</code>
- is <code>true</code>, then an error message will be displayed
- to the user as if the component was opened using the <b>File|Open</b>
- command. In any case, if the component cannot be created then <code>null</code>
- will be returned.</div>
+ reading or creating the component, and <code>reportError</code> is
+ <code>true</code>, then an error message will be displayed to the user as
+ if the component was opened using the <b>File|Open</b>
+ command. In any case, if the component cannot be created then
+ <code>null</code> will be returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>file</code> - the file to load the component from</dd>
-<dd><code>reportError</code> - if <code>false</code>, errors will be logged but not displayed</dd>
+<dd><code>reportError</code> - if <code>false</code>, errors will be logged but not
+ displayed</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the game component stored in the file, or <code>null</code></dd>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -859,21 +870,24 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public static&nbsp;<a href="../ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>&nbsp;getGameComponentFromStream(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;in,
                                                        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;sourceDescription,
                                                        boolean&nbsp;reportError)</pre>
-<div class="block">Reads a <a href="../ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component"><code>GameComponent</code></a> from an input stream. If an error occurs while
- reading or creating the component, and <code>reportError</code>
- is <code>true</code>, then an error message will be displayed
- to the user as if the component was opened using the <b>File|Open</b>
- command. In any case, if the component cannot be created then <code>null</code>
- will be returned.</div>
+<div class="block">Reads a <a href="../ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component"><code>GameComponent</code></a> from an input stream. If an error occurs
+ while reading or creating the component, and <code>reportError</code> is
+ <code>true</code>, then an error message will be displayed to the user as
+ if the component was opened using the <b>File|Open</b>
+ command. In any case, if the component cannot be created then
+ <code>null</code> will be returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>in</code> - the input stream to read from</dd>
 <dd><code>sourceDescription</code> - a description of the source of the input stream
-     (such as a file or URL); this is displayed as part of an error message, if any</dd>
-<dd><code>reportError</code> - if <code>true</code>, any errors will be reported to the user
-     with suitable error messages; otherwise, errors will simply be logged</dd>
+ (such as a file or URL); this is displayed as part of an error message,
+ if any</dd>
+<dd><code>reportError</code> - if <code>true</code>, any errors will be reported to
+ the user with suitable error messages; otherwise, errors will simply be
+ logged</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a game component deserialized from the input stream, or <code>null</code></dd>
+<dd>a game component deserialized from the input stream, or
+ <code>null</code></dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../ca/cgjennings/io/SEObjectInputStream.html" title="class in ca.cgjennings.io"><code>SEObjectInputStream</code></a></dd>
 </dl>
@@ -887,23 +901,26 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getIcon</h4>
 <pre>public static&nbsp;<a href="../ca/cgjennings/ui/theme/ThemedIcon.html" title="class in ca.cgjennings.ui.theme">ThemedIcon</a>&nbsp;getIcon(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;iconResource)</pre>
 <div class="block">Returns an icon created from an image resource. By default, this method
- looks for the icon in the application's "icons" resource folder.
- Plug-ins that wish to load an icon from a different folder can override
- this by using a full "res://" resource descriptor or by starting the
- resource with a '/' and providing the full path to the resource.
- For example to load the icon from the resource "foo/icon.png", you could
- use either "res://foo/icon.png" or "/resources/foo/icon.png".
- <p>The returned icon is a <a href="../ca/cgjennings/ui/theme/ThemedIcon.html" title="class in ca.cgjennings.ui.theme"><code>ThemedIcon</code></a> instance. This means that
- the currently installed <a href="../ca/cgjennings/ui/theme/Theme.html" title="class in ca.cgjennings.ui.theme"><code>Theme</code></a> will be given an opportunity
- to modify the resource location, modify the returned image before it is
- converted into an icon, or both.</div>
+ looks for the icon in the application's "icons" resource folder. Plug-ins
+ that wish to load an icon from a different folder can override this by
+ using a full "res://" resource descriptor or by starting the resource
+ with a '/' and providing the full path to the resource. For example to
+ load the icon from the resource "foo/icon.png", you could use either
+ "res://foo/icon.png" or "/resources/foo/icon.png".
+ <p>
+ The returned icon is a <a href="../ca/cgjennings/ui/theme/ThemedIcon.html" title="class in ca.cgjennings.ui.theme"><code>ThemedIcon</code></a> instance. This means that the
+ currently installed <a href="../ca/cgjennings/ui/theme/Theme.html" title="class in ca.cgjennings.ui.theme"><code>Theme</code></a> will be given an opportunity to modify
+ the resource location, modify the returned image before it is converted
+ into an icon, or both.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>iconResource</code> - the resource identifier for the icon</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>an icon consisting of the requested image or a theme-dependent substitute</dd>
+<dd>an icon consisting of the requested image or a theme-dependent
+ substitute</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>iconResource</code> is <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>iconResource</code> is
+ <code>null</code></dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../ca/cgjennings/ui/theme/Theme.html#applyThemeToImage-java.lang.String-"><code>Theme.applyThemeToImage(java.lang.String)</code></a></dd>
 </dl>
@@ -916,31 +933,36 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getImage</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;getImage(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;resource)</pre>
-<div class="block">Given the path to a resource file containing an image, returns the
- image. If it exists and the file is valid, the returned image will use
- either the <tt>INT_RGB</tt> or <tt>INT_ARGB</tt> formats.
- (Or, if the setting <tt>premultiply-image-alpha</tt> is <code>true</code>,
- then a premultiplied equivalent.)
+<div class="block">Given the path to a resource file containing an image, returns the image.
+ If it exists and the file is valid, the returned image will use either
+ the <tt>INT_RGB</tt> or <tt>INT_ARGB</tt> formats. (Or, if the setting
+ <tt>premultiply-image-alpha</tt> is <code>true</code>, then a
+ premultiplied equivalent.)
 
- <p>The resource file must either be an image encoded in one of the supported
- file types (PNG, JPEG, or JPEG2000) or else a script file with the extension
- <tt>.js</tt> that contains a resource creation script.
- (See <a href="../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#runResourceCreationScript-java.lang.String-"><code>ScriptMonkey.runResourceCreationScript(java.lang.String)</code></a>.)
+ <p>
+ The resource file must either be an image encoded in one of the supported
+ file types (PNG, JPEG, or JPEG2000) or else a script file with the
+ extension
+ <tt>.js</tt> that contains a resource creation script. (See
+ <a href="../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#runResourceCreationScript-java.lang.String-"><code>ScriptMonkey.runResourceCreationScript(java.lang.String)</code></a>.)
 
- <p>If the file does not exist or is not a valid image file (or resource
- script), then a special "missing image" image is returned to indicate this
- visually to the user.
+ <p>
+ If the file does not exist or is not a valid image file (or resource
+ script), then a special "missing image" image is returned to indicate
+ this visually to the user.
 
- <p>Note that images may be cached, so if the resource is modified
- then the returned result may not reflect these changes.</div>
+ <p>
+ Note that images may be cached, so if the resource is modified then the
+ returned result may not reflect these changes.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>resource</code> - the relative file path of the image resource</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the image stored at the named resource, or a substitute
-     missing image symbol</dd>
+<dd>the image stored at the named resource, or a substitute missing
+ image symbol</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the resource identifier is <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the resource identifier is
+ <code>null</code></dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the resource identifier is empty</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../resources/ResourceKit.html#isResourceStatic-java.net.URL-"><code>isResourceStatic(java.net.URL)</code></a></dd>
@@ -956,15 +978,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;getImageQuietly(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;resource)</pre>
 <div class="block">This method returns an image as if by <a href="../resources/ResourceKit.html#getImage-java.lang.String-"><code>getImage(java.lang.String)</code></a>, but without
  obvious feedback for the user. The wait cursor is not set while loading
- the image, and an error dialog is not displayed if the attempt to
- load the image fails.</div>
+ the image, and an error dialog is not displayed if the attempt to load
+ the image fails.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>resource</code> - the image resource path</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>an image for the resource path</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the resource identifier is <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the resource identifier is
+ <code>null</code></dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the resource identifier is empty</dd>
 </dl>
 </li>
@@ -977,18 +1000,17 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getImagesQuietly</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>[]&nbsp;getImagesQuietly(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;inputResources,
                                                <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>[]&nbsp;outputImages)</pre>
-<div class="block">Returns an array of image resources for the provided names.
- Each name will be looked up and the matching image found as if by
- calling <a href="../resources/ResourceKit.html#getImageQuietly-java.lang.String-"><code>getImageQuietly(java.lang.String)</code></a> for each name in
- turn, and placing the result at the matching index in the output
- array. The benefit of getting images with this method is that
- they can be loaded concurrently if the system has multiple
- processors (CPUs or cores).
+<div class="block">Returns an array of image resources for the provided names. Each name
+ will be looked up and the matching image found as if by calling
+ <a href="../resources/ResourceKit.html#getImageQuietly-java.lang.String-"><code>getImageQuietly(java.lang.String)</code></a> for each name in turn, and
+ placing the result at the matching index in the output array. The benefit
+ of getting images with this method is that they can be loaded
+ concurrently if the system has multiple processors (CPUs or cores).
 
- <p>The supplied output array may be <code>null</code>, in which case
- a new array will be created. If a non-<code>null</code> output array
- is given, it must be at least as long as the number of names
- provided.</div>
+ <p>
+ The supplied output array may be <code>null</code>, in which case a new
+ array will be created. If a non-<code>null</code> output array is given,
+ it must be at least as long as the number of names provided.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>inputResources</code> - image resources to load</dd>
@@ -996,7 +1018,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the output array that holds the images</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if any resource identifier is <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if any resource identifier is
+ <code>null</code></dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if any resource identifier is empty</dd>
 </dl>
 </li>
@@ -1019,7 +1042,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/FileNotFoundException.html?is-external=true" title="class or interface in java.io">FileNotFoundException</a></code> - if the resource does not exist</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if an I/O error occurs while opening the stream</dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the specified resource is <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the specified resource is
+ <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -1034,7 +1058,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>an image that provides a visual cue that the intended image is
-     not available</dd>
+ not available</dd>
 </dl>
 </li>
 </ul>
@@ -1095,8 +1119,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html?is-external=true" title="class or interface in java.awt">Font</a>&nbsp;getTinyFont()</pre>
 <div class="block">Returns a font that is optimized for displaying characters at very small
  size. This is useful for dynamically creating small icons or other UI
- elements. The returned font is only guaranteed to support the basic
- ASCII character set, and might not include distinct lower case letters.</div>
+ elements. The returned font is only guaranteed to support the basic ASCII
+ character set, and might not include distinct lower case letters.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a font optimized for small size</dd>
@@ -1112,9 +1136,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public static&nbsp;<a href="../ca/cgjennings/graphics/shapes/VectorIcon.html" title="class in ca.cgjennings.graphics.shapes">VectorIcon</a>&nbsp;getVectorIcon(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;resource,
                                        int&nbsp;iconWidth,
                                        int&nbsp;iconHeight)</pre>
-<div class="block">Returns an icon that displays a vector image at the specified width
- and height. The icon size can be changed later using methods in the
- returned <a href="../ca/cgjennings/graphics/shapes/VectorIcon.html" title="class in ca.cgjennings.graphics.shapes"><code>VectorIcon</code></a>.</div>
+<div class="block">Returns an icon that displays a vector image at the specified width and
+ height. The icon size can be changed later using methods in the returned
+ <a href="../ca/cgjennings/graphics/shapes/VectorIcon.html" title="class in ca.cgjennings.graphics.shapes"><code>VectorIcon</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>resource</code> - the image resource to create an icon of</dd>
@@ -1137,16 +1161,18 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Given the path to a resource file containing a vector image, returns the
  image. The resource file must be in the SVG format. Note that there are
  some limitations on the supported SVG features: SVG files with scripts
- are not supported at all, and filter effects are not completely supported.
+ are not supported at all, and filter effects are not completely
+ supported.
 
- <p>If the specified file does not exist or is not valid, a special
- "missing image" image is returned.</div>
+ <p>
+ If the specified file does not exist or is not valid, a special "missing
+ image" image is returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>resource</code> - the vector image resource to load</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a vector image created from the content of the resource,
-     or the "missing image" vector image</dd>
+<dd>a vector image created from the content of the resource, or the
+ "missing image" vector image</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
 </dl>
@@ -1159,10 +1185,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>initializeFileDialogs</h4>
 <pre>public static&nbsp;void&nbsp;initializeFileDialogs()</pre>
-<div class="block">This method is called during startup to allow the resource kit to
- set up its shared file dialogs. This method is public only to cross
- a package boundary. There is no need for user code to
- call this method.</div>
+<div class="block">This method is called during startup to allow the resource kit to set up
+ its shared file dialogs. This method is public only to cross a package
+ boundary. There is no need for user code to call this method.</div>
 </li>
 </ul>
 <a name="isFamilyRegistered-java.lang.String-">
@@ -1172,14 +1197,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isFamilyRegistered</h4>
 <pre>public static&nbsp;boolean&nbsp;isFamilyRegistered(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;familyName)</pre>
-<div class="block">Returns <code>true</code> if one or more fonts with the specified
- family name have been registered through <a href="../resources/ResourceKit.html#registerFont-java.lang.String-"><code>registerFont(java.lang.String)</code></a>.</div>
+<div class="block">Returns <code>true</code> if one or more fonts with the specified family
+ name have been registered through <a href="../resources/ResourceKit.html#registerFont-java.lang.String-"><code>registerFont(java.lang.String)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>familyName</code> - the family name of the font to check</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if at least one font with that family name
-     has been registered successfully</dd>
+<dd><code>true</code> if at least one font with that family name has
+ been registered successfully</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the family name is <code>null</code></dd>
 </dl>
@@ -1193,19 +1218,18 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>isResourceStatic</h4>
 <pre>public static&nbsp;boolean&nbsp;isResourceStatic(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a>&nbsp;composedResourceURL)</pre>
 <div class="block">Returns <code>true</code> if a resource file is not expected to change
- during the lifetime of the application. This can be used as a hint
- to caching mechanisms that the resource is safe to cache.
- For example, resources that come from an installed
- plug-in bundle can be cached because the bundle contents cannot
- change while the application is still running, while resources that
- come from a project must be handled more carefully because
- the user might modify them at any time.</div>
+ during the lifetime of the application. This can be used as a hint to
+ caching mechanisms that the resource is safe to cache. For example,
+ resources that come from an installed plug-in bundle can be cached
+ because the bundle contents cannot change while the application is still
+ running, while resources that come from a project must be handled more
+ carefully because the user might modify them at any time.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>composedResourceURL</code> - the URL of the resource in question</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the resource cannot change while the application
-     is running</dd>
+<dd><code>true</code> if the resource cannot change while the
+ application is running</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
 </dl>
@@ -1218,9 +1242,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>makeStringFileSafe</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;makeStringFileSafe(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;string)</pre>
-<div class="block">Strips illegal characters out of a potential file name.
- If no characters are stripped, <code>name</code> is returned
- unchanged.</div>
+<div class="block">Strips illegal characters out of a potential file name. If no characters
+ are stripped, <code>name</code> is returned unchanged.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>string</code> - the potential file name</dd>
@@ -1236,16 +1259,17 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>makeStringHTMLSafe</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;makeStringHTMLSafe(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;string)</pre>
-<div class="block">Makes a string safe for inclusion as literal HTML by escaping
- ampersands, less than symbols, and greater than symbols with their
- HTML entity expressions. If the string contains none of these characters,
- the original string is returned (including if it is <code>null</code>).</div>
+<div class="block">Makes a string safe for inclusion as literal HTML by escaping ampersands,
+ less than symbols, and greater than symbols with their HTML entity
+ expressions. If the string contains none of these characters, the
+ original string is returned (including if it is <code>null</code>).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>string</code> - the string to make safe for HTML display (may be <code>null</code>)</dd>
+<dd><code>string</code> - the string to make safe for HTML display (may be
+ <code>null</code>)</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>an HTML-safe version with escaped characters where needed, or
-   the original string</dd>
+<dd>an HTML-safe version with escaped characters where needed, or the
+ original string</dd>
 </dl>
 </li>
 </ul>
@@ -1265,27 +1289,30 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>normalizeResourceIdentifier</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;normalizeResourceIdentifier(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;resource)</pre>
-<div class="block">Returns a normalized version of the identifier.
- Because <a href="../resources/ResourceKit.html#composeResourceURL-java.lang.String-"><code>composeResourceURL(java.lang.String)</code></a> accepts both virtual resource paths
- and regular URLs, a given resource file can be accessed by
- multiple identifiers. This method reduces some (though not all)
- redundant names to their plain virtual resource path equivalent, if one
- exists. The intended purpose is to improve the efficiency of caching
- mechanisms or other cases where it could be useful to quickly detect
- that two different identifier strings actually refer to the same resource.
- <i>Most plug-in developers will never have a reason to call this method.</i>
+<div class="block">Returns a normalized version of the identifier. Because
+ <a href="../resources/ResourceKit.html#composeResourceURL-java.lang.String-"><code>composeResourceURL(java.lang.String)</code></a> accepts both virtual resource paths and
+ regular URLs, a given resource file can be accessed by multiple
+ identifiers. This method reduces some (though not all) redundant names to
+ their plain virtual resource path equivalent, if one exists. The intended
+ purpose is to improve the efficiency of caching mechanisms or other cases
+ where it could be useful to quickly detect that two different identifier
+ strings actually refer to the same resource.
+ <i>Most plug-in developers will never have a reason to call this
+ method.</i>
 
- <p>The precise effect of this method may change from version to version,
- but the following three conditions are guaranteed:
+ <p>
+ The precise effect of this method may change from version to version, but
+ the following three conditions are guaranteed:
  <ol>
- <li>If the identifier is <code>null</code>, it will be returned unchanged.
- <li>If the identifier is a virtual resource path rather than an
-     absolute URL, it will be returned unchanged and the method will
-     return very quickly.
+ <li>If the identifier is <code>null</code>, it will be returned
+ unchanged.
+ <li>If the identifier is a virtual resource path rather than an absolute
+ URL, it will be returned unchanged and the method will return very
+ quickly.
  <li>If the identifier is an absolute URL identifier, then it <i>may</i>
-     be changed to a virtual resource path that points to the same file.
- <li>Any two identifiers that (a) are changed by this method and (b)
-     refer to the same file will be changed to the same string.
+ be changed to a virtual resource path that points to the same file.
+ <li>Any two identifiers that (a) are changed by this method and (b) refer
+ to the same file will be changed to the same string.
  </ol></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -1302,21 +1329,21 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>prepareNewImage</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;prepareNewImage(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Image.html?is-external=true" title="class or interface in java.awt">Image</a>&nbsp;image)</pre>
-<div class="block">Prepares a newly obtained image for use by ensuring that it is in
- the image format required by the application. For example, when an image
- is read from a file it may be returned as whatever type of image was
- the most convenient for the file format. This method will check the
- format of an image, convert it to the optimal format if necessary,
- and then return it. If no conversion is required, the original image
- is returned. Note that images that you obtain via the resource kit
- or other parts of the Strange Eons API will already be in the correct
- format.</div>
+<div class="block">Prepares a newly obtained image for use by ensuring that it is in the
+ image format required by the application. For example, when an image is
+ read from a file it may be returned as whatever type of image was the
+ most convenient for the file format. This method will check the format of
+ an image, convert it to the optimal format if necessary, and then return
+ it. If no conversion is required, the original image is returned. Note
+ that images that you obtain via the resource kit or other parts of the
+ Strange Eons API will already be in the correct format.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>image</code> - the image to prepare</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>an image in the correct format; either the original or a converted
-   one, or <code>null</code> if <code>image</code> was <code>null</code></dd>
+<dd>an image in the correct format; either the original or a
+ converted one, or <code>null</code> if <code>image</code> was
+ <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -1346,22 +1373,23 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                                                        throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Attempts to register a single font. The font is first loaded from the
  resource file as if by using <a href="../resources/ResourceKit.html#getFont-java.lang.String-float-"><code>getFont(java.lang.String, float)</code></a>. If this is successful,
- then an attempt is made to register the font. A registered font can
- be created by its family name just as if it were installed in the
- user's operating system. For example, it can be used in markup boxes
- with the <code>&lt;family&gt;</code> tag or the font family text attribute.
- (If registration fails, it is usually because a font with the same
- name&mdash;possibly the same font&mdash;is installed on the user's system.)</div>
+ then an attempt is made to register the font. A registered font can be
+ created by its family name just as if it were installed in the user's
+ operating system. For example, it can be used in markup boxes with the
+ <code>&lt;family&gt;</code> tag or the font family text attribute. (If
+ registration fails, it is usually because a font with the same
+ name&mdash;possibly the same font&mdash;is installed on the user's
+ system.)</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>resourceFile</code> - the font resource file to register</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>an object that provides access to the font, its family name, and
-     the result of registration</dd>
+ the result of registration</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the resource is <code>null</code></dd>
 <dd><code><a href="../ca/cgjennings/io/InvalidFileFormatException.html" title="class in ca.cgjennings.io">InvalidFileFormatException</a></code> - if the resource is not a supported
-     font file format or the font is corrupt</dd>
+ font file format or the font is corrupt</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/FileNotFoundException.html?is-external=true" title="class or interface in java.io">FileNotFoundException</a></code> - if the resource file does not exist</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if an I/O error occurs while creating the font</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -1378,34 +1406,34 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>registerFontFamily</h4>
 <pre>public static&nbsp;<a href="../resources/ResourceKit.FontRegistrationResult.html" title="class in resources">ResourceKit.FontRegistrationResult</a>[]&nbsp;registerFontFamily(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;commaSeparatedList)
                                                                throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Attempts to register a group of font resources as a single family.
- (For example, the regular, bold, italic, and bold italic versions of
- the font.)
- The method takes a string containing a comma-separated list of
- resource files; each resource file is one of the fonts to register.
- The first entry in the list should be the regular
- variant of the file; the order of the remaining resources does not matter.
- Each resource in the list will be loaded and registered as if by
+<div class="block">Attempts to register a group of font resources as a single family. (For
+ example, the regular, bold, italic, and bold italic versions of the
+ font.) The method takes a string containing a comma-separated list of
+ resource files; each resource file is one of the fonts to register. The
+ first entry in the list should be the regular variant of the file; the
+ order of the remaining resources does not matter. Each resource in the
+ list will be loaded and registered as if by
  <a href="../resources/ResourceKit.html#registerFont-java.lang.String-"><code>registerFont(java.lang.String)</code></a>, and an array of registration
- results is returned. Typically, the caller will want to get the
- name of the font to use for <a href="../ca/cgjennings/layout/TextStyle.html" title="class in ca.cgjennings.layout"><code>TextStyle</code></a>s by calling
+ results is returned. Typically, the caller will want to get the name of
+ the font to use for <a href="../ca/cgjennings/layout/TextStyle.html" title="class in ca.cgjennings.layout"><code>TextStyle</code></a>s by calling
  <code>ResourceKit.registerFontList( families )[0].getFamily()</code>.
 
- <p>After the first entry in the list, subsequent entries will be assumed
- to be located in the same resource folder as the first entry if they
- do not include a '/' character. For example, the following
- list would load a family of two fonts located in the <tt>foo/fonts</tt>
+ <p>
+ After the first entry in the list, subsequent entries will be assumed to
+ be located in the same resource folder as the first entry if they do not
+ include a '/' character. For example, the following list would load a
+ family of two fonts located in the <tt>foo/fonts</tt>
  resource folder: <tt>foot/fonts/bar_regular.ttf, bar_italic.ttf</tt>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>commaSeparatedList</code> - the list of resource files to register</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>an array of results, one for each registered resource in the
-     same order as listed by the caller</dd>
+<dd>an array of results, one for each registered resource in the same
+ order as listed by the caller</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the list is <code>null</code></dd>
 <dd><code><a href="../ca/cgjennings/io/InvalidFileFormatException.html" title="class in ca.cgjennings.io">InvalidFileFormatException</a></code> - if any resource is not a supported
-     font file format or the font is corrupt</dd>
+ font file format or the font is corrupt</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/FileNotFoundException.html?is-external=true" title="class or interface in java.io">FileNotFoundException</a></code> - if any resource file does not exist</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if an I/O error occurs while creating a font</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -1426,7 +1454,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>parent</code> - a parent component for the dialog; may be <code>null</code>
-     in which case the main application window is used</dd>
+ in which case the main application window is used</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the selected file, or <code>null</code> if no file was selected</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
@@ -1455,13 +1483,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                                                <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;basename,
                                                <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fileType,
                                                <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fileExtension)</pre>
-<div class="block">Displays a file dialog for exporting a file.
- If the selected file exists, the user must confirm whether they wish to
- replace the existing file.</div>
+<div class="block">Displays a file dialog for exporting a file. If the selected file exists,
+ the user must confirm whether they wish to replace the existing file.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>parent</code> - a parent component for the dialog; may be <code>null</code>
-     in which case the main application window is used</dd>
+ in which case the main application window is used</dd>
 <dd><code>basename</code> - the base location or file</dd>
 <dd><code>fileType</code> - a description of the file type</dd>
 <dd><code>fileExtension</code> - typical file extension for this file type</dd>
@@ -1484,7 +1511,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>parent</code> - a parent component for the dialog; may be <code>null</code>
-     in which case the main application window is used</dd>
+ in which case the main application window is used</dd>
 <dd><code>base</code> - the base location or file</dd>
 <dd><code>fileType</code> - a description of the file type</dd>
 <dd><code>fileExtensions</code> - typical file extensions for this file type</dd>
@@ -1503,13 +1530,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                                          <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;base,
                                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fileTypeDescription,
                                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>...&nbsp;fileNameExtensions)</pre>
-<div class="block">Displays a file dialog for saving a file.
- If the selected file exists, the user must confirm whether they wish to
- replace the existing file.</div>
+<div class="block">Displays a file dialog for saving a file. If the selected file exists,
+ the user must confirm whether they wish to replace the existing file.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>parent</code> - a parent component for the dialog; may be <code>null</code>
-     in which case the main application window is used</dd>
+ in which case the main application window is used</dd>
 <dd><code>base</code> - the base location or file</dd>
 <dd><code>fileTypeDescription</code> - a description of the file type</dd>
 <dd><code>fileNameExtensions</code> - typical file extensions for this file type</dd>
@@ -1529,7 +1555,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>parent</code> - a parent component for the dialog; may be <code>null</code>
-     in which case the main application window is used</dd>
+ in which case the main application window is used</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the selected file, or <code>null</code> if no file was selected</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
@@ -1548,7 +1574,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>parent</code> - a parent component for the dialog; may be <code>null</code>
-     in which case the main application window is used</dd>
+ in which case the main application window is used</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the selected files (empty if no file was selected)</dd>
 </dl>
@@ -1565,7 +1591,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>parent</code> - a parent component for the dialog; may be <code>null</code>
-     in which case the main application window is used</dd>
+ in which case the main application window is used</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the selected file, or <code>null</code> if no file was selected</dd>
 </dl>
@@ -1582,7 +1608,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>parent</code> - a parent component for the dialog; may be <code>null</code>
-     in which case the main application window is used</dd>
+ in which case the main application window is used</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the selected file, or <code>null</code> if no file was selected</dd>
 </dl>
@@ -1596,14 +1622,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>showPrintDialog</h4>
 <pre>public static&nbsp;boolean&nbsp;showPrintDialog(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/print/PrinterJob.html?is-external=true" title="class or interface in java.awt.print">PrinterJob</a>&nbsp;job)</pre>
 <div class="block">Shows a print dialog for a print job. This method may display either the
- native dialog (that allows selection from native print services) or
- a custom dialog (that allows selection from non-native print services)
+ native dialog (that allows selection from native print services) or a
+ custom dialog (that allows selection from non-native print services)
  depending on application preference settings.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>job</code> - the printer job to be used for printing</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the user confirms that printing should proceed</dd>
+<dd><code>true</code> if the user confirms that printing should
+ proceed</dd>
 </dl>
 </li>
 </ul>
@@ -1618,7 +1645,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>parent</code> - a parent component for the dialog; may be <code>null</code>
-     in which case the main application window is used</dd>
+ in which case the main application window is used</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the selected file, or <code>null</code> if no file was selected</dd>
 </dl>
@@ -1632,13 +1659,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>showSaveDialog</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;showSaveDialog(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true" title="class or interface in java.awt">Component</a>&nbsp;parent,
                                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;baseName)</pre>
-<div class="block">Displays a file dialog for saving a single game component.
- If the selected file exists, the user must confirm whether they wish to
- replace the existing file.</div>
+<div class="block">Displays a file dialog for saving a single game component. If the
+ selected file exists, the user must confirm whether they wish to replace
+ the existing file.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>parent</code> - a parent component for the dialog; may be <code>null</code>
-     in which case the main application window is used</dd>
+ in which case the main application window is used</dd>
 <dd><code>baseName</code> - an optional suggested file name</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the selected file, or <code>null</code> if no file was selected</dd>
@@ -1656,7 +1683,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>parent</code> - a parent component for the dialog; may be <code>null</code>
-     in which case the main application window is used</dd>
+ in which case the main application window is used</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the selected file, or <code>null</code> if no file was selected</dd>
 </dl>
@@ -1670,13 +1697,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>showZipFileDialog</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;showZipFileDialog(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true" title="class or interface in java.awt">Component</a>&nbsp;parent,
                                      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;baseName)</pre>
-<div class="block">Displays a file dialog for exporting content to a ZIP archive.
- If the selected file exists, the user must confirm whether they wish to
- replace the existing file.</div>
+<div class="block">Displays a file dialog for exporting content to a ZIP archive. If the
+ selected file exists, the user must confirm whether they wish to replace
+ the existing file.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>parent</code> - a parent component for the dialog; may be <code>null</code>
-     in which case the main application window is used</dd>
+ in which case the main application window is used</dd>
 <dd><code>baseName</code> - an optional suggested file name</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the selected file, or <code>null</code> if no file was selected</dd>
@@ -1690,9 +1717,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>unregisterCacheMetrics</h4>
 <pre>public static&nbsp;void&nbsp;unregisterCacheMetrics(<a href="../resources/CacheMetrics.html" title="interface in resources">CacheMetrics</a>&nbsp;cm)</pre>
-<div class="block">Unregisters a cache's metrics instance.
- Most caches exist for the lifetime of the application and are never
- unregistered.</div>
+<div class="block">Unregisters a cache's metrics instance. Most caches exist for the
+ lifetime of the application and are never unregistered.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>cm</code> - the metrics instance to unregister</dd>
@@ -1740,6 +1766,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../index-all.html">Index</a></li>
+<li><a href="../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

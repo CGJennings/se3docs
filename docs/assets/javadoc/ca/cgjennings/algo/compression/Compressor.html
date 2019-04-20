@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -103,10 +105,10 @@ var activeTableTab = "activeTableTab";
 <pre>public interface <span class="typeNameLabel">Compressor</span></pre>
 <div class="block">A generic interface for simple compression and decompression of data streams
  using various compression algorithms. In addition to supporting the filtered
- stream model used in the Java I/O libraries, <code>Compressors</code>
- use a pipe-style model in which data is transformed as it copied through
- from an input stream to an output stream. This style is more convenient
- in many applications.</div>
+ stream model used in the Java I/O libraries, <code>Compressors</code> use a
+ pipe-style model in which data is transformed as it copied through from an
+ input stream to an output stream. This style is more convenient in many
+ applications.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -148,8 +150,8 @@ var activeTableTab = "activeTableTab";
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/algo/compression/Compressor.html#compress-java.io.InputStream-java.io.OutputStream-">compress</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;in,
         <a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;out)</code>
-<div class="block">Reads the data from the input stream, compresses it, and writes it to
- the output stream.</div>
+<div class="block">Reads the data from the input stream, compresses it, and writes it to the
+ output stream.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -171,8 +173,8 @@ var activeTableTab = "activeTableTab";
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/algo/compression/Compressor.html#decompress-java.io.InputStream-java.io.OutputStream-">decompress</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;in,
           <a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;out)</code>
-<div class="block">Reads compressed data from the input stream, decompresses it, and writes it
- to the output stream.</div>
+<div class="block">Reads compressed data from the input stream, decompresses it, and writes
+ it to the output stream.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -265,8 +267,8 @@ var activeTableTab = "activeTableTab";
 <pre>void&nbsp;compress(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;in,
               <a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;out)
        throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Reads the data from the input stream, compresses it, and writes it to
- the output stream.</div>
+<div class="block">Reads the data from the input stream, compresses it, and writes it to the
+ output stream.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>in</code> - the source for data to compress</dd>
@@ -325,8 +327,8 @@ var activeTableTab = "activeTableTab";
 <pre>void&nbsp;decompress(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io">InputStream</a>&nbsp;in,
                 <a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;out)
          throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Reads compressed data from the input stream, decompresses it, and writes it
- to the output stream.</div>
+<div class="block">Reads compressed data from the input stream, decompresses it, and writes
+ it to the output stream.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>in</code> - the source of data to decompress</dd>
@@ -350,7 +352,8 @@ var activeTableTab = "activeTableTab";
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>in</code> - the stream to read compressed data from</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a filter stream that will decompress data from <code>in</code> as it is read from</dd>
+<dd>a filter stream that will decompress data from <code>in</code> as
+ it is read from</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if an error occurs while creating the stream</dd>
 </dl>
@@ -370,7 +373,8 @@ var activeTableTab = "activeTableTab";
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>out</code> - the stream to write compressed data to</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a filter stream that will compress data and write it to <code>out</code></dd>
+<dd>a filter stream that will compress data and write it to
+ <code>out</code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if an error occurs while creating the stream</dd>
 </dl>
@@ -397,22 +401,25 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>setCompressionLevel</h4>
 <pre>void&nbsp;setCompressionLevel(int&nbsp;level)</pre>
-<div class="block">Sets the compression level for future compression operations.
- The compression level is an integer between 0 and 9 inclusive
- that indicates whether the compressor should favour low resource requirements
- (such as CPU time and memory) or high compression ratios (9=maximum compression).
+<div class="block">Sets the compression level for future compression operations. The
+ compression level is an integer between 0 and 9 inclusive that indicates
+ whether the compressor should favour low resource requirements (such as
+ CPU time and memory) or high compression ratios (9=maximum compression).
  For some implementations, this value may have no effect.
- 
- <p>Each compressor has its own default compression level chosen to balance
- the amount of compression against the resources required to compress and/or
- decompress the data. Setting the compression level higher than its default
- may result in a sharp increase in resource use, particularly during compression.</div>
+
+ <p>
+ Each compressor has its own default compression level chosen to balance
+ the amount of compression against the resources required to compress
+ and/or decompress the data. Setting the compression level higher than its
+ default may result in a sharp increase in resource use, particularly
+ during compression.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>level</code> - the compression level from 0 to 9, with higher values suggesting
-     that the algorithm should try harder to compress the data</dd>
+<dd><code>level</code> - the compression level from 0 to 9, with higher values
+ suggesting that the algorithm should try harder to compress the data</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the requested <code>level</code> is out of range</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the requested <code>level</code> is
+ out of range</dd>
 </dl>
 </li>
 </ul>
@@ -436,6 +443,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

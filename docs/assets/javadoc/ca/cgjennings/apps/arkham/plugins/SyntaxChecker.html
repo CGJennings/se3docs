@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -115,8 +117,8 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">SyntaxChecker</span>
 extends <a href="../../../../../ca/cgjennings/apps/arkham/plugins/AbstractUtilityParser.html" title="class in ca.cgjennings.apps.arkham.plugins">AbstractUtilityParser</a></pre>
-<div class="block">Determines the compile-time errors and warnings in a script without
- executing the script.</div>
+<div class="block">Determines the compile-time errors and warnings in a script without executing
+ the script.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -209,9 +211,9 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/plugins/AbstractUtilit
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/SyntaxChecker.html#processTree-AstRoot-">processTree</a></span>(AstRoot&nbsp;rootNode)</code>
-<div class="block">This is called after each script is parsed to allow the utility
- access to the resulting abstract syntax tree.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/SyntaxChecker.html#processTree-ca.cgjennings.script.mozilla.javascript.ast.AstRoot-">processTree</a></span>(ca.cgjennings.script.mozilla.javascript.ast.AstRoot&nbsp;rootNode)</code>
+<div class="block">This is called after each script is parsed to allow the utility access to
+ the resulting abstract syntax tree.</div>
 </td>
 </tr>
 </table>
@@ -220,7 +222,7 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/plugins/AbstractUtilit
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;ca.cgjennings.apps.arkham.plugins.<a href="../../../../../ca/cgjennings/apps/arkham/plugins/AbstractUtilityParser.html" title="class in ca.cgjennings.apps.arkham.plugins">AbstractUtilityParser</a></h3>
-<code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/AbstractUtilityParser.html#setErrorReporter-ErrorReporter-">setErrorReporter</a></code></li>
+<code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/AbstractUtilityParser.html#setErrorReporter-ca.cgjennings.script.mozilla.javascript.ErrorReporter-">setErrorReporter</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -275,7 +277,8 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/plugins/AbstractUtilit
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>message</code> - the error message</dd>
-<dd><code>warning</code> - <code>true</code> if the message is a warning rather than an error</dd>
+<dd><code>warning</code> - <code>true</code> if the message is a warning rather than
+ an error</dd>
 <dd><code>offset</code> - the offset into the script</dd>
 <dd><code>length</code> - the length of code that is affected</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -315,21 +318,21 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/plugins/AbstractUtilit
 </dl>
 </li>
 </ul>
-<a name="processTree-AstRoot-">
+<a name="processTree-ca.cgjennings.script.mozilla.javascript.ast.AstRoot-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>processTree</h4>
-<pre>protected&nbsp;void&nbsp;processTree(AstRoot&nbsp;rootNode)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/AbstractUtilityParser.html#processTree-AstRoot-">AbstractUtilityParser</a></code></span></div>
-<div class="block">This is called after each script is parsed to allow the utility
- access to the resulting abstract syntax tree. In the event of
- a serious parser error that prevents the tree from being generated,
- the root node will be <code>null</code>.</div>
+<pre>protected&nbsp;void&nbsp;processTree(ca.cgjennings.script.mozilla.javascript.ast.AstRoot&nbsp;rootNode)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/AbstractUtilityParser.html#processTree-ca.cgjennings.script.mozilla.javascript.ast.AstRoot-">AbstractUtilityParser</a></code></span></div>
+<div class="block">This is called after each script is parsed to allow the utility access to
+ the resulting abstract syntax tree. In the event of a serious parser
+ error that prevents the tree from being generated, the root node will be
+ <code>null</code>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/AbstractUtilityParser.html#processTree-AstRoot-">processTree</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/AbstractUtilityParser.html" title="class in ca.cgjennings.apps.arkham.plugins">AbstractUtilityParser</a></code></dd>
+<dd><code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/AbstractUtilityParser.html#processTree-ca.cgjennings.script.mozilla.javascript.ast.AstRoot-">processTree</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/AbstractUtilityParser.html" title="class in ca.cgjennings.apps.arkham.plugins">AbstractUtilityParser</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>rootNode</code> - the root of the parse tree</dd>
 </dl>
@@ -355,6 +358,8 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/plugins/AbstractUtilit
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -144,8 +146,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?i
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.FaceStyle.html#CARD_AND_MARKER">CARD_AND_MARKER</a></span></code>
-<div class="block">The component consists of a total of four faces, but only three
- are shown.</div>
+<div class="block">The component consists of a total of four faces, but only three are
+ shown.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -170,7 +172,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?i
 </tr>
 <tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.FaceStyle.html#SHARED_FACE">SHARED_FACE</a></span></code>
-<div class="block">The component is a card or other object with two faces, but both faces are identical.</div>
+<div class="block">The component is a card or other object with two faces, but both
+ faces are identical.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -180,7 +183,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?i
 </tr>
 <tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.FaceStyle.html#TWO_FACES">TWO_FACES</a></span></code>
-<div class="block">The component is a card or other object with two faces, each of which has its own painter.</div>
+<div class="block">The component is a card or other object with two faces, each of which
+ has its own painter.</div>
 </td>
 </tr>
 </table>
@@ -201,8 +205,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?i
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.FaceStyle.html#getFaceCount--">getFaceCount</a></span>()</code>
-<div class="block">Returns the number of faces (sheets) that are used by this
- face style.</div>
+<div class="block">Returns the number of faces (sheets) that are used by this face
+ style.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -254,15 +258,15 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>CARD_AND_MARKER</h4>
 <pre>public static final&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.FaceStyle.html" title="enum in ca.cgjennings.apps.arkham.diy">DIY.FaceStyle</a> CARD_AND_MARKER</pre>
-<div class="block">The component consists of a total of four faces, but only three
- are shown. This is a special case to handle the commonly found
- combination of a character card with an accompanying marker.
- The first two faces of the component represent the character card,
- while the third face represents one side of the marker (the other
- side is a mirror image). If the default portrait handling system
- is used, then the component will have an additional portrait panel
- to adjust the location and scale of the portrait on the marker
- (the image will be identical to the main portrait image).</div>
+<div class="block">The component consists of a total of four faces, but only three are
+ shown. This is a special case to handle the commonly found
+ combination of a character card with an accompanying marker. The
+ first two faces of the component represent the character card, while
+ the third face represents one side of the marker (the other side is a
+ mirror image). If the default portrait handling system is used, then
+ the component will have an additional portrait panel to adjust the
+ location and scale of the portrait on the marker (the image will be
+ identical to the main portrait image).</div>
 </li>
 </ul>
 <a name="EIGHT_FACES">
@@ -273,18 +277,17 @@ the order they are declared.</div>
 <h4>EIGHT_FACES</h4>
 <pre>public static final&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.FaceStyle.html" title="enum in ca.cgjennings.apps.arkham.diy">DIY.FaceStyle</a> EIGHT_FACES</pre>
 <div class="block">The component consists of a total of eight faces. Typically, the
- component is a quadruple of closely related cards, or a triple of cards
- and a double-sided marker. The front painting functions are called for
- the odd-numbered faces (first, third, fifth, seventh), and the
- back painting functions are called for the even-numbered faces
- (second, fourth, sixth, eighth).
- You can tell which face is requested by calling the
- <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYSheet.html#getSheetIndex--"><code>DIYSheet.getSheetIndex()</code></a> method of the passed-in sheet.
- Eight faces is about the limit of what a user can reasonably work with
- from a single editor; if you have more related faces than this, try
- to find a way to split the design into two or more editors. You
- can always add a button to create or import the common content for the
- second editor automatically from the first.</div>
+ component is a quadruple of closely related cards, or a triple of
+ cards and a double-sided marker. The front painting functions are
+ called for the odd-numbered faces (first, third, fifth, seventh), and
+ the back painting functions are called for the even-numbered faces
+ (second, fourth, sixth, eighth). You can tell which face is requested
+ by calling the <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYSheet.html#getSheetIndex--"><code>DIYSheet.getSheetIndex()</code></a> method of the
+ passed-in sheet. Eight faces is about the limit of what a user can
+ reasonably work with from a single editor; if you have more related
+ faces than this, try to find a way to split the design into two or
+ more editors. You can always add a button to create or import the
+ common content for the second editor automatically from the first.</div>
 </li>
 </ul>
 <a name="FOUR_FACES">
@@ -296,9 +299,9 @@ the order they are declared.</div>
 <pre>public static final&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.FaceStyle.html" title="enum in ca.cgjennings.apps.arkham.diy">DIY.FaceStyle</a> FOUR_FACES</pre>
 <div class="block">The component consists of a total of four faces. Typically, the
  component is a pair of closely related cards. The front painting
- functions are called for the first and third face, and the
- back painting functions are called for the second and fourth face.
- You can tell which face is requested by calling the
+ functions are called for the first and third face, and the back
+ painting functions are called for the second and fourth face. You can
+ tell which face is requested by calling the
  <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYSheet.html#getSheetIndex--"><code>DIYSheet.getSheetIndex()</code></a> method of the passed-in sheet.</div>
 </li>
 </ul>
@@ -319,9 +322,9 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>PLAIN_BACK</h4>
 <pre>public static final&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.FaceStyle.html" title="enum in ca.cgjennings.apps.arkham.diy">DIY.FaceStyle</a> PLAIN_BACK</pre>
-<div class="block">The component has two faces, but the back is just a static image.
- The image specified by the back image template key will be used to
- create a a back face painter automatically.</div>
+<div class="block">The component has two faces, but the back is just a static image. The
+ image specified by the back image template key will be used to create
+ a a back face painter automatically.</div>
 </li>
 </ul>
 <a name="SHARED_FACE">
@@ -331,7 +334,8 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>SHARED_FACE</h4>
 <pre>public static final&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.FaceStyle.html" title="enum in ca.cgjennings.apps.arkham.diy">DIY.FaceStyle</a> SHARED_FACE</pre>
-<div class="block">The component is a card or other object with two faces, but both faces are identical.</div>
+<div class="block">The component is a card or other object with two faces, but both
+ faces are identical.</div>
 </li>
 </ul>
 <a name="SIX_FACES">
@@ -343,11 +347,10 @@ the order they are declared.</div>
 <pre>public static final&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.FaceStyle.html" title="enum in ca.cgjennings.apps.arkham.diy">DIY.FaceStyle</a> SIX_FACES</pre>
 <div class="block">The component consists of a total of six faces. Typically, the
  component is a triple of closely related cards, or a pair of cards
- and a double-sided marker. The front painting functions are called for
- the odd-numbered faces (first, third, fifth), and the
- back painting functions are called for the even-numbered faces
- (second, fourth, sixth).
- You can tell which face is requested by calling the
+ and a double-sided marker. The front painting functions are called
+ for the odd-numbered faces (first, third, fifth), and the back
+ painting functions are called for the even-numbered faces (second,
+ fourth, sixth). You can tell which face is requested by calling the
  <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYSheet.html#getSheetIndex--"><code>DIYSheet.getSheetIndex()</code></a> method of the passed-in sheet.</div>
 </li>
 </ul>
@@ -358,7 +361,8 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>TWO_FACES</h4>
 <pre>public static final&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.FaceStyle.html" title="enum in ca.cgjennings.apps.arkham.diy">DIY.FaceStyle</a> TWO_FACES</pre>
-<div class="block">The component is a card or other object with two faces, each of which has its own painter.</div>
+<div class="block">The component is a card or other object with two faces, each of which
+ has its own painter.</div>
 </li>
 </ul>
 </li>
@@ -376,10 +380,9 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>getFaceCount</h4>
 <pre>public&nbsp;int&nbsp;getFaceCount()</pre>
-<div class="block">Returns the number of faces (sheets) that are used by this
- face style. For example, <code>SHARED_FACE.getFaceCount()</code>
- would return 2, while <code>SIX_FACES.getFaceCount()</code>
- would return 6.</div>
+<div class="block">Returns the number of faces (sheets) that are used by this face
+ style. For example, <code>SHARED_FACE.getFaceCount()</code> would
+ return 2, while <code>SIX_FACES.getFaceCount()</code> would return 6.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the number of sheets associated with this face style</dd>
@@ -448,6 +451,8 @@ for (DIY.FaceStyle c : DIY.FaceStyle.values())
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

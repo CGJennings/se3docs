@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -140,26 +142,26 @@ var activeTableTab = "activeTableTab";
 <pre>public abstract class <span class="typeNameLabel">AbstractSupportEditor</span>
 extends <a href="../../../../ca/cgjennings/apps/arkham/AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.apps.arkham">AbstractStrangeEonsEditor</a>
 implements <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor</a></pre>
-<div class="block">Support editors are used to edit content other than game components.
- To create a new support editor, override <a href="../../../../ca/cgjennings/apps/arkham/AbstractSupportEditor.html#canPerformCommand-ca.cgjennings.apps.arkham.commands.AbstractCommand-"><code>canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a>,
- if necessary, to return <code>true</code> for all <a href="../../../../ca/cgjennings/apps/arkham/commands/DelegatedCommand.html" title="class in ca.cgjennings.apps.arkham.commands"><code>DelegatedCommand</code></a>s
- that you wish to support. Standard editor commands
- (<a href="../../../../ca/cgjennings/apps/arkham/AbstractStrangeEonsEditor.html#clearImpl--"><code>clear</code></a>, <a href="../../../../ca/cgjennings/apps/arkham/AbstractSupportEditor.html#exportImpl-int-java.io.File-"><code>export</code></a>, <a href="../../../../ca/cgjennings/apps/arkham/AbstractStrangeEonsEditor.html#saveImpl-java.io.File-"><code>save</code></a>,
- <a href="../../../../ca/cgjennings/apps/arkham/AbstractStrangeEonsEditor.html#printImpl-java.awt.print.PrinterJob-"><code>AbstractStrangeEonsEditor.printImpl(java.awt.print.PrinterJob)</code></a>, and <a href="../../../../ca/cgjennings/apps/arkham/AbstractStrangeEonsEditor.html#spinOffImpl--"><code>spin off</code></a>)
- can be supported by overriding the related implementation method.
- Other delegated commands can be supported after overriding
+<div class="block">Support editors are used to edit content other than game components. To
+ create a new support editor, override <a href="../../../../ca/cgjennings/apps/arkham/AbstractSupportEditor.html#canPerformCommand-ca.cgjennings.apps.arkham.commands.AbstractCommand-"><code>canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a>, if
+ necessary, to return <code>true</code> for all <a href="../../../../ca/cgjennings/apps/arkham/commands/DelegatedCommand.html" title="class in ca.cgjennings.apps.arkham.commands"><code>DelegatedCommand</code></a>s that
+ you wish to support. Standard editor commands null (<a href="../../../../ca/cgjennings/apps/arkham/AbstractStrangeEonsEditor.html#clearImpl--"><code>clear</code></a>, <a href="../../../../ca/cgjennings/apps/arkham/AbstractSupportEditor.html#exportImpl-int-java.io.File-"><code>export</code></a>, <a href="../../../../ca/cgjennings/apps/arkham/AbstractStrangeEonsEditor.html#saveImpl-java.io.File-"><code>save</code></a>,
+ <a href="../../../../ca/cgjennings/apps/arkham/AbstractStrangeEonsEditor.html#printImpl-java.awt.print.PrinterJob-"><code>AbstractStrangeEonsEditor.printImpl(java.awt.print.PrinterJob)</code></a>, and <a href="../../../../ca/cgjennings/apps/arkham/AbstractStrangeEonsEditor.html#spinOffImpl--"><code>spin off</code></a>) can be supported by
+ overriding the related implementation method. Other delegated commands can be
+ supported after overriding
  <a href="../../../../ca/cgjennings/apps/arkham/AbstractSupportEditor.html#canPerformCommand-ca.cgjennings.apps.arkham.commands.AbstractCommand-"><code>canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a>, <a href="../../../../ca/cgjennings/apps/arkham/AbstractStrangeEonsEditor.html#isCommandApplicable-ca.cgjennings.apps.arkham.commands.AbstractCommand-"><code>AbstractStrangeEonsEditor.isCommandApplicable(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a>, and
- <a href="../../../../ca/cgjennings/apps/arkham/AbstractStrangeEonsEditor.html#performCommand-ca.cgjennings.apps.arkham.commands.AbstractCommand-"><code>AbstractStrangeEonsEditor.performCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a> to accept and implement command support.
- You must also implement <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html#getFileNameExtension--"><code>StrangeEonsEditor.getFileNameExtension()</code></a> and
- <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html#getFileTypeDescription--"><code>StrangeEonsEditor.getFileTypeDescription()</code></a> to return the primary file name extension
- for the file type that the editor supports (or the type currently being
- edited if the editor supports multiple types). To support exporting to
- other formats, override <a href="../../../../ca/cgjennings/apps/arkham/AbstractSupportEditor.html#getExportExtensions--"><code>getExportExtensions()</code></a> and
- <a href="../../../../ca/cgjennings/apps/arkham/AbstractSupportEditor.html#getExportDescriptions--"><code>getExportDescriptions()</code></a> to describe the supported file formats.
+ <a href="../../../../ca/cgjennings/apps/arkham/AbstractStrangeEonsEditor.html#performCommand-ca.cgjennings.apps.arkham.commands.AbstractCommand-"><code>AbstractStrangeEonsEditor.performCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a> to accept and implement command support. You must
+ also implement <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html#getFileNameExtension--"><code>StrangeEonsEditor.getFileNameExtension()</code></a> and
+ <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html#getFileTypeDescription--"><code>StrangeEonsEditor.getFileTypeDescription()</code></a> to return the primary file name extension for
+ the file type that the editor supports (or the type currently being edited if
+ the editor supports multiple types). To support exporting to other formats,
+ override <a href="../../../../ca/cgjennings/apps/arkham/AbstractSupportEditor.html#getExportExtensions--"><code>getExportExtensions()</code></a> and <a href="../../../../ca/cgjennings/apps/arkham/AbstractSupportEditor.html#getExportDescriptions--"><code>getExportDescriptions()</code></a>
+ to describe the supported file formats.
 
- <p>To set the title used for the editor's tab (or window, depending on settings),
- use <a href="../../../../ca/cgjennings/apps/arkham/AbstractStrangeEonsEditor.html#setTitle-java.lang.String-"><code>AbstractStrangeEonsEditor.setTitle(java.lang.String)</code></a>; to set the tab's icon, use <a href="../../../../ca/cgjennings/apps/arkham/AbstractSupportEditor.html#setFrameIcon-javax.swing.Icon-"><code>setFrameIcon(javax.swing.Icon)</code></a>.
- When the user modifies the document, call
+ <p>
+ To set the title used for the editor's tab (or window, depending on
+ settings), use <a href="../../../../ca/cgjennings/apps/arkham/AbstractStrangeEonsEditor.html#setTitle-java.lang.String-"><code>AbstractStrangeEonsEditor.setTitle(java.lang.String)</code></a>; to set the tab's icon, use
+ <a href="../../../../ca/cgjennings/apps/arkham/AbstractSupportEditor.html#setFrameIcon-javax.swing.Icon-"><code>setFrameIcon(javax.swing.Icon)</code></a>. When the user modifies the document, call
  <code>setUnsavedChanges(&nbsp;true&nbsp;)</code> to update the document's
  "dirty" state. (Do not set this if editing or saving is not supported.)</div>
 <dl>
@@ -242,14 +244,14 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;javax.swing.<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing">JComponent</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#accessibleContext" title="class or interface in javax.swing">accessibleContext</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#listenerList" title="class or interface in javax.swing">listenerList</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#TOOL_TIP_TEXT_KEY" title="class or interface in javax.swing">TOOL_TIP_TEXT_KEY</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#ui" title="class or interface in javax.swing">ui</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#UNDEFINED_CONDITION" title="class or interface in javax.swing">UNDEFINED_CONDITION</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#WHEN_ANCESTOR_OF_FOCUSED_COMPONENT" title="class or interface in javax.swing">WHEN_ANCESTOR_OF_FOCUSED_COMPONENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#WHEN_FOCUSED" title="class or interface in javax.swing">WHEN_FOCUSED</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#WHEN_IN_FOCUSED_WINDOW" title="class or interface in javax.swing">WHEN_IN_FOCUSED_WINDOW</a></code></li>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#listenerList" title="class or interface in javax.swing">listenerList</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#TOOL_TIP_TEXT_KEY" title="class or interface in javax.swing">TOOL_TIP_TEXT_KEY</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#ui" title="class or interface in javax.swing">ui</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#UNDEFINED_CONDITION" title="class or interface in javax.swing">UNDEFINED_CONDITION</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#WHEN_ANCESTOR_OF_FOCUSED_COMPONENT" title="class or interface in javax.swing">WHEN_ANCESTOR_OF_FOCUSED_COMPONENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#WHEN_FOCUSED" title="class or interface in javax.swing">WHEN_FOCUSED</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#WHEN_IN_FOCUSED_WINDOW" title="class or interface in javax.swing">WHEN_IN_FOCUSED_WINDOW</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="fields.inherited.from.class.java.awt.Component">
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;java.awt.<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true" title="class or interface in java.awt">Component</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#BOTTOM_ALIGNMENT" title="class or interface in java.awt">BOTTOM_ALIGNMENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#CENTER_ALIGNMENT" title="class or interface in java.awt">CENTER_ALIGNMENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#LEFT_ALIGNMENT" title="class or interface in java.awt">LEFT_ALIGNMENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#RIGHT_ALIGNMENT" title="class or interface in java.awt">RIGHT_ALIGNMENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#TOP_ALIGNMENT" title="class or interface in java.awt">TOP_ALIGNMENT</a></code></li>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#accessibleContext" title="class or interface in java.awt">accessibleContext</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#BOTTOM_ALIGNMENT" title="class or interface in java.awt">BOTTOM_ALIGNMENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#CENTER_ALIGNMENT" title="class or interface in java.awt">CENTER_ALIGNMENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#LEFT_ALIGNMENT" title="class or interface in java.awt">LEFT_ALIGNMENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#RIGHT_ALIGNMENT" title="class or interface in java.awt">RIGHT_ALIGNMENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#TOP_ALIGNMENT" title="class or interface in java.awt">TOP_ALIGNMENT</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="fields.inherited.from.class.javax.swing.WindowConstants">
@@ -301,8 +303,8 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/AbstractSupportEditor.html#canPerformCommand-ca.cgjennings.apps.arkham.commands.AbstractCommand-">canPerformCommand</a></span>(<a href="../../../../ca/cgjennings/apps/arkham/commands/AbstractCommand.html" title="class in ca.cgjennings.apps.arkham.commands">AbstractCommand</a>&nbsp;command)</code>
-<div class="block">Returns <code>true</code> if the commandable wishes to handle the
- given command.</div>
+<div class="block">Returns <code>true</code> if the commandable wishes to handle the given
+ command.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -315,8 +317,8 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/AbstractSupportEditor.html#exportImpl-int-java.io.File-">exportImpl</a></span>(int&nbsp;type,
           <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</code>
-<div class="block">Subclasses should override this to export the edited content
- if EXPORT is a supported command.</div>
+<div class="block">Subclasses should override this to export the edited content if EXPORT is
+ a supported command.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -329,13 +331,15 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html
 <tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/AbstractSupportEditor.html#getExportDescriptions--">getExportDescriptions</a></span>()</code>
-<div class="block">Returns a description of the file types supported for export from this editor.</div>
+<div class="block">Returns a description of the file types supported for export from this
+ editor.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/AbstractSupportEditor.html#getExportExtensions--">getExportExtensions</a></span>()</code>
-<div class="block">Returns the standard file extensions supported for export from this editor.</div>
+<div class="block">Returns the standard file extensions supported for export from this
+ editor.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -452,15 +456,15 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html
 <li class="blockList">
 <h4>canPerformCommand</h4>
 <pre>public&nbsp;boolean&nbsp;canPerformCommand(<a href="../../../../ca/cgjennings/apps/arkham/commands/AbstractCommand.html" title="class in ca.cgjennings.apps.arkham.commands">AbstractCommand</a>&nbsp;command)</pre>
-<div class="block">Returns <code>true</code> if the commandable wishes to handle the
- given command. This method defines the set of commands that the
- commandable responds to. The commandable might not be able to act
- on the command at the current moment. For example, a commandable
- that responds to "Cut" could return true from this method,
- but false from <a href="../../../../ca/cgjennings/apps/arkham/AbstractStrangeEonsEditor.html#isCommandApplicable-ca.cgjennings.apps.arkham.commands.AbstractCommand-"><code>AbstractStrangeEonsEditor.isCommandApplicable(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a> if there is currently
- no selection to cut.
+<div class="block">Returns <code>true</code> if the commandable wishes to handle the given
+ command. This method defines the set of commands that the commandable
+ responds to. The commandable might not be able to act on the command at
+ the current moment. For example, a commandable that responds to "Cut"
+ could return true from this method, but false from
+ <a href="../../../../ca/cgjennings/apps/arkham/AbstractStrangeEonsEditor.html#isCommandApplicable-ca.cgjennings.apps.arkham.commands.AbstractCommand-"><code>AbstractStrangeEonsEditor.isCommandApplicable(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a> if there is currently no selection to cut.
 
- <p>The base class for support editors returns true for the following
+ <p>
+ The base class for support editors returns true for the following
  standard commands: CLEAR, EXPORT, PRINT, SAVE, SAVE_AS.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -472,8 +476,8 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>command</code> - the command to be performed</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if this commandable wishes to handle the command
-     (even if it cannot execute the command currently)</dd>
+<dd><code>true</code> if this commandable wishes to handle the
+ command (even if it cannot execute the command currently)</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../ca/cgjennings/apps/arkham/commands/Commands.html" title="class in ca.cgjennings.apps.arkham.commands"><code>Commands</code></a></dd>
 </dl>
@@ -486,12 +490,11 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html
 <li class="blockList">
 <h4>export</h4>
 <pre>public&nbsp;void&nbsp;export()</pre>
-<div class="block">Exports the editor content as a different file format.
- The base class implementation handles the details of determining the
- file to be written and exception handling. To use it, override
- <a href="../../../../ca/cgjennings/apps/arkham/AbstractSupportEditor.html#exportImpl-int-java.io.File-"><code>exportImpl(int, java.io.File)</code></a> to write the document, and
- <a href="../../../../ca/cgjennings/apps/arkham/AbstractSupportEditor.html#getExportExtensions--"><code>getExportExtensions()</code></a> and <a href="../../../../ca/cgjennings/apps/arkham/AbstractSupportEditor.html#getExportDescriptions--"><code>getExportDescriptions()</code></a> to
- describe the possible formats.</div>
+<div class="block">Exports the editor content as a different file format. The base class
+ implementation handles the details of determining the file to be written
+ and exception handling. To use it, override <a href="../../../../ca/cgjennings/apps/arkham/AbstractSupportEditor.html#exportImpl-int-java.io.File-"><code>exportImpl(int, java.io.File)</code></a> to write
+ the document, and <a href="../../../../ca/cgjennings/apps/arkham/AbstractSupportEditor.html#getExportExtensions--"><code>getExportExtensions()</code></a> and
+ <a href="../../../../ca/cgjennings/apps/arkham/AbstractSupportEditor.html#getExportDescriptions--"><code>getExportDescriptions()</code></a> to describe the possible formats.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html#export--">export</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor</a></code></dd>
@@ -499,7 +502,7 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html
 <dd><code><a href="../../../../ca/cgjennings/apps/arkham/AbstractStrangeEonsEditor.html#export--">export</a></code>&nbsp;in class&nbsp;<code><a href="../../../../ca/cgjennings/apps/arkham/AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.apps.arkham">AbstractStrangeEonsEditor</a></code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</a></code> - if the EXPORT command is not
-     supported by this editor</dd>
+ supported by this editor</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../ca/cgjennings/apps/arkham/AbstractSupportEditor.html#canPerformCommand-ca.cgjennings.apps.arkham.commands.AbstractCommand-"><code>canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a></dd>
 </dl>
@@ -514,11 +517,11 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html
 <pre>protected&nbsp;void&nbsp;exportImpl(int&nbsp;type,
                           <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)
                    throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Subclasses should override this to export the edited content
- if EXPORT is a supported command. The value of <code>type</code>
- is the index of the element in <a href="../../../../ca/cgjennings/apps/arkham/AbstractSupportEditor.html#getExportExtensions--"><code>getExportExtensions()</code></a> for
- the file type that was selected by the user. The value of
- <code>file</code> is the destination file to write content to.</div>
+<div class="block">Subclasses should override this to export the edited content if EXPORT is
+ a supported command. The value of <code>type</code> is the index of the
+ element in <a href="../../../../ca/cgjennings/apps/arkham/AbstractSupportEditor.html#getExportExtensions--"><code>getExportExtensions()</code></a> for the file type that was
+ selected by the user. The value of <code>file</code> is the destination
+ file to write content to.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>type</code> - the index of the file format to export</dd>
@@ -535,13 +538,15 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html
 <li class="blockList">
 <h4>getExportDescriptions</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;getExportDescriptions()</pre>
-<div class="block">Returns a description of the file types supported for export from this editor.
- The length and indices of this array match those returned by
+<div class="block">Returns a description of the file types supported for export from this
+ editor. The length and indices of this array match those returned by
  <a href="../../../../ca/cgjennings/apps/arkham/AbstractSupportEditor.html#getExportExtensions--"><code>getExportExtensions()</code></a>, that is, element 0 of this array is a
- description of the file type represented by the element 0 of the extensions array.</div>
+ description of the file type represented by the element 0 of the
+ extensions array.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>an array of human-readable type descriptions, such as "Text document"
+<dd>an array of human-readable type descriptions, such as "Text
+ document"
  <p>
  This base implementation returns an empty array.</dd>
 </dl>
@@ -554,9 +559,9 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html
 <li class="blockList">
 <h4>getExportExtensions</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;getExportExtensions()</pre>
-<div class="block">Returns the standard file extensions supported for export from this editor.
- This implementation returns an empty array.
- If your editor supports export, it should override this to return</div>
+<div class="block">Returns the standard file extensions supported for export from this
+ editor. This implementation returns an empty array. If your editor
+ supports export, it should override this to return</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>an array of file extensions, such as <code>"txt"</code>
@@ -627,12 +632,12 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html
 <li class="blockList">
 <h4>setAttached</h4>
 <pre>public&nbsp;void&nbsp;setAttached(boolean&nbsp;attach)</pre>
-<div class="block">Sets whether this editor is attached to the document tab strip.
- If <code>true</code>, the editor is attached; this is the default
- state for new editors. If <code>false</code>, the editor is detached
- from the tab strip. When detached, the editor appears in its own
- floating window separate from the main application window. The editor
- reattaches when the window is closed.</div>
+<div class="block">Sets whether this editor is attached to the document tab strip. If
+ <code>true</code>, the editor is attached; this is the default state for
+ new editors. If <code>false</code>, the editor is detached from the tab
+ strip. When detached, the editor appears in its own floating window
+ separate from the main application window. The editor reattaches when the
+ window is closed.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>attach</code> - if <code>true</code>, attaches the window to the tab strip</dd>
@@ -646,13 +651,12 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html
 <li class="blockList">
 <h4>setFrameIcon</h4>
 <pre>public&nbsp;void&nbsp;setFrameIcon(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing">Icon</a>&nbsp;icon)</pre>
-<div class="block">Sets the preferred icon to use for this editor window. This icon may
- be used to represent the window in various parts of the application interface.
- Possible example uses include the following:
- the document tab, the editor's item in the Window menu, and the frame
- icon of the editor's detached window.
- Note, however, that there is no guarantee that the icon will be used,
- or how. Furthermore, the icon may be used in modified form.</div>
+<div class="block">Sets the preferred icon to use for this editor window. This icon may be
+ used to represent the window in various parts of the application
+ interface. Possible example uses include the following: the document tab,
+ the editor's item in the Window menu, and the frame icon of the editor's
+ detached window. Note, however, that there is no guarantee that the icon
+ will be used, or how. Furthermore, the icon may be used in modified form.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JInternalFrame.html?is-external=true#setFrameIcon-javax.swing.Icon-" title="class or interface in javax.swing">setFrameIcon</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JInternalFrame.html?is-external=true" title="class or interface in javax.swing">JInternalFrame</a></code></dd>
@@ -683,6 +687,8 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

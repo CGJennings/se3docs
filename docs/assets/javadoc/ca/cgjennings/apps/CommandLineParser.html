@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -106,40 +108,42 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">CommandLineParser</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block">Parses command line options for an application. To use a <code>CommandLineParser</code>,
- provide a class (possibly a subclass of this class) with public fields whose
- names match the desired options. The parser will search for options in the
- command line arguments and match them against fields in the class of the
- supplied object. When an option name matches a field name, the value of the
- field will be set to reflect the value of the option.
+<div class="block">Parses command line options for an application. To use a
+ <code>CommandLineParser</code>, provide a class (possibly a subclass of this
+ class) with public fields whose names match the desired options. The parser
+ will search for options in the command line arguments and match them against
+ fields in the class of the supplied object. When an option name matches a
+ field name, the value of the field will be set to reflect the value of the
+ option.
 
- <p>Depending on the type of the field, an option takes either 0 or 1 parameters.
- If the type of the field is <code>boolean</code> or <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang"><code>Boolean</code></a>, it
- will take no parameter. The value of the field will set to <code>true</code>
- if the option is found, and otherwise it will not be changed. For other types,
+ <p>
+ Depending on the type of the field, an option takes either 0 or 1 parameters.
+ If the type of the field is <code>boolean</code> or <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang"><code>Boolean</code></a>, it will
+ take no parameter. The value of the field will set to <code>true</code> if
+ the option is found, and otherwise it will not be changed. For other types,
  the argument immediately following the option is taken to be its parameter.
- The following field types can all be filled in automatically from this argument:
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io"><code>File</code></a>, int, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang"><code>Integer</code></a>, double, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang"><code>Double</code></a>,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang"><code>Class</code></a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html?is-external=true" title="class or interface in java.util"><code>Locale</code></a>, and <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?is-external=true" title="class or interface in java.lang"><code>Enum</code></a>.
- Strings are copied as-is. Files are filled in as if by
- <code>new File( argument )</code>; classes as if by
- <code>Class.forName( argument )</code>. Numeric types are
- filled in as if by the appropriate <code>valueOf</code> or <code>parseInt</code>
- method. If a class is not found or there is a syntax error in the format of
- a numeric parameter, a suitable error message is printed.
- <code>Locales</code> are interpreted using the same mechanism as that used
- for resource bundles, e.g., en_CA would refer to Canadian English.
- <code>Enum</code> types will be assigned a value by
- converting the parameter to upper case and invoking the enum's <code>valueOf</code>
- method on the result.
+ The following field types can all be filled in automatically from this
+ argument: <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io"><code>File</code></a>, int, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang"><code>Integer</code></a>, double, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang"><code>Double</code></a>,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang"><code>Class</code></a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html?is-external=true" title="class or interface in java.util"><code>Locale</code></a>, and <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?is-external=true" title="class or interface in java.lang"><code>Enum</code></a>. Strings are copied as-is.
+ Files are filled in as if by <code>new File( argument )</code>; classes as if
+ by <code>Class.forName( argument )</code>. Numeric types are filled in as if
+ by the appropriate <code>valueOf</code> or <code>parseInt</code> method. If a
+ class is not found or there is a syntax error in the format of a numeric
+ parameter, a suitable error message is printed. <code>Locales</code> are
+ interpreted using the same mechanism as that used for resource bundles, e.g.,
+ en_CA would refer to Canadian English. <code>Enum</code> types will be
+ assigned a value by converting the parameter to upper case and invoking the
+ enum's <code>valueOf</code> method on the result.
 
- <p>If the type of a field is not one of the predefined types above, then
- the type will be checked for a constructor that takes a single <code>String</code>
- argument. If one exists, then it will be used to create the value to be filled
- in the field by calling the constructor with the parameter string. Otherwise,
- an <code>AssertionError</code> will be thrown.
+ <p>
+ If the type of a field is not one of the predefined types above, then the
+ type will be checked for a constructor that takes a single
+ <code>String</code> argument. If one exists, then it will be used to create
+ the value to be filled in the field by calling the constructor with the
+ parameter string. Otherwise, an <code>AssertionError</code> will be thrown.
 
- <p>Any arguments that are neither an option nor a parameter for an option will
+ <p>
+ Any arguments that are neither an option nor a parameter for an option will
  be collected and, after parsing is completed, may be fetched using
  <a href="../../../ca/cgjennings/apps/CommandLineParser.html#getPlainArguments--"><code>getPlainArguments()</code></a> or <a href="../../../ca/cgjennings/apps/CommandLineParser.html#getPlainFiles--"><code>getPlainFiles()</code></a>.</div>
 <dl>
@@ -193,9 +197,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/apps/CommandLineParser.html#getOptionName-java.lang.String-">getOptionName</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;argument)</code>
-<div class="block">Returns the name of an option in a command line argument, stripped of
- its prefix; if the argument does not represent an option,
- returns <code>null</code>.</div>
+<div class="block">Returns the name of an option in a command line argument, stripped of its
+ prefix; if the argument does not represent an option, returns
+ <code>null</code>.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -227,15 +231,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/apps/CommandLineParser.html#isCaseSensitive--">isCaseSensitive</a></span>()</code>
-<div class="block">If this returns <code>true</code>, then the matching of option names
- to fields will be case sensitive.</div>
+<div class="block">If this returns <code>true</code>, then the matching of option names to
+ fields will be case sensitive.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/apps/CommandLineParser.html#isHelpOption-java.lang.String-">isHelpOption</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;argument)</code>
-<div class="block">Returns <code>true</code> if and only if the supplied argument
- should be interpreted as a request for help.</div>
+<div class="block">Returns <code>true</code> if and only if the supplied argument should be
+ interpreted as a request for help.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
@@ -252,14 +256,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Field.html?is-external=true" title="class or interface in java.lang.reflect">Field</a>&nbsp;field,
          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>
-<div class="block">This is called by the parser to set the value for an option in its associated
- field.</div>
+<div class="block">This is called by the parser to set the value for an option in its
+ associated field.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/apps/CommandLineParser.html#setUsageText-java.lang.String-">setUsageText</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;commandHelp)</code>
-<div class="block">Sets the usage information to display when command line help is requested.</div>
+<div class="block">Sets the usage information to display when command line help is
+ requested.</div>
 </td>
 </tr>
 </table>
@@ -311,11 +316,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>displayUsageText</h4>
 <pre>protected&nbsp;void&nbsp;displayUsageText(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;target)</pre>
 <div class="block">Called to display usage information when help is requested. The base
- class prints a message to the output stream and exits.
- If a non-<code>null</code> usage text has been set with
- <a href="../../../ca/cgjennings/apps/CommandLineParser.html#setUsageText-java.lang.String-"><code>setUsageText(java.lang.String)</code></a>, then this will be used as the text to display.
- If no other usage text is defined, the base class will display
- a default message that is generated from the fields in the target.</div>
+ class prints a message to the output stream and exits. If a
+ non-<code>null</code> usage text has been set with <a href="../../../ca/cgjennings/apps/CommandLineParser.html#setUsageText-java.lang.String-"><code>setUsageText(java.lang.String)</code></a>,
+ then this will be used as the text to display. If no other usage text is
+ defined, the base class will display a default message that is generated
+ from the fields in the target.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>target</code> - the object being used as a parsing template</dd>
@@ -329,17 +334,18 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getOptionName</h4>
 <pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getOptionName(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;argument)</pre>
-<div class="block">Returns the name of an option in a command line argument, stripped of
- its prefix; if the argument does not represent an option,
- returns <code>null</code>. The base class checks for a prefix of
- either "--" or "-". If present, it returns the remainder of the argument.
- Otherwise, it returns <code>null</code>.
- Subclasses may override this to enforce other conventions.</div>
+<div class="block">Returns the name of an option in a command line argument, stripped of its
+ prefix; if the argument does not represent an option, returns
+ <code>null</code>. The base class checks for a prefix of either "--" or
+ "-". If present, it returns the remainder of the argument. Otherwise, it
+ returns <code>null</code>. Subclasses may override this to enforce other
+ conventions.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>argument</code> - the argument which might represent an option name</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the option name represented, or <code>null</code> if the argument is not an option</dd>
+<dd>the option name represented, or <code>null</code> if the argument
+ is not an option</dd>
 </dl>
 </li>
 </ul>
@@ -351,10 +357,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getPlainArguments</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;getPlainArguments()</pre>
 <div class="block">Returns a copy of all of the arguments that were not used as options or
- the value of an option. For a typical command line utility, this would be the list
- of files on which the command is to operate. If the parser has not parsed
- a command line, or if an error occurred during the last parse, this will
- return <code>null</code>.</div>
+ the value of an option. For a typical command line utility, this would be
+ the list of files on which the command is to operate. If the parser has
+ not parsed a command line, or if an error occurred during the last parse,
+ this will return <code>null</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the unused command line arguments, or <code>null</code></dd>
@@ -369,11 +375,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getPlainFiles</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>[]&nbsp;getPlainFiles()</pre>
 <div class="block">Returns a copy of all of the arguments that were not used as options or
- the value of an option as <code>File</code> objects.
- For a typical command line utility, this would be the list
- of files on which the command is to operate. If the parser has not parsed
- a command line, or if an error occurred during the last parse, this will
- return <code>null</code>.</div>
+ the value of an option as <code>File</code> objects. For a typical
+ command line utility, this would be the list of files on which the
+ command is to operate. If the parser has not parsed a command line, or if
+ an error occurred during the last parse, this will return
+ <code>null</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the unused command line arguments, or <code>null</code></dd>
@@ -403,15 +409,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>handleParsingError</h4>
 <pre>protected&nbsp;void&nbsp;handleParsingError(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</pre>
-<div class="block">Called when there is an error with the command line syntax. The base class
- prints the supplied message, then prints a line inviting the user to
- use the <code>--help</code> option for more information, and then exits
- the application with a return code of 20 (indicating an abnormal
+<div class="block">Called when there is an error with the command line syntax. The base
+ class prints the supplied message, then prints a line inviting the user
+ to use the <code>--help</code> option for more information, and then
+ exits the application with a return code of 20 (indicating an abnormal
  termination).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>message</code> - the message to display, or <code>null</code> for the
-    default message "The command line arguments are incorrect"</dd>
+ default message "The command line arguments are incorrect"</dd>
 </dl>
 </li>
 </ul>
@@ -422,8 +428,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isCaseSensitive</h4>
 <pre>protected&nbsp;boolean&nbsp;isCaseSensitive()</pre>
-<div class="block">If this returns <code>true</code>, then the matching of option names
- to fields will be case sensitive. The base class returns <code>false</code>.</div>
+<div class="block">If this returns <code>true</code>, then the matching of option names to
+ fields will be case sensitive. The base class returns <code>false</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> to make option names case sensitive</dd>
@@ -437,10 +443,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isHelpOption</h4>
 <pre>protected&nbsp;boolean&nbsp;isHelpOption(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;argument)</pre>
-<div class="block">Returns <code>true</code> if and only if the supplied argument
- should be interpreted as a request for help.
- The base class returns <code>true</code> for any of:
- "--help", "--h", "-?", or "/?".</div>
+<div class="block">Returns <code>true</code> if and only if the supplied argument should be
+ interpreted as a request for help. The base class returns
+ <code>true</code> for any of: "--help", "--h", "-?", or "/?".</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>argument</code> - the argument to test</dd>
@@ -461,8 +466,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  public fields of <code>target</code> as appropriate.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>target</code> - the object whose fields will be filled in, or <code>null</code>
-     to use this object</dd>
+<dd><code>target</code> - the object whose fields will be filled in, or
+ <code>null</code> to use this object</dd>
 <dd><code>args</code> - the command line arguments to parse</dd>
 </dl>
 </li>
@@ -477,15 +482,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/Field.html?is-external=true" title="class or interface in java.lang.reflect">Field</a>&nbsp;field,
                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</pre>
-<div class="block">This is called by the parser to set the value for an option in its associated
- field.</div>
+<div class="block">This is called by the parser to set the value for an option in its
+ associated field.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>target</code> - the object whose fields should be modified</dd>
 <dd><code>name</code> - the name of the option</dd>
 <dd><code>field</code> - the field in which the option's value should be placed</dd>
 <dd><code>value</code> - the argument from which the option's value must be derived;
-     <code>null</code> if the option takes no value</dd>
+ <code>null</code> if the option takes no value</dd>
 </dl>
 </li>
 </ul>
@@ -496,7 +501,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>setUsageText</h4>
 <pre>public&nbsp;void&nbsp;setUsageText(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;commandHelp)</pre>
-<div class="block">Sets the usage information to display when command line help is requested.</div>
+<div class="block">Sets the usage information to display when command line help is
+ requested.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>commandHelp</code> - the banner and help information to display</dd>
@@ -523,6 +529,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

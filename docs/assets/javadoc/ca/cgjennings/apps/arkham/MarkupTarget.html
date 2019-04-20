@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -97,16 +99,16 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public interface <span class="typeNameLabel">MarkupTarget</span></pre>
-<div class="block">A markup target is an adapter that allows modification of the text in user interface
- components that can contain markup text for a game component. The markup target
- presents a common interface for modifying the text in the target component
- so that the underlying component type is transparent to the user.
- Typical markup targets are text fields, text areas, and code editors.
+<div class="block">A markup target is an adapter that allows modification of the text in user
+ interface components that can contain markup text for a game component. The
+ markup target presents a common interface for modifying the text in the
+ target component so that the underlying component type is transparent to the
+ user. Typical markup targets are text fields, text areas, and code editors.
  <p>
- Although you can create a markup target for any valid component directly,
- it is more common to use the application markup target. For example, the
- commands in the <b>Markup</b> menu use the application markup target as
- the target of their commands.</div>
+ Although you can create a markup target for any valid component directly, it
+ is more common to use the application markup target. For example, the
+ commands in the <b>Markup</b> menu use the application markup target as the
+ target of their commands.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -132,8 +134,8 @@ var activeTableTab = "activeTableTab";
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/MarkupTarget.html#FORCE_MARKUP_TARGET_PROPERTY">FORCE_MARKUP_TARGET_PROPERTY</a></span></code>
-<div class="block">If set in a component's client properties, forces whether a component
- is or is not considered to be a markup target.</div>
+<div class="block">If set in a component's client properties, forces whether a component is
+ or is not considered to be a markup target.</div>
 </td>
 </tr>
 </table>
@@ -292,12 +294,12 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>FORCE_MARKUP_TARGET_PROPERTY</h4>
 <pre>static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> FORCE_MARKUP_TARGET_PROPERTY</pre>
-<div class="block">If set in a component's client properties, forces whether a component
- is or is not considered to be a markup target. Set to <code>Boolean.TRUE</code> or
- <code>Boolean.FALSE</code>. Otherwise, markup target candidates are evaluated
- using heuristics. To be valid, the component must still be an acceptable
- type of control, and (in strict validation mode) showing, enabled, and
- editable.</div>
+<div class="block">If set in a component's client properties, forces whether a component is
+ or is not considered to be a markup target. Set to
+ <code>Boolean.TRUE</code> or <code>Boolean.FALSE</code>. Otherwise,
+ markup target candidates are evaluated using heuristics. To be valid, the
+ component must still be an acceptable type of control, and (in strict
+ validation mode) showing, enabled, and editable.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../ca/cgjennings/apps/arkham/MarkupTargetFactory.html#isValidTarget-java.lang.Object-boolean-"><code>MarkupTargetFactory.isValidTarget(java.lang.Object, boolean)</code></a>, 
@@ -355,8 +357,8 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>getSelectionEnd</h4>
 <pre>int&nbsp;getSelectionEnd()</pre>
-<div class="block">Returns the end offset of the selection. The end offset is the offset
- of the cursor position within the document text.</div>
+<div class="block">Returns the end offset of the selection. The end offset is the offset of
+ the cursor position within the document text.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the selection end offset</dd>
@@ -388,7 +390,8 @@ var activeTableTab = "activeTableTab";
 <div class="block">Returns the actual target wrapped by this <code>MarkupTarget</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the underlying object that is manipulated by this markup target instance</dd>
+<dd>the underlying object that is manipulated by this markup target
+ instance</dd>
 </dl>
 </li>
 </ul>
@@ -414,17 +417,18 @@ var activeTableTab = "activeTableTab";
 <h4>getText</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getText(int&nbsp;start,
                int&nbsp;length)</pre>
-<div class="block">Returns an arbitrary substring of the text of the markup target. The returned
- text will be empty if the start position is past the end of the document
- or the length is 0. If there are fewer characters after the start offset
- than the requested length, then the rest of the document is returned.</div>
+<div class="block">Returns an arbitrary substring of the text of the markup target. The
+ returned text will be empty if the start position is past the end of the
+ document or the length is 0. If there are fewer characters after the
+ start offset than the requested length, then the rest of the document is
+ returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>start</code> - the start index of the substring</dd>
 <dd><code>length</code> - the number of characters to include</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the text of the markup target from <code>start</code> to
-     <code>end-1</code>, inclusive</dd>
+ <code>end-1</code>, inclusive</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if start or length is negative</dd>
 </dl>
@@ -472,10 +476,10 @@ var activeTableTab = "activeTableTab";
 <h4>select</h4>
 <pre>void&nbsp;select(int&nbsp;start,
             int&nbsp;end)</pre>
-<div class="block">Changes the selection in the markup target. Invalid selections will
- be clamped to the valid range of the document. Note that <code>start</code>
- does not need to be less than <code>end</code>; the cursor will be located
- at the <code>end</code> offset.</div>
+<div class="block">Changes the selection in the markup target. Invalid selections will be
+ clamped to the valid range of the document. Note that <code>start</code>
+ does not need to be less than <code>end</code>; the cursor will be
+ located at the <code>end</code> offset.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>start</code> - the start offset of the new selection</dd>
@@ -500,8 +504,8 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>selectionLength</h4>
 <pre>int&nbsp;selectionLength()</pre>
-<div class="block">Returns the length of the selected text of the markup target.
- If there is no selection, returns 0.</div>
+<div class="block">Returns the length of the selected text of the markup target. If there is
+ no selection, returns 0.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the length of the current selection</dd>
@@ -525,9 +529,9 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>setSelectedText</h4>
 <pre>int&nbsp;setSelectedText(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text)</pre>
-<div class="block">Inserts text at the cursor position. If there is an active selection,
- it will be replaced. The inserted text may be modified before insertion,
- so the actual number of characters inserted may not be the same as
+<div class="block">Inserts text at the cursor position. If there is an active selection, it
+ will be replaced. The inserted text may be modified before insertion, so
+ the actual number of characters inserted may not be the same as
  <code>text.length()</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -584,17 +588,20 @@ var activeTableTab = "activeTableTab";
 <pre>void&nbsp;tagSelectedText(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;prefix,
                      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;suffix,
                      boolean&nbsp;caseSensitive)</pre>
-<div class="block">Tags the selected text with a prefix and suffix. If the selected text
- is already surrounded by the prefix and suffix, then the prefix and
- suffix will be removed. This is a simple way to add or remove modal
- markup tags around the selection. For example, to bold the selected
- text (or unbold if it is surround by a bold tag pair):<br>
+<div class="block">Tags the selected text with a prefix and suffix. If the selected text is
+ already surrounded by the prefix and suffix, then the prefix and suffix
+ will be removed. This is a simple way to add or remove modal markup tags
+ around the selection. For example, to bold the selected text (or unbold
+ if it is surround by a bold tag pair):<br>
  <code>tagSelection( "&lt;b&gt;", "&lt;/b&gt;" )</code></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>prefix</code> - the prefix to insert (or remove) at the start of the selection</dd>
-<dd><code>suffix</code> - the suffix to insert (or remove) at the end of the selection</dd>
-<dd><code>caseSensitive</code> - if <code>true</code>, the prefix and suffix are case-sensitive</dd>
+<dd><code>prefix</code> - the prefix to insert (or remove) at the start of the
+ selection</dd>
+<dd><code>suffix</code> - the suffix to insert (or remove) at the end of the
+ selection</dd>
+<dd><code>caseSensitive</code> - if <code>true</code>, the prefix and suffix are
+ case-sensitive</dd>
 </dl>
 </li>
 </ul>
@@ -618,6 +625,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

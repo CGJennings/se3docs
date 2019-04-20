@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -111,12 +113,12 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">SurrogateConnection</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/net/URLConnection.html?is-external=true" title="class or interface in java.net">URLConnection</a></pre>
-<div class="block">A <a href="https://docs.oracle.com/javase/8/docs/api/java/net/URLConnection.html?is-external=true" title="class or interface in java.net"><code>URLConnection</code></a> that stands in for another connection
- by returning an alternative byte stream.
+<div class="block">A <a href="https://docs.oracle.com/javase/8/docs/api/java/net/URLConnection.html?is-external=true" title="class or interface in java.net"><code>URLConnection</code></a> that stands in for another connection by returning an
+ alternative byte stream.
 
- <p>If the surrogate stream is created with a <code>null</code>
- replacement stream, it will throw a <a href="https://docs.oracle.com/javase/8/docs/api/java/io/FileNotFoundException.html?is-external=true" title="class or interface in java.io"><code>FileNotFoundException</code></a>
- when</div>
+ <p>
+ If the surrogate stream is created with a <code>null</code> replacement
+ stream, it will throw a <a href="https://docs.oracle.com/javase/8/docs/api/java/io/FileNotFoundException.html?is-external=true" title="class or interface in java.io"><code>FileNotFoundException</code></a> when</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -157,8 +159,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/net/URLConnectio
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/io/protocols/SurrogateConnection.html#SurrogateConnection-java.net.URL-byte:A-boolean-">SurrogateConnection</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a>&nbsp;url,
                    byte[]&nbsp;replacementStream,
                    boolean&nbsp;getHeadersFromSource)</code>
-<div class="block">Creates a new connection surrogate for the specified URL and
- substitute byte stream.</div>
+<div class="block">Creates a new connection surrogate for the specified URL and substitute
+ byte stream.</div>
 </td>
 </tr>
 </table>
@@ -245,18 +247,18 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/net/URLConnectio
 <pre>public&nbsp;SurrogateConnection(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a>&nbsp;url,
                            byte[]&nbsp;replacementStream,
                            boolean&nbsp;getHeadersFromSource)</pre>
-<div class="block">Creates a new connection surrogate for the specified URL and
- substitute byte stream. If the <code>getHeadersFromSource</code>
- parameter is <code>true</code>, then the original URL will be used
- to satisfy header requests (other than a request for the content length).
- Otherwise, basic headers will be returned suitable for returning
- HTML content in UTF-8 format.</div>
+<div class="block">Creates a new connection surrogate for the specified URL and substitute
+ byte stream. If the <code>getHeadersFromSource</code> parameter is
+ <code>true</code>, then the original URL will be used to satisfy header
+ requests (other than a request for the content length). Otherwise, basic
+ headers will be returned suitable for returning HTML content in UTF-8
+ format.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>url</code> - the original URL</dd>
 <dd><code>replacementStream</code> - the bytes to send in lieu of the original bytes</dd>
 <dd><code>getHeadersFromSource</code> - if <code>true</code>, return headers from the
-     original URL</dd>
+ original URL</dd>
 </dl>
 </li>
 </ul>
@@ -325,7 +327,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/net/URLConnectio
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/net/URLConnection.html?is-external=true#getHeaderField-int-" title="class or interface in java.net">getHeaderField</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/net/URLConnection.html?is-external=true" title="class or interface in java.net">URLConnection</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>n</code> - an index, where n>=0</dd>
+<dd><code>n</code> - an index, where <code>n&gt;=0</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the value of the <code>n</code><sup>th</sup> header field
           or <code>null</code> if there are fewer than <code>n+1</code> fields</dd>
@@ -371,7 +373,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/net/URLConnectio
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/net/URLConnection.html?is-external=true#getHeaderFieldKey-int-" title="class or interface in java.net">getHeaderFieldKey</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/net/URLConnection.html?is-external=true" title="class or interface in java.net">URLConnection</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>n</code> - an index, where n>=0</dd>
+<dd><code>n</code> - an index, where <code>n&gt;=0</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the key for the <code>n</code><sup>th</sup> header field,
           or <code>null</code> if there are fewer than <code>n+1</code>
@@ -429,6 +431,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/net/URLConnectio
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

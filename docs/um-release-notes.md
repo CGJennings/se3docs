@@ -11,6 +11,7 @@ This is an **early access beta release**.
 * Further work on rewriting the script libraries to separate documentation from the libraries themselves and rewrite them in the more modern JS allowed by the recent engine update.
 * `StrangeEons.fileBugReport` updated to link to a partially completed contact form; this also affects the **Help/Report a Bug** menu item.
 * The **Document Browser** is *deprecated*. In a future version, searchable API documentation will be accessible from the (system) Web browser. Plug-ins that rely on the document browser and associated text indexing classes will no longer work after this change.
+* The command line option `--xDisableGestures` was removed.
 
 ### Script library changes
 

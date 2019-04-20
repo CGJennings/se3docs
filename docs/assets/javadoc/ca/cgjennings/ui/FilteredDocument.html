@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -120,11 +122,11 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">FilteredDocument</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/PlainDocument.html?is-external=true" title="class or interface in javax.swing.text">PlainDocument</a></pre>
-<div class="block">An extension of <code>PlainDocument</code> that transparently
- filters out certain characters. A set of characters is provided as a string,
- and the filter operates as either a white list (allowing only characters in
- the filter string) or a black list (allowing all characters except those in
- the filter string).</div>
+<div class="block">An extension of <code>PlainDocument</code> that transparently filters out
+ certain characters. A set of characters is provided as a string, and the
+ filter operates as either a white list (allowing only characters in the
+ filter string) or a black list (allowing all characters except those in the
+ filter string).</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../serialized-form.html#ca.cgjennings.ui.FilteredDocument">Serialized Form</a></dd>
@@ -197,15 +199,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
 </tr>
 <tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/ui/FilteredDocument.html#FilteredDocument-java.lang.String-">FilteredDocument</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;blackList)</code>
-<div class="block">Creates a filtered document that filters out the characters in the
- filter list.</div>
+<div class="block">Creates a filtered document that filters out the characters in the filter
+ list.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/ui/FilteredDocument.html#FilteredDocument-java.lang.String-boolean-">FilteredDocument</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filterList,
                 boolean&nbsp;isWhiteList)</code>
-<div class="block">Creates a filtered document with the specified filter characters
- and list type.</div>
+<div class="block">Creates a filtered document with the specified filter characters and list
+ type.</div>
 </td>
 </tr>
 </table>
@@ -232,15 +234,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/PlainDocument.html?is-external=true" title="class or interface in javax.swing.text">PlainDocument</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/ui/FilteredDocument.html#createFileNameDocument--">createFileNameDocument</a></span>()</code>
-<div class="block">Returns a new document that filters out characters that are illegal
- in Windows, *NIX file names.</div>
+<div class="block">Returns a new document that filters out characters that are illegal in
+ Windows, *NIX file names.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/PlainDocument.html?is-external=true" title="class or interface in javax.swing.text">PlainDocument</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/ui/FilteredDocument.html#createFilePathDocument--">createFilePathDocument</a></span>()</code>
-<div class="block">Returns a new document that filters out characters that are illegal
- in Windows, *NIX file paths.</div>
+<div class="block">Returns a new document that filters out characters that are illegal in
+ Windows, *NIX file paths.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -252,8 +254,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/PlainDocument.html?is-external=true" title="class or interface in javax.swing.text">PlainDocument</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/ui/FilteredDocument.html#createJavaNameDocument--">createJavaNameDocument</a></span>()</code>
-<div class="block">Returns a document that only accepts characters that can appear in a
- Java class name.</div>
+<div class="block">Returns a document that only accepts characters that can appear in a Java
+ class name.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -265,8 +267,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/PlainDocument.html?is-external=true" title="class or interface in javax.swing.text">PlainDocument</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/ui/FilteredDocument.html#createPropertyKeyDocument--">createPropertyKeyDocument</a></span>()</code>
-<div class="block">Returns a new document that filters out characters that are escaped
- in property files.</div>
+<div class="block">Returns a new document that filters out characters that are escaped in
+ property files.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -293,16 +295,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;str,
             <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/AttributeSet.html?is-external=true" title="class or interface in javax.swing.text">AttributeSet</a>&nbsp;a)</code>
 <div class="block">Performs filtering of characters when new text is inserted into the
- document being calling the super implementation to actually insert
- the (filtered) text.</div>
+ document being calling the super implementation to actually insert the
+ (filtered) text.</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/ui/FilteredDocument.html#isWhiteList--">isWhiteList</a></span>()</code>
 <div class="block">Returns <code>true</code> if the filter characters form a white list
- (list of the allowed characters), or <code>false</code> if they form
- a black list (list of excluded characters).</div>
+ (list of the allowed characters), or <code>false</code> if they form a
+ black list (list of excluded characters).</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
@@ -321,8 +323,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
 <tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/ui/FilteredDocument.html#setWhiteList-boolean-">setWhiteList</a></span>(boolean&nbsp;isWhiteList)</code>
-<div class="block">Sets whether the list is treated as a white list (<code>true</code>)
- or black list (<code>false</code>).</div>
+<div class="block">Sets whether the list is treated as a white list (<code>true</code>) or
+ black list (<code>false</code>).</div>
 </td>
 </tr>
 </table>
@@ -378,13 +380,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
 <li class="blockList">
 <h4>FilteredDocument</h4>
 <pre>public&nbsp;FilteredDocument(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;blackList)</pre>
-<div class="block">Creates a filtered document that filters out the characters in the
- filter list.</div>
+<div class="block">Creates a filtered document that filters out the characters in the filter
+ list.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>blackList</code> - the characters to exclude</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>filterList</code> is <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>filterList</code> is
+ <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -396,14 +399,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
 <h4>FilteredDocument</h4>
 <pre>public&nbsp;FilteredDocument(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filterList,
                         boolean&nbsp;isWhiteList)</pre>
-<div class="block">Creates a filtered document with the specified filter characters
- and list type.</div>
+<div class="block">Creates a filtered document with the specified filter characters and list
+ type.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>filterList</code> - the characters to include/exclude</dd>
-<dd><code>isWhiteList</code> - whether the filter includes or excludes the filter list</dd>
+<dd><code>isWhiteList</code> - whether the filter includes or excludes the filter
+ list</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>filterList</code> is <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>filterList</code> is
+ <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -436,8 +441,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
 <li class="blockList">
 <h4>createFileNameDocument</h4>
 <pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/PlainDocument.html?is-external=true" title="class or interface in javax.swing.text">PlainDocument</a>&nbsp;createFileNameDocument()</pre>
-<div class="block">Returns a new document that filters out characters that are illegal
- in Windows, *NIX file names.</div>
+<div class="block">Returns a new document that filters out characters that are illegal in
+ Windows, *NIX file names.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a file name filtering document</dd>
@@ -451,10 +456,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
 <li class="blockList">
 <h4>createFilePathDocument</h4>
 <pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/PlainDocument.html?is-external=true" title="class or interface in javax.swing.text">PlainDocument</a>&nbsp;createFilePathDocument()</pre>
-<div class="block">Returns a new document that filters out characters that are illegal
- in Windows, *NIX file paths. This is identical to the filter created
- with <a href="../../../ca/cgjennings/ui/FilteredDocument.html#createFileNameDocument--"><code>createFileNameDocument()</code></a>, but it does not filter path
- characters (/, \, and :).</div>
+<div class="block">Returns a new document that filters out characters that are illegal in
+ Windows, *NIX file paths. This is identical to the filter created with
+ <a href="../../../ca/cgjennings/ui/FilteredDocument.html#createFileNameDocument--"><code>createFileNameDocument()</code></a>, but it does not filter path characters
+ (/, \, and :).</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a file path filtering document</dd>
@@ -483,9 +488,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
 <li class="blockList">
 <h4>createJavaNameDocument</h4>
 <pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/PlainDocument.html?is-external=true" title="class or interface in javax.swing.text">PlainDocument</a>&nbsp;createJavaNameDocument()</pre>
-<div class="block">Returns a document that only accepts characters that can appear in a
- Java class name. Note that the document will not prevent the initial
- character from being a digit.</div>
+<div class="block">Returns a document that only accepts characters that can appear in a Java
+ class name. Note that the document will not prevent the initial character
+ from being a digit.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a document that accepts only Java identifier characters</dd>
@@ -515,8 +520,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
 <li class="blockList">
 <h4>createPropertyKeyDocument</h4>
 <pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/PlainDocument.html?is-external=true" title="class or interface in javax.swing.text">PlainDocument</a>&nbsp;createPropertyKeyDocument()</pre>
-<div class="block">Returns a new document that filters out characters that are escaped
- in property files.</div>
+<div class="block">Returns a new document that filters out characters that are escaped in
+ property files.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a property key filtering document</dd>
@@ -546,9 +551,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
 <li class="blockList">
 <h4>filterString</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;filterString(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text)</pre>
-<div class="block">Returns the result of filtering a string with the document's filter.
- As a side effect, the document content will be replaced by the filtered
- text.</div>
+<div class="block">Returns the result of filtering a string with the document's filter. As a
+ side effect, the document content will be replaced by the filtered text.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>text</code> - the text to filter</dd>
@@ -582,8 +586,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
                          <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/AttributeSet.html?is-external=true" title="class or interface in javax.swing.text">AttributeSet</a>&nbsp;a)
                   throws <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/BadLocationException.html?is-external=true" title="class or interface in javax.swing.text">BadLocationException</a></pre>
 <div class="block">Performs filtering of characters when new text is inserted into the
- document being calling the super implementation to actually insert
- the (filtered) text.</div>
+ document being calling the super implementation to actually insert the
+ (filtered) text.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Document.html?is-external=true#insertString-int-java.lang.String-javax.swing.text.AttributeSet-" title="class or interface in javax.swing.text">insertString</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Document.html?is-external=true" title="class or interface in javax.swing.text">Document</a></code></dd>
@@ -594,8 +598,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
 <dd><code>str</code> - the string to insert</dd>
 <dd><code>a</code> - attributes for the inserted text (typically <code>null</code>)</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/BadLocationException.html?is-external=true" title="class or interface in javax.swing.text">BadLocationException</a></code> - if the offset is not within the document bounds
-     (0..document.length())</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/BadLocationException.html?is-external=true" title="class or interface in javax.swing.text">BadLocationException</a></code> - if the offset is not within the document
+ bounds (0..document.length())</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Document.html?is-external=true#insertString-int-java.lang.String-javax.swing.text.AttributeSet-" title="class or interface in javax.swing.text"><code>Document.insertString(int, java.lang.String, javax.swing.text.AttributeSet)</code></a></dd>
 </dl>
@@ -609,8 +613,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
 <h4>isWhiteList</h4>
 <pre>public&nbsp;boolean&nbsp;isWhiteList()</pre>
 <div class="block">Returns <code>true</code> if the filter characters form a white list
- (list of the allowed characters), or <code>false</code> if they form
- a black list (list of excluded characters).</div>
+ (list of the allowed characters), or <code>false</code> if they form a
+ black list (list of excluded characters).</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the list is a white list</dd>
@@ -625,11 +629,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
 <h4>onFiltration</h4>
 <pre>protected&nbsp;void&nbsp;onFiltration(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;oldString,
                             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;newString)</pre>
-<div class="block">Override to react to a string having characters filtered out.
- The default implementation emits an error beep.</div>
+<div class="block">Override to react to a string having characters filtered out. The default
+ implementation emits an error beep.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>oldString</code> - the original string that was to be inserted into the document</dd>
+<dd><code>oldString</code> - the original string that was to be inserted into the
+ document</dd>
 <dd><code>newString</code> - the (possibly empty) filtered string</dd>
 </dl>
 </li>
@@ -645,9 +650,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>filterList</code> - each character in this string will be excluded or
-     included (depending on whether the set is a whitelist)</dd>
+ included (depending on whether the set is a whitelist)</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>filterList</code> is <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>filterList</code> is
+ <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -658,11 +664,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
 <li class="blockList">
 <h4>setWhiteList</h4>
 <pre>public&nbsp;void&nbsp;setWhiteList(boolean&nbsp;isWhiteList)</pre>
-<div class="block">Sets whether the list is treated as a white list (<code>true</code>)
- or black list (<code>false</code>).</div>
+<div class="block">Sets whether the list is treated as a white list (<code>true</code>) or
+ black list (<code>false</code>).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>isWhiteList</code> - <code>true</code> if the filter characters are <i>allowed</i></dd>
+<dd><code>isWhiteList</code> - <code>true</code> if the filter characters are
+ <i>allowed</i></dd>
 </dl>
 </li>
 </ul>
@@ -686,6 +693,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

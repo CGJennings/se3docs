@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -122,11 +124,12 @@ var activeTableTab = "activeTableTab";
 extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFilter.html" title="class in ca.cgjennings.graphics.filters">AbstractPixelwiseFilter</a></pre>
 <div class="block">An image filter that replaces one ARGB value with another. The substitution
  only occurs when the input value is an exact match. Typically, this is used
- to replace a "magic" or "key" value, for example, when a source image uses
- a special value to indicate pixels that should be transparent.
- 
- <p><b>In-place filtering:</b> This filter supports in-place filtering
- (the source and destination may be the same).</div>
+ to replace a "magic" or "key" value, for example, when a source image uses a
+ special value to indicate pixels that should be transparent.
+
+ <p>
+ <b>In-place filtering:</b> This filter supports in-place filtering (the
+ source and destination may be the same).</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -204,15 +207,15 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/SubstitutionFilter.html#isBlendedWithOriginal--">isBlendedWithOriginal</a></span>()</code>
-<div class="block">Returns <code>true</code> if the substitute colour is blended with
- the original colour according to the distance from the target colour.</div>
+<div class="block">Returns <code>true</code> if the substitute colour is blended with the
+ original colour according to the distance from the target colour.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/SubstitutionFilter.html#setBlendedWithOriginal-boolean-">setBlendedWithOriginal</a></span>(boolean&nbsp;blend)</code>
-<div class="block">Sets whether the substitute colour is blended with the target colour
- in proportion to a pixel's distance from the colour to match.</div>
+<div class="block">Sets whether the substitute colour is blended with the target colour in
+ proportion to a pixel's distance from the colour to match.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -315,8 +318,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
                          int&nbsp;end)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFilter.html#filterPixels-int:A-int-int-">AbstractPixelwiseFilter</a></code></span></div>
 <div class="block">This method is called with a block of ARGB values to be filtered.
- Subclasses must override this method to implement the actual
- filtering algorithm by replacing each pixel value in the range
+ Subclasses must override this method to implement the actual filtering
+ algorithm by replacing each pixel value in the range
  <code>argb[start] ... argb[end-1]</code> with the filtered value.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -379,13 +382,13 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <li class="blockList">
 <h4>isBlendedWithOriginal</h4>
 <pre>public&nbsp;boolean&nbsp;isBlendedWithOriginal()</pre>
-<div class="block">Returns <code>true</code> if the substitute colour is blended with
- the original colour according to the distance from the target colour.
- This has no effect if the error tolerance is 0.</div>
+<div class="block">Returns <code>true</code> if the substitute colour is blended with the
+ original colour according to the distance from the target colour. This
+ has no effect if the error tolerance is 0.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the substitute colour is blended with the
-     target colour in proportion to the target's error</dd>
+ target colour in proportion to the target's error</dd>
 </dl>
 </li>
 </ul>
@@ -396,13 +399,13 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <li class="blockList">
 <h4>setBlendedWithOriginal</h4>
 <pre>public&nbsp;void&nbsp;setBlendedWithOriginal(boolean&nbsp;blend)</pre>
-<div class="block">Sets whether the substitute colour is blended with the target colour
- in proportion to a pixel's distance from the colour to match.
- This has no effect if the error tolerance is 0.</div>
+<div class="block">Sets whether the substitute colour is blended with the target colour in
+ proportion to a pixel's distance from the colour to match. This has no
+ effect if the error tolerance is 0.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>blend</code> - if <code>true</code>, blending is performed relative to
-     the amount of error</dd>
+<dd><code>blend</code> - if <code>true</code>, blending is performed relative to the
+ amount of error</dd>
 </dl>
 </li>
 </ul>
@@ -413,14 +416,14 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <li class="blockList">
 <h4>setErrorTolerance</h4>
 <pre>public&nbsp;void&nbsp;setErrorTolerance(float&nbsp;tolerance)</pre>
-<div class="block">Sets the amount of error tolerance allowed when matching pixels.
- The error value of any pixel is the distance between the tuples
- formed by the channel values of the target value and the pixel being
- considered. The default tolerance is 0, meaning that the pixel values
- must match exactly.</div>
+<div class="block">Sets the amount of error tolerance allowed when matching pixels. The
+ error value of any pixel is the distance between the tuples formed by the
+ channel values of the target value and the pixel being considered. The
+ default tolerance is 0, meaning that the pixel values must match exactly.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>tolerance</code> - the error tolerance to allow when matching the target pixel</dd>
+<dd><code>tolerance</code> - the error tolerance to allow when matching the target
+ pixel</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../ca/cgjennings/graphics/filters/SubstitutionFilter.html#getErrorTolerance--"><code>getErrorTolerance()</code></a></dd>
 </dl>
@@ -474,6 +477,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

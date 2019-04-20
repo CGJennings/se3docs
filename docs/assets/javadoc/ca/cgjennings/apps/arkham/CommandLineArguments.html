@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -111,14 +113,15 @@ var activeTableTab = "activeTableTab";
 <pre>public class <span class="typeNameLabel">CommandLineArguments</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
 implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang">Cloneable</a></pre>
-<div class="block">An instance of this class can be obtained from the application to access
- the command line options that were passed to the application. The fields
- of this class map one-to-one with the command line option names, and
- therefore may change over time, although an effort is made to keep options
- compatible whenever possible.
+<div class="block">An instance of this class can be obtained from the application to access the
+ command line options that were passed to the application. The fields of this
+ class map one-to-one with the command line option names, and therefore may
+ change over time, although an effort is made to keep options compatible
+ whenever possible.
 
- <p>Non-standard options start with an 'x'. These may be revoked at any
- time in future versions.</div>
+ <p>
+ Non-standard options start with an 'x'. These may be revoked at any time in
+ future versions.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -159,12 +162,12 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/CommandLineArguments.html#migrateprefs">migrateprefs</a></span></code>
-<div class="block">When present, this option forces an attempt to migrate settings from
- an older Strange Eons 1 or 2 installation, if one exists on this system.</div>
+<div class="block">When present, this option forces an attempt to migrate settings from an
+ older Strange Eons 1 or 2 installation, if one exists on this system.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a></code></td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/CommandLineArguments.html#plugintest">plugintest</a></span></code>
 <div class="block">This option runs the application in plug-in test mode, testing the
  specified bundle.</div>
@@ -173,9 +176,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/CommandLineArguments.html#resetprefs">resetprefs</a></span></code>
-<div class="block">When present, all user preferences will be reset to their default
- values as if the application had just been installed for the first
- time.</div>
+<div class="block">When present, all user preferences will be reset to their default values
+ as if the application had just been installed for the first time.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -241,29 +243,23 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/CommandLineArguments.html#xDisableGestures">xDisableGestures</a></span></code>
-<div class="block">Non-standard debugging option.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/CommandLineArguments.html#xDisableProjectRestore">xDisableProjectRestore</a></span></code>
 <div class="block">Non-standard debugging option.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/CommandLineArguments.html#xDisableSystemMenu">xDisableSystemMenu</a></span></code>
 <div class="block">Non-standard debugging option.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/CommandLineArguments.html#xOpenGL">xOpenGL</a></span></code>
 <div class="block">Non-standard debugging and performance option.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/CommandLineArguments.html#xRestartLock">xRestartLock</a></span></code>
 <div class="block">Internal use option.</div>
@@ -347,8 +343,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <li class="blockList">
 <h4>migrateprefs</h4>
 <pre>public&nbsp;boolean migrateprefs</pre>
-<div class="block">When present, this option forces an attempt to migrate settings from
- an older Strange Eons 1 or 2 installation, if one exists on this system.
+<div class="block">When present, this option forces an attempt to migrate settings from an
+ older Strange Eons 1 or 2 installation, if one exists on this system.
  Normally, preference migration is only attempted when the (SE3) user
  preference file does not exist.</div>
 </li>
@@ -359,7 +355,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <ul class="blockList">
 <li class="blockList">
 <h4>plugintest</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a> plugintest</pre>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> plugintest</pre>
 <div class="block">This option runs the application in plug-in test mode, testing the
  specified bundle.</div>
 </li>
@@ -371,9 +367,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <li class="blockList">
 <h4>resetprefs</h4>
 <pre>public&nbsp;boolean resetprefs</pre>
-<div class="block">When present, all user preferences will be reset to their default
- values as if the application had just been installed for the first
- time.</div>
+<div class="block">When present, all user preferences will be reset to their default values
+ as if the application had just been installed for the first time.</div>
 </li>
 </ul>
 <a name="resfolder">
@@ -425,8 +420,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <h4>xDebugException</h4>
 <pre>public&nbsp;boolean xDebugException</pre>
 <div class="block">Non-standard debugging option. <br>
- This option causes an exception to be thrown during startup. It is
- used to test how <a href="../../../../ca/cgjennings/apps/arkham/dialog/ErrorDialog.html" title="class in ca.cgjennings.apps.arkham.dialog"><code>ErrorDialog</code></a> handles uncaught startup exceptions.</div>
+ This option causes an exception to be thrown during startup. It is used
+ to test how <a href="../../../../ca/cgjennings/apps/arkham/dialog/ErrorDialog.html" title="class in ca.cgjennings.apps.arkham.dialog"><code>ErrorDialog</code></a> handles uncaught startup exceptions.</div>
 </li>
 </ul>
 <a name="xDisableAnimation">
@@ -449,11 +444,10 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <h4>xDisableBackgroundInit</h4>
 <pre>public&nbsp;boolean xDisableBackgroundInit</pre>
 <div class="block">Non-standard debugging option. <br>
- If this option is set, certain initialization steps that are
- normally performed in a separate thread to decrease startup time
- will instead be performed in the main startup thread. Try setting
- this option if you encounter unexplained problems while starting
- the application.</div>
+ If this option is set, certain initialization steps that are normally
+ performed in a separate thread to decrease startup time will instead be
+ performed in the main startup thread. Try setting this option if you
+ encounter unexplained problems while starting the application.</div>
 </li>
 </ul>
 <a name="xDisableFileRestore">
@@ -465,9 +459,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <pre>public&nbsp;boolean xDisableFileRestore</pre>
 <div class="block">Non-standard debugging option. <br>
  This option prevents Strange Eons from attempting to re-open the same
- files that were in use the last time the application exited. This may
- be useful if this is preventing the application from starting normally.
- This option is set implicitly if the <a href="../../../../ca/cgjennings/apps/arkham/CommandLineArguments.html#plugintest"><code>plugintest</code></a> option is used.</div>
+ files that were in use the last time the application exited. This may be
+ useful if this is preventing the application from starting normally. This
+ option is set implicitly if the <a href="../../../../ca/cgjennings/apps/arkham/CommandLineArguments.html#plugintest"><code>plugintest</code></a> option is used.</div>
 </li>
 </ul>
 <a name="xDisableFilterThreads">
@@ -478,9 +472,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <h4>xDisableFilterThreads</h4>
 <pre>public&nbsp;boolean xDisableFilterThreads</pre>
 <div class="block">Non-standard debugging option. <br>
- Disables the use of threads to accelerate image filters in
- the package <code>ca.cgjennings.graphics.filters</code> and use of multiple
- threads by <a href="../../../../ca/cgjennings/algo/SplitJoin.html" title="class in ca.cgjennings.algo"><code>SplitJoin</code></a>.</div>
+ Disables the use of threads to accelerate image filters in the package
+ <code>ca.cgjennings.graphics.filters</code> and use of multiple threads
+ by <a href="../../../../ca/cgjennings/algo/SplitJoin.html" title="class in ca.cgjennings.algo"><code>SplitJoin</code></a>.</div>
 </li>
 </ul>
 <a name="xDisableFX">
@@ -494,21 +488,6 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
  This option disables optional application features that rely on Java FX.</div>
 </li>
 </ul>
-<a name="xDisableGestures">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>xDisableGestures</h4>
-<pre>public&nbsp;boolean xDisableGestures</pre>
-<div class="block">Non-standard debugging option. <br>
- This option disables gesture recognition.</div>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../../ca/cgjennings/ui/GestureToolkit.html" title="class in ca.cgjennings.ui"><code>GestureToolkit</code></a></dd>
-</dl>
-</li>
-</ul>
 <a name="xDisableProjectRestore">
 <!--   -->
 </a>
@@ -517,10 +496,10 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <h4>xDisableProjectRestore</h4>
 <pre>public&nbsp;boolean xDisableProjectRestore</pre>
 <div class="block">Non-standard debugging option. <br>
- This option prevents Strange Eons from attempting to re-open the
- project that was open the last time the application exited. This may
- be useful if this is preventing the application from starting normally.
- This option is set implicitly if the <a href="../../../../ca/cgjennings/apps/arkham/CommandLineArguments.html#plugintest"><code>plugintest</code></a> option is used.</div>
+ This option prevents Strange Eons from attempting to re-open the project
+ that was open the last time the application exited. This may be useful if
+ this is preventing the application from starting normally. This option is
+ set implicitly if the <a href="../../../../ca/cgjennings/apps/arkham/CommandLineArguments.html#plugintest"><code>plugintest</code></a> option is used.</div>
 </li>
 </ul>
 <a name="xDisableSystemMenu">
@@ -531,8 +510,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <h4>xDisableSystemMenu</h4>
 <pre>public&nbsp;boolean xDisableSystemMenu</pre>
 <div class="block">Non-standard debugging option. <br>
- This option disables use of the system menu bar on OS X.
- It has no effect on other platforms.</div>
+ This option disables use of the system menu bar on OS X. It has no effect
+ on other platforms.</div>
 </li>
 </ul>
 <a name="xOpenGL">
@@ -544,9 +523,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <pre>public&nbsp;boolean xOpenGL</pre>
 <div class="block">Non-standard debugging and performance option. <br>
  This option attempts to enable the OpenGL rendering pipeline for graphics
- instead of using the default pipeline.
- It may result in improved performance on some systems, although it may
- result in rendering errors if driver support is poor.</div>
+ instead of using the default pipeline. It may result in improved
+ performance on some systems, although it may result in rendering errors
+ if driver support is poor.</div>
 </li>
 </ul>
 <a name="xRestartLock">
@@ -557,12 +536,12 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <h4>xRestartLock</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a> xRestartLock</pre>
 <div class="block">Internal use option. <br>
- This option is not meant to be set by the user.
- It is supplied automatically when the application is attempting to
- restart itself. The supplied file is a temporary file locked by the
- application instance that initiated the restart; the restarting instance
- will repeatedly attempt to acquire its own lock in order to detect when
- the initiating instance has terminated.</div>
+ This option is not meant to be set by the user. It is supplied
+ automatically when the application is attempting to restart itself. The
+ supplied file is a temporary file locked by the application instance that
+ initiated the restart; the restarting instance will repeatedly attempt to
+ acquire its own lock in order to detect when the initiating instance has
+ terminated.</div>
 </li>
 </ul>
 </li>
@@ -649,8 +628,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <h4>getFiles</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;getFiles()</pre>
 <div class="block">Returns an array of the files included on the command line to be opened
- when the application starts. Note that the returned array is a copy,
- so callers may modify it freely.</div>
+ when the application starts. Note that the returned array is a copy, so
+ callers may modify it freely.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a possibly empty array of the files specified on the command line</dd>
@@ -677,6 +656,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

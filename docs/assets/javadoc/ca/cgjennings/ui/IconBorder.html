@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -115,9 +117,8 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">IconBorder</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/border/AbstractBorder.html?is-external=true" title="class or interface in javax.swing.border">AbstractBorder</a></pre>
-<div class="block">Paints an icon on the left or right side of a component, depending on
- reading direction. Intended to be used to add decorative icons to
- text fields.</div>
+<div class="block">Paints an icon on the left or right side of a component, depending on reading
+ direction. Intended to be used to add decorative icons to text fields.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -212,9 +213,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/border/Ab
 <tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/border/Border.html?is-external=true" title="class or interface in javax.swing.border">Border</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/ui/IconBorder.html#install-javax.swing.JComponent-">install</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing">JComponent</a>&nbsp;c)</code>
-<div class="block">Installs this border on a component by setting a new compound border
- on the component with the existing border on the outside and this border
- on the inside.</div>
+<div class="block">Installs this border on a component by setting a new compound border on
+ the component with the existing border on the outside and this border on
+ the inside.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -241,9 +242,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/border/Ab
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/ui/IconBorder.html#isPointOverIcon-javax.swing.JComponent-int-int-">isPointOverIcon</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing">JComponent</a>&nbsp;c,
                int&nbsp;x,
                int&nbsp;y)</code>
-<div class="block">Assuming that a component has this border installed on it,
- returns <code>true</code> if a point in the component's
- coordinate space would be over the icon.</div>
+<div class="block">Assuming that a component has this border installed on it, returns
+ <code>true</code> if a point in the component's coordinate space would be
+ over the icon.</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
@@ -451,13 +452,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/border/Ab
 <li class="blockList">
 <h4>install</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/border/Border.html?is-external=true" title="class or interface in javax.swing.border">Border</a>&nbsp;install(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing">JComponent</a>&nbsp;c)</pre>
-<div class="block">Installs this border on a component by setting a new compound border
- on the component with the existing border on the outside and this border
- on the inside. Returns the new compound border.
- <p>If the component has no border, this border is simply set on the component
- without creating a compound border.
- <p>If the component is an editable combo box, the icon will be installed
- on the editor component if it is a <code>JComponent</code>.</div>
+<div class="block">Installs this border on a component by setting a new compound border on
+ the component with the existing border on the outside and this border on
+ the inside. Returns the new compound border.
+ <p>
+ If the component has no border, this border is simply set on the
+ component without creating a compound border.
+ <p>
+ If the component is an editable combo box, the icon will be installed on
+ the editor component if it is a <code>JComponent</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>c</code> - the component to install the border on, typically a text field</dd>
@@ -482,10 +485,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/border/Ab
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>c</code> - the component to install in</dd>
-<dd><code>hoverIcon</code> - an optional alternate icon displayed when the pointer
-     is over the icon</dd>
-<dd><code>li</code> - an optional listener that will be called when the icon is left clicked</dd>
-<dd><code>popupMenu</code> - an optional popup menu that will be displayed when the icon is right clicked</dd>
+<dd><code>hoverIcon</code> - an optional alternate icon displayed when the pointer is
+ over the icon</dd>
+<dd><code>li</code> - an optional listener that will be called when the icon is left
+ clicked</dd>
+<dd><code>popupMenu</code> - an optional popup menu that will be displayed when the
+ icon is right clicked</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the installed compound border</dd>
 </dl>
@@ -528,9 +533,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/border/Ab
 <pre>public&nbsp;boolean&nbsp;isPointOverIcon(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing">JComponent</a>&nbsp;c,
                                int&nbsp;x,
                                int&nbsp;y)</pre>
-<div class="block">Assuming that a component has this border installed on it,
- returns <code>true</code> if a point in the component's
- coordinate space would be over the icon.</div>
+<div class="block">Assuming that a component has this border installed on it, returns
+ <code>true</code> if a point in the component's coordinate space would be
+ over the icon.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>c</code> - the component to test</dd>
@@ -626,6 +631,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/border/Ab
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

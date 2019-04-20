@@ -40,12 +40,14 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../ca/cgjennings/apps/arkham/plugins/InstalledPlugin.html" title="class in ca.cgjennings.apps.arkham.plugins"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../../ca/cgjennings/apps/arkham/plugins/LibraryRegistry.html" title="class in ca.cgjennings.apps.arkham.plugins"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../../ca/cgjennings/apps/arkham/plugins/LibImpl.html" title="class in ca.cgjennings.apps.arkham.plugins"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?ca/cgjennings/apps/arkham/plugins/InstalledTheme.html" target="_top">Frames</a></li>
@@ -117,13 +119,11 @@ var activeTableTab = "activeTableTab";
 extends <a href="../../../../../ca/cgjennings/apps/arkham/plugins/InstalledBundleObject.html" title="class in ca.cgjennings.apps.arkham.plugins">InstalledBundleObject</a></pre>
 <div class="block">Provides the information needed to allow the user to select a theme, and for
  the <a href="../../../../../ca/cgjennings/ui/theme/ThemeInstaller.html" title="class in ca.cgjennings.ui.theme"><code>ThemeInstaller</code></a> to install a selected theme. These objects are
- usually created by the <code>BundleInstaller</code>
- when the application starts.</div>
+ usually created by the <a href="../../../../../ca/cgjennings/apps/arkham/plugins/BundleInstaller.html" title="class in ca.cgjennings.apps.arkham.plugins"><code>BundleInstaller</code></a> when the application
+ starts.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../../../ca/cgjennings/apps/arkham/plugins/BundleInstaller.html#getInstalledThemes--"><code>BundleInstaller.getInstalledThemes()</code></a></dd>
 </dl>
 </li>
 </ul>
@@ -179,15 +179,13 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/plugins/InstalledBundl
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing">Icon</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/InstalledTheme.html#getIcon--">getIcon</a></span>()</code>
-<div class="block">Returns a small icon for the theme based upon the
- representative image.</div>
+<div class="block">Returns a small icon for the theme based upon the representative image.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing">Icon</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/InstalledTheme.html#getLargeIcon--">getLargeIcon</a></span>()</code>
-<div class="block">Returns a large icon for the theme based upon the
- representative image.</div>
+<div class="block">Returns a large icon for the theme based upon the representative image.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -265,11 +263,11 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/plugins/InstalledBundl
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>bundle</code> - the bundle that the theme class is stored in, or
-     <code>null</code> for built in themes</dd>
+ <code>null</code> for built in themes</dd>
 <dd><code>className</code> - the class used to instantiate the theme</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginException.html" title="class in ca.cgjennings.apps.arkham.plugins">PluginException</a></code> - if the theme is unavailable or there is an exception
-     while extracting the theme information</dd>
+<dd><code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginException.html" title="class in ca.cgjennings.apps.arkham.plugins">PluginException</a></code> - if the theme is unavailable or there is an
+ exception while extracting the theme information</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if className is <code>null</code></dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
 </dl>
@@ -351,9 +349,9 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/plugins/InstalledBundl
 <h4>getDescription</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getDescription()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/InstalledBundleObject.html#getDescription--">InstalledBundleObject</a></code></span></div>
-<div class="block">Returns a description of the plug-in (or other bundle object).
- If necessary, a new instance of the plug-in will be created temporarily
- in order to get this information.</div>
+<div class="block">Returns a description of the plug-in (or other bundle object). If
+ necessary, a new instance of the plug-in will be created temporarily in
+ order to get this information.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/InstalledBundleObject.html#getDescription--">getDescription</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/InstalledBundleObject.html" title="class in ca.cgjennings.apps.arkham.plugins">InstalledBundleObject</a></code></dd>
@@ -369,8 +367,7 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/plugins/InstalledBundl
 <li class="blockList">
 <h4>getIcon</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing">Icon</a>&nbsp;getIcon()</pre>
-<div class="block">Returns a small icon for the theme based upon the
- representative image.</div>
+<div class="block">Returns a small icon for the theme based upon the representative image.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/ui/IconProvider.html#getIcon--">getIcon</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/ui/IconProvider.html" title="interface in ca.cgjennings.ui">IconProvider</a></code></dd>
@@ -388,8 +385,7 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/plugins/InstalledBundl
 <li class="blockList">
 <h4>getLargeIcon</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing">Icon</a>&nbsp;getLargeIcon()</pre>
-<div class="block">Returns a large icon for the theme based upon the
- representative image.</div>
+<div class="block">Returns a large icon for the theme based upon the representative image.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a large icon</dd>
@@ -479,7 +475,7 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/plugins/InstalledBundl
  objects. (This is typically implemented by converting the internal
  address of the object into an integer, but this implementation
  technique is not required by the
- Java<font size="-2"><sup>TM</sup></font> programming language.)</div>
+ Java&trade; programming language.)</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
@@ -528,12 +524,14 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/plugins/InstalledBundl
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../ca/cgjennings/apps/arkham/plugins/InstalledPlugin.html" title="class in ca.cgjennings.apps.arkham.plugins"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../../ca/cgjennings/apps/arkham/plugins/LibraryRegistry.html" title="class in ca.cgjennings.apps.arkham.plugins"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../../ca/cgjennings/apps/arkham/plugins/LibImpl.html" title="class in ca.cgjennings.apps.arkham.plugins"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?ca/cgjennings/apps/arkham/plugins/InstalledTheme.html" target="_top">Frames</a></li>

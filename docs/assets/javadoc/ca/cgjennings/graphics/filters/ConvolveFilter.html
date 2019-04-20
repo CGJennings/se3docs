@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -129,15 +131,17 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractConvolver.ht
  <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/ConvolveOp.html?is-external=true" title="class or interface in java.awt.image"><code>ConvolveOp</code></a>, with two key differences:
  <ol>
  <li> This class offers more complex options for handling image edges.
- <li> This class makes use of the acceleration framework provided by
-      the <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.html" title="class in ca.cgjennings.graphics.filters"><code>AbstractImageFilter</code></a> framework. Note that <code>ConvolveOp</code>
-      may also provide acceleration; typically this is GPU-based acceleration for
-      small kernel sizes. (Which implementation is faster will depend on a number
-      of platform-specific factors.)
+ <li> This class makes use of the acceleration framework provided by the
+ <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.html" title="class in ca.cgjennings.graphics.filters"><code>AbstractImageFilter</code></a> framework. Note that <code>ConvolveOp</code> may
+ also provide acceleration; typically this is GPU-based acceleration for small
+ kernel sizes. (Which implementation is faster will depend on a number of
+ platform-specific factors.)
  </ol>
 
- <p><b>In-place filtering:</b> Unless otherwise noted, filters based on this class
- support in-place filtering (the source and destination images can be the same).</div>
+ <p>
+ <b>In-place filtering:</b> Unless otherwise noted, filters based on this
+ class support in-place filtering (the source and destination images can be
+ the same).</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -302,9 +306,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractConvolver.ht
                       int&nbsp;kernelWidth,
                       int&nbsp;kernelHeight,
                       float...&nbsp;kernelData)</pre>
-<div class="block">Creates a new convolve filter.
- This is a convenience that creates a new <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Kernel.html?is-external=true" title="class or interface in java.awt.image"><code>Kernel</code></a> with the specified
- width, height, and matrix values.</div>
+<div class="block">Creates a new convolve filter. This is a convenience that creates a new
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Kernel.html?is-external=true" title="class or interface in java.awt.image"><code>Kernel</code></a> with the specified width, height, and matrix values.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>normalize</code> - whether the m</dd>
@@ -323,11 +326,11 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractConvolver.ht
 <pre>public&nbsp;ConvolveFilter(int&nbsp;kernelWidth,
                       int&nbsp;kernelHeight,
                       float...&nbsp;kernelData)</pre>
-<div class="block">Creates a new convolve filter.
- This is a convenience that creates a new <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Kernel.html?is-external=true" title="class or interface in java.awt.image"><code>Kernel</code></a> with the specified
- width, height, and matrix values. The kernel matrix will not be normalized;
- if the elements of the kernel do not sum to 1, the brightness of the
- destination image will be changed by the filter.</div>
+<div class="block">Creates a new convolve filter. This is a convenience that creates a new
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Kernel.html?is-external=true" title="class or interface in java.awt.image"><code>Kernel</code></a> with the specified width, height, and matrix values. The
+ kernel matrix will not be normalized; if the elements of the kernel do
+ not sum to 1, the brightness of the destination image will be changed by
+ the filter.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>kernelWidth</code> - the width of the kernel matrix</dd>
@@ -414,15 +417,15 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractConvolver.ht
 <li class="blockList">
 <h4>setEdgeHandling</h4>
 <pre>public&nbsp;void&nbsp;setEdgeHandling(<a href="../../../../ca/cgjennings/graphics/filters/EdgeHandling.html" title="enum in ca.cgjennings.graphics.filters">EdgeHandling</a>&nbsp;edgeHandling)</pre>
-<div class="block">Sets the edge handling mode.
- The edge handling mode determines the stand-in pixel values used for
- pixels at the edge of the image, where part of the kernel would lie
- outside of the source image.</div>
+<div class="block">Sets the edge handling mode. The edge handling mode determines the
+ stand-in pixel values used for pixels at the edge of the image, where
+ part of the kernel would lie outside of the source image.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>edgeHandling</code> - the edge handling mode</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the edge handling mode is <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the edge handling mode is
+ <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -436,20 +439,22 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractConvolver.ht
                       int&nbsp;width,
                       int&nbsp;height,
                       float...&nbsp;kernelData)</pre>
-<div class="block">Sets the convolution kernel. This is a convenience that creates
- a new <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Kernel.html?is-external=true" title="class or interface in java.awt.image"><code>Kernel</code></a> with the specified width, height, and matrix values.</div>
+<div class="block">Sets the convolution kernel. This is a convenience that creates a new
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Kernel.html?is-external=true" title="class or interface in java.awt.image"><code>Kernel</code></a> with the specified width, height, and matrix values.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>normalize</code> - if <code>true</code>, the matrix will be normalized so that its
-     elements sum to 1; this prevents the overall image brightness from changing</dd>
+<dd><code>normalize</code> - if <code>true</code>, the matrix will be normalized so
+ that its elements sum to 1; this prevents the overall image brightness
+ from changing</dd>
 <dd><code>width</code> - the width of the kernel</dd>
 <dd><code>height</code> - the height of the kernel</dd>
 <dd><code>kernelData</code> - an array of kernel values, in
-     <a href='http://en.wikipedia.org/wiki/Row-major_order'>row-major order</a></dd>
+ <a href='http://en.wikipedia.org/wiki/Row-major_order'>row-major
+ order</a></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the length of the array is less than
-   with product of the width and height or if <code>normalize</code> is <code>true</code>
-   and the kernel elements sum to zero</dd>
+ with product of the width and height or if <code>normalize</code> is
+ <code>true</code> and the kernel elements sum to zero</dd>
 </dl>
 </li>
 </ul>
@@ -487,6 +492,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractConvolver.ht
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

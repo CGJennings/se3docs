@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -116,27 +118,28 @@ var activeTableTab = "activeTableTab";
 <pre>public class <span class="typeNameLabel">DIY</span>
 extends <a href="../../../../../ca/cgjennings/apps/arkham/component/AbstractGameComponent.html" title="class in ca.cgjennings.apps.arkham.component">AbstractGameComponent</a>
 implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy">Handler</a></pre>
-<div class="block">A scriptable <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component"><code>GameComponent</code></a>. A DIY component delegates key functionality
- to an object that implements the <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> interface. This object is
- typically derived from script code, and so terms like "script" and "script function"
- will be used throughout this document to refer to the parts of the component
- that are implemented by the <code>Handler</code> proxy, but it should be understood
- that compiled code can also subclass DIY and provide its own
- <code>Handler</code> instance.
+<div class="block">A scriptable <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component"><code>GameComponent</code></a>. A DIY component delegates key
+ functionality to an object that implements the <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> interface.
+ This object is typically derived from script code, and so terms like "script"
+ and "script function" will be used throughout this document to refer to the
+ parts of the component that are implemented by the <code>Handler</code>
+ proxy, but it should be understood that compiled code can also subclass DIY
+ and provide its own <code>Handler</code> instance.
 
  <a name='locked'><b>Restricted Properties:</b></a>
  Several properties of DIY components are <i>restricted</i>. Attempts to
- change a restricted property except from your script's <code>create</code>
- or <code>onRead</code> functions will cause an <code>IllegalStateException</code>
- to be thrown. Restricted properties
- control the component's basic structure and features, such as the number of faces
- it consists of. These properties cannot be changed dynamically: they are normally
- set within the component's <code>create</code> script function and never changed
- again. To allow cards to evolve over time, they can also be changed within the
- script's <code>onRead</code> function. So for example, a component that starts
- with no portrait could later add one by checking for the previous version
- in the <code>onRead</code> function (see <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setVersion-int-"><code>setVersion(int)</code></a>), and if found,
- defining a portrait key (see <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setPortraitKey-java.lang.String-"><code>setPortraitKey(java.lang.String)</code></a>).</div>
+ change a restricted property except from your script's <code>create</code> or
+ <code>onRead</code> functions will cause an
+ <code>IllegalStateException</code> to be thrown. Restricted properties
+ control the component's basic structure and features, such as the number of
+ faces it consists of. These properties cannot be changed dynamically: they
+ are normally set within the component's <code>create</code> script function
+ and never changed again. To allow cards to evolve over time, they can also be
+ changed within the script's <code>onRead</code> function. So for example, a
+ component that starts with no portrait could later add one by checking for
+ the previous version in the <code>onRead</code> function (see
+ <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setVersion-int-"><code>setVersion(int)</code></a>), and if found, defining a portrait key (see
+ <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setPortraitKey-java.lang.String-"><code>setPortraitKey(java.lang.String)</code></a>).</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../serialized-form.html#ca.cgjennings.apps.arkham.diy.DIY">Serialized Form</a></dd>
@@ -235,26 +238,26 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#clearAll--">clearAll</a></span>()</code>
-<div class="block">Clears the component by setting the name and comments to empty
- strings, resetting the expansion symbol key, marking all sheets
- as changed, and calling the handler scripts <code>onClear</code>
- function to clear the component elements defined by the script.</div>
+<div class="block">Clears the component by setting the name and comments to empty strings,
+ resetting the expansion symbol key, marking all sheets as changed, and
+ calling the handler scripts <code>onClear</code> function to clear the
+ component elements defined by the script.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#computeIdealScaleForImage-java.awt.image.BufferedImage-java.lang.String-">computeIdealScaleForImage</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;image,
                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;clipKeyType)</code>
-<div class="block">Determine the ideal default scale for a portrait image so that the
- image completely covers the clip region.</div>
+<div class="block">Determine the ideal default scale for a portrait image so that the image
+ completely covers the clip region.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#computeMinimumScaleForImage-java.awt.image.BufferedImage-java.lang.String-">computeMinimumScaleForImage</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;image,
                            <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;clipKeyType)</code>
-<div class="block">Determine the ideal default scale for a portrait image so that the
- image just touches the clip edges in one dimension.</div>
+<div class="block">Determine the ideal default scale for a portrait image so that the image
+ just touches the clip edges in one dimension.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -271,10 +274,10 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 </td>
 </tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../ca/cgjennings/apps/arkham/AbstractGameComponentEditor.html" title="class in ca.cgjennings.apps.arkham">AbstractGameComponentEditor</a></code></td>
+<td class="colFirst"><code><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYEditor.html" title="class in ca.cgjennings.apps.arkham.diy">DIYEditor</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#createDefaultEditor--">createDefaultEditor</a></span>()</code>
-<div class="block">Creates a <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYEditor.html" title="class in ca.cgjennings.apps.arkham.diy"><code>DIYEditor</code></a> with this component set as the game
- component for editing.</div>
+<div class="block">Creates a <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYEditor.html" title="class in ca.cgjennings.apps.arkham.diy"><code>DIYEditor</code></a> with this component set as the game component
+ for editing.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -321,9 +324,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>double[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#getCustomFoldMarks-int-">getCustomFoldMarks</a></span>(int&nbsp;faceIndex)</code>
-<div class="block">Returns a copy of the custom fold mark array for the specified
- component face, or <code>null</code> if the face has no custom fold
- marks.</div>
+<div class="block">Returns a copy of the custom fold mark array for the specified component
+ face, or <code>null</code> if the face has no custom fold marks.</div>
 </td>
 </tr>
 <tr id="i13" class="rowColor">
@@ -335,8 +337,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#getExtensionName--">getExtensionName</a></span>()</code>
-<div class="block">Returns an extension name that can be reported to the user as the
- plug-in required for this component to load correctly.</div>
+<div class="block">Returns an extension name that can be reported to the user as the plug-in
+ required for this component to load correctly.</div>
 </td>
 </tr>
 <tr id="i15" class="rowColor">
@@ -354,9 +356,9 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <tr id="i17" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#getHandlerScript--">getHandlerScript</a></span>()</code>
-<div class="block">Returns the resource name used to create a <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> for this component,
- or <code>null</code> if the component was created directly from a
- <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> instance.</div>
+<div class="block">Returns the resource name used to create a <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> for this
+ component, or <code>null</code> if the component was created directly
+ from a <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> instance.</div>
 </td>
 </tr>
 <tr id="i18" class="altColor">
@@ -369,14 +371,15 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#getMarkerClipping--">getMarkerClipping</a></span>()</code>
 <div class="block">Returns <code>true</code> if the marker portrait is clipped to the clip
- region when drawn with <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYSheet.html#paintMarkerPortrait-java.awt.Graphics2D-"><code>DIYSheet.paintMarkerPortrait(java.awt.Graphics2D)</code></a>.</div>
+ region when drawn with
+ <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYSheet.html#paintMarkerPortrait-java.awt.Graphics2D-"><code>DIYSheet.paintMarkerPortrait(java.awt.Graphics2D)</code></a>.</div>
 </td>
 </tr>
 <tr id="i20" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#getMarkerScaleUsesMinimum--">getMarkerScaleUsesMinimum</a></span>()</code>
-<div class="block">Returns <code>true</code> if the minimum portrait scale is used
- on the marker for newly installed portrait images.</div>
+<div class="block">Returns <code>true</code> if the minimum portrait scale is used on the
+ marker for newly installed portrait images.</div>
 </td>
 </tr>
 <tr id="i21" class="rowColor">
@@ -401,8 +404,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <tr id="i24" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#getPortraitClipping--">getPortraitClipping</a></span>()</code>
-<div class="block">Returns <code>true</code> if the portrait is clipped to the clip
- region when drawn with <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYSheet.html#paintPortrait-java.awt.Graphics2D-"><code>DIYSheet.paintPortrait(java.awt.Graphics2D)</code></a>.</div>
+<div class="block">Returns <code>true</code> if the portrait is clipped to the clip region
+ when drawn with <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYSheet.html#paintPortrait-java.awt.Graphics2D-"><code>DIYSheet.paintPortrait(java.awt.Graphics2D)</code></a>.</div>
 </td>
 </tr>
 <tr id="i25" class="rowColor">
@@ -439,8 +442,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <tr id="i30" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#getPortraitScaleUsesMinimum--">getPortraitScaleUsesMinimum</a></span>()</code>
-<div class="block">Returns <code>true</code> if the minimum portrait scale is used
- for newly installed portrait images.</div>
+<div class="block">Returns <code>true</code> if the minimum portrait scale is used for newly
+ installed portrait images.</div>
 </td>
 </tr>
 <tr id="i31" class="rowColor">
@@ -452,7 +455,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <tr id="i32" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#getSheetTitles--">getSheetTitles</a></span>()</code>
-<div class="block">Returns a copy of the human-readable names of the sheets used by this component.</div>
+<div class="block">Returns a copy of the human-readable names of the sheets used by this
+ component.</div>
 </td>
 </tr>
 <tr id="i33" class="rowColor">
@@ -497,8 +501,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <tr id="i39" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#isPortraitBackgroundFilled--">isPortraitBackgroundFilled</a></span>()</code>
-<div class="block">Returns <code>true</code> if portrait areas will be filled with
- solid white before painting the portrait.</div>
+<div class="block">Returns <code>true</code> if portrait areas will be filled with solid
+ white before painting the portrait.</div>
 </td>
 </tr>
 <tr id="i40" class="altColor">
@@ -560,22 +564,22 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setCustomPortraitHandling-boolean-">setCustomPortraitHandling</a></span>(boolean&nbsp;scripted)</code>
 <div class="block">Sets whether this component's script will provide its own portrait
- handling code or whether the built-in portrait management system will
- be used.</div>
+ handling code or whether the built-in portrait management system will be
+ used.</div>
 </td>
 </tr>
 <tr id="i49" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setDeckSnappingHint-ca.cgjennings.apps.arkham.sheet.Sheet.DeckSnappingHint-">setDeckSnappingHint</a></span>(<a href="../../../../../ca/cgjennings/apps/arkham/sheet/Sheet.DeckSnappingHint.html" title="enum in ca.cgjennings.apps.arkham.sheet">Sheet.DeckSnappingHint</a>&nbsp;deckSnappingHint)</code>
-<div class="block">Sets the default deck snapping behaviour when the component is placed
- in a deck editor.</div>
+<div class="block">Sets the default deck snapping behaviour when the component is placed in
+ a deck editor.</div>
 </td>
 </tr>
 <tr id="i50" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setExtensionName-java.lang.String-">setExtensionName</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;extensionName)</code>
-<div class="block">Sets the name of an extension to report to the user if the script required
- by this component cannot be found.</div>
+<div class="block">Sets the name of an extension to report to the user if the script
+ required by this component cannot be found.</div>
 </td>
 </tr>
 <tr id="i51" class="rowColor">
@@ -599,8 +603,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <tr id="i54" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setMarkerBackgroundFilled-boolean-">setMarkerBackgroundFilled</a></span>(boolean&nbsp;fill)</code>
-<div class="block">If set, the marker portrait clip region will be filled in with solid white before
- painting the portrait on the marker.</div>
+<div class="block">If set, the marker portrait clip region will be filled in with solid
+ white before painting the portrait on the marker.</div>
 </td>
 </tr>
 <tr id="i55" class="rowColor">
@@ -619,13 +623,15 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <tr id="i57" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setMarkerClipStencilRegion-java.awt.Rectangle-">setMarkerClipStencilRegion</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Rectangle.html?is-external=true" title="class or interface in java.awt">Rectangle</a>&nbsp;region)</code>
-<div class="block">Sets an explicit clip stencil region for this component's marker portrait.</div>
+<div class="block">Sets an explicit clip stencil region for this component's marker
+ portrait.</div>
 </td>
 </tr>
 <tr id="i58" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setMarkerScaleUsesMinimum-boolean-">setMarkerScaleUsesMinimum</a></span>(boolean&nbsp;useMinimum)</code>
-<div class="block">Sets how the portrait's initial scale is determined for the marker portrait.</div>
+<div class="block">Sets how the portrait's initial scale is determined for the marker
+ portrait.</div>
 </td>
 </tr>
 <tr id="i59" class="rowColor">
@@ -644,8 +650,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <tr id="i61" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setPortraitBackgroundFilled-boolean-">setPortraitBackgroundFilled</a></span>(boolean&nbsp;fill)</code>
-<div class="block">If set, the portrait clip region will be filled in with solid white before
- painting the portrait.</div>
+<div class="block">If set, the portrait clip region will be filled in with solid white
+ before painting the portrait.</div>
 </td>
 </tr>
 <tr id="i62" class="altColor">
@@ -719,9 +725,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <tr id="i73" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setTransparentFaces-boolean-">setTransparentFaces</a></span>(boolean&nbsp;transparent)</code>
-<div class="block">This flag must be set if the card faces require support for
- translucent pixels; for example, if the faces have a
- nonrectangular shape.</div>
+<div class="block">This flag must be set if the card faces require support for translucent
+ pixels; for example, if the faces have a nonrectangular shape.</div>
 </td>
 </tr>
 <tr id="i74" class="altColor">
@@ -780,13 +785,13 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <h4>DIY</h4>
 <pre>protected&nbsp;DIY(<a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy">Handler</a>&nbsp;handler,
               <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;gameCode)</pre>
-<div class="block">Creates a new DIY component that will call into the given handler.
- If the game code represents a registered game, the new component's
- settings will inherit from the master settings for that game.</div>
+<div class="block">Creates a new DIY component that will call into the given handler. If the
+ game code represents a registered game, the new component's settings will
+ inherit from the master settings for that game.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>handler</code> - the handler instance that will be called by this
-    component to perform customizable functions</dd>
+<dd><code>handler</code> - the handler instance that will be called by this component
+ to perform customizable functions</dd>
 <dd><code>gameCode</code> - the code for a game to associate with this component</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the handler is <code>null</code></dd>
@@ -803,21 +808,24 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
            <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;gameCode,
            boolean&nbsp;debug)
     throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Creates a new DIY component that will call into the given handler.
- If the game code represents a registered game, the new component's
- settings will inherit from the master settings for that game.
- If the <code>debug</code> flag is set to <code>true</code>, then a breakpoint
- will be set at the start of handler script.</div>
+<div class="block">Creates a new DIY component that will call into the given handler. If the
+ game code represents a registered game, the new component's settings will
+ inherit from the master settings for that game. If the <code>debug</code>
+ flag is set to <code>true</code>, then a breakpoint will be set at the
+ start of handler script.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>handlerScript</code> - the location of the script resource that defines the
-     handler functions that will be called by this
-     component to perform customizable functions</dd>
-<dd><code>gameCode</code> - the code for a game to associate with this component, or <code>null</code></dd>
-<dd><code>debug</code> - if <code>true</code>, then a breakpoint is set just before executing the
-     handler script; initialization of the handler can be stepped through from the script debugger</dd>
+ handler functions that will be called by this component to perform
+ customizable functions</dd>
+<dd><code>gameCode</code> - the code for a game to associate with this component, or
+ <code>null</code></dd>
+<dd><code>debug</code> - if <code>true</code>, then a breakpoint is set just before
+ executing the handler script; initialization of the handler can be
+ stepped through from the script debugger</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if an exception occurs while loading the script or starting the handler</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if an exception occurs while loading the script or
+ starting the handler</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the handler script is <code>null</code></dd>
 </dl>
 </li>
@@ -837,10 +845,10 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>clearAll</h4>
 <pre>public&nbsp;void&nbsp;clearAll()</pre>
-<div class="block">Clears the component by setting the name and comments to empty
- strings, resetting the expansion symbol key, marking all sheets
- as changed, and calling the handler scripts <code>onClear</code>
- function to clear the component elements defined by the script.</div>
+<div class="block">Clears the component by setting the name and comments to empty strings,
+ resetting the expansion symbol key, marking all sheets as changed, and
+ calling the handler scripts <code>onClear</code> function to clear the
+ component elements defined by the script.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#clearAll--">clearAll</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></dd>
@@ -857,15 +865,15 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <h4>computeIdealScaleForImage</h4>
 <pre>public&nbsp;double&nbsp;computeIdealScaleForImage(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;image,
                                         <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;clipKeyType)</pre>
-<div class="block">Determine the ideal default scale for a portrait image so that the
- image completely covers the clip region.</div>
+<div class="block">Determine the ideal default scale for a portrait image so that the image
+ completely covers the clip region.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/component/AbstractGameComponent.html#computeIdealScaleForImage-java.awt.image.BufferedImage-java.lang.String-">computeIdealScaleForImage</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/AbstractGameComponent.html" title="class in ca.cgjennings.apps.arkham.component">AbstractGameComponent</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>image</code> - the image to compute the ideal scale for</dd>
 <dd><code>clipKeyType</code> - use "portrait" or <code>null</code> for the portrait
-     clip region, "marker" for the marker clip region</dd>
+ clip region, "marker" for the marker clip region</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the ideal scale for the image based on the portrait clip region</dd>
 </dl>
@@ -879,17 +887,18 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <h4>computeMinimumScaleForImage</h4>
 <pre>public&nbsp;double&nbsp;computeMinimumScaleForImage(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;image,
                                           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;clipKeyType)</pre>
-<div class="block">Determine the ideal default scale for a portrait image so that the
- image just touches the clip edges in one dimension.
+<div class="block">Determine the ideal default scale for a portrait image so that the image
+ just touches the clip edges in one dimension.
 
- <p>This is overridden to use the portrait key to determine the clip region.</div>
+ <p>
+ This is overridden to use the portrait key to determine the clip region.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/component/AbstractGameComponent.html#computeMinimumScaleForImage-java.awt.image.BufferedImage-java.lang.String-">computeMinimumScaleForImage</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/AbstractGameComponent.html" title="class in ca.cgjennings.apps.arkham.component">AbstractGameComponent</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>image</code> - the image to compute the minimum scale for</dd>
 <dd><code>clipKeyType</code> - use "portrait" or <code>null</code> for the portrait
-     clip region, "marker" for the marker clip region</dd>
+ clip region, "marker" for the marker clip region</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the minimum scale for the image based on the portrait clip region</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -904,16 +913,17 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>create</h4>
 <pre>public&nbsp;void&nbsp;create(<a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html" title="class in ca.cgjennings.apps.arkham.diy">DIY</a>&nbsp;diy)</pre>
-<div class="block">Calls the script's <code>create</code> function. This should not
- be called directly.
+<div class="block">Calls the script's <code>create</code> function. This should not be
+ called directly.
 
  Exceptions thrown by the script function will be caught and reported in
  the script console.
 
- <p>Subclasses may override this function to implement a DIY component
- as a subclass of DIY. In order to do this, <b>all</b> of the
- methods that make up the <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> interface <b>must</b> be overridden,
- except those in <a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component"><code>PortraitProvider</code></a>.</div>
+ <p>
+ Subclasses may override this function to implement a DIY component as a
+ subclass of DIY. In order to do this, <b>all</b> of the methods that make
+ up the <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> interface <b>must</b> be overridden, except those
+ in <a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component"><code>PortraitProvider</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html#create-ca.cgjennings.apps.arkham.diy.DIY-">create</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy">Handler</a></code></dd>
@@ -930,16 +940,17 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <h4>createBackPainter</h4>
 <pre>public&nbsp;void&nbsp;createBackPainter(<a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html" title="class in ca.cgjennings.apps.arkham.diy">DIY</a>&nbsp;diy,
                               <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYSheet.html" title="class in ca.cgjennings.apps.arkham.diy">DIYSheet</a>&nbsp;sheet)</pre>
-<div class="block">Calls the script's <code>createBackPainter</code> function. This should not
- be called directly.
+<div class="block">Calls the script's <code>createBackPainter</code> function. This should
+ not be called directly.
 
  Exceptions thrown by the script function will be caught and reported in
  the script console.
 
- <p>Subclasses may override this function to implement a DIY component
- as a subclass of DIY. In order to do this, <b>all</b> of the
- methods that make up the <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> interface <b>must</b> be overridden,
- except those in <a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component"><code>PortraitProvider</code></a>.</div>
+ <p>
+ Subclasses may override this function to implement a DIY component as a
+ subclass of DIY. In order to do this, <b>all</b> of the methods that make
+ up the <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> interface <b>must</b> be overridden, except those
+ in <a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component"><code>PortraitProvider</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html#createBackPainter-ca.cgjennings.apps.arkham.diy.DIY-ca.cgjennings.apps.arkham.diy.DIYSheet-">createBackPainter</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy">Handler</a></code></dd>
@@ -955,9 +966,9 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <ul class="blockList">
 <li class="blockList">
 <h4>createDefaultEditor</h4>
-<pre>public&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/AbstractGameComponentEditor.html" title="class in ca.cgjennings.apps.arkham">AbstractGameComponentEditor</a>&nbsp;createDefaultEditor()</pre>
-<div class="block">Creates a <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYEditor.html" title="class in ca.cgjennings.apps.arkham.diy"><code>DIYEditor</code></a> with this component set as the game
- component for editing.</div>
+<pre>public&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYEditor.html" title="class in ca.cgjennings.apps.arkham.diy">DIYEditor</a>&nbsp;createDefaultEditor()</pre>
+<div class="block">Creates a <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYEditor.html" title="class in ca.cgjennings.apps.arkham.diy"><code>DIYEditor</code></a> with this component set as the game component
+ for editing.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#createDefaultEditor--">createDefaultEditor</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></dd>
@@ -980,9 +991,9 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
  by the component's <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.FaceStyle.html" title="enum in ca.cgjennings.apps.arkham.diy"><code>DIY.FaceStyle</code></a>.
 
  Creates a set of default sheets that are compatible with this component
- and associates them with the component as if by calling <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#setSheets-ca.cgjennings.apps.arkham.sheet.Sheet:A-"><code>GameComponent.setSheets(ca.cgjennings.apps.arkham.sheet.Sheet[])</code></a>.
- As with <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#getSheets--"><code>GameComponent.getSheets()</code></a>, the returned sheets are owned by the component
- and must not be modified.</div>
+ and associates them with the component as if by calling
+ <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#setSheets-ca.cgjennings.apps.arkham.sheet.Sheet:A-"><code>GameComponent.setSheets(ca.cgjennings.apps.arkham.sheet.Sheet[])</code></a>. As with <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#getSheets--"><code>GameComponent.getSheets()</code></a>, the returned sheets are
+ owned by the component and must not be modified.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#createDefaultSheets--">createDefaultSheets</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></dd>
@@ -1003,16 +1014,17 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <h4>createFrontPainter</h4>
 <pre>public&nbsp;void&nbsp;createFrontPainter(<a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html" title="class in ca.cgjennings.apps.arkham.diy">DIY</a>&nbsp;diy,
                                <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYSheet.html" title="class in ca.cgjennings.apps.arkham.diy">DIYSheet</a>&nbsp;sheet)</pre>
-<div class="block">Calls the script's <code>createFrontPainter</code> function. This should not
- be called directly.
+<div class="block">Calls the script's <code>createFrontPainter</code> function. This should
+ not be called directly.
 
  Exceptions thrown by the script function will be caught and reported in
  the script console.
 
- <p>Subclasses may override this function to implement a DIY component
- as a subclass of DIY. In order to do this, <b>all</b> of the
- methods that make up the <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> interface <b>must</b> be overridden,
- except those in <a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component"><code>PortraitProvider</code></a>.</div>
+ <p>
+ Subclasses may override this function to implement a DIY component as a
+ subclass of DIY. In order to do this, <b>all</b> of the methods that make
+ up the <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> interface <b>must</b> be overridden, except those
+ in <a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component"><code>PortraitProvider</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html#createFrontPainter-ca.cgjennings.apps.arkham.diy.DIY-ca.cgjennings.apps.arkham.diy.DIYSheet-">createFrontPainter</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy">Handler</a></code></dd>
@@ -1036,10 +1048,11 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
  Exceptions thrown by the script function will be caught and reported in
  the script console.
 
- <p>Subclasses may override this function to implement a DIY component
- as a subclass of DIY. In order to do this, <b>all</b> of the
- methods that make up the <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> interface <b>must</b> be overridden,
- except those in <a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component"><code>PortraitProvider</code></a>.</div>
+ <p>
+ Subclasses may override this function to implement a DIY component as a
+ subclass of DIY. In order to do this, <b>all</b> of the methods that make
+ up the <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> interface <b>must</b> be overridden, except those
+ in <a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component"><code>PortraitProvider</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html#createInterface-ca.cgjennings.apps.arkham.diy.DIY-ca.cgjennings.apps.arkham.diy.DIYEditor-">createInterface</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy">Handler</a></code></dd>
@@ -1059,14 +1072,15 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
                                      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;gameCode)</pre>
 <div class="block">This helper method can be called to create a new component for testing
  purposes using just a <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> implementation. (This method is
- called by the <code>testDIYScript()</code> function in the <code>diy</code>
- script library.) Note that if you save a test instance, the saved file
- will not open correctly since the component will not know what script
- file to load to recreate the handler.</div>
+ called by the <code>testDIYScript()</code> function in the
+ <code>diy</code> script library.) Note that if you save a test instance,
+ the saved file will not open correctly since the component will not know
+ what script file to load to recreate the handler.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>h</code> - the handler instance to test</dd>
-<dd><code>gameCode</code> - a game to associate with the component, or <code>null</code></dd>
+<dd><code>gameCode</code> - a game to associate with the component, or
+ <code>null</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a new DIY instance that will call into the provided handler</dd>
 </dl>
@@ -1079,8 +1093,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>getBackTemplateKey</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getBackTemplateKey()</pre>
-<div class="block">Returns the template key for the back face of this component.
- This is equivalent to <code>getTemplateKey( 1 )</code>.</div>
+<div class="block">Returns the template key for the back face of this component. This is
+ equivalent to <code>getTemplateKey( 1 )</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the back face template key</dd>
@@ -1110,16 +1124,16 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>getCustomFoldMarks</h4>
 <pre>public final&nbsp;double[]&nbsp;getCustomFoldMarks(int&nbsp;faceIndex)</pre>
-<div class="block">Returns a copy of the custom fold mark array for the specified
- component face, or <code>null</code> if the face has no custom fold
- marks.</div>
+<div class="block">Returns a copy of the custom fold mark array for the specified component
+ face, or <code>null</code> if the face has no custom fold marks.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>faceIndex</code> - the index of the face of interest</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the custom fold marks set on the face, or <code>null</code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang">IndexOutOfBoundsException</a></code> - if the face index is invalid for the face style</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang">IndexOutOfBoundsException</a></code> - if the face index is invalid for the
+ face style</dd>
 </dl>
 </li>
 </ul>
@@ -1130,9 +1144,9 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>getDeckSnappingHint</h4>
 <pre>public&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/sheet/Sheet.DeckSnappingHint.html" title="enum in ca.cgjennings.apps.arkham.sheet">Sheet.DeckSnappingHint</a>&nbsp;getDeckSnappingHint()</pre>
-<div class="block">Returns the deck snapping hint for the component. The deck snapping
- hint defines the default snapping behaviour for the component
- when it is placed in a deck editor.</div>
+<div class="block">Returns the deck snapping hint for the component. The deck snapping hint
+ defines the default snapping behaviour for the component when it is
+ placed in a deck editor.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the default snapping behaviour for the component</dd>
@@ -1148,11 +1162,12 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>getExtensionName</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getExtensionName()</pre>
-<div class="block">Returns an extension name that can be reported to the user as the
- plug-in required for this component to load correctly.</div>
+<div class="block">Returns an extension name that can be reported to the user as the plug-in
+ required for this component to load correctly.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the extension plug-in that adds this component type to the class map</dd>
+<dd>the extension plug-in that adds this component type to the class
+ map</dd>
 </dl>
 </li>
 </ul>
@@ -1167,7 +1182,7 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the value that determines the number and type of card faces
-     presented by this component</dd>
+ presented by this component</dd>
 </dl>
 </li>
 </ul>
@@ -1178,8 +1193,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>getFrontTemplateKey</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getFrontTemplateKey()</pre>
-<div class="block">Returns the template key for the front face of this component.
- This is equivalent to <code>getTemplateKey( 0 )</code>.</div>
+<div class="block">Returns the template key for the front face of this component. This is
+ equivalent to <code>getTemplateKey( 0 )</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the front face template key</dd>
@@ -1195,11 +1210,11 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>getHandlerScript</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getHandlerScript()</pre>
-<div class="block">Returns the resource name used to create a <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> for this component,
- or <code>null</code> if the component was created directly from a
- <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> instance. Typically the resource used to create a handler
- is a script file, but it can also be the name of a class on the class
- path that implements the <code>Handler</code> interface.</div>
+<div class="block">Returns the resource name used to create a <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> for this
+ component, or <code>null</code> if the component was created directly
+ from a <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> instance. Typically the resource used to create a
+ handler is a script file, but it can also be the name of a class on the
+ class path that implements the <code>Handler</code> interface.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the resource used to create this component, or <code>null</code></dd>
@@ -1231,12 +1246,14 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <h4>getMarkerClipping</h4>
 <pre>public final&nbsp;boolean&nbsp;getMarkerClipping()</pre>
 <div class="block">Returns <code>true</code> if the marker portrait is clipped to the clip
- region when drawn with <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYSheet.html#paintMarkerPortrait-java.awt.Graphics2D-"><code>DIYSheet.paintMarkerPortrait(java.awt.Graphics2D)</code></a>.</div>
+ region when drawn with
+ <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYSheet.html#paintMarkerPortrait-java.awt.Graphics2D-"><code>DIYSheet.paintMarkerPortrait(java.awt.Graphics2D)</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if clipping is enabled</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if the face style is not <code>CARD_AND_MARKER</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if the face style is not
+ <code>CARD_AND_MARKER</code></dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setMarkerClipping-boolean-"><code>setMarkerClipping(boolean)</code></a></dd>
 </dl>
@@ -1249,14 +1266,15 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>getMarkerScaleUsesMinimum</h4>
 <pre>public final&nbsp;boolean&nbsp;getMarkerScaleUsesMinimum()</pre>
-<div class="block">Returns <code>true</code> if the minimum portrait scale is used
- on the marker for newly installed portrait images.</div>
+<div class="block">Returns <code>true</code> if the minimum portrait scale is used on the
+ marker for newly installed portrait images.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the minimum portrait scale method
-     is used for new portrait images</dd>
+<dd><code>true</code> if the minimum portrait scale method is used
+ for new portrait images</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if the face style is not <code>CARD_AND_MARKER</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if the face style is not
+ <code>CARD_AND_MARKER</code></dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setMarkerScaleUsesMinimum-boolean-"><code>setMarkerScaleUsesMinimum(boolean)</code></a></dd>
 </dl>
@@ -1270,8 +1288,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <h4>getMarkerStyle</h4>
 <pre>public&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/sheet/MarkerStyle.html" title="enum in ca.cgjennings.apps.arkham.sheet">MarkerStyle</a>&nbsp;getMarkerStyle()</pre>
 <div class="block">Returns the marker style for the marker sheet of a
- <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.FaceStyle.html#CARD_AND_MARKER"><code>DIY.FaceStyle.CARD_AND_MARKER</code></a> component.
- This style determines how a back face for the marker is generated.</div>
+ <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.FaceStyle.html#CARD_AND_MARKER"><code>DIY.FaceStyle.CARD_AND_MARKER</code></a> component. This style determines how a
+ back face for the marker is generated.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the component's marker style</dd>
@@ -1285,11 +1303,12 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>getNameField</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/JTextComponent.html?is-external=true" title="class or interface in javax.swing.text">JTextComponent</a>&nbsp;getNameField()</pre>
-<div class="block">Returns the name field used to hold the name of the component. May be <code>null</code>.</div>
+<div class="block">Returns the name field used to hold the name of the component. May be
+ <code>null</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the text field that contains the component's name, as set by
-     <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setNameField-javax.swing.text.JTextComponent-"><code>setNameField(javax.swing.text.JTextComponent)</code></a></dd>
+ <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setNameField-javax.swing.text.JTextComponent-"><code>setNameField(javax.swing.text.JTextComponent)</code></a></dd>
 </dl>
 </li>
 </ul>
@@ -1300,15 +1319,15 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>getPortrait</h4>
 <pre>public&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html" title="interface in ca.cgjennings.apps.arkham.component">Portrait</a>&nbsp;getPortrait(int&nbsp;index)</pre>
-<div class="block">Returns the specified <a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html" title="interface in ca.cgjennings.apps.arkham.component"><code>Portrait</code></a>. If custom portrait handling
- is enabled, then this calls the script's <code>getPortrait</code>
- function to retrieve the portrait to return. Otherwise it will return
- a built-in portrait implementation: if no portrait key is set, then
- no portraits are available. Otherwise, the built-in portrait can
- be fetched using an index of 0. If the face style is
- <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.FaceStyle.html#CARD_AND_MARKER"><code>DIY.FaceStyle.CARD_AND_MARKER</code></a>, then the marker portrait can be
- fetched using an index of 1. Note that the marker portrait uses the
- same image as the main portrait, but has its own scale and pan values.</div>
+<div class="block">Returns the specified <a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html" title="interface in ca.cgjennings.apps.arkham.component"><code>Portrait</code></a>. If custom portrait handling is
+ enabled, then this calls the script's <code>getPortrait</code> function
+ to retrieve the portrait to return. Otherwise it will return a built-in
+ portrait implementation: if no portrait key is set, then no portraits are
+ available. Otherwise, the built-in portrait can be fetched using an index
+ of 0. If the face style is <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.FaceStyle.html#CARD_AND_MARKER"><code>DIY.FaceStyle.CARD_AND_MARKER</code></a>, then the
+ marker portrait can be fetched using an index of 1. Note that the marker
+ portrait uses the same image as the main portrait, but has its own scale
+ and pan values.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html#getPortrait-int-">getPortrait</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component">PortraitProvider</a></code></dd>
@@ -1336,8 +1355,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>getPortraitClipping</h4>
 <pre>public final&nbsp;boolean&nbsp;getPortraitClipping()</pre>
-<div class="block">Returns <code>true</code> if the portrait is clipped to the clip
- region when drawn with <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYSheet.html#paintPortrait-java.awt.Graphics2D-"><code>DIYSheet.paintPortrait(java.awt.Graphics2D)</code></a>.</div>
+<div class="block">Returns <code>true</code> if the portrait is clipped to the clip region
+ when drawn with <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYSheet.html#paintPortrait-java.awt.Graphics2D-"><code>DIYSheet.paintPortrait(java.awt.Graphics2D)</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if clipping is enabled</dd>
@@ -1353,12 +1372,12 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>getPortraitCount</h4>
 <pre>public&nbsp;int&nbsp;getPortraitCount()</pre>
-<div class="block">Returns the number of portraits provided by this component. If
- custom portrait handling is enabled, then this returns the number
- of portraits reported by the script's <code>getPortraitCount</code>
- function. Otherwise, it returns 0
- if no portrait key is set, 1 if a portrait key is set, or 2 if a
- portrait key is set <i>and</i> the face style is <code>CARD_AND_MARKER</code>.</div>
+<div class="block">Returns the number of portraits provided by this component. If custom
+ portrait handling is enabled, then this returns the number of portraits
+ reported by the script's <code>getPortraitCount</code> function.
+ Otherwise, it returns 0 if no portrait key is set, 1 if a portrait key is
+ set, or 2 if a portrait key is set <i>and</i> the face style is
+ <code>CARD_AND_MARKER</code>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html#getPortraitCount--">getPortraitCount</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component">PortraitProvider</a></code></dd>
@@ -1381,8 +1400,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <h4>getPortraitKey</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getPortraitKey()</pre>
 <div class="block">Returns the base key name that controls the default portrait handling
- system. Note that this key will be ignored if custom portrait handling
- is enabled.</div>
+ system. Note that this key will be ignored if custom portrait handling is
+ enabled.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the portrait key base name</dd>
@@ -1453,12 +1472,12 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>getPortraitScaleUsesMinimum</h4>
 <pre>public final&nbsp;boolean&nbsp;getPortraitScaleUsesMinimum()</pre>
-<div class="block">Returns <code>true</code> if the minimum portrait scale is used
- for newly installed portrait images.</div>
+<div class="block">Returns <code>true</code> if the minimum portrait scale is used for newly
+ installed portrait images.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the minimum portrait scale method
-     is used for new portrait images</dd>
+<dd><code>true</code> if the minimum portrait scale method is used
+ for new portrait images</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setPortraitScaleUsesMinimum-boolean-"><code>setPortraitScaleUsesMinimum(boolean)</code></a></dd>
 </dl>
@@ -1489,15 +1508,17 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>getSheetTitles</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;getSheetTitles()</pre>
-<div class="block">Returns a copy of the human-readable names of the sheets used by this component.
- A typical result would be something like <code>["Front Face", "Back Face"]</code>,
- localized for the user interface language. Note that, since this returns
- a copy of the current titles, changing the values of the returned array will
- have no effect on the titles used by this component. To change a sheet title,
- you must instead call <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setSheetTitle-int-java.lang.String-"><code>setSheetTitle(int, java.lang.String)</code></a>.
+<div class="block">Returns a copy of the human-readable names of the sheets used by this
+ component. A typical result would be something like
+ <code>["Front Face", "Back Face"]</code>, localized for the user
+ interface language. Note that, since this returns a copy of the current
+ titles, changing the values of the returned array will have no effect on
+ the titles used by this component. To change a sheet title, you must
+ instead call <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setSheetTitle-int-java.lang.String-"><code>setSheetTitle(int, java.lang.String)</code></a>.
 
- <p>If no custom sheet titles have ever been set on this component, then
- this will return an array of default titles based on the face style.</div>
+ <p>
+ If no custom sheet titles have ever been set on this component, then this
+ will return an array of default titles based on the face style.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#getSheetTitles--">getSheetTitles</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></dd>
@@ -1505,7 +1526,7 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/component/AbstractGameComponent.html#getSheetTitles--">getSheetTitles</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/AbstractGameComponent.html" title="class in ca.cgjennings.apps.arkham.component">AbstractGameComponent</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>an array of sheet titles matching the assigned sheets, or
-     <code>null</code> if there are no sheets attached</dd>
+ <code>null</code> if there are no sheets attached</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#createDefaultSheets--"><code>createDefaultSheets()</code></a></dd>
 </dl>
@@ -1522,12 +1543,13 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>index</code> - the index of the face to obtain a key for (0 for the first
-   front face, 1 for the first back face, 2 for the second front face,
-   and so on)</dd>
+ front face, 1 for the first back face, 2 for the second front face, and
+ so on)</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the base template key for specified face</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang">IndexOutOfBoundsException</a></code> - if the face index is invalid for the face style</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang">IndexOutOfBoundsException</a></code> - if the face index is invalid for the
+ face style</dd>
 </dl>
 </li>
 </ul>
@@ -1542,7 +1564,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
  pixels.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the component's sheets include an alpha channel</dd>
+<dd><code>true</code> if the component's sheets include an alpha
+ channel</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setTransparentFaces-boolean-"><code>setTransparentFaces(boolean)</code></a></dd>
 </dl>
@@ -1593,13 +1616,14 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <div class="block">Returns <code>true</code> if this component is providing its own
  <a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html" title="interface in ca.cgjennings.apps.arkham.component"><code>Portrait</code></a>s through script code.
 
- <p><b>Note:</b> The somewhat awkward name is to allow scripts to
- access this value using the automatically generated getter
+ <p>
+ <b>Note:</b> The somewhat awkward name is to allow scripts to access this
+ value using the automatically generated getter
  <code>customPortraitHandling</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the DIY script implements the
-     <a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component"><code>PortraitProvider</code></a> interface</dd>
+ <a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component"><code>PortraitProvider</code></a> interface</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setCustomPortraitHandling-boolean-"><code>setCustomPortraitHandling(boolean)</code></a>, 
 <a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component"><code>PortraitProvider</code></a></dd>
@@ -1619,7 +1643,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if background filling is enabled</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if the face style is not <code>CARD_AND_MARKER</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if the face style is not
+ <code>CARD_AND_MARKER</code></dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setMarkerBackgroundFilled-boolean-"><code>setMarkerBackgroundFilled(boolean)</code></a></dd>
 </dl>
@@ -1632,8 +1657,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>isPortraitBackgroundFilled</h4>
 <pre>public final&nbsp;boolean&nbsp;isPortraitBackgroundFilled()</pre>
-<div class="block">Returns <code>true</code> if portrait areas will be filled with
- solid white before painting the portrait.</div>
+<div class="block">Returns <code>true</code> if portrait areas will be filled with solid
+ white before painting the portrait.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if background filling is enabled</dd>
@@ -1647,18 +1672,19 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>onClear</h4>
 <pre>public&nbsp;void&nbsp;onClear(<a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html" title="class in ca.cgjennings.apps.arkham.diy">DIY</a>&nbsp;diy)</pre>
-<div class="block">Calls the script's <code>onClear</code> function. This should not
- be called directly; instead, call <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#clearAll--"><code>clearAll()</code></a>.
+<div class="block">Calls the script's <code>onClear</code> function. This should not be
+ called directly; instead, call <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#clearAll--"><code>clearAll()</code></a>.
 
  Exceptions thrown by the script function will be caught and reported in
  the script console.
 
  Called when the user wants to reset the component to a blank state.
 
- <p>Subclasses may override this function to implement a DIY component
- as a subclass of DIY. In order to do this, <b>all</b> of the
- methods that make up the <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> interface <b>must</b> be overridden,
- except those in <a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component"><code>PortraitProvider</code></a>.</div>
+ <p>
+ Subclasses may override this function to implement a DIY component as a
+ subclass of DIY. In order to do this, <b>all</b> of the methods that make
+ up the <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> interface <b>must</b> be overridden, except those
+ in <a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component"><code>PortraitProvider</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html#onClear-ca.cgjennings.apps.arkham.diy.DIY-">onClear</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy">Handler</a></code></dd>
@@ -1675,22 +1701,24 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <h4>onRead</h4>
 <pre>public&nbsp;void&nbsp;onRead(<a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html" title="class in ca.cgjennings.apps.arkham.diy">DIY</a>&nbsp;diy,
                    <a href="https://docs.oracle.com/javase/8/docs/api/java/io/ObjectInputStream.html?is-external=true" title="class or interface in java.io">ObjectInputStream</a>&nbsp;objectInputStream)</pre>
-<div class="block">Calls the script's <code>onRead</code> function. This should not
- be called directly.
+<div class="block">Calls the script's <code>onRead</code> function. This should not be
+ called directly.
 
  Exceptions thrown by the script function will be caught and reported in
  the script console.
 
- <p>Subclasses may override this function to implement a DIY component
- as a subclass of DIY. In order to do this, <b>all</b> of the
- methods that make up the <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> interface <b>must</b> be overridden,
- except those in <a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component"><code>PortraitProvider</code></a>.</div>
+ <p>
+ Subclasses may override this function to implement a DIY component as a
+ subclass of DIY. In order to do this, <b>all</b> of the methods that make
+ up the <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> interface <b>must</b> be overridden, except those
+ in <a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component"><code>PortraitProvider</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html#onRead-ca.cgjennings.apps.arkham.diy.DIY-java.io.ObjectInputStream-">onRead</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy">Handler</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>diy</code> - this component</dd>
-<dd><code>objectInputStream</code> - the object input stream being used to read the component</dd>
+<dd><code>objectInputStream</code> - the object input stream being used to read the
+ component</dd>
 </dl>
 </li>
 </ul>
@@ -1702,22 +1730,24 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <h4>onWrite</h4>
 <pre>public&nbsp;void&nbsp;onWrite(<a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html" title="class in ca.cgjennings.apps.arkham.diy">DIY</a>&nbsp;diy,
                     <a href="https://docs.oracle.com/javase/8/docs/api/java/io/ObjectOutputStream.html?is-external=true" title="class or interface in java.io">ObjectOutputStream</a>&nbsp;objectOutputStream)</pre>
-<div class="block">Calls the script's <code>onWrite</code> function. This should not
- be called directly.
+<div class="block">Calls the script's <code>onWrite</code> function. This should not be
+ called directly.
 
  Exceptions thrown by the script function will be caught and reported in
  the script console.
 
- <p>Subclasses may override this function to implement a DIY component
- as a subclass of DIY. In order to do this, <b>all</b> of the
- methods that make up the <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> interface <b>must</b> be overridden,
- except those in <a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component"><code>PortraitProvider</code></a>.</div>
+ <p>
+ Subclasses may override this function to implement a DIY component as a
+ subclass of DIY. In order to do this, <b>all</b> of the methods that make
+ up the <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> interface <b>must</b> be overridden, except those
+ in <a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component"><code>PortraitProvider</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html#onWrite-ca.cgjennings.apps.arkham.diy.DIY-java.io.ObjectOutputStream-">onWrite</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy">Handler</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>diy</code> - this component</dd>
-<dd><code>objectOutputStream</code> - the object output stream being used to write the component</dd>
+<dd><code>objectOutputStream</code> - the object output stream being used to write
+ the component</dd>
 </dl>
 </li>
 </ul>
@@ -1730,16 +1760,17 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <pre>public&nbsp;void&nbsp;paintBack(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt">Graphics2D</a>&nbsp;g,
                       <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html" title="class in ca.cgjennings.apps.arkham.diy">DIY</a>&nbsp;diy,
                       <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYSheet.html" title="class in ca.cgjennings.apps.arkham.diy">DIYSheet</a>&nbsp;sheet)</pre>
-<div class="block">Calls the script's <code>paintBack</code> function. This should not
- be called directly.
+<div class="block">Calls the script's <code>paintBack</code> function. This should not be
+ called directly.
 
  Exceptions thrown by the script function will be caught and reported in
  the script console.
 
- <p>Subclasses may override this function to implement a DIY component
- as a subclass of DIY. In order to do this, <b>all</b> of the
- methods that make up the <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> interface <b>must</b> be overridden,
- except those in <a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component"><code>PortraitProvider</code></a>.</div>
+ <p>
+ Subclasses may override this function to implement a DIY component as a
+ subclass of DIY. In order to do this, <b>all</b> of the methods that make
+ up the <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> interface <b>must</b> be overridden, except those
+ in <a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component"><code>PortraitProvider</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html#paintBack-java.awt.Graphics2D-ca.cgjennings.apps.arkham.diy.DIY-ca.cgjennings.apps.arkham.diy.DIYSheet-">paintBack</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy">Handler</a></code></dd>
@@ -1759,16 +1790,17 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <pre>public&nbsp;void&nbsp;paintFront(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt">Graphics2D</a>&nbsp;g,
                        <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html" title="class in ca.cgjennings.apps.arkham.diy">DIY</a>&nbsp;diy,
                        <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYSheet.html" title="class in ca.cgjennings.apps.arkham.diy">DIYSheet</a>&nbsp;sheet)</pre>
-<div class="block">Calls the script's <code>paintFront</code> function. This should not
- be called directly.
+<div class="block">Calls the script's <code>paintFront</code> function. This should not be
+ called directly.
 
  Exceptions thrown by the script function will be caught and reported in
  the script console.
 
- <p>Subclasses may override this function to implement a DIY component
- as a subclass of DIY. In order to do this, <b>all</b> of the
- methods that make up the <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> interface <b>must</b> be overridden,
- except those in <a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component"><code>PortraitProvider</code></a>.</div>
+ <p>
+ Subclasses may override this function to implement a DIY component as a
+ subclass of DIY. In order to do this, <b>all</b> of the methods that make
+ up the <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> interface <b>must</b> be overridden, except those
+ in <a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component"><code>PortraitProvider</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html#paintFront-java.awt.Graphics2D-ca.cgjennings.apps.arkham.diy.DIY-ca.cgjennings.apps.arkham.diy.DIYSheet-">paintFront</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" title="interface in ca.cgjennings.apps.arkham.diy">Handler</a></code></dd>
@@ -1786,13 +1818,15 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>setBackTemplateKey</h4>
 <pre>public&nbsp;void&nbsp;setBackTemplateKey(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;backTemplateKey)</pre>
-<div class="block">Sets the template key for the back face of this component.
- This is equivalent to <code>setTemplate( 1, backTemplateKey )</code>.
+<div class="block">Sets the template key for the back face of this component. This is
+ equivalent to <code>setTemplate( 1, backTemplateKey )</code>.
 
- <p><b>This is a <a link='#locked'>restricted property</a>.</b></div>
+ <p>
+ <b>This is a <a href='#locked'>restricted property</a>.</b></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>backTemplateKey</code> - the base template key name to use for the back face</dd>
+<dd><code>backTemplateKey</code> - the base template key name to use for the back
+ face</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the key is <code>null</code></dd>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -1807,14 +1841,15 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>setBleedMargin</h4>
 <pre>public&nbsp;void&nbsp;setBleedMargin(double&nbsp;marginInPoints)</pre>
-<div class="block">Sets the size of the bleed margin for this component, in points.
- (The default is 0.)
+<div class="block">Sets the size of the bleed margin for this component, in points. (The
+ default is 0.)
 
- <p><b>This is a <a link='#locked'>restricted property</a>.</b></div>
+ <p>
+ <b>This is a <a href='#locked'>restricted property</a>.</b></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>marginInPoints</code> - the new bleed margin; this is used to adjust the location
-     of the component's crop marks in the deck editor</dd>
+<dd><code>marginInPoints</code> - the new bleed margin; this is used to adjust the
+ location of the component's crop marks in the deck editor</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the margin is negative</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -1830,19 +1865,20 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <h4>setCustomFoldMarks</h4>
 <pre>public final&nbsp;void&nbsp;setCustomFoldMarks(int&nbsp;faceIndex,
                                      double[]&nbsp;foldMarkTuples)</pre>
-<div class="block">Sets an array of custom fold marks to be used by this component.
- For more information on custom fold marks, see
- <a href="../../../../../ca/cgjennings/apps/arkham/sheet/Sheet.html#getFoldMarks--"><code>Sheet.getFoldMarks()</code></a>.
+<div class="block">Sets an array of custom fold marks to be used by this component. For more
+ information on custom fold marks, see <a href="../../../../../ca/cgjennings/apps/arkham/sheet/Sheet.html#getFoldMarks--"><code>Sheet.getFoldMarks()</code></a>.
 
- <p><b>This is a <a link='#locked'>restricted property</a>.</b></div>
+ <p>
+ <b>This is a <a href='#locked'>restricted property</a>.</b></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>faceIndex</code> - the index of the face that the fold marks will appear on</dd>
 <dd><code>foldMarkTuples</code> - the fold mark unit vectors to set</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the length of the fold mark array is
-     not a multiple of 4 or the vectors it defines do not have unit length</dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang">IndexOutOfBoundsException</a></code> - if the face index is invalid for the face style</dd>
+ not a multiple of 4 or the vectors it defines do not have unit length</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang">IndexOutOfBoundsException</a></code> - if the face index is invalid for the
+ face style</dd>
 </dl>
 </li>
 </ul>
@@ -1854,20 +1890,21 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <h4>setCustomPortraitHandling</h4>
 <pre>public final&nbsp;void&nbsp;setCustomPortraitHandling(boolean&nbsp;scripted)</pre>
 <div class="block">Sets whether this component's script will provide its own portrait
- handling code or whether the built-in portrait management system will
- be used.
- The default is <code>false</code> (use the built-in system), which is
- suitable in most cases.
- If set to <code>true</code>, the component script must define functions
- to implement the <a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component"><code>PortraitProvider</code></a> interface, and the component
- will delegate to these functions when its own <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#getPortraitCount--"><code>getPortraitCount()</code></a>
- and <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#getPortrait-int-"><code>getPortrait(int)</code></a> methods are called.
+ handling code or whether the built-in portrait management system will be
+ used. The default is <code>false</code> (use the built-in system), which
+ is suitable in most cases. If set to <code>true</code>, the component
+ script must define functions to implement the <a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component"><code>PortraitProvider</code></a>
+ interface, and the component will delegate to these functions when its
+ own <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#getPortraitCount--"><code>getPortraitCount()</code></a> and <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#getPortrait-int-"><code>getPortrait(int)</code></a> methods are
+ called.
 
- <p><b>This is a <a link='#locked'>restricted property</a>.</b></div>
+ <p>
+ <b>This is a <a href='#locked'>restricted property</a>.</b></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>scripted</code> - whether portrait handling will be provided by the component's
-     built-in portrait management (<code>false</code>) or by script code (<code>true</code>)</dd>
+<dd><code>scripted</code> - whether portrait handling will be provided by the
+ component's built-in portrait management (<code>false</code>) or by
+ script code (<code>true</code>)</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#isCustomPortraitHandling--"><code>isCustomPortraitHandling()</code></a>, 
 <a href="../../../../../ca/cgjennings/apps/arkham/component/PortraitProvider.html" title="interface in ca.cgjennings.apps.arkham.component"><code>PortraitProvider</code></a>, 
@@ -1882,10 +1919,11 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>setDeckSnappingHint</h4>
 <pre>public&nbsp;void&nbsp;setDeckSnappingHint(<a href="../../../../../ca/cgjennings/apps/arkham/sheet/Sheet.DeckSnappingHint.html" title="enum in ca.cgjennings.apps.arkham.sheet">Sheet.DeckSnappingHint</a>&nbsp;deckSnappingHint)</pre>
-<div class="block">Sets the default deck snapping behaviour when the component is placed
- in a deck editor.
+<div class="block">Sets the default deck snapping behaviour when the component is placed in
+ a deck editor.
 
- <p><b>This is a <a link='#locked'>restricted property</a>.</b></div>
+ <p>
+ <b>This is a <a href='#locked'>restricted property</a>.</b></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>deckSnappingHint</code> - a hint describing the default snapping behaviour</dd>
@@ -1903,10 +1941,11 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>setExtensionName</h4>
 <pre>public&nbsp;void&nbsp;setExtensionName(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;extensionName)</pre>
-<div class="block">Sets the name of an extension to report to the user if the script required
- by this component cannot be found.
+<div class="block">Sets the name of an extension to report to the user if the script
+ required by this component cannot be found.
 
- <p><b>This is a <a link='#locked'>restricted property</a>.</b></div>
+ <p>
+ <b>This is a <a href='#locked'>restricted property</a>.</b></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>extensionName</code> - extension required to instantiate this component</dd>
@@ -1920,14 +1959,15 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>setFaceStyle</h4>
 <pre>public&nbsp;void&nbsp;setFaceStyle(<a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.FaceStyle.html" title="enum in ca.cgjennings.apps.arkham.diy">DIY.FaceStyle</a>&nbsp;faceStyle)</pre>
-<div class="block">Sets the <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.FaceStyle.html" title="enum in ca.cgjennings.apps.arkham.diy"><code>DIY.FaceStyle</code></a> used by this card. The face style controls
- the number and style of the faces presented by this component.
+<div class="block">Sets the <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.FaceStyle.html" title="enum in ca.cgjennings.apps.arkham.diy"><code>DIY.FaceStyle</code></a> used by this card. The face style controls the
+ number and style of the faces presented by this component.
 
- <p><b>This is a <a link='#locked'>restricted property</a>.</b></div>
+ <p>
+ <b>This is a <a href='#locked'>restricted property</a>.</b></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>faceStyle</code> - the value that determines the number and type of card faces
-     used by this component</dd>
+<dd><code>faceStyle</code> - the value that determines the number and type of card
+ faces used by this component</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the style is <code>null</code></dd>
 </dl>
@@ -1940,10 +1980,11 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>setFrontTemplateKey</h4>
 <pre>public&nbsp;void&nbsp;setFrontTemplateKey(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;frontTemplateKey)</pre>
-<div class="block">Sets the template key for the front face of this component.
- This is equivalent to <code>setTemplate( 0, frontTemplateKey )</code>.
+<div class="block">Sets the template key for the front face of this component. This is
+ equivalent to <code>setTemplate( 0, frontTemplateKey )</code>.
 
- <p><b>This is a <a link='#locked'>restricted property</a>.</b></div>
+ <p>
+ <b>This is a <a href='#locked'>restricted property</a>.</b></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>frontTemplateKey</code> - the template key to use for the front face</dd>
@@ -1964,11 +2005,12 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <div class="block">Sets the high resolution image substitution mode used by the component.
  When substitution is active, certain image drawing methods defined on
  <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYSheet.html" title="class in ca.cgjennings.apps.arkham.diy"><code>DIYSheet</code></a> will automatically replace a standard resolution image
- with a resolution version. This setting is normally only changed from
- its default value for testing purposes.</div>
+ with a resolution version. This setting is normally only changed from its
+ default value for testing purposes.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>mode</code> - the high resolution image substitution mode for this component</dd>
+<dd><code>mode</code> - the high resolution image substitution mode for this
+ component</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the mode is <code>null</code></dd>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -1984,17 +2026,19 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>setMarkerBackgroundFilled</h4>
 <pre>public final&nbsp;void&nbsp;setMarkerBackgroundFilled(boolean&nbsp;fill)</pre>
-<div class="block">If set, the marker portrait clip region will be filled in with solid white before
- painting the portrait on the marker.
+<div class="block">If set, the marker portrait clip region will be filled in with solid
+ white before painting the portrait on the marker.
 
- <p><b>This is a <a link='#locked'>restricted property</a>.</b></div>
+ <p>
+ <b>This is a <a href='#locked'>restricted property</a>.</b></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>fill</code> - if <code>true</code>, the clip region will be filled before
-     painting when <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYSheet.html#paintMarkerPortrait-java.awt.Graphics2D-"><code>DIYSheet.paintMarkerPortrait(java.awt.Graphics2D)</code></a>
-     is called</dd>
+ painting when <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYSheet.html#paintMarkerPortrait-java.awt.Graphics2D-"><code>DIYSheet.paintMarkerPortrait(java.awt.Graphics2D)</code></a>
+ is called</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if the face style is not <code>CARD_AND_MARKER</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if the face style is not
+ <code>CARD_AND_MARKER</code></dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#isMarkerBackgroundFilled--"><code>isMarkerBackgroundFilled()</code></a></dd>
 </dl>
@@ -2007,18 +2051,22 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>setMarkerClipping</h4>
 <pre>public final&nbsp;void&nbsp;setMarkerClipping(boolean&nbsp;clipping)</pre>
-<div class="block">Sets whether the marker portrait is clipped. If <code>true</code> (the default), then no
- part of the portrait image that lies outside of the clip region
- will be drawn when <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYSheet.html#paintMarkerPortrait-java.awt.Graphics2D-"><code>DIYSheet.paintMarkerPortrait(java.awt.Graphics2D)</code></a>
- is used to draw the portrait. If <code>false</code>, then the portrait
- can "escape" from the clip region and draw over any surrounding content.
+<div class="block">Sets whether the marker portrait is clipped. If <code>true</code> (the
+ default), then no part of the portrait image that lies outside of the
+ clip region will be drawn when
+ <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYSheet.html#paintMarkerPortrait-java.awt.Graphics2D-"><code>DIYSheet.paintMarkerPortrait(java.awt.Graphics2D)</code></a> is used to draw
+ the portrait. If <code>false</code>, then the portrait can "escape" from
+ the clip region and draw over any surrounding content.
 
- <p><b>This is a <a link='#locked'>restricted property</a>.</b></div>
+ <p>
+ <b>This is a <a href='#locked'>restricted property</a>.</b></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>clipping</code> - <code>true</code> if the marker portrait should be clipped</dd>
+<dd><code>clipping</code> - <code>true</code> if the marker portrait should be
+ clipped</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if the face style is not <code>CARD_AND_MARKER</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if the face style is not
+ <code>CARD_AND_MARKER</code></dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#getMarkerClipping--"><code>getMarkerClipping()</code></a>, 
 <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setMarkerScaleUsesMinimum-boolean-"><code>setMarkerScaleUsesMinimum(boolean)</code></a></dd>
@@ -2033,20 +2081,20 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <h4>setMarkerClipStencil</h4>
 <pre>public&nbsp;void&nbsp;setMarkerClipStencil(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;stencil)</pre>
 <div class="block">Sets an explicit clip stencil for the marker of a
- <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.FaceStyle.html#CARD_AND_MARKER"><code>DIY.FaceStyle.CARD_AND_MARKER</code></a> component. This is essentially the
- same as setting a portrait clip stencil except that it applies to
- the portrait on the marker rather than the main portrait.
- Refer to that method for a detailed explanation of how the clip stencil
- works. The only major difference is that when the default mechanism for
- creating a stencil is used, this will use the template image for
- the sheet with index 2 rather than the sheet with index 0.</div>
+ <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.FaceStyle.html#CARD_AND_MARKER"><code>DIY.FaceStyle.CARD_AND_MARKER</code></a> component. This is essentially the same
+ as setting a portrait clip stencil except that it applies to the portrait
+ on the marker rather than the main portrait. Refer to that method for a
+ detailed explanation of how the clip stencil works. The only major
+ difference is that when the default mechanism for creating a stencil is
+ used, this will use the template image for the sheet with index 2 rather
+ than the sheet with index 0.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>stencil</code> - an image whose alpha channel will be used by the
-   portrait adjustment panel to clip the marker portrait</dd>
+<dd><code>stencil</code> - an image whose alpha channel will be used by the portrait
+ adjustment panel to clip the marker portrait</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if teh face style is not <code>CARD_AND_MAKRER</code>
-     or custom portrait handling is used</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if teh face style is not
+ <code>CARD_AND_MAKRER</code> or custom portrait handling is used</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setPortraitClipStencil-java.awt.image.BufferedImage-"><code>setPortraitClipStencil(java.awt.image.BufferedImage)</code></a></dd>
 </dl>
@@ -2059,13 +2107,13 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>setMarkerClipStencilRegion</h4>
 <pre>public&nbsp;void&nbsp;setMarkerClipStencilRegion(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Rectangle.html?is-external=true" title="class or interface in java.awt">Rectangle</a>&nbsp;region)</pre>
-<div class="block">Sets an explicit clip stencil region for this component's marker portrait.
- See <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setPortraitClipStencilRegion-java.awt.Rectangle-"><code>setPortraitClipStencilRegion(java.awt.Rectangle)</code></a> for information about
+<div class="block">Sets an explicit clip stencil region for this component's marker
+ portrait. See <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setPortraitClipStencilRegion-java.awt.Rectangle-"><code>setPortraitClipStencilRegion(java.awt.Rectangle)</code></a> for information about
  clip stencil regions.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>region</code> - the region of the template covered by the "true" clipping region
-   portrait adjustment panel to clip the portrait</dd>
+<dd><code>region</code> - the region of the template covered by the "true" clipping
+ region portrait adjustment panel to clip the portrait</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if custom portrait handling is used</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -2083,15 +2131,18 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>setMarkerScaleUsesMinimum</h4>
 <pre>public final&nbsp;void&nbsp;setMarkerScaleUsesMinimum(boolean&nbsp;useMinimum)</pre>
-<div class="block">Sets how the portrait's initial scale is determined for the marker portrait.
+<div class="block">Sets how the portrait's initial scale is determined for the marker
+ portrait.
 
- <p><b>This is a <a link='#locked'>restricted property</a>.</b></div>
+ <p>
+ <b>This is a <a href='#locked'>restricted property</a>.</b></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>useMinimum</code> - <code>true</code> to set the minimum portrait scale method
-     for new portrait images</dd>
+<dd><code>useMinimum</code> - <code>true</code> to set the minimum portrait scale
+ method for new portrait images</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if the face style is not <code>CARD_AND_MARKER</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if the face style is not
+ <code>CARD_AND_MARKER</code></dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#getMarkerScaleUsesMinimum--"><code>getMarkerScaleUsesMinimum()</code></a></dd>
 </dl>
@@ -2105,10 +2156,11 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <h4>setMarkerStyle</h4>
 <pre>public&nbsp;void&nbsp;setMarkerStyle(<a href="../../../../../ca/cgjennings/apps/arkham/sheet/MarkerStyle.html" title="enum in ca.cgjennings.apps.arkham.sheet">MarkerStyle</a>&nbsp;markerStyle)</pre>
 <div class="block">Sets the marker style for the marker sheet of a
- <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.FaceStyle.html#CARD_AND_MARKER"><code>DIY.FaceStyle.CARD_AND_MARKER</code></a> component.
- This style determines how a back face for the marker is generated.
+ <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.FaceStyle.html#CARD_AND_MARKER"><code>DIY.FaceStyle.CARD_AND_MARKER</code></a> component. This style determines how a
+ back face for the marker is generated.
 
- <p><b>This is a <a link='#locked'>restricted property</a>.</b></div>
+ <p>
+ <b>This is a <a href='#locked'>restricted property</a>.</b></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>markerStyle</code> - </dd>
@@ -2130,7 +2182,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
  family name fields).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>nameField</code> - the text field used to edit the component's name, or <code>null</code></dd>
+<dd><code>nameField</code> - the text field used to edit the component's name, or
+ <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -2141,17 +2194,18 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>setPortraitBackgroundFilled</h4>
 <pre>public final&nbsp;void&nbsp;setPortraitBackgroundFilled(boolean&nbsp;fill)</pre>
-<div class="block">If set, the portrait clip region will be filled in with solid white before
- painting the portrait. This is usually turned off when the user is expected to use
- portraits that have transparency because the portrait is painted over a
- background illustration.
+<div class="block">If set, the portrait clip region will be filled in with solid white
+ before painting the portrait. This is usually turned off when the user is
+ expected to use portraits that have transparency because the portrait is
+ painted over a background illustration.
 
- <p><b>This is a <a link='#locked'>restricted property</a>.</b></div>
+ <p>
+ <b>This is a <a href='#locked'>restricted property</a>.</b></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>fill</code> - if <code>true</code>, the clip region will be filled before
-     painting when <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYSheet.html#paintPortrait-java.awt.Graphics2D-"><code>DIYSheet.paintPortrait(java.awt.Graphics2D)</code></a>
-     is called</dd>
+ painting when <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYSheet.html#paintPortrait-java.awt.Graphics2D-"><code>DIYSheet.paintPortrait(java.awt.Graphics2D)</code></a> is
+ called</dd>
 </dl>
 </li>
 </ul>
@@ -2162,14 +2216,15 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>setPortraitClipping</h4>
 <pre>public final&nbsp;void&nbsp;setPortraitClipping(boolean&nbsp;clipping)</pre>
-<div class="block">Sets whether the portrait is clipped. If <code>true</code> (the default), then no
- part of the portrait image that lies outside of the clip region
- will be drawn when <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYSheet.html#paintPortrait-java.awt.Graphics2D-"><code>DIYSheet.paintPortrait(java.awt.Graphics2D)</code></a>
- is used to draw the portrait. If <code>false</code>, then the portrait
- can "escape" from the clip region and draw over any surrounding content.
- When set to <code>false</code>, the minimum scaling option is often also set.
+<div class="block">Sets whether the portrait is clipped. If <code>true</code> (the default),
+ then no part of the portrait image that lies outside of the clip region
+ will be drawn when <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIYSheet.html#paintPortrait-java.awt.Graphics2D-"><code>DIYSheet.paintPortrait(java.awt.Graphics2D)</code></a> is
+ used to draw the portrait. If <code>false</code>, then the portrait can
+ "escape" from the clip region and draw over any surrounding content. When
+ set to <code>false</code>, the minimum scaling option is often also set.
 
- <p><b>This is a <a link='#locked'>restricted property</a>.</b></div>
+ <p>
+ <b>This is a <a href='#locked'>restricted property</a>.</b></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>clipping</code> - <code>true</code> if the portrait should be clipped</dd>
@@ -2186,47 +2241,49 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>setPortraitClipStencil</h4>
 <pre>public&nbsp;void&nbsp;setPortraitClipStencil(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;stencil)</pre>
-<div class="block">Sets an explicit clip stencil for this component's portrait.
- A portrait's clip stencil is used by the portrait adjustment panel
- to show which parts of the portrait will be occluded by other parts
- of the component.
- An explicit clip stencil overrides the default mechanism for creating
- a clip stencil (described below). The provided image should be the same
- size as the clip rectangle. The image's alpha channel should match
- the translucency of any graphics drawn over the portrait region.
+<div class="block">Sets an explicit clip stencil for this component's portrait. A portrait's
+ clip stencil is used by the portrait adjustment panel to show which parts
+ of the portrait will be occluded by other parts of the component. An
+ explicit clip stencil overrides the default mechanism for creating a clip
+ stencil (described below). The provided image should be the same size as
+ the clip rectangle. The image's alpha channel should match the
+ translucency of any graphics drawn over the portrait region.
  Alternatively, the stencil can be set to <code>null</code> to indicate
  that the portrait is not occluded.
 
- <p>If no clip stencil is set, a default mechanism will be used to
- create one. This mechanism assumes that the portrait is either drawn
- underneath the template image for the sheet with index 0, or else
- not occluded. The stencil will be based on the subimage of the
- template image that is covered by the clipping region. If all of the
- pixels in this subimage are fully opaque, then the portrait is assumed
- to be drawn over the template and not occluded by other graphics.
- Otherwise, it is assumed that the template is drawn over the portrait
- and the subimage's alpha channel will be used to create the stencil.
+ <p>
+ If no clip stencil is set, a default mechanism will be used to create
+ one. This mechanism assumes that the portrait is either drawn underneath
+ the template image for the sheet with index 0, or else not occluded. The
+ stencil will be based on the subimage of the template image that is
+ covered by the clipping region. If all of the pixels in this subimage are
+ fully opaque, then the portrait is assumed to be drawn over the template
+ and not occluded by other graphics. Otherwise, it is assumed that the
+ template is drawn over the portrait and the subimage's alpha channel will
+ be used to create the stencil.
 
- <p>In the interest of efficiency, the portrait panel caches the clip
- stencil rather than requesting it repeatedly. If the clip region or
- stencil image change during editing, you must call the portrait
- panel's <a href="../../../../../ca/cgjennings/apps/arkham/PortraitPanel.html#updatePanel--"><code>PortraitPanel.updatePanel()</code></a> method to cause it
- to adjust for the stencil and clip values.
+ <p>
+ In the interest of efficiency, the portrait panel caches the clip stencil
+ rather than requesting it repeatedly. If the clip region or stencil image
+ change during editing, you must call the portrait panel's
+ <a href="../../../../../ca/cgjennings/apps/arkham/PortraitPanel.html#updatePanel--"><code>PortraitPanel.updatePanel()</code></a> method to cause it to adjust for the
+ stencil and clip values.
 
- <p><b>Note:</b> Explicit clip stencils are not saved with the
- component, but must be restored when the component is read from a
- file. A simple way to handle this is to set the clip stencil in
- <code>createInterface</code>, as this is called whether the
- component is new or being read from a file.
+ <p>
+ <b>Note:</b> Explicit clip stencils are not saved with the component, but
+ must be restored when the component is read from a file. A simple way to
+ handle this is to set the clip stencil in <code>createInterface</code>,
+ as this is called whether the component is new or being read from a file.
 
- <p>If the component uses custom portrait handling, calling this
- method will throw an <code>IllegalStateException</code>.
- However, if you use <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html" title="class in ca.cgjennings.apps.arkham.component"><code>DefaultPortrait</code></a>s in your custom handling,
- you can change the clip stencil using <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#setClipStencil-java.awt.image.BufferedImage-"><code>DefaultPortrait.setClipStencil(java.awt.image.BufferedImage)</code></a>.</div>
+ <p>
+ If the component uses custom portrait handling, calling this method will
+ throw an <code>IllegalStateException</code>. However, if you use
+ <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html" title="class in ca.cgjennings.apps.arkham.component"><code>DefaultPortrait</code></a>s in your custom handling, you can change the clip
+ stencil using <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#setClipStencil-java.awt.image.BufferedImage-"><code>DefaultPortrait.setClipStencil(java.awt.image.BufferedImage)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>stencil</code> - an image whose alpha channel will be used by the
-   portrait adjustment panel to clip the portrait</dd>
+<dd><code>stencil</code> - an image whose alpha channel will be used by the portrait
+ adjustment panel to clip the portrait</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if custom portrait handling is used</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -2244,29 +2301,30 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>setPortraitClipStencilRegion</h4>
 <pre>public&nbsp;void&nbsp;setPortraitClipStencilRegion(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Rectangle.html?is-external=true" title="class or interface in java.awt">Rectangle</a>&nbsp;region)</pre>
-<div class="block">Sets an explicit clip stencil region for this component's portrait.
- The clip stencil region is the area that the editor's portrait panel
- considers to be the ideal area covered by the portrait. Normally,
- this is the same as the portrait clip region. If a design uses
- transparent portraits drawn over a background, however, one might
- wish to set the clip stencil smaller than the true clipping region
- so that the default portrait scale still lets some of the background
- show through. In this case, you can set the this value to the true
- clipping region so that the portrait panel's portrait area has the
- correct shape.
+<div class="block">Sets an explicit clip stencil region for this component's portrait. The
+ clip stencil region is the area that the editor's portrait panel
+ considers to be the ideal area covered by the portrait. Normally, this is
+ the same as the portrait clip region. If a design uses transparent
+ portraits drawn over a background, however, one might wish to set the
+ clip stencil smaller than the true clipping region so that the default
+ portrait scale still lets some of the background show through. In this
+ case, you can set the this value to the true clipping region so that the
+ portrait panel's portrait area has the correct shape.
 
- <p><b>Note:</b> Explicit clip stencil regions are not saved with the
- component, but must be restored when the component is read from a
- file. A simple way to handle this is to set the region in
- <code>createInterface</code>, as this is called whether the
- component is new or being read from a file.
+ <p>
+ <b>Note:</b> Explicit clip stencil regions are not saved with the
+ component, but must be restored when the component is read from a file. A
+ simple way to handle this is to set the region in
+ <code>createInterface</code>, as this is called whether the component is
+ new or being read from a file.
 
- <p>If the component uses custom portrait handling, calling this
- method will throw an <code>IllegalStateException</code>.</div>
+ <p>
+ If the component uses custom portrait handling, calling this method will
+ throw an <code>IllegalStateException</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>region</code> - the region of the template covered by the "true" clipping region
-   portrait adjustment panel to clip the portrait</dd>
+<dd><code>region</code> - the region of the template covered by the "true" clipping
+ region portrait adjustment panel to clip the portrait</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if custom portrait handling is used</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -2283,8 +2341,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>setPortraitKey</h4>
 <pre>public&nbsp;void&nbsp;setPortraitKey(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;portraitKey)</pre>
-<div class="block">Sets the base portrait key for this component. The base portrait key
- is used to compose a group of setting keys that control the built-in
+<div class="block">Sets the base portrait key for this component. The base portrait key is
+ used to compose a group of setting keys that control the built-in
  portrait manager. The key will be <code>null</code> if custom portrait
  handling is enabled, and trying to set the key to non-<code>null</code>
  value while custom portrait handling is enabled will result in an
@@ -2295,32 +2353,34 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
  referred to when setting up the portrait system:
  <dl>
  <dt><i>xxx</i>-portrait-template
-     <dd>the resource file that contains the default portrait image
+ <dd>the resource file that contains the default portrait image
  <dt><i>xxx</i>-portrait-clip-region
-     <dd>this is the region where the portrait will be drawn on the card
+ <dd>this is the region where the portrait will be drawn on the card
  <dt><i>xxx</i>-portrait-scale
-     <dd>if defined, sets the scale for the default portrait; otherwise
-         the scale is determined automatically to fit the portrait in
-         the clip region (a scale of 1 = 100%)
+ <dd>if defined, sets the scale for the default portrait; otherwise the
+ scale is determined automatically to fit the portrait in the clip region
+ (a scale of 1 = 100%)
  <dt><i>xxx</i>-portrait-panx
-     <dd>if defined, the horizontal pan of the default portrait (default is 0)
+ <dd>if defined, the horizontal pan of the default portrait (default is 0)
  <dt><i>xxx</i>-portrait-pany
-     <dd>if defined, the vertical pan of the default portrait (default is 0)
+ <dd>if defined, the vertical pan of the default portrait (default is 0)
  </dl>
 
- <p>If the face style is <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.FaceStyle.html#CARD_AND_MARKER"><code>DIY.FaceStyle.CARD_AND_MARKER</code></a>, then an
+ <p>
+ If the face style is <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.FaceStyle.html#CARD_AND_MARKER"><code>DIY.FaceStyle.CARD_AND_MARKER</code></a>, then an
  additional group of setting keys is used to determine the clip region,
- and the scale and position of the default portrait on the marker
- (the default portrait image will be the same).
+ and the scale and position of the default portrait on the marker (the
+ default portrait image will be the same).
 
- <p><b>This is a <a link='#locked'>restricted property</a>.</b></div>
+ <p>
+ <b>This is a <a href='#locked'>restricted property</a>.</b></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>portraitKey</code> - the base portrait key, or <code>null</code> to disable
-    portraits</dd>
+ portraits</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang">IllegalStateException</a></code> - if the key is not <code>null</code> and
-    custom portrait handling is enabled</dd>
+ custom portrait handling is enabled</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setCustomPortraitHandling-boolean-"><code>setCustomPortraitHandling(boolean)</code></a>, 
 <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#getPortrait-int-"><code>getPortrait(int)</code></a>, 
@@ -2389,18 +2449,19 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>setPortraitScaleUsesMinimum</h4>
 <pre>public final&nbsp;void&nbsp;setPortraitScaleUsesMinimum(boolean&nbsp;useMinimum)</pre>
-<div class="block">Sets how the portrait's initial scale is determined. If <code>false</code>,
- the default, the initial scale is the smallest scale that completely
- covers the portrait's clip region. If <code>true</code>, then the
- initial scale will be the smallest scale that causes either the
+<div class="block">Sets how the portrait's initial scale is determined. If
+ <code>false</code>, the default, the initial scale is the smallest scale
+ that completely covers the portrait's clip region. If <code>true</code>,
+ then the initial scale will be the smallest scale that causes either the
  top and bottom edge of the image or the left and right edge of the image
  to touch the corresponding edges of the clipping region.
 
- <p><b>This is a <a link='#locked'>restricted property</a>.</b></div>
+ <p>
+ <b>This is a <a href='#locked'>restricted property</a>.</b></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>useMinimum</code> - <code>true</code> to set the minimum portrait scale method
-     for new portrait images</dd>
+<dd><code>useMinimum</code> - <code>true</code> to set the minimum portrait scale
+ method for new portrait images</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#getPortraitScaleUsesMinimum--"><code>getPortraitScaleUsesMinimum()</code></a></dd>
 </dl>
@@ -2432,29 +2493,34 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <h4>setSheetTitle</h4>
 <pre>public&nbsp;void&nbsp;setSheetTitle(int&nbsp;index,
                           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;title)</pre>
-<div class="block">Sets a custom title for the sheet with the specified index.
- Sheet titles are used to describe the purpose of each sheet in the
- user interface. Typical sheet titles include "Front Face", "Back Face",
- and "Marker" (localized for the interface language). If you do not set
- any custom titles, then the titles for this component's sheets will
- be generated automatically based on the <code>FaceStyle</code>.
+<div class="block">Sets a custom title for the sheet with the specified index. Sheet titles
+ are used to describe the purpose of each sheet in the user interface.
+ Typical sheet titles include "Front Face", "Back Face", and "Marker"
+ (localized for the interface language). If you do not set any custom
+ titles, then the titles for this component's sheets will be generated
+ automatically based on the <code>FaceStyle</code>.
 
- <p>If the title that you set begins with an '@' character, then
- the sheet's true title will be <a href="../../../../../resources/Language.html#string-java.lang.String-">looked up</a>
- using the active user interface language
- <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#getSheetTitles--">whenever the titles are requested</a>.
- This allows you to set a custom sheet title once (during <code>onCreate</code>)
- and yet get a correctly localized title when the resulting component is
- saved and later reopened using a different language setting.
+ <p>
+ If the title that you set begins with an '@' character, then the sheet's
+ true title will be
+ <a href="../../../../../resources/Language.html#string-java.lang.String-">looked up</a> using the active
+ user interface language
+ <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#getSheetTitles--">whenever the titles are requested</a>. This
+ allows you to set a custom sheet title once (during
+ <code>onCreate</code>) and yet get a correctly localized title when the
+ resulting component is saved and later reopened using a different
+ language setting.
 
- <p><b>This is a <a link='#locked'>restricted property</a>.</b></div>
+ <p>
+ <b>This is a <a href='#locked'>restricted property</a>.</b></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>index</code> - the index of the sheet whose title should be modified</dd>
 <dd><code>title</code> - the new title to set</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the title is <code>null</code></dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the index is not valid for the <code>FaceStyle</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the index is not valid for the
+ <code>FaceStyle</code></dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#getSheetTitles--"><code>getSheetTitles()</code></a></dd>
 </dl>
@@ -2469,38 +2535,42 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <pre>public&nbsp;void&nbsp;setTemplateKey(int&nbsp;index,
                            <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;templateKey)</pre>
 <div class="block">Sets the template key for the face with the given index. The template key
- is the base name for a collection of setting keys that define the properties
- of the template for that face, including its size and background image.
- The following setting keys are derived from the base key name:
+ is the base name for a collection of setting keys that define the
+ properties of the template for that face, including its size and
+ background image. The following setting keys are derived from the base
+ key name:
 
  <dl>
  <dt><i>templateKey</i>-template
-   <dd>the resource file that contains the image
+ <dd>the resource file that contains the image
  <dt><i>templateKey</i>-ppi
-   <dd>if defined, the resolution of the template image in pixels per inch
-       (2.54cm) (default is <tt>150</tt>); the suffix -dpi can also be used
+ <dd>if defined, the resolution of the template image in pixels per inch
+ (2.54cm) (default is <tt>150</tt>); the suffix -dpi can also be used
  <dt><i>templateKey</i>-expsym-region
-   <dd>if defined, the region where the expansion symbol is drawn
-       (default is no expansion symbol)
+ <dd>if defined, the region where the expansion symbol is drawn (default
+ is no expansion symbol)
  <dt><i>templateKey</i>-expsym-invert
-   <dd>if defined, the default index of the variant style to use for the
-       expansion symbol (default is 0)
+ <dd>if defined, the default index of the variant style to use for the
+ expansion symbol (default is 0)
  <dt><i>templateKey</i>-upsample
-   <dd>the upsample factor for previews (default is <tt>1.0</tt>); this is
-       a multiplier for the card resolution to be used when previewing the
-       component; it is sometimes useful for small templates that use small
-       text (6 points or so)
+ <dd>the upsample factor for previews (default is <tt>1.0</tt>); this is a
+ multiplier for the card resolution to be used when previewing the
+ component; it is sometimes useful for small templates that use small text
+ (6 points or so)
  </dl>
 
- <p><b>This is a <a link='#locked'>restricted property</a>.</b></div>
+ <p>
+ <b>This is a <a href='#locked'>restricted property</a>.</b></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>index</code> - the index of the face to set the template for (0 for the first
-   front face, 1 for the first back face, 2 for the second front face, and so on)</dd>
+<dd><code>index</code> - the index of the face to set the template for (0 for the
+ first front face, 1 for the first back face, 2 for the second front face,
+ and so on)</dd>
 <dd><code>templateKey</code> - the base template key name for the face</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the key is <code>null</code></dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang">IndexOutOfBoundsException</a></code> - if the index is not valid for the face style</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang">IndexOutOfBoundsException</a></code> - if the index is not valid for the face
+ style</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#getTemplateKey-int-"><code>getTemplateKey(int)</code></a>, 
 <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#setFaceStyle-ca.cgjennings.apps.arkham.diy.DIY.FaceStyle-"><code>setFaceStyle(ca.cgjennings.apps.arkham.diy.DIY.FaceStyle)</code></a></dd>
@@ -2514,15 +2584,15 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li class="blockList">
 <h4>setTransparentFaces</h4>
 <pre>public final&nbsp;void&nbsp;setTransparentFaces(boolean&nbsp;transparent)</pre>
-<div class="block">This flag must be set if the card faces require support for
- translucent pixels; for example, if the faces have a
- nonrectangular shape.
+<div class="block">This flag must be set if the card faces require support for translucent
+ pixels; for example, if the faces have a nonrectangular shape.
 
- <p><b>This is a <a link='#locked'>restricted property</a>.</b></div>
+ <p>
+ <b>This is a <a href='#locked'>restricted property</a>.</b></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>transparent</code> - <code>true</code> if the component's sheets require
-     an alpha channel</dd>
+<dd><code>transparent</code> - <code>true</code> if the component's sheets require an
+ alpha channel</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html#getTransparentFaces--"><code>getTransparentFaces()</code></a></dd>
 </dl>
@@ -2536,15 +2606,16 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <h4>setVariableSizedFaces</h4>
 <pre>public final&nbsp;void&nbsp;setVariableSizedFaces(boolean&nbsp;variable)</pre>
 <div class="block">Sets whether faces can change in size. If <code>true</code>, then
- transparent faces will also automatically be enabled. When this option
- is enabled, sheets have their edges trimmed of transparent pixels
- before being returned. The easiest way to implement variably-sized faces
- is to use a template image that matches the largest possible size
- that is desired; if no maximum size is known ahead of time, you must
- replace the template image with an appropriately sized template
- at the start of each rendering pass.
+ transparent faces will also automatically be enabled. When this option is
+ enabled, sheets have their edges trimmed of transparent pixels before
+ being returned. The easiest way to implement variably-sized faces is to
+ use a template image that matches the largest possible size that is
+ desired; if no maximum size is known ahead of time, you must replace the
+ template image with an appropriately sized template at the start of each
+ rendering pass.
 
- <p><b>This is a <a link='#locked'>restricted property</a>.</b></div>
+ <p>
+ <b>This is a <a href='#locked'>restricted property</a>.</b></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>variable</code> - if <code>true</code>, faces may vary in size</dd>
@@ -2562,16 +2633,17 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <pre>public&nbsp;void&nbsp;setVersion(int&nbsp;version)</pre>
 <div class="block">Sets the version number of this component. The version number should be
  when the component is created. When a new, incompatible version of the
- script is released, the next higher version number can be set. Then,
- in the component's <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html#onRead-ca.cgjennings.apps.arkham.diy.DIY-java.io.ObjectInputStream-"><code>Handler.onRead(ca.cgjennings.apps.arkham.diy.DIY, java.io.ObjectInputStream)</code></a> function, check for
- older versions and upgrade the component as necessary (for example,
- assign default values to any new settings used by the component).
+ script is released, the next higher version number can be set. Then, in
+ the component's <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html#onRead-ca.cgjennings.apps.arkham.diy.DIY-java.io.ObjectInputStream-"><code>Handler.onRead(ca.cgjennings.apps.arkham.diy.DIY, java.io.ObjectInputStream)</code></a> function, check for older versions
+ and upgrade the component as necessary (for example, assign default
+ values to any new settings used by the component).
 
- <p><b>Note:</b> The version numbers are integers; although you can
- assign a value like 1.1 from a script file, all decimal digits will
- be dropped.
+ <p>
+ <b>Note:</b> The version numbers are integers; although you can assign a
+ value like 1.1 from a script file, all decimal digits will be dropped.
 
- <p><b>This is a <a link='#locked'>restricted property</a>.</b></div>
+ <p>
+ <b>This is a <a href='#locked'>restricted property</a>.</b></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>version</code> - the version number you have assigned to this component</dd>
@@ -2617,6 +2689,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/diy/Handler.html" t
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

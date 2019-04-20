@@ -17,8 +17,8 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":42};
+var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"],32:["t6","Deprecated Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -130,8 +132,8 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">JHelpButton</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.html?is-external=true" title="class or interface in javax.swing">JLabel</a></pre>
-<div class="block">A label that displays a help icon and can open a help page when clicked.
- For a help page in the Wiki, use <a href="../../../ca/cgjennings/ui/JHelpButton.html#setWikiPage-java.lang.String-"><code>setWikiPage(java.lang.String)</code></a> to set the location.
+<div class="block">A label that displays a help icon and can open a help page when clicked. For
+ a help page in the SE3 docs, use <a href="../../../ca/cgjennings/ui/JHelpButton.html#setWikiPage-java.lang.String-"><code>setWikiPage(java.lang.String)</code></a> to set the location.
  Otherwise, use <a href="../../../ca/cgjennings/ui/JHelpButton.html#setHelpPage-java.lang.String-"><code>setHelpPage(java.lang.String)</code></a> and provide the full URL.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
@@ -199,14 +201,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.ht
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;javax.swing.<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing">JComponent</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#accessibleContext" title="class or interface in javax.swing">accessibleContext</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#listenerList" title="class or interface in javax.swing">listenerList</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#TOOL_TIP_TEXT_KEY" title="class or interface in javax.swing">TOOL_TIP_TEXT_KEY</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#ui" title="class or interface in javax.swing">ui</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#UNDEFINED_CONDITION" title="class or interface in javax.swing">UNDEFINED_CONDITION</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#WHEN_ANCESTOR_OF_FOCUSED_COMPONENT" title="class or interface in javax.swing">WHEN_ANCESTOR_OF_FOCUSED_COMPONENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#WHEN_FOCUSED" title="class or interface in javax.swing">WHEN_FOCUSED</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#WHEN_IN_FOCUSED_WINDOW" title="class or interface in javax.swing">WHEN_IN_FOCUSED_WINDOW</a></code></li>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#listenerList" title="class or interface in javax.swing">listenerList</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#TOOL_TIP_TEXT_KEY" title="class or interface in javax.swing">TOOL_TIP_TEXT_KEY</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#ui" title="class or interface in javax.swing">ui</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#UNDEFINED_CONDITION" title="class or interface in javax.swing">UNDEFINED_CONDITION</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#WHEN_ANCESTOR_OF_FOCUSED_COMPONENT" title="class or interface in javax.swing">WHEN_ANCESTOR_OF_FOCUSED_COMPONENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#WHEN_FOCUSED" title="class or interface in javax.swing">WHEN_FOCUSED</a>, <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true#WHEN_IN_FOCUSED_WINDOW" title="class or interface in javax.swing">WHEN_IN_FOCUSED_WINDOW</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="fields.inherited.from.class.java.awt.Component">
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;java.awt.<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true" title="class or interface in java.awt">Component</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#BOTTOM_ALIGNMENT" title="class or interface in java.awt">BOTTOM_ALIGNMENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#CENTER_ALIGNMENT" title="class or interface in java.awt">CENTER_ALIGNMENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#LEFT_ALIGNMENT" title="class or interface in java.awt">LEFT_ALIGNMENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#RIGHT_ALIGNMENT" title="class or interface in java.awt">RIGHT_ALIGNMENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#TOP_ALIGNMENT" title="class or interface in java.awt">TOP_ALIGNMENT</a></code></li>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#accessibleContext" title="class or interface in java.awt">accessibleContext</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#BOTTOM_ALIGNMENT" title="class or interface in java.awt">BOTTOM_ALIGNMENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#CENTER_ALIGNMENT" title="class or interface in java.awt">CENTER_ALIGNMENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#LEFT_ALIGNMENT" title="class or interface in java.awt">LEFT_ALIGNMENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#RIGHT_ALIGNMENT" title="class or interface in java.awt">RIGHT_ALIGNMENT</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true#TOP_ALIGNMENT" title="class or interface in java.awt">TOP_ALIGNMENT</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="fields.inherited.from.class.javax.swing.SwingConstants">
@@ -248,7 +250,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.ht
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t6" class="tableTab"><span><a href="javascript:show(32);">Deprecated Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Method and Description</th>
@@ -273,7 +275,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.ht
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/ui/JHelpButton.html#setHelpPage-java.lang.String-">setHelpPage</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;helpPage)</code>
-<div class="block">Sets the URL that this button links to.</div>
+<div class="block">Sets the page that this button links to.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -285,7 +287,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.ht
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/ui/JHelpButton.html#setWikiPage-java.lang.String-">setWikiPage</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pageTitle)</code>
-<div class="block">Points this help button to a page on the Strange Eons Wiki.</div>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </td>
 </tr>
 </table>
@@ -395,8 +397,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.ht
 <li class="blockList">
 <h4>openHelpPage</h4>
 <pre>public&nbsp;void&nbsp;openHelpPage()</pre>
-<div class="block">Open the help page that has been set for this component.
- Subclasses may override this to implement new help mediums.</div>
+<div class="block">Open the help page that has been set for this component. Subclasses may
+ override this to implement new help mediums.</div>
 </li>
 </ul>
 <a name="setHelpPage-java.lang.String-">
@@ -406,10 +408,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.ht
 <li class="blockList">
 <h4>setHelpPage</h4>
 <pre>public&nbsp;void&nbsp;setHelpPage(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;helpPage)</pre>
-<div class="block">Sets the URL that this button links to.</div>
+<div class="block">Sets the page that this button links to. The value can either be a
+ complete http[s] URL or the base name of a Strange Eons doc page.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>helpPage</code> - </dd>
+<dd><code>helpPage</code> - a non-null, non-empty help page</dd>
 </dl>
 </li>
 </ul>
@@ -443,14 +446,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.ht
 <ul class="blockListLast">
 <li class="blockList">
 <h4>setWikiPage</h4>
-<pre>public&nbsp;void&nbsp;setWikiPage(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pageTitle)</pre>
-<div class="block">Points this help button to a page on the Strange Eons Wiki.
- The <code>pageTitle</code> is converted into a URL for a
- Wiki page with that title and passed to <a href="../../../ca/cgjennings/ui/JHelpButton.html#setHelpPage-java.lang.String-"><code>setHelpPage(java.lang.String)</code></a>.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>pageTitle</code> - the title of the Wiki page</dd>
-</dl>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+public&nbsp;void&nbsp;setWikiPage(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pageTitle)</pre>
+<div class="block"><span class="deprecatedLabel">Deprecated.</span>&nbsp;</div>
 </li>
 </ul>
 </li>
@@ -473,6 +471,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.ht
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

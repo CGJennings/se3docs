@@ -40,11 +40,13 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../ca/cgjennings/imageio/PSDImageReader.html" title="class in ca.cgjennings.imageio"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../ca/cgjennings/imageio/PSDImageReader.PSDFormatException.html" title="class in ca.cgjennings.imageio"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../ca/cgjennings/imageio/WritableImageFormat.html" title="interface in ca.cgjennings.imageio"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -107,12 +109,12 @@ var activeTableTab = "activeTableTab";
 <pre>public class <span class="typeNameLabel">SimpleImageWriter</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">A simple image writer writes images to output streams and files. It provides
- a simplified mechanism for configuring basic format, compression, and metadata
- options compared to the <code>imageio</code> library.
+ a simplified mechanism for configuring basic format, compression, and
+ metadata options compared to the <code>imageio</code> library.
  <p>
  <b>Note:</b><br> it is important to <code>dispose()</code> of instances of this
- class when finished with them, as many of the underlying image encoders consume
- significant native resources.</div>
+ class when finished with them, as many of the underlying image encoders
+ consume significant native resources.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>1.0</dd>
@@ -186,14 +188,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html#SimpleImageWriter-java.lang.String-">SimpleImageWriter</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fileFormat)</code>
-<div class="block">Creates an image writer for the requested format using the default locale.</div>
+<div class="block">Creates an image writer for the requested format using the default
+ locale.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html#SimpleImageWriter-java.lang.String-java.util.Locale-">SimpleImageWriter</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fileFormat,
                  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html?is-external=true" title="class or interface in java.util">Locale</a>&nbsp;locale)</code>
-<div class="block">Create a <code>SimpleImageWriter</code> that will produce images in the
- format specified by <code>fileFormat</code>.</div>
+<div class="block">Create a <code>SimpleImageWriter</code> that will produce images in the format
+ specified by <code>fileFormat</code>.</div>
 </td>
 </tr>
 </table>
@@ -228,7 +231,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html#getComment--">getComment</a></span>()</code>
-<div class="block">Return the comment to be embedded in files written by this writer, if possible.</div>
+<div class="block">Return the comment to be embedded in files written by this writer, if
+ possible.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -254,7 +258,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>float[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html#getCompressionValues--">getCompressionValues</a></span>()</code>
 <div class="block">Return an array of quality values indicating the ranges of compression
- qualities covered by the strings returned by <a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html#getCompressionValues--"><code>getCompressionValues()</code></a>.</div>
+ qualities covered by the strings returned by
+ <a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html#getCompressionValues--"><code>getCompressionValues()</code></a>.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -328,7 +333,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i18" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html#registerImageFormat-ca.cgjennings.imageio.WritableImageFormat-">registerImageFormat</a></span>(<a href="../../../ca/cgjennings/imageio/WritableImageFormat.html" title="interface in ca.cgjennings.imageio">WritableImageFormat</a>&nbsp;wif)</code>
-<div class="block">Registers a new image format supported for use with <a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html" title="class in ca.cgjennings.imageio"><code>SimpleImageWriter</code></a>.</div>
+<div class="block">Registers a new image format supported for use with
+ <a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html" title="class in ca.cgjennings.imageio"><code>SimpleImageWriter</code></a>.</div>
 </td>
 </tr>
 <tr id="i19" class="rowColor">
@@ -395,8 +401,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i28" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html#setPixelsPerMillimetre-float-">setPixelsPerMillimetre</a></span>(float&nbsp;ppmm)</code>
-<div class="block">Set image resolution that will be written with the file's
- metadata, if possible.</div>
+<div class="block">Set image resolution that will be written with the file's metadata, if
+ possible.</div>
 </td>
 </tr>
 <tr id="i29" class="rowColor">
@@ -553,12 +559,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>SimpleImageWriter</h4>
 <pre>public&nbsp;SimpleImageWriter(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fileFormat)</pre>
-<div class="block">Creates an image writer for the requested format using the default locale.</div>
+<div class="block">Creates an image writer for the requested format using the default
+ locale.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>fileFormat</code> - the file extension or name of a supported file format</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</a></code> - if <code>fileFormat</code> is not a known type.</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</a></code> - if <code>fileFormat</code> is not a
+ known type.</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html#SimpleImageWriter-java.lang.String-java.util.Locale-"><code>SimpleImageWriter(java.lang.String, java.util.Locale)</code></a></dd>
 </dl>
@@ -572,16 +580,17 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>SimpleImageWriter</h4>
 <pre>public&nbsp;SimpleImageWriter(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fileFormat,
                          <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html?is-external=true" title="class or interface in java.util">Locale</a>&nbsp;locale)</pre>
-<div class="block">Create a <code>SimpleImageWriter</code> that will produce images in the
- format specified by <code>fileFormat</code>. The <code>fileFormat</code> parameter
- must either be the name or file extension of a format registered with
- the <code>imageio</code> library.</div>
+<div class="block">Create a <code>SimpleImageWriter</code> that will produce images in the format
+ specified by <code>fileFormat</code>. The <code>fileFormat</code> parameter must
+ either be the name or file extension of a format registered with the
+ <code>imageio</code> library.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>fileFormat</code> - name of file format to be produced by this writer</dd>
 <dd><code>locale</code> - the preferred locale for labels and messages</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</a></code> - if <code>fileFormat</code> is not a known type.</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</a></code> - if <code>fileFormat</code> is not a
+ known type.</dd>
 </dl>
 </li>
 </ul>
@@ -601,9 +610,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>dispose</h4>
 <pre>public&nbsp;void&nbsp;dispose()</pre>
 <div class="block">Causes resources used by this writer to be released, including native
- resources. The result of calling any method of this writer after
- calling <code>dispose()</code> is undefined (although the typical result would be
- a <code>NullPointerException</code>).</div>
+ resources. The result of calling any method of this writer after calling
+ <code>dispose()</code> is undefined (although the typical result would be a
+ <code>NullPointerException</code>).</div>
 </li>
 </ul>
 <a name="finalize--">
@@ -621,7 +630,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  system resources or to perform other cleanup.
  <p>
  The general contract of <code>finalize</code> is that it is invoked
- if and when the Java<font size="-2"><sup>TM</sup></font> virtual
+ if and when the Java&trade; virtual
  machine has determined that there is no longer any
  means by which this object can be accessed by any thread that has
  not yet died, except as a result of an action taken by the
@@ -663,6 +672,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a></code> - the <code>Exception</code> raised by this method</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ref/WeakReference.html?is-external=true" title="class or interface in java.lang.ref"><code>WeakReference</code></a>, 
+<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ref/PhantomReference.html?is-external=true" title="class or interface in java.lang.ref"><code>PhantomReference</code></a></dd>
 </dl>
 </li>
 </ul>
@@ -673,8 +685,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getComment</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getComment()</pre>
-<div class="block">Return the comment to be embedded in files written by this writer, if possible.
- If no comment has been set, returns <code>null</code>.</div>
+<div class="block">Return the comment to be embedded in files written by this writer, if
+ possible. If no comment has been set, returns <code>null</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the currently set comment, or <code>null</code> if there is no comment</dd>
@@ -704,10 +716,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;getCompressionQualityDescriptions()</pre>
 <div class="block">Return an array of locale-dependent descriptions of the available
  compression quality settings. This method may return <code>null</code>,
- and must return <code>null</code> if <a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html#getCompressionValues--"><code>getCompressionValues()</code></a> does.</div>
+ and must return <code>null</code> if <a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html#getCompressionValues--"><code>getCompressionValues()</code></a>
+ does.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>an array of description <code>String</code>s, or  null if there are descriptions available</dd>
+<dd>an array of description <code>String</code>s, or  null if there
+ are descriptions available</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html#getCompressionValues--"><code>getCompressionValues()</code></a></dd>
 </dl>
@@ -736,15 +750,17 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getCompressionValues</h4>
 <pre>public&nbsp;float[]&nbsp;getCompressionValues()</pre>
 <div class="block">Return an array of quality values indicating the ranges of compression
- qualities covered by the strings returned by <a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html#getCompressionValues--"><code>getCompressionValues()</code></a>.
- The quality setting <code>getCompressionQualities()[i]</code> covers all
- compression settings from <code>getCompressionValues()[i]</code>, inclusive, to
+ qualities covered by the strings returned by
+ <a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html#getCompressionValues--"><code>getCompressionValues()</code></a>. The quality setting
+ <code>getCompressionQualities()[i]</code> covers all compression settings from
+ <code>getCompressionValues()[i]</code>, inclusive, to
  <code>getCompressionValues()[i+1]</code>, exclusive. The only exception is for
- <code>i == getCompressionQualities().length - 1</code>, which includes the final
- value in the range.</div>
+ <code>i == getCompressionQualities().length - 1</code>, which includes the
+ final value in the range.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>an array of description <code>String</code>s, or  null if there are descriptions available</dd>
+<dd>an array of description <code>String</code>s, or  null if there
+ are descriptions available</dd>
 </dl>
 </li>
 </ul>
@@ -797,10 +813,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getPixelsPerMillimetre</h4>
 <pre>public&nbsp;float&nbsp;getPixelsPerMillimetre()</pre>
-<div class="block">Return the resolution to be written with images, in pixels per mm.
- As a convenience, <a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html#getPixelsPerInch--"><code>getPixelsPerInch()</code></a> is also provided.
- Images written with the writer will specify a horizontal and vertical
- resolution as close to this value as the file format allows.</div>
+<div class="block">Return the resolution to be written with images, in pixels per mm. As a
+ convenience, <a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html#getPixelsPerInch--"><code>getPixelsPerInch()</code></a> is also provided. Images written
+ with the writer will specify a horizontal and vertical resolution as
+ close to this value as the file format allows.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the current image resolution to use for writing, pixels per mm</dd>
@@ -859,8 +875,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isLossless</h4>
 <pre>public&nbsp;boolean&nbsp;isLossless()</pre>
-<div class="block">Return <code>true</code> if the format's compression method is lossless.
- A lossless format does not degrade in quality when written.</div>
+<div class="block">Return <code>true</code> if the format's compression method is lossless. A
+ lossless format does not degrade in quality when written.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the selected format does not lose information</dd>
@@ -920,7 +936,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>registerImageFormat</h4>
 <pre>public static&nbsp;void&nbsp;registerImageFormat(<a href="../../../ca/cgjennings/imageio/WritableImageFormat.html" title="interface in ca.cgjennings.imageio">WritableImageFormat</a>&nbsp;wif)</pre>
-<div class="block">Registers a new image format supported for use with <a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html" title="class in ca.cgjennings.imageio"><code>SimpleImageWriter</code></a>.</div>
+<div class="block">Registers a new image format supported for use with
+ <a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html" title="class in ca.cgjennings.imageio"><code>SimpleImageWriter</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>wif</code> - a descriptor for the image format</dd>
@@ -937,8 +954,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>setComment</h4>
 <pre>public&nbsp;void&nbsp;setComment(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;comment)</pre>
 <div class="block">Set the comment text that will be written along with files created by
- this writer. If <code>comment</code> is <code>null</code>, the current comment
- is cleared. The comment will be assumed to be written in the language
+ this writer. If <code>comment</code> is <code>null</code>, the current comment is
+ cleared. The comment will be assumed to be written in the language
  specified by this writer's locale.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -955,12 +972,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public&nbsp;void&nbsp;setComment(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;comment,
                        <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html?is-external=true" title="class or interface in java.util">Locale</a>&nbsp;commentLocale)</pre>
 <div class="block">Set the comment text that will be written along with files created by
- this writer. If <code>comment</code> is <code>null</code>, the current comment
- (if any) is cleared.</div>
+ this writer. If <code>comment</code> is <code>null</code>, the current comment (if
+ any) is cleared.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>comment</code> - the comment text to be included in the file's metadata.</dd>
-<dd><code>commentLocale</code> - a locale describing the language the comment is written in</dd>
+<dd><code>commentLocale</code> - a locale describing the language the comment is
+ written in</dd>
 </dl>
 </li>
 </ul>
@@ -986,15 +1004,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>setCompressionQuality</h4>
 <pre>public&nbsp;void&nbsp;setCompressionQuality(float&nbsp;quality)</pre>
-<div class="block">Control the compression quality during image writing.
- If <code>quality</code> is between 0 and 1 (inclusive), then a relative quality
- is requested, with a value of 0 emphasizing maximum compression and a
- value of 1 requesting maximum image quality. (If the format is lossless,
- then image quality is not affected.) If <code>quality</code> is less than 0,
- then a default compression level will be selected.</div>
+<div class="block">Control the compression quality during image writing. If <code>quality</code>
+ is between 0 and 1 (inclusive), then a relative quality is requested,
+ with a value of 0 emphasizing maximum compression and a value of 1
+ requesting maximum image quality. (If the format is lossless, then image
+ quality is not affected.) If <code>quality</code> is less than 0, then a
+ default compression level will be selected.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>quality</code> - the relative quality (0-1), or a negative value to request default compression</dd>
+<dd><code>quality</code> - the relative quality (0-1), or a negative value to request
+ default compression</dd>
 </dl>
 </li>
 </ul>
@@ -1006,13 +1025,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>setCompressionQuality</h4>
 <pre>public&nbsp;void&nbsp;setCompressionQuality(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;description)</pre>
 <div class="block">Set image compression according to one of the strings returned by
- <a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html#getCompressionQualityDescriptions--"><code>getCompressionQualityDescriptions()</code></a>. The compression level
- will be set to the midpoint of the the <code>description</code>'s value range.</div>
+ <a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html#getCompressionQualityDescriptions--"><code>getCompressionQualityDescriptions()</code></a>. The compression level will
+ be set to the midpoint of the the <code>description</code>'s value range.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>description</code> - the quality description string matching the desired quality level</dd>
+<dd><code>description</code> - the quality description string matching the desired
+ quality level</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>description</code> is not a valid quality description</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>description</code> is not a valid
+ quality description</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html#getCompressionQualityDescriptions--"><code>getCompressionQualityDescriptions()</code></a>, 
 <a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html#setCompressionQuality-float-"><code>setCompressionQuality(float)</code></a></dd>
@@ -1026,10 +1047,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>setCompressionType</h4>
 <pre>public&nbsp;void&nbsp;setCompressionType(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;type)</pre>
-<div class="block">Sets the compression type to use. If the type is <code>null</code>,
- a default type is selected. Otherwise, the type must be one of
- the types specified by <a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html#getCompressionTypes--"><code>getCompressionTypes()</code></a>. Changing the
- compression type may alter the quality descriptions and values.</div>
+<div class="block">Sets the compression type to use. If the type is <code>null</code>, a
+ default type is selected. Otherwise, the type must be one of the types
+ specified by <a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html#getCompressionTypes--"><code>getCompressionTypes()</code></a>. Changing the compression
+ type may alter the quality descriptions and values.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>type</code> - the name of the compression type to use</dd>
@@ -1090,14 +1111,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>setPixelsPerMillimetre</h4>
 <pre>public&nbsp;void&nbsp;setPixelsPerMillimetre(float&nbsp;ppmm)</pre>
-<div class="block">Set image resolution that will be written with the file's
- metadata, if possible. The resolution is specified in pixels
- per millimetre. As a convenience, <a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html#setPixelsPerInch-float-"><code>setPixelsPerInch(float)</code></a>
- is also provided.
+<div class="block">Set image resolution that will be written with the file's metadata, if
+ possible. The resolution is specified in pixels per millimetre. As a
+ convenience, <a href="../../../ca/cgjennings/imageio/SimpleImageWriter.html#setPixelsPerInch-float-"><code>setPixelsPerInch(float)</code></a> is also provided.
  <p>
- The default resolution is 72 pixels per inch (approximately 2.8 pixels per mm).
- Images written with the writer will specify a horizontal and vertical
- resolution as close to this value as the file format allows.</div>
+ The default resolution is 72 pixels per inch (approximately 2.8 pixels
+ per mm). Images written with the writer will specify a horizontal and
+ vertical resolution as close to this value as the file format allows.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>ppmm</code> - the intended image resolution, in pixels per mm</dd>
@@ -1114,12 +1134,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>setProgressiveScan</h4>
 <pre>public&nbsp;void&nbsp;setProgressiveScan(boolean&nbsp;useProgressiveScanIfPossible)</pre>
 <div class="block">Sets whether the writer should use progressive encoding, if possible.
- Progressive scan images can be displayed in multiple passes of
- increasing quality.</div>
+ Progressive scan images can be displayed in multiple passes of increasing
+ quality.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>useProgressiveScanIfPossible</code> - if <code>true</code>, the writer will write
-     images in progressive scans if the format supports it</dd>
+<dd><code>useProgressiveScanIfPossible</code> - if <code>true</code>, the writer will
+ write images in progressive scans if the format supports it</dd>
 </dl>
 </li>
 </ul>
@@ -1184,9 +1204,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>image</code> - an <code>Image</code> to be written</dd>
-<dd><code>output</code> - the <code>File</code> which contains the destination file to be written</dd>
+<dd><code>output</code> - the <code>File</code> which contains the destination file to be
+ written</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if I/O errors occur during the write operation</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if I/O errors occur during the write
+ operation</dd>
 </dl>
 </li>
 </ul>
@@ -1199,14 +1221,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public&nbsp;void&nbsp;write(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Image.html?is-external=true" title="class or interface in java.awt">Image</a>&nbsp;image,
                   <a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;out)
            throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Writes the image <code>im</code> to an output stream.
- The stream is left open after writing.</div>
+<div class="block">Writes the image <code>im</code> to an output stream. The stream is left open
+ after writing.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>image</code> - the <code>Image</code> to be written</dd>
 <dd><code>out</code> - the <code>OutputStream</code> to writeBufferedImage to</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if I/O errors occur during the write operation</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if I/O errors occur during the write
+ operation</dd>
 </dl>
 </li>
 </ul>
@@ -1230,11 +1253,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../ca/cgjennings/imageio/PSDImageReader.html" title="class in ca.cgjennings.imageio"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../ca/cgjennings/imageio/PSDImageReader.PSDFormatException.html" title="class in ca.cgjennings.imageio"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
 <li><a href="../../../ca/cgjennings/imageio/WritableImageFormat.html" title="interface in ca.cgjennings.imageio"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">

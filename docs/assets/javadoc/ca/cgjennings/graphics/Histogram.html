@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -235,22 +237,22 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/graphics/Histogram.html#isZeroAlphaIgnored--">isZeroAlphaIgnored</a></span>()</code>
-<div class="block">Returns <code>true</code> if pixels with an alpha of zero will not
- be included in the histogram.</div>
+<div class="block">Returns <code>true</code> if pixels with an alpha of zero will not be
+ included in the histogram.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/graphics/Histogram.html#measure-java.awt.image.BufferedImage-">measure</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;image)</code>
-<div class="block">Measures the samples in an image and incorporates them into the
- histogram statistics.</div>
+<div class="block">Measures the samples in an image and incorporates them into the histogram
+ statistics.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/graphics/Histogram.html#measure-int:A-">measure</a></span>(int[]&nbsp;image)</code>
-<div class="block">Measures the samples in an array of pixel data and incorporates them into the
- histogram statistics.</div>
+<div class="block">Measures the samples in an array of pixel data and incorporates them into
+ the histogram statistics.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
@@ -364,10 +366,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>Histogram</h4>
 <pre>public&nbsp;Histogram()</pre>
-<div class="block">Creates a new, empty histogram. The histogram will not be valid unit
- it has measured one or more image samples. The histogram will measure
- the red, green, and blue channels and ignore pixels with an alpha value
- of zero.</div>
+<div class="block">Creates a new, empty histogram. The histogram will not be valid unit it
+ has measured one or more image samples. The histogram will measure the
+ red, green, and blue channels and ignore pixels with an alpha value of
+ zero.</div>
 </li>
 </ul>
 </li>
@@ -422,8 +424,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Returns the channel mask for the histogram.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the bitwise-or of mask values for the channels included in
-     the histogram</dd>
+<dd>the bitwise-or of mask values for the channels included in the
+ histogram</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../ca/cgjennings/graphics/Histogram.html#setChannelMask-int-"><code>setChannelMask(int)</code></a></dd>
 </dl>
@@ -471,8 +473,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>level</code> - the level to return the histogram count for (0-255)</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the number of samples counted at this level over the total samples
-    counted, from 0 to 1</dd>
+<dd>the number of samples counted at this level over the total
+ samples counted, from 0 to 1</dd>
 </dl>
 </li>
 </ul>
@@ -497,8 +499,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isZeroAlphaIgnored</h4>
 <pre>public&nbsp;boolean&nbsp;isZeroAlphaIgnored()</pre>
-<div class="block">Returns <code>true</code> if pixels with an alpha of zero will not
- be included in the histogram.</div>
+<div class="block">Returns <code>true</code> if pixels with an alpha of zero will not be
+ included in the histogram.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if transparent pixels are ignored</dd>
@@ -512,9 +514,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>measure</h4>
 <pre>public&nbsp;void&nbsp;measure(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;image)</pre>
-<div class="block">Measures the samples in an image and incorporates them into the
- histogram statistics. All channels indicated by the <code>channelMask</code>
- will be averaged together to determine the histogram bucket.</div>
+<div class="block">Measures the samples in an image and incorporates them into the histogram
+ statistics. All channels indicated by the <code>channelMask</code> will
+ be averaged together to determine the histogram bucket.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>image</code> - the image to analyze</dd>
@@ -528,9 +530,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>measure</h4>
 <pre>public&nbsp;void&nbsp;measure(int[]&nbsp;image)</pre>
-<div class="block">Measures the samples in an array of pixel data and incorporates them into the
- histogram statistics. All channels indicated by the <code>channelMask</code>
- will be averaged together to determine the histogram bucket.</div>
+<div class="block">Measures the samples in an array of pixel data and incorporates them into
+ the histogram statistics. All channels indicated by the
+ <code>channelMask</code> will be averaged together to determine the
+ histogram bucket.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>image</code> - the image to analyze</dd>
@@ -555,14 +558,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>setChannelMask</h4>
 <pre>public&nbsp;void&nbsp;setChannelMask(int&nbsp;mask)</pre>
 <div class="block">Sets the channel mask for the histogram. The channel mask determines
- which channels of the image will be included in the histogram count.
- For a given pixel, the level measured by the histogram will be the mean
- of the channels included by the mask. The mask value is a bitwise-or
- of some combination of <a href="../../../ca/cgjennings/graphics/Histogram.html#RED"><code>RED</code></a>, <a href="../../../ca/cgjennings/graphics/Histogram.html#GREEN"><code>GREEN</code></a>, <a href="../../../ca/cgjennings/graphics/Histogram.html#BLUE"><code>BLUE</code></a>,
- and <a href="../../../ca/cgjennings/graphics/Histogram.html#ALPHA"><code>ALPHA</code></a>. At least one channel must be specified by the mask.</div>
+ which channels of the image will be included in the histogram count. For
+ a given pixel, the level measured by the histogram will be the mean of
+ the channels included by the mask. The mask value is a bitwise-or of some
+ combination of <a href="../../../ca/cgjennings/graphics/Histogram.html#RED"><code>RED</code></a>, <a href="../../../ca/cgjennings/graphics/Histogram.html#GREEN"><code>GREEN</code></a>, <a href="../../../ca/cgjennings/graphics/Histogram.html#BLUE"><code>BLUE</code></a>, and
+ <a href="../../../ca/cgjennings/graphics/Histogram.html#ALPHA"><code>ALPHA</code></a>. At least one channel must be specified by the mask.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>mask</code> - the bitwise-or of the channel masks for the channels to include</dd>
+<dd><code>mask</code> - the bitwise-or of the channel masks for the channels to
+ include</dd>
 </dl>
 </li>
 </ul>
@@ -601,6 +605,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

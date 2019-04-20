@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -141,16 +143,17 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
  running instance of the application, and it can be obtained by calling
  <a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#getWindow--"><code>StrangeEons.getWindow()</code></a>.
 
- <p>Note that the application window is created after the <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in ca.cgjennings.ui.theme"><code>Theme</code></a> has
- been installed but before any extension plug-ins are loaded.
- However, it will not be made visible until the entire application startup
- procedure has completed. Extensions may create windows that use this
- window as their parent, but they should not rely on those windows being
- visible or usable until the application is fully started. To create a window
- that will be visible during startup (for example, to display a more complex
- error message than <a href="../../../../ca/cgjennings/apps/arkham/dialog/ErrorDialog.html" title="class in ca.cgjennings.apps.arkham.dialog"><code>ErrorDialog</code></a> allows), use
- <a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#getSafeStartupParentWindow--"><code>StrangeEons.getSafeStartupParentWindow()</code></a>
- as the parent.</div>
+ <p>
+ Note that the application window is created after the <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in ca.cgjennings.ui.theme"><code>Theme</code></a> has been
+ installed but before any extension plug-ins are loaded. However, it will not
+ be made visible until the entire application startup procedure has completed.
+ Extensions may create windows that use this window as their parent, but they
+ should not rely on those windows being visible or usable until the
+ application is fully started. To create a window that will be visible during
+ startup (for example, to display a more complex error message than
+ <a href="../../../../ca/cgjennings/apps/arkham/dialog/ErrorDialog.html" title="class in ca.cgjennings.apps.arkham.dialog"><code>ErrorDialog</code></a> allows), use
+ <a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#getSafeStartupParentWindow--"><code>StrangeEons.getSafeStartupParentWindow()</code></a> as
+ the parent.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../serialized-form.html#ca.cgjennings.apps.arkham.StrangeEonsAppWindow">Serialized Form</a></dd>
@@ -190,8 +193,7 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.PolledMenuItem.html" title="class in ca.cgjennings.apps.arkham">StrangeEonsAppWindow.PolledMenuItem</a></span></code>
-<div class="block">A menu item that can be asked if it is currently
- usable.</div>
+<div class="block">A menu item that can be asked if it is currently usable.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -253,9 +255,9 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#NO_EDITOR_FONT">NO_EDITOR_FONT</a></span></code>
-<div class="block">By default, when an editor is added to the application window its
- text components will automatically have the user's selected editor font
- set on them.</div>
+<div class="block">By default, when an editor is added to the application window its text
+ components will automatically have the user's selected editor font set on
+ them.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -355,8 +357,8 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>abstract <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true" title="class or interface in java.awt">Component</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#addCustomComponentSeparator--">addCustomComponentSeparator</a></span>()</code>
-<div class="block">Adds a separator to the custom component bar at the top of the application
- window.</div>
+<div class="block">Adds a separator to the custom component bar at the top of the
+ application window.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -374,8 +376,7 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>abstract void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#addEditorListener-ca.cgjennings.apps.arkham.StrangeEonsEditor.EditorListener-">addEditorListener</a></span>(<a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.EditorListener.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor.EditorListener</a>&nbsp;el)</code>
-<div class="block">Adds a new <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.EditorListener.html" title="interface in ca.cgjennings.apps.arkham"><code>StrangeEonsEditor.EditorListener</code></a> that will apply to
- all editors.</div>
+<div class="block">Adds a new <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.EditorListener.html" title="interface in ca.cgjennings.apps.arkham"><code>StrangeEonsEditor.EditorListener</code></a> that will apply to all editors.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -413,21 +414,22 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Image.html?is-external=true" title="class or interface in java.awt">Image</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#getApplicationFrameIcons--">getApplicationFrameIcons</a></span>()</code>
-<div class="block">Returns a list of images suitable for use as the icons of a <code>JFrame</code>.</div>
+<div class="block">Returns a list of images suitable for use as the icons of a
+ <code>JFrame</code>.</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>abstract <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true" title="class or interface in java.awt">Component</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#getCustomComponent-int-">getCustomComponent</a></span>(int&nbsp;index)</code>
-<div class="block">Returns the custom component at position <code>index</code> in the
- custom component area.</div>
+<div class="block">Returns the custom component at position <code>index</code> in the custom
+ component area.</div>
 </td>
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code>abstract int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#getCustomComponentCount--">getCustomComponentCount</a></span>()</code>
-<div class="block">Returns the number of custom components that have been added to the
- top of the application window.</div>
+<div class="block">Returns the number of custom components that have been added to the top
+ of the application window.</div>
 </td>
 </tr>
 <tr id="i14" class="altColor">
@@ -439,15 +441,15 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <tr id="i15" class="rowColor">
 <td class="colFirst"><code>abstract <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor</a>[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#getEditorsShowingFile-java.io.File-">getEditorsShowingFile</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</code>
-<div class="block">Returns an array of all currently open editor windows that are
- editing a certain file.</div>
+<div class="block">Returns an array of all currently open editor windows that are editing a
+ certain file.</div>
 </td>
 </tr>
 <tr id="i16" class="altColor">
 <td class="colFirst"><code>abstract <a href="../../../../ca/cgjennings/apps/arkham/project/Project.html" title="class in ca.cgjennings.apps.arkham.project">Project</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#getOpenProject--">getOpenProject</a></span>()</code>
-<div class="block">Returns the current open <a href="../../../../ca/cgjennings/apps/arkham/project/Project.html" title="class in ca.cgjennings.apps.arkham.project"><code>Project</code></a>, or <code>null</code> if
- no project is open.</div>
+<div class="block">Returns the current open <a href="../../../../ca/cgjennings/apps/arkham/project/Project.html" title="class in ca.cgjennings.apps.arkham.project"><code>Project</code></a>, or <code>null</code> if no
+ project is open.</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
@@ -460,29 +462,29 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <tr id="i18" class="altColor">
 <td class="colFirst"><code>abstract void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#openFile-java.io.File-">openFile</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</code>
-<div class="block">Attempts to open a file in the application as if the user
- had used the <b>File | Open</b> menu item and selected the specified file.</div>
+<div class="block">Attempts to open a file in the application as if the user had used the
+ <b>File | Open</b> menu item and selected the specified file.</div>
 </td>
 </tr>
 <tr id="i19" class="rowColor">
 <td class="colFirst"><code>abstract void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#redrawPreviews--">redrawPreviews</a></span>()</code>
-<div class="block">Forces all editor windows that are displaying a game component to
- redraw their component preview.</div>
+<div class="block">Forces all editor windows that are displaying a game component to redraw
+ their component preview.</div>
 </td>
 </tr>
 <tr id="i20" class="altColor">
 <td class="colFirst"><code>abstract void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#removeCustomComponent-java.awt.Component-">removeCustomComponent</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true" title="class or interface in java.awt">Component</a>&nbsp;comp)</code>
-<div class="block">Removes a previously added custom component from the top of the application
- window.</div>
+<div class="block">Removes a previously added custom component from the top of the
+ application window.</div>
 </td>
 </tr>
 <tr id="i21" class="rowColor">
 <td class="colFirst"><code>abstract void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#removeCustomComponent-int-">removeCustomComponent</a></span>(int&nbsp;index)</code>
-<div class="block">Removes the custom component at position <code>index</code> in the
- custom component area.</div>
+<div class="block">Removes the custom component at position <code>index</code> in the custom
+ component area.</div>
 </td>
 </tr>
 <tr id="i22" class="altColor">
@@ -494,8 +496,8 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <tr id="i23" class="rowColor">
 <td class="colFirst"><code>abstract void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#removeEditorListener-ca.cgjennings.apps.arkham.StrangeEonsEditor.EditorListener-">removeEditorListener</a></span>(<a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.EditorListener.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor.EditorListener</a>&nbsp;el)</code>
-<div class="block">Removes an <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.EditorListener.html" title="interface in ca.cgjennings.apps.arkham"><code>StrangeEonsEditor.EditorListener</code></a> that was added to
- all editors through <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#addEditorListener-ca.cgjennings.apps.arkham.StrangeEonsEditor.EditorListener-"><code>addEditorListener(ca.cgjennings.apps.arkham.StrangeEonsEditor.EditorListener)</code></a>.</div>
+<div class="block">Removes an <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.EditorListener.html" title="interface in ca.cgjennings.apps.arkham"><code>StrangeEonsEditor.EditorListener</code></a> that was added to all editors through
+ <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#addEditorListener-ca.cgjennings.apps.arkham.StrangeEonsEditor.EditorListener-"><code>addEditorListener(ca.cgjennings.apps.arkham.StrangeEonsEditor.EditorListener)</code></a>.</div>
 </td>
 </tr>
 <tr id="i24" class="altColor">
@@ -557,22 +559,23 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <tr id="i33" class="rowColor">
 <td class="colFirst"><code>abstract void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#startTracking-ca.cgjennings.apps.arkham.TrackedWindow-">startTracking</a></span>(<a href="../../../../ca/cgjennings/apps/arkham/TrackedWindow.html" title="interface in ca.cgjennings.apps.arkham">TrackedWindow</a>&nbsp;window)</code>
-<div class="block">Asks the application to add a window to the <b>Window</b> menu,
- such as a modeless dialog, a frame window, or a palette window.</div>
+<div class="block">Asks the application to add a window to the <b>Window</b> menu, such as a
+ modeless dialog, a frame window, or a palette window.</div>
 </td>
 </tr>
 <tr id="i34" class="altColor">
 <td class="colFirst"><code>abstract void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#stopTracking-ca.cgjennings.apps.arkham.TrackedWindow-">stopTracking</a></span>(<a href="../../../../ca/cgjennings/apps/arkham/TrackedWindow.html" title="interface in ca.cgjennings.apps.arkham">TrackedWindow</a>&nbsp;window)</code>
-<div class="block">Stops tracking a previously tracked window, removing it from the application's
+<div class="block">Stops tracking a previously tracked window, removing it from the
+ application's
  <b>Window</b> menu.</div>
 </td>
 </tr>
 <tr id="i35" class="rowColor">
 <td class="colFirst"><code>abstract void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#suggestRestart-java.lang.String-">suggestRestart</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</code>
-<div class="block">Displays a message to inform the user that the application should
- be restarted for optimal performance.</div>
+<div class="block">Displays a message to inform the user that the application should be
+ restarted for optimal performance.</div>
 </td>
 </tr>
 </table>
@@ -653,10 +656,10 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <li class="blockList">
 <h4>NO_EDITOR_FONT</h4>
 <pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> NO_EDITOR_FONT</pre>
-<div class="block">By default, when an editor is added to the application window its
- text components will automatically have the user's selected editor font
- set on them. However, text fields that have this client property set
- to true will be ignored.</div>
+<div class="block">By default, when an editor is added to the application window its text
+ components will automatically have the user's selected editor font set on
+ them. However, text fields that have this client property set to true
+ will be ignored.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#ca.cgjennings.apps.arkham.StrangeEonsAppWindow.NO_EDITOR_FONT">Constant Field Values</a></dd>
@@ -725,10 +728,10 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <li class="blockList">
 <h4>addCustomComponent</h4>
 <pre>public abstract&nbsp;void&nbsp;addCustomComponent(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true" title="class or interface in java.awt">Component</a>&nbsp;comp)</pre>
-<div class="block">Adds a custom component to the top of the application window.
- This can be used to provide custom controls for a plug-in.
- Custom components are added in a horizontal strip above the
- pane where editor windows are displayed.</div>
+<div class="block">Adds a custom component to the top of the application window. This can be
+ used to provide custom controls for a plug-in. Custom components are
+ added in a horizontal strip above the pane where editor windows are
+ displayed.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>comp</code> - the component to add</dd>
@@ -747,16 +750,16 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <h4>addCustomComponent</h4>
 <pre>public abstract&nbsp;void&nbsp;addCustomComponent(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true" title="class or interface in java.awt">Component</a>&nbsp;comp,
                                         int&nbsp;index)</pre>
-<div class="block">Adds a custom component to the top of the application window.
- The component is added at a specific position with respect to the
- existing components. If <code>index</code> is -1, <code>comp</code>
- will be added to the end of the custom component bar. This is
- equivalent to <code>addCustomComponent( comp )</code>.</div>
+<div class="block">Adds a custom component to the top of the application window. The
+ component is added at a specific position with respect to the existing
+ components. If <code>index</code> is -1, <code>comp</code> will be added
+ to the end of the custom component bar. This is equivalent to
+ <code>addCustomComponent( comp )</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>comp</code> - the component to be added</dd>
-<dd><code>index</code> - the position at which to insert the component,
-              or -1 to append the component to the end</dd>
+<dd><code>index</code> - the position at which to insert the component, or -1 to
+ append the component to the end</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>comp</code> is <code>null</code></dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
@@ -771,9 +774,9 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <li class="blockList">
 <h4>addCustomComponentSeparator</h4>
 <pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true" title="class or interface in java.awt">Component</a>&nbsp;addCustomComponentSeparator()</pre>
-<div class="block">Adds a separator to the custom component bar at the top of the application
- window. A reference to the added separator is returned. This may be used
- to remove the separator later.</div>
+<div class="block">Adds a separator to the custom component bar at the top of the
+ application window. A reference to the added separator is returned. This
+ may be used to remove the separator later.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the separator component that was added</dd>
@@ -822,11 +825,9 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <li class="blockList">
 <h4>addEditorListener</h4>
 <pre>public abstract&nbsp;void&nbsp;addEditorListener(<a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.EditorListener.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor.EditorListener</a>&nbsp;el)</pre>
-<div class="block">Adds a new <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.EditorListener.html" title="interface in ca.cgjennings.apps.arkham"><code>StrangeEonsEditor.EditorListener</code></a> that will apply to
- all editors.
- An editor listener can also be added through the
- <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham"><code>StrangeEonsEditor</code></a> interface, in which case it
- will apply to only that editor.</div>
+<div class="block">Adds a new <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.EditorListener.html" title="interface in ca.cgjennings.apps.arkham"><code>StrangeEonsEditor.EditorListener</code></a> that will apply to all editors. An
+ editor listener can also be added through the <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham"><code>StrangeEonsEditor</code></a>
+ interface, in which case it will apply to only that editor.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>el</code> - the listener to add</dd>
@@ -843,17 +844,17 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <h4>addMenuItem</h4>
 <pre>public abstract&nbsp;void&nbsp;addMenuItem(<a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.AppMenu.html" title="enum in ca.cgjennings.apps.arkham">StrangeEonsAppWindow.AppMenu</a>&nbsp;parent,
                                  <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing">JComponent</a>&nbsp;item)</pre>
-<div class="block">Inserts a menu item at a standard location in the application menu.
- This allows you to add items to menus other than the <b>Toolbox</b>
- and <b>Window</b> menus when another menu makes more sense
- This is a convenient way to add new items to a menu. If you want
- more control over menu placement, or to scan or replace existing
- items, see the <tt>uiutils</tt> scripting library.</div>
+<div class="block">Inserts a menu item at a standard location in the application menu. This
+ allows you to add items to menus other than the <b>Toolbox</b>
+ and <b>Window</b> menus when another menu makes more sense This is a
+ convenient way to add new items to a menu. If you want more control over
+ menu placement, or to scan or replace existing items, see the
+ <tt>uiutils</tt> scripting library.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>parent</code> - identifies the menu you wish to insert an item into</dd>
 <dd><code>item</code> - the item you wish to insert; this should be a
-     <code>JMenuItem</code> of some kind</dd>
+ <code>JMenuItem</code> of some kind</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.1a8</dd>
 </dl>
@@ -898,9 +899,9 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
  files with unsaved changes. This method will only return if the user
  cancels the exit action.
  <p>
- If <code>restart</code> is <code>true</code>, then an attempt is
- made to relaunch the application after exiting. This may be useful,
- for example, when a plug-in update is pending.</div>
+ If <code>restart</code> is <code>true</code>, then an attempt is made to
+ relaunch the application after exiting. This may be useful, for example,
+ when a plug-in update is pending.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>restart</code> - restart after exit</dd>
@@ -931,9 +932,9 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <li class="blockList">
 <h4>getApplicationFrameIcons</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Image.html?is-external=true" title="class or interface in java.awt">Image</a>&gt;&nbsp;getApplicationFrameIcons()</pre>
-<div class="block">Returns a list of images suitable for use as the icons of a <code>JFrame</code>.
- Plug-ins that create their own windows may use these images to get the
- same window icons as the main application window.</div>
+<div class="block">Returns a list of images suitable for use as the icons of a
+ <code>JFrame</code>. Plug-ins that create their own windows may use these
+ images to get the same window icons as the main application window.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a list of frame icons at various sizes</dd>
@@ -947,15 +948,16 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <li class="blockList">
 <h4>getCustomComponent</h4>
 <pre>public abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true" title="class or interface in java.awt">Component</a>&nbsp;getCustomComponent(int&nbsp;index)</pre>
-<div class="block">Returns the custom component at position <code>index</code> in the
- custom component area.</div>
+<div class="block">Returns the custom component at position <code>index</code> in the custom
+ component area.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>index</code> - the 0-based index into the list of custom components</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the component at position <code>index</code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang">IndexOutOfBoundsException</a></code> - if <code>index</code> &lt; 0 or <code>index</code> &gt;= <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#getCustomComponentCount--"><code>getCustomComponentCount()</code></a></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang">IndexOutOfBoundsException</a></code> - if <code>index</code> &lt; 0 or
+ <code>index</code> &gt;= <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#getCustomComponentCount--"><code>getCustomComponentCount()</code></a></dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.00a13</dd>
 </dl>
@@ -968,8 +970,8 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <li class="blockList">
 <h4>getCustomComponentCount</h4>
 <pre>public abstract&nbsp;int&nbsp;getCustomComponentCount()</pre>
-<div class="block">Returns the number of custom components that have been added to the
- top of the application window.</div>
+<div class="block">Returns the number of custom components that have been added to the top
+ of the application window.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the non-negative number of custom components that have been added</dd>
@@ -1001,15 +1003,15 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <li class="blockList">
 <h4>getEditorsShowingFile</h4>
 <pre>public abstract&nbsp;<a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor</a>[]&nbsp;getEditorsShowingFile(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</pre>
-<div class="block">Returns an array of all currently open editor windows that are
- editing a certain file. If no editors currently have the file set
- as their save file, returns an empty array.</div>
+<div class="block">Returns an array of all currently open editor windows that are editing a
+ certain file. If no editors currently have the file set as their save
+ file, returns an empty array.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>file</code> - the file to return active editors for</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>an array of open editors which have a save location that is
-    equal to the given file</dd>
+<dd>an array of open editors which have a save location that is equal
+ to the given file</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.1a9</dd>
 </dl>
@@ -1022,8 +1024,8 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <li class="blockList">
 <h4>getOpenProject</h4>
 <pre>public abstract&nbsp;<a href="../../../../ca/cgjennings/apps/arkham/project/Project.html" title="class in ca.cgjennings.apps.arkham.project">Project</a>&nbsp;getOpenProject()</pre>
-<div class="block">Returns the current open <a href="../../../../ca/cgjennings/apps/arkham/project/Project.html" title="class in ca.cgjennings.apps.arkham.project"><code>Project</code></a>, or <code>null</code> if
- no project is open.</div>
+<div class="block">Returns the current open <a href="../../../../ca/cgjennings/apps/arkham/project/Project.html" title="class in ca.cgjennings.apps.arkham.project"><code>Project</code></a>, or <code>null</code> if no
+ project is open.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the project currently open in the application window</dd>
@@ -1054,13 +1056,14 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <li class="blockList">
 <h4>openFile</h4>
 <pre>public abstract&nbsp;void&nbsp;openFile(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</pre>
-<div class="block">Attempts to open a file in the application as if the user
- had used the <b>File | Open</b> menu item and selected the specified file.
- Although a successful attempt to open the file typically results in a
- new editor being added to the application, be aware that the new editor
- will not generally be open yet when this method returns.
+<div class="block">Attempts to open a file in the application as if the user had used the
+ <b>File | Open</b> menu item and selected the specified file. Although a
+ successful attempt to open the file typically results in a new editor
+ being added to the application, be aware that the new editor will not
+ generally be open yet when this method returns.
 
- <p><b>Note:</b> This method is threadsafe: it can be can be called from
+ <p>
+ <b>Note:</b> This method is threadsafe: it can be can be called from
  outside of the event dispatch thread.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -1077,9 +1080,9 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <li class="blockList">
 <h4>redrawPreviews</h4>
 <pre>public abstract&nbsp;void&nbsp;redrawPreviews()</pre>
-<div class="block">Forces all editor windows that are displaying a game component to
- redraw their component preview. This is equivalent to looping over
- all of the available component editors and calling each one's
+<div class="block">Forces all editor windows that are displaying a game component to redraw
+ their component preview. This is equivalent to looping over all of the
+ available component editors and calling each one's
  <a href="../../../../ca/cgjennings/apps/arkham/AbstractGameComponentEditor.html#redrawPreview--"><code>AbstractGameComponentEditor.redrawPreview()</code></a> method.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
@@ -1094,14 +1097,15 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <li class="blockList">
 <h4>removeCustomComponent</h4>
 <pre>public abstract&nbsp;void&nbsp;removeCustomComponent(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true" title="class or interface in java.awt">Component</a>&nbsp;comp)</pre>
-<div class="block">Removes a previously added custom component from the top of the application
- window.</div>
+<div class="block">Removes a previously added custom component from the top of the
+ application window.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>comp</code> - the component to remove</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>comp</code> is <code>null</code></dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>comp</code> has not been added as a custom component</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>comp</code> has not been added
+ as a custom component</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.00a13</dd>
 </dl>
@@ -1114,13 +1118,14 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <li class="blockList">
 <h4>removeCustomComponent</h4>
 <pre>public abstract&nbsp;void&nbsp;removeCustomComponent(int&nbsp;index)</pre>
-<div class="block">Removes the custom component at position <code>index</code> in the
- custom component area. Nearby separators are not affected.</div>
+<div class="block">Removes the custom component at position <code>index</code> in the custom
+ component area. Nearby separators are not affected.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>index</code> - the 0-based index into the list of custom components</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang">IndexOutOfBoundsException</a></code> - if <code>index</code> &lt; 0 or <code>index</code> &gt;= <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#getCustomComponentCount--"><code>getCustomComponentCount()</code></a></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang">IndexOutOfBoundsException</a></code> - if <code>index</code> &lt; 0 or
+ <code>index</code> &gt;= <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#getCustomComponentCount--"><code>getCustomComponentCount()</code></a></dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.00a13</dd>
 </dl>
@@ -1149,13 +1154,12 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <li class="blockList">
 <h4>removeEditorListener</h4>
 <pre>public abstract&nbsp;void&nbsp;removeEditorListener(<a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.EditorListener.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor.EditorListener</a>&nbsp;el)</pre>
-<div class="block">Removes an <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.EditorListener.html" title="interface in ca.cgjennings.apps.arkham"><code>StrangeEonsEditor.EditorListener</code></a> that was added to
- all editors through <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#addEditorListener-ca.cgjennings.apps.arkham.StrangeEonsEditor.EditorListener-"><code>addEditorListener(ca.cgjennings.apps.arkham.StrangeEonsEditor.EditorListener)</code></a>.
- Note an editor listener must be removed from the same
- object as the object it was added to; that is, a listener
- added to the application window must be removed from the
- application window, and a listener added to an individual
- editor must be removed from that editor.</div>
+<div class="block">Removes an <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.EditorListener.html" title="interface in ca.cgjennings.apps.arkham"><code>StrangeEonsEditor.EditorListener</code></a> that was added to all editors through
+ <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#addEditorListener-ca.cgjennings.apps.arkham.StrangeEonsEditor.EditorListener-"><code>addEditorListener(ca.cgjennings.apps.arkham.StrangeEonsEditor.EditorListener)</code></a>. Note an editor listener must be removed from
+ the same object as the object it was added to; that is, a listener added
+ to the application window must be removed from the application window,
+ and a listener added to an individual editor must be removed from that
+ editor.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>el</code> - the listener to remove</dd>
@@ -1172,15 +1176,15 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <h4>removeMenuItem</h4>
 <pre>public abstract&nbsp;void&nbsp;removeMenuItem(<a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.AppMenu.html" title="enum in ca.cgjennings.apps.arkham">StrangeEonsAppWindow.AppMenu</a>&nbsp;parent,
                                     <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing">JComponent</a>&nbsp;item)</pre>
-<div class="block">Removes a menu item previously added with <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#addMenuItem-ca.cgjennings.apps.arkham.StrangeEonsAppWindow.AppMenu-javax.swing.JComponent-"><code>addMenuItem(ca.cgjennings.apps.arkham.StrangeEonsAppWindow.AppMenu, javax.swing.JComponent)</code></a>.
- This is a convenient way to add new items to a menu. If you want
- more control over menu placement, or to scan or replace existing
- items, see the <tt>uiutils</tt> scripting library.</div>
+<div class="block">Removes a menu item previously added with <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#addMenuItem-ca.cgjennings.apps.arkham.StrangeEonsAppWindow.AppMenu-javax.swing.JComponent-"><code>addMenuItem(ca.cgjennings.apps.arkham.StrangeEonsAppWindow.AppMenu, javax.swing.JComponent)</code></a>. This is a
+ convenient way to add new items to a menu. If you want more control over
+ menu placement, or to scan or replace existing items, see the
+ <tt>uiutils</tt> scripting library.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>parent</code> - an identifier for the menu you wish to insert into</dd>
-<dd><code>item</code> - the item you wish to insert; this should either be
-     a separator or a menu item</dd>
+<dd><code>item</code> - the item you wish to insert; this should either be a
+ separator or a menu item</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.1a8</dd>
 </dl>
@@ -1239,8 +1243,8 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <li class="blockList">
 <h4>setDefaultCursor</h4>
 <pre>public abstract&nbsp;void&nbsp;setDefaultCursor()</pre>
-<div class="block">Restore the standard cursor in the application frame.
- See {link #setWaitCursor()} for details on use.</div>
+<div class="block">Restore the standard cursor in the application frame. See {link
+ #setWaitCursor()} for details on use.</div>
 </li>
 </ul>
 <a name="setOpenProject-java.io.File-">
@@ -1250,15 +1254,15 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <li class="blockList">
 <h4>setOpenProject</h4>
 <pre>public abstract&nbsp;boolean&nbsp;setOpenProject(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;projectFolderOrCrateFile)</pre>
-<div class="block">Opens the project contained in the folder <code>projectFolder</code>.
- If the project can be opened and there is already a project open in the
- editor, the current project is closed automatically before opening
- the new project. If the project cannot be opened, an error message is
+<div class="block">Opens the project contained in the folder <code>projectFolder</code>. If
+ the project can be opened and there is already a project open in the
+ editor, the current project is closed automatically before opening the
+ new project. If the project cannot be opened, an error message is
  displayed.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>projectFolderOrCrateFile</code> - the base folder of a project or an
-   <tt>.seproject</tt> file containing a project</dd>
+ <tt>.seproject</tt> file containing a project</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the project is opened successfully</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
@@ -1273,13 +1277,13 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <li class="blockList">
 <h4>setWaitCursor</h4>
 <pre>public abstract&nbsp;void&nbsp;setWaitCursor()</pre>
-<div class="block">Sets a wait cursor on the application frame. This method nests,
- so if a wait cursor is set multiple times, the normal interaction
- cursor will not be restored until <code>setDefaultCursor()</code>
- is called a number of times equal to the number of times this
- method was called. This method should be paired with <code>setDefaultCursor()</code>
- using a <code>try ... finally</code> block to ensure that the cursor
- is properly restored even if an exception is thrown.:
+<div class="block">Sets a wait cursor on the application frame. This method nests, so if a
+ wait cursor is set multiple times, the normal interaction cursor will not
+ be restored until <code>setDefaultCursor()</code> is called a number of
+ times equal to the number of times this method was called. This method
+ should be paired with <code>setDefaultCursor()</code> using a
+ <code>try ... finally</code> block to ensure that the cursor is properly
+ restored even if an exception is thrown.:
  <pre>
  app.setWaitCursor();
  try {
@@ -1311,8 +1315,10 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <div class="block">Displays the application preferences dialog.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>parent</code> - a component used to position the preferences dialog (may be <code>null</code>)</dd>
-<dd><code>displayCategory</code> - the category that should be selected initially (may be <code>null</code>)</dd>
+<dd><code>parent</code> - a component used to position the preferences dialog (may be
+ <code>null</code>)</dd>
+<dd><code>displayCategory</code> - the category that should be selected initially
+ (may be <code>null</code>)</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
 </dl>
@@ -1325,18 +1331,19 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <li class="blockList">
 <h4>startTracking</h4>
 <pre>public abstract&nbsp;void&nbsp;startTracking(<a href="../../../../ca/cgjennings/apps/arkham/TrackedWindow.html" title="interface in ca.cgjennings.apps.arkham">TrackedWindow</a>&nbsp;window)</pre>
-<div class="block">Asks the application to add a window to the <b>Window</b> menu,
- such as a modeless dialog, a frame window, or a palette window.
- The <b>Window</b> menu automatically adds menu items for every open
- editor. Plug-ins can use this method to add items for special windows
- that they create.
- When the user selects the window's menu item, the window will be made
- visible, moved to the front, and given focus.
+<div class="block">Asks the application to add a window to the <b>Window</b> menu, such as a
+ modeless dialog, a frame window, or a palette window. The <b>Window</b>
+ menu automatically adds menu items for every open editor. Plug-ins can
+ use this method to add items for special windows that they create. When
+ the user selects the window's menu item, the window will be made visible,
+ moved to the front, and given focus.
 
- <p>Tracked windows will continue to be listed in the menu until
- they are explicitly removed by calling <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#stopTracking-ca.cgjennings.apps.arkham.TrackedWindow-"><code>stopTracking(ca.cgjennings.apps.arkham.TrackedWindow)</code></a>.
+ <p>
+ Tracked windows will continue to be listed in the menu until they are
+ explicitly removed by calling <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#stopTracking-ca.cgjennings.apps.arkham.TrackedWindow-"><code>stopTracking(ca.cgjennings.apps.arkham.TrackedWindow)</code></a>.
 
- <p>Note that the the <b>Toolbox</b> menu offers similar (but more
+ <p>
+ Note that the the <b>Toolbox</b> menu offers similar (but more
  comprehensive) functionality that is sufficient for most plug-ins.
  Tracked windows are best suited to floating palettes and cases like the
  script output window, which the user should think of as always existing,
@@ -1360,7 +1367,8 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <li class="blockList">
 <h4>stopTracking</h4>
 <pre>public abstract&nbsp;void&nbsp;stopTracking(<a href="../../../../ca/cgjennings/apps/arkham/TrackedWindow.html" title="interface in ca.cgjennings.apps.arkham">TrackedWindow</a>&nbsp;window)</pre>
-<div class="block">Stops tracking a previously tracked window, removing it from the application's
+<div class="block">Stops tracking a previously tracked window, removing it from the
+ application's
  <b>Window</b> menu. If the window was not being tracked, this method has
  no effect.</div>
 <dl>
@@ -1380,13 +1388,13 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <li class="blockList">
 <h4>suggestRestart</h4>
 <pre>public abstract&nbsp;void&nbsp;suggestRestart(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</pre>
-<div class="block">Displays a message to inform the user that the application should
- be restarted for optimal performance. The user will be allowed
- to choose whether or not to restart.</div>
+<div class="block">Displays a message to inform the user that the application should be
+ restarted for optimal performance. The user will be allowed to choose
+ whether or not to restart.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>message</code> - the reason for the restart; if <code>null</code>,
-     a default message is displayed</dd>
+<dd><code>message</code> - the reason for the restart; if <code>null</code>, a
+ default message is displayed</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.1a8</dd>
 </dl>
@@ -1412,6 +1420,8 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/commands/Commandable.h
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

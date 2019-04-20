@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -95,7 +97,7 @@ var activeTableTab = "activeTableTab";
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html" title="class in ca.cgjennings.ui.textedit.completion">ca.cgjennings.ui.textedit.completion.DefaultCNode</a>&lt;<a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.html" title="class in ca.cgjennings.ui.textedit.completion">APINode</a>&gt;</li>
+<li>ca.cgjennings.ui.textedit.completion.DefaultCNode&lt;<a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.html" title="class in ca.cgjennings.ui.textedit.completion">APINode</a>&gt;</li>
 <li>
 <ul class="inheritance">
 <li><a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.html" title="class in ca.cgjennings.ui.textedit.completion">ca.cgjennings.ui.textedit.completion.APINode</a></li>
@@ -114,14 +116,14 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../ca/cgjennings/ui/textedit/completion/CNode.html" title="interface in ca.cgjennings.ui.textedit.completion">CNode</a></dd>
+<dd>ca.cgjennings.ui.textedit.completion.CNode</dd>
 </dl>
 <hr>
 <br>
 <pre>public abstract class <span class="typeNameLabel">APILeaf</span>
 extends <a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.html" title="class in ca.cgjennings.ui.textedit.completion">APINode</a></pre>
-<div class="block">This is the superclass of all API nodes that cannot have children,
- such as named constants.</div>
+<div class="block">This is the superclass of all API nodes that cannot have children, such as
+ named constants.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -179,7 +181,10 @@ extends <a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.htm
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/ui/textedit/completion/APILeaf.html#add-ca.cgjennings.ui.textedit.completion.APINode-">add</a></span>(<a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.html" title="class in ca.cgjennings.ui.textedit.completion">APINode</a>&nbsp;child)</code>
-<div class="block">Adds a new node to this node as a child.</div>
+<div class="block">
+
+ 
+ <b>The leaf implementation throws an unsupported operation exception.</div>
 </td>
 </tr>
 </table>
@@ -194,8 +199,8 @@ extends <a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.htm
 <li class="blockList"><a name="methods.inherited.from.class.ca.cgjennings.ui.textedit.completion.DefaultCNode">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;ca.cgjennings.ui.textedit.completion.<a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html" title="class in ca.cgjennings.ui.textedit.completion">DefaultCNode</a></h3>
-<code><a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html#children--">children</a>, <a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html#equals-java.lang.Object-">equals</a>, <a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html#find-java.lang.String-">find</a>, <a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html#getName--">getName</a>, <a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html#hashCode--">hashCode</a></code></li>
+<h3>Methods inherited from class&nbsp;ca.cgjennings.ui.textedit.completion.DefaultCNode</h3>
+<code>children, equals, find, getName, hashCode</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -242,17 +247,13 @@ extends <a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.htm
 <li class="blockList">
 <h4>add</h4>
 <pre>public&nbsp;boolean&nbsp;add(<a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.html" title="class in ca.cgjennings.ui.textedit.completion">APINode</a>&nbsp;child)</pre>
-<div class="block">Adds a new node to this node as a child. If this node already has a
- child with the same name, that child is replaced.
- 
- <p><b>The leaf implementation throws an unsupported operation exception.</b></div>
+<div class="block">
+
+ <p>
+ <b>The leaf implementation throws an unsupported operation exception.</b></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html#add-T-">add</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html" title="class in ca.cgjennings.ui.textedit.completion">DefaultCNode</a>&lt;<a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.html" title="class in ca.cgjennings.ui.textedit.completion">APINode</a>&gt;</code></dd>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>child</code> - the non-<code>null</code> child node to add</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if a node with the same name was replaced</dd>
+<dd><code>add</code>&nbsp;in class&nbsp;<code>ca.cgjennings.ui.textedit.completion.DefaultCNode&lt;<a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.html" title="class in ca.cgjennings.ui.textedit.completion">APINode</a>&gt;</code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</a></code></dd>
 </dl>
@@ -278,6 +279,8 @@ extends <a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.htm
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

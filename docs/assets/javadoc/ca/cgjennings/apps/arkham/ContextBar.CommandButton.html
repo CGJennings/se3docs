@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -115,11 +117,11 @@ var activeTableTab = "activeTableTab";
 <pre>public static class <span class="typeNameLabel">ContextBar.CommandButton</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
 implements <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html" title="interface in ca.cgjennings.apps.arkham">ContextBar.Button</a></pre>
-<div class="block">A context bar button that delegates to an <a href="../../../../ca/cgjennings/apps/arkham/commands/AbstractCommand.html" title="class in ca.cgjennings.apps.arkham.commands"><code>AbstractCommand</code></a>.
- The button will activate the command when clicked, and be enabled or
- disabled based on the current state of the command. The base class
- implementation will create a button that is always visible and
- performs no action when the context bar is attached or detached.</div>
+<div class="block">A context bar button that delegates to an <a href="../../../../ca/cgjennings/apps/arkham/commands/AbstractCommand.html" title="class in ca.cgjennings.apps.arkham.commands"><code>AbstractCommand</code></a>. The
+ button will activate the command when clicked, and be enabled or disabled
+ based on the current state of the command. The base class implementation
+ will create a button that is always visible and performs no action when
+ the context bar is attached or detached.</div>
 </li>
 </ul>
 </div>
@@ -196,36 +198,39 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.CommandButton.html" title="class in ca.cgjennings.apps.arkham">ContextBar.CommandButton</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.CommandButton.html#hideIfDisabled--">hideIfDisabled</a></span>()</code>
-<div class="block">Causes the default implementation of <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.CommandButton.html#isVisibleInCurrentContext-ca.cgjennings.apps.arkham.ContextBar.Context-"><code>isVisibleInCurrentContext(ca.cgjennings.apps.arkham.ContextBar.Context)</code></a>
- to return the same value as <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.CommandButton.html#isEnabledInCurrentContext-ca.cgjennings.apps.arkham.ContextBar.Context-"><code>isEnabledInCurrentContext(ca.cgjennings.apps.arkham.ContextBar.Context)</code></a>.</div>
+<div class="block">Causes the default implementation of
+ <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.CommandButton.html#isVisibleInCurrentContext-ca.cgjennings.apps.arkham.ContextBar.Context-"><code>isVisibleInCurrentContext(ca.cgjennings.apps.arkham.ContextBar.Context)</code></a> to return the same value as
+ <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.CommandButton.html#isEnabledInCurrentContext-ca.cgjennings.apps.arkham.ContextBar.Context-"><code>isEnabledInCurrentContext(ca.cgjennings.apps.arkham.ContextBar.Context)</code></a>.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.CommandButton.html#isEnabledInCurrentContext-ca.cgjennings.apps.arkham.ContextBar.Context-">isEnabledInCurrentContext</a></span>(<a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Context.html" title="class in ca.cgjennings.apps.arkham">ContextBar.Context</a>&nbsp;context)</code>
-<div class="block">Returns <code>true</code> if the button should be enabled in the current context.</div>
+<div class="block">Returns <code>true</code> if the button should be enabled in the
+ current context.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.CommandButton.html#isVisibleInCurrentContext-ca.cgjennings.apps.arkham.ContextBar.Context-">isVisibleInCurrentContext</a></span>(<a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Context.html" title="class in ca.cgjennings.apps.arkham">ContextBar.Context</a>&nbsp;context)</code>
-<div class="block">Returns <code>true</code> if the button should be visible in the current context.</div>
+<div class="block">Returns <code>true</code> if the button should be visible in the
+ current context.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.CommandButton.html#onAttach-ca.cgjennings.apps.arkham.ContextBar.Context-">onAttach</a></span>(<a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Context.html" title="class in ca.cgjennings.apps.arkham">ContextBar.Context</a>&nbsp;context)</code>
 <div class="block">This method is called to notify the button when the tool bar is about
- to be attached to a new target component (the component that it floats
- over and that its commands normally apply to).</div>
+ to be attached to a new target component (the component that it
+ floats over and that its commands normally apply to).</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.CommandButton.html#onDetach-ca.cgjennings.apps.arkham.ContextBar.Context-">onDetach</a></span>(<a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Context.html" title="class in ca.cgjennings.apps.arkham">ContextBar.Context</a>&nbsp;context)</code>
 <div class="block">This method is called to notify the button when the tool bar is about
- to be detached from the current target component (the component that it floats
- over and that its commands normally apply to).</div>
+ to be detached from the current target component (the component that
+ it floats over and that its commands normally apply to).</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
@@ -276,8 +281,8 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>command</code> - the command to generate a button for</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the command is <code>null</code>
-     or the command does not define a button ID value</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the command is <code>null</code> or
+ the command does not define a button ID value</dd>
 </dl>
 </li>
 </ul>
@@ -365,13 +370,14 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html
 <h4>getID</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getID()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html#getID--">ContextBar.Button</a></code></span></div>
-<div class="block">Returns a unique ID for this button, such as "BOLD". Only letters, digits,
- underscores, and currency symbols may appear in an ID.</div>
+<div class="block">Returns a unique ID for this button, such as "BOLD". Only letters,
+ digits, underscores, and currency symbols may appear in an ID.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html#getID--">getID</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html" title="interface in ca.cgjennings.apps.arkham">ContextBar.Button</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a short ID that will identify this button in the application preferences</dd>
+<dd>a short ID that will identify this button in the application
+ preferences</dd>
 </dl>
 </li>
 </ul>
@@ -399,9 +405,10 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html
 <li class="blockList">
 <h4>hideIfDisabled</h4>
 <pre>public&nbsp;<a href="../../../../ca/cgjennings/apps/arkham/ContextBar.CommandButton.html" title="class in ca.cgjennings.apps.arkham">ContextBar.CommandButton</a>&nbsp;hideIfDisabled()</pre>
-<div class="block">Causes the default implementation of <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.CommandButton.html#isVisibleInCurrentContext-ca.cgjennings.apps.arkham.ContextBar.Context-"><code>isVisibleInCurrentContext(ca.cgjennings.apps.arkham.ContextBar.Context)</code></a>
- to return the same value as <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.CommandButton.html#isEnabledInCurrentContext-ca.cgjennings.apps.arkham.ContextBar.Context-"><code>isEnabledInCurrentContext(ca.cgjennings.apps.arkham.ContextBar.Context)</code></a>.
- (The default behaviour is to simply return <code>true</code>.)</div>
+<div class="block">Causes the default implementation of
+ <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.CommandButton.html#isVisibleInCurrentContext-ca.cgjennings.apps.arkham.ContextBar.Context-"><code>isVisibleInCurrentContext(ca.cgjennings.apps.arkham.ContextBar.Context)</code></a> to return the same value as
+ <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.CommandButton.html#isEnabledInCurrentContext-ca.cgjennings.apps.arkham.ContextBar.Context-"><code>isEnabledInCurrentContext(ca.cgjennings.apps.arkham.ContextBar.Context)</code></a>. (The default behaviour is to
+ simply return <code>true</code>.)</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this command button</dd>
@@ -416,14 +423,16 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html
 <h4>isEnabledInCurrentContext</h4>
 <pre>public&nbsp;boolean&nbsp;isEnabledInCurrentContext(<a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Context.html" title="class in ca.cgjennings.apps.arkham">ContextBar.Context</a>&nbsp;context)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html#isEnabledInCurrentContext-ca.cgjennings.apps.arkham.ContextBar.Context-">ContextBar.Button</a></code></span></div>
-<div class="block">Returns <code>true</code> if the button should be enabled in the current context.</div>
+<div class="block">Returns <code>true</code> if the button should be enabled in the
+ current context.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html#isEnabledInCurrentContext-ca.cgjennings.apps.arkham.ContextBar.Context-">isEnabledInCurrentContext</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html" title="interface in ca.cgjennings.apps.arkham">ContextBar.Button</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>context</code> - information about the current context</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the button should be enabled (ignored if not visible)</dd>
+<dd><code>true</code> if the button should be enabled (ignored if
+ not visible)</dd>
 </dl>
 </li>
 </ul>
@@ -435,13 +444,14 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html
 <h4>isVisibleInCurrentContext</h4>
 <pre>public&nbsp;boolean&nbsp;isVisibleInCurrentContext(<a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Context.html" title="class in ca.cgjennings.apps.arkham">ContextBar.Context</a>&nbsp;context)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html#isVisibleInCurrentContext-ca.cgjennings.apps.arkham.ContextBar.Context-">ContextBar.Button</a></code></span></div>
-<div class="block">Returns <code>true</code> if the button should be visible in the current context.
- A button should be invisible if it can never be enabled in the current context, and
- disabled if it is not currently usable due to a temporary restriction. For example,
- any text field can be copied from if there is an active selection, so a copy button
- should always be visible but should be enabled only if there is a selection. On the
- other hand, a command that only works for script code should be visible only when
- editing a script.</div>
+<div class="block">Returns <code>true</code> if the button should be visible in the
+ current context. A button should be invisible if it can never be
+ enabled in the current context, and disabled if it is not currently
+ usable due to a temporary restriction. For example, any text field
+ can be copied from if there is an active selection, so a copy button
+ should always be visible but should be enabled only if there is a
+ selection. On the other hand, a command that only works for script
+ code should be visible only when editing a script.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html#isVisibleInCurrentContext-ca.cgjennings.apps.arkham.ContextBar.Context-">isVisibleInCurrentContext</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html" title="interface in ca.cgjennings.apps.arkham">ContextBar.Button</a></code></dd>
@@ -461,8 +471,8 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html
 <pre>public&nbsp;void&nbsp;onAttach(<a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Context.html" title="class in ca.cgjennings.apps.arkham">ContextBar.Context</a>&nbsp;context)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html#onAttach-ca.cgjennings.apps.arkham.ContextBar.Context-">ContextBar.Button</a></code></span></div>
 <div class="block">This method is called to notify the button when the tool bar is about
- to be attached to a new target component (the component that it floats
- over and that its commands normally apply to).</div>
+ to be attached to a new target component (the component that it
+ floats over and that its commands normally apply to).</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html#onAttach-ca.cgjennings.apps.arkham.ContextBar.Context-">onAttach</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html" title="interface in ca.cgjennings.apps.arkham">ContextBar.Button</a></code></dd>
@@ -480,8 +490,8 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html
 <pre>public&nbsp;void&nbsp;onDetach(<a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Context.html" title="class in ca.cgjennings.apps.arkham">ContextBar.Context</a>&nbsp;context)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html#onDetach-ca.cgjennings.apps.arkham.ContextBar.Context-">ContextBar.Button</a></code></span></div>
 <div class="block">This method is called to notify the button when the tool bar is about
- to be detached from the current target component (the component that it floats
- over and that its commands normally apply to).</div>
+ to be detached from the current target component (the component that
+ it floats over and that its commands normally apply to).</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html#onDetach-ca.cgjennings.apps.arkham.ContextBar.Context-">onDetach</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html" title="interface in ca.cgjennings.apps.arkham">ContextBar.Button</a></code></dd>
@@ -498,7 +508,8 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html
 <h4>toString</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;toString()</pre>
 <div class="block">Returns a string representation of the button suitable for debugging.
- The returned string is <b>Button&lt;<i>id</i>&gt;</b>, where <i>id</i>
+ The returned string is <b>Button&lt;<i>id</i>&gt;</b>, where
+ <i>id</i>
  is the button's ID as returned by <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html#getID--"><code>ContextBar.Button.getID()</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
@@ -515,13 +526,13 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html
 <li class="blockList">
 <h4>update</h4>
 <pre>protected&nbsp;void&nbsp;update()</pre>
-<div class="block">Updates the state of the command that this button is a proxy for.
- If this is called more than once while the same event is being
+<div class="block">Updates the state of the command that this button is a proxy for. If
+ this is called more than once while the same event is being
  dispatched, it will only update the actual command once (the first
- time it is called for that event). This allows this method to be called
- multiple times while determining the button state without a significant
- performance penalty, even if the command's update process is
- complex.</div>
+ time it is called for that event). This allows this method to be
+ called multiple times while determining the button state without a
+ significant performance penalty, even if the command's update process
+ is complex.</div>
 </li>
 </ul>
 </li>
@@ -544,6 +555,8 @@ implements <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

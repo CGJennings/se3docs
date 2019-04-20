@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -116,10 +118,10 @@ var activeTableTab = "activeTableTab";
 <pre>public abstract static class <span class="typeNameLabel">MetadataSource.ThreadedMetadataSource</span>
 extends <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html" title="class in ca.cgjennings.apps.arkham.project">MetadataSource</a></pre>
 <div class="block">An abstract helper class for creating metadata sources that fill in some
- of their data from a background thread. This prevents blocking the
- user interface to complete potentially complex or time-consuming operations,
- such as generating a preview thumbnail.
- Be careful to observe Swing threading restrictions.</div>
+ of their data from a background thread. This prevents blocking the user
+ interface to complete potentially complex or time-consuming operations,
+ such as generating a preview thumbnail. Be careful to observe Swing
+ threading restrictions.</div>
 </li>
 </ul>
 </div>
@@ -172,8 +174,9 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource
 </tr>
 <tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.ThreadedMetadataSource.html#ThreadedMetadataSource-boolean-">ThreadedMetadataSource</a></span>(boolean&nbsp;autopause)</code>
-<div class="block">If <code>autopause</code> is <code>true</code>, then <code>pause()</code>
- will be called before calling <code>fillInThreadedMetadataImpl</code>.</div>
+<div class="block">If <code>autopause</code> is <code>true</code>, then
+ <code>pause()</code> will be called before calling
+ <code>fillInThreadedMetadataImpl</code>.</div>
 </td>
 </tr>
 </table>
@@ -209,15 +212,15 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource
 <td class="colFirst"><code>protected abstract void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.ThreadedMetadataSource.html#fillInThreadedMetadataImpl-ca.cgjennings.apps.arkham.project.Member-ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer-">fillInThreadedMetadataImpl</a></span>(<a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;m,
                           <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.PropertyConsumer.html" title="interface in ca.cgjennings.apps.arkham.project">MetadataSource.PropertyConsumer</a>&nbsp;pc)</code>
-<div class="block">This method is called from a background thread to allow the source
- to fill in additional metadata that may be expensive to generate.</div>
+<div class="block">This method is called from a background thread to allow the source to
+ fill in additional metadata that may be expensive to generate.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.ThreadedMetadataSource.html#pause-ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer-">pause</a></span>(<a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.PropertyConsumer.html" title="interface in ca.cgjennings.apps.arkham.project">MetadataSource.PropertyConsumer</a>&nbsp;pc)</code>
-<div class="block">Briefly pauses the current thread, then returns <code>false</code>
- if the property consumer is no longer valid or the thread was
+<div class="block">Briefly pauses the current thread, then returns <code>false</code> if
+ the property consumer is no longer valid or the thread was
  interrupted.</div>
 </td>
 </tr>
@@ -266,10 +269,11 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource
 <li class="blockList">
 <h4>ThreadedMetadataSource</h4>
 <pre>public&nbsp;ThreadedMetadataSource(boolean&nbsp;autopause)</pre>
-<div class="block">If <code>autopause</code> is <code>true</code>, then <code>pause()</code>
- will be called before calling <code>fillInThreadedMetadataImpl</code>.
- If the property consumer becomes invalid during the pause, then
- the threaded metadata will not be requested.</div>
+<div class="block">If <code>autopause</code> is <code>true</code>, then
+ <code>pause()</code> will be called before calling
+ <code>fillInThreadedMetadataImpl</code>. If the property consumer
+ becomes invalid during the pause, then the threaded metadata will not
+ be requested.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>autopause</code> - </dd>
@@ -293,21 +297,22 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource
 <pre>public&nbsp;void&nbsp;fillInMetadata(<a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;m,
                            <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.PropertyConsumer.html" title="interface in ca.cgjennings.apps.arkham.project">MetadataSource.PropertyConsumer</a>&nbsp;pc)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#fillInMetadata-ca.cgjennings.apps.arkham.project.Member-ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer-">MetadataSource</a></code></span></div>
-<div class="block">Publishes metadata to a <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.PropertyConsumer.html" title="interface in ca.cgjennings.apps.arkham.project"><code>MetadataSource.PropertyConsumer</code></a>. This method may
- return before all available data has been published and continue
- to add new data as it becomes available. Once all of the available
- data has been published, if the consumer is still valid, its
+<div class="block">Publishes metadata to a <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.PropertyConsumer.html" title="interface in ca.cgjennings.apps.arkham.project"><code>MetadataSource.PropertyConsumer</code></a>. This method may return
+ before all available data has been published and continue to add new data
+ as it becomes available. Once all of the available data has been
+ published, if the consumer is still valid, its
  <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.PropertyConsumer.html#doneAddingProperties--"><code>MetadataSource.PropertyConsumer.doneAddingProperties()</code></a> method will be called.
 
- <p>The base class
- implementation calls <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#fillInMetadataImpl-ca.cgjennings.apps.arkham.project.Member-ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer-"><code>MetadataSource.fillInMetadataImpl(ca.cgjennings.apps.arkham.project.Member, ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer)</code></a> and then calls
- the consumer's <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.PropertyConsumer.html#doneAddingProperties--"><code>MetadataSource.PropertyConsumer.doneAddingProperties()</code></a>
- method. This will fill in the member's file type description and
- basic file-based metadata.
+ <p>
+ The base class implementation calls <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#fillInMetadataImpl-ca.cgjennings.apps.arkham.project.Member-ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer-"><code>MetadataSource.fillInMetadataImpl(ca.cgjennings.apps.arkham.project.Member, ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer)</code></a> and then
+ calls the consumer's <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.PropertyConsumer.html#doneAddingProperties--"><code>MetadataSource.PropertyConsumer.doneAddingProperties()</code></a>
+ method. This will fill in the member's file type description and basic
+ file-based metadata.
 
- <p><b>Note:</b> If you want to create a metadata source that adds some
- properties from another thread (because they take time to provide),
- use <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.ThreadedMetadataSource.html" title="class in ca.cgjennings.apps.arkham.project"><code>MetadataSource.ThreadedMetadataSource</code></a> as your base class.</div>
+ <p>
+ <b>Note:</b> If you want to create a metadata source that adds some
+ properties from another thread (because they take time to provide), use
+ <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.ThreadedMetadataSource.html" title="class in ca.cgjennings.apps.arkham.project"><code>MetadataSource.ThreadedMetadataSource</code></a> as your base class.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#fillInMetadata-ca.cgjennings.apps.arkham.project.Member-ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer-">fillInMetadata</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html" title="class in ca.cgjennings.apps.arkham.project">MetadataSource</a></code></dd>
@@ -324,10 +329,10 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource
 <pre>protected&nbsp;void&nbsp;fillInMetadataImpl(<a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;m,
                                   <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.PropertyConsumer.html" title="interface in ca.cgjennings.apps.arkham.project">MetadataSource.PropertyConsumer</a>&nbsp;pc)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#fillInMetadataImpl-ca.cgjennings.apps.arkham.project.Member-ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer-">MetadataSource</a></code></span></div>
-<div class="block">Called to publish metadata to a consumer. The base class will
- publish basic metadata including the file type description.
- Classes that override the default implementation should 
- call the super implementation first to fill in this basic information.</div>
+<div class="block">Called to publish metadata to a consumer. The base class will publish
+ basic metadata including the file type description. Classes that override
+ the default implementation should call the super implementation first to
+ fill in this basic information.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#fillInMetadataImpl-ca.cgjennings.apps.arkham.project.Member-ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer-">fillInMetadataImpl</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html" title="class in ca.cgjennings.apps.arkham.project">MetadataSource</a></code></dd>
@@ -345,8 +350,8 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource
 <h4>fillInThreadedMetadataImpl</h4>
 <pre>protected abstract&nbsp;void&nbsp;fillInThreadedMetadataImpl(<a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;m,
                                                    <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.PropertyConsumer.html" title="interface in ca.cgjennings.apps.arkham.project">MetadataSource.PropertyConsumer</a>&nbsp;pc)</pre>
-<div class="block">This method is called from a background thread to allow the source
- to fill in additional metadata that may be expensive to generate.</div>
+<div class="block">This method is called from a background thread to allow the source to
+ fill in additional metadata that may be expensive to generate.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>m</code> - the member to fill in data for</dd>
@@ -361,16 +366,16 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource
 <li class="blockList">
 <h4>pause</h4>
 <pre>protected&nbsp;boolean&nbsp;pause(<a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.PropertyConsumer.html" title="interface in ca.cgjennings.apps.arkham.project">MetadataSource.PropertyConsumer</a>&nbsp;pc)</pre>
-<div class="block">Briefly pauses the current thread, then returns <code>false</code>
- if the property consumer is no longer valid or the thread was
- interrupted. This is called at the start of the background thread
- if the autopause option is enabled. It prevents the generation of
+<div class="block">Briefly pauses the current thread, then returns <code>false</code> if
+ the property consumer is no longer valid or the thread was
+ interrupted. This is called at the start of the background thread if
+ the autopause option is enabled. It prevents the generation of
  expensive metadata when the user is quickly moving through the
  project members, such as when navigating the tree with the keyboard.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the thread should proceed with generating
-     metadata</dd>
+<dd><code>true</code> if the thread should proceed with
+ generating metadata</dd>
 </dl>
 </li>
 </ul>
@@ -394,6 +399,8 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -175,8 +177,8 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.htm
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/project/Packaging.html#getDescription--">getDescription</a></span>()</code>
-<div class="block">Returns a longer description of the action, suitable for use as a
- tool tip.</div>
+<div class="block">Returns a longer description of the action, suitable for use as a tool
+ tip.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -250,22 +252,23 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.htm
                          <a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;member)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html#appliesTo-ca.cgjennings.apps.arkham.project.Project-ca.cgjennings.apps.arkham.project.Task-ca.cgjennings.apps.arkham.project.Member-">TaskAction</a></code></span></div>
 <div class="block">Returns <code>true</code> if this action can be performed on the
- specified member of a project, project or a task.
- If the project itself is the target, <code>task</code> and
- <code>member</code> will be <code>null</code>.
- If a task is the target, then <code>member</code> will be null.
- If an error occurs while executing the task, then it is the
- action's responsibility to inform the user.
- This method can return <code>false</code> to indicate that if the
- action is being applied to multiple members, it should stop
- immediately rather than continue to the next member.</div>
+ specified member of a project, project or a task. If the project itself
+ is the target, <code>task</code> and <code>member</code> will be
+ <code>null</code>. If a task is the target, then <code>member</code> will
+ be null. If an error occurs while executing the task, then it is the
+ action's responsibility to inform the user. This method can return
+ <code>false</code> to indicate that if the action is being applied to
+ multiple members, it should stop immediately rather than continue to the
+ next member.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html#appliesTo-ca.cgjennings.apps.arkham.project.Project-ca.cgjennings.apps.arkham.project.Task-ca.cgjennings.apps.arkham.project.Member-">appliesTo</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html" title="class in ca.cgjennings.apps.arkham.project">TaskAction</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>project</code> - the project that is being acted upon</dd>
-<dd><code>task</code> - the task within the project that is being acted upon; <code>null</code> if acting on a project</dd>
-<dd><code>member</code> - the specific member within the task to act upon; <code>null</code> if this is a project or task</dd>
+<dd><code>task</code> - the task within the project that is being acted upon;
+ <code>null</code> if acting on a project</dd>
+<dd><code>member</code> - the specific member within the task to act upon;
+ <code>null</code> if this is a project or task</dd>
 </dl>
 </li>
 </ul>
@@ -279,17 +282,19 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.htm
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html#appliesToSelection-ca.cgjennings.apps.arkham.project.Member:A-">TaskAction</a></code></span></div>
 <div class="block">Returns <code>true</code> if this action is applicable to any of the
  specified <a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project"><code>Member</code></a>s. By overriding this, you can modify whether an
- action is listed depending on which other members are selected. For example,
- you could create a command that can only be applied to a singleton selection
- by checking the length of <code>members</code> and returning <code>false</code>
- if it is not 1, and otherwise calling the super implementation.</div>
+ action is listed depending on which other members are selected. For
+ example, you could create a command that can only be applied to a
+ singleton selection by checking the length of <code>members</code> and
+ returning <code>false</code> if it is not 1, and otherwise calling the
+ super implementation.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html#appliesToSelection-ca.cgjennings.apps.arkham.project.Member:A-">appliesToSelection</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html" title="class in ca.cgjennings.apps.arkham.project">TaskAction</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>members</code> - a list of zero or more members</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> is the action can be applied to at least one member</dd>
+<dd><code>true</code> is the action can be applied to at least one
+ member</dd>
 </dl>
 </li>
 </ul>
@@ -301,8 +306,8 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.htm
 <h4>getDescription</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getDescription()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html#getDescription--">TaskAction</a></code></span></div>
-<div class="block">Returns a longer description of the action, suitable for use as a
- tool tip.</div>
+<div class="block">Returns a longer description of the action, suitable for use as a tool
+ tip.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html#getDescription--">getDescription</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html" title="class in ca.cgjennings.apps.arkham.project">TaskAction</a></code></dd>
@@ -324,7 +329,8 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.htm
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html#getLabel--">getLabel</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html" title="class in ca.cgjennings.apps.arkham.project">TaskAction</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the name used to create menu items for this action, localized if possible</dd>
+<dd>the name used to create menu items for this action, localized if
+ possible</dd>
 </dl>
 </li>
 </ul>
@@ -338,22 +344,23 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.htm
                        <a href="../../../../../ca/cgjennings/apps/arkham/project/Task.html" title="class in ca.cgjennings.apps.arkham.project">Task</a>&nbsp;task,
                        <a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;member)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html#perform-ca.cgjennings.apps.arkham.project.Project-ca.cgjennings.apps.arkham.project.Task-ca.cgjennings.apps.arkham.project.Member-">TaskAction</a></code></span></div>
-<div class="block">Perform this action on a member of a project, a project or a task.
- If the project itself is the target, <code>task</code> and
- <code>member</code> will be <code>null</code>.
- If a task is the target, then <code>member</code> will be null.
- If an error occurs while executing the task, then it is the
- action's responsibility to inform the user.
- This method can return <code>false</code> to indicate that if the
- action is being applied to multiple members, it should stop
- immediately rather than continue to the next member.</div>
+<div class="block">Perform this action on a member of a project, a project or a task. If the
+ project itself is the target, <code>task</code> and <code>member</code>
+ will be <code>null</code>. If a task is the target, then
+ <code>member</code> will be null. If an error occurs while executing the
+ task, then it is the action's responsibility to inform the user. This
+ method can return <code>false</code> to indicate that if the action is
+ being applied to multiple members, it should stop immediately rather than
+ continue to the next member.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html#perform-ca.cgjennings.apps.arkham.project.Project-ca.cgjennings.apps.arkham.project.Task-ca.cgjennings.apps.arkham.project.Member-">perform</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html" title="class in ca.cgjennings.apps.arkham.project">TaskAction</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>project</code> - the project that is being acted upon</dd>
-<dd><code>task</code> - the task within the project that is being acted upon; <code>null</code> if acting on a project</dd>
-<dd><code>member</code> - the specific member within the task to act upon; <code>null</code> if this is a project or task</dd>
+<dd><code>task</code> - the task within the project that is being acted upon;
+ <code>null</code> if acting on a project</dd>
+<dd><code>member</code> - the specific member within the task to act upon;
+ <code>null</code> if this is a project or task</dd>
 </dl>
 </li>
 </ul>
@@ -377,6 +384,8 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.htm
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

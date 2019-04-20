@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -110,8 +112,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  return, and tab escapes using the same format as property files. The class
  neither inserts nor removes the possible trailing backslash that indicates
  that a line should be concatenated with the following line.
- 
- Valid escapeUnicode sequences consist of a backslash (\) followed by any of:<br>
+
+ Valid escapeUnicode sequences consist of a backslash (\) followed by any
+ of:<br>
  <pre>
  uXXXX   insert Unicode character U+XXXX (where XXXX is a 16-bit hexadecimal number)
  n       newline
@@ -181,16 +184,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/EscapedTextCodec.html#USE_S_ESCAPE">USE_S_ESCAPE</a></span></code>
-<div class="block">When spaces are escaped, this uses "\s" for space instead of "\ ";
- this is not valid for .properties files, but for other types of files
- it produces clearer output.</div>
+<div class="block">When spaces are escaped, this uses "\s" for space instead of "\ "; this
+ is not valid for .properties files, but for other types of files it
+ produces clearer output.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/EscapedTextCodec.html#WHITESPACE">WHITESPACE</a></span></code>
-<div class="block">Escape the <b>non-space</b> whitespace characters of newline,
- return, tab, and form feed.</div>
+<div class="block">Escape the <b>non-space</b> whitespace characters of newline, return,
+ tab, and form feed.</div>
 </td>
 </tr>
 </table>
@@ -212,15 +215,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/EscapedTextCodec.html#escape-java.lang.CharSequence-int-">escape</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html?is-external=true" title="class or interface in java.lang">CharSequence</a>&nbsp;s,
       int&nbsp;escapeFlags)</code>
-<div class="block">Escape a string by inserting backslash escapeUnicode sequences similar to the
- handling of escapes in <code>.properties</code> files.</div>
+<div class="block">Escape a string by inserting backslash escapeUnicode sequences similar to
+ the handling of escapes in <code>.properties</code> files.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/EscapedTextCodec.html#escapeUnicode-java.lang.CharSequence-">escapeUnicode</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html?is-external=true" title="class or interface in java.lang">CharSequence</a>&nbsp;s)</code>
-<div class="block">Escape a string by inserting Unicode escapeUnicode sequences for characters outside
- of the printable ISO 8859-1 range.</div>
+<div class="block">Escape a string by inserting Unicode escapeUnicode sequences for
+ characters outside of the printable ISO 8859-1 range.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -345,9 +348,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>USE_S_ESCAPE</h4>
 <pre>public static final&nbsp;int USE_S_ESCAPE</pre>
-<div class="block">When spaces are escaped, this uses "\s" for space instead of "\ ";
- this is not valid for .properties files, but for other types of files
- it produces clearer output.</div>
+<div class="block">When spaces are escaped, this uses "\s" for space instead of "\ "; this
+ is not valid for .properties files, but for other types of files it
+ produces clearer output.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../constant-values.html#ca.cgjennings.io.EscapedTextCodec.USE_S_ESCAPE">Constant Field Values</a></dd>
@@ -361,8 +364,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>WHITESPACE</h4>
 <pre>public static final&nbsp;int WHITESPACE</pre>
-<div class="block">Escape the <b>non-space</b> whitespace characters of newline,
- return, tab, and form feed.</div>
+<div class="block">Escape the <b>non-space</b> whitespace characters of newline, return,
+ tab, and form feed.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../ca/cgjennings/io/EscapedTextCodec.html#SPACE"><code>SPACE</code></a>, 
@@ -386,25 +389,28 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>escape</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;escape(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html?is-external=true" title="class or interface in java.lang">CharSequence</a>&nbsp;s,
                             int&nbsp;escapeFlags)</pre>
-<div class="block">Escape a string by inserting backslash escapeUnicode sequences similar to the
- handling of escapes in <code>.properties</code> files. If no escapeUnicode codes
- are inserted, the original input is returned. (If it is a <code>String</code>,
- the same string is returned; otherwise it is converted to a string by
- calling its <code>toString()</code> method.)
- 
- <p>The set of characters to be escaped is controlled by <code>escapeFlags</code>,
- which should be a binary or of some combination of
- <a href="../../../ca/cgjennings/io/EscapedTextCodec.html#ASSIGNMENT"><code>ASSIGNMENT</code></a>, <a href="../../../ca/cgjennings/io/EscapedTextCodec.html#BACKSLASH"><code>BACKSLASH</code></a>, <a href="../../../ca/cgjennings/io/EscapedTextCodec.html#INITIAL_COMMENT"><code>INITIAL_COMMENT</code></a>,
- <a href="../../../ca/cgjennings/io/EscapedTextCodec.html#SPACE"><code>SPACE</code></a>, <a href="../../../ca/cgjennings/io/EscapedTextCodec.html#USE_S_ESCAPE"><code>USE_S_ESCAPE</code></a>, <a href="../../../ca/cgjennings/io/EscapedTextCodec.html#UNICODE"><code>UNICODE</code></a>, and <a href="../../../ca/cgjennings/io/EscapedTextCodec.html#WHITESPACE"><code>WHITESPACE</code></a>.
- For example, the combination <code>UNICODE|WHITESPACE|BACKSLASH</code>
- would produced escaped output similar to a <code>.properties</code> file.
- If <code>escapeFlags</code> is zero, the original input is returned.</div>
+<div class="block">Escape a string by inserting backslash escapeUnicode sequences similar to
+ the handling of escapes in <code>.properties</code> files. If no
+ escapeUnicode codes are inserted, the original input is returned. (If it
+ is a <code>String</code>, the same string is returned; otherwise it is
+ converted to a string by calling its <code>toString()</code> method.)
+
+ <p>
+ The set of characters to be escaped is controlled by
+ <code>escapeFlags</code>, which should be a binary or of some combination
+ of      <a href="../../../ca/cgjennings/io/EscapedTextCodec.html#ASSIGNMENT"><code>ASSIGNMENT</code></a>, <a href="../../../ca/cgjennings/io/EscapedTextCodec.html#BACKSLASH"><code>BACKSLASH</code></a>, <a href="../../../ca/cgjennings/io/EscapedTextCodec.html#INITIAL_COMMENT"><code>INITIAL_COMMENT</code></a>,
+ <a href="../../../ca/cgjennings/io/EscapedTextCodec.html#SPACE"><code>SPACE</code></a>, <a href="../../../ca/cgjennings/io/EscapedTextCodec.html#USE_S_ESCAPE"><code>USE_S_ESCAPE</code></a>, <a href="../../../ca/cgjennings/io/EscapedTextCodec.html#UNICODE"><code>UNICODE</code></a>, and
+ <a href="../../../ca/cgjennings/io/EscapedTextCodec.html#WHITESPACE"><code>WHITESPACE</code></a>. For example, the combination
+ <code>UNICODE|WHITESPACE|BACKSLASH</code> would produced escaped output
+ similar to a <code>.properties</code> file. If <code>escapeFlags</code>
+ is zero, the original input is returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>s</code> - the string to escapeUnicode</dd>
 <dd><code>escapeFlags</code> - optional flags for the escapeUnicode process</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a string equivalent to <code>s</code> but will appropriate escapes</dd>
+<dd>a string equivalent to <code>s</code> but will appropriate
+ escapes</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - is <code>s</code> is <code>null</code></dd>
 </dl>
@@ -417,21 +423,22 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>escapeUnicode</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;escapeUnicode(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html?is-external=true" title="class or interface in java.lang">CharSequence</a>&nbsp;s)</pre>
-<div class="block">Escape a string by inserting Unicode escapeUnicode sequences for characters outside
- of the printable ISO 8859-1 range. This is equivalent to
- <code>escapeUnicode(&nbsp;s, UNICODE&nbsp;)</code>. If no escapeUnicode codes
- are inserted, the original input is returned. (If it is a <code>String</code>,
- the same string is returned; otherwise it is converted to a string by
- calling its <code>toString()</code> method.)</div>
+<div class="block">Escape a string by inserting Unicode escapeUnicode sequences for
+ characters outside of the printable ISO 8859-1 range. This is equivalent
+ to <code>escapeUnicode(&nbsp;s, UNICODE&nbsp;)</code>. If no
+ escapeUnicode codes are inserted, the original input is returned. (If it
+ is a <code>String</code>, the same string is returned; otherwise it is
+ converted to a string by calling its <code>toString()</code> method.)</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>s</code> - the string to escapeUnicode</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a string equivalent to <code>s</code> but will appropriate escapes</dd>
+<dd>a string equivalent to <code>s</code> but will appropriate
+ escapes</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - is <code>s</code> is <code>null</code></dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><code>#escapeUnicode(java.lang.CharSequence, int)</code></dd>
+<dd><a href="../../../ca/cgjennings/io/EscapedTextCodec.html#escapeUnicode-java.lang.CharSequence-"><code>escapeUnicode(java.lang.CharSequence)</code></a></dd>
 </dl>
 </li>
 </ul>
@@ -442,16 +449,17 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isWrappedLine</h4>
 <pre>public static&nbsp;boolean&nbsp;isWrappedLine(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html?is-external=true" title="class or interface in java.lang">CharSequence</a>&nbsp;s)</pre>
-<div class="block">Tests whether a line of text ends with a line wrapping back slash.
- Some file formats indicate that a long line is wrapped onto the next line
- by ending the line with a back slash. This method will check for
- this character. It correctly handles cases where the line actually ends
- in an escaped back slash.</div>
+<div class="block">Tests whether a line of text ends with a line wrapping back slash. Some
+ file formats indicate that a long line is wrapped onto the next line by
+ ending the line with a back slash. This method will check for this
+ character. It correctly handles cases where the line actually ends in an
+ escaped back slash.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>s</code> - the line to test</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the line ends in a line wrapping escapeUnicode</dd>
+<dd><code>true</code> if the line ends in a line wrapping
+ escapeUnicode</dd>
 </dl>
 </li>
 </ul>
@@ -472,9 +480,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>unescape</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;unescape(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html?is-external=true" title="class or interface in java.lang">CharSequence</a>&nbsp;s)</pre>
 <div class="block">Returns a string equivalent to <code>s</code>, but with all escapeUnicode
- sequences converted back to regular (unescaped) characters.
- If the input does not contain any escapeUnicode sequences, it is
- returned unchanged.</div>
+ sequences converted back to regular (unescaped) characters. If the input
+ does not contain any escapeUnicode sequences, it is returned unchanged.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>s</code> - the string to convert</dd>
@@ -492,8 +499,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>unescapeUnicode</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;unescapeUnicode(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/CharSequence.html?is-external=true" title="class or interface in java.lang">CharSequence</a>&nbsp;s)</pre>
-<div class="block">Returns a string with Unicode escapes converted to normal characters.
- If the input does not contain any Unicode escapeUnicode sequences, it is
+<div class="block">Returns a string with Unicode escapes converted to normal characters. If
+ the input does not contain any Unicode escapeUnicode sequences, it is
  returned unchanged.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -525,6 +532,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

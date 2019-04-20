@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -162,12 +164,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/BufferedWrite
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/EscapedLineWriter.html#EscapedLineWriter-java.io.OutputStream-">EscapedLineWriter</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;out)</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/EscapedLineWriter.html#EscapedLineWriter-java.io.File-">EscapedLineWriter</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;f)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/EscapedLineWriter.html#EscapedLineWriter-java.io.Writer-">EscapedLineWriter</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io">Writer</a>&nbsp;out)</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/EscapedLineWriter.html#EscapedLineWriter-java.io.OutputStream-">EscapedLineWriter</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a>&nbsp;out)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/EscapedLineWriter.html#EscapedLineWriter-java.io.Writer-">EscapedLineWriter</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io">Writer</a>&nbsp;out)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/EscapedLineWriter.html#EscapedLineWriter-java.io.Writer-int-">EscapedLineWriter</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Writer.html?is-external=true" title="class or interface in java.io">Writer</a>&nbsp;out,
                  int&nbsp;sz)</code>&nbsp;</td>
 </tr>
@@ -208,8 +213,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/BufferedWrite
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/io/EscapedLineWriter.html#writeLine-java.lang.String-">writeLine</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;str)</code>
-<div class="block">Writes a line to the output stream, escaping appropriate characters
- and wrapping long lines by inserting line breaks prefixed by backslashes.</div>
+<div class="block">Writes a line to the output stream, escaping appropriate characters and
+ wrapping long lines by inserting line breaks prefixed by backslashes.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -255,6 +260,20 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/BufferedWrite
 <!--   -->
 </a>
 <h3>Constructor Detail</h3>
+<a name="EscapedLineWriter-java.io.File-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>EscapedLineWriter</h4>
+<pre>public&nbsp;EscapedLineWriter(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;f)
+                  throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
 <a name="EscapedLineWriter-java.io.OutputStream-">
 <!--   -->
 </a>
@@ -308,7 +327,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/BufferedWrite
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if characters outside of ISO-8859 are escaped</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><code>#setUnicodeEscape(boolean)</code></dd>
+<dd><a href="../../../ca/cgjennings/io/EscapedLineWriter.html#setUnicodeEscaped-boolean-"><code>setUnicodeEscaped(boolean)</code></a></dd>
 </dl>
 </li>
 </ul>
@@ -340,7 +359,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/BufferedWrite
 <pre>public&nbsp;void&nbsp;writeComment(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;str)
                   throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Writes one or more comment lines. The string will be divided into lines
- at newline (\n) characters and each line will be prefixed with <tt># </tt>
+ at newline (\n) characters and each line will be prefixed with <tt>#
+ </tt>
  and written to the file.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -358,11 +378,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/BufferedWrite
 <h4>writeLine</h4>
 <pre>public&nbsp;void&nbsp;writeLine(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;str)
                throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Writes a line to the output stream, escaping appropriate characters
- and wrapping long lines by inserting line breaks prefixed by backslashes. 
- The line should not contain a trailing newline; calls to <a href="../../../ca/cgjennings/io/EscapedLineWriter.html#writeLine-java.lang.String-"><code>writeLine(java.lang.String)</code></a>,
- <a href="../../../ca/cgjennings/io/EscapedLineWriter.html#writeComment-java.lang.String-"><code>writeComment(java.lang.String)</code></a>, and <a href="../../../ca/cgjennings/io/EscapedLineWriter.html#writeProperty-java.lang.String-java.lang.String-"><code>writeProperty(java.lang.String, java.lang.String)</code></a> will automatically insert
- line breaks.</div>
+<div class="block">Writes a line to the output stream, escaping appropriate characters and
+ wrapping long lines by inserting line breaks prefixed by backslashes. The
+ line should not contain a trailing newline; calls to <a href="../../../ca/cgjennings/io/EscapedLineWriter.html#writeLine-java.lang.String-"><code>writeLine(java.lang.String)</code></a>,
+ <a href="../../../ca/cgjennings/io/EscapedLineWriter.html#writeComment-java.lang.String-"><code>writeComment(java.lang.String)</code></a>, and <a href="../../../ca/cgjennings/io/EscapedLineWriter.html#writeProperty-java.lang.String-java.lang.String-"><code>writeProperty(java.lang.String, java.lang.String)</code></a> will automatically
+ insert line breaks.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>str</code> - the string to write</dd>
@@ -410,6 +430,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/BufferedWrite
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

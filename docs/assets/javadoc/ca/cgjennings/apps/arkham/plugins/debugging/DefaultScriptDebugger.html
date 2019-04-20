@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -106,19 +108,19 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public final class <span class="typeNameLabel">DefaultScriptDebugger</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block">The default debugger for scripts. This is a client-server implementation
- for which this is the server. The matching client application is
- implemented in the <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/debugging/Client.html" title="class in ca.cgjennings.apps.arkham.plugins.debugging"><code>Client</code></a> class.
- When debugging is enabled, the server will accept network connections
- that use its debugging protocol and respond to the commands enumerated
- by <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/debugging/Command.html" title="enum in ca.cgjennings.apps.arkham.plugins.debugging"><code>Command</code></a>.
+<div class="block">The default debugger for scripts. This is a client-server implementation for
+ which this is the server. The matching client application is implemented in
+ the <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/debugging/Client.html" title="class in ca.cgjennings.apps.arkham.plugins.debugging"><code>Client</code></a> class. When debugging is enabled, the server will accept
+ network connections that use its debugging protocol and respond to the
+ commands enumerated by <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/debugging/Command.html" title="enum in ca.cgjennings.apps.arkham.plugins.debugging"><code>Command</code></a>.
 
- <p><b>Protocol Summary:</b> Each command is sent as a sequence of UTF-8 text
+ <p>
+ <b>Protocol Summary:</b> Each command is sent as a sequence of UTF-8 text
  lines. The first line must be the magic value <tt>SEDP3</tt>. The next line
- is the command name, as given by <code>Command.name()</code>. This is followed
- by zero or more lines, where each line represents one argument. The server
- will reply with either <tt>SEDP3 OK</tt> and the reply to the command (if any),
- or else <tt>SEDP3 ERR</tt> and an error message.</div>
+ is the command name, as given by <code>Command.name()</code>. This is
+ followed by zero or more lines, where each line represents one argument. The
+ server will reply with either <tt>SEDP3 OK</tt> and the reply to the command
+ (if any), or else <tt>SEDP3 ERR</tt> and an error message.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -181,8 +183,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/plugins/debugging/DefaultScriptDebugger.html#preloadTopLevelScript-java.lang.String-java.lang.String-">preloadTopLevelScript</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;location,
                      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;source)</code>
-<div class="block">If the debugger is running, the script identified by this resource
- is loaded and added to the debugger.</div>
+<div class="block">If the debugger is running, the script identified by this resource is
+ loaded and added to the debugger.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
@@ -256,11 +258,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>install</h4>
 <pre>public static&nbsp;void&nbsp;install()</pre>
-<div class="block">Installs the script debugger if it is not already installed.
- Once this returns, the debug server will be available to debug scripts.
- The debugger will be started automatically at application startup if
- user preferences direct this; however, it can also be started at any time
- in an already-running instance of the application.</div>
+<div class="block">Installs the script debugger if it is not already installed. Once this
+ returns, the debug server will be available to debug scripts. The
+ debugger will be started automatically at application startup if user
+ preferences direct this; however, it can also be started at any time in
+ an already-running instance of the application.</div>
 </li>
 </ul>
 <a name="isClientConnected--">
@@ -270,11 +272,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isClientConnected</h4>
 <pre>public static&nbsp;boolean&nbsp;isClientConnected()</pre>
-<div class="block">Returns <code>true</code> if a client is connected to the debugger.
- Since the client does not maintain a continuous connection, this
- method cannot be guaranteed to be accurate. It works by tracking the
- last time that a client connected to the server, and returning <code>true</code>
- if the last connection was in the near past.</div>
+<div class="block">Returns <code>true</code> if a client is connected to the debugger. Since
+ the client does not maintain a continuous connection, this method cannot
+ be guaranteed to be accurate. It works by tracking the last time that a
+ client connected to the server, and returning <code>true</code> if the
+ last connection was in the near past.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if a client application is probably available</dd>
@@ -303,10 +305,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>preloadTopLevelScript</h4>
 <pre>public static&nbsp;void&nbsp;preloadTopLevelScript(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;location,
                                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;source)</pre>
-<div class="block">If the debugger is running, the script identified by this resource
- is loaded and added to the debugger. This allows breakpoints to be
- set on the script even if it has not yet been run.
- If the debugger is not installed, this method does nothing.</div>
+<div class="block">If the debugger is running, the script identified by this resource is
+ loaded and added to the debugger. This allows breakpoints to be set on
+ the script even if it has not yet been run. If the debugger is not
+ installed, this method does nothing.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>location</code> - the resource that contains the script</dd>
@@ -321,10 +323,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>uninstall</h4>
 <pre>public static&nbsp;void&nbsp;uninstall()</pre>
-<div class="block">Uninstall the debugger. The debugger is not intended to be started
- and restarted in a single session; this method is meant to be called
- at application shutdown. There is normally no need to call this directly
- as it will be called as part of normal application shutdown.</div>
+<div class="block">Uninstall the debugger. The debugger is not intended to be started and
+ restarted in a single session; this method is meant to be called at
+ application shutdown. There is normally no need to call this directly as
+ it will be called as part of normal application shutdown.</div>
 </li>
 </ul>
 </li>
@@ -347,6 +349,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

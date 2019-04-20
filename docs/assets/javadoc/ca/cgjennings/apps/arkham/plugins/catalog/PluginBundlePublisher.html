@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -107,31 +109,33 @@ var activeTableTab = "activeTableTab";
 <pre>public class <span class="typeNameLabel">PluginBundlePublisher</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">Utility methods for converting plug-in bundles to and from published catalog
- bundles (such as ".pbz" files).
- A published bundle is the network transport format used to transmit
- plug-in bundles from a remote catalog server to Strange Eons.
- 
- <p>Bundles are converted to their "published" form in a two-step process.
- The first step, "packing", converts the bundle into an uncompressed
- archive with reorganized data that is optimized for compression.
- Some extraneous information about the structure of the archive and any
- compiled classes is deleted during packing to reduce download size. The exact
- details may change from version to version, but examples of possible changes
- include removing empty directories, using a single timestamp for all files
- in the archive, and removing information about classes that is used by
- debugging tools. (However, the line and source file information displayed
- when an exception is thrown will <i>not</i> be removed.)
- 
- <p>The second step compresses the entire packed archive file. The compression
+ bundles (such as ".pbz" files). A published bundle is the network transport
+ format used to transmit plug-in bundles from a remote catalog server to
+ Strange Eons.
+
+ <p>
+ Bundles are converted to their "published" form in a two-step process. The
+ first step, "packing", converts the bundle into an uncompressed archive with
+ reorganized data that is optimized for compression. Some extraneous
+ information about the structure of the archive and any compiled classes is
+ deleted during packing to reduce download size. The exact details may change
+ from version to version, but examples of possible changes include removing
+ empty directories, using a single timestamp for all files in the archive, and
+ removing information about classes that is used by debugging tools. (However,
+ the line and source file information displayed when an exception is thrown
+ will <i>not</i> be removed.)
+
+ <p>
+ The second step compresses the entire packed archive file. The compression
  method is generally chosen for maximum compression, without regard to the
  time required to compress or decompress the archive. A number of compression
- algorithms, are supported but BZip2 is the standard
- method for catalog entries.
- 
- <p>Likewise, to convert a published bundle to a plain bundle, it must first
- be decompressed by the same method used to compress it, then unpacked to
- a bundle file. As a convenience, the
- <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/PluginBundlePublisher.html#publishedBundleToPluginBundle-java.io.File-java.io.File-ca.cgjennings.algo.ProgressListener-"><code>publishedBundleToPluginBundle</code></a> method can perform both steps with a single method call.</div>
+ algorithms are supported.
+
+ <p>
+ Likewise, to convert a published bundle to a plain bundle, it must first be
+ decompressed by the same method used to compress it, then unpacked to a
+ bundle file. As a convenience, the  <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/PluginBundlePublisher.html#publishedBundleToPluginBundle-java.io.File-java.io.File-"><code>publishedBundleToPluginBundle</code></a> method can perform both steps with a single
+ method call.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -180,8 +184,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/PluginBundlePublisher.html#STRIP_JAR_METADATA_SETTING">STRIP_JAR_METADATA_SETTING</a></span></code>
 <div class="block">If this boolean <a href="../../../../../../resources/Settings.html#getUser--">user setting</a> is
- <code>true</code>, then irrelevant JAR file metadata will be stripped
- out when packing the file.</div>
+ <code>true</code>, then irrelevant JAR file metadata will be stripped out
+ when packing the file.</div>
 </td>
 </tr>
 </table>
@@ -201,47 +205,42 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/PluginBundlePublisher.html#compress-java.io.File-java.io.File-ca.cgjennings.apps.arkham.plugins.catalog.PluginBundlePublisher.CompressionMethod-ca.cgjennings.algo.ProgressListener-">compress</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;source,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/PluginBundlePublisher.html#compress-java.io.File-java.io.File-ca.cgjennings.apps.arkham.plugins.catalog.PluginBundlePublisher.CompressionMethod-">compress</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;source,
         <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;dest,
-        <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/PluginBundlePublisher.CompressionMethod.html" title="enum in ca.cgjennings.apps.arkham.plugins.catalog">PluginBundlePublisher.CompressionMethod</a>&nbsp;method,
-        <a href="../../../../../../ca/cgjennings/algo/ProgressListener.html" title="interface in ca.cgjennings.algo">ProgressListener</a>&nbsp;listener)</code>
+        <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/PluginBundlePublisher.CompressionMethod.html" title="enum in ca.cgjennings.apps.arkham.plugins.catalog">PluginBundlePublisher.CompressionMethod</a>&nbsp;method)</code>
 <div class="block">Compresses a file using the specified compression method.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/PluginBundlePublisher.html#decompress-java.io.File-java.io.File-ca.cgjennings.apps.arkham.plugins.catalog.PluginBundlePublisher.CompressionMethod-ca.cgjennings.algo.ProgressListener-">decompress</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;source,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/PluginBundlePublisher.html#decompress-java.io.File-java.io.File-ca.cgjennings.apps.arkham.plugins.catalog.PluginBundlePublisher.CompressionMethod-">decompress</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;source,
           <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;dest,
-          <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/PluginBundlePublisher.CompressionMethod.html" title="enum in ca.cgjennings.apps.arkham.plugins.catalog">PluginBundlePublisher.CompressionMethod</a>&nbsp;method,
-          <a href="../../../../../../ca/cgjennings/algo/ProgressListener.html" title="interface in ca.cgjennings.algo">ProgressListener</a>&nbsp;listener)</code>
+          <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/PluginBundlePublisher.CompressionMethod.html" title="enum in ca.cgjennings.apps.arkham.plugins.catalog">PluginBundlePublisher.CompressionMethod</a>&nbsp;method)</code>
 <div class="block">Decompresses a file previously compressed with the specified compression
  method.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/PluginBundlePublisher.html#packBundle-java.io.File-java.io.File-ca.cgjennings.algo.ProgressListener-">packBundle</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;source,
-          <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;dest,
-          <a href="../../../../../../ca/cgjennings/algo/ProgressListener.html" title="interface in ca.cgjennings.algo">ProgressListener</a>&nbsp;listener)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/PluginBundlePublisher.html#packBundle-java.io.File-java.io.File-">packBundle</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;source,
+          <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;dest)</code>
 <div class="block">Converts a bundle into an uncompressed, packed representation format.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/PluginBundlePublisher.html#publishedBundleToPluginBundle-java.io.File-java.io.File-ca.cgjennings.algo.ProgressListener-">publishedBundleToPluginBundle</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;source,
-                             <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;dest,
-                             <a href="../../../../../../ca/cgjennings/algo/ProgressListener.html" title="interface in ca.cgjennings.algo">ProgressListener</a>&nbsp;listener)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/PluginBundlePublisher.html#publishedBundleToPluginBundle-java.io.File-java.io.File-">publishedBundleToPluginBundle</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;source,
+                             <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;dest)</code>
 <div class="block">Converts a published bundle file to a standard plug-in bundle,
  decompressing and unpacking it with a single method call.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/PluginBundlePublisher.html#unpackBundle-java.io.File-java.io.File-ca.cgjennings.algo.ProgressListener-">unpackBundle</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;source,
-            <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;dest,
-            <a href="../../../../../../ca/cgjennings/algo/ProgressListener.html" title="interface in ca.cgjennings.algo">ProgressListener</a>&nbsp;listener)</code>
-<div class="block">Converts an uncompressed, packed file into a plain, uncompressed
- plug-in bundle that can be loaded by the Strange Eons plug-in system.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/PluginBundlePublisher.html#unpackBundle-java.io.File-java.io.File-">unpackBundle</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;source,
+            <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;dest)</code>
+<div class="block">Converts an uncompressed, packed file into a plain, uncompressed plug-in
+ bundle that can be loaded by the Strange Eons plug-in system.</div>
 </td>
 </tr>
 </table>
@@ -274,14 +273,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>STRIP_JAR_METADATA_SETTING</h4>
 <pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> STRIP_JAR_METADATA_SETTING</pre>
 <div class="block">If this boolean <a href="../../../../../../resources/Settings.html#getUser--">user setting</a> is
- <code>true</code>, then irrelevant JAR file metadata will be stripped
- out when packing the file. This data, consisting of one or more files in
- the META-INF archive directory, is sometimes added as a byproduct of
- building class-based plug-ins with a Java development environment. It
- is not needed by normal plug-in bundles, but is relevant in the rare
- case that a plug-in bundle is meant to be used as either a plug-in or a
- Java application. The default is <code>true</code>, that is, to strip
- out such metadata during publishing.</div>
+ <code>true</code>, then irrelevant JAR file metadata will be stripped out
+ when packing the file. This data, consisting of one or more files in the
+ META-INF archive directory, is sometimes added as a byproduct of building
+ class-based plug-ins with a Java development environment. It is not
+ needed by normal plug-in bundles, but is relevant in the rare case that a
+ plug-in bundle is meant to be used as either a plug-in or a Java
+ application. The default is <code>true</code>, that is, to strip out such
+ metadata during publishing.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../../constant-values.html#ca.cgjennings.apps.arkham.plugins.catalog.PluginBundlePublisher.STRIP_JAR_METADATA_SETTING">Constant Field Values</a></dd>
@@ -296,7 +295,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="compress-java.io.File-java.io.File-ca.cgjennings.apps.arkham.plugins.catalog.PluginBundlePublisher.CompressionMethod-ca.cgjennings.algo.ProgressListener-">
+<a name="compress-java.io.File-java.io.File-ca.cgjennings.apps.arkham.plugins.catalog.PluginBundlePublisher.CompressionMethod-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -304,30 +303,27 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>compress</h4>
 <pre>public static&nbsp;void&nbsp;compress(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;source,
                             <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;dest,
-                            <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/PluginBundlePublisher.CompressionMethod.html" title="enum in ca.cgjennings.apps.arkham.plugins.catalog">PluginBundlePublisher.CompressionMethod</a>&nbsp;method,
-                            <a href="../../../../../../ca/cgjennings/algo/ProgressListener.html" title="interface in ca.cgjennings.algo">ProgressListener</a>&nbsp;listener)
+                            <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/PluginBundlePublisher.CompressionMethod.html" title="enum in ca.cgjennings.apps.arkham.plugins.catalog">PluginBundlePublisher.CompressionMethod</a>&nbsp;method)
                      throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Compresses a file using the specified compression method.
- Compression is applied after packing to complete the publication process.
- The final output file should have the same name as the original bundle
- with the file extension of the compression method appended. For example,
- if the bundle "OmicronPlugin.seplugin" is compressed using BZip2
- compression, the resulting file should be named
- "OmicronPlugin.seplugin.pbz".</div>
+<div class="block">Compresses a file using the specified compression method. Compression is
+ applied after packing to complete the publication process. The final
+ output file should have the same name as the original bundle with the
+ file extension of the compression method appended. For example, if the
+ bundle "OmicronPlugin.seplugin" is compressed using BZip2 compression,
+ the resulting file should be named "OmicronPlugin.seplugin.pbz".</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the uncompressed source file</dd>
 <dd><code>dest</code> - the compressed file to create</dd>
 <dd><code>method</code> - the compression method to use; if <code>null</code>, the
-     default method is selected</dd>
-<dd><code>listener</code> - an optional listener to be notified with progress updates</dd>
+ default method is selected</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if an error occurs</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if either file is <code>null</code></dd>
 </dl>
 </li>
 </ul>
-<a name="decompress-java.io.File-java.io.File-ca.cgjennings.apps.arkham.plugins.catalog.PluginBundlePublisher.CompressionMethod-ca.cgjennings.algo.ProgressListener-">
+<a name="decompress-java.io.File-java.io.File-ca.cgjennings.apps.arkham.plugins.catalog.PluginBundlePublisher.CompressionMethod-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -335,8 +331,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>decompress</h4>
 <pre>public static&nbsp;void&nbsp;decompress(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;source,
                               <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;dest,
-                              <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/PluginBundlePublisher.CompressionMethod.html" title="enum in ca.cgjennings.apps.arkham.plugins.catalog">PluginBundlePublisher.CompressionMethod</a>&nbsp;method,
-                              <a href="../../../../../../ca/cgjennings/algo/ProgressListener.html" title="interface in ca.cgjennings.algo">ProgressListener</a>&nbsp;listener)
+                              <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/PluginBundlePublisher.CompressionMethod.html" title="enum in ca.cgjennings.apps.arkham.plugins.catalog">PluginBundlePublisher.CompressionMethod</a>&nbsp;method)
                        throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Decompresses a file previously compressed with the specified compression
  method. If the method is <code>null</code>, then a compression method
@@ -347,104 +342,98 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>source</code> - the compressed source file</dd>
 <dd><code>dest</code> - the uncompressed file to create</dd>
 <dd><code>method</code> - the compression method used to compress the file, or
-     <code>null</code> to choose based on the input file name</dd>
-<dd><code>listener</code> - an optional listener to be notified with progress updates</dd>
+ <code>null</code> to choose based on the input file name</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if an error occurs</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if either file is <code>null</code></dd>
 </dl>
 </li>
 </ul>
-<a name="packBundle-java.io.File-java.io.File-ca.cgjennings.algo.ProgressListener-">
+<a name="packBundle-java.io.File-java.io.File-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>packBundle</h4>
 <pre>public static&nbsp;void&nbsp;packBundle(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;source,
-                              <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;dest,
-                              <a href="../../../../../../ca/cgjennings/algo/ProgressListener.html" title="interface in ca.cgjennings.algo">ProgressListener</a>&nbsp;listener)
+                              <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;dest)
                        throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Converts a bundle into an uncompressed, packed representation format.
- The output file must still be compressed to complete the publication
- process.
- 
- <p>The specified bundle file is expected to use the
- <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/PluginBundle.html#getPlainFile--"><code>plain format</code></a>.
- This method <i>does not verify the format</i>, and the result of using
- a non-plain bundle is undefined.</div>
+<div class="block">Converts a bundle into an uncompressed, packed representation format. The
+ output file must still be compressed to complete the publication process.
+
+ <p>
+ The specified bundle file is expected to use the
+ <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/PluginBundle.html#getPlainFile--"><code>plain format</code></a>. This method <i>does not
+ verify the format</i>, and the result of using a non-plain bundle is
+ undefined.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the bundle file to convert</dd>
 <dd><code>dest</code> - the packed file to create</dd>
-<dd><code>listener</code> - an optional listener to be notified with progress updates</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if an error occurs</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if either file is <code>null</code></dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><code>#unpackBundle(java.io.File, java.io.File)</code></dd>
+<dd><a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/PluginBundlePublisher.html#unpackBundle-java.io.File-java.io.File-"><code>unpackBundle(java.io.File, java.io.File)</code></a></dd>
 </dl>
 </li>
 </ul>
-<a name="publishedBundleToPluginBundle-java.io.File-java.io.File-ca.cgjennings.algo.ProgressListener-">
+<a name="publishedBundleToPluginBundle-java.io.File-java.io.File-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>publishedBundleToPluginBundle</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;publishedBundleToPluginBundle(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;source,
-                                                 <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;dest,
-                                                 <a href="../../../../../../ca/cgjennings/algo/ProgressListener.html" title="interface in ca.cgjennings.algo">ProgressListener</a>&nbsp;listener)
+                                                 <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;dest)
                                           throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block">Converts a published bundle file to a standard plug-in bundle,
  decompressing and unpacking it with a single method call. An optional
  listener can be provided that will be notified of the progress of the
  bundle conversion.
- 
- <p>The compression method is detected automatically from the file name.
- If the destination is <code>null</code>, a file in the same folder with
- the publication extension (such as <code>.pbz</code>) removed will be used.
- An optional listener may be supplied that will be notified of the unpacking
- progress.</div>
+
+ <p>
+ The compression method is detected automatically from the file name. If
+ the destination is <code>null</code>, a file in the same folder with the
+ publication extension (such as <code>.pbz</code>) removed will be used.
+ An optional listener may be supplied that will be notified of the
+ unpacking progress.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the source file to convert</dd>
 <dd><code>dest</code> - the destination bundle file; may be <code>null</code> to
-     create a destination based on the source</dd>
-<dd><code>listener</code> - an optional listener to be notified with progress updates</dd>
+ create a destination based on the source</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the name of the destination file; useful if <code>null</code> was
-     specified to determine the name automatically</dd>
+ specified to determine the name automatically</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the source file is <code>null</code></dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if an I/O error occurs during unpacking</dd>
 </dl>
 </li>
 </ul>
-<a name="unpackBundle-java.io.File-java.io.File-ca.cgjennings.algo.ProgressListener-">
+<a name="unpackBundle-java.io.File-java.io.File-">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>unpackBundle</h4>
 <pre>public static&nbsp;void&nbsp;unpackBundle(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;source,
-                                <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;dest,
-                                <a href="../../../../../../ca/cgjennings/algo/ProgressListener.html" title="interface in ca.cgjennings.algo">ProgressListener</a>&nbsp;listener)
+                                <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;dest)
                          throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Converts an uncompressed, packed file into a plain, uncompressed
- plug-in bundle that can be loaded by the Strange Eons plug-in system.
- A published bundle must be <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/PluginBundlePublisher.html#decompress-java.io.File-java.io.File-ca.cgjennings.apps.arkham.plugins.catalog.PluginBundlePublisher.CompressionMethod-ca.cgjennings.algo.ProgressListener-">decompressed</a>
- before it can be unpacked.</div>
+<div class="block">Converts an uncompressed, packed file into a plain, uncompressed plug-in
+ bundle that can be loaded by the Strange Eons plug-in system. A published
+ bundle must be <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/PluginBundlePublisher.html#decompress-java.io.File-java.io.File-ca.cgjennings.apps.arkham.plugins.catalog.PluginBundlePublisher.CompressionMethod-">decompressed</a> before it can be
+ unpacked.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the packed file to convert</dd>
 <dd><code>dest</code> - the bundle file to create</dd>
-<dd><code>listener</code> - an optional listener to be notified with progress updates</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if an error occurs</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if either file is <code>null</code></dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><code>#packBundle(java.io.File, java.io.File)</code></dd>
+<dd><a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/PluginBundlePublisher.html#packBundle-java.io.File-java.io.File-"><code>packBundle(java.io.File, java.io.File)</code></a></dd>
 </dl>
 </li>
 </ul>
@@ -468,6 +457,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

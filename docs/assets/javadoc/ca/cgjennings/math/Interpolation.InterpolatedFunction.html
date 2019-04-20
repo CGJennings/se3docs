@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -121,18 +123,20 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 implements <a href="../../../ca/cgjennings/math/Fn.html" title="interface in ca.cgjennings.math">Fn</a></pre>
 <div class="block">This is a base class for interpolated functions. An interpolated function
  is given a set of points. It then creates a function for a curve that
- passes through or near those points, interpolating "smoothly" between them.
- <p>One way to think of this is that you have a mystery
- curve that you don't have a function for, but that you have some
- (possibly noisy) points which are on or near the curve.
- An InterpolatedFunction will create a function for your mystery curve,
- allowing you to evaluate the function for any point instead of just your
- sample points. Depending on the kind of interpolation, the data may be assumed
- to be noisy (the interpolator finds a curve of best fit, effectively
- adjusting the points to fit an idealized curve) or it may assume
- that the data are perfect (the interpolator passes through each points,
- adjusting the curve as needed). It may also fall between these extremes,
- coming close to each point but not necessarily passing through it.</div>
+ passes through or near those points, interpolating "smoothly" between
+ them.
+ <p>
+ One way to think of this is that you have a mystery curve that you don't
+ have a function for, but that you have some (possibly noisy) points which
+ are on or near the curve. An InterpolatedFunction will create a function
+ for your mystery curve, allowing you to evaluate the function for any
+ point instead of just your sample points. Depending on the kind of
+ interpolation, the data may be assumed to be noisy (the interpolator
+ finds a curve of best fit, effectively adjusting the points to fit an
+ idealized curve) or it may assume that the data are perfect (the
+ interpolator passes through each points, adjusting the curve as needed).
+ It may also fall between these extremes, coming close to each point but
+ not necessarily passing through it.</div>
 </li>
 </ul>
 </div>
@@ -168,8 +172,8 @@ implements <a href="../../../ca/cgjennings/math/Fn.html" title="interface in ca.
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/math/Interpolation.InterpolatedFunction.html#InterpolatedFunction-double:A-double:A-">InterpolatedFunction</a></span>(double[]&nbsp;x,
                     double[]&nbsp;y)</code>
-<div class="block">Creates an interpolated function for the points
- (x[0],y[0]), (x[1],y[1]), ..., (x[x.length-1],y[y.length-1).</div>
+<div class="block">Creates an interpolated function for the points (x[0],y[0]),
+ (x[1],y[1]), ..., (x[x.length-1],y[y.length-1).</div>
 </td>
 </tr>
 </table>
@@ -231,20 +235,21 @@ implements <a href="../../../ca/cgjennings/math/Fn.html" title="interface in ca.
 <h4>InterpolatedFunction</h4>
 <pre>public&nbsp;InterpolatedFunction(double[]&nbsp;x,
                             double[]&nbsp;y)</pre>
-<div class="block">Creates an interpolated function for the points
- (x[0],y[0]), (x[1],y[1]), ..., (x[x.length-1],y[y.length-1).
- The nature of the interpolation is determined by the concrete
- implementation.
- 
- <p>The base class calls <a href="../../../ca/cgjennings/math/Interpolation.InterpolatedFunction.html#checkPoints-double:A-double:A-"><code>checkPoints(double[], double[])</code></a> in order
- to validate the input, but does nothing else.</div>
+<div class="block">Creates an interpolated function for the points (x[0],y[0]),
+ (x[1],y[1]), ..., (x[x.length-1],y[y.length-1). The nature of the
+ interpolation is determined by the concrete implementation.
+
+ <p>
+ The base class calls <a href="../../../ca/cgjennings/math/Interpolation.InterpolatedFunction.html#checkPoints-double:A-double:A-"><code>checkPoints(double[], double[])</code></a> in order to validate the
+ input, but does nothing else.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>x</code> - an array of x-values for the points</dd>
 <dd><code>y</code> - an array of y-values for the points</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if either array is <code>null</code></dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the data point criteria are not met</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the data point criteria are not
+ met</dd>
 </dl>
 </li>
 </ul>
@@ -269,11 +274,12 @@ implements <a href="../../../ca/cgjennings/math/Fn.html" title="interface in ca.
  <ul>
  <li>x and y must be non-<code>null</code> and have the same length
  <li>there must be at least one point (note that the concrete subclass
-     may require more than one point; check the specific class for details)
+ may require more than one point; check the specific class for
+ details)
  <li>the values of x must be strictly increasing (for all j in 1 to
-     x.length-1, x[j-1] &lt; x[j]); this simply means that the x
-     values must be sorted from lowest to highest and must not contain
-     any repeats
+ x.length-1, x[j-1] &lt; x[j]); this simply means that the x values
+ must be sorted from lowest to highest and must not contain any
+ repeats
  </ul>
  Subclasses should call the superclass implementation and then perform
  any additional checks specific to the interpolator.</div>
@@ -325,6 +331,8 @@ implements <a href="../../../ca/cgjennings/math/Fn.html" title="interface in ca.
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

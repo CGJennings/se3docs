@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../index-all.html">Index</a></li>
+<li><a href="../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -107,24 +109,25 @@ var activeTableTab = "activeTableTab";
  type. Templates are used by SE to help the user construct custom expansions
  for personal use.
 
- <p><b>Visual Variants versus Logical Variants</b><br>
+ <p>
+ <b>Visual Variants versus Logical Variants</b><br>
  The template allows games to distinguish between <i>visual variants</i>
  (different expansion symbol styles) and <i>logical variants</i>
- (different semantic variants). For example, a game might use icons that
- are different colours for different types of components (visual variants),
- and draw the icon in different places depending on whether the icon is
- indicating that the component <i>belongs</i> to an expansion or
+ (different semantic variants). For example, a game might use icons that are
+ different colours for different types of components (visual variants), and
+ draw the icon in different places depending on whether the icon is indicating
+ that the component <i>belongs</i> to an expansion or
  <i>requires</i> that expansion (logical variants). The default expansion
- symbol painting mechanism assumes that these two classes are identical
- (that is, that each visual variant is also a logical variant); selecting a
- logical variant will result in the corresponding visual variant being painted.
+ symbol painting mechanism assumes that these two classes are identical (that
+ is, that each visual variant is also a logical variant); selecting a logical
+ variant will result in the corresponding visual variant being painted.
 
- <p>In Strange Eons, the <b>Variant</b> menu will be populated from the
- logical variant list, and the expansion setting on the component will be
- set with the index of the logical variant. When creating a new expansion
- using <b>Expansion|New</b>, the visual variant list will be used so
- that the user can supply appropriate graphics for the different visual
- variants.</div>
+ <p>
+ In Strange Eons, the <b>Variant</b> menu will be populated from the logical
+ variant list, and the expansion setting on the component will be set with the
+ index of the logical variant. When creating a new expansion using
+ <b>Expansion|New</b>, the visual variant list will be used so that the user
+ can supply appropriate graphics for the different visual variants.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -150,8 +153,8 @@ var activeTableTab = "activeTableTab";
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../gamedata/ExpansionSymbolTemplate.html#canGenerateVariantsAutomatically--">canGenerateVariantsAutomatically</a></span>()</code>
-<div class="block">Returns <code>true</code> if this template can automatically generate
- a family of variants given an example image.</div>
+<div class="block">Returns <code>true</code> if this template can automatically generate a
+ family of variants given an example image.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -211,17 +214,15 @@ var activeTableTab = "activeTableTab";
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../gamedata/ExpansionSymbolTemplate.html#getVariantName-int-">getVariantName</a></span>(int&nbsp;variant)</code>
-<div class="block">Returns the name of the
- <code>n</code>th symbol variant; this is a simple description in the UI
- language; e.g., "Regular", "Inversed".</div>
+<div class="block">Returns the name of the <code>n</code>th symbol variant; this is a simple
+ description in the UI language; e.g., "Regular", "Inversed".</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../gamedata/ExpansionSymbolTemplate.html#isCustomDrawn--">isCustomDrawn</a></span>()</code>
-<div class="block">Returns
- <code>true</code> if the components for this game will draw the expansion
- symbols themselves instead of relying on the default mechanism.</div>
+<div class="block">Returns <code>true</code> if the components for this game will draw the
+ expansion symbols themselves instead of relying on the default mechanism.</div>
 </td>
 </tr>
 </table>
@@ -246,12 +247,12 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>canGenerateVariantsAutomatically</h4>
 <pre>boolean&nbsp;canGenerateVariantsAutomatically()</pre>
-<div class="block">Returns <code>true</code> if this template can automatically generate
- a family of variants given an example image.</div>
+<div class="block">Returns <code>true</code> if this template can automatically generate a
+ family of variants given an example image.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if 
-     <a href="../gamedata/ExpansionSymbolTemplate.html#generateVariant-java.awt.image.BufferedImage-int-"><code>generateVariant(java.awt.image.BufferedImage, int)</code></a> is supported</dd>
+<dd><code>true</code> if
+ <a href="../gamedata/ExpansionSymbolTemplate.html#generateVariant-java.awt.image.BufferedImage-int-"><code>generateVariant(java.awt.image.BufferedImage, int)</code></a> is supported</dd>
 </dl>
 </li>
 </ul>
@@ -267,13 +268,13 @@ var activeTableTab = "activeTableTab";
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>baseSymbol</code> - the example symbol to base the new design on; usually
-      it has the same style as the symbol at position 0</dd>
+ it has the same style as the symbol at position 0</dd>
 <dd><code>variant</code> - the number of the symbol design to generate</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the generated symbol for position <code>n</code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</a></code> - if this template cannot generate
-      symbols</dd>
+ symbols</dd>
 </dl>
 </li>
 </ul>
@@ -306,8 +307,7 @@ var activeTableTab = "activeTableTab";
  be used when selecting or editing a symbol with this variant. For
  example, the end user expansion dialog (Expansion|New) will use this for
  the drop boxes that the user drops symbol images on. If this method
- returns
- <code>null</code>, a default paint will be used.</div>
+ returns <code>null</code>, a default paint will be used.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>variant</code> - the index of the variant to obtain a backdrop for</dd>
@@ -410,9 +410,8 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>getVariantName</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getVariantName(int&nbsp;variant)</pre>
-<div class="block">Returns the name of the
- <code>n</code>th symbol variant; this is a simple description in the UI
- language; e.g., "Regular", "Inversed".</div>
+<div class="block">Returns the name of the <code>n</code>th symbol variant; this is a simple
+ description in the UI language; e.g., "Regular", "Inversed".</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>variant</code> - the variant number of the symbol</dd>
@@ -428,9 +427,8 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>isCustomDrawn</h4>
 <pre>boolean&nbsp;isCustomDrawn()</pre>
-<div class="block">Returns
- <code>true</code> if the components for this game will draw the expansion
- symbols themselves instead of relying on the default mechanism.</div>
+<div class="block">Returns <code>true</code> if the components for this game will draw the
+ expansion symbols themselves instead of relying on the default mechanism.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if expansion symbols are drawn by the
@@ -459,6 +457,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../index-all.html">Index</a></li>
+<li><a href="../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

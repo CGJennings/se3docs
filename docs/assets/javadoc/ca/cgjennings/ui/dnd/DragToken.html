@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -106,10 +108,10 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">DragToken&lt;T&gt;</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block">A drag token combines an object with a visual representation which can be 
- dragged around the display by the user. It is part of a simple framework
- for creating drag-and-drop interfaces that bypasses AWT/Swing drag-and-drop,
- and thus is more consistent across platforms.</div>
+<div class="block">A drag token combines an object with a visual representation which can be
+ dragged around the display by the user. It is part of a simple framework for
+ creating drag-and-drop interfaces that bypasses AWT/Swing drag-and-drop, and
+ thus is more consistent across platforms.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -136,8 +138,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/ui/dnd/DragToken.html#DragToken-T-java.awt.Image-">DragToken</a></span>(<a href="../../../../ca/cgjennings/ui/dnd/DragToken.html" title="type parameter in DragToken">T</a>&nbsp;tokenObject,
          <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Image.html?is-external=true" title="class or interface in java.awt">Image</a>&nbsp;tokenImage)</code>
-<div class="block">Creates a new token that represents the specified object with the
- given image.</div>
+<div class="block">Creates a new token that represents the specified object with the given
+ image.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -145,8 +147,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
          <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Image.html?is-external=true" title="class or interface in java.awt">Image</a>&nbsp;tokenImage,
          int&nbsp;handleOffsetX,
          int&nbsp;handleOffsetY)</code>
-<div class="block">Creates a new token that represents the specified object with the
- given image.</div>
+<div class="block">Creates a new token that represents the specified object with the given
+ image.</div>
 </td>
 </tr>
 </table>
@@ -228,11 +230,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>DragToken</h4>
 <pre>public&nbsp;DragToken(<a href="../../../../ca/cgjennings/ui/dnd/DragToken.html" title="type parameter in DragToken">T</a>&nbsp;tokenObject,
                  <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Image.html?is-external=true" title="class or interface in java.awt">Image</a>&nbsp;tokenImage)</pre>
-<div class="block">Creates a new token that represents the specified object with the
- given image.
- The token's handle (the point by which it is dragged; typically, the
- point at which the cursor attaches to the image)
- will be located at the center of the image.</div>
+<div class="block">Creates a new token that represents the specified object with the given
+ image. The token's handle (the point by which it is dragged; typically,
+ the point at which the cursor attaches to the image) will be located at
+ the center of the image.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>tokenObject</code> - the object to be represented</dd>
@@ -254,17 +255,18 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                  <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Image.html?is-external=true" title="class or interface in java.awt">Image</a>&nbsp;tokenImage,
                  int&nbsp;handleOffsetX,
                  int&nbsp;handleOffsetY)</pre>
-<div class="block">Creates a new token that represents the specified object with the
- given image.
- The token's handle (the point by which it is dragged; typically, the
- point at which the cursor attaches to the image)
- will be located at the specified offset.</div>
+<div class="block">Creates a new token that represents the specified object with the given
+ image. The token's handle (the point by which it is dragged; typically,
+ the point at which the cursor attaches to the image) will be located at
+ the specified offset.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>tokenObject</code> - the object to be represented</dd>
 <dd><code>tokenImage</code> - the image that represents the object</dd>
-<dd><code>handleOffsetX</code> - the x-coordinate of the handle, relative to the upper-left corner of the image</dd>
-<dd><code>handleOffsetY</code> - the y-coordinate of the handle, relative to the upper-left corner of the image</dd>
+<dd><code>handleOffsetX</code> - the x-coordinate of the handle, relative to the
+ upper-left corner of the image</dd>
+<dd><code>handleOffsetY</code> - the y-coordinate of the handle, relative to the
+ upper-left corner of the image</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the image is <code>null</code></dd>
 </dl>
@@ -289,7 +291,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  attached while dragging.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the X-coordinate of the handle, relative to the upper-left corner of the image</dd>
+<dd>the X-coordinate of the handle, relative to the upper-left corner
+ of the image</dd>
 </dl>
 </li>
 </ul>
@@ -304,7 +307,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  attached while dragging.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the Y-coordinate of the handle, relative to the upper-left corner of the image</dd>
+<dd>the Y-coordinate of the handle, relative to the upper-left corner
+ of the image</dd>
 </dl>
 </li>
 </ul>
@@ -315,8 +319,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getImage</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;getImage()</pre>
-<div class="block">Returns the token image. This may return a different image from the
- one used to create the token.</div>
+<div class="block">Returns the token image. This may return a different image from the one
+ used to create the token.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the image used to represent the dragged object</dd>
@@ -374,6 +378,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

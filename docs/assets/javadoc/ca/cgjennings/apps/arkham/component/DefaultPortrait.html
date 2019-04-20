@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -116,9 +118,9 @@ var activeTableTab = "activeTableTab";
 <pre>public class <span class="typeNameLabel">DefaultPortrait</span>
 extends <a href="../../../../../ca/cgjennings/apps/arkham/component/AbstractPortrait.html" title="class in ca.cgjennings.apps.arkham.component">AbstractPortrait</a>
 implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></pre>
-<div class="block">A default implementation of the <a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html" title="interface in ca.cgjennings.apps.arkham.component"><code>Portrait</code></a> interface that creates
- a key-based portrait similar to that provided by the <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html" title="class in ca.cgjennings.apps.arkham.diy"><code>DIY</code></a> system.
- This implementation can be used with components that have up to 32 faces.</div>
+<div class="block">A default implementation of the <a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html" title="interface in ca.cgjennings.apps.arkham.component"><code>Portrait</code></a> interface that creates a
+ key-based portrait similar to that provided by the <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html" title="class in ca.cgjennings.apps.arkham.diy"><code>DIY</code></a> system. This
+ implementation can be used with components that have up to 32 faces.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -161,7 +163,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#MAXIMUM_SHEET_INDEX">MAXIMUM_SHEET_INDEX</a></span></code>
-<div class="block">The maximum index of a component's sheets that a default portrait can be drawn on.</div>
+<div class="block">The maximum index of a component's sheets that a default portrait can be
+ drawn on.</div>
 </td>
 </tr>
 </table>
@@ -215,7 +218,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#DefaultPortrait-java.lang.String-ca.cgjennings.apps.arkham.component.DefaultPortrait-">DefaultPortrait</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;newKey,
                <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html" title="class in ca.cgjennings.apps.arkham.component">DefaultPortrait</a>&nbsp;original)</code>
-<div class="block">Creates a default portrait that replaces an existing portrait by 
+<div class="block">Creates a default portrait that replaces an existing portrait by
  switching to a new base key.</div>
 </td>
 </tr>
@@ -281,29 +284,29 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Dimension.html?is-external=true" title="class or interface in java.awt">Dimension</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#getClipDimensions--">getClipDimensions</a></span>()</code>
 <div class="block">Returns the size of the bounding rectangle of the area that the portrait
- is drawn in on the component sheet, in the coordinate system of the sheet's
- template.</div>
+ is drawn in on the component sheet, in the coordinate system of the
+ sheet's template.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#getClipping--">getClipping</a></span>()</code>
-<div class="block">Returns <code>true</code> if the portrait will be clipped to the
- clip region.</div>
+<div class="block">Returns <code>true</code> if the portrait will be clipped to the clip
+ region.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#getClipStencil--">getClipStencil</a></span>()</code>
-<div class="block">Optionally returns an image that describes how the portrait will
- "show through" surrounding card features.</div>
+<div class="block">Optionally returns an image that describes how the portrait will "show
+ through" surrounding card features.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>int[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#getFacesToUpdate--">getFacesToUpdate</a></span>()</code>
-<div class="block">Returns an array of the indices of the faces on which
- this portrait will appear.</div>
+<div class="block">Returns an array of the indices of the faces on which this portrait will
+ appear.</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
@@ -345,7 +348,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <tr id="i17" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html" title="class in ca.cgjennings.apps.arkham.component">DefaultPortrait</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#getParent--">getParent</a></span>()</code>
-<div class="block">Returns the portrait that this portrait is linked to, or <code>null</code>.</div>
+<div class="block">Returns the portrait that this portrait is linked to, or
+ <code>null</code>.</div>
 </td>
 </tr>
 <tr id="i18" class="altColor">
@@ -382,16 +386,16 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <tr id="i23" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#isBackgroundFilled--">isBackgroundFilled</a></span>()</code>
-<div class="block">Returns <code>true</code> if portrait areas will be filled with
- solid white before painting the portrait.</div>
+<div class="block">Returns <code>true</code> if portrait areas will be filled with solid
+ white before painting the portrait.</div>
 </td>
 </tr>
 <tr id="i24" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#paint-java.awt.Graphics2D-ca.cgjennings.apps.arkham.sheet.RenderTarget-">paint</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt">Graphics2D</a>&nbsp;g,
      <a href="../../../../../ca/cgjennings/apps/arkham/sheet/RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target)</code>
-<div class="block">Paints the portrait image on a graphics context provided by
- a <a href="../../../../../ca/cgjennings/apps/arkham/sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet"><code>Sheet</code></a>.</div>
+<div class="block">Paints the portrait image on a graphics context provided by a
+ <a href="../../../../../ca/cgjennings/apps/arkham/sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet"><code>Sheet</code></a>.</div>
 </td>
 </tr>
 <tr id="i25" class="rowColor">
@@ -416,7 +420,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <tr id="i28" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#setFacesToUpdate-int:A-">setFacesToUpdate</a></span>(int[]&nbsp;faces)</code>
-<div class="block">Sets the sheets that need to be redrawn when the portrait settings change.</div>
+<div class="block">Sets the sheets that need to be redrawn when the portrait settings
+ change.</div>
 </td>
 </tr>
 <tr id="i29" class="rowColor">
@@ -459,20 +464,22 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <tr id="i35" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#setScale-double-">setScale</a></span>(double&nbsp;scale)</code>
-<div class="block">Sets the scale factor applied to the default size chosen by the component.</div>
+<div class="block">Sets the scale factor applied to the default size chosen by the
+ component.</div>
 </td>
 </tr>
 <tr id="i36" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#setScaleUsesMinimum-boolean-">setScaleUsesMinimum</a></span>(boolean&nbsp;useMinimum)</code>
-<div class="block">Sets whether this portrait should use the minimum fit scale when computing
- a default scale value for an image.</div>
+<div class="block">Sets whether this portrait should use the minimum fit scale when
+ computing a default scale value for an image.</div>
 </td>
 </tr>
 <tr id="i37" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#setSource-java.lang.String-">setSource</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;resource)</code>
-<div class="block">Sets the image used by the portrait.</div>
+<div class="block">Sets the image used by the portrait.The value of <code>resource</code>
+ is an identifier such as a local path to an image file or a URL.</div>
 </td>
 </tr>
 </table>
@@ -511,7 +518,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>MAXIMUM_SHEET_INDEX</h4>
 <pre>public static final&nbsp;int MAXIMUM_SHEET_INDEX</pre>
-<div class="block">The maximum index of a component's sheets that a default portrait can be drawn on.</div>
+<div class="block">The maximum index of a component's sheets that a default portrait can be
+ drawn on.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../constant-values.html#ca.cgjennings.apps.arkham.component.DefaultPortrait.MAXIMUM_SHEET_INDEX">Constant Field Values</a></dd>
@@ -535,12 +543,13 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <pre>public&nbsp;DefaultPortrait(<a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html" title="class in ca.cgjennings.apps.arkham.component">DefaultPortrait</a>&nbsp;parent,
                        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</pre>
 <div class="block">Creates a default portrait instance that is a linked to another portrait,
- called its parent.
- The portrait will start with the same features as its parent except for
- the <a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.Feature.html#SOURCE"><code>SOURCE</code></a>
+ called its parent. The portrait will start with the same features as its
+ parent except for the
+ <a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.Feature.html#SOURCE"><code>SOURCE</code></a>
  feature.
- 
- <p><b>Note:</b> Be careful not to confuse this with
+
+ <p>
+ <b>Note:</b> Be careful not to confuse this with
  <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#DefaultPortrait-java.lang.String-ca.cgjennings.apps.arkham.component.DefaultPortrait-"><code>DefaultPortrait(java.lang.String, ca.cgjennings.apps.arkham.component.DefaultPortrait)</code></a>
  which takes arguments of the same type, but in the opposite order.</div>
 <dl>
@@ -558,8 +567,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>DefaultPortrait</h4>
 <pre>public&nbsp;DefaultPortrait(<a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>&nbsp;gc,
                        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</pre>
-<div class="block">Creates a default portrait instance that does not support rotation.
- This is a cover for <code>DefaultPortrait( gc, key, false )</code>.</div>
+<div class="block">Creates a default portrait instance that does not support rotation. This
+ is a cover for <code>DefaultPortrait( gc, key, false )</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>gc</code> - the game component that the portrait is used with</dd>
@@ -581,7 +590,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>gc</code> - the game component that the portrait is used with</dd>
 <dd><code>key</code> - the key used to determine the basic properties of the portrait</dd>
-<dd><code>allowRotation</code> - if <code>true</code>, rotating the portrait is allowed</dd>
+<dd><code>allowRotation</code> - if <code>true</code>, rotating the portrait is
+ allowed</dd>
 </dl>
 </li>
 </ul>
@@ -599,7 +609,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>gc</code> - the game component that the portrait is used with</dd>
 <dd><code>key</code> - the key used to determine the basic properties of the portrait</dd>
-<dd><code>portraitFeatures</code> - set of portrait features that the portrait will report supporting</dd>
+<dd><code>portraitFeatures</code> - set of portrait features that the portrait will
+ report supporting</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#setFeatures-java.util.EnumSet-"><code>setFeatures(java.util.EnumSet)</code></a></dd>
 </dl>
@@ -613,20 +624,21 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>DefaultPortrait</h4>
 <pre>public&nbsp;DefaultPortrait(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;newKey,
                        <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html" title="class in ca.cgjennings.apps.arkham.component">DefaultPortrait</a>&nbsp;original)</pre>
-<div class="block">Creates a default portrait that replaces an existing portrait by 
+<div class="block">Creates a default portrait that replaces an existing portrait by
  switching to a new base key. This can be used to convert old component
- files when a component's base key name changes. It is normally used
- in a component's <code>onRead</code> function (for DIY components)
- or <code>readObject</code> method (for compiled code).
- 
- <p><b>Note:</b> Be careful not to confuse this with
+ files when a component's base key name changes. It is normally used in a
+ component's <code>onRead</code> function (for DIY components) or
+ <code>readObject</code> method (for compiled code).
+
+ <p>
+ <b>Note:</b> Be careful not to confuse this with
  <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#DefaultPortrait-ca.cgjennings.apps.arkham.component.DefaultPortrait-java.lang.String-"><code>DefaultPortrait(ca.cgjennings.apps.arkham.component.DefaultPortrait, java.lang.String)</code></a>
  which takes arguments of the same type, but in the opposite order.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>newKey</code> - the new base key that will replace the old key</dd>
 <dd><code>original</code> - the original portrait (typically, it has just be read
-     from a save file)</dd>
+ from a save file)</dd>
 </dl>
 </li>
 </ul>
@@ -645,9 +657,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>computeDefaultImagePan</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Point2D.html?is-external=true" title="class or interface in java.awt.geom">Point2D</a>&nbsp;computeDefaultImagePan(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;image)</pre>
-<div class="block">Returns a default pan value for an image. This is the initial pan
- value used when the image source changes. The base class always returns
- (0,0).</div>
+<div class="block">Returns a default pan value for an image. This is the initial pan value
+ used when the image source changes. The base class always returns (0,0).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>image</code> - the image to compute a default pan for</dd>
@@ -666,8 +677,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <div class="block">Returns a default rotation value for an image. This is the initial
  rotation used when the image source changes.
 
- <p>The base class implementation uses the following procedure:
- If the portrait does not include the rotation feature, 0 is always returned.
+ <p>
+ The base class implementation uses the following procedure: If the
+ portrait does not include the rotation feature, 0 is always returned.
  Otherwise, if a key equal to the base key with the suffix
  <code>-default-rotation</code> is defined and can be parsed as a double
  value, then that value is returned. If the key does not exist or cannot
@@ -705,10 +717,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>fireChildrenModified</h4>
 <pre>protected&nbsp;void&nbsp;fireChildrenModified()</pre>
-<div class="block">Notifies any children that their attached sheets must be redrawn.
- This is called when the parent's source image changes.
- There is normally no need to call this directly, as updates are taken care
- of automatically.</div>
+<div class="block">Notifies any children that their attached sheets must be redrawn. This is
+ called when the parent's source image changes. There is normally no need
+ to call this directly, as updates are taken care of automatically.</div>
 </li>
 </ul>
 <a name="firePortraitModified--">
@@ -719,9 +730,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>firePortraitModified</h4>
 <pre>protected&nbsp;void&nbsp;firePortraitModified()</pre>
 <div class="block">Notifies the sheets indicated by <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#getFacesToUpdate--"><code>getFacesToUpdate()</code></a> that they
- must be redrawn because the portrait settings have been modified.
- There is normally no need to call this directly, as updates are taken care
- of automatically.</div>
+ must be redrawn because the portrait settings have been modified. There
+ is normally no need to call this directly, as updates are taken care of
+ automatically.</div>
 </li>
 </ul>
 <a name="getBaseKey--">
@@ -734,7 +745,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <div class="block">Returns the base setting key that this portrait uses.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the base key name that was provided when this portrait instance was created</dd>
+<dd>the base key name that was provided when this portrait instance
+ was created</dd>
 </dl>
 </li>
 </ul>
@@ -750,7 +762,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a list of portraits linked to this portrait (possibly empty)</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#DefaultPortrait-ca.cgjennings.apps.arkham.component.DefaultPortrait-java.lang.String-"><code>DefaultPortrait(ca.cgjennings.apps.arkham.component.DefaultPortrait, java.lang.String)</code></a>, 
+<dd><a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#DefaultPortrait-ca.cgjennings.apps.arkham.component.DefaultPortrait-java.lang.String-"><code>DefaultPortrait(ca.cgjennings.apps.arkham.component.DefaultPortrait,
+ java.lang.String)</code></a>, 
 <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#getParent--"><code>getParent()</code></a></dd>
 </dl>
 </li>
@@ -763,10 +776,10 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>getClipDimensions</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Dimension.html?is-external=true" title="class or interface in java.awt">Dimension</a>&nbsp;getClipDimensions()</pre>
 <div class="block">Returns the size of the bounding rectangle of the area that the portrait
- is drawn in on the component sheet, in the coordinate system of the sheet's
- template. This may return <code>null</code> if this value is unknown or
- inapplicable, in which case some features of the portrait panel will not
- be available.</div>
+ is drawn in on the component sheet, in the coordinate system of the
+ sheet's template. This may return <code>null</code> if this value is
+ unknown or inapplicable, in which case some features of the portrait
+ panel will not be available.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#getClipDimensions--">getClipDimensions</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html" title="interface in ca.cgjennings.apps.arkham.component">Portrait</a></code></dd>
@@ -782,8 +795,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>getClipping</h4>
 <pre>public final&nbsp;boolean&nbsp;getClipping()</pre>
-<div class="block">Returns <code>true</code> if the portrait will be clipped to the
- clip region. See <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#setClipping-boolean-"><code>setClipping(boolean)</code></a> for details.</div>
+<div class="block">Returns <code>true</code> if the portrait will be clipped to the clip
+ region. See <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#setClipping-boolean-"><code>setClipping(boolean)</code></a> for details.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if clipping is enabled.</dd>
@@ -798,21 +811,23 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>getClipStencil</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;getClipStencil()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/AbstractPortrait.html#getClipStencil--">AbstractPortrait</a></code></span></div>
-<div class="block">Optionally returns an image that describes how the portrait will
- "show through" surrounding card features. The image's alpha channel
- is taken to represent a mask for the features that appear over the
- portrait area. For example, pixels with an alpha of 0 will show the
- portrait image only, and pixels with an alpha of 255 will show part
- of a sheet feature that obscures the underlying portrait.
- In other words, the alpha channel describes the shape of the portrait.
- If the portrait is simply an unobscured rectangle (that is, nothing
- is drawn overtop of it), this method can simply return <code>null</code>.
+<div class="block">Optionally returns an image that describes how the portrait will "show
+ through" surrounding card features. The image's alpha channel is taken to
+ represent a mask for the features that appear over the portrait area. For
+ example, pixels with an alpha of 0 will show the portrait image only, and
+ pixels with an alpha of 255 will show part of a sheet feature that
+ obscures the underlying portrait. In other words, the alpha channel
+ describes the shape of the portrait. If the portrait is simply an
+ unobscured rectangle (that is, nothing is drawn overtop of it), this
+ method can simply return <code>null</code>.
 
- <p><b>Note:</b> The value returned by this method is not guaranteed to
- be accurate and should not be relied on.
+ <p>
+ <b>Note:</b> The value returned by this method is not guaranteed to be
+ accurate and should not be relied on.
 
- <p>The base class returns <code>null</code>, indicating that the
- portrait area is unobscured.</div>
+ <p>
+ The base class returns <code>null</code>, indicating that the portrait
+ area is unobscured.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#getClipStencil--">getClipStencil</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html" title="interface in ca.cgjennings.apps.arkham.component">Portrait</a></code></dd>
@@ -820,7 +835,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/component/AbstractPortrait.html#getClipStencil--">getClipStencil</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/AbstractPortrait.html" title="class in ca.cgjennings.apps.arkham.component">AbstractPortrait</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>an image whose alpha channel describes the obscured areas of the
-     portrait, or <code>null</code></dd>
+ portrait, or <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -831,12 +846,13 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>getFacesToUpdate</h4>
 <pre>public&nbsp;int[]&nbsp;getFacesToUpdate()</pre>
-<div class="block">Returns an array of the indices of the faces on which
- this portrait will appear. This allows the portrait instance to avoid
- redrawing faces that the portrait does not appear on.</div>
+<div class="block">Returns an array of the indices of the faces on which this portrait will
+ appear. This allows the portrait instance to avoid redrawing faces that
+ the portrait does not appear on.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a bitmap indicating the indices of the faces to update automatically</dd>
+<dd>a bitmap indicating the indices of the faces to update
+ automatically</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#setFacesToUpdate-int:A-"><code>setFacesToUpdate(int[])</code></a></dd>
 </dl>
@@ -870,7 +886,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <div class="block">Returns the game component that this portrait is associated with.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the component that was provided when this portrait instance was created</dd>
+<dd>the component that was provided when this portrait instance was
+ created</dd>
 </dl>
 </li>
 </ul>
@@ -883,8 +900,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;getImage()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#getImage--">Portrait</a></code></span></div>
 <div class="block">Returns the image being used by this portrait. The original image is
- returned, rather than a copy, in order to conserve resources. However,
- it is important that this image not be modified in any way as it may be
+ returned, rather than a copy, in order to conserve resources. However, it
+ is important that this image not be modified in any way as it may be
  shared between several objects.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -902,12 +919,13 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>getPan</h4>
 <pre>public final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Point2D.html?is-external=true" title="class or interface in java.awt.geom">Point2D</a>&nbsp;getPan(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Point2D.html?is-external=true" title="class or interface in java.awt.geom">Point2D</a>&nbsp;dest)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/AbstractPortrait.html#getPan-java.awt.geom.Point2D-">AbstractPortrait</a></code></span></div>
-<div class="block">Returns the pan value as a <code>Point2D</code>.
- The pan values will be stored in <code>dest</code>; if <code>null</code>,
- a new point object will be allocated and returned.
+<div class="block">Returns the pan value as a <code>Point2D</code>. The pan values will be
+ stored in <code>dest</code>; if <code>null</code>, a new point object
+ will be allocated and returned.
 
- <p>The base class calls <a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#getPanX--"><code>Portrait.getPanX()</code></a> and <a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#getPanY--"><code>Portrait.getPanY()</code></a> to obtain
- x and y values to store in the destination point.</div>
+ <p>
+ The base class calls <a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#getPanX--"><code>Portrait.getPanX()</code></a> and <a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#getPanY--"><code>Portrait.getPanY()</code></a> to obtain x
+ and y values to store in the destination point.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#getPan-java.awt.geom.Point2D-">getPan</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html" title="interface in ca.cgjennings.apps.arkham.component">Portrait</a></code></dd>
@@ -929,8 +947,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <pre>public&nbsp;double&nbsp;getPanX()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#getPanX--">Portrait</a></code></span></div>
 <div class="block">Returns the horizontal pan value. A value of 0 places the image at its
- default location within the portrait area. The units are pixels
- in the component's template image.</div>
+ default location within the portrait area. The units are pixels in the
+ component's template image.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#getPanX--">getPanX</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html" title="interface in ca.cgjennings.apps.arkham.component">Portrait</a></code></dd>
@@ -948,8 +966,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <pre>public&nbsp;double&nbsp;getPanY()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#getPanY--">Portrait</a></code></span></div>
 <div class="block">Returns the vertical pan value. A value of 0 places the image at its
- default location within the portrait area. The units are pixels
- in the component's template image.</div>
+ default location within the portrait area. The units are pixels in the
+ component's template image.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#getPanY--">getPanY</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html" title="interface in ca.cgjennings.apps.arkham.component">Portrait</a></code></dd>
@@ -965,13 +983,15 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>getParent</h4>
 <pre>public final&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html" title="class in ca.cgjennings.apps.arkham.component">DefaultPortrait</a>&nbsp;getParent()</pre>
-<div class="block">Returns the portrait that this portrait is linked to, or <code>null</code>.</div>
+<div class="block">Returns the portrait that this portrait is linked to, or
+ <code>null</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the parent portrait, or <code>null</code> if this portrait is not
-     linked to another portrait</dd>
+ linked to another portrait</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#DefaultPortrait-ca.cgjennings.apps.arkham.component.DefaultPortrait-java.lang.String-"><code>DefaultPortrait(ca.cgjennings.apps.arkham.component.DefaultPortrait, java.lang.String)</code></a>, 
+<dd><a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#DefaultPortrait-ca.cgjennings.apps.arkham.component.DefaultPortrait-java.lang.String-"><code>DefaultPortrait(ca.cgjennings.apps.arkham.component.DefaultPortrait,
+ java.lang.String)</code></a>, 
 <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#getChildren--"><code>getChildren()</code></a></dd>
 </dl>
 </li>
@@ -984,12 +1004,13 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>getRotation</h4>
 <pre>public&nbsp;double&nbsp;getRotation()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/AbstractPortrait.html#getRotation--">AbstractPortrait</a></code></span></div>
-<div class="block">Returns the rotation angle for the portrait image.
- The default rotation is usually 0, but it differs by component.
- Positive angles turn in the anti-clockwise direction, while
- negative angles turn in the clockwise direction.
+<div class="block">Returns the rotation angle for the portrait image. The default rotation
+ is usually 0, but it differs by component. Positive angles turn in the
+ anti-clockwise direction, while negative angles turn in the clockwise
+ direction.
 
- <p>The base class always returns 0 since the abstract portrait does not
+ <p>
+ The base class always returns 0 since the abstract portrait does not
  support rotation by default.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -1027,8 +1048,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>getScaleUsesMinimum</h4>
 <pre>public final&nbsp;boolean&nbsp;getScaleUsesMinimum()</pre>
 <div class="block">Returns whether the default portrait scale will cover the entire clip
- region or fit the portrait within the clip region. See <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#setScaleUsesMinimum-boolean-"><code>setScaleUsesMinimum(boolean)</code></a>
- for details.</div>
+ region or fit the portrait within the clip region. See
+ <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#setScaleUsesMinimum-boolean-"><code>setScaleUsesMinimum(boolean)</code></a> for details.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the minimal scaling method is enabled</dd>
@@ -1043,8 +1064,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>getSource</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getSource()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#getSource--">Portrait</a></code></span></div>
-<div class="block">Returns the identifier for the image being used by this portrait.
- See the description of <a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#setSource-java.lang.String-"><code>Portrait.setSource(java.lang.String)</code></a> for details.</div>
+<div class="block">Returns the identifier for the image being used by this portrait. See the
+ description of <a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#setSource-java.lang.String-"><code>Portrait.setSource(java.lang.String)</code></a> for details.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#getSource--">getSource</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html" title="interface in ca.cgjennings.apps.arkham.component">Portrait</a></code></dd>
@@ -1060,21 +1081,22 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>installDefault</h4>
 <pre>public&nbsp;void&nbsp;installDefault()</pre>
-<div class="block">Installs the default portrait, if it is not already set.
- The default portrait is determined by looking up the base key with
- the suffix <code>-portrait-template</code> appended. The value of this
- key must be a path relative to the resources folder that identifies
- an image file. If the key is not defined, then the value
+<div class="block">Installs the default portrait, if it is not already set. The default
+ portrait is determined by looking up the base key with the suffix
+ <code>-portrait-template</code> appended. The value of this key must be a
+ path relative to the resources folder that identifies an image file. If
+ the key is not defined, then the value
  <code>portraits/misc-portrait.jp2</code> will be used, but this should
  only be used as a placeholder during development. By default, the pan
- position will be set to (0,0) and the scale and rotation will be set
- as if for any other portrait installed by calling <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#setSource-java.lang.String-"><code>setSource(java.lang.String)</code></a>.
- The default panning and scale values (for the default image only) can
- be overridden by keys with the suffix <code>-portrait-panx</code>,
- <code>-portrait-pany</code>, and <code>-portrait-scale</code>.
- The default rotation (if enabled, and for both the default image and
- images set by <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#setSource-java.lang.String-"><code>setSource(java.lang.String)</code></a>), can be set via the key suffix
- <code>-portrait-rotation</code>. (See <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#computeDefaultImageRotation-java.awt.image.BufferedImage-"><code>computeDefaultImageRotation(java.awt.image.BufferedImage)</code></a>.)</div>
+ position will be set to (0,0) and the scale and rotation will be set as
+ if for any other portrait installed by calling <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#setSource-java.lang.String-"><code>setSource(java.lang.String)</code></a>. The
+ default panning and scale values (for the default image only) can be
+ overridden by keys with the suffix <code>-portrait-panx</code>,
+ <code>-portrait-pany</code>, and <code>-portrait-scale</code>. The
+ default rotation (if enabled, and for both the default image and images
+ set by <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#setSource-java.lang.String-"><code>setSource(java.lang.String)</code></a>), can be set via the key suffix
+ <code>-portrait-rotation</code>. (See
+ <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#computeDefaultImageRotation-java.awt.image.BufferedImage-"><code>computeDefaultImageRotation(java.awt.image.BufferedImage)</code></a>.)</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#installDefault--">installDefault</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html" title="interface in ca.cgjennings.apps.arkham.component">Portrait</a></code></dd>
@@ -1088,13 +1110,12 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>isBackgroundFilled</h4>
 <pre>public final&nbsp;boolean&nbsp;isBackgroundFilled()</pre>
-<div class="block">Returns <code>true</code> if portrait areas will be filled with
- solid white before painting the portrait.
- See <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#setBackgroundFilled-boolean-"><code>setBackgroundFilled(boolean)</code></a> for details.</div>
+<div class="block">Returns <code>true</code> if portrait areas will be filled with solid
+ white before painting the portrait. See <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#setBackgroundFilled-boolean-"><code>setBackgroundFilled(boolean)</code></a> for details.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the portrait clip region is filled
-   before drawing the portrait</dd>
+<dd><code>true</code> if the portrait clip region is filled before
+ drawing the portrait</dd>
 </dl>
 </li>
 </ul>
@@ -1106,8 +1127,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>paint</h4>
 <pre>public&nbsp;void&nbsp;paint(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt">Graphics2D</a>&nbsp;g,
                   <a href="../../../../../ca/cgjennings/apps/arkham/sheet/RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target)</pre>
-<div class="block">Paints the portrait image on a graphics context provided by
- a <a href="../../../../../ca/cgjennings/apps/arkham/sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet"><code>Sheet</code></a>.</div>
+<div class="block">Paints the portrait image on a graphics context provided by a
+ <a href="../../../../../ca/cgjennings/apps/arkham/sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet"><code>Sheet</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>g</code> - the graphics context for painting</dd>
@@ -1123,18 +1144,19 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>setBackgroundFilled</h4>
 <pre>public final&nbsp;void&nbsp;setBackgroundFilled(boolean&nbsp;fill)</pre>
 <div class="block">Sets whether the portrait clip region will be filled with solid white
- before painting the portrait.
- If set, the portrait clip region will be filled in with solid white before
- painting the portrait. This is usually turned off when the user is expected to use
- portraits that have transparency because the portrait is painted over a
- background illustration.
+ before painting the portrait. If set, the portrait clip region will be
+ filled in with solid white before painting the portrait. This is usually
+ turned off when the user is expected to use portraits that have
+ transparency because the portrait is painted over a background
+ illustration.
 
- <p><b>Note:</b> This is normally called at most once, just after the portrait
-   is first created.</div>
+ <p>
+ <b>Note:</b> This is normally called at most once, just after the
+ portrait is first created.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>fill</code> - if <code>true</code>, the portrait background will be filled in
-   when it is drawn with <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#paint-java.awt.Graphics2D-ca.cgjennings.apps.arkham.sheet.RenderTarget-"><code>paint(java.awt.Graphics2D, ca.cgjennings.apps.arkham.sheet.RenderTarget)</code></a>.</dd>
+<dd><code>fill</code> - if <code>true</code>, the portrait background will be filled
+ in when it is drawn with <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#paint-java.awt.Graphics2D-ca.cgjennings.apps.arkham.sheet.RenderTarget-"><code>paint(java.awt.Graphics2D, ca.cgjennings.apps.arkham.sheet.RenderTarget)</code></a>.</dd>
 </dl>
 </li>
 </ul>
@@ -1145,16 +1167,17 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>setClipping</h4>
 <pre>public final&nbsp;void&nbsp;setClipping(boolean&nbsp;clipping)</pre>
-<div class="block">Sets whether the portrait is clipped to the clip region. The default
- is <code>true</code>. When <code>false</code> the clip region is only
- used to determine a portrait image's default size.
+<div class="block">Sets whether the portrait is clipped to the clip region. The default is
+ <code>true</code>. When <code>false</code> the clip region is only used
+ to determine a portrait image's default size.
 
- <p><b>Note:</b> This is normally called at most once, just after the portrait
- is first created.</div>
+ <p>
+ <b>Note:</b> This is normally called at most once, just after the
+ portrait is first created.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>clipping</code> - if <code>true</code>, clip the portrait to the clip region
-   when it is drawn with <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#paint-java.awt.Graphics2D-ca.cgjennings.apps.arkham.sheet.RenderTarget-"><code>paint(java.awt.Graphics2D, ca.cgjennings.apps.arkham.sheet.RenderTarget)</code></a>.</dd>
+<dd><code>clipping</code> - if <code>true</code>, clip the portrait to the clip
+ region when it is drawn with <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#paint-java.awt.Graphics2D-ca.cgjennings.apps.arkham.sheet.RenderTarget-"><code>paint(java.awt.Graphics2D, ca.cgjennings.apps.arkham.sheet.RenderTarget)</code></a>.</dd>
 </dl>
 </li>
 </ul>
@@ -1165,22 +1188,22 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>setClipStencil</h4>
 <pre>public&nbsp;void&nbsp;setClipStencil(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;clipStencil)</pre>
-<div class="block">Sets an explicit clip stencil for this portrait. Setting an explicit
- clip stencil permanently overrides the default clip stencil mechanism.
- Once an explicit stencil is set, <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#getClipStencil--"><code>getClipStencil()</code></a> will return
- the most recently set stencil. The stencil can be removed by explicitly
- setting it to <code>null</code>.
+<div class="block">Sets an explicit clip stencil for this portrait. Setting an explicit clip
+ stencil permanently overrides the default clip stencil mechanism. Once an
+ explicit stencil is set, <a href="../../../../../ca/cgjennings/apps/arkham/component/DefaultPortrait.html#getClipStencil--"><code>getClipStencil()</code></a> will return the most
+ recently set stencil. The stencil can be removed by explicitly setting it
+ to <code>null</code>.
 
- <p><b>Note:</b> The explicit clip stencil is <i>not</i> serialized
- when the portrait is written to a save file. You will need to ensure
- that the stencil is set both when the component is first created and when
- it is read form a save file. In DIY components, a convenient way to
- do this is to set the stencil in the appropriate painter creation
- function.</div>
+ <p>
+ <b>Note:</b> The explicit clip stencil is <i>not</i> serialized when the
+ portrait is written to a save file. You will need to ensure that the
+ stencil is set both when the component is first created and when it is
+ read form a save file. In DIY components, a convenient way to do this is
+ to set the stencil in the appropriate painter creation function.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>clipStencil</code> - the clip stencil to use in the portrait's
-     <a href="../../../../../ca/cgjennings/apps/arkham/PortraitPanel.html" title="class in ca.cgjennings.apps.arkham"><code>PortraitPanel</code></a> component</dd>
+ <a href="../../../../../ca/cgjennings/apps/arkham/PortraitPanel.html" title="class in ca.cgjennings.apps.arkham"><code>PortraitPanel</code></a> component</dd>
 </dl>
 </li>
 </ul>
@@ -1191,23 +1214,22 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>setFacesToUpdate</h4>
 <pre>public final&nbsp;void&nbsp;setFacesToUpdate(int[]&nbsp;faces)</pre>
-<div class="block">Sets the sheets that need to be redrawn when the portrait settings change.
- When the portrait is adjusted, the faces that use the portrait must
- be redrawn to reflect the adjustment. By default, every face of the
+<div class="block">Sets the sheets that need to be redrawn when the portrait settings
+ change. When the portrait is adjusted, the faces that use the portrait
+ must be redrawn to reflect the adjustment. By default, every face of the
  component will be updated. Unless every face actually displays the
- portrait in question, this slows down the application needlessly.
- This method allows you specify which faces need to be redrawn.
- To use it, pass an array of integers in which each integer is the index
- of one of the component's faces (0 for the first face, 1 for the second,
- and so on).</div>
+ portrait in question, this slows down the application needlessly. This
+ method allows you specify which faces need to be redrawn. To use it, pass
+ an array of integers in which each integer is the index of one of the
+ component's faces (0 for the first face, 1 for the second, and so on).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>faces</code> - an array, each element of which is the index of a face that
-     shows this portrait</dd>
+ shows this portrait</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>faces</code> is <code>null</code></dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if any value in the <code>faces</code> array
-     is outside the supported range of 32 faces</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if any value in the <code>faces</code>
+ array is outside the supported range of 32 faces</dd>
 </dl>
 </li>
 </ul>
@@ -1218,8 +1240,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>setFeatures</h4>
 <pre>protected final&nbsp;void&nbsp;setFeatures(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html?is-external=true" title="class or interface in java.util">EnumSet</a>&lt;<a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.Feature.html" title="enum in ca.cgjennings.apps.arkham.component">Portrait.Feature</a>&gt;&nbsp;features)</pre>
-<div class="block">Sets the feature set supported by the portrait. This method allows subclasses
- to modify portrait features. It should be called only from a constructor.</div>
+<div class="block">Sets the feature set supported by the portrait. This method allows
+ subclasses to modify portrait features. It should be called only from a
+ constructor.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>features</code> - the set of features to support</dd>
@@ -1236,12 +1259,11 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
                      <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;image)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#setImage-java.lang.String-java.awt.image.BufferedImage-">Portrait</a></code></span></div>
 <div class="block">Explicitly sets the image used by this portrait. The source for the
- portrait will be set to reported source, but no attempt
- will be made to load the portrait from this source. Instead, the given
- image will be used as if it was the image loaded from the
- reported source. This is sometimes useful when you want to copy
- an image to a new component but you do not know if the source
- location is actually available on this system.</div>
+ portrait will be set to reported source, but no attempt will be made to
+ load the portrait from this source. Instead, the given image will be used
+ as if it was the image loaded from the reported source. This is sometimes
+ useful when you want to copy an image to a new component but you do not
+ know if the source location is actually available on this system.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#setImage-java.lang.String-java.awt.image.BufferedImage-">setImage</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html" title="interface in ca.cgjennings.apps.arkham.component">Portrait</a></code></dd>
@@ -1261,8 +1283,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/AbstractPortrait.html#setPan-java.awt.geom.Point2D-">AbstractPortrait</a></code></span></div>
 <div class="block">Sets the pan value from a reference point.
 
- <p>The base class calls <a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#setPanX-double-"><code>Portrait.setPanX(double)</code></a> and <a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#setPanY-double-"><code>Portrait.setPanY(double)</code></a> using the
- x and y values stored in <code>pan</code>.</div>
+ <p>
+ The base class calls <a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#setPanX-double-"><code>Portrait.setPanX(double)</code></a> and <a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#setPanY-double-"><code>Portrait.setPanY(double)</code></a> using the x
+ and y values stored in <code>pan</code>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#setPan-java.awt.geom.Point2D-">setPan</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html" title="interface in ca.cgjennings.apps.arkham.component">Portrait</a></code></dd>
@@ -1317,8 +1340,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/AbstractPortrait.html#setRotation-double-">AbstractPortrait</a></code></span></div>
 <div class="block">Sets the rotation angle for the portrait image.
 
- <p>The base class does nothing since the abstract portrait does not
- support rotation by default.</div>
+ <p>
+ The base class does nothing since the abstract portrait does not support
+ rotation by default.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#setRotation-double-">setRotation</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html" title="interface in ca.cgjennings.apps.arkham.component">Portrait</a></code></dd>
@@ -1337,10 +1361,10 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>setScale</h4>
 <pre>public&nbsp;void&nbsp;setScale(double&nbsp;scale)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#setScale-double-">Portrait</a></code></span></div>
-<div class="block">Sets the scale factor applied to the default size chosen by the component.
- Note that for many component types, the default size just fits in the
- available space, so that a value less than 1 will show blank space at
- one or more edges of the portrait area.</div>
+<div class="block">Sets the scale factor applied to the default size chosen by the
+ component. Note that for many component types, the default size just fits
+ in the available space, so that a value less than 1 will show blank space
+ at one or more edges of the portrait area.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#setScale-double-">setScale</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html" title="interface in ca.cgjennings.apps.arkham.component">Portrait</a></code></dd>
@@ -1356,20 +1380,21 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>setScaleUsesMinimum</h4>
 <pre>public final&nbsp;void&nbsp;setScaleUsesMinimum(boolean&nbsp;useMinimum)</pre>
-<div class="block">Sets whether this portrait should use the minimum fit scale when computing
- a default scale value for an image. When <code>false</code>, the default
- scale value is selected so that the <a href="../../../../../ca/cgjennings/graphics/ImageUtilities.html#idealCoveringScaleForImage-double-double-double-double-">entire portrait clip region is covered</a>, even if that means part of the
- portrait won't be visible. When <code>true</code>, the default scale value
- is selected so that the <a href="../../../../../ca/cgjennings/graphics/ImageUtilities.html#idealCoveringScaleForImage-double-double-double-double-">entire image just fits within the clip region</a>, even if that means that
- part of the clip region will not be covered by the portrait.
- The default setting is <code>false</code> (cover the entire clip region).
+<div class="block">Sets whether this portrait should use the minimum fit scale when
+ computing a default scale value for an image. When <code>false</code>,
+ the default scale value is selected so that the <a href="../../../../../ca/cgjennings/graphics/ImageUtilities.html#idealCoveringScaleForImage-double-double-double-double-">entire portrait clip region is covered</a>, even if that means part of the
+ portrait won't be visible. When <code>true</code>, the default scale
+ value is selected so that the <a href="../../../../../ca/cgjennings/graphics/ImageUtilities.html#idealCoveringScaleForImage-double-double-double-double-">entire image just fits within the clip region</a>, even if that means that
+ part of the clip region will not be covered by the portrait. The default
+ setting is <code>false</code> (cover the entire clip region).
 
- <p><b>Note:</b> This is normally called at most once, just after the portrait
- is first created.</div>
+ <p>
+ <b>Note:</b> This is normally called at most once, just after the
+ portrait is first created.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>useMinimum</code> - if <code>true</code>, the minimum scale that fits the
-   portrait within the clip region will be the default scale value</dd>
+ portrait within the clip region will be the default scale value</dd>
 </dl>
 </li>
 </ul>
@@ -1381,19 +1406,20 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>setSource</h4>
 <pre>public&nbsp;void&nbsp;setSource(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;resource)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#setSource-java.lang.String-">Portrait</a></code></span></div>
-<div class="block">Sets the image used by the portrait. The value of <code>resource</code>
- is an identifier such as a local path to an image file or a URL.
- Either <code>null</code> or an empty string is a special identifier that
- requests a default image that depends on the component and portrait number.
+<div class="block">Sets the image used by the portrait.The value of <code>resource</code>
+ is an identifier such as a local path to an image file or a URL. Either
+ <code>null</code> or an empty string is a special identifier that
+ requests a default image that depends on the component and portrait
+ number.
  <p>
- When a new portrait is set, the scale, pan, and rotation values will
- be changed to suit the new image. If you wish to keep these fixed,
- you must store these values in temporary variables before setting them
- image, and then restore them once this method returns.
+ When a new portrait is set, the scale, pan, and rotation values will be
+ changed to suit the new image. If you wish to keep these fixed, you must
+ store these values in temporary variables before setting them image, and
+ then restore them once this method returns.
  <p>
  If an image cannot be obtained from <code>resource</code> (for example,
- if the file it names does not exist or is invalid), then a special
- error image is substituted.</div>
+ if the file it names does not exist or is invalid), then a special error
+ image is substituted.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html#setSource-java.lang.String-">setSource</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/Portrait.html" title="interface in ca.cgjennings.apps.arkham.component">Portrait</a></code></dd>
@@ -1422,6 +1448,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

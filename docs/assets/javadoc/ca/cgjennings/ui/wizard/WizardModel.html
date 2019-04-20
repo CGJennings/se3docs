@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -253,10 +255,10 @@ var activeTableTab = "activeTableTab";
 <h4>aboutToHide</h4>
 <pre>void&nbsp;aboutToHide(int&nbsp;index,
                  <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing">JComponent</a>&nbsp;page)</pre>
-<div class="block">Called before the current page is hidden when switching pages.
- After this is called, but before <a href="../../../../ca/cgjennings/ui/wizard/WizardModel.html#aboutToShow-int-javax.swing.JComponent-"><code>aboutToShow(int, javax.swing.JComponent)</code></a> is called,
- <a href="../../../../ca/cgjennings/ui/wizard/WizardModel.html#getPageOrder--"><code>getPageOrder()</code></a> will be called to determine if the page order
- has changed.</div>
+<div class="block">Called before the current page is hidden when switching pages. After this
+ is called, but before <a href="../../../../ca/cgjennings/ui/wizard/WizardModel.html#aboutToShow-int-javax.swing.JComponent-"><code>aboutToShow(int, javax.swing.JComponent)</code></a> is called,
+ <a href="../../../../ca/cgjennings/ui/wizard/WizardModel.html#getPageOrder--"><code>getPageOrder()</code></a> will be called to determine if the page order has
+ changed.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>index</code> - the index of the currently displayed page</dd>
@@ -274,17 +276,17 @@ var activeTableTab = "activeTableTab";
 <h4>aboutToShow</h4>
 <pre>void&nbsp;aboutToShow(int&nbsp;index,
                  <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing">JComponent</a>&nbsp;page)</pre>
-<div class="block">Called before a page is displayed. The following procedure describes
- how the model is consulted when moving to a new page:
+<div class="block">Called before a page is displayed. The following procedure describes how
+ the model is consulted when moving to a new page:
  <ol>
  <li> User clicks next (or back).
  <li> <a href="../../../../ca/cgjennings/ui/wizard/WizardModel.html#aboutToHide-int-javax.swing.JComponent-"><code>aboutToHide(int, javax.swing.JComponent)</code></a> called for current page.
  <li> <a href="../../../../ca/cgjennings/ui/wizard/WizardModel.html#forward--"><code>forward()</code></a> (or <a href="../../../../ca/cgjennings/ui/wizard/WizardModel.html#backward--"><code>backward()</code></a>) is called.
- <li> <a href="../../../../ca/cgjennings/ui/wizard/WizardModel.html#getPageOrder--"><code>getPageOrder()</code></a> and <a href="../../../../ca/cgjennings/ui/wizard/WizardModel.html#getCurrentPage--"><code>getCurrentPage()</code></a> called to determine
-      which page to display.
+ <li> <a href="../../../../ca/cgjennings/ui/wizard/WizardModel.html#getPageOrder--"><code>getPageOrder()</code></a> and <a href="../../../../ca/cgjennings/ui/wizard/WizardModel.html#getCurrentPage--"><code>getCurrentPage()</code></a> called to
+ determine which page to display.
  <li> <a href="../../../../ca/cgjennings/ui/wizard/WizardModel.html#aboutToShow-int-javax.swing.JComponent-"><code>aboutToShow(int, javax.swing.JComponent)</code></a> called for new current page.
- <li> New page is displayed. Back, next, and finish buttons are updated
-      to enable them based on <a href="../../../../ca/cgjennings/ui/wizard/WizardModel.html#canGoBackward--"><code>canGoBackward()</code></a> and related methods.
+ <li> New page is displayed. Back, next, and finish buttons are updated to
+ enable them based on <a href="../../../../ca/cgjennings/ui/wizard/WizardModel.html#canGoBackward--"><code>canGoBackward()</code></a> and related methods.
  </ol></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -337,8 +339,8 @@ var activeTableTab = "activeTableTab";
 <h4>canFinish</h4>
 <pre>boolean&nbsp;canFinish()</pre>
 <div class="block">Returns <code>true</code> if the wizard can be finished in its current
- state. This method must always return
- <code>false</code> when progress is blocked.</div>
+ state. This method must always return <code>false</code> when progress is
+ blocked.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>whether the finish button should be enabled</dd>
@@ -368,9 +370,8 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>canGoForward</h4>
 <pre>boolean&nbsp;canGoForward()</pre>
-<div class="block">Returns <code>true</code> if there is a page after the current page.
- This method must always return
- <code>false</code> when progress is blocked.</div>
+<div class="block">Returns <code>true</code> if there is a page after the current page. This
+ method must always return <code>false</code> when progress is blocked.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>whether the next button should be enabled</dd>
@@ -386,8 +387,8 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>finish</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;finish()</pre>
-<div class="block">Completes the wizard, causing any relevant actions to take place.
- It may optionally return an arbitrary object to represent this result.</div>
+<div class="block">Completes the wizard, causing any relevant actions to take place. It may
+ optionally return an arbitrary object to represent this result.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>an optional result, or <code>null</code></dd>
@@ -427,7 +428,7 @@ var activeTableTab = "activeTableTab";
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the index of the element in <a href="../../../../ca/cgjennings/ui/wizard/WizardModel.html#getPageOrder--"><code>getPageOrder()</code></a> that
-     represents the current page</dd>
+ represents the current page</dd>
 </dl>
 </li>
 </ul>
@@ -452,18 +453,18 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>getPageOrder</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing">JComponent</a>[]&nbsp;getPageOrder()</pre>
-<div class="block">Returns the current order of pages in the wizard.
- This method is called to set up the panel and before each page transition.
- This allows the model to change the page order in response to user
- choices.
+<div class="block">Returns the current order of pages in the wizard. This method is called
+ to set up the panel and before each page transition. This allows the
+ model to change the page order in response to user choices.
 
- <p>Unless otherwise stated, the caller must assume that the returned
- array should be considered immutable. Changing the values of elements in the
+ <p>
+ Unless otherwise stated, the caller must assume that the returned array
+ should be considered immutable. Changing the values of elements in the
  array is forbidden.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>an array of components (typically panels) in the order they
-     should be displayed</dd>
+ should be displayed</dd>
 </dl>
 </li>
 </ul>
@@ -509,8 +510,8 @@ var activeTableTab = "activeTableTab";
  It allows the model to be reused in multiple dialogs. This will reset the
  current page to its initial value and will typically reset the interface
  components that represent the wizard pages to an initial state.
- (Alternatively, any existing page components may be thrown out and a new set
- created.)</div>
+ (Alternatively, any existing page components may be thrown out and a new
+ set created.)</div>
 </li>
 </ul>
 <a name="setCurrentPage-int-">
@@ -538,14 +539,14 @@ var activeTableTab = "activeTableTab";
 <pre>void&nbsp;setProgressBlocked(boolean&nbsp;block)</pre>
 <div class="block">Sets whether or not progress is blocked. When progress is blocked,
  <a href="../../../../ca/cgjennings/ui/wizard/WizardModel.html#canGoForward--"><code>canGoForward()</code></a> and <a href="../../../../ca/cgjennings/ui/wizard/WizardModel.html#canFinish--"><code>canFinish()</code></a> must always return
- <code>false</code>. The progress blocking state can be cleared by
- calling this method with false, and is cleared automatically if the
- page changes. Blocking provides a mechanism for individual pages to
- prevent progress if they are missing required information.</div>
+ <code>false</code>. The progress blocking state can be cleared by calling
+ this method with false, and is cleared automatically if the page changes.
+ Blocking provides a mechanism for individual pages to prevent progress if
+ they are missing required information.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>block</code> - if <code>true</code>, prevents the user from going to
-   the next page or finishing the dialog.</dd>
+<dd><code>block</code> - if <code>true</code>, prevents the user from going to the
+ next page or finishing the dialog.</dd>
 </dl>
 </li>
 </ul>
@@ -569,6 +570,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

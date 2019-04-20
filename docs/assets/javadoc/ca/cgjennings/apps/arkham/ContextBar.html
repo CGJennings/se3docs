@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -106,11 +108,11 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public final class <span class="typeNameLabel">ContextBar</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block">A small floating tool bar that tracks the focused component and
- shows buttons relevant to that context. To create new buttons that the
- user can add to the context bar, implement the <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html" title="interface in ca.cgjennings.apps.arkham"><code>ContextBar.Button</code></a> class
- (typically by subclassing <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.AbstractButton.html" title="class in ca.cgjennings.apps.arkham"><code>ContextBar.AbstractButton</code></a> or <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.CommandButton.html" title="class in ca.cgjennings.apps.arkham"><code>ContextBar.CommandButton</code></a>),
- and register the new button with <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.html#registerButton-ca.cgjennings.apps.arkham.ContextBar.Button-"><code>registerButton(ca.cgjennings.apps.arkham.ContextBar.Button)</code></a>.</div>
+<div class="block">A small floating tool bar that tracks the focused component and shows buttons
+ relevant to that context. To create new buttons that the user can add to the
+ context bar, implement the <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html" title="interface in ca.cgjennings.apps.arkham"><code>ContextBar.Button</code></a> class (typically by subclassing
+ <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.AbstractButton.html" title="class in ca.cgjennings.apps.arkham"><code>ContextBar.AbstractButton</code></a> or <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.CommandButton.html" title="class in ca.cgjennings.apps.arkham"><code>ContextBar.CommandButton</code></a>), and register the new button
+ with <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.html#registerButton-ca.cgjennings.apps.arkham.ContextBar.Button-"><code>registerButton(ca.cgjennings.apps.arkham.ContextBar.Button)</code></a>.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -160,8 +162,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr class="altColor">
 <td class="colFirst"><code>static interface&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Locator.html" title="interface in ca.cgjennings.apps.arkham">ContextBar.Locator</a></span></code>
-<div class="block">This interface is implemented by objects that customize where a context bar
- appears over a component.</div>
+<div class="block">This interface is implemented by objects that customize where a context
+ bar appears over a component.</div>
 </td>
 </tr>
 </table>
@@ -189,22 +191,23 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.html#BAR_CUSTOM_LOCATION_PROPERTY">BAR_CUSTOM_LOCATION_PROPERTY</a></span></code>
-<div class="block">Allows a component to have complete control over how the context bar
- is positioned relative to that component.</div>
+<div class="block">Allows a component to have complete control over how the context bar is
+ positioned relative to that component.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.html#BAR_DISABLE_PROPERTY">BAR_DISABLE_PROPERTY</a></span></code>
 <div class="block">The context bar can be prevented from appearing over a particular control
- by setting a client property with this name to <code>java.lang.Boolean.TRUE</code>.</div>
+ by setting a client property with this name to
+ <code>java.lang.Boolean.TRUE</code>.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.html#BAR_INSIDE_PROPERTY">BAR_INSIDE_PROPERTY</a></span></code>
-<div class="block">By default, the context bar appears outside of the control that it currently
- affects.</div>
+<div class="block">By default, the context bar appears outside of the control that it
+ currently affects.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -319,8 +322,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/ContextBar.html#isCollapsed--">isCollapsed</a></span>()</code>
-<div class="block">Returns <code>true</code> if the tool bar is currently collapsed (only the
- button that expands the tool bar is visible).</div>
+<div class="block">Returns <code>true</code> if the tool bar is currently collapsed (only
+ the button that expands the tool bar is visible).</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
@@ -420,10 +423,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>BAR_CUSTOM_LOCATION_PROPERTY</h4>
 <pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> BAR_CUSTOM_LOCATION_PROPERTY</pre>
-<div class="block">Allows a component to have complete control over how the context bar
- is positioned relative to that component. To define a custom location
- for a component, set a client property on the component with this name
- and a value that is an instance of the <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Locator.html" title="interface in ca.cgjennings.apps.arkham"><code>ContextBar.Locator</code></a> class.</div>
+<div class="block">Allows a component to have complete control over how the context bar is
+ positioned relative to that component. To define a custom location for a
+ component, set a client property on the component with this name and a
+ value that is an instance of the <a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Locator.html" title="interface in ca.cgjennings.apps.arkham"><code>ContextBar.Locator</code></a> class.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#ca.cgjennings.apps.arkham.ContextBar.BAR_CUSTOM_LOCATION_PROPERTY">Constant Field Values</a></dd>
@@ -438,7 +441,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>BAR_DISABLE_PROPERTY</h4>
 <pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> BAR_DISABLE_PROPERTY</pre>
 <div class="block">The context bar can be prevented from appearing over a particular control
- by setting a client property with this name to <code>java.lang.Boolean.TRUE</code>.</div>
+ by setting a client property with this name to
+ <code>java.lang.Boolean.TRUE</code>.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#ca.cgjennings.apps.arkham.ContextBar.BAR_DISABLE_PROPERTY">Constant Field Values</a></dd>
@@ -452,8 +456,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>BAR_INSIDE_PROPERTY</h4>
 <pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> BAR_INSIDE_PROPERTY</pre>
-<div class="block">By default, the context bar appears outside of the control that it currently
- affects. Setting a client property with this name to
+<div class="block">By default, the context bar appears outside of the control that it
+ currently affects. Setting a client property with this name to
  <code>java.lang.Boolean.TRUE</code> will cause the bar to appear inside
  the control instead.</div>
 <dl>
@@ -470,9 +474,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>BAR_LEADING_SIDE_PROPERTY</h4>
 <pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> BAR_LEADING_SIDE_PROPERTY</pre>
 <div class="block">By default, the context bar appears on the trailing edge of the the
- control that it currently affects. Setting a client property with this name to
- <code>java.lang.Boolean.TRUE</code> will cause the bar to appear on the
- leading side instead.</div>
+ control that it currently affects. Setting a client property with this
+ name to <code>java.lang.Boolean.TRUE</code> will cause the bar to appear
+ on the leading side instead.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#ca.cgjennings.apps.arkham.ContextBar.BAR_LEADING_SIDE_PROPERTY">Constant Field Values</a></dd>
@@ -486,11 +490,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>BAR_OFFSET_PROPERTY</h4>
 <pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> BAR_OFFSET_PROPERTY</pre>
-<div class="block">Adjusts the usual location of the context bar. Setting a client
- property with this name and a <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Point.html?is-external=true" title="class or interface in java.awt"><code>Point</code></a> value on a component
- will cause the context bar to shift the usual location of the bar
- by that many pixels. This allows you to fine tune the location of the
- bar for specific situations. It should only be used when necessary.</div>
+<div class="block">Adjusts the usual location of the context bar. Setting a client property
+ with this name and a <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Point.html?is-external=true" title="class or interface in java.awt"><code>Point</code></a> value on a component will
+ cause the context bar to shift the usual location of the bar by that many
+ pixels. This allows you to fine tune the location of the bar for specific
+ situations. It should only be used when necessary.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#ca.cgjennings.apps.arkham.ContextBar.BAR_OFFSET_PROPERTY">Constant Field Values</a></dd>
@@ -579,13 +583,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>buttonDesc</code> - a string in the format described above</dd>
-<dd><code>skipInvalidButtons</code> - if <code>true</code>, invalid IDs will be skipped</dd>
+<dd><code>skipInvalidButtons</code> - if <code>true</code>, invalid IDs will be
+ skipped</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>an array of buttons; <code>null</code> will be used to indicate
-     separators</dd>
+ separators</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the format was invalid and <code>skipInvalidButtons</code>
-     is <code>false</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the format was invalid and
+ <code>skipInvalidButtons</code> is <code>false</code></dd>
 </dl>
 </li>
 </ul>
@@ -618,7 +623,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Returns a copy of the installed buttons.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>an array containing the buttons currently included on the context bar</dd>
+<dd>an array containing the buttons currently included on the context
+ bar</dd>
 </dl>
 </li>
 </ul>
@@ -643,11 +649,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getPreferredContextBarIconSize</h4>
 <pre>public static&nbsp;int&nbsp;getPreferredContextBarIconSize()</pre>
-<div class="block">Returns the ideal icon size for context bar icons. Icons larger or smaller
- than this value (in either width or height) will be resized automatically.
- This preferred icon size is fixed for any given run of the application,
- but may change between runs. For example, the size may change if a
- different <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in ca.cgjennings.ui.theme"><code>Theme</code></a> is active.</div>
+<div class="block">Returns the ideal icon size for context bar icons. Icons larger or
+ smaller than this value (in either width or height) will be resized
+ automatically. This preferred icon size is fixed for any given run of the
+ application, but may change between runs. For example, the size may
+ change if a different <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in ca.cgjennings.ui.theme"><code>Theme</code></a> is active.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the width and height of context bar icons</dd>
@@ -689,8 +695,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isCollapsed</h4>
 <pre>public&nbsp;boolean&nbsp;isCollapsed()</pre>
-<div class="block">Returns <code>true</code> if the tool bar is currently collapsed (only the
- button that expands the tool bar is visible).</div>
+<div class="block">Returns <code>true</code> if the tool bar is currently collapsed (only
+ the button that expands the tool bar is visible).</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the tool bar is collapsed</dd>
@@ -725,7 +731,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if there is a pointer on this platform and it
-     is over the context bar</dd>
+ is over the context bar</dd>
 </dl>
 </li>
 </ul>
@@ -736,15 +742,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>registerButton</h4>
 <pre>public static&nbsp;void&nbsp;registerButton(<a href="../../../../ca/cgjennings/apps/arkham/ContextBar.Button.html" title="interface in ca.cgjennings.apps.arkham">ContextBar.Button</a>&nbsp;button)</pre>
-<div class="block">Adds a new kind of button that can be displayed on the tool bar.
- Whether or not the button is actually shown will depend on whether
- the user adds it to the tool bar.</div>
+<div class="block">Adds a new kind of button that can be displayed on the tool bar. Whether
+ or not the button is actually shown will depend on whether the user adds
+ it to the tool bar.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>button</code> - the button template to register</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the button or its ID is <code>null</code></dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the ID contains any invalid characters</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the ID contains any invalid
+ characters</dd>
 </dl>
 </li>
 </ul>
@@ -758,7 +765,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Sets the buttons included on the context bar.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>buttons</code> - an array of Button objects; use <code>null</code> to insert a separator</dd>
+<dd><code>buttons</code> - an array of Button objects; use <code>null</code> to
+ insert a separator</dd>
 </dl>
 </li>
 </ul>
@@ -787,8 +795,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Enables or disabled the tool bar.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>enable</code> - if <code>true</code> the tool bar will be created and shown;
-     otherwise it will be hidden and associated resources will be freed</dd>
+<dd><code>enable</code> - if <code>true</code> the tool bar will be created and
+ shown; otherwise it will be hidden and associated resources will be freed</dd>
 </dl>
 </li>
 </ul>
@@ -847,6 +855,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

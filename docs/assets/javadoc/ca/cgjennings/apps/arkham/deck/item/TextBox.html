@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -210,8 +212,8 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Sizabl
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/TextBox.html#TextBox-java.lang.String-double-double-">TextBox</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text,
        double&nbsp;widthInPts,
        double&nbsp;heightInPts)</code>
-<div class="block">Creates a new text box with the specified text and initial size
- (measured in points).</div>
+<div class="block">Creates a new text box with the specified text and initial size (measured
+ in points).</div>
 </td>
 </tr>
 </table>
@@ -258,8 +260,8 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Sizabl
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/TextBox.html#customizePopupMenu-javax.swing.JPopupMenu-ca.cgjennings.apps.arkham.deck.item.PageItem:A-boolean-">customizePopupMenu</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JPopupMenu.html?is-external=true" title="class or interface in javax.swing">JPopupMenu</a>&nbsp;menu,
                   <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a>[]&nbsp;selection,
                   boolean&nbsp;isSelectionFocus)</code>
-<div class="block">Allows a page item the opportunity to customize the popup menu before
- it is displayed.</div>
+<div class="block">Allows a page item the opportunity to customize the popup menu before it
+ is displayed.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -301,7 +303,8 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Sizabl
 <tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/LineJoin.html" title="enum in ca.cgjennings.apps.arkham.deck.item">LineJoin</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/TextBox.html#getOutlineJoin--">getOutlineJoin</a></span>()</code>
-<div class="block">Returns the method used to join the line segments that make up the outline.</div>
+<div class="block">Returns the method used to join the line segments that make up the
+ outline.</div>
 </td>
 </tr>
 <tr id="i13" class="rowColor">
@@ -500,8 +503,8 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Sizabl
 <pre>public&nbsp;TextBox(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;text,
                double&nbsp;widthInPts,
                double&nbsp;heightInPts)</pre>
-<div class="block">Creates a new text box with the specified text and initial size
- (measured in points).</div>
+<div class="block">Creates a new text box with the specified text and initial size (measured
+ in points).</div>
 </li>
 </ul>
 </li>
@@ -544,8 +547,9 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Sizabl
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#clearCachedImages--">AbstractRenderedItem</a></code></span></div>
 <div class="block">Clear any cached image data held by this object. The base class clears
  any cached oriented results and the MIP map cache (if enabled).
- Subclasses should override this (calling <code>super.clearCachedImages</code>)
- if the <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#renderImage-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-"><code>AbstractRenderedItem.renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a> implementation caches results.</div>
+ Subclasses should override this (calling
+ <code>super.clearCachedImages</code>) if the <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#renderImage-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-"><code>AbstractRenderedItem.renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a>
+ implementation caches results.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#clearCachedImages--">clearCachedImages</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html" title="class in ca.cgjennings.apps.arkham.deck.item">AbstractRenderedItem</a></code></dd>
@@ -641,10 +645,10 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Sizabl
                                <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a>[]&nbsp;selection,
                                boolean&nbsp;isSelectionFocus)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#customizePopupMenu-javax.swing.JPopupMenu-ca.cgjennings.apps.arkham.deck.item.PageItem:A-boolean-">PageItem</a></code></span></div>
-<div class="block">Allows a page item the opportunity to customize the popup menu before
- it is displayed. When a popup menu is constructed for a page view, the
- items in the selection will be offered the opportunity to customize the
- menu. Generally, only the last item (if any) makes any changes.</div>
+<div class="block">Allows a page item the opportunity to customize the popup menu before it
+ is displayed. When a popup menu is constructed for a page view, the items
+ in the selection will be offered the opportunity to customize the menu.
+ Generally, only the last item (if any) makes any changes.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#customizePopupMenu-javax.swing.JPopupMenu-ca.cgjennings.apps.arkham.deck.item.PageItem:A-boolean-">customizePopupMenu</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a></code></dd>
@@ -653,8 +657,8 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Sizabl
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>menu</code> - the menu that will be displayed</dd>
 <dd><code>selection</code> - the selected items; this should be considered read-only</dd>
-<dd><code>isSelectionFocus</code> - if <code>true</code>, this is the last item
-   in the selection</dd>
+<dd><code>isSelectionFocus</code> - if <code>true</code>, this is the last item in
+ the selection</dd>
 </dl>
 </li>
 </ul>
@@ -666,12 +670,12 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Sizabl
 <h4>getDragHandles</h4>
 <pre>public&nbsp;<a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/DragHandle.html" title="class in ca.cgjennings.apps.arkham.deck.item">DragHandle</a>[]&nbsp;getDragHandles()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractItem.html#getDragHandles--">AbstractItem</a></code></span></div>
-<div class="block">Returns an array of the custom <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/DragHandle.html" title="class in ca.cgjennings.apps.arkham.deck.item"><code>DragHandle</code></a>s for this item.
- If the item has no handles, returns <code>null</code>.
- <p>Concrete subclasses should create an array of handles on demand and
- cache them in the <code>dragHandles</code> field in order to ensure
- that handles are not shared between copies of the item.
- Example:
+<div class="block">Returns an array of the custom <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/DragHandle.html" title="class in ca.cgjennings.apps.arkham.deck.item"><code>DragHandle</code></a>s for this item. If the
+ item has no handles, returns <code>null</code>.
+ <p>
+ Concrete subclasses should create an array of handles on demand and cache
+ them in the <code>dragHandles</code> field in order to ensure that
+ handles are not shared between copies of the item. Example:
  <pre>
  public DragHandle[] getDragHandles() {
      if( dragHandles == null ) {
@@ -686,7 +690,8 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Sizabl
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractItem.html#getDragHandles--">getDragHandles</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractItem.html" title="class in ca.cgjennings.apps.arkham.deck.item">AbstractItem</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>an array of drag handles that can be used to manipulate the item, or <code>null</code></dd>
+<dd>an array of drag handles that can be used to manipulate the item,
+ or <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -783,7 +788,8 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Sizabl
 <h4>getOutlineJoin</h4>
 <pre>public&nbsp;<a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/LineJoin.html" title="enum in ca.cgjennings.apps.arkham.deck.item">LineJoin</a>&nbsp;getOutlineJoin()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/OutlineStyle.html#getOutlineJoin--">OutlineStyle</a></code></span></div>
-<div class="block">Returns the method used to join the line segments that make up the outline.</div>
+<div class="block">Returns the method used to join the line segments that make up the
+ outline.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/OutlineStyle.html#getOutlineJoin--">getOutlineJoin</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/OutlineStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">OutlineStyle</a></code></dd>
@@ -835,9 +841,8 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Sizabl
 <h4>getThumbnailIcon</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing">Icon</a>&nbsp;getThumbnailIcon()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#getThumbnailIcon--">PageItem</a></code></span></div>
-<div class="block">Returns a small representative icon for this item.
- The icon should be <code>ICON_SIZE</code>
- pixels wide and high.</div>
+<div class="block">Returns a small representative icon for this item. The icon should be
+ <code>ICON_SIZE</code> pixels wide and high.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#getThumbnailIcon--">getThumbnailIcon</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a></code></dd>
@@ -899,12 +904,11 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Sizabl
                   <a href="../../../../../../ca/cgjennings/apps/arkham/sheet/RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target,
                   double&nbsp;renderResolutionHint)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#paint-java.awt.Graphics2D-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-">PageItem</a></code></span></div>
-<div class="block">Paint this item at its current location.
- The graphics context will be scaled so that 1 unit represents 1 point.
- The resolution hint is a suggestion as to the resolution the
- item should be rendered at if it must be converted to a
- bitmap before being drawn. It may or may not represent the actual
- resolution of the output target.</div>
+<div class="block">Paint this item at its current location. The graphics context will be
+ scaled so that 1 unit represents 1 point. The resolution hint is a
+ suggestion as to the resolution the item should be rendered at if it must
+ be converted to a bitmap before being drawn. It may or may not represent
+ the actual resolution of the output target.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#paint-java.awt.Graphics2D-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-">paint</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a></code></dd>
@@ -944,16 +948,15 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Sizabl
 <pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;renderImage(<a href="../../../../../../ca/cgjennings/apps/arkham/sheet/RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target,
                                     double&nbsp;resolution)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#renderImage-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-">AbstractRenderedItem</a></code></span></div>
-<div class="block">Render an image based on the target and resolution hints.
- This is called whenever the item's image is required.
- The image should always be rendered in the upright, unmirrored
- position. An oriented image will be generated automatically as
- needed.
+<div class="block">Render an image based on the target and resolution hints. This is called
+ whenever the item's image is required. The image should always be
+ rendered in the upright, unmirrored position. An oriented image will be
+ generated automatically as needed.
 
- <p>It is recommended that subclasses cache results if possible,
- in which case <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#clearCachedImages--"><code>AbstractRenderedItem.clearCachedImages()</code></a> should be overridden
- to clear the cached result before calling the <code>super</code>
- implementation.</div>
+ <p>
+ It is recommended that subclasses cache results if possible, in which
+ case <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#clearCachedImages--"><code>AbstractRenderedItem.clearCachedImages()</code></a> should be overridden to clear the
+ cached result before calling the <code>super</code> implementation.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#renderImage-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-">renderImage</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html" title="class in ca.cgjennings.apps.arkham.deck.item">AbstractRenderedItem</a></code></dd>
@@ -1187,6 +1190,8 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Sizabl
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

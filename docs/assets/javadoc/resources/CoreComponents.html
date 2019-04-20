@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../index-all.html">Index</a></li>
+<li><a href="../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -116,8 +118,8 @@ var activeTableTab = "activeTableTab";
 <pre>public enum <span class="typeNameLabel">CoreComponents</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?is-external=true" title="class or interface in java.lang">Enum</a>&lt;<a href="../resources/CoreComponents.html" title="enum in resources">CoreComponents</a>&gt;</pre>
 <div class="block">The set of named core components that can be loaded and installed on demand.
- This class also provides static methods that can be used to install
- other bundles on demand.</div>
+ This class also provides static methods that can be used to install other
+ bundles on demand.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -164,7 +166,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?i
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../resources/CoreComponents.html#API_DOCUMENTATION">API_DOCUMENTATION</a></span></code>
-<div class="block">Resources needed to display documentation for Strange Eons classes in the <a href="../ca/cgjennings/apps/arkham/editors/APIBrowser.html" title="class in ca.cgjennings.apps.arkham.editors"><code>APIBrowser</code></a>.</div>
+<div class="block">Resources needed to display documentation for Strange Eons classes in the
+ <a href="../ca/cgjennings/apps/arkham/editors/APIBrowser.html" title="class in ca.cgjennings.apps.arkham.editors"><code>APIBrowser</code></a>.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -282,7 +285,8 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>API_DOCUMENTATION</h4>
 <pre>public static final&nbsp;<a href="../resources/CoreComponents.html" title="enum in resources">CoreComponents</a> API_DOCUMENTATION</pre>
-<div class="block">Resources needed to display documentation for Strange Eons classes in the <a href="../ca/cgjennings/apps/arkham/editors/APIBrowser.html" title="class in ca.cgjennings.apps.arkham.editors"><code>APIBrowser</code></a>.</div>
+<div class="block">Resources needed to display documentation for Strange Eons classes in the
+ <a href="../ca/cgjennings/apps/arkham/editors/APIBrowser.html" title="class in ca.cgjennings.apps.arkham.editors"><code>APIBrowser</code></a>.</div>
 </li>
 </ul>
 <a name="CORE_TYPEFACES">
@@ -354,8 +358,8 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>getInstallationState</h4>
 <pre>public&nbsp;<a href="../ca/cgjennings/apps/arkham/plugins/catalog/Catalog.VersioningState.html" title="enum in ca.cgjennings.apps.arkham.plugins.catalog">Catalog.VersioningState</a>&nbsp;getInstallationState()</pre>
-<div class="block">Returns an installation state for the core component.
- The return value will be one of:
+<div class="block">Returns an installation state for the core component. The return value
+ will be one of:
  <pre>
  VersioningState.NOT_INSTALLED
  VersioningState.OUT_OF_DATE
@@ -374,8 +378,8 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>getInstallationState</h4>
 <pre>public static&nbsp;<a href="../ca/cgjennings/apps/arkham/plugins/catalog/Catalog.VersioningState.html" title="enum in ca.cgjennings.apps.arkham.plugins.catalog">Catalog.VersioningState</a>&nbsp;getInstallationState(<a href="../ca/cgjennings/apps/arkham/plugins/catalog/CatalogID.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog">CatalogID</a>&nbsp;id)</pre>
-<div class="block">Returns an installation state for an arbitrary catalog ID.
- The return value will be one of:
+<div class="block">Returns an installation state for an arbitrary catalog ID. The return
+ value will be one of:
  <pre>
  VersioningState.NOT_INSTALLED
  VersioningState.OUT_OF_DATE   (installed version is older than id)
@@ -394,10 +398,9 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>validate</h4>
 <pre>public&nbsp;void&nbsp;validate()</pre>
-<div class="block">Ensures that this core component is installed and up to date.
- If not, the user is prompted to download the missing component.
- If the user refuses, a <a href="../resources/CoreComponents.MissingCoreComponentException.html" title="class in resources"><code>CoreComponents.MissingCoreComponentException</code></a>
- is thrown.</div>
+<div class="block">Ensures that this core component is installed and up to date. If not, the
+ user is prompted to download the missing component. If the user refuses,
+ a <a href="../resources/CoreComponents.MissingCoreComponentException.html" title="class in resources"><code>CoreComponents.MissingCoreComponentException</code></a> is thrown.</div>
 </li>
 </ul>
 <a name="validateCoreComponents-java.lang.Object-">
@@ -408,27 +411,28 @@ the order they are declared.</div>
 <h4>validateCoreComponents</h4>
 <pre>public static&nbsp;void&nbsp;validateCoreComponents(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;descriptor)</pre>
 <div class="block">Check for the presence of core or other required plug-ins, and install
- them if required.
- If <code>descriptor</code> is a <code>CoreComponents</code> identifier,
- that component is checked for. Otherwise the value is converted to a
- string and parsed as follows:
+ them if required. If <code>descriptor</code> is a
+ <code>CoreComponents</code> identifier, that component is checked for.
+ Otherwise the value is converted to a string and parsed as follows:
  <ol>
  <li> The string is split into tokens by breaking at newlines; each token
-      represents one required plug-in bundle.
- <li> Each token must contain a catalog ID. This ID identifies the plug-in.
- <li> The ID may optionally follow a URL ending in a '/'. This URL is taken
-      to be the location of the catalog that lists the bundle. If no
-      URL is present, the standard SE catalog is implied. Example:
-      <tt>http://somewhere.tld/CATALOGUEID{...}</tt>.
+ represents one required plug-in bundle.
+ <li> Each token must contain a catalog ID. This ID identifies the
+ plug-in.
+ <li> The ID may optionally follow a URL ending in a '/'. This URL is
+ taken to be the location of the catalog that lists the bundle. If no URL
+ is present, the standard SE catalog is implied. Example:
+ <tt>http://somewhere.tld/CATALOGUEID{...}</tt>.
  </ol></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>descriptor</code> - a <code>CoreComponent</code> or an object describing
-     the component to install (see above)</dd>
+ the component to install (see above)</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>descriptor</code> is <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>descriptor</code> is
+ <code>null</code></dd>
 <dd><code><a href="../resources/CoreComponents.MissingCoreComponentException.html" title="class in resources">CoreComponents.MissingCoreComponentException</a></code> - if any component is missing or out
-     of date and the user refuses to install it, or if installation fails</dd>
+ of date and the user refuses to install it, or if installation fails</dd>
 </dl>
 </li>
 </ul>
@@ -494,6 +498,8 @@ for (CoreComponents c : CoreComponents.values())
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../index-all.html">Index</a></li>
+<li><a href="../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

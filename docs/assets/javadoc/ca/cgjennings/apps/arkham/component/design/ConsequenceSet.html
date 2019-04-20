@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -112,33 +114,36 @@ var activeTableTab = "activeTableTab";
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
 implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</pre>
 <div class="block">A consequence set formatter formats an ordered list of <i>possible</i>
- verbal design consequences. In this context, a
- design consequence refers to the possibly unintended and often hard-to-predict
- side effects of a design decision that result from trying to balance
- competing concerns in an ill-structured problem space. The consequence set
- formatter helps the user to visualize how these consequences change over
- time as design proceeds by comparing the consequences of the previous
- design iteration to the current design.
+ verbal design consequences. In this context, a design consequence refers to
+ the possibly unintended and often hard-to-predict side effects of a design
+ decision that result from trying to balance competing concerns in an
+ ill-structured problem space. The consequence set formatter helps the user to
+ visualize how these consequences change over time as design proceeds by
+ comparing the consequences of the previous design iteration to the current
+ design.
 
- <p>During a design support analysis, the design analyzer goes through
- each of the possible consequences, <i>in order</i>, and indicates
- whether it applies to the current design. The consequence set formatter
- will compare how the consequences have changed between the current design
- and the previous design, and use different formatting to provide visual
- feedback of which consequences are the same, which no longer apply, and
- which are new.
+ <p>
+ During a design support analysis, the design analyzer goes through each of
+ the possible consequences, <i>in order</i>, and indicates whether it applies
+ to the current design. The consequence set formatter will compare how the
+ consequences have changed between the current design and the previous design,
+ and use different formatting to provide visual feedback of which consequences
+ are the same, which no longer apply, and which are new.
 
- <p>Consequences may be divided into categories, with a separate formatter
- for each category. Because all formatting is written to a <code>StringBuilder</code>
- provided by the caller, the results from each category can easily be collected
- into a single formatted document.
+ <p>
+ Consequences may be divided into categories, with a separate formatter for
+ each category. Because all formatting is written to a
+ <code>StringBuilder</code> provided by the caller, the results from each
+ category can easily be collected into a single formatted document.
 
- <p>If for some reason you cannot process each possible consequence in the
- same order for each analysis, this class will not produce reliable results.
+ <p>
+ If for some reason you cannot process each possible consequence in the same
+ order for each analysis, this class will not produce reliable results.
  However, you could build your own formatter using the <a href="../../../../../../ca/cgjennings/algo/Diff.html" title="class in ca.cgjennings.algo"><code>Diff</code></a> algorithm.
 
- <p>Typically, the output produced by this class is a formatted HTML list,
- but it can be customized to produce other formats, including plain text.</div>
+ <p>
+ Typically, the output produced by this class is a formatted HTML list, but it
+ can be customized to produce other formats, including plain text.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>0.9</dd>
@@ -164,13 +169,15 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <tr class="altColor">
 <td class="colFirst"><code>protected static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/component/design/ConsequenceSet.html#DELETED">DELETED</a></span></code>
-<div class="block">Comparison code for a consequence that was present in the previous set but isn't now.</div>
+<div class="block">Comparison code for a consequence that was present in the previous set
+ but isn't now.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/component/design/ConsequenceSet.html#INSERTED">INSERTED</a></span></code>
-<div class="block">Comparison code for a consequence that is present in the current set but not the previous one.</div>
+<div class="block">Comparison code for a consequence that is present in the current set but
+ not the previous one.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -206,8 +213,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/component/design/ConsequenceSet.html#ConsequenceSet-java.lang.String-java.awt.Color-">ConsequenceSet</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;category,
               <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true" title="class or interface in java.awt">Color</a>&nbsp;color)</code>
-<div class="block">Create a consequence set with a specific category name and installs
- a default style for the given colour.</div>
+<div class="block">Create a consequence set with a specific category name and installs a
+ default style for the given colour.</div>
 </td>
 </tr>
 </table>
@@ -237,7 +244,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
                   <a href="../../../../../../ca/cgjennings/apps/arkham/component/design/ConsequenceSet.html" title="class in ca.cgjennings.apps.arkham.component.design">ConsequenceSet</a>&nbsp;predecessor,
                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;preamble)</code>
 <div class="block">Creates a formatted list of consequences that compares the current design
- state to the previous design state and appends them to the string builder.</div>
+ state to the previous design state and appends them to the string
+ builder.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -249,8 +257,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/component/design/ConsequenceSet.html#installDefaultStyle-java.awt.Color-">installDefaultStyle</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true" title="class or interface in java.awt">Color</a>&nbsp;color)</code>
-<div class="block">Sets all of the markup for the list to a set of suitable defaults
- for writing HTML documents.</div>
+<div class="block">Sets all of the markup for the list to a set of suitable defaults for
+ writing HTML documents.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -275,8 +283,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/component/design/ConsequenceSet.html#setDeletedEntryMarkup-java.lang.String-java.lang.String-">setDeletedEntryMarkup</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;prologue,
                      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;epilogue)</code>
-<div class="block">Sets the markup to write before and after the text of a deleted
- entry.</div>
+<div class="block">Sets the markup to write before and after the text of a deleted entry.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
@@ -287,8 +294,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/component/design/ConsequenceSet.html#setKeptEntryMarkup-java.lang.String-java.lang.String-">setKeptEntryMarkup</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;prologue,
                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;epilogue)</code>
-<div class="block">Sets the markup to write before and after the text of an entry that
- does not change from the previous consequence set to this one.</div>
+<div class="block">Sets the markup to write before and after the text of an entry that does
+ not change from the previous consequence set to this one.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
@@ -302,8 +309,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/component/design/ConsequenceSet.html#setNewEntryMarkup-java.lang.String-java.lang.String-">setNewEntryMarkup</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;prologue,
                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;epilogue)</code>
-<div class="block">Sets the markup to write before and after the text of a new
- entry that was not present in the previous consequence set.</div>
+<div class="block">Sets the markup to write before and after the text of a new entry that
+ was not present in the previous consequence set.</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
@@ -356,6 +363,13 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
 <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
 </ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Iterable">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true#forEach-java.util.function.Consumer-" title="class or interface in java.lang">forEach</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true#spliterator--" title="class or interface in java.lang">spliterator</a></code></li>
+</ul>
 </li>
 </ul>
 </li>
@@ -377,7 +391,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <li class="blockList">
 <h4>DELETED</h4>
 <pre>protected static final&nbsp;int DELETED</pre>
-<div class="block">Comparison code for a consequence that was present in the previous set but isn't now.</div>
+<div class="block">Comparison code for a consequence that was present in the previous set
+ but isn't now.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../../constant-values.html#ca.cgjennings.apps.arkham.component.design.ConsequenceSet.DELETED">Constant Field Values</a></dd>
@@ -391,7 +406,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <li class="blockList">
 <h4>INSERTED</h4>
 <pre>protected static final&nbsp;int INSERTED</pre>
-<div class="block">Comparison code for a consequence that is present in the current set but not the previous one.</div>
+<div class="block">Comparison code for a consequence that is present in the current set but
+ not the previous one.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../../constant-values.html#ca.cgjennings.apps.arkham.component.design.ConsequenceSet.INSERTED">Constant Field Values</a></dd>
@@ -452,8 +468,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <h4>ConsequenceSet</h4>
 <pre>public&nbsp;ConsequenceSet(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;category,
                       <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true" title="class or interface in java.awt">Color</a>&nbsp;color)</pre>
-<div class="block">Create a consequence set with a specific category name and installs
- a default style for the given colour.</div>
+<div class="block">Create a consequence set with a specific category name and installs a
+ default style for the given colour.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>category</code> - the category title</dd>
@@ -496,13 +512,15 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
                                <a href="../../../../../../ca/cgjennings/apps/arkham/component/design/ConsequenceSet.html" title="class in ca.cgjennings.apps.arkham.component.design">ConsequenceSet</a>&nbsp;predecessor,
                                <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;preamble)</pre>
 <div class="block">Creates a formatted list of consequences that compares the current design
- state to the previous design state and appends them to the string builder.</div>
+ state to the previous design state and appends them to the string
+ builder.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>b</code> - the buffer to append to</dd>
-<dd><code>predecessor</code> - the consequence set for the previous design state, or <code>null</code></dd>
+<dd><code>predecessor</code> - the consequence set for the previous design state, or
+ <code>null</code></dd>
 <dd><code>preamble</code> - an optional preamble to write after the category and
-     before the start of the list (if any), or <code>null</code></dd>
+ before the start of the list (if any), or <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -529,9 +547,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <li class="blockList">
 <h4>installDefaultStyle</h4>
 <pre>public&nbsp;void&nbsp;installDefaultStyle(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true" title="class or interface in java.awt">Color</a>&nbsp;color)</pre>
-<div class="block">Sets all of the markup for the list to a set of suitable defaults
- for writing HTML documents. The list text will use the specified
- colour, or black if color is <code>null</code>.</div>
+<div class="block">Sets all of the markup for the list to a set of suitable defaults for
+ writing HTML documents. The list text will use the specified colour, or
+ black if color is <code>null</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>color</code> - the colour to use for the list entries</dd>
@@ -561,8 +579,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <li class="blockList">
 <h4>reset</h4>
 <pre>public&nbsp;void&nbsp;reset()</pre>
-<div class="block">Clears the current consequence list. This can be called to reuse
- an existing consequence set.</div>
+<div class="block">Clears the current consequence list. This can be called to reuse an
+ existing consequence set.</div>
 </li>
 </ul>
 <a name="setCategory-java.lang.String-">
@@ -572,13 +590,13 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <li class="blockList">
 <h4>setCategory</h4>
 <pre>public&nbsp;void&nbsp;setCategory(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;category)</pre>
-<div class="block">Sets the category name for this formatter. The category name, if any,
- is typically printed at the top of the consequence list. It may be
+<div class="block">Sets the category name for this formatter. The category name, if any, is
+ typically printed at the top of the consequence list. It may be
  <code>null</code> to indicate that categories are not being used.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>category</code> - the name of the category that the consequence set
-     is associated with</dd>
+<dd><code>category</code> - the name of the category that the consequence set is
+ associated with</dd>
 </dl>
 </li>
 </ul>
@@ -590,13 +608,13 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <h4>setDeletedEntryMarkup</h4>
 <pre>public&nbsp;void&nbsp;setDeletedEntryMarkup(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;prologue,
                                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;epilogue)</pre>
-<div class="block">Sets the markup to write before and after the text of a deleted
- entry. Typically this will include a <code>&lt;li&gt;</code> tag pair
- and some style instructions.</div>
+<div class="block">Sets the markup to write before and after the text of a deleted entry.
+ Typically this will include a <code>&lt;li&gt;</code> tag pair and some
+ style instructions.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>prologue</code> - the markup to write before the entry,
-     or <code>null</code> to suppress the entry</dd>
+<dd><code>prologue</code> - the markup to write before the entry, or
+ <code>null</code> to suppress the entry</dd>
 <dd><code>epilogue</code> - the markup to write after the entry</dd>
 </dl>
 </li>
@@ -618,14 +636,14 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <h4>setKeptEntryMarkup</h4>
 <pre>public&nbsp;void&nbsp;setKeptEntryMarkup(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;prologue,
                                <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;epilogue)</pre>
-<div class="block">Sets the markup to write before and after the text of an entry that
- does not change from the previous consequence set to this one.
- Typically this will include a <code>&lt;li&gt;</code> tag pair
- and some style instructions.</div>
+<div class="block">Sets the markup to write before and after the text of an entry that does
+ not change from the previous consequence set to this one. Typically this
+ will include a <code>&lt;li&gt;</code> tag pair and some style
+ instructions.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>prologue</code> - the markup to write before the entry,
-     or <code>null</code> to suppress the entry</dd>
+<dd><code>prologue</code> - the markup to write before the entry, or
+ <code>null</code> to suppress the entry</dd>
 <dd><code>epilogue</code> - the markup to write after the entry</dd>
 </dl>
 </li>
@@ -641,8 +659,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <div class="block">Sets the markup written to start and the list.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>prologue</code> - the markup to start a list, e.g., <code>&ltol&gt;</code></dd>
-<dd><code>epilogue</code> - the markup to end a list, e.g., <code>&lt/ol&gt;</code></dd>
+<dd><code>prologue</code> - the markup to start a list, e.g., <code>&lt;ol&gt;</code></dd>
+<dd><code>epilogue</code> - the markup to end a list, e.g., <code>&lt;/ol&gt;</code></dd>
 </dl>
 </li>
 </ul>
@@ -654,14 +672,13 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <h4>setNewEntryMarkup</h4>
 <pre>public&nbsp;void&nbsp;setNewEntryMarkup(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;prologue,
                               <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;epilogue)</pre>
-<div class="block">Sets the markup to write before and after the text of a new
- entry that was not present in the previous consequence set.
- Typically this will include a <code>&lt;li&gt;</code> tag pair
- and some style instructions.</div>
+<div class="block">Sets the markup to write before and after the text of a new entry that
+ was not present in the previous consequence set. Typically this will
+ include a <code>&lt;li&gt;</code> tag pair and some style instructions.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>prologue</code> - the markup to write before the entry,
-     or <code>null</code> to suppress the entry</dd>
+<dd><code>prologue</code> - the markup to write before the entry, or
+ <code>null</code> to suppress the entry</dd>
 <dd><code>epilogue</code> - the markup to write after the entry</dd>
 </dl>
 </li>
@@ -688,7 +705,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <h4>writeCategory</h4>
 <pre>protected&nbsp;void&nbsp;writeCategory(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html?is-external=true" title="class or interface in java.lang">StringBuilder</a>&nbsp;b)</pre>
 <div class="block">Writes markup before the start of the list to describe the category.
- Typically does nothing if the category is <code>null</code> or an empty stirng.</div>
+ Typically does nothing if the category is <code>null</code> or an empty
+ stirng.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>b</code> - the destination for the markup text</dd>
@@ -705,10 +723,10 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
                           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;entry,
                           int&nbsp;comparison,
                           int&nbsp;undeletedItemNumber)</pre>
-<div class="block">Writes a decorated consequence list entry into the string builder.
- The base class will use the currently set markup for the entry type
- to compose the entry, replacing the text <code>@n;</code> with the
- undeleted item number.</div>
+<div class="block">Writes a decorated consequence list entry into the string builder. The
+ base class will use the currently set markup for the entry type to
+ compose the entry, replacing the text <code>@n;</code> with the undeleted
+ item number.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>b</code> - the destination for the markup text</dd>
@@ -716,8 +734,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <dd><code>comparison</code> - the entry style to use; one of <a href="../../../../../../ca/cgjennings/apps/arkham/component/design/ConsequenceSet.html#DELETED"><code>DELETED</code></a>,
      <a href="../../../../../../ca/cgjennings/apps/arkham/component/design/ConsequenceSet.html#KEPT"><code>KEPT</code></a> or <a href="../../../../../../ca/cgjennings/apps/arkham/component/design/ConsequenceSet.html#INSERTED"><code>INSERTED</code></a></dd>
 <dd><code>undeletedItemNumber</code> - this is the suggested number to use if writing
-     a numbered list; it is incremented for each entry unless the entry is
-     being deleted from the list</dd>
+ a numbered list; it is incremented for each entry unless the entry is
+ being deleted from the list</dd>
 </dl>
 </li>
 </ul>
@@ -789,6 +807,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

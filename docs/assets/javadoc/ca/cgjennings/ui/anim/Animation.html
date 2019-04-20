@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -111,13 +113,12 @@ var activeTableTab = "activeTableTab";
 <pre>public class <span class="typeNameLabel">Animation</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
 implements <a href="../../../../ca/cgjennings/ui/anim/FrameComposer.html" title="interface in ca.cgjennings.ui.anim">FrameComposer</a></pre>
-<div class="block">A simple framework for basic animation effects in a user interface.
- This is intended for brief, noninteractive animations.
- Construct a new instance with the desired time to complete the animation,
- in seconds. Override <a href="../../../../ca/cgjennings/ui/anim/Animation.html#composeFrame-float-"><code>composeFrame(float)</code></a> to update the interface to a
- state between the initial (position=0) and final (position=1) conditions.
- (Alternatively, use the constructor that takes a <a href="../../../../ca/cgjennings/ui/anim/FrameComposer.html" title="interface in ca.cgjennings.ui.anim"><code>FrameComposer</code></a>
- parameter.)</div>
+<div class="block">A simple framework for basic animation effects in a user interface. This is
+ intended for brief, noninteractive animations. Construct a new instance with
+ the desired time to complete the animation, in seconds. Override
+ <a href="../../../../ca/cgjennings/ui/anim/Animation.html#composeFrame-float-"><code>composeFrame(float)</code></a> to update the interface to a state between the initial
+ (position=0) and final (position=1) conditions. (Alternatively, use the
+ constructor that takes a <a href="../../../../ca/cgjennings/ui/anim/FrameComposer.html" title="interface in ca.cgjennings.ui.anim"><code>FrameComposer</code></a> parameter.)</div>
 </li>
 </ul>
 </div>
@@ -137,30 +138,30 @@ implements <a href="../../../../ca/cgjennings/ui/anim/FrameComposer.html" title=
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/ui/anim/Animation.html#Animation-float-">Animation</a></span>(float&nbsp;timeToComplete)</code>
-<div class="block">Creates a new animation that calls the built-in compose method and
- runs for the specified time at a target frame rate of approximately 30 fps.</div>
+<div class="block">Creates a new animation that calls the built-in compose method and runs
+ for the specified time at a target frame rate of approximately 30 fps.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/ui/anim/Animation.html#Animation-float-ca.cgjennings.ui.anim.FrameComposer-">Animation</a></span>(float&nbsp;timeToComplete,
          <a href="../../../../ca/cgjennings/ui/anim/FrameComposer.html" title="interface in ca.cgjennings.ui.anim">FrameComposer</a>&nbsp;composer)</code>
-<div class="block">Creates a new animation that calls the built-in compose method and
- runs for the specified time.</div>
+<div class="block">Creates a new animation that calls the built-in compose method and runs
+ for the specified time.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/ui/anim/Animation.html#Animation-float-int-">Animation</a></span>(float&nbsp;timeToComplete,
          int&nbsp;maxFrames)</code>
-<div class="block">Creates a new animation that calls the built-in compose method and
- runs for the specified time.</div>
+<div class="block">Creates a new animation that calls the built-in compose method and runs
+ for the specified time.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/ui/anim/Animation.html#Animation-float-int-ca.cgjennings.ui.anim.FrameComposer-">Animation</a></span>(float&nbsp;timeToComplete,
          int&nbsp;maxFrames,
          <a href="../../../../ca/cgjennings/ui/anim/FrameComposer.html" title="interface in ca.cgjennings.ui.anim">FrameComposer</a>&nbsp;composer)</code>
-<div class="block">Creates a new animation that calls the specified frame composer and
- runs for the specified time.</div>
+<div class="block">Creates a new animation that calls the specified frame composer and runs
+ for the specified time.</div>
 </td>
 </tr>
 </table>
@@ -188,21 +189,22 @@ implements <a href="../../../../ca/cgjennings/ui/anim/FrameComposer.html" title=
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/ui/anim/Animation.html#composeFrame-float-">composeFrame</a></span>(float&nbsp;position)</code>
-<div class="block">This method is called with a value between 0 (start) and 1 (end)
- if no other composer has been set on this animation.</div>
+<div class="block">This method is called with a value between 0 (start) and 1 (end) if no
+ other composer has been set on this animation.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/ui/anim/Animation.html#fireFinishAction--">fireFinishAction</a></span>()</code>
-<div class="block">Called when the animation finishes or stops to fire off action events
- to registered listeners.</div>
+<div class="block">Called when the animation finishes or stops to fire off action events to
+ registered listeners.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="../../../../ca/cgjennings/ui/anim/FrameComposer.html" title="interface in ca.cgjennings.ui.anim">FrameComposer</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/ui/anim/Animation.html#getComposer--">getComposer</a></span>()</code>
-<div class="block">Returns the composer that will be used to create frames for this animation.</div>
+<div class="block">Returns the composer that will be used to create frames for this
+ animation.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -302,8 +304,8 @@ implements <a href="../../../../ca/cgjennings/ui/anim/FrameComposer.html" title=
 <li class="blockList">
 <h4>Animation</h4>
 <pre>public&nbsp;Animation(float&nbsp;timeToComplete)</pre>
-<div class="block">Creates a new animation that calls the built-in compose method and
- runs for the specified time at a target frame rate of approximately 30 fps.</div>
+<div class="block">Creates a new animation that calls the built-in compose method and runs
+ for the specified time at a target frame rate of approximately 30 fps.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>timeToComplete</code> - the duration of the animation</dd>
@@ -320,8 +322,8 @@ implements <a href="../../../../ca/cgjennings/ui/anim/FrameComposer.html" title=
 <h4>Animation</h4>
 <pre>public&nbsp;Animation(float&nbsp;timeToComplete,
                  <a href="../../../../ca/cgjennings/ui/anim/FrameComposer.html" title="interface in ca.cgjennings.ui.anim">FrameComposer</a>&nbsp;composer)</pre>
-<div class="block">Creates a new animation that calls the built-in compose method and
- runs for the specified time.</div>
+<div class="block">Creates a new animation that calls the built-in compose method and runs
+ for the specified time.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>timeToComplete</code> - the duration of the animation</dd>
@@ -338,12 +340,13 @@ implements <a href="../../../../ca/cgjennings/ui/anim/FrameComposer.html" title=
 <h4>Animation</h4>
 <pre>public&nbsp;Animation(float&nbsp;timeToComplete,
                  int&nbsp;maxFrames)</pre>
-<div class="block">Creates a new animation that calls the built-in compose method and
- runs for the specified time.</div>
+<div class="block">Creates a new animation that calls the built-in compose method and runs
+ for the specified time.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>timeToComplete</code> - the duration of the animation</dd>
-<dd><code>maxFrames</code> - a hint describing the maximum number of frames to display</dd>
+<dd><code>maxFrames</code> - a hint describing the maximum number of frames to
+ display</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../ca/cgjennings/ui/anim/Animation.html#setDuration-float-"><code>setDuration(float)</code></a>, 
 <a href="../../../../ca/cgjennings/ui/anim/Animation.html#setMaxFrames-int-"><code>setMaxFrames(int)</code></a></dd>
@@ -359,12 +362,13 @@ implements <a href="../../../../ca/cgjennings/ui/anim/FrameComposer.html" title=
 <pre>public&nbsp;Animation(float&nbsp;timeToComplete,
                  int&nbsp;maxFrames,
                  <a href="../../../../ca/cgjennings/ui/anim/FrameComposer.html" title="interface in ca.cgjennings.ui.anim">FrameComposer</a>&nbsp;composer)</pre>
-<div class="block">Creates a new animation that calls the specified frame composer and
- runs for the specified time.</div>
+<div class="block">Creates a new animation that calls the specified frame composer and runs
+ for the specified time.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>timeToComplete</code> - the duration of the animation</dd>
-<dd><code>maxFrames</code> - a hint describing the maximum number of frames to display</dd>
+<dd><code>maxFrames</code> - a hint describing the maximum number of frames to
+ display</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../ca/cgjennings/ui/anim/Animation.html#setDuration-float-"><code>setDuration(float)</code></a>, 
 <a href="../../../../ca/cgjennings/ui/anim/Animation.html#setMaxFrames-int-"><code>setMaxFrames(int)</code></a></dd>
@@ -403,9 +407,9 @@ implements <a href="../../../../ca/cgjennings/ui/anim/FrameComposer.html" title=
 <li class="blockList">
 <h4>composeFrame</h4>
 <pre>public&nbsp;void&nbsp;composeFrame(float&nbsp;position)</pre>
-<div class="block">This method is called with a value between 0 (start) and 1 (end)
- if no other composer has been set on this animation.
- It should set up the animation state accordingly.</div>
+<div class="block">This method is called with a value between 0 (start) and 1 (end) if no
+ other composer has been set on this animation. It should set up the
+ animation state accordingly.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../ca/cgjennings/ui/anim/FrameComposer.html#composeFrame-float-">composeFrame</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../ca/cgjennings/ui/anim/FrameComposer.html" title="interface in ca.cgjennings.ui.anim">FrameComposer</a></code></dd>
@@ -421,8 +425,8 @@ implements <a href="../../../../ca/cgjennings/ui/anim/FrameComposer.html" title=
 <li class="blockList">
 <h4>fireFinishAction</h4>
 <pre>protected&nbsp;void&nbsp;fireFinishAction()</pre>
-<div class="block">Called when the animation finishes or stops to fire off action events
- to registered listeners.</div>
+<div class="block">Called when the animation finishes or stops to fire off action events to
+ registered listeners.</div>
 </li>
 </ul>
 <a name="getComposer--">
@@ -432,7 +436,8 @@ implements <a href="../../../../ca/cgjennings/ui/anim/FrameComposer.html" title=
 <li class="blockList">
 <h4>getComposer</h4>
 <pre>public&nbsp;<a href="../../../../ca/cgjennings/ui/anim/FrameComposer.html" title="interface in ca.cgjennings.ui.anim">FrameComposer</a>&nbsp;getComposer()</pre>
-<div class="block">Returns the composer that will be used to create frames for this animation.</div>
+<div class="block">Returns the composer that will be used to create frames for this
+ animation.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the composer</dd>
@@ -474,9 +479,9 @@ implements <a href="../../../../ca/cgjennings/ui/anim/FrameComposer.html" title=
 <li class="blockList">
 <h4>isPlaying</h4>
 <pre>public&nbsp;boolean&nbsp;isPlaying()</pre>
-<div class="block">Returns <code>true</code> if the animation is still playing.
- (This will still be <code>true</code> after calling <a href="../../../../ca/cgjennings/ui/anim/Animation.html#stop--"><code>stop()</code></a>
- until the animation actually halts.)</div>
+<div class="block">Returns <code>true</code> if the animation is still playing. (This will
+ still be <code>true</code> after calling <a href="../../../../ca/cgjennings/ui/anim/Animation.html#stop--"><code>stop()</code></a> until the
+ animation actually halts.)</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the animation is playing</dd>
@@ -515,16 +520,17 @@ implements <a href="../../../../ca/cgjennings/ui/anim/FrameComposer.html" title=
 <h4>play</h4>
 <pre>public&nbsp;void&nbsp;play(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;interruptTag)</pre>
 <div class="block">Starts playing the animation after stopping any other animations started
- with the same interrupt tag. This can be used to ensure that two animations
- on the same object don't counteract each other. For example, suppose a
- button darkens when the pointer moves over it and lightens when the pointer
- moves off again. If the pointer moved quickly over and then off of the button,
- then the darkening and lightening animations would play overtop of each other.
- By playing these animations using the same tag, such as the button instance,
- this effect would be prevented.</div>
+ with the same interrupt tag. This can be used to ensure that two
+ animations on the same object don't counteract each other. For example,
+ suppose a button darkens when the pointer moves over it and lightens when
+ the pointer moves off again. If the pointer moved quickly over and then
+ off of the button, then the darkening and lightening animations would
+ play overtop of each other. By playing these animations using the same
+ tag, such as the button instance, this effect would be prevented.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>interruptTag</code> - the mutual exclusion tag that will mark this playthrough</dd>
+<dd><code>interruptTag</code> - the mutual exclusion tag that will mark this
+ playthrough</dd>
 </dl>
 </li>
 </ul>
@@ -564,9 +570,9 @@ implements <a href="../../../../ca/cgjennings/ui/anim/FrameComposer.html" title=
 <h4>setDuration</h4>
 <pre>public&nbsp;void&nbsp;setDuration(float&nbsp;timeToComplete)</pre>
 <div class="block">Sets the ideal play time for the animation. Actual play time will usually
- be close to, but not exactly match, this value. Note that the
- animation will always display positions 0 and 1; if composition is
- slow this may take significantly longer than the play time.</div>
+ be close to, but not exactly match, this value. Note that the animation
+ will always display positions 0 and 1; if composition is slow this may
+ take significantly longer than the play time.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>timeToComplete</code> - the time for the animation to complete, in seconds</dd>
@@ -618,6 +624,8 @@ implements <a href="../../../../ca/cgjennings/ui/anim/FrameComposer.html" title=
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

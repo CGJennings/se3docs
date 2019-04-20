@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../index-all.html">Index</a></li>
+<li><a href="../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -106,18 +108,18 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public final class <span class="typeNameLabel">AcceleratorTable</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block">An accelerator table maps command names to keyboard gestures.
- Like a <a href="../resources/Language.html" title="class in resources"><code>Language</code></a> instance, it can load gestures from a resource file
- and it uses file name patterns to combine a baseline set of definitions with
- context-sensitive overrides. In the case of an accelerator table, the following
- patterns are used to create platform-specific variants:
+<div class="block">An accelerator table maps command names to keyboard gestures. Like a
+ <a href="../resources/Language.html" title="class in resources"><code>Language</code></a> instance, it can load gestures from a resource file and it
+ uses file name patterns to combine a baseline set of definitions with
+ context-sensitive overrides. In the case of an accelerator table, the
+ following patterns are used to create platform-specific variants:
  <pre>
  basename.properties
  basename-win.properties
  basename-mac.properties
  basename-other.properties
- </pre>
- Other variant names may be added in future to support new target platforms.</div>
+ </pre> Other variant names may be added in future to support new target
+ platforms.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0.3666</dd>
@@ -146,8 +148,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../resources/AcceleratorTable.html#AcceleratorTable-java.lang.String-">AcceleratorTable</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;baseFile)</code>
-<div class="block">Creates a new accelerator table that reads its content from the
- specified resource file.</div>
+<div class="block">Creates a new accelerator table that reads its content from the specified
+ resource file.</div>
 </td>
 </tr>
 </table>
@@ -193,16 +195,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../resources/AcceleratorTable.html#set-java.lang.String-javax.swing.KeyStroke-">set</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
    <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/KeyStroke.html?is-external=true" title="class or interface in javax.swing">KeyStroke</a>&nbsp;accelerator)</code>
-<div class="block">Sets the keystroke associated with an arbitrary key in the user
- table.</div>
+<div class="block">Sets the keystroke associated with an arbitrary key in the user table.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../resources/AcceleratorTable.html#stringFromAccelerator-javax.swing.KeyStroke-">stringFromAccelerator</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/KeyStroke.html?is-external=true" title="class or interface in javax.swing">KeyStroke</a>&nbsp;accelerator)</code>
 <div class="block">Returns a string that can be
- <a href="../resources/AcceleratorTable.html#acceleratorFromString-java.lang.String-">converted back</a>
- into the specified key stroke.</div>
+ <a href="../resources/AcceleratorTable.html#acceleratorFromString-java.lang.String-">converted back</a> into
+ the specified key stroke.</div>
 </td>
 </tr>
 </table>
@@ -245,12 +246,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>AcceleratorTable</h4>
 <pre>public&nbsp;AcceleratorTable(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;baseFile)
                  throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Creates a new accelerator table that reads its content from the
- specified resource file. The table will also check for a file
- with the same name in the <code>keys</code> subfolder of the
- user storage folder, and load any definitions found there.
- Tables created using this constructor can
- <a href="../resources/AcceleratorTable.html#set-java.lang.String-javax.swing.KeyStroke-">modify the
+<div class="block">Creates a new accelerator table that reads its content from the specified
+ resource file. The table will also check for a file with the same name in
+ the <code>keys</code> subfolder of the user storage folder, and load any
+ definitions found there. Tables created using this constructor can null     <a href="../resources/AcceleratorTable.html#set-java.lang.String-javax.swing.KeyStroke-">modify the
  key mappings</a> and <a href="../resources/AcceleratorTable.html#update">save changes back again</a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -276,22 +275,26 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>acceleratorFromString</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/KeyStroke.html?is-external=true" title="class or interface in javax.swing">KeyStroke</a>&nbsp;acceleratorFromString(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;description)</pre>
 <div class="block">Converts a string to a single key stroke. The string may use one of two
- formats: the verbose format use by the <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/KeyStroke.html?is-external=true" title="class or interface in javax.swing"><code>KeyStroke</code></a> class, or
- a compact format that requires less typing. The compact format uses the
- form <code>[modifiers*+]key</code>. Here,<code>modifiers</code> represents
- a sequence of one or more modifier keys. Each modifier is represented by
- a single letter:</p>
- 
+ formats: the verbose format use by the <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/KeyStroke.html?is-external=true" title="class or interface in javax.swing"><code>KeyStroke</code></a> class, or a
+ compact format that requires less typing. The compact format uses the
+ form <code>[modifiers*+]key</code>. Here,<code>modifiers</code>
+ represents a sequence of one or more modifier keys. Each modifier is
+ represented by a single letter:
+
  <table border=0>
- <tr valign=top><th><code>P</code> <td>Platform-specific menu accelerator key (Control on most platforms; Command on OS X)
+ <caption>Modifier letter codes</caption>
+ <tr valign=top><th><code>P</code> <td>Platform-specific menu accelerator
+ key (Control on most platforms; Command on OS X)
  <tr valign=top><th><code>M</code> <td>Meta (Command)
  <tr valign=top><th><code>C</code> <td>Control
  <tr valign=top><th><code>A</code> <td>Alt
  <tr valign=top><th><code>S</code> <td>Shift
- <tr valign=top><th><code>G</code> <td>AltGr (not recommended for shortcut keys)
+ <tr valign=top><th><code>G</code> <td>AltGr (not recommended for shortcut
+ keys)
  </table>
- 
- <p><b>Examples:</b><br>
+
+ <p>
+ <b>Examples:</b><br>
  <code>HOME</code><br>
  <code>ctrl X</code><br>
  <code>ctrl alt DELETE</code><br>
@@ -300,10 +303,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <code>C + A + Delete</code></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>keyStroke</code> - the string description of the key stroke, in one of the
-   two supported formats</dd>
+<dd><code>description</code> - the string description of the key stroke, in one of the
+ two supported formats</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a <code>KeyStroke</code> for the string description, or <code>null</code></dd>
+<dd>a <code>KeyStroke</code> for the string description, or
+ <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -363,14 +367,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>set</h4>
 <pre>public&nbsp;void&nbsp;set(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
                 <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/KeyStroke.html?is-external=true" title="class or interface in javax.swing">KeyStroke</a>&nbsp;accelerator)</pre>
-<div class="block">Sets the keystroke associated with an arbitrary key in the user
- table. If the accelerator is set to the same value as that loaded
- from the resource files, then the value will revert to the default
- instead of modifying the user table.</div>
+<div class="block">Sets the keystroke associated with an arbitrary key in the user table. If
+ the accelerator is set to the same value as that loaded from the resource
+ files, then the value will revert to the default instead of modifying the
+ user table.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - the key name</dd>
-<dd><code>accelerator</code> - the key stroke to associated with the key (may be <code>null</code>)</dd>
+<dd><code>accelerator</code> - the key stroke to associated with the key (may be
+ <code>null</code>)</dd>
 </dl>
 </li>
 </ul>
@@ -382,10 +387,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>stringFromAccelerator</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;stringFromAccelerator(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/KeyStroke.html?is-external=true" title="class or interface in javax.swing">KeyStroke</a>&nbsp;accelerator)</pre>
 <div class="block">Returns a string that can be
- <a href="../resources/AcceleratorTable.html#acceleratorFromString-java.lang.String-">converted back</a>
- into the specified key stroke. Returns an empty string if the key
- stroke is <code>null</code>. The string will use the compact form
- if possible.</div>
+ <a href="../resources/AcceleratorTable.html#acceleratorFromString-java.lang.String-">converted back</a> into
+ the specified key stroke. Returns an empty string if the key stroke is
+ <code>null</code>. The string will use the compact form if possible.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>accelerator</code> - the accelerator to convert</dd>
@@ -414,6 +418,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../index-all.html">Index</a></li>
+<li><a href="../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

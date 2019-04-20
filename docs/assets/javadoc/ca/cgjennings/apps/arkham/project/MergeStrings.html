@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -120,8 +122,8 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">MergeStrings</span>
 extends <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskActionTree.html" title="class in ca.cgjennings.apps.arkham.project">TaskActionTree</a></pre>
-<div class="block">A task action that loads strings from a string table into the game
- or UI language. Useful when developing plug-ins that use localized text.</div>
+<div class="block">A task action that loads strings from a string table into the game or UI
+ language. Useful when developing plug-ins that use localized text.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -176,8 +178,8 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskActionTree
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/project/MergeStrings.html#isAppliesToShortCircuited--">isAppliesToShortCircuited</a></span>()</code>
 <div class="block">If this method returns <code>true</code>, then the evaluation of
- <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskActionTree.html#appliesToSelection-ca.cgjennings.apps.arkham.project.Member:A-"><code>TaskActionTree.appliesToSelection(ca.cgjennings.apps.arkham.project.Member[])</code></a> and <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskActionTree.html#appliesTo-ca.cgjennings.apps.arkham.project.Project-ca.cgjennings.apps.arkham.project.Task-ca.cgjennings.apps.arkham.project.Member-"><code>TaskActionTree.appliesTo(ca.cgjennings.apps.arkham.project.Project, ca.cgjennings.apps.arkham.project.Task, ca.cgjennings.apps.arkham.project.Member)</code></a> will assume that
- every child action performs the same test.</div>
+ <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskActionTree.html#appliesToSelection-ca.cgjennings.apps.arkham.project.Member:A-"><code>TaskActionTree.appliesToSelection(ca.cgjennings.apps.arkham.project.Member[])</code></a> and <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskActionTree.html#appliesTo-ca.cgjennings.apps.arkham.project.Project-ca.cgjennings.apps.arkham.project.Task-ca.cgjennings.apps.arkham.project.Member-"><code>TaskActionTree.appliesTo(ca.cgjennings.apps.arkham.project.Project, ca.cgjennings.apps.arkham.project.Task, ca.cgjennings.apps.arkham.project.Member)</code></a> will assume that every
+ child action performs the same test.</div>
 </td>
 </tr>
 </table>
@@ -201,6 +203,13 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskActionTree
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
 <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Iterable">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true#forEach-java.util.function.Consumer-" title="class or interface in java.lang">forEach</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true#spliterator--" title="class or interface in java.lang">spliterator</a></code></li>
 </ul>
 </li>
 </ul>
@@ -260,7 +269,8 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskActionTree
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html#getLabel--">getLabel</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html" title="class in ca.cgjennings.apps.arkham.project">TaskAction</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the name used to create menu items for this action, localized if possible</dd>
+<dd>the name used to create menu items for this action, localized if
+ possible</dd>
 </dl>
 </li>
 </ul>
@@ -272,17 +282,18 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskActionTree
 <h4>isAppliesToShortCircuited</h4>
 <pre>protected&nbsp;boolean&nbsp;isAppliesToShortCircuited()</pre>
 <div class="block">If this method returns <code>true</code>, then the evaluation of
- <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskActionTree.html#appliesToSelection-ca.cgjennings.apps.arkham.project.Member:A-"><code>TaskActionTree.appliesToSelection(ca.cgjennings.apps.arkham.project.Member[])</code></a> and <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskActionTree.html#appliesTo-ca.cgjennings.apps.arkham.project.Project-ca.cgjennings.apps.arkham.project.Task-ca.cgjennings.apps.arkham.project.Member-"><code>TaskActionTree.appliesTo(ca.cgjennings.apps.arkham.project.Project, ca.cgjennings.apps.arkham.project.Task, ca.cgjennings.apps.arkham.project.Member)</code></a> will assume that
- every child action performs the same test. Therefore, if the
- first child action tested does not apply, none of them can apply
- and the search ends immediately. Otherwise, every child action
- will be tested to see if it applies until at least one is found
- that does or they all fail.
+ <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskActionTree.html#appliesToSelection-ca.cgjennings.apps.arkham.project.Member:A-"><code>TaskActionTree.appliesToSelection(ca.cgjennings.apps.arkham.project.Member[])</code></a> and <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskActionTree.html#appliesTo-ca.cgjennings.apps.arkham.project.Project-ca.cgjennings.apps.arkham.project.Task-ca.cgjennings.apps.arkham.project.Member-"><code>TaskActionTree.appliesTo(ca.cgjennings.apps.arkham.project.Project, ca.cgjennings.apps.arkham.project.Task, ca.cgjennings.apps.arkham.project.Member)</code></a> will assume that every
+ child action performs the same test. Therefore, if the first child action
+ tested does not apply, none of them can apply and the search ends
+ immediately. Otherwise, every child action will be tested to see if it
+ applies until at least one is found that does or they all fail.
 
- <p>The base class returns <code>false</code>.
+ <p>
+ The base class returns <code>false</code>.
 
- <p>This action tree returns true since all of its children apply
- only to .properties files.</div>
+ <p>
+ This action tree returns true since all of its children apply only to
+ .properties files.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskActionTree.html#isAppliesToShortCircuited--">isAppliesToShortCircuited</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskActionTree.html" title="class in ca.cgjennings.apps.arkham.project">TaskActionTree</a></code></dd>
@@ -311,6 +322,8 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskActionTree
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

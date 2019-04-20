@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -118,8 +120,9 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.
 <div class="block">A filter that applies a glow effect around the edge defined by the
  non-transparent parts of an image.
 
- <p>If either the number of blurring iterations or the effect strength is
- zero, the glow effect will not be visible.</div>
+ <p>
+ If either the number of blurring iterations or the effect strength is zero,
+ the glow effect will not be visible.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -143,13 +146,13 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/GlowFilter.html#GlowFilter--">GlowFilter</a></span>()</code>
-<div class="block">Creates a new glow filter with a yellow-white glow, width of 2,
- blur radius of 4, 1 iteration, strength of 2, and an outer glow.</div>
+<div class="block">Creates a new glow filter with a yellow-white glow, width of 2, blur
+ radius of 4, 1 iteration, strength of 2, and an outer glow.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/GlowFilter.html#GlowFilter-java.awt.Color-int-boolean-int-">GlowFilter</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true" title="class or interface in java.awt">Color</a>&nbsp;color,
-          int&nbsp;radius,
+          int&nbsp;blurRadius,
           boolean&nbsp;outerGlow,
           int&nbsp;strength)</code>
 <div class="block">Creates a new glow filter.</div>
@@ -167,7 +170,7 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.
 </tr>
 <tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/GlowFilter.html#GlowFilter-int-int-boolean-int-">GlowFilter</a></span>(int&nbsp;color,
-          int&nbsp;radius,
+          int&nbsp;blurRadius,
           boolean&nbsp;outerGlow,
           int&nbsp;strength)</code>
 <div class="block">Creates a new glow filter.</div>
@@ -227,8 +230,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/GlowFilter.html#getIterations--">getIterations</a></span>()</code>
-<div class="block">Returns the number of blurring iterations that will be applied to the glow
- effect.</div>
+<div class="block">Returns the number of blurring iterations that will be applied to the
+ glow effect.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -246,8 +249,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/GlowFilter.html#isOuterGlow--">isOuterGlow</a></span>()</code>
-<div class="block">Returns <code>true</code> if the filter will produce an outer glow,
- or <code>false</code> if the filter will produce an inner glow.</div>
+<div class="block">Returns <code>true</code> if the filter will produce an outer glow, or
+ <code>false</code> if the filter will produce an inner glow.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
@@ -343,8 +346,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.
 <li class="blockList">
 <h4>GlowFilter</h4>
 <pre>public&nbsp;GlowFilter()</pre>
-<div class="block">Creates a new glow filter with a yellow-white glow, width of 2,
- blur radius of 4, 1 iteration, strength of 2, and an outer glow.</div>
+<div class="block">Creates a new glow filter with a yellow-white glow, width of 2, blur
+ radius of 4, 1 iteration, strength of 2, and an outer glow.</div>
 </li>
 </ul>
 <a name="GlowFilter-java.awt.Color-int-boolean-int-">
@@ -354,7 +357,7 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.
 <li class="blockList">
 <h4>GlowFilter</h4>
 <pre>public&nbsp;GlowFilter(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true" title="class or interface in java.awt">Color</a>&nbsp;color,
-                  int&nbsp;radius,
+                  int&nbsp;blurRadius,
                   boolean&nbsp;outerGlow,
                   int&nbsp;strength)</pre>
 <div class="block">Creates a new glow filter.</div>
@@ -398,7 +401,7 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.
 <li class="blockList">
 <h4>GlowFilter</h4>
 <pre>public&nbsp;GlowFilter(int&nbsp;color,
-                  int&nbsp;radius,
+                  int&nbsp;blurRadius,
                   boolean&nbsp;outerGlow,
                   int&nbsp;strength)</pre>
 <div class="block">Creates a new glow filter.</div>
@@ -521,8 +524,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.
 <li class="blockList">
 <h4>getIterations</h4>
 <pre>public&nbsp;int&nbsp;getIterations()</pre>
-<div class="block">Returns the number of blurring iterations that will be applied to the glow
- effect. This value may be 0, but cannot be negative.</div>
+<div class="block">Returns the number of blurring iterations that will be applied to the
+ glow effect. This value may be 0, but cannot be negative.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the number of times the blur effect is applied</dd>
@@ -565,12 +568,12 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.
 <li class="blockList">
 <h4>isOuterGlow</h4>
 <pre>public&nbsp;boolean&nbsp;isOuterGlow()</pre>
-<div class="block">Returns <code>true</code> if the filter will produce an outer glow,
- or <code>false</code> if the filter will produce an inner glow.</div>
+<div class="block">Returns <code>true</code> if the filter will produce an outer glow, or
+ <code>false</code> if the filter will produce an inner glow.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> for an outer glow type;
-     <code>false</code> for an inner glow type</dd>
+<dd><code>true</code> for an outer glow type; <code>false</code> for
+ an inner glow type</dd>
 </dl>
 </li>
 </ul>
@@ -586,7 +589,7 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> to include the image the effect applies to,
-     <code>false</code> to produce the glow effect only</dd>
+ <code>false</code> to produce the glow effect only</dd>
 </dl>
 </li>
 </ul>
@@ -641,8 +644,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.
 <pre>public&nbsp;void&nbsp;setIterations(int&nbsp;iterations)</pre>
 <div class="block">Sets the number of blurring iterations that will be applied to the glow
  effect. This value may be 0, but cannot be negative. The default is one;
- higher values will produce a smoother glow effect but will also increase the
- extent of the glow.</div>
+ higher values will produce a smoother glow effect but will also increase
+ the extent of the glow.</div>
 </li>
 </ul>
 <a name="setOuterGlow-boolean-">
@@ -657,7 +660,7 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>outerGlow</code> - <code>true</code> for an outer glow type;
-     <code>false</code> for an inner glow type</dd>
+ <code>false</code> for an inner glow type</dd>
 </dl>
 </li>
 </ul>
@@ -668,13 +671,13 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.
 <li class="blockList">
 <h4>setSourceImagePainted</h4>
 <pre>public&nbsp;void&nbsp;setSourceImagePainted(boolean&nbsp;paintSource)</pre>
-<div class="block">Sets whether the original image will be included in the output.
- If <code>true</code>, the glow effect will be combined with the
- original image.</div>
+<div class="block">Sets whether the original image will be included in the output. If
+ <code>true</code>, the glow effect will be combined with the original
+ image.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>paintSource</code> - <code>true</code> to include the image the effect applies to,
-     <code>false</code> to produce the glow effect only</dd>
+<dd><code>paintSource</code> - <code>true</code> to include the image the effect
+ applies to, <code>false</code> to produce the glow effect only</dd>
 </dl>
 </li>
 </ul>
@@ -685,9 +688,9 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.
 <li class="blockList">
 <h4>setStrength</h4>
 <pre>public&nbsp;void&nbsp;setStrength(int&nbsp;strength)</pre>
-<div class="block">Sets the strength of the glow effect. Any non-negative value is valid, but
- typical values are in the range 1 to 8.
- Higher values will produce a more intense (less translucent) glow.</div>
+<div class="block">Sets the strength of the glow effect. Any non-negative value is valid,
+ but typical values are in the range 1 to 8. Higher values will produce a
+ more intense (less translucent) glow.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>strength</code> - the positive intensity of the glow effect</dd>
@@ -728,6 +731,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

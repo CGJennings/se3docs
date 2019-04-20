@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -119,19 +121,23 @@ extends <a href="../../../../../ca/cgjennings/io/protocols/MappedURLHandler.html
 <div class="block">A URL protocol handler for the <code>res:</code> protocol, which accesses
  application resources.
 
- <p>URLs consist of these segments (where [...] indicates an optional segment):<br>
+ <p>
+ URLs consist of these segments (where [...] indicates an optional
+ segment):<br>
  <code>res: [//] [/] [path/]* file</code><br>
  Where:<br>
  <dl>
-  <dt>[//]<dd> is optional, but makes it easier to distinguish URLs from files
-          in user-supplied strings.
-  <dt>[/]<dd>indicates that the path is not relative to /resources/, but to the default package (/)
-  <dt>[path/]*<dd> is zero or more path entries (subfolders)
-  <dt>[file]<dd> is the name of the resource file
+ <dt>[//]<dd> is optional, but makes it easier to distinguish URLs from files
+ in user-supplied strings.
+ <dt>[/]<dd>indicates that the path is not relative to /resources/, but to the
+ default package (/)
+ <dt>[path/]*<dd> is zero or more path entries (subfolders)
+ <dt>[file]<dd> is the name of the resource file
  </dl>
 
- <p><b>Note:</b> the unusual class name is required for this class to be used
- by the default protocol handler factory.</div>
+ <p>
+ <b>Note:</b> the unusual class name is required for this class to be used by
+ the default protocol handler factory.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -239,15 +245,16 @@ extends <a href="../../../../../ca/cgjennings/io/protocols/MappedURLHandler.html
 <pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a>&nbsp;mapURL(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a>&nbsp;sourceURL)
               throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../ca/cgjennings/io/protocols/MappedURLHandler.html#mapURL-java.net.URL-">MappedURLHandler</a></code></span></div>
-<div class="block">Maps a URL in the handled protocol to one of the underlying URLs.
- The base class returns the original URL.</div>
+<div class="block">Maps a URL in the handled protocol to one of the underlying URLs. The
+ base class returns the original URL.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/io/protocols/MappedURLHandler.html#mapURL-java.net.URL-">mapURL</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/io/protocols/MappedURLHandler.html" title="class in ca.cgjennings.io.protocols">MappedURLHandler</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>sourceURL</code> - a URL in the protocol handled by this handler</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a URL using another protocol that maps to the same resource as this handler, or <code>null</code></dd>
+<dd>a URL using another protocol that maps to the same resource as
+ this handler, or <code>null</code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if an I/O error occurs while composing the new URL</dd>
 </dl>
@@ -273,6 +280,8 @@ extends <a href="../../../../../ca/cgjennings/io/protocols/MappedURLHandler.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

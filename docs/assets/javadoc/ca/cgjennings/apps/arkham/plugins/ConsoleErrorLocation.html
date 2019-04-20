@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -106,12 +108,12 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public final class <span class="typeNameLabel">ConsoleErrorLocation</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block">Represents information about an error that has been printed as part
- of a stack trace in the <a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptConsole.html" title="class in ca.cgjennings.apps.arkham.plugins">script output window</a>.
- Contains both an identifier that may be used to locate the original
- source file, and an optional line number at which the error was located.
- Instances of this class are not usually created directly, but are instead
- obtained from the script console.</div>
+<div class="block">Represents information about an error that has been printed as part of a
+ stack trace in the <a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptConsole.html" title="class in ca.cgjennings.apps.arkham.plugins">script output window</a>. Contains
+ both an identifier that may be used to locate the original source file, and
+ an optional line number at which the error was located. Instances of this
+ class are not usually created directly, but are instead obtained from the
+ script console.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptConsole.html#getErrorAtOffset-int-"><code>ScriptConsole.getErrorAtOffset(int)</code></a>, 
@@ -137,8 +139,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ConsoleErrorLocation.html#ConsoleErrorLocation-java.lang.String-int-">ConsoleErrorLocation</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;identifier,
                     int&nbsp;lineNumber)</code>
-<div class="block">Creates a new instance that describes an error with the specified
- source identifier and line number.</div>
+<div class="block">Creates a new instance that describes an error with the specified source
+ identifier and line number.</div>
 </td>
 </tr>
 </table>
@@ -160,8 +162,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ConsoleErrorLocation.html#getEvalLineNumber--">getEvalLineNumber</a></span>()</code>
 <div class="block">Returns the line number (starting from 1) of the error, within an
- evaluated string or 0 if the line number is unknown or was not
- within an <code>eval</code> function.</div>
+ evaluated string or 0 if the line number is unknown or was not within an
+ <code>eval</code> function.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -173,8 +175,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ConsoleErrorLocation.html#getLineNumber--">getLineNumber</a></span>()</code>
-<div class="block">Returns the line number (starting from 1) of the error, or 0 if the
- line number is unknown.</div>
+<div class="block">Returns the line number (starting from 1) of the error, or 0 if the line
+ number is unknown.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -219,12 +221,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>ConsoleErrorLocation</h4>
 <pre>public&nbsp;ConsoleErrorLocation(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;identifier,
                             int&nbsp;lineNumber)</pre>
-<div class="block">Creates a new instance that describes an error with the specified
- source identifier and line number.</div>
+<div class="block">Creates a new instance that describes an error with the specified source
+ identifier and line number.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>identifier</code> - the identifier that describes the location of the error</dd>
-<dd><code>lineNumber</code> - the line number, starting from 1, or 0 if the line number is unknown</dd>
+<dd><code>lineNumber</code> - the line number, starting from 1, or 0 if the line
+ number is unknown</dd>
 </dl>
 </li>
 </ul>
@@ -244,11 +247,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getEvalLineNumber</h4>
 <pre>public&nbsp;int&nbsp;getEvalLineNumber()</pre>
 <div class="block">Returns the line number (starting from 1) of the error, within an
- evaluated string or 0 if the line number is unknown or was not
- within an <code>eval</code> function. When an error occurs during
- the evaluation of a string, this returns the line number within
- that string while <a href="../../../../../ca/cgjennings/apps/arkham/plugins/ConsoleErrorLocation.html#getLineNumber--"><code>getLineNumber()</code></a> returns the line number
- of the <code>eval()</code> call.</div>
+ evaluated string or 0 if the line number is unknown or was not within an
+ <code>eval</code> function. When an error occurs during the evaluation of
+ a string, this returns the line number within that string while
+ <a href="../../../../../ca/cgjennings/apps/arkham/plugins/ConsoleErrorLocation.html#getLineNumber--"><code>getLineNumber()</code></a> returns the line number of the
+ <code>eval()</code> call.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the line number of the error within the evaluated code</dd>
@@ -262,10 +265,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getIdentifier</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getIdentifier()</pre>
-<div class="block">Returns the full file identifier for the error. For a script run in
- the Quickscript window, this is "Quickscript". For a script run from
- a plug-in, this may be a "res:" URL or a "file:" URL. For a script
- run in the context of an open project, this will be a "project:" URL.</div>
+<div class="block">Returns the full file identifier for the error. For a script run in the
+ Quickscript window, this is "Quickscript". For a script run from a
+ plug-in, this may be a "res:" URL or a "file:" URL. For a script run in
+ the context of an open project, this will be a "project:" URL.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a string that identifies the file where the error took place</dd>
@@ -279,8 +282,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getLineNumber</h4>
 <pre>public&nbsp;int&nbsp;getLineNumber()</pre>
-<div class="block">Returns the line number (starting from 1) of the error, or 0 if the
- line number is unknown.</div>
+<div class="block">Returns the line number (starting from 1) of the error, or 0 if the line
+ number is unknown.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the line number of the error</dd>
@@ -295,9 +298,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getShortIdentifier</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getShortIdentifier()</pre>
 <div class="block">Returns a shortened version of the identifier. If the identifier
- represents a URL or local file, then this returns the last name
- on the path (the file name).
- Otherwise, the full identifier is returned.</div>
+ represents a URL or local file, then this returns the last name on the
+ path (the file name). Otherwise, the full identifier is returned.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the file name portion of the path, or the full identifier</dd>
@@ -312,20 +314,19 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>open</h4>
 <pre>public&nbsp;void&nbsp;open()</pre>
 <div class="block">Attempts to open the error location in an editor. If the location
- represents a script file, the script is opened in a source editor
- (if it can be located) and the caret moved to the relevant line.
- If the error occurred in the Quickscript window, that is made visible
- (if necessary) and the caret moved to the relevant line.
- If the identifier refers to a plug-in resource, then the file may be
- opened in read-only mode unless exactly one equivalent file can be
- located in an appropriate location in the open project.
- If the identifier refers to a Java class, then it may be opened in
- a source editor window if a relevant source file can be located.
- Otherwise, if the relevant class can be found in the
- <a href="../../../../../ca/cgjennings/ui/textedit/completion/APIDatabase.html" title="class in ca.cgjennings.ui.textedit.completion">API database</a>, then its documentation will
- be shown. If the file cannot be located or it cannot be opened
- for some other reason, then error feedback (typically a beep) will
- be provided and no editor will be opened.</div>
+ represents a script file, the script is opened in a source editor (if it
+ can be located) and the caret moved to the relevant line. If the error
+ occurred in the Quickscript window, that is made visible (if necessary)
+ and the caret moved to the relevant line. If the identifier refers to a
+ plug-in resource, then the file may be opened in read-only mode unless
+ exactly one equivalent file can be located in an appropriate location in
+ the open project. If the identifier refers to a Java class, then it may
+ be opened in a source editor window if a relevant source file can be
+ located. Otherwise, if the relevant class can be found in the
+ <a href="../../../../../ca/cgjennings/ui/textedit/completion/APIDatabase.html" title="class in ca.cgjennings.ui.textedit.completion">API database</a>, then its documentation will be
+ shown. If the file cannot be located or it cannot be opened for some
+ other reason, then error feedback (typically a beep) will be provided and
+ no editor will be opened.</div>
 </li>
 </ul>
 </li>
@@ -348,6 +349,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

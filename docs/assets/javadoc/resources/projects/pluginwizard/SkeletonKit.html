@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -156,8 +158,8 @@ implements <a href="../../../ca/cgjennings/apps/arkham/project/PluginWizardDialo
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="../../../ca/cgjennings/ui/wizard/WizardModel.html" title="interface in ca.cgjennings.ui.wizard">WizardModel</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../resources/projects/pluginwizard/SkeletonKit.html#createModel-ca.cgjennings.apps.arkham.project.Task-">createModel</a></span>(<a href="../../../ca/cgjennings/apps/arkham/project/Task.html" title="class in ca.cgjennings.apps.arkham.project">Task</a>&nbsp;task)</code>
-<div class="block">Creates a new <a href="../../../ca/cgjennings/ui/wizard/WizardModel.html" title="interface in ca.cgjennings.ui.wizard"><code>WizardModel</code></a> that provides the pages needed
- to complete the steps of this kit.</div>
+<div class="block">Creates a new <a href="../../../ca/cgjennings/ui/wizard/WizardModel.html" title="interface in ca.cgjennings.ui.wizard"><code>WizardModel</code></a> that provides the pages needed to
+ complete the steps of this kit.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -171,8 +173,8 @@ implements <a href="../../../ca/cgjennings/apps/arkham/project/PluginWizardDialo
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../resources/projects/pluginwizard/SkeletonKit.html#getDescription--">getDescription</a></span>()</code>
-<div class="block">Returns a longer description of the kind of plug-in project that
- is created with the kit.</div>
+<div class="block">Returns a longer description of the kind of plug-in project that is
+ created with the kit.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -230,14 +232,14 @@ implements <a href="../../../ca/cgjennings/apps/arkham/project/PluginWizardDialo
 <h4>createModel</h4>
 <pre>public&nbsp;<a href="../../../ca/cgjennings/ui/wizard/WizardModel.html" title="interface in ca.cgjennings.ui.wizard">WizardModel</a>&nbsp;createModel(<a href="../../../ca/cgjennings/apps/arkham/project/Task.html" title="class in ca.cgjennings.apps.arkham.project">Task</a>&nbsp;task)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../ca/cgjennings/apps/arkham/project/PluginWizardDialog.WizardKit.html#createModel-ca.cgjennings.apps.arkham.project.Task-">PluginWizardDialog.WizardKit</a></code></span></div>
-<div class="block">Creates a new <a href="../../../ca/cgjennings/ui/wizard/WizardModel.html" title="interface in ca.cgjennings.ui.wizard"><code>WizardModel</code></a> that provides the pages needed
- to complete the steps of this kit.</div>
+<div class="block">Creates a new <a href="../../../ca/cgjennings/ui/wizard/WizardModel.html" title="interface in ca.cgjennings.ui.wizard"><code>WizardModel</code></a> that provides the pages needed to
+ complete the steps of this kit.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../ca/cgjennings/apps/arkham/project/PluginWizardDialog.WizardKit.html#createModel-ca.cgjennings.apps.arkham.project.Task-">createModel</a></code>&nbsp;in interface&nbsp;<code><a href="../../../ca/cgjennings/apps/arkham/project/PluginWizardDialog.WizardKit.html" title="interface in ca.cgjennings.apps.arkham.project">PluginWizardDialog.WizardKit</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>task</code> - the task folder that will be filled in if the
-   user completes the wizard</dd>
+<dd><code>task</code> - the task folder that will be filled in if the user
+ completes the wizard</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the new model</dd>
 </dl>
@@ -254,18 +256,18 @@ implements <a href="../../../ca/cgjennings/apps/arkham/project/PluginWizardDialo
                 throws <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../ca/cgjennings/apps/arkham/project/PluginWizardDialog.WizardKit.html#createTask-ca.cgjennings.ui.wizard.WizardModel-ca.cgjennings.apps.arkham.project.Task-">PluginWizardDialog.WizardKit</a></code></span></div>
 <div class="block">Fills in an empty task folder using the information filled in by the
- user in the pages of the provided model. This will be called when
- the user finishes the wizard while this kit is active.</div>
+ user in the pages of the provided model. This will be called when the
+ user finishes the wizard while this kit is active.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../ca/cgjennings/apps/arkham/project/PluginWizardDialog.WizardKit.html#createTask-ca.cgjennings.ui.wizard.WizardModel-ca.cgjennings.apps.arkham.project.Task-">createTask</a></code>&nbsp;in interface&nbsp;<code><a href="../../../ca/cgjennings/apps/arkham/project/PluginWizardDialog.WizardKit.html" title="interface in ca.cgjennings.apps.arkham.project">PluginWizardDialog.WizardKit</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>model</code> - the previously created model that was presented to the
-     user</dd>
+ user</dd>
 <dd><code>task</code> - the empty task folder to be filled in</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Exception.html?is-external=true" title="class or interface in java.lang">Exception</a></code> - if an error occurs while the task is being created
-     that prevents creation of the task</dd>
+ that prevents creation of the task</dd>
 </dl>
 </li>
 </ul>
@@ -277,8 +279,8 @@ implements <a href="../../../ca/cgjennings/apps/arkham/project/PluginWizardDialo
 <h4>getDescription</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getDescription()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../ca/cgjennings/apps/arkham/project/PluginWizardDialog.WizardKit.html#getDescription--">PluginWizardDialog.WizardKit</a></code></span></div>
-<div class="block">Returns a longer description of the kind of plug-in project that
- is created with the kit.</div>
+<div class="block">Returns a longer description of the kind of plug-in project that is
+ created with the kit.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../ca/cgjennings/apps/arkham/project/PluginWizardDialog.WizardKit.html#getDescription--">getDescription</a></code>&nbsp;in interface&nbsp;<code><a href="../../../ca/cgjennings/apps/arkham/project/PluginWizardDialog.WizardKit.html" title="interface in ca.cgjennings.apps.arkham.project">PluginWizardDialog.WizardKit</a></code></dd>
@@ -325,6 +327,8 @@ implements <a href="../../../ca/cgjennings/apps/arkham/project/PluginWizardDialo
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

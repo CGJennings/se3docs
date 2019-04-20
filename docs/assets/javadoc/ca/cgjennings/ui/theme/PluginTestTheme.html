@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -111,10 +113,10 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">PluginTestTheme</span>
 extends <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in ca.cgjennings.ui.theme">Theme</a></pre>
-<div class="block">The plug-in test theme is a special built-in theme. It is
- selected automatically when running in plug-in test mode, unless the
- plug-in being tested is itself a theme. Visually, it is a brown-coloured
- variant of the <a href="../../../../ca/cgjennings/ui/theme/HydraTheme.html" title="class in ca.cgjennings.ui.theme"><code>HydraTheme</code></a>.</div>
+<div class="block">The plug-in test theme is a special built-in theme. It is selected
+ automatically when running in plug-in test mode, unless the plug-in being
+ tested is itself a theme. Visually, it is a brown-coloured variant of the
+ <a href="../../../../ca/cgjennings/ui/theme/HydraTheme.html" title="class in ca.cgjennings.ui.theme"><code>HydraTheme</code></a>.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.1</dd>
@@ -185,16 +187,16 @@ extends <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in 
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/ui/theme/PluginTestTheme.html#modifyLookAndFeelDefaults-javax.swing.UIDefaults-">modifyLookAndFeelDefaults</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/UIDefaults.html?is-external=true" title="class or interface in javax.swing">UIDefaults</a>&nbsp;defaults)</code>
-<div class="block">This method is called after the look and feel has been instantiated
- but before it has been installed and allows you to modify the look
- and feel's default properties.</div>
+<div class="block">This method is called after the look and feel has been instantiated but
+ before it has been installed and allows you to modify the look and feel's
+ default properties.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/ui/theme/PluginTestTheme.html#modifyManagerDefaults-javax.swing.UIDefaults-">modifyManagerDefaults</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/UIDefaults.html?is-external=true" title="class or interface in javax.swing">UIDefaults</a>&nbsp;defaults)</code>
-<div class="block">This method is called prior to instantiating the look and feel and
- allows you to modify the UI manager's default properties.</div>
+<div class="block">This method is called prior to instantiating the look and feel and allows
+ you to modify the UI manager's default properties.</div>
 </td>
 </tr>
 </table>
@@ -252,10 +254,10 @@ extends <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in 
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;applyThemeToImage(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;bi)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../ca/cgjennings/ui/theme/Theme.html#applyThemeToImage-java.awt.image.BufferedImage-">Theme</a></code></span></div>
 <div class="block">Gives the theme the opportunity to modify a image to reflect the
- installed theme. This version of the method is called in cases where there
- is no resource identifier available for the image. The base class
- returns <code>source</code> unmodified. If you wish to modify images
- for your theme, it is important that you make your changes to a
+ installed theme. This version of the method is called in cases where
+ there is no resource identifier available for the image. The base class
+ returns <code>source</code> unmodified. If you wish to modify images for
+ your theme, it is important that you make your changes to a
  <i>copy</i> of the original image to avoid corrupting the image cache.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
@@ -264,7 +266,7 @@ extends <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in 
 <dd><code>bi</code> - the image to apply theming to</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a themed copy of the image, or the original image if it is not
-         modified by the theme</dd>
+ modified by the theme</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../ca/cgjennings/ui/theme/Theme.html#applyThemeToImage-java.lang.String-"><code>Theme.applyThemeToImage(java.lang.String)</code></a></dd>
 </dl>
@@ -279,14 +281,14 @@ extends <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in 
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getThemeName()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../ca/cgjennings/ui/theme/Theme.html#getThemeName--">Theme</a></code></span></div>
 <div class="block">Returns the name of this theme, as it should be presented to the user.
- Theme names are typically short, one or two words.
- A localized theme name should use the UI locale
- (<a href="../../../../resources/Language.html#getInterfaceLocale--"><code>Language.getInterfaceLocale()</code></a>).
+ Theme names are typically short, one or two words. A localized theme name
+ should use the UI locale (<a href="../../../../resources/Language.html#getInterfaceLocale--"><code>Language.getInterfaceLocale()</code></a>).
 
- <p>The base class generates a name from the class name by removing
- "Theme" from the end (if present) and inserting a space whenever
- an upper case letter follows a lower case letter. So, for example,
- "TchoTchoTheme" would become "Tcho Tcho".</div>
+ <p>
+ The base class generates a name from the class name by removing "Theme"
+ from the end (if present) and inserting a space whenever an upper case
+ letter follows a lower case letter. So, for example, "TchoTchoTheme"
+ would become "Tcho Tcho".</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../ca/cgjennings/ui/theme/Theme.html#getThemeName--">getThemeName</a></code>&nbsp;in class&nbsp;<code><a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in ca.cgjennings.ui.theme">Theme</a></code></dd>
@@ -303,9 +305,9 @@ extends <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in 
 <h4>modifyLookAndFeelDefaults</h4>
 <pre>public&nbsp;void&nbsp;modifyLookAndFeelDefaults(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/UIDefaults.html?is-external=true" title="class or interface in javax.swing">UIDefaults</a>&nbsp;defaults)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../ca/cgjennings/ui/theme/Theme.html#modifyLookAndFeelDefaults-javax.swing.UIDefaults-">Theme</a></code></span></div>
-<div class="block">This method is called after the look and feel has been instantiated
- but before it has been installed and allows you to modify the look
- and feel's default properties.</div>
+<div class="block">This method is called after the look and feel has been instantiated but
+ before it has been installed and allows you to modify the look and feel's
+ default properties.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../ca/cgjennings/ui/theme/Theme.html#modifyLookAndFeelDefaults-javax.swing.UIDefaults-">modifyLookAndFeelDefaults</a></code>&nbsp;in class&nbsp;<code><a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in ca.cgjennings.ui.theme">Theme</a></code></dd>
@@ -322,8 +324,8 @@ extends <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in 
 <h4>modifyManagerDefaults</h4>
 <pre>public&nbsp;void&nbsp;modifyManagerDefaults(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/UIDefaults.html?is-external=true" title="class or interface in javax.swing">UIDefaults</a>&nbsp;defaults)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../ca/cgjennings/ui/theme/Theme.html#modifyManagerDefaults-javax.swing.UIDefaults-">Theme</a></code></span></div>
-<div class="block">This method is called prior to instantiating the look and feel and
- allows you to modify the UI manager's default properties.</div>
+<div class="block">This method is called prior to instantiating the look and feel and allows
+ you to modify the UI manager's default properties.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../ca/cgjennings/ui/theme/Theme.html#modifyManagerDefaults-javax.swing.UIDefaults-">modifyManagerDefaults</a></code>&nbsp;in class&nbsp;<code><a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in ca.cgjennings.ui.theme">Theme</a></code></dd>
@@ -352,6 +354,8 @@ extends <a href="../../../../ca/cgjennings/ui/theme/Theme.html" title="class in 
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

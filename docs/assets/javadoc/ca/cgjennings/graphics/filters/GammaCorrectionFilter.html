@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -120,28 +122,30 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">GammaCorrectionFilter</span>
 extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFilter.html" title="class in ca.cgjennings.graphics.filters">AbstractPixelwiseFilter</a></pre>
-<div class="block">Applies a gamma correction function to the source image. The alpha channel
- is unaffected. Gamma correction adjusts images to account for the property
- of the human visual system that it is more sensitive to the shadows in an
- image than it is to the highlights.
- 
- <p>This filter can also be used to recolour an image by first
+<div class="block">Applies a gamma correction function to the source image. The alpha channel is
+ unaffected. Gamma correction adjusts images to account for the property of
+ the human visual system that it is more sensitive to the shadows in an image
+ than it is to the highlights.
+
+ <p>
+ This filter can also be used to recolour an image by first
  <a href="../../../../ca/cgjennings/graphics/ImageUtilities.html#desaturate-java.awt.image.BufferedImage-">converting</a>
  it to <a href="../../../../ca/cgjennings/graphics/filters/GreyscaleFilter.html" title="class in ca.cgjennings.graphics.filters">greyscale</a> and then applying a gamma
  correction in the direction of the desired colour. A gamma correction value
  of 1 results in no change to the affected channel; values greater than 1
  increase the values in the channel and values less than 1 decrease the values
- in the channel and therefore also increase the relative amount of the channel's
- colour complement:
+ in the channel and therefore also increase the relative amount of the
+ channel's colour complement:
  <pre>
                       &lt;1           1          &gt;1
  Red gamma         More Cyan   No Change   More Red
  Green gamma    More Magenta   No Change   More Green
  Blue gamma      More Yellow   No Change   More Blue
  </pre>
- 
- <p>For example, the following gamma correction values will approximate
- a sepia tone effect: R=1.5, G=1, B=0.5.</div>
+
+ <p>
+ For example, the following gamma correction values will approximate a sepia
+ tone effect: R=1.5, G=1, B=0.5.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.1</dd>
@@ -326,8 +330,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
                          int&nbsp;end)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFilter.html#filterPixels-int:A-int-int-">AbstractPixelwiseFilter</a></code></span></div>
 <div class="block">This method is called with a block of ARGB values to be filtered.
- Subclasses must override this method to implement the actual
- filtering algorithm by replacing each pixel value in the range
+ Subclasses must override this method to implement the actual filtering
+ algorithm by replacing each pixel value in the range
  <code>argb[start] ... argb[end-1]</code> with the filtered value.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -424,6 +428,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

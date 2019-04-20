@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -120,13 +122,14 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public final class <span class="typeNameLabel">CompoundPixelwiseFilter</span>
 extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFilter.html" title="class in ca.cgjennings.graphics.filters">AbstractPixelwiseFilter</a></pre>
-<div class="block">A filter that can apply multiple <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFilter.html" title="class in ca.cgjennings.graphics.filters"><code>AbstractPixelwiseFilter</code></a>s in sequence.
- Using this filter to combine multiple filters is faster than applying each
- filter in sequence because it avoids the overhead of unpacking and repacking
- the image data multiple times.
- 
- <p><b>In-place filtering:</b> This class supports in-place filtering
- (the source and destination images may be the same).</div>
+<div class="block">A filter that can apply multiple <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFilter.html" title="class in ca.cgjennings.graphics.filters"><code>AbstractPixelwiseFilter</code></a>s in
+ sequence. Using this filter to combine multiple filters is faster than
+ applying each filter in sequence because it avoids the overhead of unpacking
+ and repacking the image data multiple times.
+
+ <p>
+ <b>In-place filtering:</b> This class supports in-place filtering (the source
+ and destination images may be the same).</div>
 </li>
 </ul>
 </div>
@@ -199,7 +202,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/CompoundPixelwiseFilter.html#getSize--">getSize</a></span>()</code>
-<div class="block">Returns the number of filters that will be applied by this compound filter.</div>
+<div class="block">Returns the number of filters that will be applied by this compound
+ filter.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -259,8 +263,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <li class="blockList">
 <h4>CompoundPixelwiseFilter</h4>
 <pre>public&nbsp;CompoundPixelwiseFilter()</pre>
-<div class="block">Creates a new compound filter with an empty filter list. If the list
- is not changed, this filter will have the same effect as a
+<div class="block">Creates a new compound filter with an empty filter list. If the list is
+ not changed, this filter will have the same effect as a
  <a href="../../../../ca/cgjennings/graphics/filters/CloneFilter.html" title="class in ca.cgjennings.graphics.filters"><code>CloneFilter</code></a>.</div>
 </li>
 </ul>
@@ -312,8 +316,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
                          int&nbsp;end)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFilter.html#filterPixels-int:A-int-int-">AbstractPixelwiseFilter</a></code></span></div>
 <div class="block">This method is called with a block of ARGB values to be filtered.
- Subclasses must override this method to implement the actual
- filtering algorithm by replacing each pixel value in the range
+ Subclasses must override this method to implement the actual filtering
+ algorithm by replacing each pixel value in the range
  <code>argb[start] ... argb[end-1]</code> with the filtered value.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -335,7 +339,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <div class="block">Returns the filter at the specified index in the list of filters.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>index</code> - the index in the filter list, from 0 to <a href="../../../../ca/cgjennings/graphics/filters/CompoundPixelwiseFilter.html#getSize--"><code>getSize()</code></a>-1.</dd>
+<dd><code>index</code> - the index in the filter list, from 0 to
+ <a href="../../../../ca/cgjennings/graphics/filters/CompoundPixelwiseFilter.html#getSize--"><code>getSize()</code></a>-1.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the filter at the specified index</dd>
 </dl>
@@ -362,7 +367,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <li class="blockList">
 <h4>getSize</h4>
 <pre>public&nbsp;int&nbsp;getSize()</pre>
-<div class="block">Returns the number of filters that will be applied by this compound filter.</div>
+<div class="block">Returns the number of filters that will be applied by this compound
+ filter.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the number of filters in the list</dd>
@@ -394,20 +400,21 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <div class="block">Returns a factor representing the amount of work performed by this filter
  relative to a filter that simply copies the source image by reading and
  writing each pixel. For example, a filter that implemented a 3x3
- convolution might return the value 9. The work factor value
- helps determine when an image should be processed in parallel.
- (There is significant overhead involved in running a filter in parallel,
- so it is only worth doing if the image is relatively large
- or the amount of processing per pixel is relatively high.)
+ convolution might return the value 9. The work factor value helps
+ determine when an image should be processed in parallel. (There is
+ significant overhead involved in running a filter in parallel, so it is
+ only worth doing if the image is relatively large or the amount of
+ processing per pixel is relatively high.)
 
- <p><b>Note:</b> The work factor may vary depending on the current filter
+ <p>
+ <b>Note:</b> The work factor may vary depending on the current filter
  settings.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFilter.html#workFactor--">workFactor</a></code>&nbsp;in class&nbsp;<code><a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFilter.html" title="class in ca.cgjennings.graphics.filters">AbstractPixelwiseFilter</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the approximate amount of work per pixel,
-     relative to simply copying the pixel values</dd>
+<dd>the approximate amount of work per pixel, relative to simply
+ copying the pixel values</dd>
 </dl>
 </li>
 </ul>
@@ -431,6 +438,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

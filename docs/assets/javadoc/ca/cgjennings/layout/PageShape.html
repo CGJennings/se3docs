@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -110,10 +112,9 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">PageShape</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block">Shapes the left and right margins of rendered text.
- The shape is defined in terms of insets relative to the original margins.
- A <code>PageShape</code> returns insets based on the range of Y-positions
- covered by a line of text.
+<div class="block">Shapes the left and right margins of rendered text. The shape is defined in
+ terms of insets relative to the original margins. A <code>PageShape</code>
+ returns insets based on the range of Y-positions covered by a line of text.
  Positive inset values always reduce the margins; negative values increase
  them. A zero inset leaves the margin unchanged.</div>
 </li>
@@ -137,16 +138,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/PageShape.CompoundShape.html" title="class in ca.cgjennings.layout">PageShape.CompoundShape</a></span></code>
-<div class="block">A <code>PageShape</code> that switches between two <code>PageShape</code>s
- at a specified Y-position.</div>
+<div class="block">A <code>PageShape</code> that switches between two
+ <code>PageShape</code>s at a specified Y-position.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/PageShape.CupShape.html" title="class in ca.cgjennings.layout">PageShape.CupShape</a></span></code>
-<div class="block">A <code>PageShape</code> that is optimized for the most common case:
- a rectangle that becomes wider or narrower after a certain y-point
- is reached, e.g.:
+<div class="block">A <code>PageShape</code> that is optimized for the most common case: a
+ rectangle that becomes wider or narrower after a certain y-point is
+ reached, e.g.:
 
  
  x1        x2
@@ -170,8 +171,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr class="rowColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/PageShape.InsetShape.html" title="class in ca.cgjennings.layout">PageShape.InsetShape</a></span></code>
-<div class="block">A <code>PageShape</code> that returns constant inset values regardless
- of the Y-position.</div>
+<div class="block">A <code>PageShape</code> that returns constant inset values regardless of
+ the Y-position.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -237,22 +238,24 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/PageShape.html#debugDraw-java.awt.Graphics2D-java.awt.geom.Rectangle2D-">debugDraw</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt">Graphics2D</a>&nbsp;g,
          <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Rectangle2D.html?is-external=true" title="class or interface in java.awt.geom">Rectangle2D</a>&nbsp;rect)</code>
-<div class="block">This function is called when the markup renderer is painting its
- text box for debugging purposes.</div>
+<div class="block">This function is called when the markup renderer is painting its text box
+ for debugging purposes.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/PageShape.html#getLeftInset-double-double-">getLeftInset</a></span>(double&nbsp;y1,
             double&nbsp;y2)</code>
-<div class="block">Return the narrowest (maximum) left edge inset between y1 and y2.</div>
+<div class="block">Return the narrowest (maximum) left edge inset between y1 and y2. y1 must
+ be &lt;= y2.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/PageShape.html#getRightInset-double-double-">getRightInset</a></span>(double&nbsp;y1,
              double&nbsp;y2)</code>
-<div class="block">Return the narrowest (maximum) right edge inset between y1 and y2.</div>
+<div class="block">Return the narrowest (maximum) right edge inset between y1 and y2. y1
+ must be &lt;= y2.</div>
 </td>
 </tr>
 </table>
@@ -285,9 +288,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>RECTANGLE_SHAPE</h4>
 <pre>public static final&nbsp;<a href="../../../ca/cgjennings/layout/PageShape.html" title="class in ca.cgjennings.layout">PageShape</a> RECTANGLE_SHAPE</pre>
 <div class="block">A standard shape that causes the text to conform to its layout rectangle.
- This is the default shape for a <code>MarkupRenderer</code>.
- It works just as if using <code>new InsetShape(0,0)</code>, although
- it may use an optimized implementation.</div>
+ This is the default shape for a <code>MarkupRenderer</code>. It works
+ just as if using <code>new InsetShape(0,0)</code>, although it may use an
+ optimized implementation.</div>
 </li>
 </ul>
 </li>
@@ -323,13 +326,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>debugDraw</h4>
 <pre>public&nbsp;void&nbsp;debugDraw(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt">Graphics2D</a>&nbsp;g,
                       <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Rectangle2D.html?is-external=true" title="class or interface in java.awt.geom">Rectangle2D</a>&nbsp;rect)</pre>
-<div class="block">This function is called when the markup renderer is painting its
- text box for debugging purposes. It should draw lines or a shape to
- indicate how the margins are modified by this shape.
- The default implementation samples the left and right insets at
- regular intervals to construct an approximate shape. Subclasses
- are encouraged to override this to provide more efficient and/or
- more accurate implementations.</div>
+<div class="block">This function is called when the markup renderer is painting its text box
+ for debugging purposes. It should draw lines or a shape to indicate how
+ the margins are modified by this shape. The default implementation
+ samples the left and right insets at regular intervals to construct an
+ approximate shape. Subclasses are encouraged to override this to provide
+ more efficient and/or more accurate implementations.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>g</code> - the graphics context to draw into</dd>
@@ -345,8 +347,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getLeftInset</h4>
 <pre>public&nbsp;double&nbsp;getLeftInset(double&nbsp;y1,
                            double&nbsp;y2)</pre>
-<div class="block">Return the narrowest (maximum) left edge inset between y1 and y2.
- y1 must be &lt;= y2.</div>
+<div class="block">Return the narrowest (maximum) left edge inset between y1 and y2. y1 must
+ be &lt;= y2.</div>
 </li>
 </ul>
 <a name="getRightInset-double-double-">
@@ -357,8 +359,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getRightInset</h4>
 <pre>public&nbsp;double&nbsp;getRightInset(double&nbsp;y1,
                             double&nbsp;y2)</pre>
-<div class="block">Return the narrowest (maximum) right edge inset between y1 and y2.
- y1 must be &lt;= y2.</div>
+<div class="block">Return the narrowest (maximum) right edge inset between y1 and y2. y1
+ must be &lt;= y2.</div>
 </li>
 </ul>
 </li>
@@ -381,6 +383,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

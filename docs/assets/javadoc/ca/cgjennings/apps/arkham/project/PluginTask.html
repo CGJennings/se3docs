@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -169,8 +171,8 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/NewTaskType.ht
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/project/PluginTask.html#getDescription--">getDescription</a></span>()</code>
-<div class="block">Returns the localized, human-readable description of this task type
- as a simple HTML document.</div>
+<div class="block">Returns the localized, human-readable description of this task type as a
+ simple HTML document.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -247,8 +249,8 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/NewTaskType.ht
 <h4>getDescription</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getDescription()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/NewTaskType.html#getDescription--">NewTaskType</a></code></span></div>
-<div class="block">Returns the localized, human-readable description of this task type
- as a simple HTML document.</div>
+<div class="block">Returns the localized, human-readable description of this task type as a
+ simple HTML document.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/project/NewTaskType.html#getDescription--">getDescription</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/NewTaskType.html" title="class in ca.cgjennings.apps.arkham.project">NewTaskType</a></code></dd>
@@ -283,20 +285,18 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/NewTaskType.ht
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getType()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/NewTaskType.html#getType--">NewTaskType</a></code></span></div>
 <div class="block">Returns a string that describes the type of task created by this
- <code>NewTaskType</code>.
- The default implementation returns <tt>"TASK"</tt>, the generic
- task type.
- Returning <tt>"PROJECT"</tt> is illegal, because that type is
- reserved to identify project folders.
- The <tt>type</tt> setting of new tasks of this type will be
- set to the value returned by this method.
+ <code>NewTaskType</code>. The default implementation returns
+ <tt>"TASK"</tt>, the generic task type. Returning <tt>"PROJECT"</tt> is
+ illegal, because that type is reserved to identify project folders. The
+ <tt>type</tt> setting of new tasks of this type will be set to the value
+ returned by this method.
  <p>
- <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html" title="class in ca.cgjennings.apps.arkham.project"><code>TaskAction</code></a>s often decide whether or not they can be applied
- to a given file based on the type and/or subtype of the task
- folder they belong to.
+ <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html" title="class in ca.cgjennings.apps.arkham.project"><code>TaskAction</code></a>s often decide whether or not they can be applied to a
+ given file based on the type and/or subtype of the task folder they
+ belong to.
  <p>
- Note that the type identifier returned by this method does not
- have to be unique.</div>
+ Note that the type identifier returned by this method does not have to be
+ unique.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/project/NewTaskType.html#getType--">getType</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/NewTaskType.html" title="class in ca.cgjennings.apps.arkham.project">NewTaskType</a></code></dd>
@@ -314,23 +314,27 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/NewTaskType.ht
 <pre>public&nbsp;boolean&nbsp;initializeNewTask(<a href="../../../../../ca/cgjennings/apps/arkham/project/Project.html" title="class in ca.cgjennings.apps.arkham.project">Project</a>&nbsp;project,
                                  <a href="../../../../../ca/cgjennings/apps/arkham/project/Task.html" title="class in ca.cgjennings.apps.arkham.project">Task</a>&nbsp;task)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/NewTaskType.html#initializeNewTask-ca.cgjennings.apps.arkham.project.Project-ca.cgjennings.apps.arkham.project.Task-">NewTaskType</a></code></span></div>
-<div class="block">This method is called when this task type is added to a project.
- By the time this is called, the task folder will already exist and
- the <tt>type</tt>, <tt>subtype</tt>, and <tt>icon</tt> settings will
- be filled in using the values returned from this object, if any.
+<div class="block">This method is called when this task type is added to a project. By the
+ time this is called, the task folder will already exist and the
+ <tt>type</tt>, <tt>subtype</tt>, and <tt>icon</tt> settings will be
+ filled in using the values returned from this object, if any.
 
- <p>The project view will be synchronized with the task after this method returns,
- so any new files added to the task folder will be detected immediately.
+ <p>
+ The project view will be synchronized with the task after this method
+ returns, so any new files added to the task folder will be detected
+ immediately.
 
- <p>The default implementation does nothing, which means the user will simply
+ <p>
+ The default implementation does nothing, which means the user will simply
  have a new, empty task folder after adding the new task.
 
- <p>This method should return <code>true</code> if the initialization
- is successful. If it returns <code>false</code>, or the method throws
- an exception, then the task folder will be deleted. If an exception
- was thrown, then a generic error message will be displayed; if the
- method returns <code>false</code> then it is assumed that the method
- displayed its own, more specific message.</div>
+ <p>
+ This method should return <code>true</code> if the initialization is
+ successful. If it returns <code>false</code>, or the method throws an
+ exception, then the task folder will be deleted. If an exception was
+ thrown, then a generic error message will be displayed; if the method
+ returns <code>false</code> then it is assumed that the method displayed
+ its own, more specific message.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/project/NewTaskType.html#initializeNewTask-ca.cgjennings.apps.arkham.project.Project-ca.cgjennings.apps.arkham.project.Task-">initializeNewTask</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/NewTaskType.html" title="class in ca.cgjennings.apps.arkham.project">NewTaskType</a></code></dd>
@@ -362,6 +366,8 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/NewTaskType.ht
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

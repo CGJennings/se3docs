@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -111,9 +113,9 @@ var activeTableTab = "activeTableTab";
 <pre>public interface <span class="typeNameLabel">GameComponent</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang">Cloneable</a></pre>
 <div class="block">This interface defines common methods for all supported types of
- "components": paper gaming elements that may consist of one or more
- faces (sides). Concrete custom component implementations will typically
- be subclasses of <a href="../../../../../ca/cgjennings/apps/arkham/component/AbstractGameComponent.html" title="class in ca.cgjennings.apps.arkham.component"><code>AbstractGameComponent</code></a>.</div>
+ "components": paper gaming elements that may consist of one or more faces
+ (sides). Concrete custom component implementations will typically be
+ subclasses of <a href="../../../../../ca/cgjennings/apps/arkham/component/AbstractGameComponent.html" title="class in ca.cgjennings.apps.arkham.component"><code>AbstractGameComponent</code></a>.</div>
 </li>
 </ul>
 </div>
@@ -160,7 +162,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
 <td class="colFirst"><code><a href="../../../../../ca/cgjennings/apps/arkham/sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sheet</a>[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#createDefaultSheets--">createDefaultSheets</a></span>()</code>
 <div class="block">Creates a set of default sheets that are compatible with this component
- and associates them with the component as if by calling <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#setSheets-ca.cgjennings.apps.arkham.sheet.Sheet:A-"><code>setSheets(ca.cgjennings.apps.arkham.sheet.Sheet[])</code></a>.</div>
+ and associates them with the component as if by calling
+ <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#setSheets-ca.cgjennings.apps.arkham.sheet.Sheet:A-"><code>setSheets(ca.cgjennings.apps.arkham.sheet.Sheet[])</code></a>.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -184,8 +187,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
 <tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../resources/Settings.html" title="class in resources">Settings</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#getSettings--">getSettings</a></span>()</code>
-<div class="block">Returns a <a href="../../../../../resources/Settings.html" title="class in resources"><code>Settings</code></a> instance that will return this
- component's private settings.</div>
+<div class="block">Returns a <a href="../../../../../resources/Settings.html" title="class in resources"><code>Settings</code></a> instance that will return this component's
+ private settings.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
@@ -224,15 +227,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
 <tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#markChanged-int-">markChanged</a></span>(int&nbsp;i)</code>
-<div class="block">Called to signal that changes have been made that require the <code>i</code>the
- sheet to be redrawn.</div>
+<div class="block">Called to signal that changes have been made that require the
+ <code>i</code>the sheet to be redrawn.</div>
 </td>
 </tr>
 <tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#markSaved--">markSaved</a></span>()</code>
-<div class="block">This method is called by the component's editor when the the component
- is saved to clear the component's unsaved changes flag.</div>
+<div class="block">This method is called by the component's editor when the the component is
+ saved to clear the component's unsaved changes flag.</div>
 </td>
 </tr>
 <tr id="i16" class="altColor">
@@ -269,8 +272,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
 <li class="blockList">
 <h4>clearAll</h4>
 <pre>void&nbsp;clearAll()</pre>
-<div class="block">Sets this component's content to an empty state. Typically, this is called
- from an editor when the user wishes to erase their work and start over.</div>
+<div class="block">Sets this component's content to an empty state. Typically, this is
+ called from an editor when the user wishes to erase their work and start
+ over.</div>
 </li>
 </ul>
 <a name="clone--">
@@ -283,19 +287,20 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
 <div class="block">Returns a deep copy of this game component. The default clone
  implementation provided by <code>super.clone()</code> will return a
  <i>shallow</i> copy of the object. This will correctly clone all of this
- instance's fields that have primitive types. It is then up to you to clone
- any object fields where the field is not of an immutable type.
+ instance's fields that have primitive types. It is then up to you to
+ clone any object fields where the field is not of an immutable type.
  Images used to store portraits, although not technically immutable, are
  treated as immutable by Strange Eons. So long as you also follow this
  convention, you can save memory by sharing the shallow copy of the image.
 
- <p><b>Debugging tip:</b> One operation that makes use of the <code>clone()</code>
- method is the <b>Spin Off</b> command. If you apply this command,
- make changes to the copied component, redraw the original component,
- and notice that changes in the copy have carried over to the original,
- then you are using a shallow copy rather than a deep copy. (That is,
- you are sharing a reference to the same mutable object rather than
- making a copy of the mutable object during the cloning.)</div>
+ <p>
+ <b>Debugging tip:</b> One operation that makes use of the
+ <code>clone()</code> method is the <b>Spin Off</b> command. If you apply
+ this command, make changes to the copied component, redraw the original
+ component, and notice that changes in the copy have carried over to the
+ original, then you are using a shallow copy rather than a deep copy.
+ (That is, you are sharing a reference to the same mutable object rather
+ than making a copy of the mutable object during the cloning.)</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a deep copy of this component</dd>
@@ -309,22 +314,22 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
 <li class="blockList">
 <h4>coreCheck</h4>
 <pre>void&nbsp;coreCheck()</pre>
-<div class="block">Checks if all required libraries and extensions are installed. If
- a required library is not install
- This method is called when the component is read from a file, and
- possibly at other times
+<div class="block">Checks if all required libraries and extensions are installed. If a
+ required library is not install This method is called when the component
+ is read from a file, and possibly at other times
 
- <p>This can safely be implemented as an empty method. However, implementing
- it correctly improves the user experience since they can be notified
- of which plug-ins they need to install to correctly use the component.
- In the case of a required but not installed library, the library can
- actually be downloaded and installed on demand and the component can
- then be successfully opened.</div>
+ <p>
+ This can safely be implemented as an empty method. However, implementing
+ it correctly improves the user experience since they can be notified of
+ which plug-ins they need to install to correctly use the component. In
+ the case of a required but not installed library, the library can
+ actually be downloaded and installed on demand and the component can then
+ be successfully opened.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code>CoreComponents.MissingCoreComponentException</code> - if a required plug-in
-     is missing or out of date and the user cannot or will not install it
-     on demand</dd>
+<dd><code>CoreComponents.MissingCoreComponentException</code> - if a required
+ plug-in is missing or out of date and the user cannot or will not install
+ it on demand</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../resources/CoreComponents.html" title="enum in resources"><code>CoreComponents</code></a></dd>
 </dl>
@@ -340,8 +345,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
 <div class="block">Creates an editor capable of modifying this component.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a new editor that can be added to the application window
-     to edit this component</dd>
+<dd>a new editor that can be added to the application window to edit
+ this component</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#addEditor-ca.cgjennings.apps.arkham.StrangeEonsEditor-"><code>StrangeEonsAppWindow.addEditor(ca.cgjennings.apps.arkham.StrangeEonsEditor)</code></a></dd>
 </dl>
@@ -355,9 +360,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
 <h4>createDefaultSheets</h4>
 <pre><a href="../../../../../ca/cgjennings/apps/arkham/sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sheet</a>[]&nbsp;createDefaultSheets()</pre>
 <div class="block">Creates a set of default sheets that are compatible with this component
- and associates them with the component as if by calling <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#setSheets-ca.cgjennings.apps.arkham.sheet.Sheet:A-"><code>setSheets(ca.cgjennings.apps.arkham.sheet.Sheet[])</code></a>.
- As with <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#getSheets--"><code>getSheets()</code></a>, the returned sheets are owned by the component
- and must not be modified.</div>
+ and associates them with the component as if by calling
+ <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#setSheets-ca.cgjennings.apps.arkham.sheet.Sheet:A-"><code>setSheets(ca.cgjennings.apps.arkham.sheet.Sheet[])</code></a>. As with <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#getSheets--"><code>getSheets()</code></a>, the returned sheets are
+ owned by the component and must not be modified.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the newly created sheets</dd>
@@ -371,8 +376,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
 <li class="blockList">
 <h4>getComment</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getComment()</pre>
-<div class="block">Returns the design rationale comments associated with this component.
- If there are no comments, it should return an empty string.</div>
+<div class="block">Returns the design rationale comments associated with this component. If
+ there are no comments, it should return an empty string.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>design comments supplied by the user of the component</dd>
@@ -389,8 +394,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
 <div class="block">Returns the "full name" of this component. Typically this is the same as
  <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#getName--"><code>getName()</code></a>, but <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#getName--"><code>getName()</code></a> may optionally return a shorter
  name. For example, a component that represents a human character might
- return the character's first name from <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#getName--"><code>getName()</code></a> and their
- full name from this method.</div>
+ return the character's first name from <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#getName--"><code>getName()</code></a> and their full
+ name from this method.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the full name of the component</dd>
@@ -411,7 +416,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
  that represents a game item would return the name of the item.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the component's name; possibly a shortened version of the full name</dd>
+<dd>the component's name; possibly a shortened version of the full
+ name</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#getFullName--"><code>getFullName()</code></a></dd>
 </dl>
@@ -424,25 +430,26 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
 <li class="blockList">
 <h4>getSettings</h4>
 <pre><a href="../../../../../resources/Settings.html" title="class in resources">Settings</a>&nbsp;getSettings()</pre>
-<div class="block">Returns a <a href="../../../../../resources/Settings.html" title="class in resources"><code>Settings</code></a> instance that will return this
- component's private settings. A component's private settings are saved
- along with the component when it is written to a file. This can be
- used to override the default settings for component (stored in the
- master settings for the game) as a way to "hack" existing component
- designs. It can also be used by the component itself to store arbitrary
- information. <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html" title="class in ca.cgjennings.apps.arkham.diy"><code>DIY components</code></a> generally use the component's
- private settings to store the current user-configurable state of the
- component.
+<div class="block">Returns a <a href="../../../../../resources/Settings.html" title="class in resources"><code>Settings</code></a> instance that will return this component's
+ private settings. A component's private settings are saved along with the
+ component when it is written to a file. This can be used to override the
+ default settings for component (stored in the master settings for the
+ game) as a way to "hack" existing component designs. It can also be used
+ by the component itself to store arbitrary information.
+ <a href="../../../../../ca/cgjennings/apps/arkham/diy/DIY.html" title="class in ca.cgjennings.apps.arkham.diy"><code>DIY components</code></a> generally use the component's private settings
+ to store the current user-configurable state of the component.
 
- <p>Note that setting the key with the name <a href="../../../../../gamedata/Game.html#GAME_SETTING_KEY"><code>Game.GAME_SETTING_KEY</code></a>
+ <p>
+ Note that setting the key with the name <a href="../../../../../gamedata/Game.html#GAME_SETTING_KEY"><code>Game.GAME_SETTING_KEY</code></a>
  ("game") will change the parent scope of the private settings to the
- <a href="../../../../../gamedata/Game.html#getMasterSettings--"><code>master settings instance</code></a>
- for that game whose code matches the new value. (The initial value of
- this key is normally set on the component's half using the game code
- specified in the component's class map entry.)</div>
+ <a href="../../../../../gamedata/Game.html#getMasterSettings--"><code>master settings instance</code></a> for that game
+ whose code matches the new value. (The initial value of this key is
+ normally set on the component's half using the game code specified in the
+ component's class map entry.)</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the private settings that can be used to override settings for this component</dd>
+<dd>the private settings that can be used to override settings for
+ this component</dd>
 </dl>
 </li>
 </ul>
@@ -454,11 +461,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
 <h4>getSheets</h4>
 <pre><a href="../../../../../ca/cgjennings/apps/arkham/sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sheet</a>[]&nbsp;getSheets()</pre>
 <div class="block">Returns the sheets attached to this component to draw its faces, or
- <code>null</code> if no sheets are attached. The returned array is
- owned by the game component and must not be modified.</div>
+ <code>null</code> if no sheets are attached. The returned array is owned
+ by the game component and must not be modified.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the sheets that will be updated by calls to <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#markChanged-int-"><code>markChanged(int)</code></a>.</dd>
+<dd>the sheets that will be updated by calls to
+ <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#markChanged-int-"><code>markChanged(int)</code></a>.</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#getSheets--"><code>getSheets()</code></a></dd>
 </dl>
@@ -471,23 +479,26 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
 <li class="blockList">
 <h4>getSheetTitles</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;getSheetTitles()</pre>
-<div class="block">Returns human-readable names for the sheets used by this component.
- A typical result would be something like <code>["Front Face", "Back Face"]</code>,
- localized for the user interface language.
+<div class="block">Returns human-readable names for the sheets used by this component. A
+ typical result would be something like
+ <code>["Front Face", "Back Face"]</code>, localized for the user
+ interface language.
 
- <p>Implementations should assume that the titles are for the same kinds
- and number of sheets that are returned by <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#createDefaultSheets--"><code>createDefaultSheets()</code></a>.
- (In other words, if a user of this class decides to use their own sheet
+ <p>
+ Implementations should assume that the titles are for the same kinds and
+ number of sheets that are returned by <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#createDefaultSheets--"><code>createDefaultSheets()</code></a>. (In
+ other words, if a user of this class decides to use their own sheet
  implementations, you are not responsible for ensuring the sheet titles
  are accurate.)
 
- <p><b>Note:</b> The returned sheet name may be shared with any number of
+ <p>
+ <b>Note:</b> The returned sheet name may be shared with any number of
  callers. The values must be considered read-only unless otherwise stated
  by the subclass documentation.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>an array of sheet titles matching the assigned sheets, or
-     <code>null</code> if there are no sheets attached</dd>
+ <code>null</code> if there are no sheets attached</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#createDefaultSheets--"><code>createDefaultSheets()</code></a></dd>
 </dl>
@@ -504,7 +515,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
  last call to <code>hasChanged()</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the component has changed since this was last called</dd>
+<dd><code>true</code> if the component has changed since this was
+ last called</dd>
 </dl>
 </li>
 </ul>
@@ -530,11 +542,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
 <h4>isDeckLayoutSupported</h4>
 <pre>boolean&nbsp;isDeckLayoutSupported()</pre>
 <div class="block">Returns <code>true</code> if components of this type can be placed in a
- deck. Typically, only components that don't have faces return <code>false</code>.
- (Decks themselves, for example, cannot be placed inside other decks.)</div>
+ deck. Typically, only components that don't have faces return
+ <code>false</code>. (Decks themselves, for example, cannot be placed
+ inside other decks.)</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if and only if this component can be added to a deck</dd>
+<dd><code>true</code> if and only if this component can be added to a
+ deck</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#createDefaultSheets--"><code>createDefaultSheets()</code></a>, 
 <a href="../../../../../ca/cgjennings/apps/arkham/deck/Deck.html#isDeckLayoutSupported-java.io.File-"><code>Deck.isDeckLayoutSupported(java.io.File)</code></a></dd>
@@ -548,19 +562,19 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
 <li class="blockList">
 <h4>markChanged</h4>
 <pre>void&nbsp;markChanged(int&nbsp;i)</pre>
-<div class="block">Called to signal that changes have been made that require the <code>i</code>the
- sheet to be redrawn. This is typically not called directly. Instead,
- calling a method like "<code>setName</code>" should check if the name
- being set is actually different, and if so then call this method for each
- sheet that may have changed as a result. Plug-ins that customize
- an existing component may also call this method as needed to reflect new
- features that they have added.
+<div class="block">Called to signal that changes have been made that require the
+ <code>i</code>the sheet to be redrawn. This is typically not called
+ directly. Instead, calling a method like "<code>setName</code>" should
+ check if the name being set is actually different, and if so then call
+ this method for each sheet that may have changed as a result. Plug-ins
+ that customize an existing component may also call this method as needed
+ to reflect new features that they have added.
 
- <p>Implementations of this method will typically call the
- <a href="../../../../../ca/cgjennings/apps/arkham/sheet/Sheet.html#markChanged--"><code>Sheet.markChanged()</code></a> method of the relevant sheet
- (unless the sheet set is <code>null</code>),
- set a flag for use by <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#hasChanged--"><code>hasChanged()</code></a>,
- and then call <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#markUnsavedChanges--"><code>markUnsavedChanges()</code></a>.</div>
+ <p>
+ Implementations of this method will typically call the
+ <a href="../../../../../ca/cgjennings/apps/arkham/sheet/Sheet.html#markChanged--"><code>Sheet.markChanged()</code></a> method of the relevant sheet (unless the
+ sheet set is <code>null</code>), set a flag for use by
+ <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#hasChanged--"><code>hasChanged()</code></a>, and then call <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#markUnsavedChanges--"><code>markUnsavedChanges()</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>i</code> - the index of the sheet that needs to be redrawn</dd>
@@ -574,8 +588,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
 <li class="blockList">
 <h4>markSaved</h4>
 <pre>void&nbsp;markSaved()</pre>
-<div class="block">This method is called by the component's editor when the the component
- is saved to clear the component's unsaved changes flag.</div>
+<div class="block">This method is called by the component's editor when the the component is
+ saved to clear the component's unsaved changes flag.</div>
 </li>
 </ul>
 <a name="markUnsavedChanges--">
@@ -600,8 +614,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
  Once set, the array is owned by the component and must not be modified.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>sheets</code> - the sheets to associate with the component, or <code>null</code>
-     to clear the associated sheets</dd>
+<dd><code>sheets</code> - the sheets to associate with the component, or
+ <code>null</code> to clear the associated sheets</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#getSheets--"><code>getSheets()</code></a>, 
 <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#createDefaultSheets--"><code>createDefaultSheets()</code></a></dd>
@@ -628,6 +642,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

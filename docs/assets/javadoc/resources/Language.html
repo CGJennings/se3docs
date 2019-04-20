@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":9,"i1":9,"i2":10,"i3":10,"i4":10,"i5":10,"i6":9,"i7":9,"i8":9,"i9":9,"i10":9,"i11":9,"i12":9,"i13":9,"i14":9,"i15":10,"i16":9,"i17":10,"i18":10,"i19":10,"i20":9,"i21":9,"i22":10,"i23":9,"i24":10,"i25":10,"i26":9,"i27":10,"i28":9,"i29":9,"i30":10,"i31":10,"i32":9,"i33":9,"i34":10};
+var methods = {"i0":9,"i1":9,"i2":10,"i3":10,"i4":10,"i5":10,"i6":9,"i7":9,"i8":9,"i9":9,"i10":9,"i11":9,"i12":9,"i13":9,"i14":9,"i15":10,"i16":9,"i17":10,"i18":10,"i19":10,"i20":9,"i21":9,"i22":10,"i23":9,"i24":10,"i25":10,"i26":9,"i27":10,"i28":9,"i29":9,"i30":10,"i31":10,"i32":10,"i33":9,"i34":9,"i35":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../index-all.html">Index</a></li>
+<li><a href="../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -112,20 +114,21 @@ var activeTableTab = "activeTableTab";
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
 implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</pre>
 <div class="block">A language object manages language-related resources for a particular locale.
- This includes a table of strings (that can be expanded using resource bundles),
- a pluralizer, and a string a collator. Other resources can be located using
- localized strings in the string table, or searching for matching resource files
- using <a href="../resources/Language.html#getResourceChain-java.lang.String-java.lang.String-"><code>getResourceChain(java.lang.String, java.lang.String)</code></a>. Static methods <a href="../resources/Language.html#string-java.lang.String-"><code>string(java.lang.String)</code></a> and
- <a href="../resources/Language.html#gstring-java.lang.String-"><code>gstring(java.lang.String)</code></a> provide quick access to strings defined in the default
- user interface and game languages, respectively.
+ This includes a table of strings (that can be expanded using resource
+ bundles), a pluralizer, and a string a collator. Other resources can be
+ located using localized strings in the string table, or searching for
+ matching resource files using <a href="../resources/Language.html#getResourceChain-java.lang.String-java.lang.String-"><code>getResourceChain(java.lang.String, java.lang.String)</code></a>. Static methods
+ <a href="../resources/Language.html#string-java.lang.String-"><code>string(java.lang.String)</code></a> and <a href="../resources/Language.html#gstring-java.lang.String-"><code>gstring(java.lang.String)</code></a> provide quick access to strings defined
+ in the default user interface and game languages, respectively.
 
- <p>More than one language instance can be defined for a locale, and they can
+ <p>
+ More than one language instance can be defined for a locale, and they can
  either be kept isolated from each other or linked together in an inheritance
  chain. When localizing a plug-in, you can either add your strings to the
  default interface and/or game languages (in which case you must avoid
- conflicting key names) or create your own. The best option is
- to create your own and set the default instance as their parents, although
- this takes a little more work.</div>
+ conflicting key names) or create your own. The best option is to create your
+ own and set the default instance as their parents, although this takes a
+ little more work.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -191,15 +194,15 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../resources/Language.html#addGameLocale-java.util.Locale-">addGameLocale</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html?is-external=true" title="class or interface in java.util">Locale</a>&nbsp;loc)</code>
-<div class="block">Marks the locale <code>loc</code> as a "preferred locale" for
- game language purposes.</div>
+<div class="block">Marks the locale <code>loc</code> as a "preferred locale" for game
+ language purposes.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../resources/Language.html#addInterfaceLocale-java.util.Locale-">addInterfaceLocale</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html?is-external=true" title="class or interface in java.util">Locale</a>&nbsp;loc)</code>
-<div class="block">Marks the locale <code>loc</code> as a "preferred locale" for
- interface language purposes.</div>
+<div class="block">Marks the locale <code>loc</code> as a "preferred locale" for interface
+ language purposes.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -224,8 +227,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/text/Collator.html?is-external=true" title="class or interface in java.text">Collator</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../resources/Language.html#getCollator--">getCollator</a></span>()</code>
-<div class="block">Returns a <code>Collator</code> that can be used to sort strings
- in this language.</div>
+<div class="block">Returns a <code>Collator</code> that can be used to sort strings in this
+ language.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -310,8 +313,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../resources/Language.html#getResourceChain-java.lang.String-java.lang.String-">getResourceChain</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;baseName,
                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;suffix)</code>
-<div class="block">Returns an array of resources that match the requested file name
- from least to most specialized for the locale's language.</div>
+<div class="block">Returns an array of resources that match the requested file name from
+ least to most specialized for the locale's language.</div>
 </td>
 </tr>
 <tr id="i20" class="altColor">
@@ -324,8 +327,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../resources/Language.html#gstring-java.lang.String-java.lang.Object...-">gstring</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;args)</code>
-<div class="block">Formats and returns a format string looked up with the default
- game language.</div>
+<div class="block">Formats and returns a format string looked up with the default game
+ language.</div>
 </td>
 </tr>
 <tr id="i22" class="altColor">
@@ -337,15 +340,15 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <tr id="i23" class="rowColor">
 <td class="colFirst"><code>static boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../resources/Language.html#isLocaleDescriptionValid-java.lang.String-">isLocaleDescriptionValid</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;description)</code>
-<div class="block">Returns <code>true</code> if a locale description represents
- a valid locale.</div>
+<div class="block">Returns <code>true</code> if a locale description represents a valid
+ locale.</div>
 </td>
 </tr>
 <tr id="i24" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../resources/Language.html#iterator--">iterator</a></span>()</code>
-<div class="block">Returns an iterator that iterates over the keys in this language
- (not including any parents).</div>
+<div class="block">Returns an iterator that iterates over the keys in this language (not
+ including any parents).</div>
 </td>
 </tr>
 <tr id="i25" class="rowColor">
@@ -358,15 +361,16 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <tr id="i26" class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html?is-external=true" title="class or interface in java.util">Locale</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../resources/Language.html#parseLocaleDescription-java.lang.String-">parseLocaleDescription</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;code)</code>
-<div class="block">Parses a locale description in ll_CC format and returns the <code>Locale</code>.</div>
+<div class="block">Parses a locale description in ll_CC format and returns the
+ <code>Locale</code>.</div>
 </td>
 </tr>
 <tr id="i27" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../resources/Language.html#set-java.lang.String-java.lang.String-">set</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
    <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>
-<div class="block">Explicitly sets a key to a fixed value, overriding the result that
- would be obtained from the loaded string tables.</div>
+<div class="block">Explicitly sets a key to a fixed value, overriding the result that would
+ be obtained from the loaded string tables.</div>
 </td>
 </tr>
 <tr id="i28" class="altColor">
@@ -394,20 +398,27 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 </td>
 </tr>
 <tr id="i32" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../resources/Language.html#str-java.lang.String-">str</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</code>
+<div class="block">A synonym for <a href="../resources/Language.html#get-java.lang.String-"><code>get(java.lang.String)</code></a> that can be called from
+ scripts without specifying an overload.</div>
+</td>
+</tr>
+<tr id="i33" class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../resources/Language.html#string-java.lang.String-">string</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</code>
 <div class="block">Returns a string looked up with the default interface language.</div>
 </td>
 </tr>
-<tr id="i33" class="rowColor">
+<tr id="i34" class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../resources/Language.html#string-java.lang.String-java.lang.Object...-">string</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
       <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;args)</code>
-<div class="block">Formats and returns a format string looked up with the default
- interface language.</div>
+<div class="block">Formats and returns a format string looked up with the default interface
+ language.</div>
 </td>
 </tr>
-<tr id="i34" class="altColor">
+<tr id="i35" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../resources/Language.html#toString--">toString</a></span>()</code>
 <div class="block">Returns the string representation of this language, a string describing
@@ -421,6 +432,13 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
 <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Iterable">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true#forEach-java.util.function.Consumer-" title="class or interface in java.lang">forEach</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true#spliterator--" title="class or interface in java.lang">spliterator</a></code></li>
 </ul>
 </li>
 </ul>
@@ -443,8 +461,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <li class="blockList">
 <h4>Language</h4>
 <pre>public&nbsp;Language(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html?is-external=true" title="class or interface in java.util">Locale</a>&nbsp;loc)</pre>
-<div class="block">Create an empty language resource for a locale. If <code>loc</code>
- is <code>null</code>, the current UI locale is used.</div>
+<div class="block">Create an empty language resource for a locale. If <code>loc</code> is
+ <code>null</code>, the current UI locale is used.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>loc</code> - the locale that this language instance is based on</dd>
@@ -468,24 +486,25 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <li class="blockList">
 <h4>addGameLocale</h4>
 <pre>public static&nbsp;void&nbsp;addGameLocale(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html?is-external=true" title="class or interface in java.util">Locale</a>&nbsp;loc)</pre>
-<div class="block">Marks the locale <code>loc</code> as a "preferred locale" for
- game language purposes. This method is not normally called
- directly. Instead, plug-in authors will place a <code>game-languages</code>
- client property in their root file with a comma-separated list of all
- of the game locales supported by the plug-in. The bundle installer
- will automatically mark these as preferred when it loads the bundle.
- Preferred locales are given priority when the user selects languages
- in the <a href="../ca/cgjennings/apps/arkham/dialog/prefs/Preferences.html" title="class in ca.cgjennings.apps.arkham.dialog.prefs"><code>Preferences</code></a> dialog.
- <p><b>Note:</b> Adding a locale that includes a country automatically
- implies that the base locale with only a language and no country is
- also preferred.</div>
+<div class="block">Marks the locale <code>loc</code> as a "preferred locale" for game
+ language purposes. This method is not normally called directly. Instead,
+ plug-in authors will place a <code>game-languages</code> client property
+ in their root file with a comma-separated list of all of the game locales
+ supported by the plug-in. The bundle installer will automatically mark
+ these as preferred when it loads the bundle. Preferred locales are given
+ priority when the user selects languages in the <a href="../ca/cgjennings/apps/arkham/dialog/prefs/Preferences.html" title="class in ca.cgjennings.apps.arkham.dialog.prefs"><code>Preferences</code></a>
+ dialog.
+ <p>
+ <b>Note:</b> Adding a locale that includes a country automatically
+ implies that the base locale with only a language and no country is also
+ preferred.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>loc</code> - the locale to prioritize</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>loc</code> is <code>null</code></dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if there is no language defined in the locale
-     or there is a variant defined</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if there is no language defined in the
+ locale or there is a variant defined</dd>
 </dl>
 </li>
 </ul>
@@ -496,21 +515,21 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <li class="blockList">
 <h4>addInterfaceLocale</h4>
 <pre>public static&nbsp;void&nbsp;addInterfaceLocale(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html?is-external=true" title="class or interface in java.util">Locale</a>&nbsp;loc)</pre>
-<div class="block">Marks the locale <code>loc</code> as a "preferred locale" for
- interface language purposes. This method is not normally called
- directly. Instead, plug-in authors will place a <code>ui-languages</code>
- client property in their root file with a comma-separated list of all
- of the interface locales supported by the plug-in. The bundle installer
- will automatically mark these as preferred when it loads the bundle.
- Preferred locales are given priority when the user selects languages
- in the <a href="../ca/cgjennings/apps/arkham/dialog/prefs/Preferences.html" title="class in ca.cgjennings.apps.arkham.dialog.prefs"><code>Preferences</code></a> dialog.</div>
+<div class="block">Marks the locale <code>loc</code> as a "preferred locale" for interface
+ language purposes. This method is not normally called directly. Instead,
+ plug-in authors will place a <code>ui-languages</code> client property in
+ their root file with a comma-separated list of all of the interface
+ locales supported by the plug-in. The bundle installer will automatically
+ mark these as preferred when it loads the bundle. Preferred locales are
+ given priority when the user selects languages in the <a href="../ca/cgjennings/apps/arkham/dialog/prefs/Preferences.html" title="class in ca.cgjennings.apps.arkham.dialog.prefs"><code>Preferences</code></a>
+ dialog.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>loc</code> - the locale to prioritize</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>loc</code> is <code>null</code></dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if there is no language defined in the locale
-     or there is a variant defined</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if there is no language defined in the
+ locale or there is a variant defined</dd>
 </dl>
 </li>
 </ul>
@@ -521,22 +540,24 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <li class="blockList">
 <h4>addStrings</h4>
 <pre>public&nbsp;void&nbsp;addStrings(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;baseResource)</pre>
-<div class="block">Adds strings from a new set of resource files to this language. The resource
- files to be loaded will be determined as if by calling
- <a href="../resources/Language.html#getResourceChain-java.lang.String-java.lang.String-"><code>getResourceChain(java.lang.String, java.lang.String)</code></a>.
- If the base resource name includes an extension (a suffix starting with a
- '.' character), that extension will be used to locate the resource files.
- If the base resource name does not include an extension, the extension
+<div class="block">Adds strings from a new set of resource files to this language. The
+ resource files to be loaded will be determined as if by calling
+ <a href="../resources/Language.html#getResourceChain-java.lang.String-java.lang.String-"><code>getResourceChain(java.lang.String, java.lang.String)</code></a>. If the
+ base resource name includes an extension (a suffix starting with a '.'
+ character), that extension will be used to locate the resource files. If
+ the base resource name does not include an extension, the extension
  <code>.properties</code> will be used.
 
- <p>To prevent the accidental replacement of strings from the main application,
- this method will not alter the value of string keys that are already
- defined. If you wish to replace the value of an existing key, you can
- do so using the <a href="../resources/Language.html#set-java.lang.String-java.lang.String-"><code>set(java.lang.String, java.lang.String)</code></a> method.</div>
+ <p>
+ To prevent the accidental replacement of strings from the main
+ application, this method will not alter the value of string keys that are
+ already defined. If you wish to replace the value of an existing key, you
+ can do so using the <a href="../resources/Language.html#set-java.lang.String-java.lang.String-"><code>set(java.lang.String, java.lang.String)</code></a>
+ method.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>baseResource</code> - the resource path to the base file of a set of string
-   table files</dd>
+ table files</dd>
 </dl>
 </li>
 </ul>
@@ -564,11 +585,11 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <h4>get</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;get(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;args)</pre>
-<div class="block">Returns a formatted string defined in this language.
- Formatting flags in the localized string will be filled in using the
- supplied arguments. The formatting flags accepted by the
- method are exactly the same as those supported by
- <code>String.format</code> (similar to <code>sprintf</code> in C).</div>
+<div class="block">Returns a formatted string defined in this language. Formatting flags in
+ the localized string will be filled in using the supplied arguments. The
+ formatting flags accepted by the method are exactly the same as those
+ supported by <code>String.format</code> (similar to <code>sprintf</code>
+ in C).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - the key for the localized formatting template</dd>
@@ -585,8 +606,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <li class="blockList">
 <h4>getCollator</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/text/Collator.html?is-external=true" title="class or interface in java.text">Collator</a>&nbsp;getCollator()</pre>
-<div class="block">Returns a <code>Collator</code> that can be used to sort strings
- in this language.</div>
+<div class="block">Returns a <code>Collator</code> that can be used to sort strings in this
+ language.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a <code>Collator</code> instance</dd>
@@ -642,16 +663,17 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <li class="blockList">
 <h4>getIconForCountry</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing">Icon</a>&nbsp;getIconForCountry(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html?is-external=true" title="class or interface in java.util">Locale</a>&nbsp;loc)</pre>
-<div class="block">Returns a flag icon for the country part of locale <code>loc</code>. If the
- locale has no country part, or if no flag is available for the country,
- a blank placeholder icon will be returned. The placeholder icon is the same
- size as the flag icon would have been, if one was available. In no event
- will <code>null</code> be returned.</div>
+<div class="block">Returns a flag icon for the country part of locale <code>loc</code>. If
+ the locale has no country part, or if no flag is available for the
+ country, a blank placeholder icon will be returned. The placeholder icon
+ is the same size as the flag icon would have been, if one was available.
+ In no event will <code>null</code> be returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>loc</code> - the locale to return a flag for</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a small flag icon for the country of the requested locale, or a blank icon</dd>
+<dd>a small flag icon for the country of the requested locale, or a
+ blank icon</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>loc</code> is <code>null</code></dd>
 </dl>
@@ -666,14 +688,15 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing">Icon</a>&nbsp;getIconForLanguage(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html?is-external=true" title="class or interface in java.util">Locale</a>&nbsp;loc)</pre>
 <div class="block">Returns an icon for the language part of locale <code>loc</code>. If the
  locale has no language part, or if no icon is available for the language,
- a blank placeholder icon will be returned. The placeholder icon is the same
- size as the language icon would have been, if one was available. In no event
- will <code>null</code> be returned.</div>
+ a blank placeholder icon will be returned. The placeholder icon is the
+ same size as the language icon would have been, if one was available. In
+ no event will <code>null</code> be returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>loc</code> - the locale to return a flag for</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a small icon for the language of the requested locale, or a blank icon</dd>
+<dd>a small icon for the language of the requested locale, or a blank
+ icon</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>loc</code> is <code>null</code></dd>
 </dl>
@@ -686,10 +709,10 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <li class="blockList">
 <h4>getIconForLocale</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing">Icon</a>&nbsp;getIconForLocale(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html?is-external=true" title="class or interface in java.util">Locale</a>&nbsp;loc)</pre>
-<div class="block">Returns an icon that represents the language and country of a locale.
- If a representation for the language or country is not available, that
- part of the resulting icon will be blank. In no event
- will <code>null</code> be returned.</div>
+<div class="block">Returns an icon that represents the language and country of a locale. If
+ a representation for the language or country is not available, that part
+ of the resulting icon will be blank. In no event will <code>null</code>
+ be returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>loc</code> - the locale to return a flag for</dd>
@@ -764,8 +787,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <h4>getLocales</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html?is-external=true" title="class or interface in java.util">Locale</a>[]&nbsp;getLocales()</pre>
 <div class="block">Returns a sorted array of all available locales. This includes a large
- set of known standard locales along with any added interface and
- game locales not included in this known set.</div>
+ set of known standard locales along with any added interface and game
+ locales not included in this known set.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a non-empty array of supported locales</dd>
@@ -810,8 +833,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <h4>getResourceChain</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;getResourceChain(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;baseName,
                                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;suffix)</pre>
-<div class="block">Returns an array of resources that match the requested file name
- from least to most specialized for the locale's language. This is done by
+<div class="block">Returns an array of resources that match the requested file name from
+ least to most specialized for the locale's language. This is done by
  composing the following resource file names, in order:
  <ol>
  <li><code>baseName + suffix</code>
@@ -819,19 +842,19 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
  <li><code>baseName + "_" + locale.getLanguage() + "_" + locale.getCountry() + suffix</code>
  </ol>
  At each of these steps, if there is a resource available that matches the
- name, it will be added to the returned array. If not, then the search ends.
- (If the locale does not specify a country, step 3 will not be performed.
- If it does not specify a language, then neither step 2 nor step 3 will be
- performed.)
- Thus, this method returns an array of between 0 and 3 resource files.
- For example, the following line would return the main application
- interface text resources that match the interface locale:<br>
+ name, it will be added to the returned array. If not, then the search
+ ends. (If the locale does not specify a country, step 3 will not be
+ performed. If it does not specify a language, then neither step 2 nor
+ step 3 will be performed.) Thus, this method returns an array of between
+ 0 and 3 resource files. For example, the following line would return the
+ main application interface text resources that match the interface
+ locale:<br>
  <code>Language.getInterface().getResourceChain( "text/interface/eons-text", ".properties" )</code></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>baseName</code> - the path and base file name of the resource</dd>
-<dd><code>suffix</code> - the suffix to append to the end of the name;
-     typically this is a file extension</dd>
+<dd><code>suffix</code> - the suffix to append to the end of the name; typically this
+ is a file extension</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>between 0 and 3 resource files that exist and match the locale</dd>
 </dl>
@@ -844,8 +867,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <li class="blockList">
 <h4>gstring</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;gstring(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</pre>
-<div class="block">Returns a string looked up with the default game language.
- Cover for <code>Language.getInterface().get( key )</code>.</div>
+<div class="block">Returns a string looked up with the default game language. Cover for
+ <code>Language.getInterface().get( key )</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - the key for the string to retrieve</dd>
@@ -862,9 +885,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <h4>gstring</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;gstring(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
                              <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;args)</pre>
-<div class="block">Formats and returns a format string looked up with the default
- game language. Formatting flags in the localized string will
- be filled in using the supplied <code>args</code>.</div>
+<div class="block">Formats and returns a format string looked up with the default game
+ language. Formatting flags in the localized string will be filled in
+ using the supplied <code>args</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - the key for the localized formatting template</dd>
@@ -897,10 +920,10 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <li class="blockList">
 <h4>isLocaleDescriptionValid</h4>
 <pre>public static&nbsp;boolean&nbsp;isLocaleDescriptionValid(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;description)</pre>
-<div class="block">Returns <code>true</code> if a locale description represents
- a valid locale. In order to be valid, a locale description must have one of the
- following forms, where x indicates a lower case letter and X indicates
- an upper case letter:<br>
+<div class="block">Returns <code>true</code> if a locale description represents a valid
+ locale. In order to be valid, a locale description must have one of the
+ following forms, where x indicates a lower case letter and X indicates an
+ upper case letter:<br>
  xx<br>
  xx_XX<br>
  Note that variants (further descriptions of the locale that may follow
@@ -908,7 +931,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
  Strange Eons at this time.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the locale description is syntactically valid</dd>
+<dd><code>true</code> if the locale description is syntactically
+ valid</dd>
 </dl>
 </li>
 </ul>
@@ -919,8 +943,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <li class="blockList">
 <h4>iterator</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util">Iterator</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;&nbsp;iterator()</pre>
-<div class="block">Returns an iterator that iterates over the keys in this language
- (not including any parents).</div>
+<div class="block">Returns an iterator that iterates over the keys in this language (not
+ including any parents).</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true#iterator--" title="class or interface in java.lang">iterator</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang">Iterable</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&gt;</code></dd>
@@ -951,10 +975,12 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <li class="blockList">
 <h4>parseLocaleDescription</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html?is-external=true" title="class or interface in java.util">Locale</a>&nbsp;parseLocaleDescription(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;code)</pre>
-<div class="block">Parses a locale description in ll_CC format and returns the <code>Locale</code>.</div>
+<div class="block">Parses a locale description in ll_CC format and returns the
+ <code>Locale</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>code</code> - a locale described with a two-letter language and optional two-letter country</dd>
+<dd><code>code</code> - a locale described with a two-letter language and optional
+ two-letter country</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the parsed locale</dd>
 </dl>
@@ -968,8 +994,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <h4>set</h4>
 <pre>public&nbsp;void&nbsp;set(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</pre>
-<div class="block">Explicitly sets a key to a fixed value, overriding the result that
- would be obtained from the loaded string tables. If value is <code>null</code>,
+<div class="block">Explicitly sets a key to a fixed value, overriding the result that would
+ be obtained from the loaded string tables. If value is <code>null</code>,
  any value previously set with this method is removed.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -1015,15 +1041,15 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <li class="blockList">
 <h4>setLocale</h4>
 <pre>public&nbsp;void&nbsp;setLocale(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html?is-external=true" title="class or interface in java.util">Locale</a>&nbsp;loc)</pre>
-<div class="block">Changes the locale used by this language instance. If the supplied
- locale is <code>null</code>, the default locale is used.
- The supplied locale must include a language and may optionally include
- a region (country).
+<div class="block">Changes the locale used by this language instance. If the supplied locale
+ is <code>null</code>, the default locale is used. The supplied locale
+ must include a language and may optionally include a region (country).
 
- <p>Variants are not supported. If the supplied locale includes a variant,
+ <p>
+ Variants are not supported. If the supplied locale includes a variant,
  the variant part of the locale will be dropped silently. (In this case,
- <a href="../resources/Language.html#getLocale--"><code>getLocale()</code></a> will return a value that is not equal to the
- locale passed to the method.)</div>
+ <a href="../resources/Language.html#getLocale--"><code>getLocale()</code></a> will return a value that is not equal to the locale
+ passed to the method.)</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>loc</code> - the new locale to use</dd>
@@ -1043,10 +1069,27 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>parent</code> - the new parent to set; if <code>null</code> the existing
-     parent (if any) is removed</dd>
+ parent (if any) is removed</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if setting the parent would create
-     a cycle (a language is directly or indirectly its own ancestor)</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if setting the parent would create a
+ cycle (a language is directly or indirectly its own ancestor)</dd>
+</dl>
+</li>
+</ul>
+<a name="str-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>str</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;str(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</pre>
+<div class="block">A synonym for <a href="../resources/Language.html#get-java.lang.String-"><code>get(java.lang.String)</code></a> that can be called from
+ scripts without specifying an overload.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>key</code> - the key for the string to retrieve</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the localized string, or [MISSING: key]</dd>
 </dl>
 </li>
 </ul>
@@ -1057,8 +1100,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <li class="blockList">
 <h4>string</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;string(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</pre>
-<div class="block">Returns a string looked up with the default interface language.
- Cover for <code>Language.getInterface().get( key )</code>.</div>
+<div class="block">Returns a string looked up with the default interface language. Cover for
+ <code>Language.getInterface().get( key )</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - the key for the string to retrieve</dd>
@@ -1075,9 +1118,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <h4>string</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;string(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
                             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;args)</pre>
-<div class="block">Formats and returns a format string looked up with the default
- interface language. Formatting flags in the localized string will
- be filled in using the supplied args.</div>
+<div class="block">Formats and returns a format string looked up with the default interface
+ language. Formatting flags in the localized string will be filled in
+ using the supplied args.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - the key for the localized formatting template</dd>
@@ -1124,6 +1167,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../index-all.html">Index</a></li>
+<li><a href="../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

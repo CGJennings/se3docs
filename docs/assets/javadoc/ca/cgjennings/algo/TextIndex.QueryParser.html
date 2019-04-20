@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -110,22 +112,22 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public static class <span class="typeNameLabel">TextIndex.QueryParser</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block">A parser that converts a plain text query string into a query.
- The query parser recognizes the following syntax, except that a
- query may also empty without provoking a syntax error:
+<div class="block">A parser that converts a plain text query string into a query. The query
+ parser recognizes the following syntax, except that a query may also
+ empty without provoking a syntax error:
  <pre>
  query = expression [["|"] query]
  expression = term | "!" term
  term = word | "(" query ")"
- </pre>
- where a word is any word to be searched for (and not containing a space
- or the reserved punctuation marks "|", "!", "(", or ")". The "|" symbol
- performs and <code>Or</code> query, sequential factors are combined into
- <code>And</code> queries, "!" applies a <code>Not</code> query to its
- argument, and parentheses may be used to group the query into subexpressions.
- Some examples:
- <pre>
+ </pre> where a word is any word to be searched for (and not containing a
+ space or the reserved punctuation marks "|", "!", "(", or ")". The "|"
+ symbol performs and <code>Or</code> query, sequential factors are
+ combined into <code>And</code> queries, "!" applies a <code>Not</code>
+ query to its argument, and parentheses may be used to group the query
+ into subexpressions. Some examples:
+ 
  <table border=0>
+ <caption>Examples</caption>
  <tr><th>Query        <th>Find Documents Containing</tr>
  <tr><td>apple        <td>"apple"</tr>
  <tr><td>apple ball   <td>both "apple" and "ball"</tr>
@@ -133,8 +135,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <tr><td>!apple       <td>not "apple"
  <tr><td>!(a|b)       <td>neither "a" nor "b"</tr>
  <tr><td>a | b c      <td>either "a" or both "b" and "c"</tr>
- </table>
- </pre></div>
+ </table></div>
 </li>
 </ul>
 </div>
@@ -276,6 +277,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

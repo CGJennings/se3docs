@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -111,14 +113,15 @@ var activeTableTab = "activeTableTab";
 <pre>public abstract class <span class="typeNameLabel">AbstractCompositeContext</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
 implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/CompositeContext.html?is-external=true" title="class or interface in java.awt">CompositeContext</a></pre>
-<div class="block">This abstract implementation of <code>CompositeContext</code> is designed
- to handle RGB/ARGB data. Subclasses must implement the abstract general
- case method, and may optionally override other methods to provide special
- case code for use when the <code>VALUE_ALPHA_INTERPOLATION_SPEED</code> hint
- is set and/or the source and destination both have 4 bands (ARGB). The context
+<div class="block">This abstract implementation of <code>CompositeContext</code> is designed to
+ handle RGB/ARGB data. Subclasses must implement the abstract general case
+ method, and may optionally override other methods to provide special case
+ code for use when the <code>VALUE_ALPHA_INTERPOLATION_SPEED</code> hint is
+ set and/or the source and destination both have 4 bands (ARGB). The context
  will transparently make use of multiple CPUs to increase compositing
  performance, so subclasses must ensure that their implementations of
- <code>compose</code> methods can be called concurrently from multiple threads.</div>
+ <code>compose</code> methods can be called concurrently from multiple
+ threads.</div>
 </li>
 </ul>
 </div>
@@ -221,8 +224,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Composite
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/composites/AbstractCompositeContext.html#compose44-int:A-int:A-int-">compose44</a></span>(int[]&nbsp;src,
          int[]&nbsp;dst,
          int&nbsp;aFactor)</code>
-<div class="block">This method can be overidden to provide fast special case code for
- images with 4 bands (A+RGB) in both source and destination.</div>
+<div class="block">This method can be overidden to provide fast special case code for images
+ with 4 bands (A+RGB) in both source and destination.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -230,9 +233,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Composite
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/composites/AbstractCompositeContext.html#composeF44-int:A-int:A-int-">composeF44</a></span>(int[]&nbsp;src,
           int[]&nbsp;dst,
           int&nbsp;aFactor)</code>
-<div class="block">This method can be overidden to provide fast special case code for
- images with 4 bands (A+RGB) in both source and destination when the
- alpha interpolation rendering hint is set for speed.</div>
+<div class="block">This method can be overidden to provide fast special case code for images
+ with 4 bands (A+RGB) in both source and destination when the alpha
+ interpolation rendering hint is set for speed.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -242,9 +245,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Composite
           int&nbsp;sBands,
           int&nbsp;dBands,
           int&nbsp;aFactor)</code>
-<div class="block">This method can be overidden to provide fast special case code for
- images with variable bands in both source and destination when the
- alpha interpolation rendering hint is set for speed.</div>
+<div class="block">This method can be overidden to provide fast special case code for images
+ with variable bands in both source and destination when the alpha
+ interpolation rendering hint is set for speed.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -439,8 +442,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Composite
 <pre>protected&nbsp;void&nbsp;compose44(int[]&nbsp;src,
                          int[]&nbsp;dst,
                          int&nbsp;aFactor)</pre>
-<div class="block">This method can be overidden to provide fast special case code for
- images with 4 bands (A+RGB) in both source and destination. The default
+<div class="block">This method can be overidden to provide fast special case code for images
+ with 4 bands (A+RGB) in both source and destination. The default
  implementation forwards to <code>composeF44( src, dst, aFactor )</code></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -458,10 +461,10 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Composite
 <pre>protected&nbsp;void&nbsp;composeF44(int[]&nbsp;src,
                           int[]&nbsp;dst,
                           int&nbsp;aFactor)</pre>
-<div class="block">This method can be overidden to provide fast special case code for
- images with 4 bands (A+RGB) in both source and destination when the
- alpha interpolation rendering hint is set for speed.
- The default implementation forwards to <code>compose( src, dst, 4, 4, aFactor )</code></div>
+<div class="block">This method can be overidden to provide fast special case code for images
+ with 4 bands (A+RGB) in both source and destination when the alpha
+ interpolation rendering hint is set for speed. The default implementation
+ forwards to <code>compose( src, dst, 4, 4, aFactor )</code></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>src</code> - the source data to mix</dd>
@@ -480,10 +483,10 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Composite
                           int&nbsp;sBands,
                           int&nbsp;dBands,
                           int&nbsp;aFactor)</pre>
-<div class="block">This method can be overidden to provide fast special case code for
- images with variable bands in both source and destination when the
- alpha interpolation rendering hint is set for speed.
- The default implementation forwards to <code>compose( src, dst, sBands, dBands, aFactor )</code></div>
+<div class="block">This method can be overidden to provide fast special case code for images
+ with variable bands in both source and destination when the alpha
+ interpolation rendering hint is set for speed. The default implementation
+ forwards to <code>compose( src, dst, sBands, dBands, aFactor )</code></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>src</code> - the source data to mix</dd>
@@ -566,6 +569,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Composite
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

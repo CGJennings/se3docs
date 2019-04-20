@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -115,31 +117,38 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public final class <span class="typeNameLabel">TrimFilter</span>
 extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.html" title="class in ca.cgjennings.graphics.filters">AbstractImageFilter</a></pre>
-<div class="block">Automatically crops an image by trimming off edges that fail to satisfy
- a test. The test is specified by a <i>mask</i> and a </i>condition</i>.
- Edges are tested one row or column at a time, starting at the image
- edges and working towards the image center. Each row or column is checked for
- any pixel whose ARGB value fails to satisfy the statement
- <code>pixelARGB & mask == condition</code>. Once any pixel in a row or column
+<div class="block">Automatically crops an image by trimming off edges that fail to satisfy a
+ test. The test is specified by a <i>mask</i> and a <i>condition</i>. Edges
+ are tested one row or column at a time, starting at the image edges and
+ working towards the image center. Each row or column is checked for any pixel
+ whose ARGB value fails to satisfy the statement
+ <code>pixelARGB &amp; mask == condition</code>. Once any pixel in a row or column
  fails to satisfy the test, trimming along that edge stops.
 
- <p>Some example <i>mask</i> and <i>condition</i> values:<br>
+ <p>
  <table border=0>
+ <caption>Some example <i>mask</i> and <i>condition</i> values</caption>
  <tr><th>Mask</th>       <th>Condition</th>  <th>Effect</th></tr>
- <tr><td><code>0xff000000 </code></td> <td><code>0x00000000 </code></td> <td>Trim transparent (alpha=0) edges</td></tr>
- <tr><td><code>0xffffffff </code></td> <td><code>0xffffffff </code></td> <td>Trim solid white edges</td></tr>
- <tr><td><code>0xffffffff </code></td> <td><code>0xff000000 </code></td> <td>Trim solid black edges</td></tr>
- <tr><td><code>0x00ffffff </code></td> <td><code>0x00RRGGBB </code></td> <td>Trim edges with colour RRGGBB, ignoring transparency</td></tr>
+ <tr><td><code>0xff000000 </code></td> <td><code>0x00000000 </code></td>
+ <td>Trim transparent (alpha=0) edges</td></tr>
+ <tr><td><code>0xffffffff </code></td> <td><code>0xffffffff </code></td>
+ <td>Trim solid white edges</td></tr>
+ <tr><td><code>0xffffffff </code></td> <td><code>0xff000000 </code></td>
+ <td>Trim solid black edges</td></tr>
+ <tr><td><code>0x00ffffff </code></td> <td><code>0x00RRGGBB </code></td>
+ <td>Trim edges with colour RRGGBB, ignoring transparency</td></tr>
  </table>
 
- <p>Since the purpose of this filter is to resize an image in a way that
- cannot be known before the filter is applied, it behaves differently from
- a typical filter. The destination image parameter is always ignored. If the
- trimmed image is smaller than the source image, a new image is created
- at the trimmed size and returned. If no trimming is required, the source
- image is returned unchanged.
+ <p>
+ Since the purpose of this filter is to resize an image in a way that cannot
+ be known before the filter is applied, it behaves differently from a typical
+ filter. The destination image parameter is always ignored. If the trimmed
+ image is smaller than the source image, a new image is created at the trimmed
+ size and returned. If no trimming is required, the source image is returned
+ unchanged.
 
- <p><b>In-place filtering:</b> This filter may or may not be applied in place;
+ <p>
+ <b>In-place filtering:</b> This filter may or may not be applied in place;
  see previous paragraph.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
@@ -270,16 +279,15 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.
                             <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;ignoredDestination)</pre>
 <div class="block">Filters the image, returning an image with trimmable edges cropped off.
  The destination image is ignored, as described in the
- <a href="../../../../ca/cgjennings/graphics/filters/TrimFilter.html" title="class in ca.cgjennings.graphics.filters">class description</a>.
- If the trim operation would result in an empty image, the filter
- returns <code>null</code>.</div>
+ <a href="../../../../ca/cgjennings/graphics/filters/TrimFilter.html" title="class in ca.cgjennings.graphics.filters">class description</a>. If the trim operation would
+ result in an empty image, the filter returns <code>null</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>sourceImage</code> - the image to trim</dd>
 <dd><code>ignoredDestination</code> - this parameter is ignored</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a new, trimmed image; or the source image if no edges are trimmed;
-     or <code>null</code> if the entire image is trimmed</dd>
+<dd>a new, trimmed image; or the source image if no edges are
+ trimmed; or <code>null</code> if the entire image is trimmed</dd>
 </dl>
 </li>
 </ul>
@@ -303,6 +311,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

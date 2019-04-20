@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -298,7 +300,8 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Editab
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/LineJoin.html" title="enum in ca.cgjennings.apps.arkham.deck.item">LineJoin</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/CustomTile.html#getOutlineJoin--">getOutlineJoin</a></span>()</code>
-<div class="block">Returns the method used to join the line segments that make up the outline.</div>
+<div class="block">Returns the method used to join the line segments that make up the
+ outline.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
@@ -316,7 +319,8 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Editab
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/CustomTile.html#isBleedMarginMarked--">isBleedMarginMarked</a></span>()</code>
-<div class="block">Returns <code>true</code> if this item should have crop marks added to it.</div>
+<div class="block">Returns <code>true</code> if this item should have crop marks added to
+ it.</div>
 </td>
 </tr>
 <tr id="i13" class="rowColor">
@@ -526,8 +530,9 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Editab
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#clearCachedImages--">AbstractRenderedItem</a></code></span></div>
 <div class="block">Clear any cached image data held by this object. The base class clears
  any cached oriented results and the MIP map cache (if enabled).
- Subclasses should override this (calling <code>super.clearCachedImages</code>)
- if the <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#renderImage-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-"><code>AbstractRenderedItem.renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a> implementation caches results.</div>
+ Subclasses should override this (calling
+ <code>super.clearCachedImages</code>) if the <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#renderImage-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-"><code>AbstractRenderedItem.renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a>
+ implementation caches results.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Tile.html#clearCachedImages--">clearCachedImages</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Tile.html" title="class in ca.cgjennings.apps.arkham.deck.item">Tile</a></code></dd>
@@ -563,12 +568,12 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Editab
 <h4>getDragHandles</h4>
 <pre>public&nbsp;<a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/DragHandle.html" title="class in ca.cgjennings.apps.arkham.deck.item">DragHandle</a>[]&nbsp;getDragHandles()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractItem.html#getDragHandles--">AbstractItem</a></code></span></div>
-<div class="block">Returns an array of the custom <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/DragHandle.html" title="class in ca.cgjennings.apps.arkham.deck.item"><code>DragHandle</code></a>s for this item.
- If the item has no handles, returns <code>null</code>.
- <p>Concrete subclasses should create an array of handles on demand and
- cache them in the <code>dragHandles</code> field in order to ensure
- that handles are not shared between copies of the item.
- Example:
+<div class="block">Returns an array of the custom <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/DragHandle.html" title="class in ca.cgjennings.apps.arkham.deck.item"><code>DragHandle</code></a>s for this item. If the
+ item has no handles, returns <code>null</code>.
+ <p>
+ Concrete subclasses should create an array of handles on demand and cache
+ them in the <code>dragHandles</code> field in order to ensure that
+ handles are not shared between copies of the item. Example:
  <pre>
  public DragHandle[] getDragHandles() {
      if( dragHandles == null ) {
@@ -583,7 +588,8 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Editab
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractItem.html#getDragHandles--">getDragHandles</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractItem.html" title="class in ca.cgjennings.apps.arkham.deck.item">AbstractItem</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>an array of drag handles that can be used to manipulate the item, or <code>null</code></dd>
+<dd>an array of drag handles that can be used to manipulate the item,
+ or <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -594,14 +600,15 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Editab
 <li class="blockList">
 <h4>getImageFromIdentifier</h4>
 <pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;getImageFromIdentifier()</pre>
-<div class="block">Fetch this tile's image using its identifier.
- Locates the image as a file or URL using the same syntax as
+<div class="block">Fetch this tile's image using its identifier. Locates the image as a file
+ or URL using the same syntax as
  <a href="../../../../../../ca/cgjennings/layout/GraphicStyleFactory.html" title="class in ca.cgjennings.layout"><code>GraphicStyleFactory</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Tile.html#getImageFromIdentifier--">getImageFromIdentifier</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Tile.html" title="class in ca.cgjennings.apps.arkham.deck.item">Tile</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>an image for this identifier, possibly a "broken image" placeholder image</dd>
+<dd>an image for this identifier, possibly a "broken image"
+ placeholder image</dd>
 </dl>
 </li>
 </ul>
@@ -680,7 +687,8 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Editab
 <h4>getOutlineJoin</h4>
 <pre>public&nbsp;<a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/LineJoin.html" title="enum in ca.cgjennings.apps.arkham.deck.item">LineJoin</a>&nbsp;getOutlineJoin()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/OutlineStyle.html#getOutlineJoin--">OutlineStyle</a></code></span></div>
-<div class="block">Returns the method used to join the line segments that make up the outline.</div>
+<div class="block">Returns the method used to join the line segments that make up the
+ outline.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/OutlineStyle.html#getOutlineJoin--">getOutlineJoin</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/OutlineStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">OutlineStyle</a></code></dd>
@@ -714,9 +722,8 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Editab
 <h4>getThumbnailIcon</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing">Icon</a>&nbsp;getThumbnailIcon()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#getThumbnailIcon--">PageItem</a></code></span></div>
-<div class="block">Returns a small representative icon for this item.
- The icon should be <code>ICON_SIZE</code>
- pixels wide and high.</div>
+<div class="block">Returns a small representative icon for this item. The icon should be
+ <code>ICON_SIZE</code> pixels wide and high.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#getThumbnailIcon--">getThumbnailIcon</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a></code></dd>
@@ -733,9 +740,9 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Editab
 <h4>isBleedMarginMarked</h4>
 <pre>public&nbsp;boolean&nbsp;isBleedMarginMarked()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#isBleedMarginMarked--">PageItem</a></code></span></div>
-<div class="block">Returns <code>true</code> if this item should have crop marks added to it.
- The crop marks will be placed <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#getBleedMargin--"><code>PageItem.getBleedMargin()</code></a> points from the
- ends of each edge.</div>
+<div class="block">Returns <code>true</code> if this item should have crop marks added to
+ it. The crop marks will be placed <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#getBleedMargin--"><code>PageItem.getBleedMargin()</code></a> points from
+ the ends of each edge.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#isBleedMarginMarked--">isBleedMarginMarked</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a></code></dd>
@@ -758,12 +765,11 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Editab
                   <a href="../../../../../../ca/cgjennings/apps/arkham/sheet/RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target,
                   double&nbsp;renderResolutionHint)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#paint-java.awt.Graphics2D-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-">PageItem</a></code></span></div>
-<div class="block">Paint this item at its current location.
- The graphics context will be scaled so that 1 unit represents 1 point.
- The resolution hint is a suggestion as to the resolution the
- item should be rendered at if it must be converted to a
- bitmap before being drawn. It may or may not represent the actual
- resolution of the output target.</div>
+<div class="block">Paint this item at its current location. The graphics context will be
+ scaled so that 1 unit represents 1 point. The resolution hint is a
+ suggestion as to the resolution the item should be rendered at if it must
+ be converted to a bitmap before being drawn. It may or may not represent
+ the actual resolution of the output target.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#paint-java.awt.Graphics2D-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-">paint</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a></code></dd>
@@ -803,8 +809,8 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Editab
 <pre>public&nbsp;void&nbsp;setBleedMargin(double&nbsp;bleedMargin)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/UserBleedMarginStyle.html#setBleedMargin-double-">UserBleedMarginStyle</a></code></span></div>
 <div class="block">Sets the size of the user-defined bleed margin, in points. If the
- specified value is more half of the greater of the width or height
- of the item, then the value will be silently reduced to this maximum.</div>
+ specified value is more half of the greater of the width or height of the
+ item, then the value will be silently reduced to this maximum.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/UserBleedMarginStyle.html#setBleedMargin-double-">setBleedMargin</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/UserBleedMarginStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">UserBleedMarginStyle</a></code></dd>
@@ -1037,6 +1043,8 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Editab
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

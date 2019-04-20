@@ -40,12 +40,14 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../ca/cgjennings/graphics/ImageStatistics.html" title="class in ca.cgjennings.graphics"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li>Next&nbsp;Class</li>
+<li><a href="../../../ca/cgjennings/graphics/PrototypingGraphics2D.html" title="class in ca.cgjennings.graphics"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../index.html?ca/cgjennings/graphics/ImageUtilities.html" target="_top">Frames</a></li>
@@ -106,16 +108,15 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public final class <span class="typeNameLabel">ImageUtilities</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block">Utility methods for creating and converting images, icons, and other graphics.
- The functionality includes: creating and converting images in certain common
- formats (particularly the integer (A)RGB formats that the filters in the
- graphics filters package are optimized for), converting icons to images,
- adjusting the size of icons, and applying common filter effects to icon images,
- creating custom <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Cursor.html?is-external=true" title="class or interface in java.awt"><code>Cursor</code></a>s, 
- applying common filters to images, copying images, and adjusting the
- margins of images (padding, trimming, centreing), computing the ideal scale
- for an image to fit it within or over a given area, and resampling (resizing)
- images at high quality.</div>
+<div class="block">Utility methods for creating and converting images, icons, and other
+ graphics. The functionality includes: creating and converting images in
+ certain common formats (particularly the integer (A)RGB formats that the
+ filters in the graphics filters package are optimized for), converting icons
+ to images, adjusting the size of icons, and applying common filter effects to
+ icon images, creating custom <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Cursor.html?is-external=true" title="class or interface in java.awt"><code>Cursor</code></a>s, applying common filters to
+ images, copying images, and adjusting the margins of images (padding,
+ trimming, centreing), computing the ideal scale for an image to fit it within
+ or over a given area, and resampling (resizing) images at high quality.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.1</dd>
@@ -142,8 +143,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/graphics/ImageUtilities.html#alphaComposite-java.awt.image.BufferedImage-float-">alphaComposite</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;source,
               float&nbsp;opacity)</code>
-<div class="block">Return a version of this image with an overall transparency
- change.</div>
+<div class="block">Return a version of this image with an overall transparency change.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -151,8 +151,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/graphics/ImageUtilities.html#center-java.awt.image.BufferedImage-int-int-">center</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;source,
       int&nbsp;width,
       int&nbsp;height)</code>
-<div class="block">Returns an image that centres a source image over a new image of a
- given size.</div>
+<div class="block">Returns an image that centres a source image over a new image of a given
+ size.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -172,7 +172,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/graphics/ImageUtilities.html#createCompatibleIntRGBFormat-java.awt.image.BufferedImage-">createCompatibleIntRGBFormat</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;im)</code>
 <div class="block">Creates a new image the same size as <code>im</code> which is in either
- <tt>TYPE_INT_RGB</tt> or <tt>TYPE_INT_ARGB</tt> format depending on whether
+ <tt>TYPE_INT_RGB</tt> or <tt>TYPE_INT_ARGB</tt> format depending on
+ whether
  <tt>im</tt> is opaque.</div>
 </td>
 </tr>
@@ -182,7 +183,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                             int&nbsp;width,
                             int&nbsp;height)</code>
 <div class="block">Creates a new image with the specified size which is in either
- <tt>TYPE_INT_RGB</tt> or <tt>TYPE_INT_ARGB</tt> format depending on whether
+ <tt>TYPE_INT_RGB</tt> or <tt>TYPE_INT_ARGB</tt> format depending on
+ whether
  <tt>im</tt> is opaque.</div>
 </td>
 </tr>
@@ -262,8 +264,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i16" class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/graphics/ImageUtilities.html#ensureIntRGBFormat-java.awt.image.BufferedImage-">ensureIntRGBFormat</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;im)</code>
-<div class="block">If <tt>im</tt> is not in an integer (A)RGB format, returns a new, equivalent
- image in an integer RGB format.</div>
+<div class="block">If <tt>im</tt> is not in an integer (A)RGB format, returns a new,
+ equivalent image in an integer RGB format.</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
@@ -462,20 +464,20 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>alphaComposite</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;alphaComposite(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;source,
                                            float&nbsp;opacity)</pre>
-<div class="block">Return a version of this image with an overall transparency
- change. Pixels with an opacity of 1 (that is, 100%) in the source image will have
- the specified opacity in the destination image; other pixels with
- have a new opacity equal to their current opacity times the specified
- value. For example, if the specified opacity is 0.5, and the source pixel
- has opacity 0.5, its opacity in the output image will be 0.25.</div>
+<div class="block">Return a version of this image with an overall transparency change.
+ Pixels with an opacity of 1 (that is, 100%) in the source image will have
+ the specified opacity in the destination image; other pixels with have a
+ new opacity equal to their current opacity times the specified value. For
+ example, if the specified opacity is 0.5, and the source pixel has
+ opacity 0.5, its opacity in the output image will be 0.25.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the original image</dd>
 <dd><code>opacity</code> - the alpha level to draw the image at, as a floating point
-     value between 0 and 1</dd>
+ value between 0 and 1</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a version of the image at the specified transparency (possibly the
-     original image)</dd>
+<dd>a version of the image at the specified transparency (possibly
+ the original image)</dd>
 </dl>
 </li>
 </ul>
@@ -488,8 +490,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;center(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;source,
                                    int&nbsp;width,
                                    int&nbsp;height)</pre>
-<div class="block">Returns an image that centres a source image over a new image of a
- given size.</div>
+<div class="block">Returns an image that centres a source image over a new image of a given
+ size.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the source image</dd>
@@ -497,7 +499,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>height</code> - the height of the new image</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>an integer (A)RGB image containing the source image such that the
-     centre pixels of the two images are aligned</dd>
+ centre pixels of the two images are aligned</dd>
 </dl>
 </li>
 </ul>
@@ -530,7 +532,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>im</code> - the image to create a new image for</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a new image compatible with <tt>im</tt> but guaranteed to use 8-bit ARGB format</dd>
+<dd>a new image compatible with <tt>im</tt> but guaranteed to use
+ 8-bit ARGB format</dd>
 </dl>
 </li>
 </ul>
@@ -542,13 +545,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>createCompatibleIntRGBFormat</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;createCompatibleIntRGBFormat(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;im)</pre>
 <div class="block">Creates a new image the same size as <code>im</code> which is in either
- <tt>TYPE_INT_RGB</tt> or <tt>TYPE_INT_ARGB</tt> format depending on whether
+ <tt>TYPE_INT_RGB</tt> or <tt>TYPE_INT_ARGB</tt> format depending on
+ whether
  <tt>im</tt> is opaque.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>im</code> - the image to create a new image for</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a new image compatible with <tt>im</tt> but guaranteed to use an 8-bit RGB format</dd>
+<dd>a new image compatible with <tt>im</tt> but guaranteed to use an
+ 8-bit RGB format</dd>
 </dl>
 </li>
 </ul>
@@ -562,13 +567,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                                                          int&nbsp;width,
                                                          int&nbsp;height)</pre>
 <div class="block">Creates a new image with the specified size which is in either
- <tt>TYPE_INT_RGB</tt> or <tt>TYPE_INT_ARGB</tt> format depending on whether
+ <tt>TYPE_INT_RGB</tt> or <tt>TYPE_INT_ARGB</tt> format depending on
+ whether
  <tt>im</tt> is opaque.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>im</code> - the image to create a new image for</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a new image compatible with <tt>im</tt> but guaranteed to use an 8-bit RGB format</dd>
+<dd>a new image compatible with <tt>im</tt> but guaranteed to use an
+ 8-bit RGB format</dd>
 </dl>
 </li>
 </ul>
@@ -586,11 +593,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>image</code> - the image to use for the cursor</dd>
-<dd><code>hotspotX</code> - the x-coordinate of the cursor's hotspot (the image offset where clicks occur)</dd>
+<dd><code>hotspotX</code> - the x-coordinate of the cursor's hotspot (the image
+ offset where clicks occur)</dd>
 <dd><code>hotspotY</code> - the y-coordinate of the cursor's hotspot</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a custom cursor as close to the requested form as allowed by the toolkit;
-     if the toolkit does not support custom cursors, the default cursor is returned</dd>
+<dd>a custom cursor as close to the requested form as allowed by the
+ toolkit; if the toolkit does not support custom cursors, the default
+ cursor is returned</dd>
 </dl>
 </li>
 </ul>
@@ -609,14 +618,18 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  specified image.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>toolkit</code> - the toolkit on which to define the cursor (<code>null</code> for default)</dd>
+<dd><code>toolkit</code> - the toolkit on which to define the cursor
+ (<code>null</code> for default)</dd>
 <dd><code>image</code> - the image to use for the cursor</dd>
-<dd><code>hotspotX</code> - the x-coordinate of the cursor's hotspot (the image offset where clicks occur)</dd>
+<dd><code>hotspotX</code> - the x-coordinate of the cursor's hotspot (the image
+ offset where clicks occur)</dd>
 <dd><code>hotspotY</code> - the y-coordinate of the cursor's hotspot</dd>
-<dd><code>name</code> - the custom cursor name, for accessibility, or <code>null</code> to generate a name</dd>
+<dd><code>name</code> - the custom cursor name, for accessibility, or
+ <code>null</code> to generate a name</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a custom cursor as close to the requested form as allowed by the toolkit;
-     if the toolkit does not support custom cursors, the default cursor is returned</dd>
+<dd>a custom cursor as close to the requested form as allowed by the
+ toolkit; if the toolkit does not support custom cursors, the default
+ cursor is returned</dd>
 </dl>
 </li>
 </ul>
@@ -659,8 +672,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>createGhostedIcon</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/ImageIcon.html?is-external=true" title="class or interface in javax.swing">ImageIcon</a>&nbsp;createGhostedIcon(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing">Icon</a>&nbsp;src)</pre>
-<div class="block">Returns a ghosted version of an icon. Ghosted icons are equivalent to 
- the original icon, but with every other pixel made transparent in a
+<div class="block">Returns a ghosted version of an icon. Ghosted icons are equivalent to the
+ original icon, but with every other pixel made transparent in a
  checkerboard pattern.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -715,11 +728,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>ensureIconHasSize</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing">Icon</a>&nbsp;ensureIconHasSize(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing">Icon</a>&nbsp;icon,
                                      int&nbsp;size)</pre>
-<div class="block">Ensures that the supplied icon has the specified size.
- If the source icon is <code>null</code>, <code>null</code> is returned.
- Otherwise, if the icon has the correct dimensions it is returned.
- If not, a new icon is created as if by calling <a href="../../../ca/cgjennings/graphics/ImageUtilities.html#createIconForSize-java.awt.image.BufferedImage-int-"><code>createIconForSize(java.awt.image.BufferedImage, int)</code></a>
- on an image of the icon.</div>
+<div class="block">Ensures that the supplied icon has the specified size. If the source icon
+ is <code>null</code>, <code>null</code> is returned. Otherwise, if the
+ icon has the correct dimensions it is returned. If not, a new icon is
+ created as if by calling <a href="../../../ca/cgjennings/graphics/ImageUtilities.html#createIconForSize-java.awt.image.BufferedImage-int-"><code>createIconForSize(java.awt.image.BufferedImage, int)</code></a> on an image of the
+ icon.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>icon</code> - the image to create an icon from</dd>
@@ -736,8 +749,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>ensureImageHasAlphaChannel</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;ensureImageHasAlphaChannel(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;im)</pre>
-<div class="block">Returns a version of an image that includes an alpha channel. If the source
- image has an alpha channel, it is returned. Otherwise, a copy is returned.</div>
+<div class="block">Returns a version of an image that includes an alpha channel. If the
+ source image has an alpha channel, it is returned. Otherwise, a copy is
+ returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>im</code> - the image to check</dd>
@@ -755,12 +769,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;ensureImageHasType(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;im,
                                                int&nbsp;type)</pre>
 <div class="block">If <tt>im</tt> does not use the specified pixel format, an equivalent
- image in that format is returned. If <tt>im</tt> is already in
- the specified format, it is returned unchanged.</div>
+ image in that format is returned. If <tt>im</tt> is already in the
+ specified format, it is returned unchanged.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>im</code> - the image to be provided in the specified format</dd>
-<dd><code>type</code> - the <code>BufferedImage.TYPE_*</code> value for the desired format</dd>
+<dd><code>type</code> - the <code>BufferedImage.TYPE_*</code> value for the desired
+ format</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the original image, or a copy converted to the requested format</dd>
 </dl>
@@ -773,9 +788,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>ensureIntRGBFormat</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;ensureIntRGBFormat(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;im)</pre>
-<div class="block">If <tt>im</tt> is not in an integer (A)RGB format, returns a new, equivalent
- image in an integer RGB format. If <tt>im</tt> is already in an
- integer RGB format, returns the original image.</div>
+<div class="block">If <tt>im</tt> is not in an integer (A)RGB format, returns a new,
+ equivalent image in an integer RGB format. If <tt>im</tt> is already in
+ an integer RGB format, returns the original image.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>im</code> - the image to be provided in integer RGB format</dd>
@@ -791,15 +806,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>ensurePremultipliedFormat</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;ensurePremultipliedFormat(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;im)</pre>
-<div class="block">Returns a version of an image that is in an integer (A)RGB format. If
- the source includes an alpha channel, the returned image will use a
+<div class="block">Returns a version of an image that is in an integer (A)RGB format. If the
+ source includes an alpha channel, the returned image will use a
  premultiplied image type.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>im</code> - the image to be provided in the specified format</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the original image, or a copy in an integer (A)RGB format, with
-     premultiplied alpha if appropriate</dd>
+ premultiplied alpha if appropriate</dd>
 </dl>
 </li>
 </ul>
@@ -812,14 +827,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;flip(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;source,
                                  boolean&nbsp;horiz,
                                  boolean&nbsp;vert)</pre>
-<div class="block">Returns a mirrored version of the source image.
- If neither parameter is <code>true</code>, the original image is returned.
- Otherwise, a copy is returned that is flipped horizontally and/or vertically.</div>
+<div class="block">Returns a mirrored version of the source image. If neither parameter is
+ <code>true</code>, the original image is returned. Otherwise, a copy is
+ returned that is flipped horizontally and/or vertically.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the image to create a mirrored version of</dd>
-<dd><code>horiz</code> - if <code>true</code>, the image is mirrored horizontally (i.e., on the y axis)</dd>
-<dd><code>vert</code> - if <code>true</code>, the image is mirrored vertically (i.e., on the x axis)</dd>
+<dd><code>horiz</code> - if <code>true</code>, the image is mirrored horizontally
+ (i.e., on the y axis)</dd>
+<dd><code>vert</code> - if <code>true</code>, the image is mirrored vertically (i.e.,
+ on the x axis)</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the mirrored version of the image</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -834,9 +851,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>iconToImage</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;iconToImage(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing">Icon</a>&nbsp;i)</pre>
-<div class="block">Returns the visual content of an icon as an image. If possible,
- the image will be obtained directly from the icon instance without
- creating a new image.</div>
+<div class="block">Returns the visual content of an icon as an image. If possible, the image
+ will be obtained directly from the icon instance without creating a new
+ image.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>i</code> - the icon</dd>
@@ -866,8 +883,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>imageWidth</code> - the current width of the image to be fitted</dd>
 <dd><code>imageHeight</code> - the current height of the image to be fitted</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the scale that just fits the image within the bounds, without
-     any of the image lying outside of the ideal area</dd>
+<dd>the scale that just fits the image within the bounds, without any
+ of the image lying outside of the ideal area</dd>
 </dl>
 </li>
 </ul>
@@ -892,8 +909,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>imageWidth</code> - the current width of the image to be fitted</dd>
 <dd><code>imageHeight</code> - the current height of the image to be fitted</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the scale that just fits the image within the bounds, without
-     any of the image lying outside of the ideal area</dd>
+<dd>the scale that just fits the image within the bounds, without any
+ of the image lying outside of the ideal area</dd>
 </dl>
 </li>
 </ul>
@@ -911,8 +928,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  image size, ensures that the image will match the ideal size in at least
  one dimension and will not be larger than the ideal size in the other
  dimension. The result is the largest image that fits within the ideal
- image dimensions without exceeding them, even though there may be
- extra space around the image on one dimension.</div>
+ image dimensions without exceeding them, even though there may be extra
+ space around the image on one dimension.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>idealWidth</code> - the width of the area the image must just fit within</dd>
@@ -920,8 +937,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>imageWidth</code> - the current width of the image to be fitted</dd>
 <dd><code>imageHeight</code> - the current height of the image to be fitted</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the scale that just fits the image within the bounds, without
-     any of the image lying outside of the ideal area</dd>
+<dd>the scale that just fits the image within the bounds, without any
+ of the image lying outside of the ideal area</dd>
 </dl>
 </li>
 </ul>
@@ -938,10 +955,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Returns the largest scaling factor that, when multiplied by the given
  image size, ensures that the image will match the ideal size in at least
  one dimension. The image will either match the ideal size in the other
- dimension, or else be larger than the other ideal dimension.
- If the image is opaque, the result is the scaling factor needed to obtain the
- smallest image with the same aspect ratio that would completely cover
- the ideal image area.</div>
+ dimension, or else be larger than the other ideal dimension. If the image
+ is opaque, the result is the scaling factor needed to obtain the smallest
+ image with the same aspect ratio that would completely cover the ideal
+ image area.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>idealWidth</code> - the width of the area the image must cover</dd>
@@ -950,7 +967,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>imageHeight</code> - the current height of the image to be fitted</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the scale that would ensure that the image would just cover the
-     specified area</dd>
+ specified area</dd>
 </dl>
 </li>
 </ul>
@@ -967,10 +984,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Returns the largest scaling factor that, when multiplied by the given
  image size, ensures that the image will match the ideal size in at least
  one dimension. The image will either match the ideal size in the other
- dimension, or else be larger than the other ideal dimension.
- If the image is opaque, the result is the scaling factor to obtain the
- smallest image with the same aspect ratio that would completely cover
- the ideal image area.</div>
+ dimension, or else be larger than the other ideal dimension. If the image
+ is opaque, the result is the scaling factor to obtain the smallest image
+ with the same aspect ratio that would completely cover the ideal image
+ area.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>idealWidth</code> - the width of the area the image must cover</dd>
@@ -979,7 +996,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>imageHeight</code> - the current height of the image to be fitted</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the scale that would ensure that the image would just cover the
-     specified area</dd>
+ specified area</dd>
 </dl>
 </li>
 </ul>
@@ -996,10 +1013,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Returns the largest scaling factor that, when multiplied by the given
  image size, ensures that the image will match the ideal size in at least
  one dimension. The image will either match the ideal size in the other
- dimension, or else be larger than the other ideal dimension.
- If the image is opaque, the result is the scaling factor to obtain the
- smallest image with the same aspect ratio that would completely cover
- the ideal image area.</div>
+ dimension, or else be larger than the other ideal dimension. If the image
+ is opaque, the result is the scaling factor to obtain the smallest image
+ with the same aspect ratio that would completely cover the ideal image
+ area.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>idealWidth</code> - the width of the area the image must cover</dd>
@@ -1008,7 +1025,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>imageHeight</code> - the current height of the image to be fitted</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the scale that would ensure that the image would just cover the
-     specified area</dd>
+ specified area</dd>
 </dl>
 </li>
 </ul>
@@ -1020,16 +1037,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>imageToBufferedImage</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;imageToBufferedImage(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Image.html?is-external=true" title="class or interface in java.awt">Image</a>&nbsp;image)</pre>
 <div class="block">Returns a <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image"><code>BufferedImage</code></a> that is equivalent to a specified
- <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Image.html?is-external=true" title="class or interface in java.awt"><code>Image</code></a>. If the image is already a <code>BufferedImage</code>,
- it is returned unmodified. Otherwise, a new <code>BufferedImage</code>
- will be created and the contents of the image copied into it. If necessary,
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Image.html?is-external=true" title="class or interface in java.awt"><code>Image</code></a>. If the image is already a <code>BufferedImage</code>, it
+ is returned unmodified. Otherwise, a new <code>BufferedImage</code> will
+ be created and the contents of the image copied into it. If necessary,
  the method will wait until the image has finished downloading.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>image</code> - the image to convert</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the original image, converted into a <code>BufferedImage</code>
-     if it is not already of that type</dd>
+ if it is not already of that type</dd>
 </dl>
 </li>
 </ul>
@@ -1077,19 +1094,20 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>merge</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;merge(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>...&nbsp;images)</pre>
-<div class="block">Draws a series of images overtop of each other. The images are drawn
- in the reverse order of the parameters; that is, the first parameter
- will be drawn overtop of the second, the second over the third and so forth.
- The images will be drawn directly onto the last image in the list.
- If this is <code>null</code>, a new image will be created with a
- width and height equal to the maximum width and maximum height of all of
- the other images. The last image in the last (possibly newly created if
- it was <code>null</code>) is returned from the method.</div>
+<div class="block">Draws a series of images overtop of each other. The images are drawn in
+ the reverse order of the parameters; that is, the first parameter will be
+ drawn overtop of the second, the second over the third and so forth. The
+ images will be drawn directly onto the last image in the list. If this is
+ <code>null</code>, a new image will be created with a width and height
+ equal to the maximum width and maximum height of all of the other images.
+ The last image in the last (possibly newly created if it was
+ <code>null</code>) is returned from the method.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>images</code> - a series of images to paint over each other</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the bottom image, or a new image if the bottom (last) image was <code>null</code></dd>
+<dd>the bottom image, or a new image if the bottom (last) image was
+ <code>null</code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if a <code>null</code> array is passed in</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the image array has length 0</dd>
@@ -1109,11 +1127,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                                       int&nbsp;right)</pre>
 <div class="block">Returns an image that is identical to a source image except that it is
  padded by blank pixels around the outside. The returned image is always
- of type <code>TYPE_INT_ARGB</code>. Margins can be negative, in which case
- rows or columns are removed from the outside of the image. If the margins
- are such that the width or height becomes less than 1, a blank 1 by 1
- pixel image is returned. If the margin is 0 on all sides and the image
- type is suitable, the source image is returned.</div>
+ of type <code>TYPE_INT_ARGB</code>. Margins can be negative, in which
+ case rows or columns are removed from the outside of the image. If the
+ margins are such that the width or height becomes less than 1, a blank 1
+ by 1 pixel image is returned. If the margin is 0 on all sides and the
+ image type is suitable, the source image is returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the source image</dd>
@@ -1191,22 +1209,27 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                                      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;intermediateHint)</pre>
 <div class="block">Resample an image. If <code>multipass</code> is <code>true</code>, then
  the method <i>may</i> split the resampling into multiple passes in order
- to increase the quality of the result.
- The quality of the interpolation is also controlled by the hint
- values, which must be one of the <code>RenderingHints.VALUE_INTERPOLATION_*</code>
- values, or else <code>null</code>. (If a hint is <code>null</code>, a slow
- area-averaging algorithm will be used.) The hints determine the type of
- interpolation used at each stage; the final pass hint is always used exactly
- once (unless the image is already the requested size). The intermediate hint
- is used for all other passes, if any. The following table shows some suggested
- combinations of values, in order from fastest/lowest quality to
+ to increase the quality of the result. The quality of the interpolation
+ is also controlled by the hint values, which must be one of the
+ <code>RenderingHints.VALUE_INTERPOLATION_*</code> values, or else
+ <code>null</code>. (If a hint is <code>null</code>, a slow area-averaging
+ algorithm will be used.) The hints determine the type of interpolation
+ used at each stage; the final pass hint is always used exactly once
+ (unless the image is already the requested size). The intermediate hint
+ is used for all other passes, if any. The following table shows some
+ suggested combinations of values, in order from fastest/lowest quality to
  slowest/highest quality:
  <table>
+ <caption>Suggested resampling combinations</caption>
  <tr><th>multipass<th>finalPassHint<th>intermediateHint</tr>
- <tr><td><code>false</code><td>VALUE_INTERPOLATION_NEAREST_NEIGHBOUR<td><code>null</code> (ignored)</tr>
- <tr><td><code>true</code> <td>VALUE_INTERPOLATION_BILINEAR<td>VALUE_INTERPOLATION_BILINEAR</tr>
- <tr><td><code>true</code> <td>VALUE_INTERPOLATION_BILINEAR<td>VALUE_INTERPOLATION_BICUBIC</tr>
- <tr><td><code>true</code> <td>VALUE_INTERPOLATION_BICUBIC<td>VALUE_INTERPOLATION_BICUBIC</tr>
+ <tr><td><code>false</code><td>VALUE_INTERPOLATION_NEAREST_NEIGHBOUR<td><code>null</code>
+ (ignored)</tr>
+ <tr><td><code>true</code>
+ <td>VALUE_INTERPOLATION_BILINEAR<td>VALUE_INTERPOLATION_BILINEAR</tr>
+ <tr><td><code>true</code>
+ <td>VALUE_INTERPOLATION_BILINEAR<td>VALUE_INTERPOLATION_BICUBIC</tr>
+ <tr><td><code>true</code>
+ <td>VALUE_INTERPOLATION_BICUBIC<td>VALUE_INTERPOLATION_BICUBIC</tr>
  </table></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -1214,13 +1237,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>width</code> - the new image width</dd>
 <dd><code>height</code> - the new image height</dd>
 <dd><code>multipass</code> - if multiple passes are allowed</dd>
-<dd><code>finalPassHint</code> - a rendering hint specifying the type of interpolation
-     to use for the final pass</dd>
-<dd><code>intermediateHint</code> - a rendering hint specifying the type of interpolation
-     to use for intermediate passes, if any</dd>
+<dd><code>finalPassHint</code> - a rendering hint specifying the type of
+ interpolation to use for the final pass</dd>
+<dd><code>intermediateHint</code> - a rendering hint specifying the type of
+ interpolation to use for intermediate passes, if any</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a new image at the requested size, or the original image if the
-     new size matches the source image</dd>
+ new size matches the source image</dd>
 </dl>
 </li>
 </ul>
@@ -1232,14 +1255,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>trim</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;trim(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;sourceImage)</pre>
 <div class="block">Create a trimmed version of the source image that excludes fully
- transparent (alpha=0) rows and columns around the image's edges.
- If there are no such rows or columns, returns the original image.
- If the entire image is fully transparent, returns a 1x1 transparent image.</div>
+ transparent (alpha=0) rows and columns around the image's edges. If there
+ are no such rows or columns, returns the original image. If the entire
+ image is fully transparent, returns a 1x1 transparent image.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>sourceImage</code> - the image to trim</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a trimmed version of the image, or the original image if it does not need trimming</dd>
+<dd>a trimmed version of the image, or the original image if it does
+ not need trimming</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../ca/cgjennings/graphics/filters/TrimFilter.html" title="class in ca.cgjennings.graphics.filters"><code>TrimFilter</code></a></dd>
 </dl>
@@ -1265,12 +1289,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../ca/cgjennings/graphics/ImageStatistics.html" title="class in ca.cgjennings.graphics"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li>Next&nbsp;Class</li>
+<li><a href="../../../ca/cgjennings/graphics/PrototypingGraphics2D.html" title="class in ca.cgjennings.graphics"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../index.html?ca/cgjennings/graphics/ImageUtilities.html" target="_top">Frames</a></li>

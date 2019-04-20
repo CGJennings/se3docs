@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -106,34 +108,33 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">Catalog</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block">A collection of <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Listing.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog"><code>Listing</code></a>s that describe plug-ins from a download source.
- The source may be local or, more typically, located over a network.
- The catalog can determine whether its listings match installed plug-ins,
- and if so compare their versions to determine if the listing is newer.
- Listings in the catalog can be "flagged" for installation, and flagged
- listings can be downloaded and installed automatically.
+<div class="block">A collection of <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Listing.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog"><code>Listing</code></a>s that describe plug-ins from a download
+ source. The source may be local or, more typically, located over a network.
+ The catalog can determine whether its listings match installed plug-ins, and
+ if so compare their versions to determine if the listing is newer. Listings
+ in the catalog can be "flagged" for installation, and flagged listings can be
+ downloaded and installed automatically.
  <p>
  Catalogs can be described using plain text files, and a catalog in this
- format can be instantiated from a remote URL.
- On a server, a catalog and its plug-ins would be located together in
- a single folder. The catalog would be stored in this folder as
- <tt>catalog.txt</tt>, and the listings in the catalog would point to the
- file names of plug-in bundles stored in the folder.
- To create the catalog locally, it would be constructed with the URL
- of the base folder. The constructor will download the catalog, and
- the base URL will be used to download any installed plug-ins.
+ format can be instantiated from a remote URL. On a server, a catalog and its
+ plug-ins would be located together in a single folder. The catalog would be
+ stored in this folder as
+ <tt>catalog.txt</tt>, and the listings in the catalog would point to the file
+ names of plug-in bundles stored in the folder. To create the catalog locally,
+ it would be constructed with the URL of the base folder. The constructor will
+ download the catalog, and the base URL will be used to download any installed
+ plug-ins.
  <p>
- Catalog listings may be marked as "hidden". In this case, they are placed
- at the end of a catalog when it is loaded, after all regular listings.
- When iterating over the catalog, if the catalog size is determined using
- <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Catalog.html#size--"><code>size()</code></a>, then you will not see hidden listings. To iterate over
- all listings, including hidden listings, use <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Catalog.html#trueSize--"><code>trueSize()</code></a>.
- Hidden listings are usually added to a catalog when it contains components
- that are required by other components but not useful by themselves.
- They can also be used to link to required components that are in other
- catalogs. For example, this could be used to create a private catalog
- that contains a component that requires a plug-in
- from another site:
+ Catalog listings may be marked as "hidden". In this case, they are placed at
+ the end of a catalog when it is loaded, after all regular listings. When
+ iterating over the catalog, if the catalog size is determined using
+ <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Catalog.html#size--"><code>size()</code></a>, then you will not see hidden listings. To iterate over all
+ listings, including hidden listings, use <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Catalog.html#trueSize--"><code>trueSize()</code></a>. Hidden listings
+ are usually added to a catalog when it contains components that are required
+ by other components but not useful by themselves. They can also be used to
+ link to required components that are in other catalogs. For example, this
+ could be used to create a private catalog that contains a component that
+ requires a plug-in from another site:
  <pre>
  url = ./myplugin.seplugin
  name = My Plug-in
@@ -170,8 +171,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr class="altColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Catalog.CatalogIsLockedException.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog">Catalog.CatalogIsLockedException</a></span></code>
-<div class="block">This exception is thrown when you attempt to download a catalog that
- is currently being updated.</div>
+<div class="block">This exception is thrown when you attempt to download a catalog that is
+ currently being updated.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -247,15 +248,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html?is-external=true" title="class or interface in java.util">BitSet</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Catalog.html#determineInstallationRequirements--">determineInstallationRequirements</a></span>()</code>
-<div class="block">Determines the installation requirements set for the plug-ins
- that are currently flagged for installation.</div>
+<div class="block">Determines the installation requirements set for the plug-ins that are
+ currently flagged for installation.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Catalog.html#findListingByUUID-java.util.UUID-">findListingByUUID</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;uuid)</code>
-<div class="block">Returns the index of the listing in this catalog that has the
- requested UUID.</div>
+<div class="block">Returns the index of the listing in this catalog that has the requested
+ UUID.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -267,22 +268,22 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Catalog.html#getBaseURL--">getBaseURL</a></span>()</code>
-<div class="block">Returns the base URL used to resolve the location
- of plug-in bundles listed in the catalog.</div>
+<div class="block">Returns the base URL used to resolve the location of plug-in bundles
+ listed in the catalog.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Catalog.html#getInstallFlag-int-">getInstallFlag</a></span>(int&nbsp;n)</code>
-<div class="block">Returns <code>true</code> if the listing at the indicated index
- is flagged for installation.</div>
+<div class="block">Returns <code>true</code> if the listing at the indicated index is
+ flagged for installation.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Catalog.html#getInstallFlagCount--">getInstallFlagCount</a></span>()</code>
-<div class="block">Returns a count of the number of plug-ins that are currently flagged
- for installation from this catalog.</div>
+<div class="block">Returns a count of the number of plug-ins that are currently flagged for
+ installation from this catalog.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
@@ -295,15 +296,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code><a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Catalog.VersioningState.html" title="enum in ca.cgjennings.apps.arkham.plugins.catalog">Catalog.VersioningState</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Catalog.html#getVersioningState-int-">getVersioningState</a></span>(int&nbsp;n)</code>
 <div class="block">Compares the listing at index <code>n</code> with the set of installed
- plug-ins and returns a <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Catalog.VersioningState.html" title="enum in ca.cgjennings.apps.arkham.plugins.catalog"><code>Catalog.VersioningState</code></a> value that describes
- the relative version of the installed plug-in, if any.</div>
+ plug-ins and returns a <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Catalog.VersioningState.html" title="enum in ca.cgjennings.apps.arkham.plugins.catalog"><code>Catalog.VersioningState</code></a> value that describes the
+ relative version of the installed plug-in, if any.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Catalog.html#installFlaggedPlugins--">installFlaggedPlugins</a></span>()</code>
-<div class="block">Attempt to download and install all plug-ins that are currently
- flagged for installation.</div>
+<div class="block">Attempt to download and install all plug-ins that are currently flagged
+ for installation.</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
@@ -347,8 +348,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i17" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Catalog.html#size--">size</a></span>()</code>
-<div class="block">Returns the number of listings in the catalog, not counting
- any hidden listings.</div>
+<div class="block">Returns the number of listings in the catalog, not counting any hidden
+ listings.</div>
 </td>
 </tr>
 <tr id="i18" class="altColor">
@@ -393,9 +394,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>Catalog</h4>
 <pre>public&nbsp;Catalog()</pre>
-<div class="block">Creates a new, empty catalog with a <code>null</code> base URL.
- This can be useful as a temporary placeholder in a UI while downloading
- a catalog, or it can be used by subclasses.</div>
+<div class="block">Creates a new, empty catalog with a <code>null</code> base URL. This can
+ be useful as a temporary placeholder in a UI while downloading a catalog,
+ or it can be used by subclasses.</div>
 </li>
 </ul>
 <a name="Catalog-java.net.URL-">
@@ -406,9 +407,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>Catalog</h4>
 <pre>public&nbsp;Catalog(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a>&nbsp;base)
         throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Loads a catalog from a base URL.
- The URL of the catalog will be the base URL
- with "catalog.txt" appended.</div>
+<div class="block">Loads a catalog from a base URL. The URL of the catalog will be the base
+ URL with "catalog.txt" appended.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>base</code> - the URL to load the catalog from</dd>
@@ -428,17 +428,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                boolean&nbsp;allowCache,
                <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JProgressBar.html?is-external=true" title="class or interface in javax.swing">JProgressBar</a>&nbsp;feedback)
         throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Loads a catalog from a base URL.
- The URL of the catalog will be the base URL
- with "catalog.txt" appended. If <code>feedback</code>
- if non-<code>null</code>, then it will be updated with
- progress information.</div>
+<div class="block">Loads a catalog from a base URL. The URL of the catalog will be the base
+ URL with "catalog.txt" appended. If <code>feedback</code> if
+ non-<code>null</code>, then it will be updated with progress information.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>base</code> - the URL to load the catalog from</dd>
-<dd><code>allowCache</code> - if <code>true</code>, and if the URL identifies the default
-     catalog URL, then a cached version of the catalog may be returned</dd>
-<dd><code>feedback</code> - an optional progress bar to send feedback to while reading</dd>
+<dd><code>allowCache</code> - if <code>true</code>, and if the URL identifies the
+ default catalog URL, then a cached version of the catalog may be returned</dd>
+<dd><code>feedback</code> - an optional progress bar to send feedback to while
+ reading</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if an error occurs while reading the catalog</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>base</code> is <code>null</code></dd>
@@ -453,10 +452,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>Catalog</h4>
 <pre>public&nbsp;Catalog(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a>&nbsp;base,
                <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Listing.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog">Listing</a>&gt;&nbsp;listings)</pre>
-<div class="block">Creates a catalog from a collection of <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Listing.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog"><code>Listing</code></a>s.
- This is normally used to create a temporary local catalog
- in order to write a catalog description file. The base URL
- is not required unless installation is attempted, and may be <code>null</code>.</div>
+<div class="block">Creates a catalog from a collection of <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Listing.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog"><code>Listing</code></a>s. This is normally
+ used to create a temporary local catalog in order to write a catalog
+ description file. The base URL is not required unless installation is
+ attempted, and may be <code>null</code>.</div>
 </li>
 </ul>
 </li>
@@ -474,15 +473,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>add</h4>
 <pre>public&nbsp;void&nbsp;add(<a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Listing.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog">Listing</a>&nbsp;li)</pre>
-<div class="block">Adds a listing to the catalog. If the version information for the
- listing indicates that the plug-in is too old for this version of
- the application, then the listing is not added.</div>
+<div class="block">Adds a listing to the catalog. If the version information for the listing
+ indicates that the plug-in is too old for this version of the
+ application, then the listing is not added.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>li</code> - the listing to add</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the listing has a catalog ID and
-    another listing in the catalog uses the same UUID</dd>
+ another listing in the catalog uses the same UUID</dd>
 </dl>
 </li>
 </ul>
@@ -493,13 +492,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>addPostInstallationHook</h4>
 <pre>public static&nbsp;void&nbsp;addPostInstallationHook(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;h)</pre>
-<div class="block">Adds a new post-installation hook. All current post-installation hooks are
- called after one or more new bundles are installed by calling
+<div class="block">Adds a new post-installation hook. All current post-installation hooks
+ are called after one or more new bundles are installed by calling
  <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Catalog.html#installFlaggedPlugins--"><code>installFlaggedPlugins()</code></a>. This can be used to detect a previously
- missing plug-in bundle and change the behaviour of the application
- or plug-in accordingly. For example, when the core spelling bundle is missing,
- the application installs a hook that will activate spelling checking if the bundle
- is later installed.</div>
+ missing plug-in bundle and change the behaviour of the application or
+ plug-in accordingly. For example, when the core spelling bundle is
+ missing, the application installs a hook that will activate spelling
+ checking if the bundle is later installed.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>h</code> - the hook function to call following plug-in bundle installation</dd>
@@ -513,14 +512,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>determineInstallationRequirements</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/BitSet.html?is-external=true" title="class or interface in java.util">BitSet</a>&nbsp;determineInstallationRequirements()</pre>
-<div class="block">Determines the installation requirements set for the plug-ins
- that are currently flagged for installation. The installation
- requirements set includes not just the plug-ins that are flagged
- for download, but any plug-ins that those plug-ins require
- (recursively).
- The requirements set is returned as a bit set
- in which the indexes of each possible listing are set to 0
- if that listing would not be installed and 1 if it would.</div>
+<div class="block">Determines the installation requirements set for the plug-ins that are
+ currently flagged for installation. The installation requirements set
+ includes not just the plug-ins that are flagged for download, but any
+ plug-ins that those plug-ins require (recursively). The requirements set
+ is returned as a bit set in which the indexes of each possible listing
+ are set to 0 if that listing would not be installed and 1 if it would.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a set of the plug-ins that would be</dd>
@@ -534,8 +531,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>findListingByUUID</h4>
 <pre>public&nbsp;int&nbsp;findListingByUUID(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html?is-external=true" title="class or interface in java.util">UUID</a>&nbsp;uuid)</pre>
-<div class="block">Returns the index of the listing in this catalog that has the
- requested UUID. If no listing matches the UUID, returns -1.</div>
+<div class="block">Returns the index of the listing in this catalog that has the requested
+ UUID. If no listing matches the UUID, returns -1.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>uuid</code> - the unique ID to match</dd>
@@ -569,8 +566,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getBaseURL</h4>
 <pre>public final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a>&nbsp;getBaseURL()</pre>
-<div class="block">Returns the base URL used to resolve the location
- of plug-in bundles listed in the catalog.</div>
+<div class="block">Returns the base URL used to resolve the location of plug-in bundles
+ listed in the catalog.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the base URL to download plug-ins listed in the catalog from</dd>
@@ -584,8 +581,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getInstallFlag</h4>
 <pre>public final&nbsp;boolean&nbsp;getInstallFlag(int&nbsp;n)</pre>
-<div class="block">Returns <code>true</code> if the listing at the indicated index
- is flagged for installation.</div>
+<div class="block">Returns <code>true</code> if the listing at the indicated index is
+ flagged for installation.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>n</code> - the index of the listing to test</dd>
@@ -601,8 +598,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getInstallFlagCount</h4>
 <pre>public final&nbsp;int&nbsp;getInstallFlagCount()</pre>
-<div class="block">Returns a count of the number of plug-ins that are currently flagged
- for installation from this catalog.</div>
+<div class="block">Returns a count of the number of plug-ins that are currently flagged for
+ installation from this catalog.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the number of plug-ins that are flagged for installation</dd>
@@ -620,7 +617,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  catalog, returns <code>null</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the locally cached copy of the primary catalog, or <code>null</code></dd>
+<dd>the locally cached copy of the primary catalog, or
+ <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -632,13 +630,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getVersioningState</h4>
 <pre>public&nbsp;<a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Catalog.VersioningState.html" title="enum in ca.cgjennings.apps.arkham.plugins.catalog">Catalog.VersioningState</a>&nbsp;getVersioningState(int&nbsp;n)</pre>
 <div class="block">Compares the listing at index <code>n</code> with the set of installed
- plug-ins and returns a <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Catalog.VersioningState.html" title="enum in ca.cgjennings.apps.arkham.plugins.catalog"><code>Catalog.VersioningState</code></a> value that describes
- the relative version of the installed plug-in, if any.</div>
+ plug-ins and returns a <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Catalog.VersioningState.html" title="enum in ca.cgjennings.apps.arkham.plugins.catalog"><code>Catalog.VersioningState</code></a> value that describes the
+ relative version of the installed plug-in, if any.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>n</code> - the listing index to compare to installed plug-ins</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a comparison of the version of the plug-in in the listing and the installed version</dd>
+<dd>a comparison of the version of the plug-in in the listing and the
+ installed version</dd>
 </dl>
 </li>
 </ul>
@@ -649,20 +648,17 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>installFlaggedPlugins</h4>
 <pre>public&nbsp;boolean&nbsp;installFlaggedPlugins()</pre>
-<div class="block">Attempt to download and install all plug-ins that are currently
- flagged for installation.
- If a listing includes a <tt>requires</tt> entry, other plug-ins
- in the catalog that are named in the requires entry will be
- automatically flagged if they are not already flagged and they
- are not installed and up to date.
- This is recursive: if a required plug-in has required plugins, they
- are also added (and so on).
- When this method returns, all installation flags in
- this catalog will be cleared.</div>
+<div class="block">Attempt to download and install all plug-ins that are currently flagged
+ for installation. If a listing includes a <tt>requires</tt> entry, other
+ plug-ins in the catalog that are named in the requires entry will be
+ automatically flagged if they are not already flagged and they are not
+ installed and up to date. This is recursive: if a required plug-in has
+ required plugins, they are also added (and so on). When this method
+ returns, all installation flags in this catalog will be cleared.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if a restart (of the application) is required
-     to complete installation</dd>
+ to complete installation</dd>
 </dl>
 </li>
 </ul>
@@ -674,13 +670,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>isRestartRequiredAfterInstall</h4>
 <pre>public&nbsp;boolean&nbsp;isRestartRequiredAfterInstall()</pre>
 <div class="block">Returns <code>true</code> if a restart (of the application) would be
- required after the currently selected plug-ins are installed.
- The answer is based on the types of plug-ins flagged for installation,
- and the types of any plug-ins they require.
+ required after the currently selected plug-ins are installed. The answer
+ is based on the types of plug-ins flagged for installation, and the types
+ of any plug-ins they require.
  <p>
  If this method returns <code>false</code>, a restart may still be
- required if one of the plug-in bundles could not be written and
- an autoupdate file was generated.</div>
+ required if one of the plug-in bundles could not be written and an
+ autoupdate file was generated.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if a restart should not be required</dd>
@@ -695,10 +691,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>reload</h4>
 <pre>public&nbsp;void&nbsp;reload()
             throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Reload the catalog from the source.
- This will clear all download flags.
- If an exception occurs, the original catalog and
- settings are retained.</div>
+<div class="block">Reload the catalog from the source. This will clear all download flags.
+ If an exception occurs, the original catalog and settings are retained.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if an I/O exception occurs while reading the catalog</dd>
@@ -717,8 +711,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>uuid</code> - the UUID of the listing to remove</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if an entry was removed, <code>false</code>
-     if no entry matches the UUID</dd>
+<dd><code>true</code> if an entry was removed, <code>false</code> if
+ no entry matches the UUID</dd>
 </dl>
 </li>
 </ul>
@@ -729,12 +723,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>removePostInstallationHook</h4>
 <pre>public static&nbsp;void&nbsp;removePostInstallationHook(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;h)</pre>
-<div class="block">Removes a previously installed post-installation hook.
- It is safe to call this from <i>within</i> a hook (hooks can uninstall
- themselves).</div>
+<div class="block">Removes a previously installed post-installation hook. It is safe to call
+ this from <i>within</i> a hook (hooks can uninstall themselves).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>h</code> - the hook function to stop calling following plug-in bundle installation</dd>
+<dd><code>h</code> - the hook function to stop calling following plug-in bundle
+ installation</dd>
 </dl>
 </li>
 </ul>
@@ -760,9 +754,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>setInstallFlag</h4>
 <pre>public final&nbsp;void&nbsp;setInstallFlag(int&nbsp;n,
                                  boolean&nbsp;install)</pre>
-<div class="block">Mark the listing at index <code>n</code> for installation.
- All flagged plug-ins are installed together when
- <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Catalog.html#installFlaggedPlugins--"><code>installFlaggedPlugins()</code></a> is called.</div>
+<div class="block">Mark the listing at index <code>n</code> for installation. All flagged
+ plug-ins are installed together when <a href="../../../../../../ca/cgjennings/apps/arkham/plugins/catalog/Catalog.html#installFlaggedPlugins--"><code>installFlaggedPlugins()</code></a> is
+ called.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>n</code> - the index of the listing to mark</dd>
@@ -777,9 +771,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>size</h4>
 <pre>public final&nbsp;int&nbsp;size()</pre>
-<div class="block">Returns the number of listings in the catalog, not counting
- any hidden listings. The first hidden listing, if any, begins at the
- index equal to this value.</div>
+<div class="block">Returns the number of listings in the catalog, not counting any hidden
+ listings. The first hidden listing, if any, begins at the index equal to
+ this value.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the number of non-hidden listings</dd>
@@ -839,6 +833,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

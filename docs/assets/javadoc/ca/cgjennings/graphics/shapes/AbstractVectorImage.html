@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -115,14 +117,14 @@ var activeTableTab = "activeTableTab";
 <pre>public abstract class <span class="typeNameLabel">AbstractVectorImage</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
 implements <a href="../../../../ca/cgjennings/graphics/shapes/VectorImage.html" title="interface in ca.cgjennings.graphics.shapes">VectorImage</a></pre>
-<div class="block">An abstract base class for creating vector images.
- Described algorithmically, pure vector images can be scaled to
- arbitrary sizes without losing definition and becoming blocky
- as bitmap images do.
+<div class="block">An abstract base class for creating vector images. Described algorithmically,
+ pure vector images can be scaled to arbitrary sizes without losing definition
+ and becoming blocky as bitmap images do.
 
- <p>Concrete subclasses must set the protected members <a href="../../../../ca/cgjennings/graphics/shapes/AbstractVectorImage.html#tx"><code>tx</code></a>,
- <a href="../../../../ca/cgjennings/graphics/shapes/AbstractVectorImage.html#ty"><code>ty</code></a>, <a href="../../../../ca/cgjennings/graphics/shapes/AbstractVectorImage.html#iw"><code>iw</code></a>, and <a href="../../../../ca/cgjennings/graphics/shapes/AbstractVectorImage.html#ih"><code>ih</code></a> to appropriate values and
- implement the <a href="../../../../ca/cgjennings/graphics/shapes/AbstractVectorImage.html#render-java.awt.Graphics2D-"><code>render(java.awt.Graphics2D)</code></a> method.</div>
+ <p>
+ Concrete subclasses must set the protected members <a href="../../../../ca/cgjennings/graphics/shapes/AbstractVectorImage.html#tx"><code>tx</code></a>,
+ <a href="../../../../ca/cgjennings/graphics/shapes/AbstractVectorImage.html#ty"><code>ty</code></a>, <a href="../../../../ca/cgjennings/graphics/shapes/AbstractVectorImage.html#iw"><code>iw</code></a>, and <a href="../../../../ca/cgjennings/graphics/shapes/AbstractVectorImage.html#ih"><code>ih</code></a> to appropriate values and implement
+ the <a href="../../../../ca/cgjennings/graphics/shapes/AbstractVectorImage.html#render-java.awt.Graphics2D-"><code>render(java.awt.Graphics2D)</code></a> method.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -206,9 +208,8 @@ implements <a href="../../../../ca/cgjennings/graphics/shapes/VectorImage.html" 
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/shapes/AbstractVectorImage.html#createRasterImage-double-">createRasterImage</a></span>(double&nbsp;ppi)</code>
-<div class="block">Creates a bitmap image from the vector image at the specified
- resolution, assuming that the image width and height are measured
- in points.</div>
+<div class="block">Creates a bitmap image from the vector image at the specified resolution,
+ assuming that the image width and height are measured in points.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -216,8 +217,8 @@ implements <a href="../../../../ca/cgjennings/graphics/shapes/VectorImage.html" 
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/shapes/AbstractVectorImage.html#createRasterImage-int-int-boolean-">createRasterImage</a></span>(int&nbsp;width,
                  int&nbsp;height,
                  boolean&nbsp;fitToSize)</code>
-<div class="block">Creates a bitmap image from the vector image with the specified width
- and height (in pixels).</div>
+<div class="block">Creates a bitmap image from the vector image with the specified width and
+ height (in pixels).</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -258,8 +259,8 @@ implements <a href="../../../../ca/cgjennings/graphics/shapes/VectorImage.html" 
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/shapes/AbstractVectorImage.html#paint-java.awt.Graphics2D-java.awt.geom.Rectangle2D-boolean-">paint</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt">Graphics2D</a>&nbsp;g,
      <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Rectangle2D.html?is-external=true" title="class or interface in java.awt.geom">Rectangle2D</a>&nbsp;paintRectangle,
      boolean&nbsp;fitToSize)</code>
-<div class="block">Paints the image to cover the specified rectangle in the user
- coordinates of the provided graphics context.</div>
+<div class="block">Paints the image to cover the specified rectangle in the user coordinates
+ of the provided graphics context.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -362,9 +363,8 @@ implements <a href="../../../../ca/cgjennings/graphics/shapes/VectorImage.html" 
 <li class="blockList">
 <h4>createRasterImage</h4>
 <pre>public final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;createRasterImage(double&nbsp;ppi)</pre>
-<div class="block">Creates a bitmap image from the vector image at the specified
- resolution, assuming that the image width and height are measured
- in points.</div>
+<div class="block">Creates a bitmap image from the vector image at the specified resolution,
+ assuming that the image width and height are measured in points.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../ca/cgjennings/graphics/shapes/VectorImage.html#createRasterImage-double-">createRasterImage</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../ca/cgjennings/graphics/shapes/VectorImage.html" title="interface in ca.cgjennings.graphics.shapes">VectorImage</a></code></dd>
@@ -384,13 +384,12 @@ implements <a href="../../../../ca/cgjennings/graphics/shapes/VectorImage.html" 
 <pre>public final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;createRasterImage(int&nbsp;width,
                                              int&nbsp;height,
                                              boolean&nbsp;fitToSize)</pre>
-<div class="block">Creates a bitmap image from the vector image with the specified width
- and height (in pixels). If the <code>fitToSize</code> parameter is
+<div class="block">Creates a bitmap image from the vector image with the specified width and
+ height (in pixels). If the <code>fitToSize</code> parameter is
  <code>true</code>, then the aspect ratio of the vector image will be
- maintained. If the aspect ratio of the
- vector image does not match the specified width and height, then the
- vector image will be scaled to just fit within the specified size, and
- centered over the drawing area.</div>
+ maintained. If the aspect ratio of the vector image does not match the
+ specified width and height, then the vector image will be scaled to just
+ fit within the specified size, and centered over the drawing area.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../ca/cgjennings/graphics/shapes/VectorImage.html#createRasterImage-int-int-boolean-">createRasterImage</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../ca/cgjennings/graphics/shapes/VectorImage.html" title="interface in ca.cgjennings.graphics.shapes">VectorImage</a></code></dd>
@@ -398,7 +397,7 @@ implements <a href="../../../../ca/cgjennings/graphics/shapes/VectorImage.html" 
 <dd><code>width</code> - the image width, in pixels</dd>
 <dd><code>height</code> - the image height, in pixels</dd>
 <dd><code>fitToSize</code> - if <code>true</code>, the aspect ratio of the vector
-     image will be maintained</dd>
+ image will be maintained</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a rendering of the vector image at the specified size</dd>
 </dl>
@@ -411,9 +410,9 @@ implements <a href="../../../../ca/cgjennings/graphics/shapes/VectorImage.html" 
 <li class="blockList">
 <h4>getHeight</h4>
 <pre>public final&nbsp;double&nbsp;getHeight()</pre>
-<div class="block">Returns the height of the image in an unspecified unit.
- Typically this reflects the "natural" size of the image in the unit used
- by the designer.</div>
+<div class="block">Returns the height of the image in an unspecified unit. Typically this
+ reflects the "natural" size of the image in the unit used by the
+ designer.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../ca/cgjennings/graphics/shapes/VectorImage.html#getHeight--">getHeight</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../ca/cgjennings/graphics/shapes/VectorImage.html" title="interface in ca.cgjennings.graphics.shapes">VectorImage</a></code></dd>
@@ -429,9 +428,9 @@ implements <a href="../../../../ca/cgjennings/graphics/shapes/VectorImage.html" 
 <li class="blockList">
 <h4>getWidth</h4>
 <pre>public final&nbsp;double&nbsp;getWidth()</pre>
-<div class="block">Returns the width of the image in an unspecified unit.
- Typically this reflects the "natural" size of the image in the unit used
- by the designer.</div>
+<div class="block">Returns the width of the image in an unspecified unit. Typically this
+ reflects the "natural" size of the image in the unit used by the
+ designer.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../ca/cgjennings/graphics/shapes/VectorImage.html#getWidth--">getWidth</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../ca/cgjennings/graphics/shapes/VectorImage.html" title="interface in ca.cgjennings.graphics.shapes">VectorImage</a></code></dd>
@@ -490,7 +489,7 @@ implements <a href="../../../../ca/cgjennings/graphics/shapes/VectorImage.html" 
 <dd><code>width</code> - the width to paint the image at</dd>
 <dd><code>height</code> - the height to paint the image at</dd>
 <dd><code>fitToSize</code> - if <code>true</code>, the aspect ratio of the vector
-     image will be maintained</dd>
+ image will be maintained</dd>
 </dl>
 </li>
 </ul>
@@ -503,13 +502,12 @@ implements <a href="../../../../ca/cgjennings/graphics/shapes/VectorImage.html" 
 <pre>public final&nbsp;void&nbsp;paint(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt">Graphics2D</a>&nbsp;g,
                         <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Rectangle2D.html?is-external=true" title="class or interface in java.awt.geom">Rectangle2D</a>&nbsp;paintRectangle,
                         boolean&nbsp;fitToSize)</pre>
-<div class="block">Paints the image to cover the specified rectangle in the user
- coordinates of the provided graphics context. If the
- <code>fitToSize</code> parameter is <code>true</code>, then the aspect
- ratio of the vector image will be maintained. If the aspect ratio of the
- vector image does not match the specified width and height, then the
- vector image will be scaled to just fit within the specified size, and
- centered over the drawing area.</div>
+<div class="block">Paints the image to cover the specified rectangle in the user coordinates
+ of the provided graphics context. If the <code>fitToSize</code> parameter
+ is <code>true</code>, then the aspect ratio of the vector image will be
+ maintained. If the aspect ratio of the vector image does not match the
+ specified width and height, then the vector image will be scaled to just
+ fit within the specified size, and centered over the drawing area.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../ca/cgjennings/graphics/shapes/VectorImage.html#paint-java.awt.Graphics2D-java.awt.geom.Rectangle2D-boolean-">paint</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../ca/cgjennings/graphics/shapes/VectorImage.html" title="interface in ca.cgjennings.graphics.shapes">VectorImage</a></code></dd>
@@ -517,7 +515,7 @@ implements <a href="../../../../ca/cgjennings/graphics/shapes/VectorImage.html" 
 <dd><code>g</code> - the graphics context to render into</dd>
 <dd><code>paintRectangle</code> - the rectangle that the image should cover</dd>
 <dd><code>fitToSize</code> - if <code>true</code>, the aspect ratio of the vector
-     image will be maintained</dd>
+ image will be maintained</dd>
 </dl>
 </li>
 </ul>
@@ -530,9 +528,9 @@ implements <a href="../../../../ca/cgjennings/graphics/shapes/VectorImage.html" 
 <pre>protected abstract&nbsp;void&nbsp;render(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt">Graphics2D</a>&nbsp;g)</pre>
 <div class="block">Renders the vector image into the specified graphics context. The upper
  left corner of the image should be at (<a href="../../../../ca/cgjennings/graphics/shapes/AbstractVectorImage.html#tx">-tx</a>,
- <a href="../../../../ca/cgjennings/graphics/shapes/AbstractVectorImage.html#ty">-ty</a>) and cover an area with width <a href="../../../../ca/cgjennings/graphics/shapes/AbstractVectorImage.html#iw"><code>iw</code></a>
- and height <a href="../../../../ca/cgjennings/graphics/shapes/AbstractVectorImage.html#ih"><code>ih</code></a>. Any changes to the state of the graphics context
- (stroke, paint, clip, etc.) must be restored before the method returns.</div>
+ <a href="../../../../ca/cgjennings/graphics/shapes/AbstractVectorImage.html#ty">-ty</a>) and cover an area with width <a href="../../../../ca/cgjennings/graphics/shapes/AbstractVectorImage.html#iw"><code>iw</code></a> and height
+ <a href="../../../../ca/cgjennings/graphics/shapes/AbstractVectorImage.html#ih"><code>ih</code></a>. Any changes to the state of the graphics context (stroke,
+ paint, clip, etc.) must be restored before the method returns.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>g</code> - the graphics context to render the image into</dd>
@@ -559,6 +557,8 @@ implements <a href="../../../../ca/cgjennings/graphics/shapes/VectorImage.html" 
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

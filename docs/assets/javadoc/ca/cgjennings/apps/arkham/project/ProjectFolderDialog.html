@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -136,8 +138,8 @@ var activeTableTab = "activeTableTab";
 <pre>public class <span class="typeNameLabel">ProjectFolderDialog</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JDialog.html?is-external=true" title="class or interface in javax.swing">JDialog</a>
 implements <a href="../../../../../ca/cgjennings/platform/AgnosticDialog.html" title="interface in ca.cgjennings.platform">AgnosticDialog</a></pre>
-<div class="block">A dialog for selecting project file folders, or folders OTHER THAN project file
- folders.</div>
+<div class="block">A dialog for selecting project file folders, or folders OTHER THAN project
+ file folders.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../serialized-form.html#ca.cgjennings.apps.arkham.project.ProjectFolderDialog">Serialized Form</a></dd>
@@ -283,8 +285,8 @@ implements <a href="../../../../../ca/cgjennings/platform/AgnosticDialog.html" t
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/project/ProjectFolderDialog.html#getAcceptButtonText--">getAcceptButtonText</a></span>()</code>
-<div class="block">Returns the label text of the button that accepts the selected file
- and closes the dialog (the "OK" button).</div>
+<div class="block">Returns the label text of the button that accepts the selected file and
+ closes the dialog (the "OK" button).</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -319,8 +321,8 @@ implements <a href="../../../../../ca/cgjennings/platform/AgnosticDialog.html" t
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/project/ProjectFolderDialog.html#setAcceptButtonText-java.lang.String-">setAcceptButtonText</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;okText)</code>
-<div class="block">Sets the label text of the button that accepts the selected file
- and closes the dialog (the "OK" button).</div>
+<div class="block">Sets the label text of the button that accepts the selected file and
+ closes the dialog (the "OK" button).</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -344,8 +346,8 @@ implements <a href="../../../../../ca/cgjennings/platform/AgnosticDialog.html" t
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/project/ProjectFolderDialog.html#useSettingKey-java.lang.String-">useSettingKey</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</code>
-<div class="block">Uses the specified setting key to recall and store the initial
- selected folder for the dialog.</div>
+<div class="block">Uses the specified setting key to recall and store the initial selected
+ folder for the dialog.</div>
 </td>
 </tr>
 </table>
@@ -417,8 +419,8 @@ implements <a href="../../../../../ca/cgjennings/platform/AgnosticDialog.html" t
  the specified mode.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>parent</code> - an optional component to use for the dialog's parent;
-     if <code>null</code> the main application window is used</dd>
+<dd><code>parent</code> - an optional component to use for the dialog's parent; if
+ <code>null</code> the main application window is used</dd>
 <dd><code>mode</code> - the type of folder selection to allow</dd>
 </dl>
 </li>
@@ -438,8 +440,8 @@ implements <a href="../../../../../ca/cgjennings/platform/AgnosticDialog.html" t
 <li class="blockList">
 <h4>getAcceptButtonText</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getAcceptButtonText()</pre>
-<div class="block">Returns the label text of the button that accepts the selected file
- and closes the dialog (the "OK" button).</div>
+<div class="block">Returns the label text of the button that accepts the selected file and
+ closes the dialog (the "OK" button).</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>text that describes the effect of accepting the file</dd>
@@ -534,9 +536,9 @@ implements <a href="../../../../../ca/cgjennings/platform/AgnosticDialog.html" t
 <li class="blockList">
 <h4>setAcceptButtonText</h4>
 <pre>public&nbsp;void&nbsp;setAcceptButtonText(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;okText)</pre>
-<div class="block">Sets the label text of the button that accepts the selected file
- and closes the dialog (the "OK" button). If no text is set explicitly,
- a generic label will be used.</div>
+<div class="block">Sets the label text of the button that accepts the selected file and
+ closes the dialog (the "OK" button). If no text is set explicitly, a
+ generic label will be used.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>okText</code> - text that describes the effect of accepting the file</dd>
@@ -552,10 +554,10 @@ implements <a href="../../../../../ca/cgjennings/platform/AgnosticDialog.html" t
 <li class="blockList">
 <h4>setSelectedFolder</h4>
 <pre>public&nbsp;void&nbsp;setSelectedFolder(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;f)</pre>
-<div class="block">Sets the currently selected folder. If the file is <code>null</code>,
- the folder will be set to a platform-dependent default location.
- If the specified file does not exist or is not a folder, the selection
- is unchanged.</div>
+<div class="block">Sets the currently selected folder. If the file is <code>null</code>, the
+ folder will be set to a platform-dependent default location. If the
+ specified file does not exist or is not a folder, the selection is
+ unchanged.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>f</code> - the folder to select</dd>
@@ -571,8 +573,8 @@ implements <a href="../../../../../ca/cgjennings/platform/AgnosticDialog.html" t
 <li class="blockList">
 <h4>setSuggestedFolderName</h4>
 <pre>public&nbsp;void&nbsp;setSuggestedFolderName(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;suggestion)</pre>
-<div class="block">Sets the initial name to use when the user first creates a new folder.
- If set to <code>null</code>, then the default name is used.</div>
+<div class="block">Sets the initial name to use when the user first creates a new folder. If
+ set to <code>null</code>, then the default name is used.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>suggestion</code> - the suggested name, or <code>null</code></dd>
@@ -588,9 +590,9 @@ implements <a href="../../../../../ca/cgjennings/platform/AgnosticDialog.html" t
 <li class="blockList">
 <h4>showDialog</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;showDialog()</pre>
-<div class="block">Displays the selection dialog and allows the user to select a file.
- If the user selects a file, the file is returned. If the user
- cancels the dialog, <code>null</code> is returned.</div>
+<div class="block">Displays the selection dialog and allows the user to select a file. If
+ the user selects a file, the file is returned. If the user cancels the
+ dialog, <code>null</code> is returned.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the selected file, or <code>null</code></dd>
@@ -604,10 +606,10 @@ implements <a href="../../../../../ca/cgjennings/platform/AgnosticDialog.html" t
 <li class="blockList">
 <h4>useSettingKey</h4>
 <pre>public&nbsp;void&nbsp;useSettingKey(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key)</pre>
-<div class="block">Uses the specified setting key to recall and store the initial
- selected folder for the dialog. The value of the setting key
- is used to set the initial folder, and if the user selects a folder
- then the parent of that folder will be stored in the key.</div>
+<div class="block">Uses the specified setting key to recall and store the initial selected
+ folder for the dialog. The value of the setting key is used to set the
+ initial folder, and if the user selects a folder then the parent of that
+ folder will be stored in the key.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - the name of the user setting key to use</dd>
@@ -636,6 +638,8 @@ implements <a href="../../../../../ca/cgjennings/platform/AgnosticDialog.html" t
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

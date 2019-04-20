@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":9,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":9,"i11":9,"i12":9,"i13":9,"i14":10,"i15":10,"i16":9,"i17":10,"i18":10,"i19":10,"i20":9,"i21":10,"i22":10,"i23":9,"i24":9,"i25":9,"i26":9,"i27":9,"i28":9,"i29":9,"i30":10,"i31":10,"i32":10,"i33":9,"i34":9,"i35":10,"i36":10,"i37":10,"i38":10,"i39":9,"i40":9,"i41":10,"i42":10,"i43":9,"i44":10};
+var methods = {"i0":10,"i1":10,"i2":9,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":9,"i11":9,"i12":9,"i13":9,"i14":10,"i15":10,"i16":9,"i17":10,"i18":10,"i19":10,"i20":9,"i21":10,"i22":10,"i23":9,"i24":9,"i25":9,"i26":9,"i27":9,"i28":9,"i29":9,"i30":9,"i31":10,"i32":10,"i33":10,"i34":9,"i35":9,"i36":10,"i37":10,"i38":10,"i39":10,"i40":9,"i41":9,"i42":10,"i43":10,"i44":9,"i45":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -106,9 +108,8 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public final class <span class="typeNameLabel">StrangeEons</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block">This is the core Strange Eons application. There is only one instance
- of this class available, which can be obtained by calling
- <a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#getApplication--"><code>getApplication()</code></a>.</div>
+<div class="block">This is the core Strange Eons application. There is only one instance of this
+ class available, which can be obtained by calling <a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#getApplication--"><code>getApplication()</code></a>.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -141,8 +142,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr class="rowColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.ReleaseType.html" title="enum in ca.cgjennings.apps.arkham">StrangeEons.ReleaseType</a></span></code>
-<div class="block">Describes the type of release by which this build was made available
- to the public.</div>
+<div class="block">Describes the type of release by which this build was made available to
+ the public.</div>
 </td>
 </tr>
 </table>
@@ -169,8 +170,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#MARKUP_TARGET_PROPERTY">MARKUP_TARGET_PROPERTY</a></span></code>
-<div class="block">The name of a property change event that is fired when the
- current markup target changes.</div>
+<div class="block">The name of a property change event that is fired when the current markup
+ target changes.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -206,7 +207,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#activatePlugin-ca.cgjennings.apps.arkham.plugins.Plugin-int-boolean-">activatePlugin</a></span>(<a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a>&nbsp;plugin,
               int&nbsp;modifiers,
               boolean&nbsp;show)</code>
-<div class="block">Shows or hides an <code>ACTIVATED</code> plug-in that is currently loaded.</div>
+<div class="block">Shows or hides an <code>ACTIVATED</code> plug-in that is currently
+ loaded.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -239,8 +241,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#addPropertyChangeListener-java.lang.String-java.beans.PropertyChangeListener-">addPropertyChangeListener</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;property,
                          <a href="https://docs.oracle.com/javase/8/docs/api/java/beans/PropertyChangeListener.html?is-external=true" title="class or interface in java.beans">PropertyChangeListener</a>&nbsp;li)</code>
-<div class="block">Adds a new property change listener that will be notified when
- property change events for the named property are fired by the application.</div>
+<div class="block">Adds a new property change listener that will be notified when property
+ change events for the named property are fired by the application.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -254,8 +256,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#deleteOnStartup-java.io.File-boolean-">deleteOnStartup</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;toDelete,
                boolean&nbsp;delete)</code>
-<div class="block">Adds or removes a marker indicating that a file should be deleted when the
- application is next started.</div>
+<div class="block">Adds or removes a marker indicating that a file should be deleted when
+ the application is next started.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
@@ -274,16 +276,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#getActiveGameComponent--">getActiveGameComponent</a></span>()</code>
-<div class="block">Returns the game component edited by the active editor, or <code>null</code>
- if there either is no active editor, or if the active editor is not
- a game component editor.</div>
+<div class="block">Returns the game component edited by the active editor, or
+ <code>null</code> if there either is no active editor, or if the active
+ editor is not a game component editor.</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html" title="class in ca.cgjennings.apps.arkham">StrangeEons</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#getApplication--">getApplication</a></span>()</code>
-<div class="block">Returns the single instance of <code>StrangeEons</code> once the application
- has been initialized.</div>
+<div class="block">Returns the single instance of <code>StrangeEons</code> once the
+ application has been initialized.</div>
 </td>
 </tr>
 <tr id="i13" class="rowColor">
@@ -316,20 +318,23 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code><a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#getLoadedPlugin-java.lang.String-">getLoadedPlugin</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginIdentifier)</code>
 <div class="block">Given the class name of a plug-in, return its <a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>Plugin</code></a>
- instance if it is currently installed and loaded.</div>
+ instance if it is currently installed and loaded.If the plug-in class is
+ not installed, is <a href="../../../../ca/cgjennings/apps/arkham/plugins/InstalledPlugin.html#isEnabled--">disabled</a>, or
+ it failed to <a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#initializePlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-">initialize properly</a>,
+ this method returns <code>null</code>.</div>
 </td>
 </tr>
 <tr id="i18" class="altColor">
 <td class="colFirst"><code><a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#getLoadedPluginByName-java.lang.String-">getLoadedPluginByName</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
-<div class="block">Finds a loaded <a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>Plugin</code></a> with the specified name.</div>
+<div class="block">Finds a loaded <a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>Plugin</code></a> with the specified name.If there is
+ no matching plug-in, returns <code>null</code>.</div>
 </td>
 </tr>
 <tr id="i19" class="rowColor">
 <td class="colFirst"><code><a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a>[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#getLoadedPlugins--">getLoadedPlugins</a></span>()</code>
-<div class="block">Returns a (possibly empty) array of the currently loaded
- plug-ins.</div>
+<div class="block">Returns a (possibly empty) array of the currently loaded plug-ins.</div>
 </td>
 </tr>
 <tr id="i20" class="altColor">
@@ -372,77 +377,84 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i26" class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Window.html?is-external=true" title="class or interface in java.awt">Window</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#getSafeStartupParentWindow--">getSafeStartupParentWindow</a></span>()</code>
-<div class="block">Returns a window that can be used as a parent window for dialog
- boxes.</div>
+<div class="block">Returns a window that can be used as a parent window for dialog boxes.</div>
 </td>
 </tr>
 <tr id="i27" class="rowColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#getUserStorageFile-java.lang.String-">getUserStorageFile</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;child)</code>
-<div class="block">Returns a file that can be used to store user data.</div>
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#getUrlForDocPage-java.lang.String-">getUrlForDocPage</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;baseDocFileName)</code>
+<div class="block">Returns the full URL of a Strange Eons documentation page given a base
+ file name.</div>
 </td>
 </tr>
 <tr id="i28" class="altColor">
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#getUserStorageFile-java.lang.String-">getUserStorageFile</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;child)</code>
+<div class="block">Returns a file that can be used to store user data.For example, a plug-in
+ might use this to create a folder for storing cached data.</div>
+</td>
+</tr>
+<tr id="i29" class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#getVersionString--">getVersionString</a></span>()</code>
 <div class="block">Returns a string that describes this release of Strange Eons.</div>
 </td>
 </tr>
-<tr id="i29" class="rowColor">
+<tr id="i30" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html" title="class in ca.cgjennings.apps.arkham">StrangeEonsAppWindow</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#getWindow--">getWindow</a></span>()</code>
 <div class="block">Returns the main application window.</div>
 </td>
 </tr>
-<tr id="i30" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#insertMarkup-java.lang.String-">insertMarkup</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;markup)</code>
-<div class="block">Inserts a string into the most recently valid application-wide
- markup target.</div>
-</td>
-</tr>
 <tr id="i31" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#insertMarkupTags-java.lang.String-java.lang.String-">insertMarkupTags</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;prefix,
-                <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;suffix)</code>
-<div class="block">Surrounds the selection in the current markup target with the
- prefix and suffix.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#insertMarkup-java.lang.String-">insertMarkup</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;markup)</code>
+<div class="block">Inserts a string into the most recently valid application-wide markup
+ target.</div>
 </td>
 </tr>
 <tr id="i32" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#insertMarkupTags-java.lang.String-java.lang.String-">insertMarkupTags</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;prefix,
+                <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;suffix)</code>
+<div class="block">Surrounds the selection in the current markup target with the prefix and
+ suffix.</div>
+</td>
+</tr>
+<tr id="i33" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#loadPlugins--">loadPlugins</a></span>()</code>
 <div class="block">Reloaded plug-ins that are of the <a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#ACTIVATED"><code>ACTIVATED</code></a> or
  <a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#INJECTED"><code>INJECTED</code></a> types.</div>
 </td>
 </tr>
-<tr id="i33" class="rowColor">
+<tr id="i34" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#main-java.lang.String:A-">main</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)</code>
 <div class="block">This method is called when the application first starts as part of
  passing control of the process to the application.</div>
 </td>
 </tr>
-<tr id="i34" class="altColor">
+<tr id="i35" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#registerExportContainer-ca.cgjennings.apps.arkham.ExportContainer-">registerExportContainer</a></span>(<a href="../../../../ca/cgjennings/apps/arkham/ExportContainer.html" title="interface in ca.cgjennings.apps.arkham">ExportContainer</a>&nbsp;ec)</code>
 <div class="block">Register a new export container capable of exporting file collections.</div>
 </td>
 </tr>
-<tr id="i35" class="rowColor">
+<tr id="i36" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#removePluginLoadingListener-ca.cgjennings.apps.arkham.StrangeEons.PluginLoadingListener-">removePluginLoadingListener</a></span>(<a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.PluginLoadingListener.html" title="interface in ca.cgjennings.apps.arkham">StrangeEons.PluginLoadingListener</a>&nbsp;listener)</code>
 <div class="block">Removes a previously added listener for plug-in load events.</div>
 </td>
 </tr>
-<tr id="i36" class="altColor">
+<tr id="i37" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#removePropertyChangeListener-java.beans.PropertyChangeListener-">removePropertyChangeListener</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/beans/PropertyChangeListener.html?is-external=true" title="class or interface in java.beans">PropertyChangeListener</a>&nbsp;li)</code>
-<div class="block">Removes a previously added listener that listens for all property
- change events.</div>
+<div class="block">Removes a previously added listener that listens for all property change
+ events.</div>
 </td>
 </tr>
-<tr id="i37" class="rowColor">
+<tr id="i38" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#removePropertyChangeListener-java.lang.String-java.beans.PropertyChangeListener-">removePropertyChangeListener</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;property,
                             <a href="https://docs.oracle.com/javase/8/docs/api/java/beans/PropertyChangeListener.html?is-external=true" title="class or interface in java.beans">PropertyChangeListener</a>&nbsp;li)</code>
@@ -450,28 +462,28 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  to change.</div>
 </td>
 </tr>
-<tr id="i38" class="altColor">
+<tr id="i39" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#requestNewMarkupTarget-java.lang.Object-">requestNewMarkupTarget</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;potentialTarget)</code>
-<div class="block">Explicitly requests that the current application-wide <a href="../../../../ca/cgjennings/apps/arkham/MarkupTarget.html" title="interface in ca.cgjennings.apps.arkham"><code>MarkupTarget</code></a>
- be set to a specific object.</div>
-</td>
-</tr>
-<tr id="i39" class="rowColor">
-<td class="colFirst"><code>static void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#setWaitCursor-boolean-">setWaitCursor</a></span>(boolean&nbsp;appIsBusy)</code>
-<div class="block">This is a convenience method that sets or unsets a wait cursor on
- the main application window.</div>
+<div class="block">Explicitly requests that the current application-wide
+ <a href="../../../../ca/cgjennings/apps/arkham/MarkupTarget.html" title="interface in ca.cgjennings.apps.arkham"><code>MarkupTarget</code></a> be set to a specific object.</div>
 </td>
 </tr>
 <tr id="i40" class="altColor">
-<td class="colFirst"><code>static boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#testJavaVersion-int...-">testJavaVersion</a></span>(int...&nbsp;versionTokens)</code>
-<div class="block">Returns <code>true</code> if the installed version of Java is equal
- to or greater than the version specified.</div>
+<td class="colFirst"><code>static void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#setWaitCursor-boolean-">setWaitCursor</a></span>(boolean&nbsp;appIsBusy)</code>
+<div class="block">This is a convenience method that sets or unsets a wait cursor on the
+ main application window.</div>
 </td>
 </tr>
 <tr id="i41" class="rowColor">
+<td class="colFirst"><code>static boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#testJavaVersion-int...-">testJavaVersion</a></span>(int...&nbsp;versionTokens)</code>
+<div class="block">Returns <code>true</code> if the installed version of Java is equal to or
+ greater than the version specified.</div>
+</td>
+</tr>
+<tr id="i42" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#toString--">toString</a></span>()</code>
 <div class="block">Returns a basic string description of the application, in the following
@@ -479,25 +491,25 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  release, build <i>number</i>]</code>.</div>
 </td>
 </tr>
-<tr id="i42" class="altColor">
+<tr id="i43" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#unloadPlugins--">unloadPlugins</a></span>()</code>
-<div class="block">Causes all currently loaded
- <a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#ACTIVATED"><code>ACTIVATED</code></a> and <a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#INJECTED"><code>INJECTED</code></a> plug-ins
- to be unloaded.</div>
+<div class="block">Causes all currently loaded <a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#ACTIVATED"><code>ACTIVATED</code></a> and
+ <a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#INJECTED"><code>INJECTED</code></a> plug-ins to be unloaded.</div>
 </td>
 </tr>
-<tr id="i43" class="rowColor">
+<tr id="i44" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#unregisterExportContainer-ca.cgjennings.apps.arkham.ExportContainer-">unregisterExportContainer</a></span>(<a href="../../../../ca/cgjennings/apps/arkham/ExportContainer.html" title="interface in ca.cgjennings.apps.arkham">ExportContainer</a>&nbsp;ec)</code>
 <div class="block">Unregister a registered export container type.</div>
 </td>
 </tr>
-<tr id="i44" class="altColor">
+<tr id="i45" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#willDeleteOnStartup-java.io.File-">willDeleteOnStartup</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;toCheck)</code>
 <div class="block">Returns <code>true</code> if a file has been marked for deletion on the
- next application start by passing it to <a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#deleteOnStartup-java.io.File-boolean-"><code>deleteOnStartup(java.io.File, boolean)</code></a>.</div>
+ next application start by passing it to
+ <a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#deleteOnStartup-java.io.File-boolean-"><code>deleteOnStartup(java.io.File, boolean)</code></a>.</div>
 </td>
 </tr>
 </table>
@@ -539,8 +551,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>MARKUP_TARGET_PROPERTY</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> MARKUP_TARGET_PROPERTY</pre>
-<div class="block">The name of a property change event that is fired when the
- current markup target changes.</div>
+<div class="block">The name of a property change event that is fired when the current markup
+ target changes.</div>
 </li>
 </ul>
 <a name="RECOMMENDED_MEMORY_IN_MB">
@@ -574,14 +586,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>activatePlugin</h4>
 <pre>public&nbsp;void&nbsp;activatePlugin(<a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a>&nbsp;plugin)</pre>
-<div class="block">Shows an <code>ACTIVATED</code> plug-in that is currently loaded.
- If the plug-in is currently showing then it will be hidden first,
- then re-shown.</div>
+<div class="block">Shows an <code>ACTIVATED</code> plug-in that is currently loaded. If the
+ plug-in is currently showing then it will be hidden first, then re-shown.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>plugin</code> - the plug-in to activate</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#activatePlugin-ca.cgjennings.apps.arkham.plugins.Plugin-int-boolean-"><code>activatePlugin(ca.cgjennings.apps.arkham.plugins.Plugin, int, boolean)</code></a></dd>
+<dd><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#activatePlugin-ca.cgjennings.apps.arkham.plugins.Plugin-int-boolean-"><code>activatePlugin(ca.cgjennings.apps.arkham.plugins.Plugin, int,
+ boolean)</code></a></dd>
 </dl>
 </li>
 </ul>
@@ -594,35 +606,39 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public&nbsp;void&nbsp;activatePlugin(<a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a>&nbsp;plugin,
                            int&nbsp;modifiers,
                            boolean&nbsp;show)</pre>
-<div class="block">Shows or hides an <code>ACTIVATED</code> plug-in that is currently loaded.
- A <a href="../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>PluginContext</code></a> will be created
- for the plug-in and used to activate it as if the user had selected it from
- the <b>Toolbox</b> menu. The value of <code>modifiers</code> is a logical or of
- modifier key codes (see <a href="../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html#getModifiers--"><code>PluginContext.getModifiers()</code></a>)
- that will be marked as pressed. To activate the plug-in without indicating
- any special modifier keys, pass 0. If
- <code>show</code> is <code>true</code>, then the plug-in will be asked to
- show itself, otherwise to hide itself. The exact behaviours implied by
- the terms "show" and "hide" depend on the plug-in, but generally a show
- request executes the plug-in behaviour or makes the plug-in's dialog
- visible, while a hide request stops the behaviour or makes the dialog
- invisible. Many plug-ins are implemented as modal dialogs and therefore
- do not have a hide behaviour, as they stop the main application until the
- plug-in window is closed.
+<div class="block">Shows or hides an <code>ACTIVATED</code> plug-in that is currently
+ loaded. A <a href="../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>PluginContext</code></a> will be created for the plug-in and used
+ to activate it as if the user had selected it from the <b>Toolbox</b>
+ menu. The value of <code>modifiers</code> is a logical or of modifier key
+ codes (see
+ <a href="../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html#getModifiers--"><code>PluginContext.getModifiers()</code></a>)
+ that will be marked as pressed. To activate the plug-in without
+ indicating any special modifier keys, pass 0. If <code>show</code> is
+ <code>true</code>, then the plug-in will be asked to show itself,
+ otherwise to hide itself. The exact behaviours implied by the terms
+ "show" and "hide" depend on the plug-in, but generally a show request
+ executes the plug-in behaviour or makes the plug-in's dialog visible,
+ while a hide request stops the behaviour or makes the dialog invisible.
+ Many plug-ins are implemented as modal dialogs and therefore do not have
+ a hide behaviour, as they stop the main application until the plug-in
+ window is closed.
 
- <p><b>Note:</b> The general contract for plug-in behaviour states
- that a plug-in will only be shown if its <code>isPluginShowing</code> method
- returns <code>false</code>, and vice-versa. Although most plug-ins do
- not rely on this guarantee, you should not violate it unless the
- plug-in's documentation explicitly permits it.</div>
+ <p>
+ <b>Note:</b> The general contract for plug-in behaviour states that a
+ plug-in will only be shown if its <code>isPluginShowing</code> method
+ returns <code>false</code>, and vice-versa. Although most plug-ins do not
+ rely on this guarantee, you should not violate it unless the plug-in's
+ documentation explicitly permits it.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>plugin</code> - the plug-in to be activated</dd>
-<dd><code>modifiers</code> - the set of control key modifiers to activate the plug-in with</dd>
-<dd><code>show</code> - if <code>true</code>, the plug-in should show/start itself, otherwise, hide/stop itself</dd>
+<dd><code>modifiers</code> - the set of control key modifiers to activate the plug-in
+ with</dd>
+<dd><code>show</code> - if <code>true</code>, the plug-in should show/start itself,
+ otherwise, hide/stop itself</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>plugin</code> is not a
-     <code>Plugin.ACTIVATED</code> type</dd>
+ <code>Plugin.ACTIVATED</code> type</dd>
 </dl>
 </li>
 </ul>
@@ -653,26 +669,28 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>addExitTask</h4>
 <pre>public&nbsp;void&nbsp;addExitTask(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;task)</pre>
-<div class="block">Registers a task to be performed when Strange Eons is exiting.
- Exit tasks are run only when it is certain that the application will
- exit; for example, the user will already have been given a chance to
- save editors with unsaved changes.
+<div class="block">Registers a task to be performed when Strange Eons is exiting. Exit tasks
+ are run only when it is certain that the application will exit; for
+ example, the user will already have been given a chance to save editors
+ with unsaved changes.
 
- <p>Exit tasks are performed calling the <code>run()</code> method of the
- <code>task</code> object. A description of each
- task will be logged at <code>Level.INFO</code> by calling the task's
- <code>toString()</code> method just before it runs.
- If a task throws an exception, it will be logged but it
- will not prevent other exit tasks from running.
+ <p>
+ Exit tasks are performed calling the <code>run()</code> method of the
+ <code>task</code> object. A description of each task will be logged at
+ <code>Level.INFO</code> by calling the task's <code>toString()</code>
+ method just before it runs. If a task throws an exception, it will be
+ logged but it will not prevent other exit tasks from running.
 
- <p>Tasks are not guaranteed to run in a
- particular order; they may run from any thread and may even run
- concurrently. In general, do not expect to be able to open a window
- or perform other actions on the event dispatch thread; to do so safely
- you would need to use <code>invokeLater</code> and the application will
- probably exit before such code will get a chance to run.
+ <p>
+ Tasks are not guaranteed to run in a particular order; they may run from
+ any thread and may even run concurrently. In general, do not expect to be
+ able to open a window or perform other actions on the event dispatch
+ thread; to do so safely you would need to use <code>invokeLater</code>
+ and the application will probably exit before such code will get a chance
+ to run.
 
- <p>Tasks are not guaranteed to run if the application is terminated
+ <p>
+ Tasks are not guaranteed to run if the application is terminated
  abnormally, including use of the terminate command from the script
  debugger.</div>
 <dl>
@@ -722,8 +740,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>addPropertyChangeListener</h4>
 <pre>public&nbsp;void&nbsp;addPropertyChangeListener(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;property,
                                       <a href="https://docs.oracle.com/javase/8/docs/api/java/beans/PropertyChangeListener.html?is-external=true" title="class or interface in java.beans">PropertyChangeListener</a>&nbsp;li)</pre>
-<div class="block">Adds a new property change listener that will be notified when
- property change events for the named property are fired by the application.</div>
+<div class="block">Adds a new property change listener that will be notified when property
+ change events for the named property are fired by the application.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>li</code> - the listener to add</dd>
@@ -742,28 +760,29 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  class map. The new editor will be added to the main application window
  and a reference to it will be returned.
 
- <p><b>Resource Script Entries:</b>
- If the class map key is associated with a resource script
- rather than a component class or DIY script, then the script might
- create any number of editors, including zero. In this case, the new editor
- will be inferred by observing whether the active editor changes after
- running the script. If it does change, then it is assumed that the newly
- active editor was created by the script; otherwise it is assumed that the
- script did not create an editor and <code>null</code> is returned.</div>
+ <p>
+ <b>Resource Script Entries:</b>
+ If the class map key is associated with a resource script rather than a
+ component class or DIY script, then the script might create any number of
+ editors, including zero. In this case, the new editor will be inferred by
+ observing whether the active editor changes after running the script. If
+ it does change, then it is assumed that the newly active editor was
+ created by the script; otherwise it is assumed that the script did not
+ create an editor and <code>null</code> is returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>classMapKey</code> - a key for an editor specified in a
-    <a href="../../../../gamedata/ClassMap.html#add-java.lang.String-">loaded class map file</a></dd>
+ <a href="../../../../gamedata/ClassMap.html#add-java.lang.String-">loaded class map file</a></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>an editor for the given key, or <code>null</code> if no new
-    editor is created</dd>
+ editor is created</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the class map key is not a valid
-    key from an entry that was added this session</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the class map key is not a valid key
+ from an entry that was added this session</dd>
 <dd><code>CoreComponents.MissingCoreComponentException</code> - if a core library is
-    required to create the editor and the user declines to install it</dd>
+ required to create the editor and the user declines to install it</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/InstantiationException.html?is-external=true" title="class or interface in java.lang">InstantiationException</a></code> - if an error occurs while instantiating the
-    editor</dd>
+ editor</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../gamedata/ClassMap.html" title="class in gamedata"><code>ClassMap</code></a>, 
 <a href="../../../../gamedata/ClassMap.Entry.html#getKey--"><code>ClassMap.Entry.getKey()</code></a></dd>
@@ -778,8 +797,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>deleteOnStartup</h4>
 <pre>public&nbsp;void&nbsp;deleteOnStartup(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;toDelete,
                             boolean&nbsp;delete)</pre>
-<div class="block">Adds or removes a marker indicating that a file should be deleted when the
- application is next started. On the next application start, an
+<div class="block">Adds or removes a marker indicating that a file should be deleted when
+ the application is next started. On the next application start, an
  attempt is made to delete all files so marked. Any file marked for
  deletion with this method must be located in the user storage folder.</div>
 <dl>
@@ -789,7 +808,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the file is <code>null</code></dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the file to be deleted is not in the
-     user storage folder</dd>
+ user storage folder</dd>
 </dl>
 </li>
 </ul>
@@ -801,15 +820,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>fileBugReport</h4>
 <pre>public&nbsp;void&nbsp;fileBugReport(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;description,
                           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang">Throwable</a>&nbsp;t)</pre>
-<div class="block">Initiates a bug report that can be submitted by the user.
- An optional description and exception information will be included
- as part of the report if provided.
- The exact details of how the report is filed and what steps the user
- must complete are subject to change.</div>
+<div class="block">Initiates a bug report that can be submitted by the user. An optional
+ description and exception information will be included as part of the
+ report if provided. The exact details of how the report is filed and what
+ steps the user must complete are subject to change.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>description</code> - text to include with the report, or <code>null</code></dd>
-<dd><code>t</code> - an exception that is relevant to the bug being reported, or <code>null</code></dd>
+<dd><code>t</code> - an exception that is relevant to the bug being reported, or
+ <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -821,9 +840,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getActiveEditor</h4>
 <pre>public static&nbsp;<a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor</a>&nbsp;getActiveEditor()</pre>
 <div class="block">Returns the active editor, or <code>null</code> if no editor is active.
- This is a convenience method that returns
- <code>null</code> if the application window has not been created yet,
- or else forwards the call to the application window.</div>
+ This is a convenience method that returns <code>null</code> if the
+ application window has not been created yet, or else forwards the call to
+ the application window.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the active editor, or <code>null</code></dd>
@@ -837,9 +856,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getActiveGameComponent</h4>
 <pre>public static&nbsp;<a href="../../../../ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>&nbsp;getActiveGameComponent()</pre>
-<div class="block">Returns the game component edited by the active editor, or <code>null</code>
- if there either is no active editor, or if the active editor is not
- a game component editor.</div>
+<div class="block">Returns the game component edited by the active editor, or
+ <code>null</code> if there either is no active editor, or if the active
+ editor is not a game component editor.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the actively edited component, or <code>null</code></dd>
@@ -853,10 +872,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getApplication</h4>
 <pre>public static&nbsp;<a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html" title="class in ca.cgjennings.apps.arkham">StrangeEons</a>&nbsp;getApplication()</pre>
-<div class="block">Returns the single instance of <code>StrangeEons</code> once the application
- has been initialized. (The application becomes initialized after libraries
- and themes have been loaded, but just before extension plug-ins are loaded.)
- If the application is not yet initialized, this method returns <code>null</code>.</div>
+<div class="block">Returns the single instance of <code>StrangeEons</code> once the
+ application has been initialized. (The application becomes initialized
+ after libraries and themes have been loaded, but just before extension
+ plug-ins are loaded.) If the application is not yet initialized, this
+ method returns <code>null</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the application instance</dd>
@@ -871,15 +891,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getBuildNumber</h4>
 <pre>public static&nbsp;int&nbsp;getBuildNumber()</pre>
 <div class="block">Returns the build number of this version of the application. The build
- number uniquely identifies each release of Strange Eons, and is the
- most accurate way to determine the version of the application that is
- running. Higher build numbers represent later releases. The build number
- can be used to conditionally disable features that rely on a certain
- version of Strange Eons when the user is running an older version.
- For example, if a feature used by your plug-in was introduced
- in build 2942, you can check for it with code like the following:
+ number uniquely identifies each release of Strange Eons, and is the most
+ accurate way to determine the version of the application that is running.
+ Higher build numbers represent later releases. The build number can be
+ used to conditionally disable features that rely on a certain version of
+ Strange Eons when the user is running an older version. For example, if a
+ feature used by your plug-in was introduced in build 2942, you can check
+ for it with code like the following:
  <pre>
- if( StrangeEons.getBuildNumber() >= 2942 ) {
+ if( StrangeEons.getBuildNumber() &gt;= 2942 ) {
      // enable feature
  } else {
      // disable feature
@@ -931,9 +951,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getEditionNumber</h4>
 <pre>public static&nbsp;int&nbsp;getEditionNumber()</pre>
-<div class="block">Returns the edition number of this version of the application. For example,
- releases of Strange Eons 3 would return the value 3. Different editions
- of Strange Eons typically have extensive differences in their public APIs.</div>
+<div class="block">Returns the edition number of this version of the application. For
+ example, releases of Strange Eons 3 would return the value 3. Different
+ editions of Strange Eons typically have extensive differences in their
+ public APIs.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the edition for this version of Strange Eons</dd>
@@ -948,20 +969,23 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getLoadedPlugin</h4>
 <pre>public&nbsp;<a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a>&nbsp;getLoadedPlugin(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;pluginIdentifier)</pre>
 <div class="block">Given the class name of a plug-in, return its <a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>Plugin</code></a>
- instance if it is currently installed and loaded. If the plug-in class
- is not installed, is <a href="../../../../ca/cgjennings/apps/arkham/plugins/InstalledPlugin.html#isEnabled--">disabled</a>,
- or it failed to <a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#initializePlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-">initialize properly</a>,
+ instance if it is currently installed and loaded.If the plug-in class is
+ not installed, is <a href="../../../../ca/cgjennings/apps/arkham/plugins/InstalledPlugin.html#isEnabled--">disabled</a>, or
+ it failed to <a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#initializePlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-">initialize properly</a>,
  this method returns <code>null</code>.</div>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>pluginIdentifier</code> - </dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the <code>Plugin</code> instance for the class, or <code>null</code></dd>
+<dd>the <code>Plugin</code> instance for the class, or
+ <code>null</code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>pluginClass</code> is <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>pluginClass</code> is
+ <code>null</code></dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../ca/cgjennings/apps/arkham/plugins/BundleInstaller.html#getInstalledPlugins--"><code>BundleInstaller.getInstalledPlugins()</code></a>, 
 <a href="../../../../ca/cgjennings/apps/arkham/plugins/BundleInstaller.html#getBundleFileForUUID-java.util.UUID-"><code>BundleInstaller.getBundleFileForUUID(java.util.UUID)</code></a>, 
-<code>PluginBundle#getPluginRoot()</code>, 
-<code>PluginRoot#getPluginFiles()</code></dd>
+<a href="../../../../ca/cgjennings/apps/arkham/plugins/PluginBundle.html#getPluginRoot--"><code>PluginBundle.getPluginRoot()</code></a></dd>
 </dl>
 </li>
 </ul>
@@ -972,24 +996,24 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getLoadedPluginByName</h4>
 <pre>public&nbsp;<a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a>&nbsp;getLoadedPluginByName(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
-<div class="block">Finds a loaded <a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>Plugin</code></a> with the specified name.
- If there is no matching plug-in, returns <code>null</code>.
- Plug-ins are not required to have unique names: if more than one plug-in
- matches, this method returns one of them at random.
- Moreover, some plug-ins are localized and will have a different name
- depending on the current <a href="../../../../resources/Language.html#getInterface--">interface language</a>.
- To guarantee a specific plug-in class, either use
- <a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#getLoadedPlugin-java.lang.String-"><code>getLoadedPlugin(java.lang.String)</code></a> or find the
- plug-in by its
+<div class="block">Finds a loaded <a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>Plugin</code></a> with the specified name.If there is
+ no matching plug-in, returns <code>null</code>. Plug-ins are not required
+ to have unique names: if more than one plug-in matches, this method
+ returns one of them at random. Moreover, some plug-ins are localized and
+ will have a different name depending on the current
+ <a href="../../../../resources/Language.html#getInterface--">interface language</a>. To guarantee a
+ specific plug-in class, either use
+ <a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#getLoadedPlugin-java.lang.String-"><code>getLoadedPlugin(java.lang.String)</code></a> or find the plug-in by its
  <a href="../../../../ca/cgjennings/apps/arkham/plugins/BundleInstaller.html#getBundleFileForUUID-java.util.UUID-">UUID</a>.</div>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>name</code> - the plug-in name presented to the user</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the <code>Plugin</code> instance for the class, or <code>null</code></dd>
+<dd>the <code>Plugin</code> instance for the class, or
+ <code>null</code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>pluginClass</code> is <code>null</code></dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#getLoadedPlugin-java.lang.String-"><code>getLoadedPlugin(java.lang.String)</code></a>, 
-<code>#loadPluginBundles()</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>pluginClass</code> is
+ <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -1000,13 +1024,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getLoadedPlugins</h4>
 <pre>public&nbsp;<a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a>[]&nbsp;getLoadedPlugins()</pre>
-<div class="block">Returns a (possibly empty) array of the currently loaded
- plug-ins.</div>
+<div class="block">Returns a (possibly empty) array of the currently loaded plug-ins.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>an array of the activated or injected plug-ins that are loaded</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><code>#loadPluginBundles()</code></dd>
+<dd><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#loadPlugins--"><code>loadPlugins()</code></a></dd>
 </dl>
 </li>
 </ul>
@@ -1034,13 +1057,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getMarkupTarget</h4>
 <pre>public&nbsp;<a href="../../../../ca/cgjennings/apps/arkham/MarkupTarget.html" title="interface in ca.cgjennings.apps.arkham">MarkupTarget</a>&nbsp;getMarkupTarget()</pre>
 <div class="block">Returns the most recently valid markup target. Returns <code>null</code>
- if there has either never been a valid target, or if the most recently valid
- target is no currently valid (for example, if it has been disabled since it
- became the current target). When responding to user action, this is normally the
- markup target that you want since intervening user action is likely to change
- the current target. For example, if the user selects a menu item to
- activate your code, the act of opening the menu would clear the current
- target, causing <a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#getCurrentMarkupTarget--"><code>getCurrentMarkupTarget()</code></a> to return <code>null</code>.</div>
+ if there has either never been a valid target, or if the most recently
+ valid target is no currently valid (for example, if it has been disabled
+ since it became the current target). When responding to user action, this
+ is normally the markup target that you want since intervening user action
+ is likely to change the current target. For example, if the user selects
+ a menu item to activate your code, the act of opening the menu would
+ clear the current target, causing <a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#getCurrentMarkupTarget--"><code>getCurrentMarkupTarget()</code></a> to
+ return <code>null</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the most recent valid markup target, or <code>null</code></dd>
@@ -1061,29 +1085,29 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  between scripts. Two common uses for this database:
  <ol>
  <li> Creating an object to hold functions that will be used by multiple
-      scripts later on. For example, a plug-in that adds new game component
-      types could register a named object in its extension plug-in that
-      defines a library of functions used by the individual DIY scripts.
-      This can be more efficient than calling <code>useLibrary</code>
-      in every component script because the library code only needs to
-      be compiled once.
- <li> Sharing information between scripts, or between different runs
-      of the same script. For example, one script could store information
-      about a game that is used by other scripts later on. The scripts that
-      use this data might not even be from the same plug-in.
+ scripts later on. For example, a plug-in that adds new game component
+ types could register a named object in its extension plug-in that defines
+ a library of functions used by the individual DIY scripts. This can be
+ more efficient than calling <code>useLibrary</code> in every component
+ script because the library code only needs to be compiled once.
+ <li> Sharing information between scripts, or between different runs of
+ the same script. For example, one script could store information about a
+ game that is used by other scripts later on. The scripts that use this
+ data might not even be from the same plug-in.
  </ol>
 
- <p>Once set, a named object will remain available until it is explicitly
+ <p>
+ Once set, a named object will remain available until it is explicitly
  removed or the application terminates. If scripts in different plug-ins
- need to access a named object, you should set the bundle priorities
- in the root files of the various plug-ins to ensure that the plug-in
- that creates the named object is loaded before the plug-ins that rely
- on it.
+ need to access a named object, you should set the bundle priorities in
+ the root files of the various plug-ins to ensure that the plug-in that
+ creates the named object is loaded before the plug-ins that rely on it.
 
- <p>The database returned from this method provides special support
- for scripting. When accessed from a script, the database appears to be
- an object whose properties are the names of stored objects. Named
- objects can thus be set and looked up using array and property syntax:
+ <p>
+ The database returned from this method provides special support for
+ scripting. When accessed from a script, the database appears to be an
+ object whose properties are the names of stored objects. Named objects
+ can thus be set and looked up using array and property syntax:
  <pre>
  Eons.namedObjects.myNamedObject = function() { println( 'hello' ); };
  Eons.namedObjects.myNamedObject();
@@ -1105,10 +1129,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getOpenProject</h4>
 <pre>public static&nbsp;<a href="../../../../ca/cgjennings/apps/arkham/project/Project.html" title="class in ca.cgjennings.apps.arkham.project">Project</a>&nbsp;getOpenProject()</pre>
 <div class="block">Returns the current open project, or <code>null</code> if no project is
- open. (At most one project can be open at any given time.)
- This is a convenience method that returns
- <code>null</code> if the application window has not been created yet,
- or else forwards the call to the application window.</div>
+ open. (At most one project can be open at any given time.) This is a
+ convenience method that returns <code>null</code> if the application
+ window has not been created yet, or else forwards the call to the
+ application window.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the current open project, or <code>null</code></dd>
@@ -1127,7 +1151,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Returns an array of the registered export containers.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a (possibly empty) array of all container types that are currently registered</dd>
+<dd>a (possibly empty) array of all container types that are
+ currently registered</dd>
 </dl>
 </li>
 </ul>
@@ -1141,7 +1166,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Returns the type of this release of the application.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the kind of release, such as <code>ALPHA</code> or <code>BETA</code>.</dd>
+<dd>the kind of release, such as <code>ALPHA</code> or
+ <code>BETA</code>.</dd>
 </dl>
 </li>
 </ul>
@@ -1152,15 +1178,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getSafeStartupParentWindow</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Window.html?is-external=true" title="class or interface in java.awt">Window</a>&nbsp;getSafeStartupParentWindow()</pre>
-<div class="block">Returns a window that can be used as a parent window for dialog
- boxes. During startup, this method will return the splash window.
- Once the application window is visible, that will be returned instead.
- In the event that this method is called before the splash window
- appears, this method will return <code>null</code>; however it is not
- normally possible for plug-in code to execute before the splash window
- is available.
+<div class="block">Returns a window that can be used as a parent window for dialog boxes.
+ During startup, this method will return the splash window. Once the
+ application window is visible, that will be returned instead. In the
+ event that this method is called before the splash window appears, this
+ method will return <code>null</code>; however it is not normally possible
+ for plug-in code to execute before the splash window is available.
 
- <p>Note that plug-ins should not routinely open dialog boxes during
+ <p>
+ Note that plug-ins should not routinely open dialog boxes during
  application startup; this method is meant to be used primarily for
  displaying critical error messages.</div>
 <dl>
@@ -1173,6 +1199,36 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
+<a name="getUrlForDocPage-java.lang.String-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getUrlForDocPage</h4>
+<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getUrlForDocPage(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;baseDocFileName)</pre>
+<div class="block">Returns the full URL of a Strange Eons documentation page given a base
+ file name. If the name superficially looks like it is already a
+ <code>http[s]</code> URL then it is returned unchanged. A doc page can be the
+ main index page (<code>index</code>) or a page in one of the submanuals: the
+ user manual (prefix <code>um-</code>), the dev manual (prefix <code>dm-</code>), or
+ the translation manual (prefix <code>tm-</code>). If the base name is not
+ <code>index</code> and does not start with one of the specified manual
+ prefixes, it is assumed to be a shortened name for a user manual page and
+ that prefix is prepended. The name can include a hash fragment after the
+ base name to link to a specific section of the page.
+
+ <p>
+ Note that these rules may change in the future if the documentation is
+ reorganized.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>baseDocFileName</code> - base name of a documentation page, such as
+ <code>dm-first-plugin</code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a complete URL for the document</dd>
+</dl>
+</li>
+</ul>
 <a name="getUserStorageFile-java.lang.String-">
 <!--   -->
 </a>
@@ -1180,33 +1236,33 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getUserStorageFile</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;getUserStorageFile(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;child)</pre>
-<div class="block">Returns a file that can be used to store user data.
- For example, a plug-in might use this to create a folder for storing
- cached data.
- All of the files returned by this method will be located in a
- special system-dependent storage folder. For example, on UNIX
- systems this storage folder might be <code>~/.StrangeEons3</code>. (The default
- location can be changed by setting the environment variable
- <code>STRANGE_EONS_USER_DIR</code>.)
- If <code>child</code> is <code>null</code>, then the storage folder itself
- will be returned. Otherwise, <code>child</code> is taken to be
- a relative path, and the returned file will combine the
- storage folder with this relative location. For example, on a UNIX
- system, calling this method with child "test.txt" might return
- <code>~/.StrangeEons3/test.txt</code>.
+<div class="block">Returns a file that can be used to store user data.For example, a plug-in
+ might use this to create a folder for storing cached data. All of the
+ files returned by this method will be located in a special
+ system-dependent storage folder. If <code>child</code> is
+ <code>null</code>, then the storage folder itself will be returned.
+ Otherwise, <code>child</code> is taken to be a relative path, and the
+ returned file will combine the storage folder with this relative
+ location. For example, on a UNIX system, calling this method with child
+ "test.txt" might return <code>~/.StrangeEons3/test.txt</code>.
 
- <p>To locate a subfolder in user storage, specify a relative path using
- '/' as the directory separator character. (Slashes will be converted
- to the platform-specific separator character automatically.)
- For example, <code>"myplugin/cachefile"</code> would refer to the file
+ <p>
+ To locate a subfolder in user storage, specify a relative path using '/'
+ as the directory separator character. (Slashes will be converted to the
+ platform-specific separator character automatically.) For example,
+ <code>"myplugin/cachefile"</code> would refer to the file
  <i>cachefile</i> in the <i>myplugin</i> subfolder of the user storage
  folder.</div>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>child</code> - </dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the folder in which per-user files are stored, or the <code>child</code> within that folder</dd>
+<dd>the folder in which per-user files are stored, or the
+ <code>child</code> within that folder</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the returned file would not be located
-     in the system-dependant storage folder (for example, if <code>child</code> starts with "..")</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the returned file would not be
+ located in the system-dependent storage folder (for example, if
+ <code>child</code> starts with "..")</dd>
 </dl>
 </li>
 </ul>
@@ -1231,10 +1287,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getWindow</h4>
 <pre>public static&nbsp;<a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html" title="class in ca.cgjennings.apps.arkham">StrangeEonsAppWindow</a>&nbsp;getWindow()</pre>
-<div class="block">Returns the main application window. If called while the application
- is starting, the window might not yet exist, in which case <code>null</code>
- is returned. (The window is guaranteed to exists before extension plug-ins
- begin to load.)</div>
+<div class="block">Returns the main application window. If called while the application is
+ starting, the window might not yet exist, in which case <code>null</code>
+ is returned. (The window is guaranteed to exists before extension
+ plug-ins begin to load.)</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the main application window</dd>
@@ -1248,9 +1304,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>insertMarkup</h4>
 <pre>public&nbsp;void&nbsp;insertMarkup(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;markup)</pre>
-<div class="block">Inserts a string into the most recently valid application-wide
- markup target. The current selection, if any, will be replaced.
- If there is no such target, this method has no effect.</div>
+<div class="block">Inserts a string into the most recently valid application-wide markup
+ target. The current selection, if any, will be replaced. If there is no
+ such target, this method has no effect.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>markup</code> - the markup text to insert into the markup target</dd>
@@ -1267,17 +1323,18 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>insertMarkupTags</h4>
 <pre>public&nbsp;void&nbsp;insertMarkupTags(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;prefix,
                              <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;suffix)</pre>
-<div class="block">Surrounds the selection in the current markup target with the
- prefix and suffix. If the selection is already surrounded by prefix
- and suffix, or if the selection already includes the prefix and suffix,
- then the prefix and suffix are instead deleted from the selection.
- If no markup target is available, this method has no effect.</div>
+<div class="block">Surrounds the selection in the current markup target with the prefix and
+ suffix. If the selection is already surrounded by prefix and suffix, or
+ if the selection already includes the prefix and suffix, then the prefix
+ and suffix are instead deleted from the selection. If no markup target is
+ available, this method has no effect.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>prefix</code> - the text to insert before the selection</dd>
 <dd><code>suffix</code> - the text to insert after the selection</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../../ca/cgjennings/apps/arkham/MarkupTarget.html#tagSelectedText-java.lang.String-java.lang.String-boolean-"><code>MarkupTarget.tagSelectedText(java.lang.String, java.lang.String, boolean)</code></a></dd>
+<dd><a href="../../../../ca/cgjennings/apps/arkham/MarkupTarget.html#tagSelectedText-java.lang.String-java.lang.String-boolean-"><code>MarkupTarget.tagSelectedText(java.lang.String, java.lang.String,
+ boolean)</code></a></dd>
 </dl>
 </li>
 </ul>
@@ -1290,12 +1347,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public&nbsp;void&nbsp;loadPlugins()</pre>
 <div class="block">Reloaded plug-ins that are of the <a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#ACTIVATED"><code>ACTIVATED</code></a> or
  <a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#INJECTED"><code>INJECTED</code></a> types. Currently loaded plug-ins of
- these types will first be <a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#unloadPlugins--">unloaded</a>, and then
- all plug-ins found in <a href="../../../../ca/cgjennings/apps/arkham/plugins/BundleInstaller.html#loadPluginBundles--">plug-in bundles</a>
- that are currently <a href="../../../../ca/cgjennings/apps/arkham/plugins/InstalledPlugin.html#setEnabled-boolean-">enabled</a>
- will be <a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#initializePlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-">started</a>.
- This method has no effect on
- <a href="../../../../ca/cgjennings/apps/arkham/plugins/BundleInstaller.html#loadLibraryBundles--">libraries</a>,
+ these types will first be <a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#unloadPlugins--">unloaded</a>, and
+ then all plug-ins found in
+ <a href="../../../../ca/cgjennings/apps/arkham/plugins/BundleInstaller.html#loadPluginBundles--">plug-in bundles</a> that are
+ currently <a href="../../../../ca/cgjennings/apps/arkham/plugins/InstalledPlugin.html#setEnabled-boolean-">enabled</a> will
+ be
+ <a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#initializePlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-">started</a>.
+ This method has no effect on null null null null null     <a href="../../../../ca/cgjennings/apps/arkham/plugins/BundleInstaller.html#loadLibraryBundles--">libraries</a>,
  <a href="../../../../ca/cgjennings/apps/arkham/plugins/BundleInstaller.html#loadThemeBundles--">themes</a>, or
  <a href="../../../../ca/cgjennings/apps/arkham/plugins/BundleInstaller.html#loadExtensionBundles-ca.cgjennings.algo.ProgressListener-">extension plug-ins</a>.</div>
 <dl>
@@ -1316,8 +1374,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>main</h4>
 <pre>public static&nbsp;void&nbsp;main(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;args)</pre>
 <div class="block">This method is called when the application first starts as part of
- passing control of the process to the application.
- Calling this method again will throw an exception.</div>
+ passing control of the process to the application. Calling this method
+ again will throw an exception.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>args</code> - the command line arguments being passed to the application</dd>
@@ -1338,9 +1396,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>ec</code> - the container type to register</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the container or its identifier are <code>null</code></dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if a container type with this type's identifier
-     is already registered</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the container or its identifier are
+ <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if a container type with this type's
+ identifier is already registered</dd>
 </dl>
 </li>
 </ul>
@@ -1365,8 +1424,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>removePropertyChangeListener</h4>
 <pre>public&nbsp;void&nbsp;removePropertyChangeListener(<a href="https://docs.oracle.com/javase/8/docs/api/java/beans/PropertyChangeListener.html?is-external=true" title="class or interface in java.beans">PropertyChangeListener</a>&nbsp;li)</pre>
-<div class="block">Removes a previously added listener that listens for all property
- change events.</div>
+<div class="block">Removes a previously added listener that listens for all property change
+ events.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>li</code> - the listener to remove</dd>
@@ -1396,18 +1455,19 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>requestNewMarkupTarget</h4>
 <pre>public&nbsp;boolean&nbsp;requestNewMarkupTarget(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;potentialTarget)</pre>
-<div class="block">Explicitly requests that the current application-wide <a href="../../../../ca/cgjennings/apps/arkham/MarkupTarget.html" title="interface in ca.cgjennings.apps.arkham"><code>MarkupTarget</code></a>
- be set to a specific object. If the request succeeds, <code>true</code>
- is returned. In order to succeed, the new target must either be
- <code>null</code> (to clear the current target) or a (strictly) valid
- markup target. If the current target changes, a property change event
- will be fired for <code>MARKUP_TARGET_PROPERTY</code>.</div>
+<div class="block">Explicitly requests that the current application-wide
+ <a href="../../../../ca/cgjennings/apps/arkham/MarkupTarget.html" title="interface in ca.cgjennings.apps.arkham"><code>MarkupTarget</code></a> be set to a specific object. If the request
+ succeeds, <code>true</code> is returned. In order to succeed, the new
+ target must either be <code>null</code> (to clear the current target) or
+ a (strictly) valid markup target. If the current target changes, a
+ property change event will be fired for
+ <code>MARKUP_TARGET_PROPERTY</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>potentialTarget</code> - the object which may become the new target</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the requested object is the markup target when
-     this method returns</dd>
+<dd><code>true</code> if the requested object is the markup target
+ when this method returns</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../ca/cgjennings/apps/arkham/MarkupTargetFactory.html#isValidTarget-java.lang.Object-boolean-"><code>MarkupTargetFactory.isValidTarget(java.lang.Object, boolean)</code></a></dd>
 </dl>
@@ -1420,16 +1480,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>setWaitCursor</h4>
 <pre>public static&nbsp;void&nbsp;setWaitCursor(boolean&nbsp;appIsBusy)</pre>
-<div class="block">This is a convenience method that sets or unsets a wait cursor on
- the main application window. If the application window is not available
- yet, then this method does nothing. Otherwise, it forwards the call to
- the application window as if you had called
+<div class="block">This is a convenience method that sets or unsets a wait cursor on the
+ main application window. If the application window is not available yet,
+ then this method does nothing. Otherwise, it forwards the call to the
+ application window as if you had called
  <code>StrangeEons.getWindow().setWaitCursor( appIsBusy )</code>.
 
- <p>This method nests:
- if you set a wait cursor four times, then you must unset it
- four times before a regular cursor will be restored. To ensure that
- the wait cursor is removed, you should place the call to unset the
+ <p>
+ This method nests: if you set a wait cursor four times, then you must
+ unset it four times before a regular cursor will be restored. To ensure
+ that the wait cursor is removed, you should place the call to unset the
  wait cursor in a <code>finally</code> clause:
  <pre>
  StrangeEons.setWaitCursor( true );
@@ -1440,12 +1500,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  }
  </pre>
 
- <p>This method can be called from outside of the event
- dispatch thread.</div>
+ <p>
+ This method can be called from outside of the event dispatch thread.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>appIsBusy</code> - <code>true</code> to set the wait cursor,
-     <code>false</code> to unset it</dd>
+ <code>false</code> to unset it</dd>
 </dl>
 </li>
 </ul>
@@ -1456,19 +1516,19 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>testJavaVersion</h4>
 <pre>public static&nbsp;boolean&nbsp;testJavaVersion(int...&nbsp;versionTokens)</pre>
-<div class="block">Returns <code>true</code> if the installed version of Java is equal
- to or greater than the version specified. For example, to check if
- the installed version is Java 6 update 10 or newer, call:
+<div class="block">Returns <code>true</code> if the installed version of Java is equal to or
+ greater than the version specified. For example, to check if the
+ installed version is Java 6 update 10 or newer, call:
  <code>isJavaVersion( 1, 6, 0, 10 )</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>versionTokens</code> - the version number tokens to check; index 1 is the
-    major version number, index 2 is the minor version number, and
-    index 3 is the update number (index 0 has never been anything but
-    1 at the time of this writing)</dd>
+ major version number, index 2 is the minor version number, and index 3 is
+ the update number (index 0 has never been anything but 1 at the time of
+ this writing)</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the installed version of Java is equal to
-    or greater than the specified version</dd>
+<dd><code>true</code> if the installed version of Java is equal to or
+ greater than the specified version</dd>
 </dl>
 </li>
 </ul>
@@ -1497,16 +1557,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>unloadPlugins</h4>
 <pre>public&nbsp;void&nbsp;unloadPlugins()</pre>
-<div class="block">Causes all currently loaded
- <a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#ACTIVATED"><code>ACTIVATED</code></a> and <a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#INJECTED"><code>INJECTED</code></a> plug-ins
- to be unloaded.
- This method has no effect on
- <a href="../../../../ca/cgjennings/apps/arkham/plugins/BundleInstaller.html#loadLibraryBundles--">libraries</a>,
+<div class="block">Causes all currently loaded <a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#ACTIVATED"><code>ACTIVATED</code></a> and
+ <a href="../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#INJECTED"><code>INJECTED</code></a> plug-ins to be unloaded. This method has
+ no effect on null null null null null     <a href="../../../../ca/cgjennings/apps/arkham/plugins/BundleInstaller.html#loadLibraryBundles--">libraries</a>,
  <a href="../../../../ca/cgjennings/apps/arkham/plugins/BundleInstaller.html#loadThemeBundles--">themes</a>, or
  <a href="../../../../ca/cgjennings/apps/arkham/plugins/BundleInstaller.html#loadExtensionBundles-ca.cgjennings.algo.ProgressListener-">extension plug-ins</a>.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><code>#loadPluginBundles()</code>, 
+<dd><a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#loadPlugins--"><code>loadPlugins()</code></a>, 
 <a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.PluginLoadingListener.html" title="interface in ca.cgjennings.apps.arkham"><code>StrangeEons.PluginLoadingListener</code></a></dd>
 </dl>
 </li>
@@ -1533,15 +1591,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>willDeleteOnStartup</h4>
 <pre>public&nbsp;boolean&nbsp;willDeleteOnStartup(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;toCheck)</pre>
 <div class="block">Returns <code>true</code> if a file has been marked for deletion on the
- next application start by passing it to <a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#deleteOnStartup-java.io.File-boolean-"><code>deleteOnStartup(java.io.File, boolean)</code></a>.
- Note that it is not guaranteed that the file will actually be deleted,
- only that it is marked and that an attempt to delete it will be made.</div>
+ next application start by passing it to
+ <a href="../../../../ca/cgjennings/apps/arkham/StrangeEons.html#deleteOnStartup-java.io.File-boolean-"><code>deleteOnStartup(java.io.File, boolean)</code></a>. Note that it is not
+ guaranteed that the file will actually be deleted, only that it is marked
+ and that an attempt to delete it will be made.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>toCheck</code> - the file to check</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the file will be deleted the next time
-     the application starts</dd>
+<dd><code>true</code> if the file will be deleted the next time the
+ application starts</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the file is <code>null</code></dd>
 </dl>
@@ -1567,6 +1626,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

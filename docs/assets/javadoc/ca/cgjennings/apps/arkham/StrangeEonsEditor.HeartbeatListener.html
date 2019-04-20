@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -107,18 +109,19 @@ var activeTableTab = "activeTableTab";
 <pre>public static interface <span class="typeNameLabel">StrangeEonsEditor.HeartbeatListener</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/EventListener.html?is-external=true" title="class or interface in java.util">EventListener</a></pre>
 <div class="block">A heartbeat listener is notified by an editor once per heartbeat. An
- editor's heartbeat is used to performed tasks that must be repeated
- on a timed basis. The primary example is the synchronization of preview
- window updates with editing by an <a href="../../../../ca/cgjennings/apps/arkham/AbstractGameComponentEditor.html" title="class in ca.cgjennings.apps.arkham"><code>AbstractGameComponentEditor</code></a>,
- in which the editor waits to redraw the preview window until the current
- round of quick edits has finished. (For example, if the user types a
- word and then pauses, the preview window would typically be redrawn during
- the pause rather than while the user was typing.) Other kinds of editors
- may use the editor's heartbeat for different purposes. Even editors that
- do not require a heartbeat themselves are expected to provide one for
- use by plug-ins.
+ editor's heartbeat is used to performed tasks that must be repeated on a
+ timed basis. The primary example is the synchronization of preview window
+ updates with editing by an <a href="../../../../ca/cgjennings/apps/arkham/AbstractGameComponentEditor.html" title="class in ca.cgjennings.apps.arkham"><code>AbstractGameComponentEditor</code></a>, in which
+ the editor waits to redraw the preview window until the current round of
+ quick edits has finished. (For example, if the user types a word and then
+ pauses, the preview window would typically be redrawn during the pause
+ rather than while the user was typing.) Other kinds of editors may use
+ the editor's heartbeat for different purposes. Even editors that do not
+ require a heartbeat themselves are expected to provide one for use by
+ plug-ins.
 
- <p>Editors that use the heartbeat to synchronize preview updates will
+ <p>
+ Editors that use the heartbeat to synchronize preview updates will
  respond to a boolean value returned by the listener. If this method
  returns <code>true</code>, it is assumed that the listener has made
  changes to the edited content. These changes may or may not be detectable
@@ -178,12 +181,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/EventListen
 <pre>boolean&nbsp;heartbeat(<a href="../../../../ca/cgjennings/apps/arkham/StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor</a>&nbsp;editor)</pre>
 <div class="block">Called to indicate that a heartbeat is taking place in the indicated
  editor. If a listener has attached to an editor for the purpose of
- modifying the edited content, it should return <code>true</code>
- on those heartbeats where a genuine modification takes place. In any
+ modifying the edited content, it should return <code>true</code> on
+ those heartbeats where a genuine modification takes place. In any
  other case, the listener should return <code>false</code>.
 
- <p><b>Important:</b> Editors that synchronize redrawing using
- the heartbeat, including nearly all game component editors, will
+ <p>
+ <b>Important:</b> Editors that synchronize redrawing using the
+ heartbeat, including nearly all game component editors, will
  <i>never</i> update the preview display if a heartbeat listener
  always returns <code>true</code>.</div>
 <dl>
@@ -214,6 +218,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/EventListen
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

@@ -34,6 +34,8 @@
 <li class="navBarCell1Rev">Package</li>
 <li>Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -66,59 +68,9 @@
 <!-- ========= END OF TOP NAVBAR ========= -->
 <div class="header">
 <h1 title="Package" class="title">Package&nbsp;ca.cgjennings.ui.textedit</h1>
-<div class="docSummary">
-<div class="block">This package provides classes that implement a text editing component for
- source code files.</div>
-</div>
-<p>See:&nbsp;<a href="#package.description">Description</a></p>
 </div>
 <div class="contentContainer">
 <ul class="blockList">
-<li class="blockList">
-<table class="typeSummary" border="0" cellpadding="3" cellspacing="0" summary="Interface Summary table, listing interfaces, and an explanation">
-<caption><span>Interface Summary</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Interface</th>
-<th class="colLast" scope="col">Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../ca/cgjennings/ui/textedit/ActionRecorder.html" title="interface in ca.cgjennings.ui.textedit">ActionRecorder</a></td>
-<td class="colLast">
-<div class="block">Interface implemented by classes that wish to record command sequences
- that are executed in an editor.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../../ca/cgjennings/ui/textedit/BindingInstaller.html" title="interface in ca.cgjennings.ui.textedit">BindingInstaller</a></td>
-<td class="colLast">
-<div class="block">Installs bindings in an input handler.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../ca/cgjennings/ui/textedit/ConfigurationSerializer.html" title="interface in ca.cgjennings.ui.textedit">ConfigurationSerializer</a></td>
-<td class="colLast">
-<div class="block">This interface can be implemented to serialize editor configurations
- to various formats.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../../ca/cgjennings/ui/textedit/Highlighter.html" title="interface in ca.cgjennings.ui.textedit">Highlighter</a></td>
-<td class="colLast">
-<div class="block">Highlighters are attached to an editor to add custom painting effects and
- <a href="../../../../ca/cgjennings/ui/textedit/MarginNote.html" title="class in ca.cgjennings.ui.textedit"><code>marginalia</code></a>.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../ca/cgjennings/ui/textedit/WordDefiner.html" title="interface in ca.cgjennings.ui.textedit">WordDefiner</a></td>
-<td class="colLast">
-<div class="block">This interface defines a function that defines which characters the
- editor will consider to be part of a word.</div>
-</td>
-</tr>
-</tbody>
-</table>
-</li>
 <li class="blockList">
 <table class="typeSummary" border="0" cellpadding="3" cellspacing="0" summary="Class Summary table, listing classes, and an explanation">
 <caption><span>Class Summary</span><span class="tabEnd">&nbsp;</span></caption>
@@ -128,172 +80,16 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><a href="../../../../ca/cgjennings/ui/textedit/CSSStyler.html" title="class in ca.cgjennings.ui.textedit">CSSStyler</a></td>
-<td class="colLast">
-<div class="block">Creates HTML from source code content that includes CSS styles for the token
- types.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../../ca/cgjennings/ui/textedit/EditorCommands.html" title="class in ca.cgjennings.ui.textedit">EditorCommands</a></td>
-<td class="colLast">
-<div class="block">Defines the set of built-in commands supported by the editor.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../ca/cgjennings/ui/textedit/EditorConfiguration.html" title="class in ca.cgjennings.ui.textedit">EditorConfiguration</a></td>
-<td class="colLast">
-<div class="block">Stores configuration options for editors.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../../ca/cgjennings/ui/textedit/ErrorHighlighter.html" title="class in ca.cgjennings.ui.textedit">ErrorHighlighter</a></td>
-<td class="colLast">
-<div class="block">An abstract base class for highlighters that draw squiggly error
- underlines beneath the highlighted text.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../ca/cgjennings/ui/textedit/HighlightedLine.html" title="class in ca.cgjennings.ui.textedit">HighlightedLine</a></td>
-<td class="colLast">
-<div class="block">Encapsulates information about a line that is passed to a
- <a href="../../../../ca/cgjennings/ui/textedit/Highlighter.html" title="interface in ca.cgjennings.ui.textedit"><code>Highlighter</code></a>.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../../ca/cgjennings/ui/textedit/HTMLStyler.html" title="class in ca.cgjennings.ui.textedit">HTMLStyler</a></td>
-<td class="colLast">
-<div class="block">Creates HTML from source code content.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../ca/cgjennings/ui/textedit/InputHandler.html" title="class in ca.cgjennings.ui.textedit">InputHandler</a></td>
-<td class="colLast">
-<div class="block">Input handlers map the user key strokes into commands.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../../ca/cgjennings/ui/textedit/InterceptSource.html" title="class in ca.cgjennings.ui.textedit">InterceptSource</a></td>
-<td class="colLast">
-<div class="block">An instance of this class is provided as the source to an action listener
- that has been set as a key stroke interceptor with
- <a href="../../../../ca/cgjennings/ui/textedit/InputHandler.html#interceptNextKeyStroke-java.awt.event.ActionListener-"><code>InputHandler.interceptNextKeyStroke(java.awt.event.ActionListener)</code></a>.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../ca/cgjennings/ui/textedit/JSourceCodeEditor.html" title="class in ca.cgjennings.ui.textedit">JSourceCodeEditor</a></td>
-<td class="colLast">
-<div class="block">A text editing component that provides syntax highlighting, macro recording,
- and other features suited for editing formal languages
- (such as programming and markup languages).</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../../ca/cgjennings/ui/textedit/KeywordMap.html" title="class in ca.cgjennings.ui.textedit">KeywordMap</a></td>
-<td class="colLast">
-<div class="block">Maps keywords to <a href="../../../../ca/cgjennings/ui/textedit/TokenType.html" title="enum in ca.cgjennings.ui.textedit">token types</a>.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../ca/cgjennings/ui/textedit/Macro.html" title="class in ca.cgjennings.ui.textedit">Macro</a></td>
-<td class="colLast">
-<div class="block">A macro stores a sequence of editing actions for later playback.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../../ca/cgjennings/ui/textedit/MarginNote.html" title="class in ca.cgjennings.ui.textedit">MarginNote</a></td>
-<td class="colLast">
-<div class="block">Marginalium for a line in an editor.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../ca/cgjennings/ui/textedit/SourceDocument.html" title="class in ca.cgjennings.ui.textedit">SourceDocument</a></td>
-<td class="colLast">
-<div class="block">A document that represents the content of a source file in a
- <a href="../../../../ca/cgjennings/ui/textedit/JSourceCodeEditor.html" title="class in ca.cgjennings.ui.textedit"><code>JSourceCodeEditor</code></a>.</div>
-</td>
-</tr>
-<tr class="rowColor">
 <td class="colFirst"><a href="../../../../ca/cgjennings/ui/textedit/SpellingHighlighter.html" title="class in ca.cgjennings.ui.textedit">SpellingHighlighter</a></td>
 <td class="colLast">
-<div class="block">A highlighter for source code editors that highlights spelling errors
- using a <a href="../../../../ca/cgjennings/spelling/SpellingChecker.html" title="class in ca.cgjennings.spelling"><code>SpellingChecker</code></a>.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../ca/cgjennings/ui/textedit/Token.html" title="class in ca.cgjennings.ui.textedit">Token</a></td>
-<td class="colLast">
-<div class="block">A token describes a span of text with a single <a href="../../../../ca/cgjennings/ui/textedit/TokenType.html" title="enum in ca.cgjennings.ui.textedit"><code>TokenType</code></a>.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../../ca/cgjennings/ui/textedit/Tokenizer.html" title="class in ca.cgjennings.ui.textedit">Tokenizer</a></td>
-<td class="colLast">
-<div class="block">A tokenizer is responsible for breaking the lines of a document into lists of
- <a href="../../../../ca/cgjennings/ui/textedit/Token.html" title="class in ca.cgjennings.ui.textedit"><code>Token</code></a>s.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../ca/cgjennings/ui/textedit/TokenStyle.html" title="class in ca.cgjennings.ui.textedit">TokenStyle</a></td>
-<td class="colLast">
-<div class="block">An immutable description of a visual style associated with a
- <a href="../../../../ca/cgjennings/ui/textedit/TokenType.html" title="enum in ca.cgjennings.ui.textedit"><code>TokenType</code></a>.</div>
-</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li class="blockList">
-<table class="typeSummary" border="0" cellpadding="3" cellspacing="0" summary="Enum Summary table, listing enums, and an explanation">
-<caption><span>Enum Summary</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Enum</th>
-<th class="colLast" scope="col">Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../ca/cgjennings/ui/textedit/TokenType.html" title="enum in ca.cgjennings.ui.textedit">TokenType</a></td>
-<td class="colLast">
-<div class="block">An enumeration of the possible <a href="../../../../ca/cgjennings/ui/textedit/Token.html" title="class in ca.cgjennings.ui.textedit"><code>Token</code></a> types.</div>
-</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li class="blockList">
-<table class="typeSummary" border="0" cellpadding="3" cellspacing="0" summary="Annotation Types Summary table, listing annotation types, and an explanation">
-<caption><span>Annotation Types Summary</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Annotation Type</th>
-<th class="colLast" scope="col">Description</th>
-</tr>
-<tbody>
-<tr class="altColor">
-<td class="colFirst"><a href="../../../../ca/cgjennings/ui/textedit/NoAutoRepeat.html" title="annotation in ca.cgjennings.ui.textedit">NoAutoRepeat</a></td>
-<td class="colLast">
-<div class="block">An annotation that can be applied to an editor command's <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/event/ActionListener.html?is-external=true" title="class or interface in java.awt.event"><code>ActionListener</code></a>
- to indicate that it will take responsibility for repetition.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><a href="../../../../ca/cgjennings/ui/textedit/Unrecordable.html" title="annotation in ca.cgjennings.ui.textedit">Unrecordable</a></td>
-<td class="colLast">
-<div class="block">An annotation that can be applied to an editor command's <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/event/ActionListener.html?is-external=true" title="class or interface in java.awt.event"><code>ActionListener</code></a>
- to indicate that it should not be passed on to a macro recorder.</div>
+<div class="block">A highlighter for source code editors that highlights spelling errors using a
+ <a href="../../../../ca/cgjennings/spelling/SpellingChecker.html" title="class in ca.cgjennings.spelling"><code>SpellingChecker</code></a>.</div>
 </td>
 </tr>
 </tbody>
 </table>
 </li>
 </ul>
-<a name="package.description">
-<!--   -->
-</a>
-<h2 title="Package ca.cgjennings.ui.textedit Description">Package ca.cgjennings.ui.textedit Description</h2>
-<div class="block">This package provides classes that implement a text editing component for
- source code files. The editor supports syntax highlighting, custom editing
- commands and key bindings, custom highlighters and line markers, expandable
- abbreviations, and code completion.</div>
 </div>
 <!-- ======= START OF BOTTOM NAVBAR ====== -->
 <div class="bottomNav"><a name="navbar.bottom">
@@ -308,6 +104,8 @@
 <li class="navBarCell1Rev">Package</li>
 <li>Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

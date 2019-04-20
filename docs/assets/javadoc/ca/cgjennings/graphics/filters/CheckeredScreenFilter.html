@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -122,12 +124,12 @@ var activeTableTab = "activeTableTab";
 extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractRowwiseFilter.html" title="class in ca.cgjennings.graphics.filters">AbstractRowwiseFilter</a></pre>
 <div class="block">A filter that applies a checkerboard pattern to the source image by
  multiplying the alpha channel of alternating pixels by different values.
- pattern. This filter is intended for use with translucent images;
- if the destination image has no alpha channel, then the filter will
- have no effect.
- 
- <p><b>In-place filtering:</b> This class supports in-place filtering
- (the source and destination images may be the same).</div>
+ pattern. This filter is intended for use with translucent images; if the
+ destination image has no alpha channel, then the filter will have no effect.
+
+ <p>
+ <b>In-place filtering:</b> This class supports in-place filtering (the source
+ and destination images may be the same).</div>
 </li>
 </ul>
 </div>
@@ -154,16 +156,16 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractRowwiseFilte
 <tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/CheckeredScreenFilter.html#CheckeredScreenFilter-float-float-">CheckeredScreenFilter</a></span>(float&nbsp;evenAlpha,
                      float&nbsp;oddAlpha)</code>
-<div class="block">Creates a new filter with a size of 1 and the specified even and
- odd alpha multipliers.</div>
+<div class="block">Creates a new filter with a size of 1 and the specified even and odd
+ alpha multipliers.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/CheckeredScreenFilter.html#CheckeredScreenFilter-int-float-float-">CheckeredScreenFilter</a></span>(int&nbsp;checkSize,
                      float&nbsp;evenAlpha,
                      float&nbsp;oddAlpha)</code>
-<div class="block">Creates a new filter with the specified  size of 1 and the specified even and
- odd alpha multipliers.</div>
+<div class="block">Creates a new filter with the specified size of 1 and the specified even
+ and odd alpha multipliers.</div>
 </td>
 </tr>
 </table>
@@ -288,8 +290,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractRowwiseFilte
 <h4>CheckeredScreenFilter</h4>
 <pre>public&nbsp;CheckeredScreenFilter(float&nbsp;evenAlpha,
                              float&nbsp;oddAlpha)</pre>
-<div class="block">Creates a new filter with a size of 1 and the specified even and
- odd alpha multipliers.</div>
+<div class="block">Creates a new filter with a size of 1 and the specified even and odd
+ alpha multipliers.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>evenAlpha</code> - the alpha value for even squares</dd>
@@ -306,8 +308,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractRowwiseFilte
 <pre>public&nbsp;CheckeredScreenFilter(int&nbsp;checkSize,
                              float&nbsp;evenAlpha,
                              float&nbsp;oddAlpha)</pre>
-<div class="block">Creates a new filter with the specified  size of 1 and the specified even and
- odd alpha multipliers.</div>
+<div class="block">Creates a new filter with the specified size of 1 and the specified even
+ and odd alpha multipliers.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>checkSize</code> - the size of the squares in the check pattern, in pixels</dd>
@@ -362,9 +364,9 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractRowwiseFilte
                          int[]&nbsp;argb)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../ca/cgjennings/graphics/filters/AbstractRowwiseFilter.html#filterPixels-int-int:A-">AbstractRowwiseFilter</a></code></span></div>
 <div class="block">This method is called with a block of ARGB values to be filtered.
-  Subclasses should override this method to implement the actual
-  filtering algorithm, replacing each pixel in the supplied array
-  with its filtered value.</div>
+ Subclasses should override this method to implement the actual filtering
+ algorithm, replacing each pixel in the supplied array with its filtered
+ value.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../ca/cgjennings/graphics/filters/AbstractRowwiseFilter.html#filterPixels-int-int:A-">filterPixels</a></code>&nbsp;in class&nbsp;<code><a href="../../../../ca/cgjennings/graphics/filters/AbstractRowwiseFilter.html" title="class in ca.cgjennings.graphics.filters">AbstractRowwiseFilter</a></code></dd>
@@ -434,8 +436,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractRowwiseFilte
 <li class="blockList">
 <h4>setEvenAlpha</h4>
 <pre>public&nbsp;void&nbsp;setEvenAlpha(float&nbsp;evenAlpha)</pre>
-<div class="block">Sets the alpha multiplier for even squares. The existing alpha value
- in even squares will be multiplied by this amount. Typical values are
+<div class="block">Sets the alpha multiplier for even squares. The existing alpha value in
+ even squares will be multiplied by this amount. Typical values are
  between 0 and 1, but values above 1 are allowed.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -450,9 +452,9 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractRowwiseFilte
 <li class="blockList">
 <h4>setOddAlpha</h4>
 <pre>public&nbsp;void&nbsp;setOddAlpha(float&nbsp;oddAlpha)</pre>
-<div class="block">Sets the alpha multiplier for odd squares. The existing alpha value
- in odd squares will be multiplied by this amount. Typical values are
- between 0 and 1, but values above 1 are allowed.</div>
+<div class="block">Sets the alpha multiplier for odd squares. The existing alpha value in
+ odd squares will be multiplied by this amount. Typical values are between
+ 0 and 1, but values above 1 are allowed.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>oddAlpha</code> - the even multiplier</dd>
@@ -479,6 +481,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractRowwiseFilte
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

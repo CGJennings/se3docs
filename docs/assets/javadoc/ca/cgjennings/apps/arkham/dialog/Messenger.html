@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -107,13 +109,13 @@ var activeTableTab = "activeTableTab";
 <pre>public class <span class="typeNameLabel">Messenger</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">The <code>Messenger</code> manages the display of information and error
- messages for top-level windows.
- A queue of messages is maintained for each window. If a message
- is already displayed and a new message is posted, it will be added to a
- queue and shown after the current message and all queued messages have
- been displayed.
- 
- <p>Messages that do not explicitly return a result will return immediately,
+ messages for top-level windows. A queue of messages is maintained for each
+ window. If a message is already displayed and a new message is posted, it
+ will be added to a queue and shown after the current message and all queued
+ messages have been displayed.
+
+ <p>
+ Messages that do not explicitly return a result will return immediately,
  without waiting for the message to be displayed or dismissed.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
@@ -226,13 +228,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>displayErrorMessage</h4>
 <pre>public static&nbsp;void&nbsp;displayErrorMessage(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true" title="class or interface in java.awt">Component</a>&nbsp;parent,
                                        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;message)</pre>
-<div class="block">Displays an error message to the user. An error message is used to
- report that a problem has occurred. (Compare this to
+<div class="block">Displays an error message to the user. An error message is used to report
+ that a problem has occurred. (Compare this to
  <a href="../../../../../ca/cgjennings/apps/arkham/dialog/Messenger.html#displayWarningMessage-java.awt.Component-java.lang.String-"><code>displayWarningMessage(java.awt.Component, java.lang.String)</code></a>.)</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>parent</code> - the component or window that this message relates to; if <code>null</code>,
-     then the main application window will be the parent</dd>
+<dd><code>parent</code> - the component or window that this message relates to; if
+ <code>null</code>, then the main application window will be the parent</dd>
 <dd><code>message</code> - the text of the message</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>message</code> is <code>null</code></dd>
@@ -251,8 +253,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Displays a message to the user.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>parent</code> - the component or window that this message relates to; if <code>null</code>,
-     then the main application window will be the parent</dd>
+<dd><code>parent</code> - the component or window that this message relates to; if
+ <code>null</code>, then the main application window will be the parent</dd>
 <dd><code>icon</code> - an optional icon to display beside the message</dd>
 <dd><code>message</code> - the text of the message</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -273,13 +275,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Displays a message to the user.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>parent</code> - the component or window that this message relates to; if <code>null</code>,
-     then the main application window will be the parent</dd>
+<dd><code>parent</code> - the component or window that this message relates to; if
+ <code>null</code>, then the main application window will be the parent</dd>
 <dd><code>icon</code> - an optional icon to display beside the message</dd>
 <dd><code>message</code> - the text of the message</dd>
 <dd><code>inlineComponents</code> - an array of interface components that will be
-     included as part of the message by stacking them, one per row,
-     under the main message text</dd>
+ included as part of the message by stacking them, one per row, under the
+ main message text</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>message</code> is <code>null</code></dd>
 </dl>
@@ -296,8 +298,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Displays a message to the user.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>parent</code> - the component or window that this message relates to; if <code>null</code>,
-     then the main application window will be the parent</dd>
+<dd><code>parent</code> - the component or window that this message relates to; if
+ <code>null</code>, then the main application window will be the parent</dd>
 <dd><code>message</code> - the text of the message</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>message</code> is <code>null</code></dd>
@@ -316,10 +318,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Displays a message to the user.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>parent</code> - the component or window that this message relates to; if <code>null</code>,
-     then the main application window will be the parent</dd>
-<dd><code>iconResource</code> - an optional image resource to display beside the message;
-     this will be loaded using <a href="../../../../../resources/ResourceKit.html#getIcon-java.lang.String-"><code>ResourceKit.getIcon(java.lang.String)</code></a></dd>
+<dd><code>parent</code> - the component or window that this message relates to; if
+ <code>null</code>, then the main application window will be the parent</dd>
+<dd><code>iconResource</code> - an optional image resource to display beside the
+ message; this will be loaded using
+ <a href="../../../../../resources/ResourceKit.html#getIcon-java.lang.String-"><code>ResourceKit.getIcon(java.lang.String)</code></a></dd>
 <dd><code>message</code> - the text of the message</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>message</code> is <code>null</code></dd>
@@ -340,8 +343,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <a href="../../../../../ca/cgjennings/apps/arkham/dialog/Messenger.html#displayErrorMessage-java.awt.Component-java.lang.String-"><code>displayErrorMessage(java.awt.Component, java.lang.String)</code></a>.)</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>parent</code> - the component or window that this message relates to; if <code>null</code>,
-     then the main application window will be the parent</dd>
+<dd><code>parent</code> - the component or window that this message relates to; if
+ <code>null</code>, then the main application window will be the parent</dd>
 <dd><code>message</code> - the text of the message</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if <code>message</code> is <code>null</code></dd>
@@ -370,14 +373,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>setQueueProcessingEnabled</h4>
 <pre>public static&nbsp;void&nbsp;setQueueProcessingEnabled(boolean&nbsp;enable)</pre>
-<div class="block">Enables or disables message queue processing. While queue processing
- is disabled, messages will continue to be queued but will not be displayed.
+<div class="block">Enables or disables message queue processing. While queue processing is
+ disabled, messages will continue to be queued but will not be displayed.
  When queue processing is reenabled, the display of messages in the queue
  will resume.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>enable</code> - whether queued messages should be displayed (<code>true</code>)
-     or held for future display (<code>false</code>)</dd>
+<dd><code>enable</code> - whether queued messages should be displayed
+ (<code>true</code>) or held for future display (<code>false</code>)</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/dialog/Messenger.html#isQueueProcessingEnabled--"><code>isQueueProcessingEnabled()</code></a></dd>
 </dl>
@@ -403,6 +406,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

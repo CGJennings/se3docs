@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -185,8 +187,8 @@ implements <a href="../../../../../ca/cgjennings/ui/IconProvider.html" title="in
 <tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html#getDescription--">getDescription</a></span>()</code>
-<div class="block">Returns a longer description of the action, suitable for use as a
- tool tip.</div>
+<div class="block">Returns a longer description of the action, suitable for use as a tool
+ tip.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -221,8 +223,8 @@ implements <a href="../../../../../ca/cgjennings/ui/IconProvider.html" title="in
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html#resolveTarget-ca.cgjennings.apps.arkham.project.Project-ca.cgjennings.apps.arkham.project.Task-ca.cgjennings.apps.arkham.project.Member-">resolveTarget</a></span>(<a href="../../../../../ca/cgjennings/apps/arkham/project/Project.html" title="class in ca.cgjennings.apps.arkham.project">Project</a>&nbsp;project,
              <a href="../../../../../ca/cgjennings/apps/arkham/project/Task.html" title="class in ca.cgjennings.apps.arkham.project">Task</a>&nbsp;task,
              <a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;member)</code>
-<div class="block">Returns the member being targeted by action regardless of whether it
- is a project, task, or task member.</div>
+<div class="block">Returns the member being targeted by action regardless of whether it is a
+ project, task, or task member.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
@@ -280,20 +282,21 @@ implements <a href="../../../../../ca/cgjennings/ui/IconProvider.html" title="in
                                   <a href="../../../../../ca/cgjennings/apps/arkham/project/Task.html" title="class in ca.cgjennings.apps.arkham.project">Task</a>&nbsp;task,
                                   <a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;member)</pre>
 <div class="block">Returns <code>true</code> if this action can be performed on the
- specified member of a project, project or a task.
- If the project itself is the target, <code>task</code> and
- <code>member</code> will be <code>null</code>.
- If a task is the target, then <code>member</code> will be null.
- If an error occurs while executing the task, then it is the
- action's responsibility to inform the user.
- This method can return <code>false</code> to indicate that if the
- action is being applied to multiple members, it should stop
- immediately rather than continue to the next member.</div>
+ specified member of a project, project or a task. If the project itself
+ is the target, <code>task</code> and <code>member</code> will be
+ <code>null</code>. If a task is the target, then <code>member</code> will
+ be null. If an error occurs while executing the task, then it is the
+ action's responsibility to inform the user. This method can return
+ <code>false</code> to indicate that if the action is being applied to
+ multiple members, it should stop immediately rather than continue to the
+ next member.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>project</code> - the project that is being acted upon</dd>
-<dd><code>task</code> - the task within the project that is being acted upon; <code>null</code> if acting on a project</dd>
-<dd><code>member</code> - the specific member within the task to act upon; <code>null</code> if this is a project or task</dd>
+<dd><code>task</code> - the task within the project that is being acted upon;
+ <code>null</code> if acting on a project</dd>
+<dd><code>member</code> - the specific member within the task to act upon;
+ <code>null</code> if this is a project or task</dd>
 </dl>
 </li>
 </ul>
@@ -306,15 +309,17 @@ implements <a href="../../../../../ca/cgjennings/ui/IconProvider.html" title="in
 <pre>public&nbsp;boolean&nbsp;appliesToSelection(<a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>[]&nbsp;members)</pre>
 <div class="block">Returns <code>true</code> if this action is applicable to any of the
  specified <a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project"><code>Member</code></a>s. By overriding this, you can modify whether an
- action is listed depending on which other members are selected. For example,
- you could create a command that can only be applied to a singleton selection
- by checking the length of <code>members</code> and returning <code>false</code>
- if it is not 1, and otherwise calling the super implementation.</div>
+ action is listed depending on which other members are selected. For
+ example, you could create a command that can only be applied to a
+ singleton selection by checking the length of <code>members</code> and
+ returning <code>false</code> if it is not 1, and otherwise calling the
+ super implementation.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>members</code> - a list of zero or more members</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> is the action can be applied to at least one member</dd>
+<dd><code>true</code> is the action can be applied to at least one
+ member</dd>
 </dl>
 </li>
 </ul>
@@ -328,9 +333,9 @@ implements <a href="../../../../../ca/cgjennings/ui/IconProvider.html" title="in
                             <a href="../../../../../ca/cgjennings/apps/arkham/project/Task.html" title="class in ca.cgjennings.apps.arkham.project">Task</a>&nbsp;task,
                             <a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;parent)</pre>
 <div class="block">Recursively apply a task action to all of the children of a member that
- that action applies to. The application is depth first---an action
- that would lead to deleting a tree can succeed because the children would
- be deleted first.</div>
+ that action applies to. The application is depth first---an action that
+ would lead to deleting a tree can succeed because the children would be
+ deleted first.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>project</code> - </dd>
@@ -362,8 +367,8 @@ implements <a href="../../../../../ca/cgjennings/ui/IconProvider.html" title="in
 <li class="blockList">
 <h4>getDescription</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getDescription()</pre>
-<div class="block">Returns a longer description of the action, suitable for use as a
- tool tip.</div>
+<div class="block">Returns a longer description of the action, suitable for use as a tool
+ tip.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a long description of the action, or <code>null</code></dd>
@@ -397,7 +402,8 @@ implements <a href="../../../../../ca/cgjennings/ui/IconProvider.html" title="in
 <div class="block">Returns the human-readable name of this action.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the name used to create menu items for this action, localized if possible</dd>
+<dd>the name used to create menu items for this action, localized if
+ possible</dd>
 </dl>
 </li>
 </ul>
@@ -410,20 +416,21 @@ implements <a href="../../../../../ca/cgjennings/ui/IconProvider.html" title="in
 <pre>public abstract&nbsp;boolean&nbsp;perform(<a href="../../../../../ca/cgjennings/apps/arkham/project/Project.html" title="class in ca.cgjennings.apps.arkham.project">Project</a>&nbsp;project,
                                 <a href="../../../../../ca/cgjennings/apps/arkham/project/Task.html" title="class in ca.cgjennings.apps.arkham.project">Task</a>&nbsp;task,
                                 <a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;member)</pre>
-<div class="block">Perform this action on a member of a project, a project or a task.
- If the project itself is the target, <code>task</code> and
- <code>member</code> will be <code>null</code>.
- If a task is the target, then <code>member</code> will be null.
- If an error occurs while executing the task, then it is the
- action's responsibility to inform the user.
- This method can return <code>false</code> to indicate that if the
- action is being applied to multiple members, it should stop
- immediately rather than continue to the next member.</div>
+<div class="block">Perform this action on a member of a project, a project or a task. If the
+ project itself is the target, <code>task</code> and <code>member</code>
+ will be <code>null</code>. If a task is the target, then
+ <code>member</code> will be null. If an error occurs while executing the
+ task, then it is the action's responsibility to inform the user. This
+ method can return <code>false</code> to indicate that if the action is
+ being applied to multiple members, it should stop immediately rather than
+ continue to the next member.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>project</code> - the project that is being acted upon</dd>
-<dd><code>task</code> - the task within the project that is being acted upon; <code>null</code> if acting on a project</dd>
-<dd><code>member</code> - the specific member within the task to act upon; <code>null</code> if this is a project or task</dd>
+<dd><code>task</code> - the task within the project that is being acted upon;
+ <code>null</code> if acting on a project</dd>
+<dd><code>member</code> - the specific member within the task to act upon;
+ <code>null</code> if this is a project or task</dd>
 </dl>
 </li>
 </ul>
@@ -434,17 +441,16 @@ implements <a href="../../../../../ca/cgjennings/ui/IconProvider.html" title="in
 <li class="blockList">
 <h4>performOnSelection</h4>
 <pre>public&nbsp;boolean&nbsp;performOnSelection(<a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>[]&nbsp;members)</pre>
-<div class="block">Applies this action to all of the specified project members.
- By overriding this, you can modify what happens when the user
- tries to initiate this action. For example, you could add
- a verification dialog and call the super implementation only if
- the user verifies the action.</div>
+<div class="block">Applies this action to all of the specified project members. By
+ overriding this, you can modify what happens when the user tries to
+ initiate this action. For example, you could add a verification dialog
+ and call the super implementation only if the user verifies the action.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>members</code> - </dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if and only if the action is successfully applied to all
-     of the members</dd>
+<dd><code>true</code> if and only if the action is successfully
+ applied to all of the members</dd>
 </dl>
 </li>
 </ul>
@@ -457,18 +463,19 @@ implements <a href="../../../../../ca/cgjennings/ui/IconProvider.html" title="in
 <pre>protected final&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;resolveTarget(<a href="../../../../../ca/cgjennings/apps/arkham/project/Project.html" title="class in ca.cgjennings.apps.arkham.project">Project</a>&nbsp;project,
                                      <a href="../../../../../ca/cgjennings/apps/arkham/project/Task.html" title="class in ca.cgjennings.apps.arkham.project">Task</a>&nbsp;task,
                                      <a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;member)</pre>
-<div class="block">Returns the member being targeted by action regardless of whether it
- is a project, task, or task member. If your action can be applied to
- any type of member, you can call this to simplify your handling code.
- It returns the first of <code>member</code>, <code>task</code>,
- or <code>project</code> that is non-<code>null</code>.</div>
+<div class="block">Returns the member being targeted by action regardless of whether it is a
+ project, task, or task member. If your action can be applied to any type
+ of member, you can call this to simplify your handling code. It returns
+ the first of <code>member</code>, <code>task</code>, or
+ <code>project</code> that is non-<code>null</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>project</code> - the project passed in to the action</dd>
 <dd><code>task</code> - the task passed in to the action</dd>
 <dd><code>member</code> - the member passed in to the action</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the member that the parameters refer to, regardless of whether it is a project, task, or task member</dd>
+<dd>the member that the parameters refer to, regardless of whether it
+ is a project, task, or task member</dd>
 </dl>
 </li>
 </ul>
@@ -525,6 +532,8 @@ implements <a href="../../../../../ca/cgjennings/ui/IconProvider.html" title="in
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

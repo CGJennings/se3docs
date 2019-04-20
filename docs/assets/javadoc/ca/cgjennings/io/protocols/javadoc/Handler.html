@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -116,32 +118,39 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">Handler</span>
 extends <a href="../../../../../ca/cgjennings/io/protocols/MappedURLHandler.html" title="class in ca.cgjennings.io.protocols">MappedURLHandler</a></pre>
-<div class="block">A URL protocol handler for the <code>javadoc:</code> protocol, which
- accesses documentation pages for main application classes. To function
- correctly, the <a href="../../../../../resources/CoreComponents.html#API_DOCUMENTATION"><code>API documentation core library</code></a>
- must be installed. The protocol can be used to access documentation for both
- the public portion of the Strange Eons API as well as the Java SE API.
- Typically, the Java SE API that is returned is for the oldest version of Java
- currently supported by the application.
+<div class="block">A URL protocol handler for the <code>javadoc:</code> protocol, which accesses
+ documentation pages for main application classes. To function correctly, the
+ <a href="../../../../../resources/CoreComponents.html#API_DOCUMENTATION"><code>API documentation core library</code></a> must
+ be installed. The protocol can be used to access documentation for both the
+ public portion of the Strange Eons API as well as the Java SE API. Typically,
+ the Java SE API that is returned is for the oldest version of Java currently
+ supported by the application.
 
- <p>URLs consist of these segments (where [...] indicates an optional segment):<br>
+ <p>
+ URLs consist of these segments (where [...] indicates an optional
+ segment):<br>
  <code>javadoc: [<i>package</i>/]* [<i>Class</i>] [#<i>name</i>]</code><br>
  Where:<br>
  <dl>
-  <dt>[//]<dd> is optional, but makes it easier to distinguish URLs from files
-          in user-supplied strings.
-  <dt>[package]<dd> consists of 0 or more package names separated by slashes
-  <dt>[Class]<dd> is the name of the class whose documentation should be returned;
-          if left off, then the package summary for the specified package is returned
-  <dt>[#name]<dd> if present, the name of a reference to scroll to within the document
+ <dt>[//]<dd> is optional, but makes it easier to distinguish URLs from files
+ in user-supplied strings.
+ <dt>[package]<dd> consists of 0 or more package names separated by slashes
+ <dt>[Class]<dd> is the name of the class whose documentation should be
+ returned; if left off, then the package summary for the specified package is
+ returned
+ <dt>[#name]<dd> if present, the name of a reference to scroll to within the
+ document
  </dl>
 
- <p>For example, the documentation for the class <code>Member</code> in the
- package <code>ca.cgjennings.apps.arkham.project</code> can be specified using:<br>
+ <p>
+ For example, the documentation for the class <code>Member</code> in the
+ package <code>ca.cgjennings.apps.arkham.project</code> can be specified
+ using:<br>
  <code><a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project"><code>javadoc:ca/cgjennings/apps/arkham/project/Member</code></a></code>
 
- <p><b>Note:</b> the unusual class name is required for this class to be used
- by the default protocol handler factory.</div>
+ <p>
+ <b>Note:</b> the unusual class name is required for this class to be used by
+ the default protocol handler factory.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -209,8 +218,8 @@ extends <a href="../../../../../ca/cgjennings/io/protocols/MappedURLHandler.html
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/io/protocols/javadoc/Handler.html#getJavaAPIBaseLocation--">getJavaAPIBaseLocation</a></span>()</code>
-<div class="block">Returns a base URL for looking up Java API documentation, derived
- from the current user settings.</div>
+<div class="block">Returns a base URL for looking up Java API documentation, derived from
+ the current user settings.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -339,8 +348,8 @@ extends <a href="../../../../../ca/cgjennings/io/protocols/MappedURLHandler.html
 <li class="blockList">
 <h4>getJavaAPIBaseLocation</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getJavaAPIBaseLocation()</pre>
-<div class="block">Returns a base URL for looking up Java API documentation, derived
- from the current user settings.</div>
+<div class="block">Returns a base URL for looking up Java API documentation, derived from
+ the current user settings.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the base URL for Java API document lookup</dd>
@@ -375,8 +384,8 @@ extends <a href="../../../../../ca/cgjennings/io/protocols/MappedURLHandler.html
                                       <a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a>&nbsp;mappedURL)
                                throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../ca/cgjennings/io/protocols/MappedURLHandler.html#mapConnection-java.net.URL-java.net.URL-">MappedURLHandler</a></code></span></div>
-<div class="block">Returns a <code>URLConnection</code> for the mapped URL.
- The base class returns <code>mappedURL.openConnection()</code>.</div>
+<div class="block">Returns a <code>URLConnection</code> for the mapped URL. The base class
+ returns <code>mappedURL.openConnection()</code>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/io/protocols/MappedURLHandler.html#mapConnection-java.net.URL-java.net.URL-">mapConnection</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/io/protocols/MappedURLHandler.html" title="class in ca.cgjennings.io.protocols">MappedURLHandler</a></code></dd>
@@ -386,7 +395,8 @@ extends <a href="../../../../../ca/cgjennings/io/protocols/MappedURLHandler.html
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a connection for the URL</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if an I/O error occurs or the mapped URL is <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if an I/O error occurs or the mapped URL is
+ <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -399,15 +409,16 @@ extends <a href="../../../../../ca/cgjennings/io/protocols/MappedURLHandler.html
 <pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a>&nbsp;mapURL(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a>&nbsp;sourceURL)
               throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../ca/cgjennings/io/protocols/MappedURLHandler.html#mapURL-java.net.URL-">MappedURLHandler</a></code></span></div>
-<div class="block">Maps a URL in the handled protocol to one of the underlying URLs.
- The base class returns the original URL.</div>
+<div class="block">Maps a URL in the handled protocol to one of the underlying URLs. The
+ base class returns the original URL.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/io/protocols/MappedURLHandler.html#mapURL-java.net.URL-">mapURL</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/io/protocols/MappedURLHandler.html" title="class in ca.cgjennings.io.protocols">MappedURLHandler</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>sourceURL</code> - a URL in the protocol handled by this handler</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a URL using another protocol that maps to the same resource as this handler, or <code>null</code></dd>
+<dd>a URL using another protocol that maps to the same resource as
+ this handler, or <code>null</code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if an I/O error occurs while composing the new URL</dd>
 </dl>
@@ -473,6 +484,8 @@ extends <a href="../../../../../ca/cgjennings/io/protocols/MappedURLHandler.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

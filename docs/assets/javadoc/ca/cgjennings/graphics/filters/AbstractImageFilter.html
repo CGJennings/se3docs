@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -118,26 +120,28 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Buf
 <div class="block">An abstract base class for filtering images. While <code>BufferedImageOp</code>s
  are generally designed to operate on images that use any storage format or
  colour model, <code>AbstractImageFilter</code> is optimized to work with
- 32-bit ARGB image data (<code>BufferedImage.TYPE_INT_ARGB</code>).
- Images stored in other formats will typically be converted to and from ARGB
- data as necessary. This greatly simplifies the task of writing an image filter,
+ 32-bit ARGB image data (<code>BufferedImage.TYPE_INT_ARGB</code>). Images
+ stored in other formats will typically be converted to and from ARGB data as
+ necessary. This greatly simplifies the task of writing an image filter,
  though at the cost of conversion (when required).
 
- <p>This base class provides default implementations for many methods of
- <code>BufferedImageOp</code>.
- These default implementations are suitable for any operation that does not change
- the shape or size of the image.
- Most concrete filters will not subclass this base class directly, but will
- instead subclass one of <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFilter.html" title="class in ca.cgjennings.graphics.filters"><code>AbstractPixelwiseFilter</code></a>,
+ <p>
+ This base class provides default implementations for many methods of
+ <code>BufferedImageOp</code>. These default implementations are suitable for any
+ operation that does not change the shape or size of the image. Most concrete
+ filters will not subclass this base class directly, but will instead subclass
+ one of <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFilter.html" title="class in ca.cgjennings.graphics.filters"><code>AbstractPixelwiseFilter</code></a>,
  <a href="../../../../ca/cgjennings/graphics/filters/AbstractRowwiseFilter.html" title="class in ca.cgjennings.graphics.filters"><code>AbstractRowwiseFilter</code></a>, or <a href="../../../../ca/cgjennings/graphics/filters/AbstractImagewiseFilter.html" title="class in ca.cgjennings.graphics.filters"><code>AbstractImagewiseFilter</code></a>.
 
- <p><b>Performance note:</b> As a side effect of automatic conversion,
- image types other than <code>TYPE_INT_ARGB></code> and <code>TYPE_INT_RGB></code>
+ <p>
+ <b>Performance note:</b> As a side effect of automatic conversion, image
+ types other than <code>TYPE_INT_ARGB</code> and <code>TYPE_INT_RGB</code>
  will become <i>unmanaged images</i> as a result of the filtering process.
  Unmanaged images cannot be hardware accelerated, and thus are typically much
  slower to draw. The best way to maximize performance is to ensure that all
- images are in one of the optimal formats. If you are unsure about a particular
- image, use <a href="../../../../ca/cgjennings/graphics/ImageUtilities.html#ensureIntRGBFormat-java.awt.image.BufferedImage-"><code>ImageUtilities.ensureIntRGBFormat(java.awt.image.BufferedImage)</code></a>.</div>
+ images are in one of the optimal formats. If you are unsure about a
+ particular image, use
+ <a href="../../../../ca/cgjennings/graphics/ImageUtilities.html#ensureIntRGBFormat-java.awt.image.BufferedImage-"><code>ImageUtilities.ensureIntRGBFormat(java.awt.image.BufferedImage)</code></a>.</div>
 </li>
 </ul>
 </div>
@@ -176,8 +180,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Buf
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.html#clamp-float-">clamp</a></span>(float&nbsp;pixelByte)</code>
-<div class="block">Clamps an input pixel value to a maximum of 255, converting it
- from float to int in the process.</div>
+<div class="block">Clamps an input pixel value to a maximum of 255, converting it from float
+ to int in the process.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -232,8 +236,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Buf
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>static float</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.html#fR-int-">fR</a></span>(int&nbsp;argb)</code>
-<div class="block">Returns the red component of a packed ARGB pixel as a float value
- between 0 and 1.</div>
+<div class="block">Returns the red component of a packed ARGB pixel as a float value between
+ 0 and 1.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
@@ -288,29 +292,29 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Buf
 <tr id="i15" class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.html#iA-float-">iA</a></span>(float&nbsp;a)</code>
-<div class="block">Converts a floating point alpha value between 0 and 1 to a packed
- ARGB alpha value.</div>
+<div class="block">Converts a floating point alpha value between 0 and 1 to a packed ARGB
+ alpha value.</div>
 </td>
 </tr>
 <tr id="i16" class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.html#iB-float-">iB</a></span>(float&nbsp;b)</code>
-<div class="block">Converts a floating point blue value between 0 and 1 to a packed
- ARGB blue value.</div>
+<div class="block">Converts a floating point blue value between 0 and 1 to a packed ARGB
+ blue value.</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.html#iG-float-">iG</a></span>(float&nbsp;g)</code>
-<div class="block">Converts a floating point green value between 0 and 1 to a packed
- ARGB green value.</div>
+<div class="block">Converts a floating point green value between 0 and 1 to a packed ARGB
+ green value.</div>
 </td>
 </tr>
 <tr id="i18" class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.html#iR-float-">iR</a></span>(float&nbsp;r)</code>
-<div class="block">Converts a floating point red value between 0 and 1 to a packed
- ARGB red value.</div>
+<div class="block">Converts a floating point red value between 0 and 1 to a packed ARGB red
+ value.</div>
 </td>
 </tr>
 <tr id="i19" class="rowColor">
@@ -395,8 +399,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Buf
 <li class="blockList">
 <h4>clamp</h4>
 <pre>public static&nbsp;int&nbsp;clamp(float&nbsp;pixelByte)</pre>
-<div class="block">Clamps an input pixel value to a maximum of 255, converting it
- from float to int in the process.</div>
+<div class="block">Clamps an input pixel value to a maximum of 255, converting it from float
+ to int in the process.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>pixelByte</code> - the pixel value</dd>
@@ -492,7 +496,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Buf
 <div class="block">Returns the alpha component of a packed ARGB pixel as a float value
  between 0 and 1. This value is equivalent to the following calculation,
  (though possibly more efficient):
- <pre>(float) ((argb >> 24) & 0xff) / 255f</pre></div>
+ <pre>(float) ((argb &gt;&gt; 24) &amp; 0xff) / 255f</pre></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>argb</code> - the 32-bit pixel value</dd>
@@ -511,7 +515,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Buf
 <div class="block">Returns the blue component of a packed ARGB pixel as a float value
  between 0 and 1. This value is equivalent to the following calculation,
  (though possibly more efficient):
- <pre>(float) (argb & 0xff) / 255f</pre></div>
+ <pre>(float) (argb &amp; 0xff) / 255f</pre></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>argb</code> - the 32-bit pixel value</dd>
@@ -530,7 +534,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Buf
 <div class="block">Returns the green component of a packed ARGB pixel as a float value
  between 0 and 1. This value is equivalent to the following calculation,
  (though possibly more efficient):
- <pre>(float) ((argb >> 8) & 0xff) / 255f</pre></div>
+ <pre>(float) ((argb &gt;&gt; 8) &amp; 0xff) / 255f</pre></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>argb</code> - the 32-bit pixel value</dd>
@@ -546,10 +550,10 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Buf
 <li class="blockList">
 <h4>fR</h4>
 <pre>public static&nbsp;float&nbsp;fR(int&nbsp;argb)</pre>
-<div class="block">Returns the red component of a packed ARGB pixel as a float value
- between 0 and 1. This value is equivalent to the following calculation,
- (though possibly more efficient):
- <pre>(float) ((argb >> 16) & 0xff) / 255f</pre></div>
+<div class="block">Returns the red component of a packed ARGB pixel as a float value between
+ 0 and 1. This value is equivalent to the following calculation, (though
+ possibly more efficient):
+ <pre>(float) ((argb &gt;&gt; 16) &amp; 0xff) / 255f</pre></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>argb</code> - the 32-bit pixel value</dd>
@@ -566,9 +570,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Buf
 <h4>getARGB</h4>
 <pre>public static&nbsp;int[]&nbsp;getARGB(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;image,
                             int[]&nbsp;pixels)</pre>
-<div class="block">Stores the ARGB pixel data for an entire image in an array.
- The data are converted from the source format, if required.
- This method may perform the copying in parallel depending on image size.</div>
+<div class="block">Stores the ARGB pixel data for an entire image in an array. The data are
+ converted from the source format, if required. This method may perform
+ the copying in parallel depending on image size.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>image</code> - the image to obtain a pixel array for</dd>
@@ -588,8 +592,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Buf
                             int&nbsp;width,
                             int&nbsp;height,
                             int[]&nbsp;pixels)</pre>
-<div class="block">Fetches pixel data from an image in ARGB format.
- The data are converted from the source format, if required.</div>
+<div class="block">Fetches pixel data from an image in ARGB format. The data are converted
+ from the source format, if required.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>image</code> - the image to get pixels from</dd>
@@ -615,9 +619,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Buf
                                     int&nbsp;width,
                                     int&nbsp;height,
                                     int[]&nbsp;pixels)</pre>
-<div class="block">Fetches pixel data from an image in ARGB format.
- The data are converted from the source format, if required.
- This method does not perform parallel processing.</div>
+<div class="block">Fetches pixel data from an image in ARGB format. The data are converted
+ from the source format, if required. This method does not perform
+ parallel processing.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>image</code> - the image to get pixels from</dd>
@@ -643,8 +647,10 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Buf
  image is incompatible with the types of images allowed
  by the class implementing this filter.
 
- <p>The base implementation returns the bounds of the image in image space;
- that is, the rectangle defined by <code>0, 0, source.getWidth(), source.getHeight()</code>.</div>
+ <p>
+ The base implementation returns the bounds of the image in image space;
+ that is, the rectangle defined by
+ <code>0, 0, source.getWidth(), source.getHeight()</code>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImageOp.html?is-external=true#getBounds2D-java.awt.image.BufferedImage-" title="class or interface in java.awt.image">getBounds2D</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImageOp.html?is-external=true" title="class or interface in java.awt.image">BufferedImageOp</a></code></dd>
@@ -668,7 +674,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Buf
  point in the source image.  If <CODE>dstPt</CODE> is specified, it
  is used to hold the return value.
 
- <p>The base implementation returns a copy of the original point.</div>
+ <p>
+ The base implementation returns a copy of the original point.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImageOp.html?is-external=true#getPoint2D-java.awt.geom.Point2D-java.awt.geom.Point2D-" title="class or interface in java.awt.image">getPoint2D</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImageOp.html?is-external=true" title="class or interface in java.awt.image">BufferedImageOp</a></code></dd>
@@ -691,7 +698,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Buf
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/RenderingHints.html?is-external=true" title="class or interface in java.awt">RenderingHints</a>&nbsp;getRenderingHints()</pre>
 <div class="block">Returns the rendering hints for this operation.
 
- <p>The base implementation returns <code>null</code>.</div>
+ <p>
+ The base implementation returns <code>null</code>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImageOp.html?is-external=true#getRenderingHints--" title="class or interface in java.awt.image">getRenderingHints</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImageOp.html?is-external=true" title="class or interface in java.awt.image">BufferedImageOp</a></code></dd>
@@ -709,9 +717,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Buf
 <li class="blockList">
 <h4>iA</h4>
 <pre>public static&nbsp;int&nbsp;iA(float&nbsp;a)</pre>
-<div class="block">Converts a floating point alpha value between 0 and 1 to a packed
- ARGB alpha value. (The value is clamped to the range 0..255 and
- shifted left 24 bits.)</div>
+<div class="block">Converts a floating point alpha value between 0 and 1 to a packed ARGB
+ alpha value. (The value is clamped to the range 0..255 and shifted left
+ 24 bits.)</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>a</code> - the alpha component from 0 to 1</dd>
@@ -727,8 +735,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Buf
 <li class="blockList">
 <h4>iB</h4>
 <pre>public static&nbsp;int&nbsp;iB(float&nbsp;b)</pre>
-<div class="block">Converts a floating point blue value between 0 and 1 to a packed
- ARGB blue value. (The value is clamped to the range 0..255.)</div>
+<div class="block">Converts a floating point blue value between 0 and 1 to a packed ARGB
+ blue value. (The value is clamped to the range 0..255.)</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>b</code> - the blue component from 0 to 1</dd>
@@ -744,9 +752,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Buf
 <li class="blockList">
 <h4>iG</h4>
 <pre>public static&nbsp;int&nbsp;iG(float&nbsp;g)</pre>
-<div class="block">Converts a floating point green value between 0 and 1 to a packed
- ARGB green value. (The value is clamped to the range 0..255 and
- shifted left 8 bits.)</div>
+<div class="block">Converts a floating point green value between 0 and 1 to a packed ARGB
+ green value. (The value is clamped to the range 0..255 and shifted left 8
+ bits.)</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>g</code> - the green component from 0 to 1</dd>
@@ -762,9 +770,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Buf
 <li class="blockList">
 <h4>iR</h4>
 <pre>public static&nbsp;int&nbsp;iR(float&nbsp;r)</pre>
-<div class="block">Converts a floating point red value between 0 and 1 to a packed
- ARGB red value. (The value is clamped to the range 0..255 and
- shifted left 16 bits.)</div>
+<div class="block">Converts a floating point red value between 0 and 1 to a packed ARGB red
+ value. (The value is clamped to the range 0..255 and shifted left 16
+ bits.)</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>r</code> - the red component from 0 to 1</dd>
@@ -781,9 +789,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Buf
 <h4>setARGB</h4>
 <pre>public static&nbsp;void&nbsp;setARGB(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;image,
                            int[]&nbsp;pixels)</pre>
-<div class="block">Replaces the data in an image with pixel values from an array.
- The data are converted into the destination format, if required.
- This method may perform the copying in parallel depending on image size.</div>
+<div class="block">Replaces the data in an image with pixel values from an array. The data
+ are converted into the destination format, if required. This method may
+ perform the copying in parallel depending on image size.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>image</code> - the image to set pixels on</dd>
@@ -803,9 +811,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Buf
                            int&nbsp;width,
                            int&nbsp;height,
                            int[]&nbsp;pixels)</pre>
-<div class="block">Stores ARGB pixel data in an image.
- The data are converted into the destination format, if required.
- This method may perform parallel processing.</div>
+<div class="block">Stores ARGB pixel data in an image. The data are converted into the
+ destination format, if required. This method may perform parallel
+ processing.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>image</code> - the image to set pixels on</dd>
@@ -829,9 +837,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Buf
                                    int&nbsp;width,
                                    int&nbsp;height,
                                    int[]&nbsp;pixels)</pre>
-<div class="block">Stores ARGB pixel data in an image.
- The data are converted into the destination format, if required.
- This method does not perform parallel processing.</div>
+<div class="block">Stores ARGB pixel data in an image. The data are converted into the
+ destination format, if required. This method does not perform parallel
+ processing.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>image</code> - the image to set pixels on</dd>
@@ -863,6 +871,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Buf
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

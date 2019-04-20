@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -125,14 +127,14 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">BrightnessContrastFilter</span>
 extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractFunctionFilter.html" title="class in ca.cgjennings.graphics.filters">AbstractFunctionFilter</a></pre>
-<div class="block">An image filter that adjusts the brightness and contrast of an image.
- The brightness and contrast adjustments are specified as
- values in the range -1 to +1 (inclusive). A value of 0 indicates no change,
- while values greater or less than 0 increase or decrease (respectively) the
- brightness or contrast.
- 
- <p><b>In-place filtering:</b> This class supports in-place filtering
- (the source and destination images may be the same).</div>
+<div class="block">An image filter that adjusts the brightness and contrast of an image. The
+ brightness and contrast adjustments are specified as values in the range -1
+ to +1 (inclusive). A value of 0 indicates no change, while values greater or
+ less than 0 increase or decrease (respectively) the brightness or contrast.
+
+ <p>
+ <b>In-place filtering:</b> This class supports in-place filtering (the source
+ and destination images may be the same).</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -171,14 +173,15 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractFunctionFilt
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/BrightnessContrastFilter.html#BrightnessContrastFilter--">BrightnessContrastFilter</a></span>()</code>
-<div class="block">Creates a new filter with default brightness and contrast settings
- of 0, resulting in no change.</div>
+<div class="block">Creates a new filter with default brightness and contrast settings of 0,
+ resulting in no change.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/BrightnessContrastFilter.html#BrightnessContrastFilter-double-double-">BrightnessContrastFilter</a></span>(double&nbsp;brightness,
                         double&nbsp;contrast)</code>
-<div class="block">Creates a new filter with the requested brightness and contrast adjustments.</div>
+<div class="block">Creates a new filter with the requested brightness and contrast
+ adjustments.</div>
 </td>
 </tr>
 </table>
@@ -205,19 +208,22 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractFunctionFilt
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/BrightnessContrastFilter.html#getBrightness--">getBrightness</a></span>()</code>
-<div class="block">Returns the current brightness adjustment setting, between -1 and 1 inclusive.</div>
+<div class="block">Returns the current brightness adjustment setting, between -1 and 1
+ inclusive.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/BrightnessContrastFilter.html#getContrast--">getContrast</a></span>()</code>
-<div class="block">Returns the current contrast adjustment setting, between -1 and 1 inclusive.</div>
+<div class="block">Returns the current contrast adjustment setting, between -1 and 1
+ inclusive.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/BrightnessContrastFilter.html#setBrightness-double-">setBrightness</a></span>(double&nbsp;brightness)</code>
-<div class="block">Sets the current brightness adjustment setting, between -1 and 1 inclusive.</div>
+<div class="block">Sets the current brightness adjustment setting, between -1 and 1
+ inclusive.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -276,8 +282,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractFunctionFilt
 <li class="blockList">
 <h4>BrightnessContrastFilter</h4>
 <pre>public&nbsp;BrightnessContrastFilter()</pre>
-<div class="block">Creates a new filter with default brightness and contrast settings
- of 0, resulting in no change.</div>
+<div class="block">Creates a new filter with default brightness and contrast settings of 0,
+ resulting in no change.</div>
 </li>
 </ul>
 <a name="BrightnessContrastFilter-double-double-">
@@ -288,14 +294,15 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractFunctionFilt
 <h4>BrightnessContrastFilter</h4>
 <pre>public&nbsp;BrightnessContrastFilter(double&nbsp;brightness,
                                 double&nbsp;contrast)</pre>
-<div class="block">Creates a new filter with the requested brightness and contrast adjustments.</div>
+<div class="block">Creates a new filter with the requested brightness and contrast
+ adjustments.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>brightness</code> - the brightness adjustment factor to apply</dd>
 <dd><code>contrast</code> - the contrast adjustment factor to apply</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>brightness</code> or <code>contrast</code>
-         are not in the range -1 to 1 inclusive</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>brightness</code> or
+ <code>contrast</code> are not in the range -1 to 1 inclusive</dd>
 </dl>
 </li>
 </ul>
@@ -314,8 +321,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractFunctionFilt
 <li class="blockList">
 <h4>f</h4>
 <pre>public&nbsp;double&nbsp;f(double&nbsp;x)</pre>
-<div class="block">A transfer function for the current brightness and contrast settings.
- See <a href="../../../../ca/cgjennings/graphics/filters/AbstractFunctionFilter.html#f-double-"><code>AbstractFunctionFilter.f(double)</code></a>.</div>
+<div class="block">A transfer function for the current brightness and contrast settings. See
+ <a href="../../../../ca/cgjennings/graphics/filters/AbstractFunctionFilter.html#f-double-"><code>AbstractFunctionFilter.f(double)</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../ca/cgjennings/math/Fn.html#f-double-">f</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../ca/cgjennings/math/Fn.html" title="interface in ca.cgjennings.math">Fn</a></code></dd>
@@ -324,7 +331,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractFunctionFilt
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>x</code> - the input value</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the output value after applying the brightness and contrast adjustment</dd>
+<dd>the output value after applying the brightness and contrast
+ adjustment</dd>
 </dl>
 </li>
 </ul>
@@ -335,7 +343,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractFunctionFilt
 <li class="blockList">
 <h4>getBrightness</h4>
 <pre>public&nbsp;double&nbsp;getBrightness()</pre>
-<div class="block">Returns the current brightness adjustment setting, between -1 and 1 inclusive.</div>
+<div class="block">Returns the current brightness adjustment setting, between -1 and 1
+ inclusive.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the brightness adjustment setting</dd>
@@ -349,7 +358,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractFunctionFilt
 <li class="blockList">
 <h4>getContrast</h4>
 <pre>public&nbsp;double&nbsp;getContrast()</pre>
-<div class="block">Returns the current contrast adjustment setting, between -1 and 1 inclusive.</div>
+<div class="block">Returns the current contrast adjustment setting, between -1 and 1
+ inclusive.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the contrast adjustment setting</dd>
@@ -363,9 +373,9 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractFunctionFilt
 <li class="blockList">
 <h4>setBrightness</h4>
 <pre>public&nbsp;void&nbsp;setBrightness(double&nbsp;brightness)</pre>
-<div class="block">Sets the current brightness adjustment setting, between -1 and 1 inclusive.
- A value of 0 results in no brightness change, while negative and
- positive values decrease and increase brightness, respectively.</div>
+<div class="block">Sets the current brightness adjustment setting, between -1 and 1
+ inclusive. A value of 0 results in no brightness change, while negative
+ and positive values decrease and increase brightness, respectively.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>brightness</code> - the brightness adjustment to apply to filtered images</dd>
@@ -380,8 +390,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractFunctionFilt
 <h4>setContrast</h4>
 <pre>public&nbsp;void&nbsp;setContrast(double&nbsp;contrast)</pre>
 <div class="block">Sets the current contrast adjustment setting, between -1 and 1 inclusive.
- A value of 0 results in no contrast change, while negative and
- positive values decrease and increase contrast, respectively.</div>
+ A value of 0 results in no contrast change, while negative and positive
+ values decrease and increase contrast, respectively.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>contrast</code> - the contrast adjustment to apply to filtered images</dd>
@@ -408,6 +418,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractFunctionFilt
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

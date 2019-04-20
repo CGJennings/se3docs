@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -120,12 +122,13 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">StencilFilter</span>
 extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractRowwiseFilter.html" title="class in ca.cgjennings.graphics.filters">AbstractRowwiseFilter</a></pre>
-<div class="block">Set the alpha channel of an image using the pixels of another image as a stencil.
- The same effect can be achieved with a composite, but the filter is optimized
- for the case where the stencil image will be reused multiple times.
- 
- <p><b>In-place filtering:</b> This class supports in-place filtering
- (the source and destination images may be the same).</div>
+<div class="block">Set the alpha channel of an image using the pixels of another image as a
+ stencil. The same effect can be achieved with a composite, but the filter is
+ optimized for the case where the stencil image will be reused multiple times.
+
+ <p>
+ <b>In-place filtering:</b> This class supports in-place filtering (the source
+ and destination images may be the same).</div>
 </li>
 </ul>
 </div>
@@ -145,8 +148,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractRowwiseFilte
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/StencilFilter.html#StencilFilter--">StencilFilter</a></span>()</code>
-<div class="block">Creates a new filter with a transparent empty 1 pixel by 1 pixel image
- as the stencil.</div>
+<div class="block">Creates a new filter with a transparent empty 1 pixel by 1 pixel image as
+ the stencil.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -187,8 +190,9 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractRowwiseFilte
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/StencilFilter.html#isAlphaReplaceMode--">isAlphaReplaceMode</a></span>()</code>
-<div class="block">Returns whether the stencil's alpha values are copied over (<code>true</code>),
- or blended with the source image (<code>false</code>).</div>
+<div class="block">Returns whether the stencil's alpha values are copied over
+ (<code>true</code>), or blended with the source image
+ (<code>false</code>).</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -247,8 +251,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractRowwiseFilte
 <li class="blockList">
 <h4>StencilFilter</h4>
 <pre>public&nbsp;StencilFilter()</pre>
-<div class="block">Creates a new filter with a transparent empty 1 pixel by 1 pixel image
- as the stencil.</div>
+<div class="block">Creates a new filter with a transparent empty 1 pixel by 1 pixel image as
+ the stencil.</div>
 </li>
 </ul>
 <a name="StencilFilter-java.awt.image.BufferedImage-">
@@ -261,7 +265,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractRowwiseFilte
 <div class="block">Creates a new stencil filter with the specified stencil image.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>stencil</code> - the stencil image whose alpha channel will mask the source image</dd>
+<dd><code>stencil</code> - the stencil image whose alpha channel will mask the source
+ image</dd>
 </dl>
 </li>
 </ul>
@@ -316,9 +321,9 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractRowwiseFilte
                          int[]&nbsp;argb)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../ca/cgjennings/graphics/filters/AbstractRowwiseFilter.html#filterPixels-int-int:A-">AbstractRowwiseFilter</a></code></span></div>
 <div class="block">This method is called with a block of ARGB values to be filtered.
-  Subclasses should override this method to implement the actual
-  filtering algorithm, replacing each pixel in the supplied array
-  with its filtered value.</div>
+ Subclasses should override this method to implement the actual filtering
+ algorithm, replacing each pixel in the supplied array with its filtered
+ value.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../ca/cgjennings/graphics/filters/AbstractRowwiseFilter.html#filterPixels-int-int:A-">filterPixels</a></code>&nbsp;in class&nbsp;<code><a href="../../../../ca/cgjennings/graphics/filters/AbstractRowwiseFilter.html" title="class in ca.cgjennings.graphics.filters">AbstractRowwiseFilter</a></code></dd>
@@ -332,13 +337,14 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractRowwiseFilte
 <li class="blockList">
 <h4>isAlphaReplaceMode</h4>
 <pre>public&nbsp;boolean&nbsp;isAlphaReplaceMode()</pre>
-<div class="block">Returns whether the stencil's alpha values are copied over (<code>true</code>),
- or blended with the source image (<code>false</code>).</div>
+<div class="block">Returns whether the stencil's alpha values are copied over
+ (<code>true</code>), or blended with the source image
+ (<code>false</code>).</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the stencil's alpha values should
-     simply replace the alpha values in the source; <code>false</code> if
-     the alpha values should be multiplied</dd>
+<dd><code>true</code> if the stencil's alpha values should simply
+ replace the alpha values in the source; <code>false</code> if the alpha
+ values should be multiplied</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../ca/cgjennings/graphics/filters/StencilFilter.html#setAlphaReplaceMode-boolean-"><code>setAlphaReplaceMode(boolean)</code></a></dd>
 </dl>
@@ -353,14 +359,14 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractRowwiseFilte
 <pre>public&nbsp;void&nbsp;setAlphaReplaceMode(boolean&nbsp;replaceMode)</pre>
 <div class="block">Sets whether the stencil is applied in alpha replace mode, in which the
  output image's alpha channel is copied unmodified from the stencil image.
- This is the default. The alternative, when this is set to <code>false</code>,
- is that the alpha values from the source and stencil image are blended by
- multiplying them together.</div>
+ This is the default. The alternative, when this is set to
+ <code>false</code>, is that the alpha values from the source and stencil
+ image are blended by multiplying them together.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>replaceMode</code> - <code>true</code> if the stencil's alpha values should
-     simply replace the alpha values in the source; <code>false</code> if
-     the alpha values should be multiplied</dd>
+ simply replace the alpha values in the source; <code>false</code> if the
+ alpha values should be multiplied</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../ca/cgjennings/graphics/filters/StencilFilter.html#isAlphaReplaceMode--"><code>isAlphaReplaceMode()</code></a></dd>
 </dl>
@@ -378,7 +384,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractRowwiseFilte
  returns will not affect the behaviour of the stencil.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>stencil</code> - the stencil image whose alpha channel will mask the source image</dd>
+<dd><code>stencil</code> - the stencil image whose alpha channel will mask the source
+ image</dd>
 </dl>
 </li>
 </ul>
@@ -402,6 +409,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractRowwiseFilte
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

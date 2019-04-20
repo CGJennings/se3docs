@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -95,7 +97,7 @@ var activeTableTab = "activeTableTab";
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html" title="class in ca.cgjennings.ui.textedit.completion">ca.cgjennings.ui.textedit.completion.DefaultCNode</a>&lt;<a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.html" title="class in ca.cgjennings.ui.textedit.completion">APINode</a>&gt;</li>
+<li>ca.cgjennings.ui.textedit.completion.DefaultCNode&lt;<a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.html" title="class in ca.cgjennings.ui.textedit.completion">APINode</a>&gt;</li>
 <li>
 <ul class="inheritance">
 <li>ca.cgjennings.ui.textedit.completion.APINode</li>
@@ -109,7 +111,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../ca/cgjennings/ui/textedit/completion/CNode.html" title="interface in ca.cgjennings.ui.textedit.completion">CNode</a></dd>
+<dd>ca.cgjennings.ui.textedit.completion.CNode</dd>
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
@@ -118,7 +120,7 @@ var activeTableTab = "activeTableTab";
 <hr>
 <br>
 <pre>public abstract class <span class="typeNameLabel">APINode</span>
-extends <a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html" title="class in ca.cgjennings.ui.textedit.completion">DefaultCNode</a>&lt;<a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.html" title="class in ca.cgjennings.ui.textedit.completion">APINode</a>&gt;</pre>
+extends ca.cgjennings.ui.textedit.completion.DefaultCNode&lt;<a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.html" title="class in ca.cgjennings.ui.textedit.completion">APINode</a>&gt;</pre>
 <div class="block">An abstract completion node base class that represents part of a static API,
  such as a class or package.</div>
 <dl>
@@ -214,8 +216,8 @@ extends <a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNod
 <li class="blockList"><a name="methods.inherited.from.class.ca.cgjennings.ui.textedit.completion.DefaultCNode">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;ca.cgjennings.ui.textedit.completion.<a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html" title="class in ca.cgjennings.ui.textedit.completion">DefaultCNode</a></h3>
-<code><a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html#add-T-">add</a>, <a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html#children--">children</a>, <a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html#equals-java.lang.Object-">equals</a>, <a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html#find-java.lang.String-">find</a>, <a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html#getName--">getName</a>, <a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html#hashCode--">hashCode</a></code></li>
+<h3>Methods inherited from class&nbsp;ca.cgjennings.ui.textedit.completion.DefaultCNode</h3>
+<code>add, children, equals, find, getName, hashCode</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -245,8 +247,8 @@ extends <a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNod
 <li class="blockList">
 <h4>parent</h4>
 <pre>protected&nbsp;<a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.html" title="class in ca.cgjennings.ui.textedit.completion">APINode</a> parent</pre>
-<div class="block">The node's unique parent node. This is set automatically when the
- node is created within a <a href="../../../../../ca/cgjennings/ui/textedit/completion/PackageRoot.html" title="class in ca.cgjennings.ui.textedit.completion"><code>PackageRoot</code></a>. It should not be modified.</div>
+<div class="block">The node's unique parent node. This is set automatically when the node is
+ created within a <a href="../../../../../ca/cgjennings/ui/textedit/completion/PackageRoot.html" title="class in ca.cgjennings.ui.textedit.completion"><code>PackageRoot</code></a>. It should not be modified.</div>
 </li>
 </ul>
 </li>
@@ -286,12 +288,11 @@ extends <a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNod
 <li class="blockList">
 <h4>add</h4>
 <pre>public&nbsp;<a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.html" title="class in ca.cgjennings.ui.textedit.completion">APINode</a>&nbsp;add(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;child)</pre>
-<div class="block">Adds a child to this node with the specified name.
- If an entry with the specified name exists, no change is made.
- Note that this assumes that the specified
- name follows the standard Java naming convention: packages must
- start with lower case letters, and classes must start with
- upper case letters (or other valid identifier characters).</div>
+<div class="block">Adds a child to this node with the specified name. If an entry with the
+ specified name exists, no change is made. Note that this assumes that the
+ specified name follows the standard Java naming convention: packages must
+ start with lower case letters, and classes must start with upper case
+ letters (or other valid identifier characters).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>child</code> - the name of the child class or package to add</dd>
@@ -307,11 +308,10 @@ extends <a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNod
 <li class="blockList">
 <h4>getFullyQualifiedName</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getFullyQualifiedName()</pre>
-<div class="block">Returns the fully qualified name of this node. For example, the 
- fully qualified name of a node representing this class would
- be <code>ca.cgjennings.ui.textedit.completion.APINode</code>.
- Within a given <a href="../../../../../ca/cgjennings/ui/textedit/completion/PackageRoot.html" title="class in ca.cgjennings.ui.textedit.completion"><code>PackageRoot</code></a>, no two nodes may have the same
- fully qualified name.</div>
+<div class="block">Returns the fully qualified name of this node. For example, the fully
+ qualified name of a node representing this class would be
+ <code>ca.cgjennings.ui.textedit.completion.APINode</code>. Within a given
+ <a href="../../../../../ca/cgjennings/ui/textedit/completion/PackageRoot.html" title="class in ca.cgjennings.ui.textedit.completion"><code>PackageRoot</code></a>, no two nodes may have the same fully qualified name.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the fully qualified name of this node</dd>
@@ -325,11 +325,11 @@ extends <a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNod
 <li class="blockList">
 <h4>getParent</h4>
 <pre>public final&nbsp;<a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.html" title="class in ca.cgjennings.ui.textedit.completion">APINode</a>&nbsp;getParent()</pre>
-<div class="block">Returns the canonical parent of this node. The canonical parent of
- the node is the node that would result from removing this node's
- name from its fully qualified name. For example, the node that represents
- the class <code>java.lang.String</code> has the parent node that
- represents <code>java.lang</code>.</div>
+<div class="block">Returns the canonical parent of this node. The canonical parent of the
+ node is the node that would result from removing this node's name from
+ its fully qualified name. For example, the node that represents the class
+ <code>java.lang.String</code> has the parent node that represents
+ <code>java.lang</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the unique parent of this node</dd>
@@ -372,6 +372,8 @@ extends <a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNod
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

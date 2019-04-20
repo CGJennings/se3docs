@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -111,10 +113,10 @@ var activeTableTab = "activeTableTab";
 <pre>public final class <span class="typeNameLabel">QuickscriptPlugin</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
 implements <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a></pre>
-<div class="block">A plug-in that allows editing and running small scripts from within Strange Eons
- without the need to create a project or script file. This can be used to test
- small snippets of code, hack game components, or to experiment with the language
- or APIs.</div>
+<div class="block">A plug-in that allows editing and running small scripts from within Strange
+ Eons without the need to create a project or script file. This can be used to
+ test small snippets of code, hack game components, or to experiment with the
+ language or APIs.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.0</dd>
@@ -179,7 +181,7 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../ca/cgjennings/ui/textedit/JSourceCodeEditor.html" title="class in ca.cgjennings.ui.textedit">JSourceCodeEditor</a></code></td>
+<td class="colFirst"><code>ca.cgjennings.ui.textedit.JSourceCodeEditor</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/QuickscriptPlugin.html#getEditor--">getEditor</a></span>()</code>
 <div class="block">Returns the editor component used to edit script files.</div>
 </td>
@@ -193,8 +195,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/QuickscriptPlugin.html#getPluginName--">getPluginName</a></span>()</code>
-<div class="block">Returns the name that should be shown to the user for this plug-in, ideally
- in the UI locale.</div>
+<div class="block">Returns the name that should be shown to the user for this plug-in,
+ ideally in the UI locale.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -206,15 +208,15 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>float</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/QuickscriptPlugin.html#getPluginVersion--">getPluginVersion</a></span>()</code>
-<div class="block">Returns a number representing the version or release number
- of the plug-in.</div>
+<div class="block">Returns a number representing the version or release number of the
+ plug-in.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/QuickscriptPlugin.html#getRepresentativeImage--">getRepresentativeImage</a></span>()</code>
-<div class="block">Returns an image that may be used to represent the plug-in on a menu
- or toolbar.</div>
+<div class="block">Returns an image that may be used to represent the plug-in on a menu or
+ toolbar.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -234,8 +236,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/QuickscriptPlugin.html#isPluginShowing--">isPluginShowing</a></span>()</code>
-<div class="block">Returns <code>true</code> if this plug-in's interface is currently showing,
- or, if it has no interface, if it is currently running.</div>
+<div class="block">Returns <code>true</code> if this plug-in's interface is currently
+ showing, or, if it has no interface, if it is currently running.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
@@ -315,20 +317,21 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getDefaultAcceleratorKey()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#getDefaultAcceleratorKey--">Plugin</a></code></span></div>
 <div class="block">Return a string that describes the key stroke that is the preferred
- default accelerator key for this plug-in. In most cases, you should return
- <code>null</code> for no default accelerator. The user can always assign
- an accelerator key of their choice to an <code>ACTIVATED</code> plug-in
- through the plug-in manager dialog.
+ default accelerator key for this plug-in. In most cases, you should
+ return <code>null</code> for no default accelerator. The user can always
+ assign an accelerator key of their choice to an <code>ACTIVATED</code>
+ plug-in through the plug-in manager dialog.
  <p>
  The format of the string is similar to that used by
  <code>javax.swing.KeyStroke</code>, but the special modifier
  <tt>menu</tt> may be used to describe the standard menu accelerator
- modifier on this platform (Ctrl, Command, etc.). An invalid descriptor
- is silently ignored. There is no guarantee that the requested accelerator
- will actually be assigned. (For example, it might already be in use
- by another command.)
+ modifier on this platform (Ctrl, Command, etc.). An invalid descriptor is
+ silently ignored. There is no guarantee that the requested accelerator
+ will actually be assigned. (For example, it might already be in use by
+ another command.)
 
- <p><b>Note:</b> An accelerator key is only meaningful for
+ <p>
+ <b>Note:</b> An accelerator key is only meaningful for
  <code>ACTIVATED</code> plug-ins.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -344,9 +347,9 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html
 <ul class="blockList">
 <li class="blockList">
 <h4>getEditor</h4>
-<pre>public&nbsp;<a href="../../../../../ca/cgjennings/ui/textedit/JSourceCodeEditor.html" title="class in ca.cgjennings.ui.textedit">JSourceCodeEditor</a>&nbsp;getEditor()</pre>
-<div class="block">Returns the editor component used to edit script files. This can be
- used to add custom commands or modify the edited script.</div>
+<pre>public&nbsp;ca.cgjennings.ui.textedit.JSourceCodeEditor&nbsp;getEditor()</pre>
+<div class="block">Returns the editor component used to edit script files. This can be used
+ to add custom commands or modify the edited script.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the source code editor</dd>
@@ -363,9 +366,9 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html
 <h4>getPluginDescription</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getPluginDescription()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#getPluginDescription--">Plugin</a></code></span></div>
-<div class="block">Returns a description that can be shown to the user for this plug-in.
- The returned string will be used to describe the purpose of the plug-in
- to the user. This should be a single short sentence without any terminating
+<div class="block">Returns a description that can be shown to the user for this plug-in. The
+ returned string will be used to describe the purpose of the plug-in to
+ the user. This should be a single short sentence without any terminating
  punctuation, such as "Selects all lines on the current deck page".</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -383,16 +386,14 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html
 <h4>getPluginName</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getPluginName()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#getPluginName--">Plugin</a></code></span></div>
-<div class="block">Returns the name that should be shown to the user for this plug-in, ideally
- in the UI locale.
- This should be a short name that describes the plug-in's purpose
- in three words or less.
- If this is an <code>ACTIVATED</code> plug-in, the returned value should ideally be
- a verb phrase that describes the effect of activating the plug-in,
- such as "Select All Lines".
- It should not include extraneous information, such as the author's name;
- this kind of information can be included in the description string or,
- ideally, in the plug-in's catalogue description.</div>
+<div class="block">Returns the name that should be shown to the user for this plug-in,
+ ideally in the UI locale. This should be a short name that describes the
+ plug-in's purpose in three words or less. If this is an
+ <code>ACTIVATED</code> plug-in, the returned value should ideally be a
+ verb phrase that describes the effect of activating the plug-in, such as
+ "Select All Lines". It should not include extraneous information, such as
+ the author's name; this kind of information can be included in the
+ description string or, ideally, in the plug-in's catalogue description.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#getPluginName--">getPluginName</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a></code></dd>
@@ -415,8 +416,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#getPluginType--">getPluginType</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a plug-in type that describes how the plug-in should be integrated
-    with Strange Eons</dd>
+<dd>a plug-in type that describes how the plug-in should be
+ integrated with Strange Eons</dd>
 </dl>
 </li>
 </ul>
@@ -428,15 +429,15 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html
 <h4>getPluginVersion</h4>
 <pre>public&nbsp;float&nbsp;getPluginVersion()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#getPluginVersion--">Plugin</a></code></span></div>
-<div class="block">Returns a number representing the version or release number
- of the plug-in. This is primarily for the user's information;
- the application only compares versions using the date of the
- <a href="../../../../../ca/cgjennings/apps/arkham/plugins/catalog/CatalogID.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog"><code>CatalogID</code></a>.</div>
+<div class="block">Returns a number representing the version or release number of the
+ plug-in. This is primarily for the user's information; the application
+ only compares versions using the date of the <a href="../../../../../ca/cgjennings/apps/arkham/plugins/catalog/CatalogID.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog"><code>CatalogID</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#getPluginVersion--">getPluginVersion</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a number that corresponds to the plug-in's internal version number</dd>
+<dd>a number that corresponds to the plug-in's internal version
+ number</dd>
 </dl>
 </li>
 </ul>
@@ -448,11 +449,10 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html
 <h4>getRepresentativeImage</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;getRepresentativeImage()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#getRepresentativeImage--">Plugin</a></code></span></div>
-<div class="block">Returns an image that may be used to represent the plug-in on a menu
- or toolbar. Strange Eons may resize the image to fit available space,
- and may modify it to suit the context of use.
- Return <tt>null</tt> to indicate that the plug-in does not have a
- representative image.</div>
+<div class="block">Returns an image that may be used to represent the plug-in on a menu or
+ toolbar. Strange Eons may resize the image to fit available space, and
+ may modify it to suit the context of use. Return <tt>null</tt> to
+ indicate that the plug-in does not have a representative image.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#getRepresentativeImage--">getRepresentativeImage</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a></code></dd>
@@ -485,40 +485,38 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html
 <pre>public&nbsp;boolean&nbsp;initializePlugin(<a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins">PluginContext</a>&nbsp;context)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#initializePlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-">Plugin</a></code></span></div>
 <div class="block">This method will be called once for each registered plug-in before any
- other methods are called.
- It allows the plug-in to perform any required initialization prior to
- the plug-in being shown.
- If initialization succeeds, it should return <code>true</code>.
- Otherwise, the plug-in will not be made available to the user.
- If this method returns <code>false</code>, a warning is logged but
- no other action is taken.
+ other methods are called. It allows the plug-in to perform any required
+ initialization prior to the plug-in being shown. If initialization
+ succeeds, it should return <code>true</code>. Otherwise, the plug-in will
+ not be made available to the user. If this method returns
+ <code>false</code>, a warning is logged but no other action is taken.
  This allows the plug-in the opportunity to display its own error message.
- If this method throws an exception, a dialog is displayed that
- will include the message text of the exception (if any).
+ If this method throws an exception, a dialog is displayed that will
+ include the message text of the exception (if any).
  <p>
  Sometimes a plug-in is instantiated only in order to determine its name,
  description, version, and type. In such cases, the plug-in's
  <code>initializePlugin</code> method is still called, so that a localized
  plug-in can provide a name and description in the appropriate language.
- Plug-ins that do not wish to perform a complete initialization in such cases
- can detect when the plug-in
- is being created for information purposes only by calling the
- <a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html#isInformationProbe--"><code>PluginContext.isInformationProbe()</code></a> method of the provided
- <code>context</code>.
+ Plug-ins that do not wish to perform a complete initialization in such
+ cases can detect when the plug-in is being created for information
+ purposes only by calling the <a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html#isInformationProbe--"><code>PluginContext.isInformationProbe()</code></a>
+ method of the provided <code>context</code>.
  <p>
  <b>Note:</b> This method will never be called more than once for a given
- <i>instance</i> of a plug-in class.
- However, multiple instances of the same plug-in class are often created.
- Therefore, you should not assume that this method will only be called
- once per session (unless it is an <code>EXTENSION</code>).</div>
+ <i>instance</i> of a plug-in class. However, multiple instances of the
+ same plug-in class are often created. Therefore, you should not assume
+ that this method will only be called once per session (unless it is an
+ <code>EXTENSION</code>).</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#initializePlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-">initializePlugin</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>context</code> - a <a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>PluginContext</code></a> instance that can be accessed during initialization</dd>
+<dd><code>context</code> - a <a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>PluginContext</code></a> instance that can be accessed
+ during initialization</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the plug-in was initialized; <code>false</code> if
-     initialization failed</dd>
+<dd><code>true</code> if the plug-in was initialized;
+ <code>false</code> if initialization failed</dd>
 </dl>
 </li>
 </ul>
@@ -530,8 +528,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html
 <h4>isPluginShowing</h4>
 <pre>public&nbsp;boolean&nbsp;isPluginShowing()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#isPluginShowing--">Plugin</a></code></span></div>
-<div class="block">Returns <code>true</code> if this plug-in's interface is currently showing,
- or, if it has no interface, if it is currently running.
+<div class="block">Returns <code>true</code> if this plug-in's interface is currently
+ showing, or, if it has no interface, if it is currently running.
  <p>
  If the plug-in blocks the event thread when shown (for example, if it
  displays a modal dialog), then this method can simply return
@@ -555,23 +553,25 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html
 <pre>public&nbsp;boolean&nbsp;isPluginUsable()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#isPluginUsable--">Plugin</a></code></span></div>
 <div class="block">Returns <code>true</code> if it is currently valid to activate this
- plug-in by calling <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#showPlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-boolean-"><code>Plugin.showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a>. For example, a plug-in that
- only works on components from a certain game might return <code>false</code>
+ plug-in by calling <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#showPlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-boolean-"><code>Plugin.showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a>. For example, a plug-in that only
+ works on components from a certain game might return <code>false</code>
  if the currently edited component is not from that game.
 
- <p><b>Note:</b> Plug-ins must still check for any conditions
- that are required to hold in <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#showPlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-boolean-"><code>Plugin.showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a>. The plug-in may be
- activated without checking this method, or the state may change
- between the time that this method is called and the time the
- plug-in is activated.
+ <p>
+ <b>Note:</b> Plug-ins must still check for any conditions that are
+ required to hold in <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#showPlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-boolean-"><code>Plugin.showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a>. The plug-in may be activated
+ without checking this method, or the state may change between the time
+ that this method is called and the time the plug-in is activated.
 
- <p><b>Scripted Plug-in Notes:</b> The default implementation returns
+ <p>
+ <b>Scripted Plug-in Notes:</b> The default implementation returns
  <code>true</code>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#isPluginUsable--">isPluginUsable</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the plug-in can be successfully and meaningfully activated</dd>
+<dd><code>true</code> if the plug-in can be successfully and
+ meaningfully activated</dd>
 </dl>
 </li>
 </ul>
@@ -585,8 +585,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html
 <div class="block">Run the current script.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>debugIfAvailable</code> - if the debugger is enabled, debug the script
-     by activating a breakpoint when the script starts running</dd>
+<dd><code>debugIfAvailable</code> - if the debugger is enabled, debug the script by
+ activating a breakpoint when the script starts running</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.00.9</dd>
 </dl>
@@ -601,29 +601,30 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html
 <pre>public&nbsp;void&nbsp;showPlugin(<a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins">PluginContext</a>&nbsp;context,
                        boolean&nbsp;show)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#showPlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-boolean-">Plugin</a></code></span></div>
-<div class="block">Show (activate) or hide (deactivate) the plug-in.
- This method is most often called when the user activates the plug-in's
- menu item.
+<div class="block">Show (activate) or hide (deactivate) the plug-in. This method is most
+ often called when the user activates the plug-in's menu item.
  <p>
  Typically, the value of <code>show</code> will be the opposite of the
- value currently returned by <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#isPluginShowing--"><code>Plugin.isPluginShowing()</code></a>.
- If the plug-in uses a modeless dialog box, then <code>isPluginShowing</code>
- should thus return <code>true</code> when the dialog is showing.
+ value currently returned by <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#isPluginShowing--"><code>Plugin.isPluginShowing()</code></a>. If the plug-in uses
+ a modeless dialog box, then <code>isPluginShowing</code> should thus
+ return <code>true</code> when the dialog is showing.
  <p>
  If a modal dialog is shown, or if an operation that blocks the calling
  thread is performed, then it will not be possible for the user to
- activate the command again until this method returns.
- In that case, <code>isPluginShowing</code> can be implemented to
- simply return <code>false</code>.
+ activate the command again until this method returns. In that case,
+ <code>isPluginShowing</code> can be implemented to simply return
+ <code>false</code>.
  <p>
- <b>Notes:</b> This method is never called for <code>EXTENSION</code> plug-ins. It is
- only called once, after initialization, for <code>INJECTED</code> plug-ins.</div>
+ <b>Notes:</b> This method is never called for <code>EXTENSION</code>
+ plug-ins. It is only called once, after initialization, for
+ <code>INJECTED</code> plug-ins.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#showPlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-boolean-">showPlugin</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>context</code> - a valid <a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>PluginContext</code></a></dd>
-<dd><code>show</code> - if <code>true</code> show/start the plug-in, otherwise, hide/cancel it</dd>
+<dd><code>show</code> - if <code>true</code> show/start the plug-in, otherwise,
+ hide/cancel it</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#isPluginShowing--"><code>Plugin.isPluginShowing()</code></a></dd>
 </dl>
@@ -638,20 +639,21 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html
 <pre>public&nbsp;void&nbsp;unloadPlugin()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#unloadPlugin--">Plugin</a></code></span></div>
 <div class="block">This method is called when the plug-in is about to be unloaded to give
- the plug-in the chance to release any resources it may be holding.
- It will be called prior to ending the application, or whenever the
- plug-in will be stopped and restarted.
+ the plug-in the chance to release any resources it may be holding. It
+ will be called prior to ending the application, or whenever the plug-in
+ will be stopped and restarted.
  <p>
  <b>Notes:</b>
  <ol>
- <li>It is not guaranteed that this method will be called if the
- program terminates abnormally.
- <li>This method will never be called more than once for a given <i>instance</i> of
- a plug-in. (More than one instance of an <code>ACTIVATED</code> or
- <code>INJECTED</code> plug-in may be created during a session.)
+ <li>It is not guaranteed that this method will be called if the program
+ terminates abnormally.
+ <li>This method will never be called more than once for a given
+ <i>instance</i> of a plug-in. (More than one instance of an
+ <code>ACTIVATED</code> or <code>INJECTED</code> plug-in may be created
+ during a session.)
  <li>For <code>ACTIVATED</code> plug-ins that are currently showing,
- <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#showPlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-boolean-"><code>Plugin.showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a> will be called with <code>false</code>
- (in order to hide the plug-in) before this method is called.
+ <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#showPlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-boolean-"><code>Plugin.showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a> will be called with <code>false</code> (in order to
+ hide the plug-in) before this method is called.
  </ol></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -679,6 +681,8 @@ implements <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

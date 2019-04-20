@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -110,10 +112,9 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">MarkupRenderer</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block">This class lays out paragraphs that use a specialized HTML-like markup language.
- The markup does not require any special introductory tags, such as &lt;markup&gt;
- or &lt;body&gt;.
- Tags which are not understood are ignored.
+<div class="block">This class lays out paragraphs that use a specialized HTML-like markup
+ language. The markup does not require any special introductory tags, such as
+ &lt;markup&gt; or &lt;body&gt;. Tags which are not understood are ignored.
  Unlike the usual rules for HTML, sequences of more than one whitespace
  character are significant and retained.
  <p>
@@ -126,34 +127,33 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  Built-in tags perform special functions within the renderer environment and
  are always available.
  <p>
- Replacement tags are defined by the (programmer) user.
- They allow tags to be replaced by arbitrary text strings.
+ Replacement tags are defined by the (programmer) user. They allow tags to be
+ replaced by arbitrary text strings.
  <p>
- User-defined tags are essentially the same as replacement tags, but they
- are defined by the end user using the &lt;define&gt; built-in tag.
+ User-defined tags are essentially the same as replacement tags, but they are
+ defined by the end user using the &lt;define&gt; built-in tag.
  <p>
  Non-parametric style tags are tags that do not take parameters and apply a
- <a href="../../../ca/cgjennings/layout/TextStyle.html" title="class in ca.cgjennings.layout"><code>TextStyle</code></a> to the text they enclose.
- Examples include the &lt;b&gt; (bold) and &lt;i&gt; (italic) tags.
- <code>TextStyle</code>s consist of one or more <code>TextAttribute</code>s
- and their values; a single non-parametric tag can therefore have multiple
- effects.
+ <a href="../../../ca/cgjennings/layout/TextStyle.html" title="class in ca.cgjennings.layout"><code>TextStyle</code></a> to the text they enclose. Examples include the &lt;b&gt;
+ (bold) and &lt;i&gt; (italic) tags. <code>TextStyle</code>s consist of one or
+ more <code>TextAttribute</code>s and their values; a single non-parametric
+ tag can therefore have multiple effects.
  <p>
  Parametric style tags are tags that can include parameters which are parsed
- by a <a href="../../../ca/cgjennings/layout/ParametricStyleFactory.html" title="interface in ca.cgjennings.layout"><code>ParametricStyleFactory</code></a>.
- The factory will return a <code>TextStyle</code> based on the tag's
- parameters, which is then applied to the block it encloses.
- Examples include the &lt;color&gt;/&lt;colour&gt; and &lt;image&gt; tags.
+ by a <a href="../../../ca/cgjennings/layout/ParametricStyleFactory.html" title="interface in ca.cgjennings.layout"><code>ParametricStyleFactory</code></a>. The factory will return a
+ <code>TextStyle</code> based on the tag's parameters, which is then applied
+ to the block it encloses. Examples include the &lt;color&gt;/&lt;colour&gt;
+ and &lt;image&gt; tags.
  <p>
  Interpreted tags include all tags not recognized as any of the other types.
  These tags are passed to <a href="../../../ca/cgjennings/layout/MarkupRenderer.html#handleUnknownTag-java.lang.String-java.lang.String-"><code>handleUnknownTag(java.lang.String, java.lang.String)</code></a>, which is given the
  opportunity to do something with it. Generally, if it wishes to handle the
- tag it will return a replacement string.
- The <code>MarkupRenderer</code> base class uses this to replace Unicode
- character tags with their equivalent Unicode characters.
- The <code>GenderAwareMarkupRenderer</code> subclass uses this to parse
- tags that include masculine and feminine variants that are selected
- based upon a gender supplied to the renderer (as in &lt;his/her&gt;).</div>
+ tag it will return a replacement string. The <code>MarkupRenderer</code> base
+ class uses this to replace Unicode character tags with their equivalent
+ Unicode characters. The <code>GenderAwareMarkupRenderer</code> subclass uses
+ this to parse tags that include masculine and feminine variants that are
+ selected based upon a gender supplied to the renderer (as in
+ &lt;his/her&gt;).</div>
 </li>
 </ul>
 </div>
@@ -175,8 +175,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr class="altColor">
 <td class="colFirst"><code>protected class&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/MarkupRenderer.StyledParagraph.html" title="class in ca.cgjennings.layout">MarkupRenderer.StyledParagraph</a></span></code>
-<div class="block">This class provides an <code>AttributedString</code> with extended information
- on how the string should be drawn.</div>
+<div class="block">This class provides an <code>AttributedString</code> with extended
+ information on how the string should be drawn.</div>
 </td>
 </tr>
 </table>
@@ -261,8 +261,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/MarkupRenderer.html#FIT_BOTH">FIT_BOTH</a></span></code>
-<div class="block">Try to fit text that is too long for the draw rectangle by first reducing spacing, then
-  scaling down the text if that is not enough.</div>
+<div class="block">Try to fit text that is too long for the draw rectangle by first reducing
+ spacing, then scaling down the text if that is not enough.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -274,13 +274,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/MarkupRenderer.html#FIT_SCALE_TEXT">FIT_SCALE_TEXT</a></span></code>
-<div class="block">Try to fit text that is too long for the draw rectangle by scaling down the text.</div>
+<div class="block">Try to fit text that is too long for the draw rectangle by scaling down
+ the text.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/MarkupRenderer.html#FIT_TIGHTEN_LINE_SPACING">FIT_TIGHTEN_LINE_SPACING</a></span></code>
-<div class="block">Try to fit text that is too long for the draw rectangle by reducing interline spacing.</div>
+<div class="block">Try to fit text that is too long for the draw rectangle by reducing
+ interline spacing.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -328,7 +330,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr class="rowColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/MarkupRenderer.html#openQuotes">openQuotes</a></span></code>
-<div class="block">Depth to which quotation marks are nested, for doing punctuation replacement.</div>
+<div class="block">Depth to which quotation marks are nested, for doing punctuation
+ replacement.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -396,8 +399,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
               <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Rectangle2D.html?is-external=true" title="class or interface in java.awt.geom">Rectangle2D</a>&nbsp;r,
               <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../ca/cgjennings/layout/LayoutSegment.html" title="class in ca.cgjennings.layout">LayoutSegment</a>&gt;&nbsp;appendList)</code>
 <div class="block">Instead of drawing the text, appends a sequence of <a href="../../../ca/cgjennings/layout/LayoutSegment.html" title="class in ca.cgjennings.layout"><code>LayoutSegment</code></a>s
- list; these segments can then be used by the
- caller to evaluate, customize and/or draw the layout.</div>
+ list; these segments can then be used by the caller to evaluate,
+ customize and/or draw the layout.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -409,8 +412,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/MarkupRenderer.html#convertTagsToLinebreaks-java.lang.String-">convertTagsToLinebreaks</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;source)</code>
-<div class="block">Converts a <code>Strings</code> containing &lt;br&gt; tags into
-  one that uses newlines instead.</div>
+<div class="block">Converts a <code>Strings</code> containing &lt;br&gt; tags into one that
+ uses newlines instead.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -438,8 +441,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/MarkupRenderer.html#createStyledText--">createStyledText</a></span>()</code>
-<div class="block">Convert current markup into an array of StyledParagraph objects,
-  one for each paragraph.</div>
+<div class="block">Convert current markup into an array of StyledParagraph objects, one for
+ each paragraph.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
@@ -447,7 +450,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/MarkupRenderer.html#draw-java.awt.Graphics2D-java.awt.geom.Rectangle2D-">draw</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt">Graphics2D</a>&nbsp;g,
     <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Rectangle2D.html?is-external=true" title="class or interface in java.awt.geom">Rectangle2D</a>&nbsp;r)</code>
 <div class="block">Lay out the current markup text using the current styles and settings
-  within the specified rectangle.</div>
+ within the specified rectangle.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
@@ -458,11 +461,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/MarkupRenderer.html#findReplacementForTag--">findReplacementForTag</a></span>()</code>
-<div class="block">If this tag is a replacement tag (either
-  one defined programmatically using
-  setReplacementForTag or one set by the user
-  with a &lt;define&gt; tag), return the
-  replacement text for this tag.</div>
+<div class="block">If this tag is a replacement tag (either one defined programmatically
+ using setReplacementForTag or one set by the user with a &lt;define&gt;
+ tag), return the replacement text for this tag.</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
@@ -476,7 +477,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/MarkupRenderer.html#getAutoclose--">getAutoclose</a></span>()</code>
 <div class="block">Return whether outstanding tags are automatically closed at the end of
-  each line by default.</div>
+ each line by default.</div>
 </td>
 </tr>
 <tr id="i14" class="altColor">
@@ -493,7 +494,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="../../../ca/cgjennings/layout/TextStyle.html" title="class in ca.cgjennings.layout">TextStyle</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/MarkupRenderer.html#getDefaultStyle--">getDefaultStyle</a></span>()</code>
-<div class="block">Return the current default style applied to text before any tags are applied.</div>
+<div class="block">Return the current default style applied to text before any tags are
+ applied.</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
@@ -521,7 +523,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i21" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/MarkupRenderer.html#getMarkBadBox--">getMarkBadBox</a></span>()</code>
-<div class="block">Get whether text that exceeds its bounding rectangle is marked with a red box.</div>
+<div class="block">Get whether text that exceeds its bounding rectangle is marked with a red
+ box.</div>
 </td>
 </tr>
 <tr id="i22" class="altColor">
@@ -537,17 +540,17 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i24" class="altColor">
 <td class="colFirst"><code><a href="../../../ca/cgjennings/layout/ParametricStyleFactory.html" title="interface in ca.cgjennings.layout">ParametricStyleFactory</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/MarkupRenderer.html#getParametricStyleForTag-java.lang.String-">getParametricStyleForTag</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tagName)</code>
-<div class="block">Return the <a href="../../../ca/cgjennings/layout/ParametricStyleFactory.html" title="interface in ca.cgjennings.layout"><code>ParametricStyleFactory</code></a> associated with the tag, or <code>null</code> if
-  the tag does not have a style set (including if it has a replacement or
-  style set).</div>
+<div class="block">Return the <a href="../../../ca/cgjennings/layout/ParametricStyleFactory.html" title="interface in ca.cgjennings.layout"><code>ParametricStyleFactory</code></a> associated with the tag, or
+ <code>null</code> if the tag does not have a style set (including if it has a
+ replacement or style set).</div>
 </td>
 </tr>
 <tr id="i25" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/MarkupRenderer.html#getReplacementForTag-java.lang.String-">getReplacementForTag</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tagName)</code>
-<div class="block">Return the replacement <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> associated with the tag, or <code>null</code> if
-  the tag does not have a replacement set (including if it has a style or
-  parametric style set).</div>
+<div class="block">Return the replacement <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> associated with the tag, or
+ <code>null</code> if the tag does not have a replacement set (including if it
+ has a style or parametric style set).</div>
 </td>
 </tr>
 <tr id="i26" class="altColor">
@@ -557,7 +560,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i27" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/MarkupRenderer.html#getScalingLimit--">getScalingLimit</a></span>()</code>
-<div class="block">Get the current limit on text scaling to fit text in a rendering rectangle.</div>
+<div class="block">Get the current limit on text scaling to fit text in a rendering
+ rectangle.</div>
 </td>
 </tr>
 <tr id="i28" class="altColor">
@@ -597,15 +601,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i34" class="altColor">
 <td class="colFirst"><code>float</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/MarkupRenderer.html#getTightnessLimit--">getTightnessLimit</a></span>()</code>
-<div class="block">Get the current minimum tighness to use when using line tightening to reduce text size.</div>
+<div class="block">Get the current minimum tighness to use when using line tightening to
+ reduce text size.</div>
 </td>
 </tr>
 <tr id="i35" class="rowColor">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/MarkupRenderer.html#handleUnknownTag-java.lang.String-java.lang.String-">handleUnknownTag</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tagnameLowercase,
                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tagnameOriginalCase)</code>
-<div class="block">This method is called when a tag is encountered that does not match
-  any existing defined or built-in tag.</div>
+<div class="block">This method is called when a tag is encountered that does not match any
+ existing defined or built-in tag.</div>
 </td>
 </tr>
 <tr id="i36" class="altColor">
@@ -620,15 +625,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
       <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Rectangle2D.html?is-external=true" title="class or interface in java.awt.geom">Rectangle2D</a>&nbsp;r,
       boolean&nbsp;render)</code>
 <div class="block">Lay out the current markup text using the current styles and settings
-  within the specified rectangle.</div>
+ within the specified rectangle.</div>
 </td>
 </tr>
 <tr id="i38" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/MarkupRenderer.html#measure-java.awt.Graphics2D-java.awt.geom.Rectangle2D-">measure</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt">Graphics2D</a>&nbsp;g,
        <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Rectangle2D.html?is-external=true" title="class or interface in java.awt.geom">Rectangle2D</a>&nbsp;r)</code>
-<div class="block">Simulate rendering the current markup without drawing anything,
- returning the height that the text would have covered.</div>
+<div class="block">Simulate rendering the current markup without drawing anything, returning
+ the height that the text would have covered.</div>
 </td>
 </tr>
 <tr id="i39" class="rowColor">
@@ -652,8 +657,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i42" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/MarkupRenderer.html#removeTag-java.lang.String-">removeTag</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tagName)</code>
-<div class="block">If a style or replacement is associated with this tag, the style will be removed and
-  the tag will be treated as an unknown tag.</div>
+<div class="block">If a style or replacement is associated with this tag, the style will be
+ removed and the tag will be treated as an unknown tag.</div>
 </td>
 </tr>
 <tr id="i43" class="rowColor">
@@ -727,7 +732,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </td>
 </tr>
 <tr id="i54" class="altColor">
-<td class="colFirst"><code>protected void</code></td>
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/MarkupRenderer.html#setDefinitionForTag-java.lang.String-java.lang.String-">setDefinitionForTag</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                    <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;replacement)</code>
 <div class="block">Create a new user-defined definition.</div>
@@ -758,7 +763,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i59" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/MarkupRenderer.html#setMarkBadBox-boolean-">setMarkBadBox</a></span>(boolean&nbsp;mark)</code>
-<div class="block">Set whether text that exceeds its bounding rectangle is marked with a red box.</div>
+<div class="block">Set whether text that exceeds its bounding rectangle is marked with a red
+ box.</div>
 </td>
 </tr>
 <tr id="i60" class="altColor">
@@ -795,7 +801,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i65" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/MarkupRenderer.html#setScalingLimit-double-">setScalingLimit</a></span>(double&nbsp;factor)</code>
-<div class="block">Limit the text scaling algorithm to scale down to no more than <code>factor</code> * 100% of the original size.</div>
+<div class="block">Limit the text scaling algorithm to scale down to no more than
+ <code>factor</code> * 100% of the original size.</div>
 </td>
 </tr>
 <tr id="i66" class="altColor">
@@ -819,13 +826,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/MarkupRenderer.html#setTextFitting-int-">setTextFitting</a></span>(int&nbsp;fittingStyle)</code>
 <div class="block">Set the fitting methods that will be used to shrink text that is too long
-  to fit in its rendering rectangle.</div>
+ to fit in its rendering rectangle.</div>
 </td>
 </tr>
 <tr id="i70" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/MarkupRenderer.html#setTightnessLimit-float-">setTightnessLimit</a></span>(float&nbsp;tightnessLimit)</code>
-<div class="block">Set the minimum tightness to use when using line tightening to reduce text size.</div>
+<div class="block">Set the minimum tightness to use when using line tightening to reduce
+ text size.</div>
 </td>
 </tr>
 <tr id="i71" class="rowColor">
@@ -1007,8 +1015,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>FIT_BOTH</h4>
 <pre>public static final&nbsp;int FIT_BOTH</pre>
-<div class="block">Try to fit text that is too long for the draw rectangle by first reducing spacing, then
-  scaling down the text if that is not enough.</div>
+<div class="block">Try to fit text that is too long for the draw rectangle by first reducing
+ spacing, then scaling down the text if that is not enough.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../constant-values.html#ca.cgjennings.layout.MarkupRenderer.FIT_BOTH">Constant Field Values</a></dd>
@@ -1036,9 +1044,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>FIT_SCALE_TEXT</h4>
 <pre>public static final&nbsp;int FIT_SCALE_TEXT</pre>
-<div class="block">Try to fit text that is too long for the draw rectangle by scaling down the text. Note that
-  this can be time consuming, and that it will augment your specified styles with <code>TextTransform</code>
-  style <code>TextAttribute</code>s.</div>
+<div class="block">Try to fit text that is too long for the draw rectangle by scaling down
+ the text. Note that this can be time consuming, and that it will augment
+ your specified styles with <code>TextTransform</code> style
+ <code>TextAttribute</code>s.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../constant-values.html#ca.cgjennings.layout.MarkupRenderer.FIT_SCALE_TEXT">Constant Field Values</a></dd>
@@ -1052,7 +1061,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>FIT_TIGHTEN_LINE_SPACING</h4>
 <pre>public static final&nbsp;int FIT_TIGHTEN_LINE_SPACING</pre>
-<div class="block">Try to fit text that is too long for the draw rectangle by reducing interline spacing.</div>
+<div class="block">Try to fit text that is too long for the draw rectangle by reducing
+ interline spacing.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../constant-values.html#ca.cgjennings.layout.MarkupRenderer.FIT_TIGHTEN_LINE_SPACING">Constant Field Values</a></dd>
@@ -1164,7 +1174,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>openQuotes</h4>
 <pre>protected&nbsp;int openQuotes</pre>
-<div class="block">Depth to which quotation marks are nested, for doing punctuation replacement.</div>
+<div class="block">Depth to which quotation marks are nested, for doing punctuation
+ replacement.</div>
 </li>
 </ul>
 <a name="styleStackMap">
@@ -1218,8 +1229,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>MarkupRenderer</h4>
 <pre>public&nbsp;MarkupRenderer()</pre>
-<div class="block">Create a new markup layout engine with a set of default styles.
- A resolution of 72 dots per inch (typical for screen display) is used.</div>
+<div class="block">Create a new markup layout engine with a set of default styles. A
+ resolution of 72 dots per inch (typical for screen display) is used.</div>
 </li>
 </ul>
 <a name="MarkupRenderer-double-">
@@ -1230,8 +1241,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>MarkupRenderer</h4>
 <pre>public&nbsp;MarkupRenderer(double&nbsp;dpi)</pre>
 <div class="block">Create a new markup layout engine with a set of default styles. The dpi
-  value allows scaling the output for a given resolution. This is important
-  so that, for example, font point sizes are interpreted correctly.</div>
+ value allows scaling the output for a given resolution. This is important
+ so that, for example, font point sizes are interpreted correctly.</div>
 </li>
 </ul>
 </li>
@@ -1261,11 +1272,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                            <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Rectangle2D.html?is-external=true" title="class or interface in java.awt.geom">Rectangle2D</a>&nbsp;r,
                            <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;<a href="../../../ca/cgjennings/layout/LayoutSegment.html" title="class in ca.cgjennings.layout">LayoutSegment</a>&gt;&nbsp;appendList)</pre>
 <div class="block">Instead of drawing the text, appends a sequence of <a href="../../../ca/cgjennings/layout/LayoutSegment.html" title="class in ca.cgjennings.layout"><code>LayoutSegment</code></a>s
- list; these segments can then be used by the
- caller to evaluate, customize and/or draw the layout.
- For example, by creating a segment list for an infinitely high rectangle,
- the resulting list of segments could be laid out on a sequence of pages
- for printing by adjusting their y-coordinates.</div>
+ list; these segments can then be used by the caller to evaluate,
+ customize and/or draw the layout. For example, by creating a segment list
+ for an infinitely high rectangle, the resulting list of segments could be
+ laid out on a sequence of pages for printing by adjusting their
+ y-coordinates.</div>
 </li>
 </ul>
 <a name="breakIntoParagraphs-java.lang.String-">
@@ -1276,8 +1287,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>breakIntoParagraphs</h4>
 <pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;breakIntoParagraphs(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;source)</pre>
 <div class="block">Breaks a source string into an array of individual lines. Lines are
-  broken on newline characters, break tags (br), and headline tags
-  (h1, h2, h3, h4, h5, h6, h7).</div>
+ broken on newline characters, break tags (br), and headline tags (h1, h2,
+ h3, h4, h5, h6, h7).</div>
 </li>
 </ul>
 <a name="convertTagsToLinebreaks-java.lang.String-">
@@ -1287,16 +1298,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>convertTagsToLinebreaks</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;convertTagsToLinebreaks(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;source)</pre>
-<div class="block">Converts a <code>Strings</code> containing &lt;br&gt; tags into
-  one that uses newlines instead. This is not required before sending
-  markup to the draw system. Rather, this  is intended for use when
-  deserializing markup that has had newlines converted into &lt;br&gt;
-  tags for convenience of encoding.
-  <p>
-  By design, this method recognizes only the exact sequence
-  &lt;, b, r, &gt;: it is case-sensitive and does not recognize
-  &lt;/br&gt;. It does not differentiate between regular tags
-  and nested tags that form arguments of other tags.</div>
+<div class="block">Converts a <code>Strings</code> containing &lt;br&gt; tags into one that
+ uses newlines instead. This is not required before sending markup to the
+ draw system. Rather, this is intended for use when deserializing markup
+ that has had newlines converted into &lt;br&gt; tags for convenience of
+ encoding.
+ <p>
+ By design, this method recognizes only the exact sequence &lt;, b, r,
+ &gt;: it is case-sensitive and does not recognize &lt;/br&gt;. It does
+ not differentiate between regular tags and nested tags that form
+ arguments of other tags.</div>
 </li>
 </ul>
 <a name="createDefaultParametricStyleMap--">
@@ -1345,8 +1356,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>createStyledText</h4>
 <pre>protected&nbsp;void&nbsp;createStyledText()</pre>
-<div class="block">Convert current markup into an array of StyledParagraph objects,
-  one for each paragraph.</div>
+<div class="block">Convert current markup into an array of StyledParagraph objects, one for
+ each paragraph.</div>
 </li>
 </ul>
 <a name="draw-java.awt.Graphics2D-java.awt.geom.Rectangle2D-">
@@ -1358,8 +1369,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public&nbsp;double&nbsp;draw(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt">Graphics2D</a>&nbsp;g,
                    <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Rectangle2D.html?is-external=true" title="class or interface in java.awt.geom">Rectangle2D</a>&nbsp;r)</pre>
 <div class="block">Lay out the current markup text using the current styles and settings
-  within the specified rectangle. Returns the y-coordinate where the
-  next line would start.</div>
+ within the specified rectangle. Returns the y-coordinate where the next
+ line would start.</div>
 </li>
 </ul>
 <a name="drawAsSingleLine-java.awt.Graphics2D-java.awt.geom.Rectangle2D-">
@@ -1379,12 +1390,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>findReplacementForTag</h4>
 <pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;findReplacementForTag()</pre>
-<div class="block">If this tag is a replacement tag (either
-  one defined programmatically using
-  setReplacementForTag or one set by the user
-  with a &lt;define&gt; tag), return the
-  replacement text for this tag. Otherwise, return
-  null.</div>
+<div class="block">If this tag is a replacement tag (either one defined programmatically
+ using setReplacementForTag or one set by the user with a &lt;define&gt;
+ tag), return the replacement text for this tag. Otherwise, return null.</div>
 </li>
 </ul>
 <a name="getAlignment--">
@@ -1410,7 +1418,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getAutoclose</h4>
 <pre>public&nbsp;boolean&nbsp;getAutoclose()</pre>
 <div class="block">Return whether outstanding tags are automatically closed at the end of
-  each line by default.</div>
+ each line by default.</div>
 </li>
 </ul>
 <a name="getBaseFile--">
@@ -1444,7 +1452,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getDefaultStyle</h4>
 <pre>public&nbsp;<a href="../../../ca/cgjennings/layout/TextStyle.html" title="class in ca.cgjennings.layout">TextStyle</a>&nbsp;getDefaultStyle()</pre>
-<div class="block">Return the current default style applied to text before any tags are applied.</div>
+<div class="block">Return the current default style applied to text before any tags are
+ applied.</div>
 </li>
 </ul>
 <a name="getEvaluatorFactory--">
@@ -1501,7 +1510,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getMarkBadBox</h4>
 <pre>public&nbsp;boolean&nbsp;getMarkBadBox()</pre>
-<div class="block">Get whether text that exceeds its bounding rectangle is marked with a red box.</div>
+<div class="block">Get whether text that exceeds its bounding rectangle is marked with a red
+ box.</div>
 </li>
 </ul>
 <a name="getMarkupText--">
@@ -1530,9 +1540,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getParametricStyleForTag</h4>
 <pre>public&nbsp;<a href="../../../ca/cgjennings/layout/ParametricStyleFactory.html" title="interface in ca.cgjennings.layout">ParametricStyleFactory</a>&nbsp;getParametricStyleForTag(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tagName)</pre>
-<div class="block">Return the <a href="../../../ca/cgjennings/layout/ParametricStyleFactory.html" title="interface in ca.cgjennings.layout"><code>ParametricStyleFactory</code></a> associated with the tag, or <code>null</code> if
-  the tag does not have a style set (including if it has a replacement or
-  style set).</div>
+<div class="block">Return the <a href="../../../ca/cgjennings/layout/ParametricStyleFactory.html" title="interface in ca.cgjennings.layout"><code>ParametricStyleFactory</code></a> associated with the tag, or
+ <code>null</code> if the tag does not have a style set (including if it has a
+ replacement or style set).</div>
 </li>
 </ul>
 <a name="getReplacementForTag-java.lang.String-">
@@ -1542,9 +1552,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getReplacementForTag</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getReplacementForTag(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tagName)</pre>
-<div class="block">Return the replacement <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> associated with the tag, or <code>null</code> if
-  the tag does not have a replacement set (including if it has a style or
-  parametric style set).</div>
+<div class="block">Return the replacement <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> associated with the tag, or
+ <code>null</code> if the tag does not have a replacement set (including if it
+ has a style or parametric style set).</div>
 </li>
 </ul>
 <a name="getScalingFractionalLimit--">
@@ -1563,7 +1573,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getScalingLimit</h4>
 <pre>public&nbsp;double&nbsp;getScalingLimit()</pre>
-<div class="block">Get the current limit on text scaling to fit text in a rendering rectangle.</div>
+<div class="block">Get the current limit on text scaling to fit text in a rendering
+ rectangle.</div>
 </li>
 </ul>
 <a name="getStyledText--">
@@ -1613,12 +1624,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getTagParameters</h4>
 <pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>[]&nbsp;getTagParameters()</pre>
-<div class="block">Return an array of parameters included in the current tag.
-  If there are no parameters, return an empty array.
-  Parameters are separated from the main tag name and each other
-  by whitespace. A parameter surrounded by quotes (") may contain
-  whitespace. A parameter surrounded by quotes may use the escape
-  \" to include a quote without ending the parameter.</div>
+<div class="block">Return an array of parameters included in the current tag. If there are
+ no parameters, return an empty array. Parameters are separated from the
+ main tag name and each other by whitespace. A parameter surrounded by
+ quotes (") may contain whitespace. A parameter surrounded by quotes may
+ use the escape \" to include a quote without ending the parameter.</div>
 </li>
 </ul>
 <a name="getTextFitting--">
@@ -1638,7 +1648,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getTightnessLimit</h4>
 <pre>public&nbsp;float&nbsp;getTightnessLimit()</pre>
-<div class="block">Get the current minimum tighness to use when using line tightening to reduce text size.</div>
+<div class="block">Get the current minimum tighness to use when using line tightening to
+ reduce text size.</div>
 </li>
 </ul>
 <a name="handleUnknownTag-java.lang.String-java.lang.String-">
@@ -1649,23 +1660,23 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>handleUnknownTag</h4>
 <pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;handleUnknownTag(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tagnameLowercase,
                                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tagnameOriginalCase)</pre>
-<div class="block">This method is called when a tag is encountered that does not match
-  any existing defined or built-in tag. Subclasses may override it as
-  a simple way to extend the behaviour of this class.
-  <p>
-  If the method returns a string, that string will be interpreted
-  exactly as if it had appeared instead of the unknown tag. It may
-  include both text and tags.
-  <p>
-  If the method does not have a suitable replacement for the
-  unknown tag, it should return <code>null</code>.
-  <p>
-  The base class parses tags of the form &lt;u+xxxx&gt; to insert Unicode
-  characters from their hexidecimal code and parses &lt;image&gt; tags
-  to insert images into the text stream. To remove these behaviours, override
-  and return <code>null</code>. To extend them, return the value of the superclass
-  implementation once you have decided you do not want to handle the tag
-  yourself.</div>
+<div class="block">This method is called when a tag is encountered that does not match any
+ existing defined or built-in tag. Subclasses may override it as a simple
+ way to extend the behaviour of this class.
+ <p>
+ If the method returns a string, that string will be interpreted exactly
+ as if it had appeared instead of the unknown tag. It may include both
+ text and tags.
+ <p>
+ If the method does not have a suitable replacement for the unknown tag,
+ it should return <code>null</code>.
+ <p>
+ The base class parses tags of the form &lt;u+xxxx&gt; to insert Unicode
+ characters from their hexidecimal code and parses &lt;image&gt; tags to
+ insert images into the text stream. To remove these behaviours, override
+ and return <code>null</code>. To extend them, return the value of the
+ superclass implementation once you have decided you do not want to handle
+ the tag yourself.</div>
 </li>
 </ul>
 <a name="invalidateLayoutCache--">
@@ -1675,20 +1686,18 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>invalidateLayoutCache</h4>
 <pre>protected&nbsp;void&nbsp;invalidateLayoutCache()</pre>
-<div class="block">Clear cached information about how markup should be processed.
- When a given markup string is first drawn or measured, some information
- will be cached to speed up subsequent redrawing.
+<div class="block">Clear cached information about how markup should be processed. When a
+ given markup string is first drawn or measured, some information will be
+ cached to speed up subsequent redrawing.
  <p>
- The caching process will include a final version of the text with
- all of the markup processed out. As a result, subclasses implement their
- own tags via <a href="../../../ca/cgjennings/layout/MarkupRenderer.html#handleUnknownTag-java.lang.String-java.lang.String-"><code>handleUnknownTag(java.lang.String, java.lang.String)</code></a> and that will return different
- results depending on some system state should call this method
- whenever the state changes.
- For example, the <a href="../../../ca/cgjennings/layout/GenderAwareMarkupRenderer.html" title="class in ca.cgjennings.layout"><code>GenderAwareMarkupRenderer</code></a> calls this method
- whenever its gender setting is changed.
- Otherwise, repeated renderings with the same markup would always draw
- text that reflected the active gender at the time the markup was first
- drawn or measured.
+ The caching process will include a final version of the text with all of
+ the markup processed out. As a result, subclasses implement their own
+ tags via <a href="../../../ca/cgjennings/layout/MarkupRenderer.html#handleUnknownTag-java.lang.String-java.lang.String-"><code>handleUnknownTag(java.lang.String, java.lang.String)</code></a> and that will return different results
+ depending on some system state should call this method whenever the state
+ changes. For example, the <a href="../../../ca/cgjennings/layout/GenderAwareMarkupRenderer.html" title="class in ca.cgjennings.layout"><code>GenderAwareMarkupRenderer</code></a> calls this
+ method whenever its gender setting is changed. Otherwise, repeated
+ renderings with the same markup would always draw text that reflected the
+ active gender at the time the markup was first drawn or measured.
  <p>
  This method must never be called from <a href="../../../ca/cgjennings/layout/MarkupRenderer.html#handleUnknownTag-java.lang.String-java.lang.String-"><code>handleUnknownTag(java.lang.String, java.lang.String)</code></a>, as this
  is called while the markup is being processed (that is, while the cache
@@ -1705,9 +1714,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                         <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Rectangle2D.html?is-external=true" title="class or interface in java.awt.geom">Rectangle2D</a>&nbsp;r,
                         boolean&nbsp;render)</pre>
 <div class="block">Lay out the current markup text using the current styles and settings
-  within the specified rectangle. Returns the y-coordinate where the
-  next line would start. If render is false, does not draw the text
-  and returns the height of the text render area (one line less than the usual return value).</div>
+ within the specified rectangle. Returns the y-coordinate where the next
+ line would start. If render is false, does not draw the text and returns
+ the height of the text render area (one line less than the usual return
+ value).</div>
 </li>
 </ul>
 <a name="measure-java.awt.Graphics2D-java.awt.geom.Rectangle2D-">
@@ -1718,8 +1728,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>measure</h4>
 <pre>public&nbsp;double&nbsp;measure(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt">Graphics2D</a>&nbsp;g,
                       <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Rectangle2D.html?is-external=true" title="class or interface in java.awt.geom">Rectangle2D</a>&nbsp;r)</pre>
-<div class="block">Simulate rendering the current markup without drawing anything,
- returning the height that the text would have covered.</div>
+<div class="block">Simulate rendering the current markup without drawing anything, returning
+ the height that the text would have covered.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the layout height</dd>
@@ -1734,11 +1744,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>parseLibrary</h4>
 <pre>public&nbsp;void&nbsp;parseLibrary(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;library)</pre>
 <div class="block">Process a markup string, retaining only any definitions that are created.
-  Once some markup is processed (other than a library) all definitions
-  will be cleared again. Therefore, any required libraries must be added
-  before <i>each</i> call to <code>setMarkupText</code>.
-  <p>
-  This method clears the current markup text.</div>
+ Once some markup is processed (other than a library) all definitions will
+ be cleared again. Therefore, any required libraries must be added before
+ <i>each</i> call to <code>setMarkupText</code>.
+ <p>
+ This method clears the current markup text.</div>
 </li>
 </ul>
 <a name="parseMeasurement-java.lang.String-">
@@ -1748,13 +1758,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>parseMeasurement</h4>
 <pre>public static&nbsp;double&nbsp;parseMeasurement(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;p)</pre>
-<div class="block">Try to parse <code>p</code> as a measurement.
-  If is a valid measurement, returns
-  the measurement in inches. Otherwise, returns a negative number.
-  Measurements consist of a positive floating point number
-  optionally followed by a unit (with no intervening whitespace).
-  Valid units are cm, in (inches), and pt (points).
-  The default unit is cm.</div>
+<div class="block">Try to parse <code>p</code> as a measurement. If is a valid measurement,
+ returns the measurement in inches. Otherwise, returns a negative number.
+ Measurements consist of a positive floating point number optionally
+ followed by a unit (with no intervening whitespace). Valid units are cm,
+ in (inches), and pt (points). The default unit is cm.</div>
 </li>
 </ul>
 <a name="removeAllTags--">
@@ -1765,7 +1773,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>removeAllTags</h4>
 <pre>public&nbsp;void&nbsp;removeAllTags()</pre>
 <div class="block">Removes the style information associated with all tags. Break and heading
-  tags will still cause line breaks.</div>
+ tags will still cause line breaks.</div>
 </li>
 </ul>
 <a name="removeTag-java.lang.String-">
@@ -1775,8 +1783,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>removeTag</h4>
 <pre>public&nbsp;void&nbsp;removeTag(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tagName)</pre>
-<div class="block">If a style or replacement is associated with this tag, the style will be removed and
-  the tag will be treated as an unknown tag.</div>
+<div class="block">If a style or replacement is associated with this tag, the style will be
+ removed and the tag will be treated as an unknown tag.</div>
 </li>
 </ul>
 <a name="renderText-java.awt.Graphics2D-java.awt.geom.Rectangle2D-double-java.awt.font.FontRenderContext-boolean-boolean-">
@@ -1791,10 +1799,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                             <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/font/FontRenderContext.html?is-external=true" title="class or interface in java.awt.font">FontRenderContext</a>&nbsp;frc,
                             boolean&nbsp;measureOnly,
                             boolean&nbsp;restrictToSingleLine)</pre>
-<div class="block">Render the markup on a graphics context within a specified region. A y-coordinate indicating where a
-  subsequent line would begin is returned. If <code>measureOnly</code>
- is set to true, a draw is computed but no actual rendering performed. In this case, the return value
- is the height of the region needed to render the text.</div>
+<div class="block">Render the markup on a graphics context within a specified region. A
+ y-coordinate indicating where a subsequent line would begin is returned.
+ If <code>measureOnly</code> is set to true, a draw is computed but no
+ actual rendering performed. In this case, the return value is the height
+ of the region needed to render the text.</div>
 </li>
 </ul>
 <a name="replaceMacroParameters-java.lang.String-java.lang.String:A-java.lang.String-java.lang.String-">
@@ -1818,8 +1827,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>replaceTagWith</h4>
 <pre>protected&nbsp;void&nbsp;replaceTagWith(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;replacement)</pre>
-<div class="block">Replaces the tag currently being parsed with arbitrary text.
-  This text may contain tags, and if so, they will also be parsed.</div>
+<div class="block">Replaces the tag currently being parsed with arbitrary text. This text
+ may contain tags, and if so, they will also be parsed.</div>
 </li>
 </ul>
 <a name="replaceTagWithErrorMessage-java.lang.String-">
@@ -1876,8 +1885,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>setAutoclose</h4>
 <pre>public&nbsp;void&nbsp;setAutoclose(boolean&nbsp;autoclose)</pre>
 <div class="block">Set whether tags close themselves at the end of each line by default.
-  This is a default that can be changed within a markup block using
-  &lt;autoclose&gt; or &lt;manualclose&gt;.</div>
+ This is a default that can be changed within a markup block using
+ &lt;autoclose&gt; or &lt;manualclose&gt;.</div>
 </li>
 </ul>
 <a name="setBaseFile-java.io.File-">
@@ -1911,8 +1920,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>setDefaultStyle</h4>
 <pre>public&nbsp;void&nbsp;setDefaultStyle(<a href="../../../ca/cgjennings/layout/TextStyle.html" title="class in ca.cgjennings.layout">TextStyle</a>&nbsp;style)</pre>
-<div class="block">Set the default style applied to text before any tags are applied. It is permissible
-  to modify this style even if it was not created by the caller.</div>
+<div class="block">Set the default style applied to text before any tags are applied. It is
+ permissible to modify this style even if it was not created by the
+ caller.</div>
 </li>
 </ul>
 <a name="setDefinitionForTag-java.lang.String-java.lang.String-">
@@ -1921,8 +1931,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <ul class="blockList">
 <li class="blockList">
 <h4>setDefinitionForTag</h4>
-<pre>protected&nbsp;void&nbsp;setDefinitionForTag(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;replacement)</pre>
+<pre>public&nbsp;void&nbsp;setDefinitionForTag(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+                                <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;replacement)</pre>
 <div class="block">Create a new user-defined definition.</div>
 </li>
 </ul>
@@ -1966,10 +1976,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>setLineTightness</h4>
 <pre>public&nbsp;void&nbsp;setLineTightness(float&nbsp;tightness)</pre>
-<div class="block">Set the maximum line spacing value. Normal line spacing is 1.0; double spaced
-  would be 2.0. For tighter lines, use a value less than 1.0. This is a maximum value;
-  if the text fitting method allows line tightening, the actual line spacing may be less.
-  For minimal space between lines, use a tightnes of 0.</div>
+<div class="block">Set the maximum line spacing value. Normal line spacing is 1.0; double
+ spaced would be 2.0. For tighter lines, use a value less than 1.0. This
+ is a maximum value; if the text fitting method allows line tightening,
+ the actual line spacing may be less. For minimal space between lines, use
+ a tightnes of 0.</div>
 </li>
 </ul>
 <a name="setMarkBadBox-boolean-">
@@ -1979,7 +1990,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>setMarkBadBox</h4>
 <pre>public&nbsp;void&nbsp;setMarkBadBox(boolean&nbsp;mark)</pre>
-<div class="block">Set whether text that exceeds its bounding rectangle is marked with a red box.</div>
+<div class="block">Set whether text that exceeds its bounding rectangle is marked with a red
+ box.</div>
 </li>
 </ul>
 <a name="setMarkupText-java.lang.String-">
@@ -2009,9 +2021,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>setParametricStyleForTag</h4>
 <pre>public&nbsp;void&nbsp;setParametricStyleForTag(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tagName,
                                      <a href="../../../ca/cgjennings/layout/ParametricStyleFactory.html" title="interface in ca.cgjennings.layout">ParametricStyleFactory</a>&nbsp;factory)</pre>
-<div class="block">Set a parameter-based style for the given tag. When this tag occurs in the
-  markup text, the factory will be used to create the actual style based on
-  the tag's parameters.</div>
+<div class="block">Set a parameter-based style for the given tag. When this tag occurs in
+ the markup text, the factory will be used to create the actual style
+ based on the tag's parameters.</div>
 </li>
 </ul>
 <a name="setReplacementForTag-java.lang.String-java.lang.String-">
@@ -2022,8 +2034,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>setReplacementForTag</h4>
 <pre>public&nbsp;void&nbsp;setReplacementForTag(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tagName,
                                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;replacement)</pre>
-<div class="block">Set a replacement string to be associated with a particular tag. When this
-  tag occurs in the markup text, it will be replaced by the specified repalcement.</div>
+<div class="block">Set a replacement string to be associated with a particular tag. When
+ this tag occurs in the markup text, it will be replaced by the specified
+ repalcement.</div>
 </li>
 </ul>
 <a name="setScalingFractionalLimit-int-">
@@ -2044,7 +2057,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>setScalingLimit</h4>
 <pre>public&nbsp;void&nbsp;setScalingLimit(double&nbsp;factor)</pre>
-<div class="block">Limit the text scaling algorithm to scale down to no more than <code>factor</code> * 100% of the original size.</div>
+<div class="block">Limit the text scaling algorithm to scale down to no more than
+ <code>factor</code> * 100% of the original size.</div>
 </li>
 </ul>
 <a name="setStyleForTag-java.lang.String-ca.cgjennings.layout.TextStyle-">
@@ -2055,11 +2069,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>setStyleForTag</h4>
 <pre>public&nbsp;void&nbsp;setStyleForTag(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;tagName,
                            <a href="../../../ca/cgjennings/layout/TextStyle.html" title="class in ca.cgjennings.layout">TextStyle</a>&nbsp;style)</pre>
-<div class="block">Set the style associated with a non-parametric tag.
- If a style was set previously for this tag, it will be replaced by the
- new style.
- Do not include the angle brackets in the tag name.
- If a replacement was associated with this tag, the replacement will be removed.</div>
+<div class="block">Set the style associated with a non-parametric tag. If a style was set
+ previously for this tag, it will be replaced by the new style. Do not
+ include the angle brackets in the tag name. If a replacement was
+ associated with this tag, the replacement will be removed.</div>
 </li>
 </ul>
 <a name="setTabWidth-double-">
@@ -2089,7 +2102,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>setTextFitting</h4>
 <pre>public&nbsp;void&nbsp;setTextFitting(int&nbsp;fittingStyle)</pre>
 <div class="block">Set the fitting methods that will be used to shrink text that is too long
-  to fit in its rendering rectangle. One of FIT_NONE, FIT_TIGHTEN_LINE_SPACING, FIT_SCALE_TEXT, or FIT_BOTH.</div>
+ to fit in its rendering rectangle. One of FIT_NONE,
+ FIT_TIGHTEN_LINE_SPACING, FIT_SCALE_TEXT, or FIT_BOTH.</div>
 </li>
 </ul>
 <a name="setTightnessLimit-float-">
@@ -2099,7 +2113,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>setTightnessLimit</h4>
 <pre>public&nbsp;void&nbsp;setTightnessLimit(float&nbsp;tightnessLimit)</pre>
-<div class="block">Set the minimum tightness to use when using line tightening to reduce text size.</div>
+<div class="block">Set the minimum tightness to use when using line tightening to reduce
+ text size.</div>
 </li>
 </ul>
 <a name="toString--">
@@ -2155,6 +2170,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

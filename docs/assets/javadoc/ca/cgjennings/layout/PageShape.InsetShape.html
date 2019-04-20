@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -115,8 +117,8 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public static class <span class="typeNameLabel">PageShape.InsetShape</span>
 extends <a href="../../../ca/cgjennings/layout/PageShape.html" title="class in ca.cgjennings.layout">PageShape</a></pre>
-<div class="block">A <code>PageShape</code> that returns constant inset values regardless
- of the Y-position. This is sometimes useful when creating a
+<div class="block">A <code>PageShape</code> that returns constant inset values regardless of
+ the Y-position. This is sometimes useful when creating a
  <code>CompoundShape</code>.</div>
 </li>
 </ul>
@@ -188,22 +190,24 @@ extends <a href="../../../ca/cgjennings/layout/PageShape.html" title="class in c
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/PageShape.InsetShape.html#debugDraw-java.awt.Graphics2D-java.awt.geom.Rectangle2D-">debugDraw</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt">Graphics2D</a>&nbsp;g,
          <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Rectangle2D.html?is-external=true" title="class or interface in java.awt.geom">Rectangle2D</a>&nbsp;rect)</code>
-<div class="block">This function is called when the markup renderer is painting its
- text box for debugging purposes.</div>
+<div class="block">This function is called when the markup renderer is painting its text box
+ for debugging purposes.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/PageShape.InsetShape.html#getLeftInset-double-double-">getLeftInset</a></span>(double&nbsp;y1,
             double&nbsp;y2)</code>
-<div class="block">Return the narrowest (maximum) left edge inset between y1 and y2.</div>
+<div class="block">Return the narrowest (maximum) left edge inset between y1 and y2. y1 must
+ be &lt;= y2.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../ca/cgjennings/layout/PageShape.InsetShape.html#getRightInset-double-double-">getRightInset</a></span>(double&nbsp;y1,
              double&nbsp;y2)</code>
-<div class="block">Return the narrowest (maximum) right edge inset between y1 and y2.</div>
+<div class="block">Return the narrowest (maximum) right edge inset between y1 and y2. y1
+ must be &lt;= y2.</div>
 </td>
 </tr>
 </table>
@@ -255,13 +259,12 @@ extends <a href="../../../ca/cgjennings/layout/PageShape.html" title="class in c
 <pre>public&nbsp;void&nbsp;debugDraw(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt">Graphics2D</a>&nbsp;g,
                       <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Rectangle2D.html?is-external=true" title="class or interface in java.awt.geom">Rectangle2D</a>&nbsp;rect)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../ca/cgjennings/layout/PageShape.html#debugDraw-java.awt.Graphics2D-java.awt.geom.Rectangle2D-">PageShape</a></code></span></div>
-<div class="block">This function is called when the markup renderer is painting its
- text box for debugging purposes. It should draw lines or a shape to
- indicate how the margins are modified by this shape.
- The default implementation samples the left and right insets at
- regular intervals to construct an approximate shape. Subclasses
- are encouraged to override this to provide more efficient and/or
- more accurate implementations.</div>
+<div class="block">This function is called when the markup renderer is painting its text box
+ for debugging purposes. It should draw lines or a shape to indicate how
+ the margins are modified by this shape. The default implementation
+ samples the left and right insets at regular intervals to construct an
+ approximate shape. Subclasses are encouraged to override this to provide
+ more efficient and/or more accurate implementations.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../ca/cgjennings/layout/PageShape.html#debugDraw-java.awt.Graphics2D-java.awt.geom.Rectangle2D-">debugDraw</a></code>&nbsp;in class&nbsp;<code><a href="../../../ca/cgjennings/layout/PageShape.html" title="class in ca.cgjennings.layout">PageShape</a></code></dd>
@@ -280,8 +283,8 @@ extends <a href="../../../ca/cgjennings/layout/PageShape.html" title="class in c
 <pre>public&nbsp;double&nbsp;getLeftInset(double&nbsp;y1,
                            double&nbsp;y2)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../ca/cgjennings/layout/PageShape.html#getLeftInset-double-double-">PageShape</a></code></span></div>
-<div class="block">Return the narrowest (maximum) left edge inset between y1 and y2.
- y1 must be &lt;= y2.</div>
+<div class="block">Return the narrowest (maximum) left edge inset between y1 and y2. y1 must
+ be &lt;= y2.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../ca/cgjennings/layout/PageShape.html#getLeftInset-double-double-">getLeftInset</a></code>&nbsp;in class&nbsp;<code><a href="../../../ca/cgjennings/layout/PageShape.html" title="class in ca.cgjennings.layout">PageShape</a></code></dd>
@@ -297,8 +300,8 @@ extends <a href="../../../ca/cgjennings/layout/PageShape.html" title="class in c
 <pre>public&nbsp;double&nbsp;getRightInset(double&nbsp;y1,
                             double&nbsp;y2)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../ca/cgjennings/layout/PageShape.html#getRightInset-double-double-">PageShape</a></code></span></div>
-<div class="block">Return the narrowest (maximum) right edge inset between y1 and y2.
- y1 must be &lt;= y2.</div>
+<div class="block">Return the narrowest (maximum) right edge inset between y1 and y2. y1
+ must be &lt;= y2.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../ca/cgjennings/layout/PageShape.html#getRightInset-double-double-">getRightInset</a></code>&nbsp;in class&nbsp;<code><a href="../../../ca/cgjennings/layout/PageShape.html" title="class in ca.cgjennings.layout">PageShape</a></code></dd>
@@ -325,6 +328,8 @@ extends <a href="../../../ca/cgjennings/layout/PageShape.html" title="class in c
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

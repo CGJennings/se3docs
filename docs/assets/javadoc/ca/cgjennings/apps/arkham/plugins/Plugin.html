@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -183,8 +185,8 @@ var activeTableTab = "activeTableTab";
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#getPluginName--">getPluginName</a></span>()</code>
-<div class="block">Returns the name that should be shown to the user for this plug-in, ideally
- in the UI locale.</div>
+<div class="block">Returns the name that should be shown to the user for this plug-in,
+ ideally in the UI locale.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -196,15 +198,15 @@ var activeTableTab = "activeTableTab";
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>float</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#getPluginVersion--">getPluginVersion</a></span>()</code>
-<div class="block">Returns a number representing the version or release number
- of the plug-in.</div>
+<div class="block">Returns a number representing the version or release number of the
+ plug-in.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#getRepresentativeImage--">getRepresentativeImage</a></span>()</code>
-<div class="block">Returns an image that may be used to represent the plug-in on a menu
- or toolbar.</div>
+<div class="block">Returns an image that may be used to represent the plug-in on a menu or
+ toolbar.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -217,8 +219,8 @@ var activeTableTab = "activeTableTab";
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#isPluginShowing--">isPluginShowing</a></span>()</code>
-<div class="block">Returns <code>true</code> if this plug-in's interface is currently showing,
- or, if it has no interface, if it is currently running.</div>
+<div class="block">Returns <code>true</code> if this plug-in's interface is currently
+ showing, or, if it has no interface, if it is currently running.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
@@ -264,23 +266,26 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>ACTIVATED</h4>
 <pre>static final&nbsp;int ACTIVATED</pre>
-<div class="block">A plug-in type value.
- An activated plug-in adds a new command to the application. The command
- will be made accessible to the user by adding a menu item to the
+<div class="block">A plug-in type value. An activated plug-in adds a new command to the
+ application. The command will be made accessible to the user by adding a
+ menu item to the
  <b>Toolbox</b> menu with the following characteristics:
  <ul>
- <li>The menu item's label text will be the value of <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#getPluginName--"><code>getPluginName()</code></a>.
- <li>The menu item's tool tip text will be the value of <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#getPluginDescription--"><code>getPluginDescription()</code></a>.
- <li>If the plug-in has a representative image (and the user enables this feature),
-     then that image will be used to create an icon for the menu item.
- <li>If <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#isPluginUsable--"><code>isPluginUsable()</code></a> returns <code>true</code>, the item will be enabled;
-     otherwise disabled.
- <li>If the plug-in is showing, then the item will have a check mark, otherwise
-     it will not.
- <li>If the menu item is selected by the user, then the plug-in will either be shown or hidden
-     depending on whether it is currently shown. That is, code similar to the
-     following will be executed:<br>
-     <code>showPlugin( pluginContext, !isPluginShowing() )</code>
+ <li>The menu item's label text will be the value of
+ <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#getPluginName--"><code>getPluginName()</code></a>.
+ <li>The menu item's tool tip text will be the value of
+ <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#getPluginDescription--"><code>getPluginDescription()</code></a>.
+ <li>If the plug-in has a representative image (and the user enables this
+ feature), then that image will be used to create an icon for the menu
+ item.
+ <li>If <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#isPluginUsable--"><code>isPluginUsable()</code></a> returns <code>true</code>, the item will
+ be enabled; otherwise disabled.
+ <li>If the plug-in is showing, then the item will have a check mark,
+ otherwise it will not.
+ <li>If the menu item is selected by the user, then the plug-in will
+ either be shown or hidden depending on whether it is currently shown.
+ That is, code similar to the following will be executed:<br>
+ <code>showPlugin( pluginContext, !isPluginShowing() )</code>
  </ul></div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -295,24 +300,24 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>EXTENSION</h4>
 <pre>static final&nbsp;int EXTENSION</pre>
-<div class="block">A plug-in type value.
- Extension plug-ins are started exactly once, during application startup
- and before the <a href="../../../../../gamedata/Lock.html" title="class in gamedata"><code>game database</code></a> is locked.
- Because of this, an extension is allowed to extend the database by,
- for example, adding new games or component types.
+<div class="block">A plug-in type value. Extension plug-ins are started exactly once, during
+ application startup and before the <a href="../../../../../gamedata/Lock.html" title="class in gamedata"><code>game database</code></a> is
+ locked. Because of this, an extension is allowed to extend the database
+ by, for example, adding new games or component types.
 
- <p>Extensions are never "shown" (via <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#showPlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-boolean-"><code>showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a>);
- they should do all of their work when <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#initializePlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-"><code>initializePlugin(ca.cgjennings.apps.arkham.plugins.PluginContext)</code></a>
- is called. An extension's <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#unloadPlugin--"><code>unloadPlugin()</code></a> method will be
- called at shutdown (unless the program terminates abnormally).
- This allows the extension to release any system
- resources that it may be holding or perform other cleanup;
- unlike an <code>INJECTED</code> plug-in, it is not expected to
+ <p>
+ Extensions are never "shown" (via <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#showPlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-boolean-"><code>showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a>); they should do
+ all of their work when <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#initializePlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-"><code>initializePlugin(ca.cgjennings.apps.arkham.plugins.PluginContext)</code></a> is called. An
+ extension's <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#unloadPlugin--"><code>unloadPlugin()</code></a> method will be called at shutdown
+ (unless the program terminates abnormally). This allows the extension to
+ release any system resources that it may be holding or perform other
+ cleanup; unlike an <code>INJECTED</code> plug-in, it is not expected to
  reverse the changes that it makes.
 
- <p>To load successfully, an extension plug-in must both identify
- itself by the <code>EXTENSION</code> type and be packaged in a
- bundle with the <tt>.seext</tt> file name extension.</div>
+ <p>
+ To load successfully, an extension plug-in must both identify itself by
+ the <code>EXTENSION</code> type and be packaged in a bundle with the
+ <tt>.seext</tt> file name extension.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../constant-values.html#ca.cgjennings.apps.arkham.plugins.Plugin.EXTENSION">Constant Field Values</a></dd>
@@ -326,24 +331,27 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>INJECTED</h4>
 <pre>static final&nbsp;int INJECTED</pre>
-<div class="block">A plug-in type value. An <code>INJECTED</code> plug-in fills a role between
- the <code>ACTIVATED</code> and <code>EXTENSION</code> types.
- Like an <code>ACTIVATED</code> plug-in, it is loaded and unloaded on demand.
+<div class="block">A plug-in type value. An <code>INJECTED</code> plug-in fills a role
+ between the <code>ACTIVATED</code> and <code>EXTENSION</code> types. Like
+ an <code>ACTIVATED</code> plug-in, it is loaded and unloaded on demand.
  However, like an <code>EXTENSION</code> plug-in, there is no explicit
- predetermined means to activate the effect (i.e., there is no <b>Toolbox</b>
- menu item). Either the plug-in adds its own explicit activation method(s),
- or the plug-in is activated passively.
+ predetermined means to activate the effect (i.e., there is no
+ <b>Toolbox</b>
+ menu item). Either the plug-in adds its own explicit activation
+ method(s), or the plug-in is activated passively.
 
- <p>This type of plug-in is typically used in the following cases:
+ <p>
+ This type of plug-in is typically used in the following cases:
  <ul>
  <li>Modifications are being made that are reversible (and do not require
-     the game database to be unlocked).
+ the game database to be unlocked).
  <li>New commands or other features are being added, but they will be
-     accessed by means other than the <b>Toolbox</b> menu. (A common
-     example being new commands for the project system.)
+ accessed by means other than the <b>Toolbox</b> menu. (A common example
+ being new commands for the project system.)
  </ul>
 
- <p>When loaded, the <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#showPlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-boolean-"><code>showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a> method will be called once with
+ <p>
+ When loaded, the <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#showPlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-boolean-"><code>showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a> method will be called once with
  <code>show == true</code>, at which time it should install its
  modifications. These should continue to take effect until
  <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#unloadPlugin--"><code>unloadPlugin()</code></a> is called, at which time the modifications should
@@ -370,20 +378,21 @@ var activeTableTab = "activeTableTab";
 <h4>getDefaultAcceleratorKey</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getDefaultAcceleratorKey()</pre>
 <div class="block">Return a string that describes the key stroke that is the preferred
- default accelerator key for this plug-in. In most cases, you should return
- <code>null</code> for no default accelerator. The user can always assign
- an accelerator key of their choice to an <code>ACTIVATED</code> plug-in
- through the plug-in manager dialog.
+ default accelerator key for this plug-in. In most cases, you should
+ return <code>null</code> for no default accelerator. The user can always
+ assign an accelerator key of their choice to an <code>ACTIVATED</code>
+ plug-in through the plug-in manager dialog.
  <p>
  The format of the string is similar to that used by
  <code>javax.swing.KeyStroke</code>, but the special modifier
  <tt>menu</tt> may be used to describe the standard menu accelerator
- modifier on this platform (Ctrl, Command, etc.). An invalid descriptor
- is silently ignored. There is no guarantee that the requested accelerator
- will actually be assigned. (For example, it might already be in use
- by another command.)
+ modifier on this platform (Ctrl, Command, etc.). An invalid descriptor is
+ silently ignored. There is no guarantee that the requested accelerator
+ will actually be assigned. (For example, it might already be in use by
+ another command.)
 
- <p><b>Note:</b> An accelerator key is only meaningful for
+ <p>
+ <b>Note:</b> An accelerator key is only meaningful for
  <code>ACTIVATED</code> plug-ins.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -398,9 +407,9 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>getPluginDescription</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getPluginDescription()</pre>
-<div class="block">Returns a description that can be shown to the user for this plug-in.
- The returned string will be used to describe the purpose of the plug-in
- to the user. This should be a single short sentence without any terminating
+<div class="block">Returns a description that can be shown to the user for this plug-in. The
+ returned string will be used to describe the purpose of the plug-in to
+ the user. This should be a single short sentence without any terminating
  punctuation, such as "Selects all lines on the current deck page".</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -415,16 +424,14 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>getPluginName</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getPluginName()</pre>
-<div class="block">Returns the name that should be shown to the user for this plug-in, ideally
- in the UI locale.
- This should be a short name that describes the plug-in's purpose
- in three words or less.
- If this is an <code>ACTIVATED</code> plug-in, the returned value should ideally be
- a verb phrase that describes the effect of activating the plug-in,
- such as "Select All Lines".
- It should not include extraneous information, such as the author's name;
- this kind of information can be included in the description string or,
- ideally, in the plug-in's catalogue description.</div>
+<div class="block">Returns the name that should be shown to the user for this plug-in,
+ ideally in the UI locale. This should be a short name that describes the
+ plug-in's purpose in three words or less. If this is an
+ <code>ACTIVATED</code> plug-in, the returned value should ideally be a
+ verb phrase that describes the effect of activating the plug-in, such as
+ "Select All Lines". It should not include extraneous information, such as
+ the author's name; this kind of information can be included in the
+ description string or, ideally, in the plug-in's catalogue description.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a string that identifies this plug-in for end users</dd>
@@ -442,8 +449,8 @@ var activeTableTab = "activeTableTab";
  <code>ACTIVATED</code>, <code>INJECTED</code>, or <code>EXTENSION</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a plug-in type that describes how the plug-in should be integrated
-    with Strange Eons</dd>
+<dd>a plug-in type that describes how the plug-in should be
+ integrated with Strange Eons</dd>
 </dl>
 </li>
 </ul>
@@ -454,13 +461,13 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>getPluginVersion</h4>
 <pre>float&nbsp;getPluginVersion()</pre>
-<div class="block">Returns a number representing the version or release number
- of the plug-in. This is primarily for the user's information;
- the application only compares versions using the date of the
- <a href="../../../../../ca/cgjennings/apps/arkham/plugins/catalog/CatalogID.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog"><code>CatalogID</code></a>.</div>
+<div class="block">Returns a number representing the version or release number of the
+ plug-in. This is primarily for the user's information; the application
+ only compares versions using the date of the <a href="../../../../../ca/cgjennings/apps/arkham/plugins/catalog/CatalogID.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog"><code>CatalogID</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a number that corresponds to the plug-in's internal version number</dd>
+<dd>a number that corresponds to the plug-in's internal version
+ number</dd>
 </dl>
 </li>
 </ul>
@@ -471,11 +478,10 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>getRepresentativeImage</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;getRepresentativeImage()</pre>
-<div class="block">Returns an image that may be used to represent the plug-in on a menu
- or toolbar. Strange Eons may resize the image to fit available space,
- and may modify it to suit the context of use.
- Return <tt>null</tt> to indicate that the plug-in does not have a
- representative image.</div>
+<div class="block">Returns an image that may be used to represent the plug-in on a menu or
+ toolbar. Strange Eons may resize the image to fit available space, and
+ may modify it to suit the context of use. Return <tt>null</tt> to
+ indicate that the plug-in does not have a representative image.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>an image that can be used as a menu item icon</dd>
@@ -490,38 +496,36 @@ var activeTableTab = "activeTableTab";
 <h4>initializePlugin</h4>
 <pre>boolean&nbsp;initializePlugin(<a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins">PluginContext</a>&nbsp;context)</pre>
 <div class="block">This method will be called once for each registered plug-in before any
- other methods are called.
- It allows the plug-in to perform any required initialization prior to
- the plug-in being shown.
- If initialization succeeds, it should return <code>true</code>.
- Otherwise, the plug-in will not be made available to the user.
- If this method returns <code>false</code>, a warning is logged but
- no other action is taken.
+ other methods are called. It allows the plug-in to perform any required
+ initialization prior to the plug-in being shown. If initialization
+ succeeds, it should return <code>true</code>. Otherwise, the plug-in will
+ not be made available to the user. If this method returns
+ <code>false</code>, a warning is logged but no other action is taken.
  This allows the plug-in the opportunity to display its own error message.
- If this method throws an exception, a dialog is displayed that
- will include the message text of the exception (if any).
+ If this method throws an exception, a dialog is displayed that will
+ include the message text of the exception (if any).
  <p>
  Sometimes a plug-in is instantiated only in order to determine its name,
  description, version, and type. In such cases, the plug-in's
  <code>initializePlugin</code> method is still called, so that a localized
  plug-in can provide a name and description in the appropriate language.
- Plug-ins that do not wish to perform a complete initialization in such cases
- can detect when the plug-in
- is being created for information purposes only by calling the
- <a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html#isInformationProbe--"><code>PluginContext.isInformationProbe()</code></a> method of the provided
- <code>context</code>.
+ Plug-ins that do not wish to perform a complete initialization in such
+ cases can detect when the plug-in is being created for information
+ purposes only by calling the <a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html#isInformationProbe--"><code>PluginContext.isInformationProbe()</code></a>
+ method of the provided <code>context</code>.
  <p>
  <b>Note:</b> This method will never be called more than once for a given
- <i>instance</i> of a plug-in class.
- However, multiple instances of the same plug-in class are often created.
- Therefore, you should not assume that this method will only be called
- once per session (unless it is an <code>EXTENSION</code>).</div>
+ <i>instance</i> of a plug-in class. However, multiple instances of the
+ same plug-in class are often created. Therefore, you should not assume
+ that this method will only be called once per session (unless it is an
+ <code>EXTENSION</code>).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>context</code> - a <a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>PluginContext</code></a> instance that can be accessed during initialization</dd>
+<dd><code>context</code> - a <a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>PluginContext</code></a> instance that can be accessed
+ during initialization</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the plug-in was initialized; <code>false</code> if
-     initialization failed</dd>
+<dd><code>true</code> if the plug-in was initialized;
+ <code>false</code> if initialization failed</dd>
 </dl>
 </li>
 </ul>
@@ -532,8 +536,8 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <h4>isPluginShowing</h4>
 <pre>boolean&nbsp;isPluginShowing()</pre>
-<div class="block">Returns <code>true</code> if this plug-in's interface is currently showing,
- or, if it has no interface, if it is currently running.
+<div class="block">Returns <code>true</code> if this plug-in's interface is currently
+ showing, or, if it has no interface, if it is currently running.
  <p>
  If the plug-in blocks the event thread when shown (for example, if it
  displays a modal dialog), then this method can simply return
@@ -554,21 +558,23 @@ var activeTableTab = "activeTableTab";
 <h4>isPluginUsable</h4>
 <pre>boolean&nbsp;isPluginUsable()</pre>
 <div class="block">Returns <code>true</code> if it is currently valid to activate this
- plug-in by calling <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#showPlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-boolean-"><code>showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a>. For example, a plug-in that
- only works on components from a certain game might return <code>false</code>
+ plug-in by calling <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#showPlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-boolean-"><code>showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a>. For example, a plug-in that only
+ works on components from a certain game might return <code>false</code>
  if the currently edited component is not from that game.
 
- <p><b>Note:</b> Plug-ins must still check for any conditions
- that are required to hold in <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#showPlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-boolean-"><code>showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a>. The plug-in may be
- activated without checking this method, or the state may change
- between the time that this method is called and the time the
- plug-in is activated.
+ <p>
+ <b>Note:</b> Plug-ins must still check for any conditions that are
+ required to hold in <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#showPlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-boolean-"><code>showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a>. The plug-in may be activated
+ without checking this method, or the state may change between the time
+ that this method is called and the time the plug-in is activated.
 
- <p><b>Scripted Plug-in Notes:</b> The default implementation returns
+ <p>
+ <b>Scripted Plug-in Notes:</b> The default implementation returns
  <code>true</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the plug-in can be successfully and meaningfully activated</dd>
+<dd><code>true</code> if the plug-in can be successfully and
+ meaningfully activated</dd>
 </dl>
 </li>
 </ul>
@@ -580,27 +586,28 @@ var activeTableTab = "activeTableTab";
 <h4>showPlugin</h4>
 <pre>void&nbsp;showPlugin(<a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins">PluginContext</a>&nbsp;context,
                 boolean&nbsp;show)</pre>
-<div class="block">Show (activate) or hide (deactivate) the plug-in.
- This method is most often called when the user activates the plug-in's
- menu item.
+<div class="block">Show (activate) or hide (deactivate) the plug-in. This method is most
+ often called when the user activates the plug-in's menu item.
  <p>
  Typically, the value of <code>show</code> will be the opposite of the
- value currently returned by <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#isPluginShowing--"><code>isPluginShowing()</code></a>.
- If the plug-in uses a modeless dialog box, then <code>isPluginShowing</code>
- should thus return <code>true</code> when the dialog is showing.
+ value currently returned by <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#isPluginShowing--"><code>isPluginShowing()</code></a>. If the plug-in uses
+ a modeless dialog box, then <code>isPluginShowing</code> should thus
+ return <code>true</code> when the dialog is showing.
  <p>
  If a modal dialog is shown, or if an operation that blocks the calling
  thread is performed, then it will not be possible for the user to
- activate the command again until this method returns.
- In that case, <code>isPluginShowing</code> can be implemented to
- simply return <code>false</code>.
+ activate the command again until this method returns. In that case,
+ <code>isPluginShowing</code> can be implemented to simply return
+ <code>false</code>.
  <p>
- <b>Notes:</b> This method is never called for <code>EXTENSION</code> plug-ins. It is
- only called once, after initialization, for <code>INJECTED</code> plug-ins.</div>
+ <b>Notes:</b> This method is never called for <code>EXTENSION</code>
+ plug-ins. It is only called once, after initialization, for
+ <code>INJECTED</code> plug-ins.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>context</code> - a valid <a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>PluginContext</code></a></dd>
-<dd><code>show</code> - if <code>true</code> show/start the plug-in, otherwise, hide/cancel it</dd>
+<dd><code>show</code> - if <code>true</code> show/start the plug-in, otherwise,
+ hide/cancel it</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#isPluginShowing--"><code>isPluginShowing()</code></a></dd>
 </dl>
@@ -614,20 +621,21 @@ var activeTableTab = "activeTableTab";
 <h4>unloadPlugin</h4>
 <pre>void&nbsp;unloadPlugin()</pre>
 <div class="block">This method is called when the plug-in is about to be unloaded to give
- the plug-in the chance to release any resources it may be holding.
- It will be called prior to ending the application, or whenever the
- plug-in will be stopped and restarted.
+ the plug-in the chance to release any resources it may be holding. It
+ will be called prior to ending the application, or whenever the plug-in
+ will be stopped and restarted.
  <p>
  <b>Notes:</b>
  <ol>
- <li>It is not guaranteed that this method will be called if the
- program terminates abnormally.
- <li>This method will never be called more than once for a given <i>instance</i> of
- a plug-in. (More than one instance of an <code>ACTIVATED</code> or
- <code>INJECTED</code> plug-in may be created during a session.)
+ <li>It is not guaranteed that this method will be called if the program
+ terminates abnormally.
+ <li>This method will never be called more than once for a given
+ <i>instance</i> of a plug-in. (More than one instance of an
+ <code>ACTIVATED</code> or <code>INJECTED</code> plug-in may be created
+ during a session.)
  <li>For <code>ACTIVATED</code> plug-ins that are currently showing,
- <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#showPlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-boolean-"><code>showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a> will be called with <code>false</code>
- (in order to hide the plug-in) before this method is called.
+ <a href="../../../../../ca/cgjennings/apps/arkham/plugins/Plugin.html#showPlugin-ca.cgjennings.apps.arkham.plugins.PluginContext-boolean-"><code>showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a> will be called with <code>false</code> (in order to
+ hide the plug-in) before this method is called.
  </ol></div>
 </li>
 </ul>
@@ -651,6 +659,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

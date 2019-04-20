@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -244,8 +246,7 @@ extends <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Tile.html
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Shape.html?is-external=true" title="class or interface in java.awt">Shape</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/RotatableTile.html#getOutline--">getOutline</a></span>()</code>
-<div class="block">Return a <code>Shape</code> that corresponds to the
- outline of this item.</div>
+<div class="block">Return a <code>Shape</code> that corresponds to the outline of this item.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -438,12 +439,12 @@ extends <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Tile.html
 <h4>getDragHandles</h4>
 <pre>public&nbsp;<a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/DragHandle.html" title="class in ca.cgjennings.apps.arkham.deck.item">DragHandle</a>[]&nbsp;getDragHandles()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractItem.html#getDragHandles--">AbstractItem</a></code></span></div>
-<div class="block">Returns an array of the custom <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/DragHandle.html" title="class in ca.cgjennings.apps.arkham.deck.item"><code>DragHandle</code></a>s for this item.
- If the item has no handles, returns <code>null</code>.
- <p>Concrete subclasses should create an array of handles on demand and
- cache them in the <code>dragHandles</code> field in order to ensure
- that handles are not shared between copies of the item.
- Example:
+<div class="block">Returns an array of the custom <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/DragHandle.html" title="class in ca.cgjennings.apps.arkham.deck.item"><code>DragHandle</code></a>s for this item. If the
+ item has no handles, returns <code>null</code>.
+ <p>
+ Concrete subclasses should create an array of handles on demand and cache
+ them in the <code>dragHandles</code> field in order to ensure that
+ handles are not shared between copies of the item. Example:
  <pre>
  public DragHandle[] getDragHandles() {
      if( dragHandles == null ) {
@@ -458,7 +459,8 @@ extends <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Tile.html
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractItem.html#getDragHandles--">getDragHandles</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractItem.html" title="class in ca.cgjennings.apps.arkham.deck.item">AbstractItem</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>an array of drag handles that can be used to manipulate the item, or <code>null</code></dd>
+<dd>an array of drag handles that can be used to manipulate the item,
+ or <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -470,10 +472,10 @@ extends <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Tile.html
 <h4>getOutline</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Shape.html?is-external=true" title="class or interface in java.awt">Shape</a>&nbsp;getOutline()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#getOutline--">PageItem</a></code></span></div>
-<div class="block">Return a <code>Shape</code> that corresponds to the
- outline of this item. In the simplest case, this can return the same
- result as <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#getRectangle--"><code>PageItem.getRectangle()</code></a>. If precise geometry is available
- for the item, then this should return a more accurate bounding shape.</div>
+<div class="block">Return a <code>Shape</code> that corresponds to the outline of this item.
+ In the simplest case, this can return the same result as
+ <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#getRectangle--"><code>PageItem.getRectangle()</code></a>. If precise geometry is available for the item,
+ then this should return a more accurate bounding shape.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#getOutline--">getOutline</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a></code></dd>
@@ -537,12 +539,11 @@ extends <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Tile.html
                   <a href="../../../../../../ca/cgjennings/apps/arkham/sheet/RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target,
                   double&nbsp;renderResolutionHint)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#paint-java.awt.Graphics2D-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-">PageItem</a></code></span></div>
-<div class="block">Paint this item at its current location.
- The graphics context will be scaled so that 1 unit represents 1 point.
- The resolution hint is a suggestion as to the resolution the
- item should be rendered at if it must be converted to a
- bitmap before being drawn. It may or may not represent the actual
- resolution of the output target.</div>
+<div class="block">Paint this item at its current location. The graphics context will be
+ scaled so that 1 unit represents 1 point. The resolution hint is a
+ suggestion as to the resolution the item should be rendered at if it must
+ be converted to a bitmap before being drawn. It may or may not represent
+ the actual resolution of the output target.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#paint-java.awt.Graphics2D-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-">paint</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a></code></dd>
@@ -618,6 +619,8 @@ extends <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Tile.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

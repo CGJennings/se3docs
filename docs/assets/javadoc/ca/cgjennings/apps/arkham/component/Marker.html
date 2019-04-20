@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -182,16 +184,17 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/component/AbstractGame
                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;imageKey)</code>&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="../../../../../ca/cgjennings/apps/arkham/AbstractGameComponentEditor.html" title="class in ca.cgjennings.apps.arkham">AbstractGameComponentEditor</a></code></td>
+<td class="colFirst"><code><a href="../../../../../ca/cgjennings/apps/arkham/AbstractGameComponentEditor.html" title="class in ca.cgjennings.apps.arkham">AbstractGameComponentEditor</a>&lt;<a href="../../../../../ca/cgjennings/apps/arkham/component/Marker.html" title="class in ca.cgjennings.apps.arkham.component">Marker</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/component/Marker.html#createDefaultEditor--">createDefaultEditor</a></span>()</code>
 <div class="block">Creates an editor capable of modifying this component.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../ca/cgjennings/apps/arkham/sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sheet</a>[]</code></td>
+<td class="colFirst"><code><a href="../../../../../ca/cgjennings/apps/arkham/sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sheet</a>&lt;<a href="../../../../../ca/cgjennings/apps/arkham/component/Marker.html" title="class in ca.cgjennings.apps.arkham.component">Marker</a>&gt;[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/component/Marker.html#createDefaultSheets--">createDefaultSheets</a></span>()</code>
 <div class="block">Creates a set of default sheets that are compatible with this component
- and associates them with the component as if by calling <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#setSheets-ca.cgjennings.apps.arkham.sheet.Sheet:A-"><code>GameComponent.setSheets(ca.cgjennings.apps.arkham.sheet.Sheet[])</code></a>.</div>
+ and associates them with the component as if by calling
+ <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#setSheets-ca.cgjennings.apps.arkham.sheet.Sheet:A-"><code>GameComponent.setSheets(ca.cgjennings.apps.arkham.sheet.Sheet[])</code></a>.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -201,8 +204,8 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/component/AbstractGame
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/component/Marker.html#getBleedMargin--">getBleedMargin</a></span>()</code>
-<div class="block">Returns the bleed margin for this marker, which is determined
- by the current silhouette.</div>
+<div class="block">Returns the bleed margin for this marker, which is determined by the
+ current silhouette.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -296,12 +299,13 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/component/AbstractGame
 <pre>public&nbsp;void&nbsp;clearAll()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/AbstractGameComponent.html#clearAll--">AbstractGameComponent</a></code></span></div>
 <div class="block">Set all character data to a neutral, blank state. Marks all character
-  sheets as changed, as well as marking the character unsaved. *
-        /**
- Sets this component's content to an empty state. Typically, this is called
- from an editor when the user wishes to erase their work and start over.
+ sheets as changed, as well as marking the character unsaved. * /**
+ Sets this component's content to an empty state. Typically, this is
+ called from an editor when the user wishes to erase their work and start
+ over.
 
- <p>The base class implementation w</div>
+ <p>
+ The base class implementation w</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#clearAll--">clearAll</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></dd>
@@ -330,13 +334,13 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/component/AbstractGame
 <ul class="blockList">
 <li class="blockList">
 <h4>createDefaultEditor</h4>
-<pre>public&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/AbstractGameComponentEditor.html" title="class in ca.cgjennings.apps.arkham">AbstractGameComponentEditor</a>&nbsp;createDefaultEditor()</pre>
+<pre>public&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/AbstractGameComponentEditor.html" title="class in ca.cgjennings.apps.arkham">AbstractGameComponentEditor</a>&lt;<a href="../../../../../ca/cgjennings/apps/arkham/component/Marker.html" title="class in ca.cgjennings.apps.arkham.component">Marker</a>&gt;&nbsp;createDefaultEditor()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#createDefaultEditor--">GameComponent</a></code></span></div>
 <div class="block">Creates an editor capable of modifying this component.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a new editor that can be added to the application window
-     to edit this component</dd>
+<dd>a new editor that can be added to the application window to edit
+ this component</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/StrangeEonsAppWindow.html#addEditor-ca.cgjennings.apps.arkham.StrangeEonsEditor-"><code>StrangeEonsAppWindow.addEditor(ca.cgjennings.apps.arkham.StrangeEonsEditor)</code></a></dd>
 </dl>
@@ -348,12 +352,12 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/component/AbstractGame
 <ul class="blockList">
 <li class="blockList">
 <h4>createDefaultSheets</h4>
-<pre>public&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sheet</a>[]&nbsp;createDefaultSheets()</pre>
+<pre>public&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sheet</a>&lt;<a href="../../../../../ca/cgjennings/apps/arkham/component/Marker.html" title="class in ca.cgjennings.apps.arkham.component">Marker</a>&gt;[]&nbsp;createDefaultSheets()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#createDefaultSheets--">GameComponent</a></code></span></div>
 <div class="block">Creates a set of default sheets that are compatible with this component
- and associates them with the component as if by calling <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#setSheets-ca.cgjennings.apps.arkham.sheet.Sheet:A-"><code>GameComponent.setSheets(ca.cgjennings.apps.arkham.sheet.Sheet[])</code></a>.
- As with <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#getSheets--"><code>GameComponent.getSheets()</code></a>, the returned sheets are owned by the component
- and must not be modified.</div>
+ and associates them with the component as if by calling
+ <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#setSheets-ca.cgjennings.apps.arkham.sheet.Sheet:A-"><code>GameComponent.setSheets(ca.cgjennings.apps.arkham.sheet.Sheet[])</code></a>. As with <a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#getSheets--"><code>GameComponent.getSheets()</code></a>, the returned sheets are
+ owned by the component and must not be modified.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html#createDefaultSheets--">createDefaultSheets</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></dd>
@@ -380,8 +384,8 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/component/AbstractGame
 <li class="blockList">
 <h4>getBleedMargin</h4>
 <pre>public&nbsp;double&nbsp;getBleedMargin()</pre>
-<div class="block">Returns the bleed margin for this marker, which is determined
- by the current silhouette.</div>
+<div class="block">Returns the bleed margin for this marker, which is determined by the
+ current silhouette.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the current bleed margin</dd>
@@ -489,6 +493,8 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/component/AbstractGame
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

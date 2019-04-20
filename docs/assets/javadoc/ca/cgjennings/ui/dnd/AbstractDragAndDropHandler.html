@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -111,12 +113,13 @@ var activeTableTab = "activeTableTab";
 <pre>public abstract class <span class="typeNameLabel">AbstractDragAndDropHandler&lt;T&gt;</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
 implements <a href="../../../../ca/cgjennings/ui/dnd/DragHandler.html" title="interface in ca.cgjennings.ui.dnd">DragHandler</a>&lt;T&gt;, <a href="../../../../ca/cgjennings/ui/dnd/DropHandler.html" title="interface in ca.cgjennings.ui.dnd">DropHandler</a>&lt;T&gt;</pre>
-<div class="block">An abstract base class that combines a <a href="../../../../ca/cgjennings/ui/dnd/DragHandler.html" title="interface in ca.cgjennings.ui.dnd"><code>DragHandler</code></a> and a <a href="../../../../ca/cgjennings/ui/dnd/DropHandler.html" title="interface in ca.cgjennings.ui.dnd"><code>DropHandler</code></a>
- in a single object. This can be a useful basis for building interactions with
- reasonably simple drag logic, such as dragging and dropping between two containers.
- For convenience, the method <a href="../../../../ca/cgjennings/ui/dnd/AbstractDragAndDropHandler.html#acceptDrop-ca.cgjennings.ui.dnd.DragManager-javax.swing.JComponent-ca.cgjennings.ui.dnd.DragToken-javax.swing.JComponent-java.awt.Point-"><code>acceptDrop</code></a> returns <code>true</code>;
- the methods <a href="../../../../ca/cgjennings/ui/dnd/AbstractDragAndDropHandler.html#dragFinished-ca.cgjennings.ui.dnd.DragManager-javax.swing.JComponent-ca.cgjennings.ui.dnd.DragToken-javax.swing.JComponent-"><code>dragFinished</code></a>, <a href="../../../../ca/cgjennings/ui/dnd/AbstractDragAndDropHandler.html#dragEnter-ca.cgjennings.ui.dnd.DragManager-javax.swing.JComponent-ca.cgjennings.ui.dnd.DragToken-javax.swing.JComponent-java.awt.Point-"><code>dragEnter</code></a>, 
- <a href="../../../../ca/cgjennings/ui/dnd/AbstractDragAndDropHandler.html#dragExit-ca.cgjennings.ui.dnd.DragManager-javax.swing.JComponent-ca.cgjennings.ui.dnd.DragToken-javax.swing.JComponent-"><code>dragExit</code></a>, and <a href="../../../../ca/cgjennings/ui/dnd/AbstractDragAndDropHandler.html#dragMove-ca.cgjennings.ui.dnd.DragManager-javax.swing.JComponent-ca.cgjennings.ui.dnd.DragToken-javax.swing.JComponent-java.awt.Point-"><code>dragMove</code></a> have empty implementations.</div>
+<div class="block">An abstract base class that combines a <a href="../../../../ca/cgjennings/ui/dnd/DragHandler.html" title="interface in ca.cgjennings.ui.dnd"><code>DragHandler</code></a> and a
+ <a href="../../../../ca/cgjennings/ui/dnd/DropHandler.html" title="interface in ca.cgjennings.ui.dnd"><code>DropHandler</code></a> in a single object. This can be a useful basis for
+ building interactions with reasonably simple drag logic, such as dragging and
+ dropping between two containers. For convenience, the method
+ <a href="../../../../ca/cgjennings/ui/dnd/AbstractDragAndDropHandler.html#acceptDrop-ca.cgjennings.ui.dnd.DragManager-javax.swing.JComponent-ca.cgjennings.ui.dnd.DragToken-javax.swing.JComponent-java.awt.Point-"><code>acceptDrop</code></a> returns <code>true</code>; the methods <a href="../../../../ca/cgjennings/ui/dnd/AbstractDragAndDropHandler.html#dragFinished-ca.cgjennings.ui.dnd.DragManager-javax.swing.JComponent-ca.cgjennings.ui.dnd.DragToken-javax.swing.JComponent-"><code>dragFinished</code></a>, <a href="../../../../ca/cgjennings/ui/dnd/AbstractDragAndDropHandler.html#dragEnter-ca.cgjennings.ui.dnd.DragManager-javax.swing.JComponent-ca.cgjennings.ui.dnd.DragToken-javax.swing.JComponent-java.awt.Point-"><code>dragEnter</code></a>,
+ <a href="../../../../ca/cgjennings/ui/dnd/AbstractDragAndDropHandler.html#dragExit-ca.cgjennings.ui.dnd.DragManager-javax.swing.JComponent-ca.cgjennings.ui.dnd.DragToken-javax.swing.JComponent-"><code>dragExit</code></a>, and <a href="../../../../ca/cgjennings/ui/dnd/AbstractDragAndDropHandler.html#dragMove-ca.cgjennings.ui.dnd.DragManager-javax.swing.JComponent-ca.cgjennings.ui.dnd.DragToken-javax.swing.JComponent-java.awt.Point-"><code>dragMove</code></a> have empty
+ implementations.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -284,8 +287,8 @@ implements <a href="../../../../ca/cgjennings/ui/dnd/DragHandler.html" title="in
 <dd><code>dropTarget</code> - the target that the token would be dropped on</dd>
 <dd><code>location</code> - the location of the potential drop</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the handler would allow the drop, <code>false</code>
-     otherwise</dd>
+<dd><code>true</code> if the handler would allow the drop,
+ <code>false</code> otherwise</dd>
 </dl>
 </li>
 </ul>
@@ -301,8 +304,8 @@ implements <a href="../../../../ca/cgjennings/ui/dnd/DragHandler.html" title="in
                       <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing">JComponent</a>&nbsp;dropTarget,
                       <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Point.html?is-external=true" title="class or interface in java.awt">Point</a>&nbsp;location)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../ca/cgjennings/ui/dnd/DropHandler.html#dragEnter-ca.cgjennings.ui.dnd.DragManager-javax.swing.JComponent-ca.cgjennings.ui.dnd.DragToken-javax.swing.JComponent-java.awt.Point-">DropHandler</a></code></span></div>
-<div class="block">Called when the cursor enters a viable drop target. This can be
- used to update the visual representation of the target.</div>
+<div class="block">Called when the cursor enters a viable drop target. This can be used to
+ update the visual representation of the target.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../ca/cgjennings/ui/dnd/DropHandler.html#dragEnter-ca.cgjennings.ui.dnd.DragManager-javax.swing.JComponent-ca.cgjennings.ui.dnd.DragToken-javax.swing.JComponent-java.awt.Point-">dragEnter</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../ca/cgjennings/ui/dnd/DropHandler.html" title="interface in ca.cgjennings.ui.dnd">DropHandler</a>&lt;<a href="../../../../ca/cgjennings/ui/dnd/AbstractDragAndDropHandler.html" title="type parameter in AbstractDragAndDropHandler">T</a>&gt;</code></dd>
@@ -360,8 +363,8 @@ implements <a href="../../../../ca/cgjennings/ui/dnd/DragHandler.html" title="in
 <dd><code>manager</code> - the manager that is managing the drag</dd>
 <dd><code>dragSource</code> - the component being dragged from</dd>
 <dd><code>token</code> - the token that was dragged</dd>
-<dd><code>dropTarget</code> - the target that the token was dropped on, or <code>null</code>
-     if the drag was cancelled</dd>
+<dd><code>dropTarget</code> - the target that the token was dropped on, or
+ <code>null</code> if the drag was cancelled</dd>
 </dl>
 </li>
 </ul>
@@ -411,6 +414,8 @@ implements <a href="../../../../ca/cgjennings/ui/dnd/DragHandler.html" title="in
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

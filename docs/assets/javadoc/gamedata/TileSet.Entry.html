@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../index-all.html">Index</a></li>
+<li><a href="../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -110,10 +112,10 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public static final class <span class="typeNameLabel">TileSet.Entry</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block">An entry in a tile set; that is, a description of a single tile from
- a tile set file. Tile set entries are used by the <a href="../ca/cgjennings/apps/arkham/deck/DeckEditor.html" title="class in ca.cgjennings.apps.arkham.deck"><code>DeckEditor</code></a>
- to create the prototype <a href="../ca/cgjennings/apps/arkham/deck/item/Tile.html" title="class in ca.cgjennings.apps.arkham.deck.item"><code>Tile</code></a> objects that the user drags onto
- deck pages.</div>
+<div class="block">An entry in a tile set; that is, a description of a single tile from a
+ tile set file. Tile set entries are used by the <a href="../ca/cgjennings/apps/arkham/deck/DeckEditor.html" title="class in ca.cgjennings.apps.arkham.deck"><code>DeckEditor</code></a> to
+ create the prototype <a href="../ca/cgjennings/apps/arkham/deck/item/Tile.html" title="class in ca.cgjennings.apps.arkham.deck.item"><code>Tile</code></a> objects that the user drags onto deck
+ pages.</div>
 </li>
 </ul>
 </div>
@@ -155,8 +157,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../gamedata/TileSet.Entry.html#getGameCode--">getGameCode</a></span>()</code>
 <div class="block">Returns the code of the game that this tile belongs to, or
- <a href="../gamedata/Game.html#ALL_GAMES_CODE"><code>Game.ALL_GAMES_CODE</code></a> if the graphic is not tied to
- a particular game.</div>
+ <a href="../gamedata/Game.html#ALL_GAMES_CODE"><code>Game.ALL_GAMES_CODE</code></a> if the graphic is not tied to a
+ particular game.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -198,7 +200,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../ca/cgjennings/apps/arkham/deck/item/LineJoin.html" title="enum in ca.cgjennings.apps.arkham.deck.item">LineJoin</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../gamedata/TileSet.Entry.html#getOutlineJoin--">getOutlineJoin</a></span>()</code>
-<div class="block">Returns the method used to join the line segments that make up the outline.</div>
+<div class="block">Returns the method used to join the line segments that make up the
+ outline.</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
@@ -318,8 +321,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getGameCode</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getGameCode()</pre>
 <div class="block">Returns the code of the game that this tile belongs to, or
- <a href="../gamedata/Game.html#ALL_GAMES_CODE"><code>Game.ALL_GAMES_CODE</code></a> if the graphic is not tied to
- a particular game.</div>
+ <a href="../gamedata/Game.html#ALL_GAMES_CODE"><code>Game.ALL_GAMES_CODE</code></a> if the graphic is not tied to a
+ particular game.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the code for the game this tile is for</dd>
@@ -363,9 +366,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getName</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getName()</pre>
-<div class="block">Returns the name of the tile. If the tile name starts with <code>@</code> in the
- tile set file, this name will already be converted into its localized
- form.</div>
+<div class="block">Returns the name of the tile. If the tile name starts with
+ <code>@</code> in the tile set file, this name will already be
+ converted into its localized form.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the (possibly localized) name of the tile</dd>
@@ -421,7 +424,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getOutlineJoin</h4>
 <pre>public&nbsp;<a href="../ca/cgjennings/apps/arkham/deck/item/LineJoin.html" title="enum in ca.cgjennings.apps.arkham.deck.item">LineJoin</a>&nbsp;getOutlineJoin()</pre>
-<div class="block">Returns the method used to join the line segments that make up the outline.</div>
+<div class="block">Returns the method used to join the line segments that make up the
+ outline.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the line joining method</dd>
@@ -449,8 +453,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getPrototypeItem</h4>
 <pre>public&nbsp;<a href="../ca/cgjennings/apps/arkham/deck/item/PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a>&nbsp;getPrototypeItem()</pre>
-<div class="block">Returns the prototype page item for this tile set entry. This is
- the master item that appears in the deck editor's list of components.</div>
+<div class="block">Returns the prototype page item for this tile set entry. This is the
+ master item that appears in the deck editor's list of components.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the prototype item for display in the deck editor</dd>
@@ -468,7 +472,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the tile image resolution; this, combined with the dimensions
-     of the tile image, will determine the physical size of the tile</dd>
+ of the tile image, will determine the physical size of the tile</dd>
 </dl>
 </li>
 </ul>
@@ -498,7 +502,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  default snap class, along with other properties.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the tile class, as determined by the entry's <code>class</code> key</dd>
+<dd>the tile class, as determined by the entry's
+ <code>class</code> key</dd>
 </dl>
 </li>
 </ul>
@@ -514,7 +519,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  Otherwise, this will be the same as <a href="../gamedata/TileSet.Entry.html#getName--"><code>getName()</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the original tile name, as listed on the first line of the tile set entry</dd>
+<dd>the original tile name, as listed on the first line of the
+ tile set entry</dd>
 </dl>
 </li>
 </ul>
@@ -571,6 +577,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../index-all.html">Index</a></li>
+<li><a href="../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -106,46 +108,49 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">SimpleCollectionParser</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block">A parser that creates simple collections for the <a href="../../../../../ca/cgjennings/apps/arkham/editors/APIBrowser.html" title="class in ca.cgjennings.apps.arkham.editors"><code>APIBrowser</code></a> based
- on collections of Web pages. The basic format is the same as
- <a href="../../../../../ca/cgjennings/io/EscapedLineReader.html" title="class in ca.cgjennings.io">other setting files</a>.
- A collection file can contain property definitions,
- package definitions, and document definitions. A property definition is
- a key, value pair that changes a parser setting or an overall property of the
- collection, such as its name. A package definition is a line that starts with
- '+'. It changes the package that subsequent documents are assigned to. A
- document definition consists of a URL key and an optional title value.
- The key is combined with the current base URL to define the location of
- the document. The title of the document is taken from the value, or inferred
- from the document location if no title is provided.
- 
- <p>The following property definitions are currently recognized:
+<div class="block">A parser that creates simple collections for the <a href="../../../../../ca/cgjennings/apps/arkham/editors/APIBrowser.html" title="class in ca.cgjennings.apps.arkham.editors"><code>APIBrowser</code></a> based on
+ collections of Web pages. The basic format is the same as
+ <a href="../../../../../ca/cgjennings/io/EscapedLineReader.html" title="class in ca.cgjennings.io">other setting files</a>. A collection file can
+ contain property definitions, package definitions, and document definitions.
+ A property definition is a key, value pair that changes a parser setting or
+ an overall property of the collection, such as its name. A package definition
+ is a line that starts with '+'. It changes the package that subsequent
+ documents are assigned to. A document definition consists of a URL key and an
+ optional title value. The key is combined with the current base URL to define
+ the location of the document. The title of the document is taken from the
+ value, or inferred from the document location if no title is provided.
+
+ <p>
+ The following property definitions are currently recognized:
  <dl>
- <dt>base-url<dd> Changes the base URL that documents are assumed to be relative to.
+ <dt>base-url<dd> Changes the base URL that documents are assumed to be
+ relative to.
  <dt>name<dd> Changes the name of the collection.
  <dt>icon<dd> Uses the specified image resource as an icon for the collection.
- <dt>suffix<dd> Sets a suffix added to the end of subsequent document locations,
-     such as ".html".
- <dt>sort<dd> A boolean value that indicates whether the nodes of the tree should
-     be sorted.
+ <dt>suffix<dd> Sets a suffix added to the end of subsequent document
+ locations, such as ".html".
+ <dt>sort<dd> A boolean value that indicates whether the nodes of the tree
+ should be sorted.
  <dt>shorten-packages<dd> A boolean value that indicates whether package nodes
-     should show only the part of the name after the final dot.
+ should show only the part of the name after the final dot.
  <dt>priority<dd> An optional integer value that can be used to group together
-     related collections. (The default group is 0.)
+ related collections. (The default group is 0.)
  </dl>
 
- <p>Properties, package names, and title names generally support 
- <i>value replacement</i>. This means that values that start with
- '@', '#', or '$' will be replaced using a UI language string, game language
- string, or user setting (respectively), similar to the special variables
- supported by the script engine.
- 
- <p>A simple example:
+ <p>
+ Properties, package names, and title names generally support
+ <i>value replacement</i>. This means that values that start with '@', '#', or
+ '$' will be replaced using a UI language string, game language string, or
+ user setting (respectively), similar to the special variables supported by
+ the script engine.
+
+ <p>
+ A simple example:
  <pre>
  # Comment line
  name = Example
  base-url = http://domain.com
- 
+
  # A package with two documents, Introduction and Download
  +Package 1
  index.html = Introduction
@@ -196,8 +201,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="../../../../../ca/cgjennings/apps/arkham/editors/APIBrowser.Collection.html" title="interface in ca.cgjennings.apps.arkham.editors">APIBrowser.Collection</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/editors/SimpleCollectionParser.html#createCollection--">createCollection</a></span>()</code>
-<div class="block">Returns a new collection using the documents specified by the
- parsed collection files.</div>
+<div class="block">Returns a new collection using the documents specified by the parsed
+ collection files.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -209,33 +214,36 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/editors/SimpleCollectionParser.html#parse-ca.cgjennings.io.EscapedLineReader-">parse</a></span>(<a href="../../../../../ca/cgjennings/io/EscapedLineReader.html" title="class in ca.cgjennings.io">EscapedLineReader</a>&nbsp;source)</code>
-<div class="block">Appends documents to the current collection by parsing the specified file.</div>
+<div class="block">Appends documents to the current collection by parsing the specified
+ file.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/editors/SimpleCollectionParser.html#parse-java.io.File-">parse</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)</code>
-<div class="block">Appends documents to the current collection by parsing the specified file.</div>
+<div class="block">Appends documents to the current collection by parsing the specified
+ file.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/editors/SimpleCollectionParser.html#parse-java.lang.String-">parse</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;resource)</code>
-<div class="block">Appends documents to the current collection by parsing the specified file.</div>
+<div class="block">Appends documents to the current collection by parsing the specified
+ file.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/editors/SimpleCollectionParser.html#parse-java.net.URL-">parse</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a>&nbsp;url)</code>
-<div class="block">Appends documents to the current collection by parsing file at the
- the specified URL.</div>
+<div class="block">Appends documents to the current collection by parsing file at the the
+ specified URL.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/editors/SimpleCollectionParser.html#parseBaseURL-java.lang.String-">parseBaseURL</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</code>
-<div class="block">Subclasses may customize how a base document URL is generated from
- the base-url property by overriding this method.</div>
+<div class="block">Subclasses may customize how a base document URL is generated from the
+ base-url property by overriding this method.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -321,10 +329,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>createCollection</h4>
 <pre>public&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/editors/APIBrowser.Collection.html" title="interface in ca.cgjennings.apps.arkham.editors">APIBrowser.Collection</a>&nbsp;createCollection()</pre>
-<div class="block">Returns a new collection using the documents specified by the
- parsed collection files.
- The collection can be added to the <b>Document Browser</b> using
- <a href="../../../../../ca/cgjennings/apps/arkham/editors/APIBrowser.html#registerCollection-ca.cgjennings.apps.arkham.editors.APIBrowser.Collection-"><code>APIBrowser.registerCollection(ca.cgjennings.apps.arkham.editors.APIBrowser.Collection)</code></a>.</div>
+<div class="block">Returns a new collection using the documents specified by the parsed
+ collection files. The collection can be added to the <b>Document
+ Browser</b> using <a href="../../../../../ca/cgjennings/apps/arkham/editors/APIBrowser.html#registerCollection-ca.cgjennings.apps.arkham.editors.APIBrowser.Collection-"><code>APIBrowser.registerCollection(ca.cgjennings.apps.arkham.editors.APIBrowser.Collection)</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a new collection generated from the parsed files</dd>
@@ -341,7 +348,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Returns the name of the collection.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the current name; names that start with '@' will be looked up first</dd>
+<dd>the current name; names that start with '@' will be looked up
+ first</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/editors/SimpleCollectionParser.html#setName-java.lang.String-"><code>setName(java.lang.String)</code></a></dd>
 </dl>
@@ -355,7 +363,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>parse</h4>
 <pre>public&nbsp;void&nbsp;parse(<a href="../../../../../ca/cgjennings/io/EscapedLineReader.html" title="class in ca.cgjennings.io">EscapedLineReader</a>&nbsp;source)
            throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Appends documents to the current collection by parsing the specified file.</div>
+<div class="block">Appends documents to the current collection by parsing the specified
+ file.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the line reader to parse entries from</dd>
@@ -374,7 +383,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>parse</h4>
 <pre>public&nbsp;void&nbsp;parse(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;file)
            throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Appends documents to the current collection by parsing the specified file.</div>
+<div class="block">Appends documents to the current collection by parsing the specified
+ file.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>file</code> - the file to parse</dd>
@@ -393,7 +403,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>parse</h4>
 <pre>public&nbsp;void&nbsp;parse(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;resource)
            throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Appends documents to the current collection by parsing the specified file.</div>
+<div class="block">Appends documents to the current collection by parsing the specified
+ file.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>resource</code> - the resource file to parse</dd>
@@ -412,8 +423,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>parse</h4>
 <pre>public&nbsp;void&nbsp;parse(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a>&nbsp;url)
            throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Appends documents to the current collection by parsing file at the
- the specified URL.</div>
+<div class="block">Appends documents to the current collection by parsing file at the the
+ specified URL.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>url</code> - the file to parse</dd>
@@ -431,8 +442,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>parseBaseURL</h4>
 <pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a>&nbsp;parseBaseURL(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</pre>
-<div class="block">Subclasses may customize how a base document URL is generated from
- the base-url property by overriding this method. The default implementation
+<div class="block">Subclasses may customize how a base document URL is generated from the
+ base-url property by overriding this method. The default implementation
  returns the value as a URL, after performing value replacement.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -462,8 +473,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>key</code> - the key part of the document entry</dd>
 <dd><code>value</code> - the value part of the document entry</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the location of the document, as it will appear in the
-     address bar</dd>
+<dd>the location of the document, as it will appear in the address
+ bar</dd>
 </dl>
 </li>
 </ul>
@@ -476,14 +487,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;parseDocumentTitle(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
                                     <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</pre>
 <div class="block">Subclasses may customize how a document's title is generated from a
- document line by overriding this method. The default implementation
- will return the value if it is defined (after performing value
- replacement on it). If no value is defined, then a title is generated
- from the key. The default title will consist of everything in the key
- after the last '/' (if any), and up to the first subsequent ".html"
- (if any). If the title contains underscores, they are replaced with
- spaces. For example, the key "section/subsection/Document_Title.html"
- would have the generated title "Document Title".</div>
+ document line by overriding this method. The default implementation will
+ return the value if it is defined (after performing value replacement on
+ it). If no value is defined, then a title is generated from the key. The
+ default title will consist of everything in the key after the last '/'
+ (if any), and up to the first subsequent ".html" (if any). If the title
+ contains underscores, they are replaced with spaces. For example, the key
+ "section/subsection/Document_Title.html" would have the generated title
+ "Document Title".</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - the key part of the document entry</dd>
@@ -501,8 +512,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>parsePackageName</h4>
 <pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;parsePackageName(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;packageName)</pre>
 <div class="block">Subclasses may customize how a package name is generated from a package
- entry by overriding this method. The default implementation returns
- the value after performing value replacement.</div>
+ entry by overriding this method. The default implementation returns the
+ value after performing value replacement.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>packageName</code> - the package name value, without leading '+'</dd>
@@ -518,9 +529,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>reset</h4>
 <pre>public&nbsp;void&nbsp;reset()</pre>
-<div class="block">Clears the list of generated documents. The next call to a <code>parse</code>
- method will start a new document collection instead of appending to the
- current collection.</div>
+<div class="block">Clears the list of generated documents. The next call to a
+ <code>parse</code> method will start a new document collection instead of
+ appending to the current collection.</div>
 </li>
 </ul>
 <a name="setName-java.lang.String-">
@@ -530,9 +541,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>setName</h4>
 <pre>public&nbsp;void&nbsp;setName(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
-<div class="block">Sets the name of the collection. The name can also be set from within
- a collection file using the "name" property. Value replacement
- will be performed on the name.</div>
+<div class="block">Sets the name of the collection. The name can also be set from within a
+ collection file using the "name" property. Value replacement will be
+ performed on the name.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - the name to set</dd>
@@ -559,6 +570,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

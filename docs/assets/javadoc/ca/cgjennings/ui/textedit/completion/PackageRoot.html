@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -95,7 +97,7 @@ var activeTableTab = "activeTableTab";
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html" title="class in ca.cgjennings.ui.textedit.completion">ca.cgjennings.ui.textedit.completion.DefaultCNode</a>&lt;<a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.html" title="class in ca.cgjennings.ui.textedit.completion">APINode</a>&gt;</li>
+<li>ca.cgjennings.ui.textedit.completion.DefaultCNode&lt;<a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.html" title="class in ca.cgjennings.ui.textedit.completion">APINode</a>&gt;</li>
 <li>
 <ul class="inheritance">
 <li><a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.html" title="class in ca.cgjennings.ui.textedit.completion">ca.cgjennings.ui.textedit.completion.APINode</a></li>
@@ -114,7 +116,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../ca/cgjennings/ui/textedit/completion/CNode.html" title="interface in ca.cgjennings.ui.textedit.completion">CNode</a></dd>
+<dd>ca.cgjennings.ui.textedit.completion.CNode</dd>
 </dl>
 <hr>
 <br>
@@ -182,15 +184,15 @@ extends <a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.htm
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.html" title="class in ca.cgjennings.ui.textedit.completion">APINode</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/ui/textedit/completion/PackageRoot.html#addName-java.lang.String-">addName</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fullyQualifiedPackageOrClass)</code>
-<div class="block">Adds an entry in the tree for a class or package with the
- specified fully qualified name.</div>
+<div class="block">Adds an entry in the tree for a class or package with the specified fully
+ qualified name.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../ca/cgjennings/ui/textedit/completion/ClassNode.html" title="class in ca.cgjennings.ui.textedit.completion">ClassNode</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/ui/textedit/completion/PackageRoot.html#get-java.lang.Class-">get</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&nbsp;klass)</code>
-<div class="block">Returns the API node for the requested class, or <code>null</code> if
- it is not in the database.</div>
+<div class="block">Returns the API node for the requested class, or <code>null</code> if it
+ is not in the database.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -218,8 +220,8 @@ extends <a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.htm
 <li class="blockList"><a name="methods.inherited.from.class.ca.cgjennings.ui.textedit.completion.DefaultCNode">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;ca.cgjennings.ui.textedit.completion.<a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html" title="class in ca.cgjennings.ui.textedit.completion">DefaultCNode</a></h3>
-<code><a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html#add-T-">add</a>, <a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html#children--">children</a>, <a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html#equals-java.lang.Object-">equals</a>, <a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html#find-java.lang.String-">find</a>, <a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html#getName--">getName</a>, <a href="../../../../../ca/cgjennings/ui/textedit/completion/DefaultCNode.html#hashCode--">hashCode</a></code></li>
+<h3>Methods inherited from class&nbsp;ca.cgjennings.ui.textedit.completion.DefaultCNode</h3>
+<code>add, children, equals, find, getName, hashCode</code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -267,16 +269,15 @@ extends <a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.htm
 <li class="blockList">
 <h4>addName</h4>
 <pre>public&nbsp;<a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.html" title="class in ca.cgjennings.ui.textedit.completion">APINode</a>&nbsp;addName(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;fullyQualifiedPackageOrClass)</pre>
-<div class="block">Adds an entry in the tree for a class or package with the
- specified fully qualified name. If the entry already exists,
- no change is made. Note that this assumes that the specified
- name follows the standard Java naming convention: packages must
- start with lower case letters, and classes must start with
- upper case letters (or other valid identifier characters).</div>
+<div class="block">Adds an entry in the tree for a class or package with the specified fully
+ qualified name. If the entry already exists, no change is made. Note that
+ this assumes that the specified name follows the standard Java naming
+ convention: packages must start with lower case letters, and classes must
+ start with upper case letters (or other valid identifier characters).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>fullyQualifiedPackageOrClass</code> - the name of the class or package to add,
-     such as <code>"java.lang.String"</code></dd>
+<dd><code>fullyQualifiedPackageOrClass</code> - the name of the class or package to
+ add, such as <code>"java.lang.String"</code></dd>
 </dl>
 </li>
 </ul>
@@ -287,8 +288,8 @@ extends <a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.htm
 <li class="blockList">
 <h4>get</h4>
 <pre>public&nbsp;<a href="../../../../../ca/cgjennings/ui/textedit/completion/ClassNode.html" title="class in ca.cgjennings.ui.textedit.completion">ClassNode</a>&nbsp;get(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&nbsp;klass)</pre>
-<div class="block">Returns the API node for the requested class, or <code>null</code> if
- it is not in the database.</div>
+<div class="block">Returns the API node for the requested class, or <code>null</code> if it
+ is not in the database.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>klass</code> - the class to look up a name for</dd>
@@ -348,6 +349,8 @@ extends <a href="../../../../../ca/cgjennings/ui/textedit/completion/APINode.htm
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

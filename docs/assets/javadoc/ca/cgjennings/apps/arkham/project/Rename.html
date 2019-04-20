@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -115,9 +117,8 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">Rename</span>
 extends <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html" title="class in ca.cgjennings.apps.arkham.project">TaskAction</a></pre>
-<div class="block">Task action for renaming project files. Also allows you to register
- listeners that will be notified when files are renamed (through the
- project system).</div>
+<div class="block">Task action for renaming project files. Also allows you to register listeners
+ that will be notified when files are renamed (through the project system).</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.1</dd>
@@ -225,8 +226,8 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.htm
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/project/Rename.html#rename-ca.cgjennings.apps.arkham.project.Member-java.io.File-java.lang.String-">rename</a></span>(<a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;member,
       <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;newFile,
       <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;subfolders)</code>
-<div class="block">Rename a file in the project as if using this action,
- but without displaying a dialog.</div>
+<div class="block">Rename a file in the project as if using this action, but without
+ displaying a dialog.</div>
 </td>
 </tr>
 </table>
@@ -283,12 +284,13 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.htm
 <h4>addRenameListener</h4>
 <pre>public static&nbsp;void&nbsp;addRenameListener(<a href="../../../../../ca/cgjennings/apps/arkham/project/Rename.RenameListener.html" title="interface in ca.cgjennings.apps.arkham.project">Rename.RenameListener</a>&nbsp;listener)</pre>
 <div class="block">Adds a new listener for file rename events. All instances of the rename
- action share a common listener list (there is normally only
- one instance). This makes it easier to register a listener because
- the rename action does not need to be looked up.</div>
+ action share a common listener list (there is normally only one
+ instance). This makes it easier to register a listener because the rename
+ action does not need to be looked up.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>listener</code> - the listener to be notified when files are renamed or deleted</dd>
+<dd><code>listener</code> - the listener to be notified when files are renamed or
+ deleted</dd>
 </dl>
 </li>
 </ul>
@@ -303,22 +305,23 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.htm
                          <a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;member)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html#appliesTo-ca.cgjennings.apps.arkham.project.Project-ca.cgjennings.apps.arkham.project.Task-ca.cgjennings.apps.arkham.project.Member-">TaskAction</a></code></span></div>
 <div class="block">Returns <code>true</code> if this action can be performed on the
- specified member of a project, project or a task.
- If the project itself is the target, <code>task</code> and
- <code>member</code> will be <code>null</code>.
- If a task is the target, then <code>member</code> will be null.
- If an error occurs while executing the task, then it is the
- action's responsibility to inform the user.
- This method can return <code>false</code> to indicate that if the
- action is being applied to multiple members, it should stop
- immediately rather than continue to the next member.</div>
+ specified member of a project, project or a task. If the project itself
+ is the target, <code>task</code> and <code>member</code> will be
+ <code>null</code>. If a task is the target, then <code>member</code> will
+ be null. If an error occurs while executing the task, then it is the
+ action's responsibility to inform the user. This method can return
+ <code>false</code> to indicate that if the action is being applied to
+ multiple members, it should stop immediately rather than continue to the
+ next member.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html#appliesTo-ca.cgjennings.apps.arkham.project.Project-ca.cgjennings.apps.arkham.project.Task-ca.cgjennings.apps.arkham.project.Member-">appliesTo</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html" title="class in ca.cgjennings.apps.arkham.project">TaskAction</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>project</code> - the project that is being acted upon</dd>
-<dd><code>task</code> - the task within the project that is being acted upon; <code>null</code> if acting on a project</dd>
-<dd><code>member</code> - the specific member within the task to act upon; <code>null</code> if this is a project or task</dd>
+<dd><code>task</code> - the task within the project that is being acted upon;
+ <code>null</code> if acting on a project</dd>
+<dd><code>member</code> - the specific member within the task to act upon;
+ <code>null</code> if this is a project or task</dd>
 </dl>
 </li>
 </ul>
@@ -332,17 +335,19 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.htm
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html#appliesToSelection-ca.cgjennings.apps.arkham.project.Member:A-">TaskAction</a></code></span></div>
 <div class="block">Returns <code>true</code> if this action is applicable to any of the
  specified <a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project"><code>Member</code></a>s. By overriding this, you can modify whether an
- action is listed depending on which other members are selected. For example,
- you could create a command that can only be applied to a singleton selection
- by checking the length of <code>members</code> and returning <code>false</code>
- if it is not 1, and otherwise calling the super implementation.</div>
+ action is listed depending on which other members are selected. For
+ example, you could create a command that can only be applied to a
+ singleton selection by checking the length of <code>members</code> and
+ returning <code>false</code> if it is not 1, and otherwise calling the
+ super implementation.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html#appliesToSelection-ca.cgjennings.apps.arkham.project.Member:A-">appliesToSelection</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html" title="class in ca.cgjennings.apps.arkham.project">TaskAction</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>members</code> - a list of zero or more members</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> is the action can be applied to at least one member</dd>
+<dd><code>true</code> is the action can be applied to at least one
+ member</dd>
 </dl>
 </li>
 </ul>
@@ -359,7 +364,8 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.htm
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html#getLabel--">getLabel</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html" title="class in ca.cgjennings.apps.arkham.project">TaskAction</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the name used to create menu items for this action, localized if possible</dd>
+<dd>the name used to create menu items for this action, localized if
+ possible</dd>
 </dl>
 </li>
 </ul>
@@ -373,22 +379,23 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.htm
                        <a href="../../../../../ca/cgjennings/apps/arkham/project/Task.html" title="class in ca.cgjennings.apps.arkham.project">Task</a>&nbsp;task,
                        <a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;member)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html#perform-ca.cgjennings.apps.arkham.project.Project-ca.cgjennings.apps.arkham.project.Task-ca.cgjennings.apps.arkham.project.Member-">TaskAction</a></code></span></div>
-<div class="block">Perform this action on a member of a project, a project or a task.
- If the project itself is the target, <code>task</code> and
- <code>member</code> will be <code>null</code>.
- If a task is the target, then <code>member</code> will be null.
- If an error occurs while executing the task, then it is the
- action's responsibility to inform the user.
- This method can return <code>false</code> to indicate that if the
- action is being applied to multiple members, it should stop
- immediately rather than continue to the next member.</div>
+<div class="block">Perform this action on a member of a project, a project or a task. If the
+ project itself is the target, <code>task</code> and <code>member</code>
+ will be <code>null</code>. If a task is the target, then
+ <code>member</code> will be null. If an error occurs while executing the
+ task, then it is the action's responsibility to inform the user. This
+ method can return <code>false</code> to indicate that if the action is
+ being applied to multiple members, it should stop immediately rather than
+ continue to the next member.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html#perform-ca.cgjennings.apps.arkham.project.Project-ca.cgjennings.apps.arkham.project.Task-ca.cgjennings.apps.arkham.project.Member-">perform</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.html" title="class in ca.cgjennings.apps.arkham.project">TaskAction</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>project</code> - the project that is being acted upon</dd>
-<dd><code>task</code> - the task within the project that is being acted upon; <code>null</code> if acting on a project</dd>
-<dd><code>member</code> - the specific member within the task to act upon; <code>null</code> if this is a project or task</dd>
+<dd><code>task</code> - the task within the project that is being acted upon;
+ <code>null</code> if acting on a project</dd>
+<dd><code>member</code> - the specific member within the task to act upon;
+ <code>null</code> if this is a project or task</dd>
 </dl>
 </li>
 </ul>
@@ -417,23 +424,25 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.htm
                           <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io">File</a>&nbsp;newFile,
                           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;subfolders)
                    throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Rename a file in the project as if using this action,
- but without displaying a dialog. This is the recommended
- way to rename a project member, as it handles a number of special cases.
+<div class="block">Rename a file in the project as if using this action, but without
+ displaying a dialog. This is the recommended way to rename a project
+ member, as it handles a number of special cases.
  <p>
- Note that renaming a file should not be used to move a file to a different
- folder. In other words, the parent of the new file should be the
- same as the parent of the original file.</div>
+ Note that renaming a file should not be used to move a file to a
+ different folder. In other words, the parent of the new file should be
+ the same as the parent of the original file.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>member</code> - the member to rename</dd>
 <dd><code>newFile</code> - the file object that specifies the new file name</dd>
-<dd><code>subfolders</code> - if member is a folder, and this is non-<code>null</code>,
-   then it is a slash-separated list of subfolders to create</dd>
+<dd><code>subfolders</code> - if member is a folder, and this is
+ non-<code>null</code>, then it is a slash-separated list of subfolders to
+ create</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the new file</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the member is not a folder and subfolders is not null</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the member is not a folder and
+ subfolders is not null</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
 </dl>
 </li>
@@ -458,6 +467,8 @@ extends <a href="../../../../../ca/cgjennings/apps/arkham/project/TaskAction.htm
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

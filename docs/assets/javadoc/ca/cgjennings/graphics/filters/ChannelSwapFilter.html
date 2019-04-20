@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -120,24 +122,25 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">ChannelSwapFilter</span>
 extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFilter.html" title="class in ca.cgjennings.graphics.filters">AbstractPixelwiseFilter</a></pre>
-<div class="block">A filter that allows channels in the source image to be swapped
- around, inverted, or filled with constant values. A source is set for each
- channel in the destination image. If the source value is between
- 0 and 255 (inclusive), then that channel is filled with that
- constant value. Otherwise, the source can be a special
- value that indicates any channel in the source image, and the value
- of that channel in the source image will be copied to the destination
- channel.
+<div class="block">A filter that allows channels in the source image to be swapped around,
+ inverted, or filled with constant values. A source is set for each channel in
+ the destination image. If the source value is between 0 and 255 (inclusive),
+ then that channel is filled with that constant value. Otherwise, the source
+ can be a special value that indicates any channel in the source image, and
+ the value of that channel in the source image will be copied to the
+ destination channel.
 
- <p>As an example, the following filter would set the alpha value of
- every destination pixel to 255, and copy the red channel to all of
- the other channels:
+ <p>
+ As an example, the following filter would set the alpha value of every
+ destination pixel to 255, and copy the red channel to all of the other
+ channels:
  <pre>
  ChannelSwapFilter csf = new ChannelSwapFilter( 255, RED, RED, RED );
  </pre>
- 
- <p><b>In-place filtering:</b> This class supports in-place filtering
- (the source and destination images may be the same).</div>
+
+ <p>
+ <b>In-place filtering:</b> This class supports in-place filtering (the source
+ and destination images may be the same).</div>
 </li>
 </ul>
 </div>
@@ -159,43 +162,50 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/ChannelSwapFilter.html#ALPHA">ALPHA</a></span></code>
-<div class="block">The target channel's value will be copied from the alpha channel of the source.</div>
+<div class="block">The target channel's value will be copied from the alpha channel of the
+ source.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/ChannelSwapFilter.html#ALPHA_INVERTED">ALPHA_INVERTED</a></span></code>
-<div class="block">The target channel's value will be copied from the alpha channel of the source and inverted.</div>
+<div class="block">The target channel's value will be copied from the alpha channel of the
+ source and inverted.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/ChannelSwapFilter.html#BLUE">BLUE</a></span></code>
-<div class="block">The target channel's value will be copied from the blue channel of the source.</div>
+<div class="block">The target channel's value will be copied from the blue channel of the
+ source.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/ChannelSwapFilter.html#BLUE_INVERTED">BLUE_INVERTED</a></span></code>
-<div class="block">The target channel's value will be copied from the blue channel of the source and inverted.</div>
+<div class="block">The target channel's value will be copied from the blue channel of the
+ source and inverted.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/ChannelSwapFilter.html#FILL">FILL</a></span></code>
-<div class="block">The value 255, which indicates that the channel should set to its maximum value.</div>
+<div class="block">The value 255, which indicates that the channel should set to its maximum
+ value.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/ChannelSwapFilter.html#GREEN">GREEN</a></span></code>
-<div class="block">The target channel's value will be copied from the green channel of the source.</div>
+<div class="block">The target channel's value will be copied from the green channel of the
+ source.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/ChannelSwapFilter.html#GREEN_INVERTED">GREEN_INVERTED</a></span></code>
-<div class="block">The target channel's value will be copied from the green channel of the source and inverted.</div>
+<div class="block">The target channel's value will be copied from the green channel of the
+ source and inverted.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -215,13 +225,15 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/ChannelSwapFilter.html#RED">RED</a></span></code>
-<div class="block">The target channel's value will be copied from the red channel of the source.</div>
+<div class="block">The target channel's value will be copied from the red channel of the
+ source.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/ChannelSwapFilter.html#RED_INVERTED">RED_INVERTED</a></span></code>
-<div class="block">The target channel's value will be copied from the red channel of the source and inverted.</div>
+<div class="block">The target channel's value will be copied from the red channel of the
+ source and inverted.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -246,9 +258,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/ChannelSwapFilter.html#ChannelSwapFilter--">ChannelSwapFilter</a></span>()</code>
-<div class="block">Creates a <code>ChannelSwapFilter</code> that copies each channel
- from the the same channel in the source image, reproducing the
- original image.</div>
+<div class="block">Creates a <code>ChannelSwapFilter</code> that copies each channel from
+ the the same channel in the source image, reproducing the original image.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -256,8 +267,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
                  int&nbsp;redSource,
                  int&nbsp;greenSource,
                  int&nbsp;blueSource)</code>
-<div class="block">Creates a <code>ChannelSwapFilter</code> that copies channels
- from the indicated source channel.</div>
+<div class="block">Creates a <code>ChannelSwapFilter</code> that copies channels from the
+ indicated source channel.</div>
 </td>
 </tr>
 </table>
@@ -310,8 +321,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>int[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/ChannelSwapFilter.html#getSources--">getSources</a></span>()</code>
-<div class="block">Returns a new array containing the current channel sources for all channels
- in the order alpha, red, green, blue.</div>
+<div class="block">Returns a new array containing the current channel sources for all
+ channels in the order alpha, red, green, blue.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -390,7 +401,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <li class="blockList">
 <h4>ALPHA</h4>
 <pre>public static final&nbsp;int ALPHA</pre>
-<div class="block">The target channel's value will be copied from the alpha channel of the source.</div>
+<div class="block">The target channel's value will be copied from the alpha channel of the
+ source.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#ca.cgjennings.graphics.filters.ChannelSwapFilter.ALPHA">Constant Field Values</a></dd>
@@ -404,7 +416,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <li class="blockList">
 <h4>ALPHA_INVERTED</h4>
 <pre>public static final&nbsp;int ALPHA_INVERTED</pre>
-<div class="block">The target channel's value will be copied from the alpha channel of the source and inverted.</div>
+<div class="block">The target channel's value will be copied from the alpha channel of the
+ source and inverted.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#ca.cgjennings.graphics.filters.ChannelSwapFilter.ALPHA_INVERTED">Constant Field Values</a></dd>
@@ -418,7 +431,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <li class="blockList">
 <h4>BLUE</h4>
 <pre>public static final&nbsp;int BLUE</pre>
-<div class="block">The target channel's value will be copied from the blue channel of the source.</div>
+<div class="block">The target channel's value will be copied from the blue channel of the
+ source.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#ca.cgjennings.graphics.filters.ChannelSwapFilter.BLUE">Constant Field Values</a></dd>
@@ -432,7 +446,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <li class="blockList">
 <h4>BLUE_INVERTED</h4>
 <pre>public static final&nbsp;int BLUE_INVERTED</pre>
-<div class="block">The target channel's value will be copied from the blue channel of the source and inverted.</div>
+<div class="block">The target channel's value will be copied from the blue channel of the
+ source and inverted.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#ca.cgjennings.graphics.filters.ChannelSwapFilter.BLUE_INVERTED">Constant Field Values</a></dd>
@@ -446,7 +461,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <li class="blockList">
 <h4>FILL</h4>
 <pre>public static final&nbsp;int FILL</pre>
-<div class="block">The value 255, which indicates that the channel should set to its maximum value.</div>
+<div class="block">The value 255, which indicates that the channel should set to its maximum
+ value.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#ca.cgjennings.graphics.filters.ChannelSwapFilter.FILL">Constant Field Values</a></dd>
@@ -460,7 +476,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <li class="blockList">
 <h4>GREEN</h4>
 <pre>public static final&nbsp;int GREEN</pre>
-<div class="block">The target channel's value will be copied from the green channel of the source.</div>
+<div class="block">The target channel's value will be copied from the green channel of the
+ source.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#ca.cgjennings.graphics.filters.ChannelSwapFilter.GREEN">Constant Field Values</a></dd>
@@ -474,7 +491,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <li class="blockList">
 <h4>GREEN_INVERTED</h4>
 <pre>public static final&nbsp;int GREEN_INVERTED</pre>
-<div class="block">The target channel's value will be copied from the green channel of the source and inverted.</div>
+<div class="block">The target channel's value will be copied from the green channel of the
+ source and inverted.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#ca.cgjennings.graphics.filters.ChannelSwapFilter.GREEN_INVERTED">Constant Field Values</a></dd>
@@ -518,7 +536,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <li class="blockList">
 <h4>RED</h4>
 <pre>public static final&nbsp;int RED</pre>
-<div class="block">The target channel's value will be copied from the red channel of the source.</div>
+<div class="block">The target channel's value will be copied from the red channel of the
+ source.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#ca.cgjennings.graphics.filters.ChannelSwapFilter.RED">Constant Field Values</a></dd>
@@ -532,7 +551,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <li class="blockList">
 <h4>RED_INVERTED</h4>
 <pre>public static final&nbsp;int RED_INVERTED</pre>
-<div class="block">The target channel's value will be copied from the red channel of the source and inverted.</div>
+<div class="block">The target channel's value will be copied from the red channel of the
+ source and inverted.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#ca.cgjennings.graphics.filters.ChannelSwapFilter.RED_INVERTED">Constant Field Values</a></dd>
@@ -568,9 +588,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <li class="blockList">
 <h4>ChannelSwapFilter</h4>
 <pre>public&nbsp;ChannelSwapFilter()</pre>
-<div class="block">Creates a <code>ChannelSwapFilter</code> that copies each channel
- from the the same channel in the source image, reproducing the
- original image.</div>
+<div class="block">Creates a <code>ChannelSwapFilter</code> that copies each channel from
+ the the same channel in the source image, reproducing the original image.</div>
 </li>
 </ul>
 <a name="ChannelSwapFilter-int-int-int-int-">
@@ -583,14 +602,18 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
                          int&nbsp;redSource,
                          int&nbsp;greenSource,
                          int&nbsp;blueSource)</pre>
-<div class="block">Creates a <code>ChannelSwapFilter</code> that copies channels
- from the indicated source channel.</div>
+<div class="block">Creates a <code>ChannelSwapFilter</code> that copies channels from the
+ indicated source channel.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>alphaSource</code> - the source channel to use for the destination's alpha channel</dd>
-<dd><code>redSource</code> - the source channel to use for the destination's red channel</dd>
-<dd><code>greenSource</code> - the source channel to use for the destination's green channel</dd>
-<dd><code>blueSource</code> - the source channel to use for the destination's blue channel</dd>
+<dd><code>alphaSource</code> - the source channel to use for the destination's alpha
+ channel</dd>
+<dd><code>redSource</code> - the source channel to use for the destination's red
+ channel</dd>
+<dd><code>greenSource</code> - the source channel to use for the destination's green
+ channel</dd>
+<dd><code>blueSource</code> - the source channel to use for the destination's blue
+ channel</dd>
 </dl>
 </li>
 </ul>
@@ -613,8 +636,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
                          int&nbsp;end)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFilter.html#filterPixels-int:A-int-int-">AbstractPixelwiseFilter</a></code></span></div>
 <div class="block">This method is called with a block of ARGB values to be filtered.
- Subclasses must override this method to implement the actual
- filtering algorithm by replacing each pixel value in the range
+ Subclasses must override this method to implement the actual filtering
+ algorithm by replacing each pixel value in the range
  <code>argb[start] ... argb[end-1]</code> with the filtered value.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -689,8 +712,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <li class="blockList">
 <h4>getSources</h4>
 <pre>public final&nbsp;int[]&nbsp;getSources()</pre>
-<div class="block">Returns a new array containing the current channel sources for all channels
- in the order alpha, red, green, blue.</div>
+<div class="block">Returns a new array containing the current channel sources for all
+ channels in the order alpha, red, green, blue.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the current channel sources, as an array</dd>
@@ -709,7 +732,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <div class="block">Sets the alpha source channel.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>alphaSource</code> - the source channel to use for the destination's alpha channel</dd>
+<dd><code>alphaSource</code> - the source channel to use for the destination's alpha
+ channel</dd>
 </dl>
 </li>
 </ul>
@@ -723,7 +747,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <div class="block">Sets the blue source channel.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>blueSource</code> - the source channel to use for the destination's blue channel</dd>
+<dd><code>blueSource</code> - the source channel to use for the destination's blue
+ channel</dd>
 </dl>
 </li>
 </ul>
@@ -737,7 +762,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <div class="block">Sets the green source channel.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>greenSource</code> - the source channel to use for the destination's green channel</dd>
+<dd><code>greenSource</code> - the source channel to use for the destination's green
+ channel</dd>
 </dl>
 </li>
 </ul>
@@ -751,7 +777,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <div class="block">Sets the red source channel.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>redSource</code> - the source channel to use for the destination's red channel</dd>
+<dd><code>redSource</code> - the source channel to use for the destination's red
+ channel</dd>
 </dl>
 </li>
 </ul>
@@ -768,10 +795,14 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <div class="block">Sets the channel source for all channels with a single call.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>alphaSource</code> - the source channel to use for the destination's alpha channel</dd>
-<dd><code>redSource</code> - the source channel to use for the destination's red channel</dd>
-<dd><code>greenSource</code> - the source channel to use for the destination's green channel</dd>
-<dd><code>blueSource</code> - the source channel to use for the destination's blue channel</dd>
+<dd><code>alphaSource</code> - the source channel to use for the destination's alpha
+ channel</dd>
+<dd><code>redSource</code> - the source channel to use for the destination's red
+ channel</dd>
+<dd><code>greenSource</code> - the source channel to use for the destination's green
+ channel</dd>
+<dd><code>blueSource</code> - the source channel to use for the destination's blue
+ channel</dd>
 </dl>
 </li>
 </ul>
@@ -795,6 +826,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

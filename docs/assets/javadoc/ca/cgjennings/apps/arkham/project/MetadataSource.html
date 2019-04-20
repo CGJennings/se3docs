@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -110,15 +112,15 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">MetadataSource</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block">An object that can determine metadata for one or more file types.
- Note that if <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#appliesTo-ca.cgjennings.apps.arkham.project.Member-"><code>appliesTo(ca.cgjennings.apps.arkham.project.Member)</code></a> returns <code>false</code> for a
- given member, then the result of passing that member to any other
- method is undefined.
+<div class="block">An object that can determine metadata for one or more file types. Note that
+ if <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#appliesTo-ca.cgjennings.apps.arkham.project.Member-"><code>appliesTo(ca.cgjennings.apps.arkham.project.Member)</code></a> returns <code>false</code> for a given member, then the
+ result of passing that member to any other method is undefined.
 
- <p>A typical metadata source is shared between many different members,
- and may even represent more than one type of file. For this reason,
- methods that query metadata require you to pass in the specific member
- for which the data is desired.</div>
+ <p>
+ A typical metadata source is shared between many different members, and may
+ even represent more than one type of file. For this reason, methods that
+ query metadata require you to pass in the specific member for which the data
+ is desired.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.1</dd>
@@ -144,8 +146,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr class="altColor">
 <td class="colFirst"><code>static interface&nbsp;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.PropertyConsumer.html" title="interface in ca.cgjennings.apps.arkham.project">MetadataSource.PropertyConsumer</a></span></code>
-<div class="block">This interface is implemented by objects that want to access
- textual metadata.</div>
+<div class="block">This interface is implemented by objects that want to access textual
+ metadata.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -426,15 +428,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html?is-external=true" title="class or interface in java.nio.charset">Charset</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#getDefaultCharset-ca.cgjennings.apps.arkham.project.Member-">getDefaultCharset</a></span>(<a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;m)</code>
-<div class="block">Returns a character set encoding for the specified member if it represents a
- character-based file.</div>
+<div class="block">Returns a character set encoding for the specified member if it
+ represents a character-based file.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#getDescription-ca.cgjennings.apps.arkham.project.Member-">getDescription</a></span>(<a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;m)</code>
-<div class="block">Returns a short description of the type of file represented by
- the specified member.</div>
+<div class="block">Returns a short description of the type of file represented by the
+ specified member.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
@@ -446,8 +448,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#getMetadata-ca.cgjennings.apps.arkham.project.Member-">getMetadata</a></span>(<a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;m)</code>
-<div class="block">Returns the metadata that would be generated by
- <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#fillInMetadata-ca.cgjennings.apps.arkham.project.Member-ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer-"><code>fillInMetadata(ca.cgjennings.apps.arkham.project.Member, ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer)</code></a> as a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util"><code>Map</code></a>.</div>
+<div class="block">Returns the metadata that would be generated by <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#fillInMetadata-ca.cgjennings.apps.arkham.project.Member-ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer-"><code>fillInMetadata(ca.cgjennings.apps.arkham.project.Member, ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer)</code></a>
+ as a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util"><code>Map</code></a>.</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
@@ -889,9 +891,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                           <a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;m,
                           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
                           boolean&nbsp;value)</pre>
-<div class="block">Adds a new, localized boolean property to a consumer.
- A convenience method to help subclasses write
- <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#fillInMetadataImpl-ca.cgjennings.apps.arkham.project.Member-ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer-"><code>fillInMetadataImpl(ca.cgjennings.apps.arkham.project.Member, ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer)</code></a> implementations.</div>
+<div class="block">Adds a new, localized boolean property to a consumer. A convenience
+ method to help subclasses write <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#fillInMetadataImpl-ca.cgjennings.apps.arkham.project.Member-ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer-"><code>fillInMetadataImpl(ca.cgjennings.apps.arkham.project.Member, ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer)</code></a>
+ implementations.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>pc</code> - the consumer to write to</dd>
@@ -911,9 +913,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                           <a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;m,
                           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
                           <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;image)</pre>
-<div class="block">Adds a new, localized thumbnail image to a consumer.
- The thumbnail is created on the fly.
- A convenience method to help subclasses write
+<div class="block">Adds a new, localized thumbnail image to a consumer. The thumbnail is
+ created on the fly. A convenience method to help subclasses write
  <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#fillInMetadataImpl-ca.cgjennings.apps.arkham.project.Member-ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer-"><code>fillInMetadataImpl(ca.cgjennings.apps.arkham.project.Member, ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer)</code></a> implementations.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -934,10 +935,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                           <a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;m,
                           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
                           <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing">Icon</a>&nbsp;image)</pre>
-<div class="block">Adds a new, localized thumbnail image to a consumer.
- The thumbnail has already been generated using <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#thumbnail-java.awt.image.BufferedImage-"><code>thumbnail(java.awt.image.BufferedImage)</code></a>.
- A convenience method to help subclasses write
- <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#fillInMetadataImpl-ca.cgjennings.apps.arkham.project.Member-ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer-"><code>fillInMetadataImpl(ca.cgjennings.apps.arkham.project.Member, ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer)</code></a> implementations.</div>
+<div class="block">Adds a new, localized thumbnail image to a consumer. The thumbnail has
+ already been generated using <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#thumbnail-java.awt.image.BufferedImage-"><code>thumbnail(java.awt.image.BufferedImage)</code></a>. A convenience method to
+ help subclasses write <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#fillInMetadataImpl-ca.cgjennings.apps.arkham.project.Member-ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer-"><code>fillInMetadataImpl(ca.cgjennings.apps.arkham.project.Member, ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer)</code></a> implementations.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>pc</code> - the consumer to write to</dd>
@@ -957,9 +957,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                           <a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;m,
                           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;key,
                           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;value)</pre>
-<div class="block">Adds a new, localized property to a consumer.
- A convenience method to help subclasses write
- <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#fillInMetadataImpl-ca.cgjennings.apps.arkham.project.Member-ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer-"><code>fillInMetadataImpl(ca.cgjennings.apps.arkham.project.Member, ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer)</code></a> implementations.</div>
+<div class="block">Adds a new, localized property to a consumer. A convenience method to
+ help subclasses write <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#fillInMetadataImpl-ca.cgjennings.apps.arkham.project.Member-ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer-"><code>fillInMetadataImpl(ca.cgjennings.apps.arkham.project.Member, ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer)</code></a> implementations.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>pc</code> - the consumer to write to</dd>
@@ -977,15 +976,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>appliesTo</h4>
 <pre>public&nbsp;boolean&nbsp;appliesTo(<a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;m)</pre>
 <div class="block">Returns <code>true</code> if this source is intended to provide metadata
- for a given project member. The base class returns <code>true</code>
- for anything, as it provides the fallback implementation for unspecialized
+ for a given project member. The base class returns <code>true</code> for
+ anything, as it provides the fallback implementation for unspecialized
  file types.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>m</code> - the member to check for applicability</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if this source can provide metadata about the
-   specified member, otherwise <code>false</code></dd>
+ specified member, otherwise <code>false</code></dd>
 </dl>
 </li>
 </ul>
@@ -997,21 +996,22 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>fillInMetadata</h4>
 <pre>public&nbsp;void&nbsp;fillInMetadata(<a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;m,
                            <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.PropertyConsumer.html" title="interface in ca.cgjennings.apps.arkham.project">MetadataSource.PropertyConsumer</a>&nbsp;pc)</pre>
-<div class="block">Publishes metadata to a <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.PropertyConsumer.html" title="interface in ca.cgjennings.apps.arkham.project"><code>MetadataSource.PropertyConsumer</code></a>. This method may
- return before all available data has been published and continue
- to add new data as it becomes available. Once all of the available
- data has been published, if the consumer is still valid, its
+<div class="block">Publishes metadata to a <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.PropertyConsumer.html" title="interface in ca.cgjennings.apps.arkham.project"><code>MetadataSource.PropertyConsumer</code></a>. This method may return
+ before all available data has been published and continue to add new data
+ as it becomes available. Once all of the available data has been
+ published, if the consumer is still valid, its
  <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.PropertyConsumer.html#doneAddingProperties--"><code>MetadataSource.PropertyConsumer.doneAddingProperties()</code></a> method will be called.
 
- <p>The base class
- implementation calls <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#fillInMetadataImpl-ca.cgjennings.apps.arkham.project.Member-ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer-"><code>fillInMetadataImpl(ca.cgjennings.apps.arkham.project.Member, ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer)</code></a> and then calls
- the consumer's <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.PropertyConsumer.html#doneAddingProperties--"><code>MetadataSource.PropertyConsumer.doneAddingProperties()</code></a>
- method. This will fill in the member's file type description and
- basic file-based metadata.
+ <p>
+ The base class implementation calls <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#fillInMetadataImpl-ca.cgjennings.apps.arkham.project.Member-ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer-"><code>fillInMetadataImpl(ca.cgjennings.apps.arkham.project.Member, ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer)</code></a> and then
+ calls the consumer's <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.PropertyConsumer.html#doneAddingProperties--"><code>MetadataSource.PropertyConsumer.doneAddingProperties()</code></a>
+ method. This will fill in the member's file type description and basic
+ file-based metadata.
 
- <p><b>Note:</b> If you want to create a metadata source that adds some
- properties from another thread (because they take time to provide),
- use <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.ThreadedMetadataSource.html" title="class in ca.cgjennings.apps.arkham.project"><code>MetadataSource.ThreadedMetadataSource</code></a> as your base class.</div>
+ <p>
+ <b>Note:</b> If you want to create a metadata source that adds some
+ properties from another thread (because they take time to provide), use
+ <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.ThreadedMetadataSource.html" title="class in ca.cgjennings.apps.arkham.project"><code>MetadataSource.ThreadedMetadataSource</code></a> as your base class.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>pc</code> - the entity that should receive property data</dd>
@@ -1026,10 +1026,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>fillInMetadataImpl</h4>
 <pre>protected&nbsp;void&nbsp;fillInMetadataImpl(<a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;m,
                                   <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.PropertyConsumer.html" title="interface in ca.cgjennings.apps.arkham.project">MetadataSource.PropertyConsumer</a>&nbsp;pc)</pre>
-<div class="block">Called to publish metadata to a consumer. The base class will
- publish basic metadata including the file type description.
- Classes that override the default implementation should 
- call the super implementation first to fill in this basic information.</div>
+<div class="block">Called to publish metadata to a consumer. The base class will publish
+ basic metadata including the file type description. Classes that override
+ the default implementation should call the super implementation first to
+ fill in this basic information.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>m</code> - the member to publish metadata about</dd>
@@ -1044,14 +1044,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getDefaultCharset</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html?is-external=true" title="class or interface in java.nio.charset">Charset</a>&nbsp;getDefaultCharset(<a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;m)</pre>
-<div class="block">Returns a character set encoding for the specified member if it represents a
- character-based file. If it is not, then this method returns <code>null</code>.</div>
+<div class="block">Returns a character set encoding for the specified member if it
+ represents a character-based file. If it is not, then this method returns
+ <code>null</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>m</code> - a member to obtain a character set for</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the character set to use when reading the member as a character stream,
-     or <code>null</code> if the member is not a kind of text file known to this source</dd>
+<dd>the character set to use when reading the member as a character
+ stream, or <code>null</code> if the member is not a kind of text file
+ known to this source</dd>
 </dl>
 </li>
 </ul>
@@ -1062,8 +1064,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getDescription</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getDescription(<a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;m)</pre>
-<div class="block">Returns a short description of the type of file represented by
- the specified member.</div>
+<div class="block">Returns a short description of the type of file represented by the
+ specified member.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>m</code> - the member to fetch a description of</dd>
@@ -1082,9 +1084,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Return an icon that is appropriate for a particular member. Override this
  to provide a suitable icon for the file type.
 
- <p>The base implementation provides built-in icons for certain common
- file types, and otherwise attempts to fetch the system icon for the
- file type.</div>
+ <p>
+ The base implementation provides built-in icons for certain common file
+ types, and otherwise attempts to fetch the system icon for the file type.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>m</code> - the member to locate an icon for</dd>
@@ -1100,11 +1102,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getMetadata</h4>
 <pre>public final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&gt;&nbsp;getMetadata(<a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;m)</pre>
-<div class="block">Returns the metadata that would be generated by
- <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#fillInMetadata-ca.cgjennings.apps.arkham.project.Member-ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer-"><code>fillInMetadata(ca.cgjennings.apps.arkham.project.Member, ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer)</code></a> as a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util"><code>Map</code></a>. Unlike <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#fillInMetadata-ca.cgjennings.apps.arkham.project.Member-ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer-"><code>fillInMetadata(ca.cgjennings.apps.arkham.project.Member, ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer)</code></a>,
- this method will block: the returned map will include all available metadata.
- The map's iterator is guaranteed to return keys in the same order as they would have
- been added in by <code>fillInMetadata</code>. Be aware that the keys in this
+<div class="block">Returns the metadata that would be generated by <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#fillInMetadata-ca.cgjennings.apps.arkham.project.Member-ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer-"><code>fillInMetadata(ca.cgjennings.apps.arkham.project.Member, ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer)</code></a>
+ as a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util"><code>Map</code></a>. Unlike <a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html#fillInMetadata-ca.cgjennings.apps.arkham.project.Member-ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer-"><code>fillInMetadata(ca.cgjennings.apps.arkham.project.Member, ca.cgjennings.apps.arkham.project.MetadataSource.PropertyConsumer)</code></a>, this method will block:
+ the returned map will include all available metadata. The map's iterator
+ is guaranteed to return keys in the same order as they would have been
+ added in by <code>fillInMetadata</code>. Be aware that the keys in this
  map are the names of the metadata entries, and that these are typically
  localized. Therefore, the key names will vary depending on the interface
  locale.</div>
@@ -1126,17 +1128,19 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public&nbsp;<a href="../../../../../ca/cgjennings/apps/arkham/project/MetadataSource.html" title="class in ca.cgjennings.apps.arkham.project">MetadataSource</a>&nbsp;getSpecificInstanceFor(<a href="../../../../../ca/cgjennings/apps/arkham/project/Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;m)</pre>
 <div class="block">After locating the correct source for a given member, a specific instance
  is requested by calling this method. The base class simply returns
- <code>this</code>, which shares the source with all members that it applies
- to. Subclasses may return an instance that is unique to a particular member.
- For example, they might supply a unique icon that is a thumbnail version
- of the member.</div>
+ <code>this</code>, which shares the source with all members that it
+ applies to. Subclasses may return an instance that is unique to a
+ particular member. For example, they might supply a unique icon that is a
+ thumbnail version of the member.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>m</code> - the member to request a more specific source for</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a source that provides the most specific available data for <code>m</code>, possibly <code>this</code></dd>
+<dd>a source that provides the most specific available data for
+ <code>m</code>, possibly <code>this</code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if this source does not apply to <code>m</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if this source does not apply to
+ <code>m</code></dd>
 </dl>
 </li>
 </ul>
@@ -1153,7 +1157,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>image</code> - the source image to convert to a thumbnail</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>if the source image is small, the source image; otherwise a
-   smaller thumbnail version of the source image</dd>
+ smaller thumbnail version of the source image</dd>
 </dl>
 </li>
 </ul>
@@ -1177,6 +1181,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

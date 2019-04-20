@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -252,8 +254,8 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Depend
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/CardFace.html#customizePopupMenu-javax.swing.JPopupMenu-ca.cgjennings.apps.arkham.deck.item.PageItem:A-boolean-">customizePopupMenu</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JPopupMenu.html?is-external=true" title="class or interface in javax.swing">JPopupMenu</a>&nbsp;menu,
                   <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a>[]&nbsp;selection,
                   boolean&nbsp;isSelectionFocus)</code>
-<div class="block">Allows a page item the opportunity to customize the popup menu before
- it is displayed.</div>
+<div class="block">Allows a page item the opportunity to customize the popup menu before it
+ is displayed.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -311,7 +313,8 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Depend
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/CardFace.html#isBleedMarginMarked--">isBleedMarginMarked</a></span>()</code>
-<div class="block">Returns <code>true</code> if this item should have crop marks added to it.</div>
+<div class="block">Returns <code>true</code> if this item should have crop marks added to
+ it.</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
@@ -321,15 +324,14 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Depend
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/CardFace.html#refresh--">refresh</a></span>()</code>
-<div class="block">Indicates to the item that it should recreate its content because
- the external file has changed.</div>
+<div class="block">Clears cached representation of the card face.</div>
 </td>
 </tr>
 <tr id="i14" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/CardFace.html#refresh-ca.cgjennings.apps.arkham.component.GameComponent-">refresh</a></span>(<a href="../../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>&nbsp;component)</code>
-<div class="block">Allows for optimized updates when the same component occurs many
- times in the same deck.</div>
+<div class="block">Allows for optimized updates when the same component occurs many times in
+ the same deck.</div>
 </td>
 </tr>
 <tr id="i15" class="rowColor">
@@ -343,8 +345,8 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Depend
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/CardFace.html#scaleMipMapUpAtHighZoom-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-">scaleMipMapUpAtHighZoom</a></span>(<a href="../../../../../../ca/cgjennings/apps/arkham/sheet/RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target,
                        double&nbsp;resolution)</code>
-<div class="block">Returns <code>true</code> if the highest resolution MIP map image
- should be scaled up at high zoom levels.</div>
+<div class="block">Returns <code>true</code> if the highest resolution MIP map image should
+ be scaled up at high zoom levels.</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
@@ -508,10 +510,10 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Depend
                                <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a>[]&nbsp;selection,
                                boolean&nbsp;isSelectionFocus)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#customizePopupMenu-javax.swing.JPopupMenu-ca.cgjennings.apps.arkham.deck.item.PageItem:A-boolean-">PageItem</a></code></span></div>
-<div class="block">Allows a page item the opportunity to customize the popup menu before
- it is displayed. When a popup menu is constructed for a page view, the
- items in the selection will be offered the opportunity to customize the
- menu. Generally, only the last item (if any) makes any changes.</div>
+<div class="block">Allows a page item the opportunity to customize the popup menu before it
+ is displayed. When a popup menu is constructed for a page view, the items
+ in the selection will be offered the opportunity to customize the menu.
+ Generally, only the last item (if any) makes any changes.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#customizePopupMenu-javax.swing.JPopupMenu-ca.cgjennings.apps.arkham.deck.item.PageItem:A-boolean-">customizePopupMenu</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a></code></dd>
@@ -520,8 +522,8 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Depend
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>menu</code> - the menu that will be displayed</dd>
 <dd><code>selection</code> - the selected items; this should be considered read-only</dd>
-<dd><code>isSelectionFocus</code> - if <code>true</code>, this is the last item
-   in the selection</dd>
+<dd><code>isSelectionFocus</code> - if <code>true</code>, this is the last item in
+ the selection</dd>
 </dl>
 </li>
 </ul>
@@ -553,31 +555,33 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Depend
 <pre>public&nbsp;double[]&nbsp;getFoldMarks()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#getFoldMarks--">PageItem</a></code></span></div>
 <div class="block">Return an array of the relative positions and directions of extra fold
- marks for this item.
- These fold marks are in addition to any fold marks that are generated
- automatically based on the juxtaposition of <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/CardFace.html" title="class in ca.cgjennings.apps.arkham.deck.item"><code>CardFace</code></a> items.
- They are <i>intraitem</i> fold marks that are added along the
- edges of some objects. For example, foldable tome leaves always have
- a fold mark along their spine, which runs vertically down the centre of
- the face.
+ marks for this item. These fold marks are in addition to any fold marks
+ that are generated automatically based on the juxtaposition of
+ <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/CardFace.html" title="class in ca.cgjennings.apps.arkham.deck.item"><code>CardFace</code></a> items. They are <i>intraitem</i> fold marks that are
+ added along the edges of some objects. For example, foldable tome leaves
+ always have a fold mark along their spine, which runs vertically down the
+ centre of the face.
 
- <p>The returned array consists of two points for each mark in (x1,y1),(x2,y2) order.
- (x1,y1) is a point relative to the width and height of the card, e.g.
- 0.5, 0 is the center of the top edge. (x2,y2) is a <b>unit vector</b> that
- indicates the direction of the line that should be drawn from the first point.
- (This means that the direction of the fold mark line will be the same as
- that of the line segment from (0,0) to (x2, y2) and that
- <code>Math.sqrt( x2*x2 + y2*y2 ) = 1</code>.
+ <p>
+ The returned array consists of two points for each mark in
+ (x1,y1),(x2,y2) order. (x1,y1) is a point relative to the width and
+ height of the card, e.g. 0.5, 0 is the center of the top edge. (x2,y2) is
+ a <b>unit vector</b> that indicates the direction of the line that should
+ be drawn from the first point. (This means that the direction of the fold
+ mark line will be the same as that of the line segment from (0,0) to (x2,
+ y2) and that <code>Math.sqrt( x2*x2 + y2*y2 ) = 1</code>.
 
- <p>Returns <code>null</code> if there are no extra fold marks for this sheet.</div>
+ <p>
+ Returns <code>null</code> if there are no extra fold marks for this
+ sheet.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#getFoldMarks--">getFoldMarks</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a></code></dd>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractItem.html#getFoldMarks--">getFoldMarks</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractItem.html" title="class in ca.cgjennings.apps.arkham.deck.item">AbstractItem</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>an array of fold mark data in the format described above, or <code>null</code>
-     if there are no extra fold marks</dd>
+<dd>an array of fold mark data in the format described above, or
+ <code>null</code> if there are no extra fold marks</dd>
 </dl>
 </li>
 </ul>
@@ -675,9 +679,7 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Depend
 <h4>isAutoBleedMarginEnabled</h4>
 <pre>public&nbsp;boolean&nbsp;isAutoBleedMarginEnabled()</pre>
 <div class="block">Returns <code>true</code> if the automatic bleed margin feature is
- enabled. Even when enabled, this setting only has an observable
- effect if <code>#isAutoBleedMarginSupported()</code> returns
- <code>true</code>.</div>
+ enabled.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if an automatic bleed margin is enabled</dd>
@@ -694,9 +696,9 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Depend
 <h4>isBleedMarginMarked</h4>
 <pre>public&nbsp;boolean&nbsp;isBleedMarginMarked()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#isBleedMarginMarked--">PageItem</a></code></span></div>
-<div class="block">Returns <code>true</code> if this item should have crop marks added to it.
- The crop marks will be placed <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#getBleedMargin--"><code>PageItem.getBleedMargin()</code></a> points from the
- ends of each edge.</div>
+<div class="block">Returns <code>true</code> if this item should have crop marks added to
+ it. The crop marks will be placed <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#getBleedMargin--"><code>PageItem.getBleedMargin()</code></a> points from
+ the ends of each edge.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#isBleedMarginMarked--">isBleedMarginMarked</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a></code></dd>
@@ -730,18 +732,17 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Depend
 <li class="blockList">
 <h4>refresh</h4>
 <pre>public&nbsp;boolean&nbsp;refresh()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/DependentPageItem.html#refresh--">DependentPageItem</a></code></span></div>
-<div class="block">Indicates to the item that it should recreate its content because
- the external file has changed.
- This method should return <code>true</code> if the item is
- updated successfully, or <code>false</code> if the item could
- not be updated, typically because the new item is incompatible
- with the old one.</div>
+<div class="block">Clears cached representation of the card face. The next time it is
+ drawn, the sheet will be asked to redraw it from the component instance
+ linked with the sheet. This is not suitable if the linked component
+ needs to change (for example, if the file that the component is stored
+ in is overwritten with a new component). In this case, see
+ <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/CardFace.html#refresh-ca.cgjennings.apps.arkham.component.GameComponent-"><code>refresh(ca.cgjennings.apps.arkham.component.GameComponent)</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/DependentPageItem.html#refresh--">refresh</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/DependentPageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">DependentPageItem</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the item was replaced</dd>
+<dd>true if the refresh was successful</dd>
 </dl>
 </li>
 </ul>
@@ -752,9 +753,9 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Depend
 <li class="blockList">
 <h4>refresh</h4>
 <pre>public&nbsp;boolean&nbsp;refresh(<a href="../../../../../../ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>&nbsp;component)</pre>
-<div class="block">Allows for optimized updates when the same component occurs many
- times in the same deck. The component passed in as a replacement
- must have a valid set of sheets in place.</div>
+<div class="block">Allows for optimized updates when the same component occurs many times in
+ the same deck. The component passed in as a replacement must have a valid
+ set of sheets in place.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>component</code> - the component to replace the existing one with</dd>
@@ -772,16 +773,15 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Depend
 <pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;renderImage(<a href="../../../../../../ca/cgjennings/apps/arkham/sheet/RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target,
                                     double&nbsp;resolution)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#renderImage-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-">AbstractRenderedItem</a></code></span></div>
-<div class="block">Render an image based on the target and resolution hints.
- This is called whenever the item's image is required.
- The image should always be rendered in the upright, unmirrored
- position. An oriented image will be generated automatically as
- needed.
+<div class="block">Render an image based on the target and resolution hints. This is called
+ whenever the item's image is required. The image should always be
+ rendered in the upright, unmirrored position. An oriented image will be
+ generated automatically as needed.
 
- <p>It is recommended that subclasses cache results if possible,
- in which case <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#clearCachedImages--"><code>AbstractRenderedItem.clearCachedImages()</code></a> should be overridden
- to clear the cached result before calling the <code>super</code>
- implementation.</div>
+ <p>
+ It is recommended that subclasses cache results if possible, in which
+ case <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#clearCachedImages--"><code>AbstractRenderedItem.clearCachedImages()</code></a> should be overridden to clear the
+ cached result before calling the <code>super</code> implementation.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#renderImage-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-">renderImage</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html" title="class in ca.cgjennings.apps.arkham.deck.item">AbstractRenderedItem</a></code></dd>
@@ -802,24 +802,24 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Depend
 <pre>protected&nbsp;boolean&nbsp;scaleMipMapUpAtHighZoom(<a href="../../../../../../ca/cgjennings/apps/arkham/sheet/RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target,
                                           double&nbsp;resolution)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#scaleMipMapUpAtHighZoom-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-">AbstractRenderedItem</a></code></span></div>
-<div class="block">Returns <code>true</code> if the highest resolution MIP map image
- should be scaled up at high zoom levels. This method is called when
- the MIP map cache is enabled but the current zoom level of the view
- requires an image with higher resolution than the maximum resolution
- used by the MIP map cache. If it returns <code>true</code>, then the
- highest resolution MIP map image will be scaled up to the requested
- resolution. If it returns <code>false</code>, then a new rendering will
- be requested at the exact resolution needed, just as if the MIP map
- cache was disabled.
+<div class="block">Returns <code>true</code> if the highest resolution MIP map image should
+ be scaled up at high zoom levels. This method is called when the MIP map
+ cache is enabled but the current zoom level of the view requires an image
+ with higher resolution than the maximum resolution used by the MIP map
+ cache. If it returns <code>true</code>, then the highest resolution MIP
+ map image will be scaled up to the requested resolution. If it returns
+ <code>false</code>, then a new rendering will be requested at the exact
+ resolution needed, just as if the MIP map cache was disabled.
 
- <p>It is generally faster and consumes less memory to scale up the MIP
- map image than to render a new image. However, scaling up the MIP map
- image reduces visual fidelity at high zoom levels. By overriding this
- method, subclasses can optimize this trade-off for their particular
- item type.
+ <p>
+ It is generally faster and consumes less memory to scale up the MIP map
+ image than to render a new image. However, scaling up the MIP map image
+ reduces visual fidelity at high zoom levels. By overriding this method,
+ subclasses can optimize this trade-off for their particular item type.
 
- <p>The value returned by the base class is unspecified because it may
- change in future versions.</div>
+ <p>
+ The value returned by the base class is unspecified because it may change
+ in future versions.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#scaleMipMapUpAtHighZoom-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-">scaleMipMapUpAtHighZoom</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html" title="class in ca.cgjennings.apps.arkham.deck.item">AbstractRenderedItem</a></code></dd>
@@ -827,8 +827,9 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Depend
 <dd><code>target</code> - the rendering target of the request</dd>
 <dd><code>resolution</code> - the desired image resolution</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>whether the rendering engine should scale up the highest resolution
-     MIP map image or render the image at the exact resolution required</dd>
+<dd>whether the rendering engine should scale up the highest
+ resolution MIP map image or render the image at the exact resolution
+ required</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#setMipMapCacheEnabled-boolean-"><code>AbstractRenderedItem.setMipMapCacheEnabled(boolean)</code></a></dd>
 </dl>
@@ -845,7 +846,8 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Depend
  if supported by the card face.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>enable</code> - whether automatic bleed margin should be enabled, where supported</dd>
+<dd><code>enable</code> - whether automatic bleed margin should be enabled, where
+ supported</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/CardFace.html#isAutoBleedMarginEnabled--"><code>isAutoBleedMarginEnabled()</code></a></dd>
 </dl>
@@ -904,6 +906,8 @@ implements <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/Depend
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

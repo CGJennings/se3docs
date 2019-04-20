@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -119,18 +121,18 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public abstract class <span class="typeNameLabel">AbstractImagewiseFilter</span>
 extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.html" title="class in ca.cgjennings.graphics.filters">AbstractImageFilter</a></pre>
-<div class="block">An abstract base class for image filters that require access to the
- entire image at once when processing.
- Filters of this type produce images of the same dimensions as the original.
+<div class="block">An abstract base class for image filters that require access to the entire
+ image at once when processing. Filters of this type produce images of the
+ same dimensions as the original.
 
- <p>It is assumed that pixels will only be
- read from the source image and written to the destination image. That is,
- that pixel values depend only on combinations of the source pixels and
- not on previously computed destination pixels. This allows filtering to
- be accelerated automatically by generating blocks of destination pixels
- in parallel. A filter that does not meet these criteria may return a value
- of 0 from <a href="../../../../ca/cgjennings/graphics/filters/AbstractImagewiseFilter.html#workFactor--"><code>workFactor()</code></a> to disable the automatic acceleration
- mechanism.</div>
+ <p>
+ It is assumed that pixels will only be read from the source image and written
+ to the destination image. That is, that pixel values depend only on
+ combinations of the source pixels and not on previously computed destination
+ pixels. This allows filtering to be accelerated automatically by generating
+ blocks of destination pixels in parallel. A filter that does not meet these
+ criteria may return a value of 0 from <a href="../../../../ca/cgjennings/graphics/filters/AbstractImagewiseFilter.html#workFactor--"><code>workFactor()</code></a> to disable the
+ automatic acceleration mechanism.</div>
 </li>
 </ul>
 </div>
@@ -191,8 +193,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.
             int&nbsp;height,
             int&nbsp;y0,
             int&nbsp;rows)</code>
-<div class="block">Filters a block of rows in the source image, placing the result in
- the corresponding rows in the destination image.</div>
+<div class="block">Filters a block of rows in the source image, placing the result in the
+ corresponding rows in the destination image.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -269,8 +271,9 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.
  and/or destination image is incompatible with the types of images       $
  allowed by the class implementing this filter.
 
- <p>This implementation will call <a href="../../../../ca/cgjennings/graphics/filters/AbstractImagewiseFilter.html#filterPixels-int:A-int:A-int-int-int-int-"><code>filterPixels(int[], int[], int, int, int, int)</code></a>
- to perform the actual filtering.</div>
+ <p>
+ This implementation will call <a href="../../../../ca/cgjennings/graphics/filters/AbstractImagewiseFilter.html#filterPixels-int:A-int:A-int-int-int-int-"><code>filterPixels(int[], int[], int, int, int, int)</code></a> to perform the actual
+ filtering.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the source image</dd>
@@ -290,12 +293,13 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.
                     int[]&nbsp;destination,
                     int&nbsp;width,
                     int&nbsp;height)</pre>
-<div class="block">Applies the filter to ARGB pixel data stored in an array. This method
- can be used during the internal processing of other filters.</div>
+<div class="block">Applies the filter to ARGB pixel data stored in an array. This method can
+ be used during the internal processing of other filters.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the source pixel data in ARGB format</dd>
-<dd><code>destination</code> - the destination in which the filtered should be stored, may be <code>null</code></dd>
+<dd><code>destination</code> - the destination in which the filtered should be
+ stored, may be <code>null</code></dd>
 <dd><code>width</code> - the width of the source image</dd>
 <dd><code>height</code> - the height of the source image</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -315,9 +319,9 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.
                                      int&nbsp;height,
                                      int&nbsp;y0,
                                      int&nbsp;rows)</pre>
-<div class="block">Filters a block of rows in the source image, placing the result in
- the corresponding rows in the destination image. The block of rows
- to be filtered runs from y0 to y0 + rows-1 (inclusive).</div>
+<div class="block">Filters a block of rows in the source image, placing the result in the
+ corresponding rows in the destination image. The block of rows to be
+ filtered runs from y0 to y0 + rows-1 (inclusive).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>srcPixels</code> - the pixel data for the source image</dd>
@@ -339,18 +343,19 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.
 <div class="block">Returns a factor representing the amount of work performed by this filter
  relative to a filter that simply copies the source image by reading and
  writing each pixel. For example, a filter that implemented a 3x3
- convolution might return the value 9. The work factor value
- helps determine when an image should be processed in parallel.
- (There is significant overhead involved in running a filter in parallel,
- so it is only worth doing if the image is relatively large
- or the amount of processing per pixel is relatively high.)
+ convolution might return the value 9. The work factor value helps
+ determine when an image should be processed in parallel. (There is
+ significant overhead involved in running a filter in parallel, so it is
+ only worth doing if the image is relatively large or the amount of
+ processing per pixel is relatively high.)
 
- <p><b>Note:</b> The work factor may vary depending on the current filter
+ <p>
+ <b>Note:</b> The work factor may vary depending on the current filter
  settings.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the approximate amount of work per pixel,
-     relative to simply copying the pixel values</dd>
+<dd>the approximate amount of work per pixel, relative to simply
+ copying the pixel values</dd>
 </dl>
 </li>
 </ul>
@@ -374,6 +379,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractImageFilter.
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

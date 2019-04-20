@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -115,12 +117,11 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">BackingOutputStream</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io">OutputStream</a></pre>
-<div class="block">An output stream that writes to a file, but it writes initially to a
- file other than the one requested. If the process succeeds and the file
- is closed without any exceptions, then the temporary file is overwritten
- with the new content. If an exception is thrown while the
- file is written or the is never closed, then the original file is not
- modified.
+<div class="block">An output stream that writes to a file, but it writes initially to a file
+ other than the one requested. If the process succeeds and the file is closed
+ without any exceptions, then the temporary file is overwritten with the new
+ content. If an exception is thrown while the file is written or the is never
+ closed, then the original file is not modified.
  <p>
  <b>WARNING: NOT YET IMPLEMENTED</b></div>
 </li>
@@ -262,14 +263,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.
 <h4>close</h4>
 <pre>public&nbsp;void&nbsp;close()
            throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></pre>
-<div class="block">Close the temporary file and copy it over the real file. If any exceptions
- have been thrown from this instance while this file was written to,
- then an exception will be thrown. If the temporary file throws an exception
- when closed, an exception will be thrown. Otherwise, the following actions
- occur: (1) If the target file exists, it is renamed to a temporary file name.
- (2) The temporary file is renamed to the target file. (3) The original, now
- renamed, file is deleted. If the deletion fails, another attempt is made when
- the VM exits.</div>
+<div class="block">Close the temporary file and copy it over the real file. If any
+ exceptions have been thrown from this instance while this file was
+ written to, then an exception will be thrown. If the temporary file
+ throws an exception when closed, an exception will be thrown. Otherwise,
+ the following actions occur: (1) If the target file exists, it is renamed
+ to a temporary file name. (2) The temporary file is renamed to the target
+ file. (3) The original, now renamed, file is deleted. If the deletion
+ fails, another attempt is made when the VM exits.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html?is-external=true#close--" title="class or interface in java.io">close</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html?is-external=true" title="class or interface in java.io">Closeable</a></code></dd>
@@ -433,6 +434,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../index-all.html">Index</a></li>
+<li><a href="../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

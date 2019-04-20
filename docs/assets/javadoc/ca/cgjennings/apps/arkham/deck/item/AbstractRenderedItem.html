@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -124,26 +126,26 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public abstract class <span class="typeNameLabel">AbstractRenderedItem</span>
 extends <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractFlippableItem.html" title="class in ca.cgjennings.apps.arkham.deck.item">AbstractFlippableItem</a></pre>
-<div class="block">An item whose visual representation is generated from a bitmap.
- The bitmap may or may not be re-rendered to suit the resolution.
- To create an rendered item subclass, you must override
- <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#renderImage-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-"><code>renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a>
- to provide an appropriate image when required. If a change to the
- item state requires that the image be re-rendered, you must call
- <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#clearCachedImages--"><code>clearCachedImages()</code></a> and then <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractItem.html#itemChanged--"><code>AbstractItem.itemChanged()</code></a>
- so that the image will be updated on the next paint.
- (For example, an item that displays an image from a file would
- call this if the user selected a new file.)
+<div class="block">An item whose visual representation is generated from a bitmap. The bitmap
+ may or may not be re-rendered to suit the resolution. To create an rendered
+ item subclass, you must override
+ <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#renderImage-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-"><code>renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a> to
+ provide an appropriate image when required. If a change to the item state
+ requires that the image be re-rendered, you must call
+ <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#clearCachedImages--"><code>clearCachedImages()</code></a> and then <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractItem.html#itemChanged--"><code>AbstractItem.itemChanged()</code></a> so that the
+ image will be updated on the next paint. (For example, an item that displays
+ an image from a file would call this if the user selected a new file.)
 
- <p>By default, rendered items will transparently use a MIP map technique to
+ <p>
+ By default, rendered items will transparently use a MIP map technique to
  cache results for different zoom levels in a page view. The MIP map cache
  works by rendering the image at a high resolution and then creating scaled
- versions (that is, scaling down the initial high resolution rendering
- rather than re-rendering the image for each resolution).
- The pre-scaled images improve image quality and drawing performance at common
- view scales. You can disable this cache (see <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#setMipMapCacheEnabled-boolean-"><code>setMipMapCacheEnabled(boolean)</code></a>),
- but be aware that you will then be asked to re-render the image every time
- the view scale changes unless you implement your own caching method.</div>
+ versions (that is, scaling down the initial high resolution rendering rather
+ than re-rendering the image for each resolution). The pre-scaled images
+ improve image quality and drawing performance at common view scales. You can
+ disable this cache (see <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#setMipMapCacheEnabled-boolean-"><code>setMipMapCacheEnabled(boolean)</code></a>), but be
+ aware that you will then be asked to re-render the image every time the view
+ scale changes unless you implement your own caching method.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../../serialized-form.html#ca.cgjennings.apps.arkham.deck.item.AbstractRenderedItem">Serialized Form</a></dd>
@@ -263,8 +265,8 @@ extends <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractF
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#createOrientedImage-java.awt.image.BufferedImage-int-">createOrientedImage</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;source,
                    int&nbsp;orientation)</code>
-<div class="block">Given an upright, unmirrored source image, this method returns
- an oriented version of the image.</div>
+<div class="block">Given an upright, unmirrored source image, this method returns an
+ oriented version of the image.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -307,15 +309,15 @@ extends <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractF
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#isMipMapCacheEnabled--">isMipMapCacheEnabled</a></span>()</code>
-<div class="block">Returns <code>true</code> if the MIP map mechanism is currently
- enabled on this item.</div>
+<div class="block">Returns <code>true</code> if the MIP map mechanism is currently enabled
+ on this item.</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#isMipMapCacheEnabledByDefault--">isMipMapCacheEnabledByDefault</a></span>()</code>
-<div class="block">Returns <code>true</code> if the MIP map cache should be enabled
- by default for this item type.</div>
+<div class="block">Returns <code>true</code> if the MIP map cache should be enabled by
+ default for this item type.</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
@@ -349,8 +351,8 @@ extends <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractF
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#scaleMipMapUpAtHighZoom-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-">scaleMipMapUpAtHighZoom</a></span>(<a href="../../../../../../ca/cgjennings/apps/arkham/sheet/RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target,
                        double&nbsp;resolution)</code>
-<div class="block">Returns <code>true</code> if the highest resolution MIP map image
- should be scaled up at high zoom levels.</div>
+<div class="block">Returns <code>true</code> if the highest resolution MIP map image should
+ be scaled up at high zoom levels.</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
@@ -461,8 +463,9 @@ extends <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractF
 <pre>protected&nbsp;void&nbsp;clearCachedImages()</pre>
 <div class="block">Clear any cached image data held by this object. The base class clears
  any cached oriented results and the MIP map cache (if enabled).
- Subclasses should override this (calling <code>super.clearCachedImages</code>)
- if the <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#renderImage-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-"><code>renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a> implementation caches results.</div>
+ Subclasses should override this (calling
+ <code>super.clearCachedImages</code>) if the <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#renderImage-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-"><code>renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a>
+ implementation caches results.</div>
 </li>
 </ul>
 <a name="clone--">
@@ -543,15 +546,16 @@ extends <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractF
 <h4>createOrientedImage</h4>
 <pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;createOrientedImage(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;source,
                                             int&nbsp;orientation)</pre>
-<div class="block">Given an upright, unmirrored source image, this method returns
- an oriented version of the image. If the requested orientation is
- upright, the original image is returned.</div>
+<div class="block">Given an upright, unmirrored source image, this method returns an
+ oriented version of the image. If the requested orientation is upright,
+ the original image is returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the rendered image</dd>
 <dd><code>orientation</code> - the required orientation</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a version of the source image rotated or flipped into the required orientation</dd>
+<dd>a version of the source image rotated or flipped into the
+ required orientation</dd>
 </dl>
 </li>
 </ul>
@@ -562,10 +566,9 @@ extends <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractF
 <li class="blockList">
 <h4>getHeight</h4>
 <pre>public&nbsp;double&nbsp;getHeight()</pre>
-<div class="block">Return the height of this item. The result is corrected for the
- item's current orientation. Subclasses should override
- <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#getUprightWidth--"><code>getUprightWidth()</code></a> to provide the item's hright in its
- upright orientation.</div>
+<div class="block">Return the height of this item. The result is corrected for the item's
+ current orientation. Subclasses should override <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#getUprightWidth--"><code>getUprightWidth()</code></a>
+ to provide the item's hright in its upright orientation.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#getHeight--">getHeight</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a></code></dd>
@@ -584,14 +587,15 @@ extends <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractF
 <h4>getOrientedImage</h4>
 <pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;getOrientedImage(<a href="../../../../../../ca/cgjennings/apps/arkham/sheet/RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target,
                                          double&nbsp;resolution)</pre>
-<div class="block">Returns an image of this item that is correctly oriented.
- (If the card is rotated or flipped, the image will be flipped
- and/or rotated accordingly.) This method calls <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#renderImage-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-"><code>renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a>
- in order to obtain the upright version of the image, and
- <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#createOrientedImage-java.awt.image.BufferedImage-int-"><code>createOrientedImage(java.awt.image.BufferedImage, int)</code></a> to change the orientation if required.
+<div class="block">Returns an image of this item that is correctly oriented. (If the card is
+ rotated or flipped, the image will be flipped and/or rotated
+ accordingly.) This method calls <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#renderImage-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-"><code>renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a> in order to obtain
+ the upright version of the image, and <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#createOrientedImage-java.awt.image.BufferedImage-int-"><code>createOrientedImage(java.awt.image.BufferedImage, int)</code></a> to
+ change the orientation if required.
 
- <p>The oriented result is cached, and on future calls the cached image
- will be returned if the orientation is the same and <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#renderImage-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-"><code>renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a>
+ <p>
+ The oriented result is cached, and on future calls the cached image will
+ be returned if the orientation is the same and <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#renderImage-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-"><code>renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a>
  returns the same image instance as the previous call.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -610,9 +614,8 @@ extends <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractF
 <h4>getThumbnailIcon</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing">Icon</a>&nbsp;getThumbnailIcon()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#getThumbnailIcon--">PageItem</a></code></span></div>
-<div class="block">Returns a small representative icon for this item.
- The icon should be <code>ICON_SIZE</code>
- pixels wide and high.</div>
+<div class="block">Returns a small representative icon for this item. The icon should be
+ <code>ICON_SIZE</code> pixels wide and high.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#getThumbnailIcon--">getThumbnailIcon</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a></code></dd>
@@ -656,10 +659,9 @@ extends <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractF
 <li class="blockList">
 <h4>getWidth</h4>
 <pre>public&nbsp;double&nbsp;getWidth()</pre>
-<div class="block">Return the width of this item. The result is corrected for the
- item's current orientation. Subclasses should override
- <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#getUprightWidth--"><code>getUprightWidth()</code></a> to provide the item's width in its
- upright orientation.</div>
+<div class="block">Return the width of this item. The result is corrected for the item's
+ current orientation. Subclasses should override <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#getUprightWidth--"><code>getUprightWidth()</code></a>
+ to provide the item's width in its upright orientation.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#getWidth--">getWidth</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a></code></dd>
@@ -677,8 +679,8 @@ extends <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractF
 <li class="blockList">
 <h4>isMipMapCacheEnabled</h4>
 <pre>protected final&nbsp;boolean&nbsp;isMipMapCacheEnabled()</pre>
-<div class="block">Returns <code>true</code> if the MIP map mechanism is currently
- enabled on this item.</div>
+<div class="block">Returns <code>true</code> if the MIP map mechanism is currently enabled
+ on this item.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if MIP mapping is enabled</dd>
@@ -696,13 +698,13 @@ extends <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractF
 <li class="blockList">
 <h4>isMipMapCacheEnabledByDefault</h4>
 <pre>protected&nbsp;boolean&nbsp;isMipMapCacheEnabledByDefault()</pre>
-<div class="block">Returns <code>true</code> if the MIP map cache should be enabled
- by default for this item type. Subclasses can override this to
- disable this mechanism. (The base class returns <code>true</code>.)</div>
+<div class="block">Returns <code>true</code> if the MIP map cache should be enabled by
+ default for this item type. Subclasses can override this to disable this
+ mechanism. (The base class returns <code>true</code>.)</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the MIP map cache should automatically
-     be enabled during construction or deserialization</dd>
+<dd><code>true</code> if the MIP map cache should automatically be
+ enabled during construction or deserialization</dd>
 </dl>
 </li>
 </ul>
@@ -716,12 +718,11 @@ extends <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractF
                   <a href="../../../../../../ca/cgjennings/apps/arkham/sheet/RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target,
                   double&nbsp;renderResolutionHint)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#paint-java.awt.Graphics2D-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-">PageItem</a></code></span></div>
-<div class="block">Paint this item at its current location.
- The graphics context will be scaled so that 1 unit represents 1 point.
- The resolution hint is a suggestion as to the resolution the
- item should be rendered at if it must be converted to a
- bitmap before being drawn. It may or may not represent the actual
- resolution of the output target.</div>
+<div class="block">Paint this item at its current location. The graphics context will be
+ scaled so that 1 unit represents 1 point. The resolution hint is a
+ suggestion as to the resolution the item should be rendered at if it must
+ be converted to a bitmap before being drawn. It may or may not represent
+ the actual resolution of the output target.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#paint-java.awt.Graphics2D-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-">paint</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a></code></dd>
@@ -746,14 +747,15 @@ extends <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractF
 <div class="block">Update any cached representations needed to paint this item at the
  specified settings. It is not required that this be called prior to
  calling <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#paint-java.awt.Graphics2D-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-"><code>PageItem.paint(java.awt.Graphics2D, ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a>. Rather, the intent is that if this method returns
- without throwing any exceptions (such as
- <code>OutOfMemoryError</code>), then a call to <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#paint-java.awt.Graphics2D-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-"><code>PageItem.paint(java.awt.Graphics2D, ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a> with the
- same settings is also <i>expected</i> to succeed. Thus, this method may
- be called prior to rendering at high resolution and if it throws an
+ without throwing any exceptions (such as <code>OutOfMemoryError</code>),
+ then a call to <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/PageItem.html#paint-java.awt.Graphics2D-ca.cgjennings.apps.arkham.sheet.RenderTarget-double-"><code>PageItem.paint(java.awt.Graphics2D, ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a> with the same settings is also
+ <i>expected</i> to succeed. Thus, this method may be called prior to
+ rendering at high resolution and if it throws an
  <code>OutOfMemoryError</code>, the application can attempt to recover by
  freeing up resources before trying to paint again.
 
- <p>If this <code>PageItem</code> does not require rendering to a buffer,
+ <p>
+ If this <code>PageItem</code> does not require rendering to a buffer,
  then this method may do nothing.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -794,16 +796,15 @@ extends <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractF
 <h4>renderImage</h4>
 <pre>protected abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image">BufferedImage</a>&nbsp;renderImage(<a href="../../../../../../ca/cgjennings/apps/arkham/sheet/RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target,
                                              double&nbsp;resolution)</pre>
-<div class="block">Render an image based on the target and resolution hints.
- This is called whenever the item's image is required.
- The image should always be rendered in the upright, unmirrored
- position. An oriented image will be generated automatically as
- needed.
+<div class="block">Render an image based on the target and resolution hints. This is called
+ whenever the item's image is required. The image should always be
+ rendered in the upright, unmirrored position. An oriented image will be
+ generated automatically as needed.
 
- <p>It is recommended that subclasses cache results if possible,
- in which case <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#clearCachedImages--"><code>clearCachedImages()</code></a> should be overridden
- to clear the cached result before calling the <code>super</code>
- implementation.</div>
+ <p>
+ It is recommended that subclasses cache results if possible, in which
+ case <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#clearCachedImages--"><code>clearCachedImages()</code></a> should be overridden to clear the
+ cached result before calling the <code>super</code> implementation.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>target</code> - the target type for rendering</dd>
@@ -821,31 +822,32 @@ extends <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractF
 <h4>scaleMipMapUpAtHighZoom</h4>
 <pre>protected&nbsp;boolean&nbsp;scaleMipMapUpAtHighZoom(<a href="../../../../../../ca/cgjennings/apps/arkham/sheet/RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target,
                                           double&nbsp;resolution)</pre>
-<div class="block">Returns <code>true</code> if the highest resolution MIP map image
- should be scaled up at high zoom levels. This method is called when
- the MIP map cache is enabled but the current zoom level of the view
- requires an image with higher resolution than the maximum resolution
- used by the MIP map cache. If it returns <code>true</code>, then the
- highest resolution MIP map image will be scaled up to the requested
- resolution. If it returns <code>false</code>, then a new rendering will
- be requested at the exact resolution needed, just as if the MIP map
- cache was disabled.
+<div class="block">Returns <code>true</code> if the highest resolution MIP map image should
+ be scaled up at high zoom levels. This method is called when the MIP map
+ cache is enabled but the current zoom level of the view requires an image
+ with higher resolution than the maximum resolution used by the MIP map
+ cache. If it returns <code>true</code>, then the highest resolution MIP
+ map image will be scaled up to the requested resolution. If it returns
+ <code>false</code>, then a new rendering will be requested at the exact
+ resolution needed, just as if the MIP map cache was disabled.
 
- <p>It is generally faster and consumes less memory to scale up the MIP
- map image than to render a new image. However, scaling up the MIP map
- image reduces visual fidelity at high zoom levels. By overriding this
- method, subclasses can optimize this trade-off for their particular
- item type.
+ <p>
+ It is generally faster and consumes less memory to scale up the MIP map
+ image than to render a new image. However, scaling up the MIP map image
+ reduces visual fidelity at high zoom levels. By overriding this method,
+ subclasses can optimize this trade-off for their particular item type.
 
- <p>The value returned by the base class is unspecified because it may
- change in future versions.</div>
+ <p>
+ The value returned by the base class is unspecified because it may change
+ in future versions.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>target</code> - the rendering target of the request</dd>
 <dd><code>resolution</code> - the desired image resolution</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>whether the rendering engine should scale up the highest resolution
-     MIP map image or render the image at the exact resolution required</dd>
+<dd>whether the rendering engine should scale up the highest
+ resolution MIP map image or render the image at the exact resolution
+ required</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#setMipMapCacheEnabled-boolean-"><code>setMipMapCacheEnabled(boolean)</code></a></dd>
 </dl>
@@ -858,16 +860,16 @@ extends <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractF
 <li class="blockList">
 <h4>setMipMapCacheEnabled</h4>
 <pre>protected&nbsp;void&nbsp;setMipMapCacheEnabled(boolean&nbsp;enable)</pre>
-<div class="block">Sets whether the built-in MIP map mechanism is enabled. By default,
- the rendered item will transparently create and use MIP mapped
- versions of the bitmap to improve painting speed and target.
- Subclasses may call this method to disable the MIP map mechanism.
- To do so, you must call <code>setMipMapCacheEnabled( false )</code>
- in <b>both</b> the constructor and <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#readImpl-java.io.ObjectInputStream-"><code>readImpl(java.io.ObjectInputStream)</code></a>.</div>
+<div class="block">Sets whether the built-in MIP map mechanism is enabled. By default, the
+ rendered item will transparently create and use MIP mapped versions of
+ the bitmap to improve painting speed and target. Subclasses may call this
+ method to disable the MIP map mechanism. To do so, you must call
+ <code>setMipMapCacheEnabled( false )</code> in <b>both</b> the
+ constructor and <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractRenderedItem.html#readImpl-java.io.ObjectInputStream-"><code>readImpl(java.io.ObjectInputStream)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>enable</code> - if <code>true</code>, the MIP map painting mechanism
-     is enabled</dd>
+<dd><code>enable</code> - if <code>true</code>, the MIP map painting mechanism is
+ enabled</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -911,6 +913,8 @@ extends <a href="../../../../../../ca/cgjennings/apps/arkham/deck/item/AbstractF
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":9,"i11":9,"i12":10,"i13":9,"i14":9,"i15":9,"i16":9,"i17":9,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":9,"i9":10,"i10":9,"i11":10,"i12":10,"i13":9,"i14":9,"i15":9,"i16":9,"i17":9,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -106,8 +108,8 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public final class <span class="typeNameLabel">ScriptMonkey</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
-<div class="block">A <code>ScriptMonkey</code> manages the execution of a script from
- Strange Eons.</div>
+<div class="block">A <code>ScriptMonkey</code> manages the execution of a script from Strange
+ Eons.</div>
 </li>
 </ul>
 </div>
@@ -129,15 +131,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#CLEAR_CONSOLE_ON_RUN_KEY">CLEAR_CONSOLE_ON_RUN_KEY</a></span></code>
-<div class="block">A boolean setting key that stores whether the script output console should be
- cleared before running a script.</div>
+<div class="block">A boolean setting key that stores whether the script output console
+ should be cleared before running a script.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#ON_INSTALL_EVENT_KEY">ON_INSTALL_EVENT_KEY</a></span></code>
-<div class="block">If a component's private settings set this key, then the script it contains
- will be executed when the component is installed in an editor.</div>
+<div class="block">If a component's private settings set this key, then the script it
+ contains will be executed when the component is installed in an editor.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -157,31 +159,36 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#VAR_APPLICATION">VAR_APPLICATION</a></span></code>
-<div class="block">The reserved variable name for the <a href="../../../../../ca/cgjennings/apps/arkham/StrangeEons.html" title="class in ca.cgjennings.apps.arkham">application instance</a> (<code>Eons</code>)</div>
+<div class="block">The reserved variable name for the
+ <a href="../../../../../ca/cgjennings/apps/arkham/StrangeEons.html" title="class in ca.cgjennings.apps.arkham">application instance</a> (<code>Eons</code>)</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#VAR_COMPONENT">VAR_COMPONENT</a></span></code>
-<div class="block">The reserved variable name for the active (edited) game component (<code>Component</code>).</div>
+<div class="block">The reserved variable name for the active (edited) game component
+ (<code>Component</code>).</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#VAR_CONTEXT">VAR_CONTEXT</a></span></code>
-<div class="block">The reserved variable name for the script's <a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>PluginContext</code></a> (<code>PluginContext</code>).</div>
+<div class="block">The reserved variable name for the script's
+ <a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>PluginContext</code></a> (<code>PluginContext</code>).</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#VAR_EDITOR">VAR_EDITOR</a></span></code>
-<div class="block">The reserved variable name for the active (selected) editor (<code>Editor</code>).</div>
+<div class="block">The reserved variable name for the active (selected) editor
+ (<code>Editor</code>).</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#VAR_FILE">VAR_FILE</a></span></code>
-<div class="block">The reserved variable name for the source file name (<code>sourcefile</code>).</div>
+<div class="block">The reserved variable name for the source file name
+ (<code>sourcefile</code>).</div>
 </td>
 </tr>
 </table>
@@ -223,8 +230,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#ambivalentCall-java.lang.String-java.lang.Object...-">ambivalentCall</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;method,
               <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;args)</code>
-<div class="block">Call a script function, returning <code>null</code> without displaying
- an error if the method does not exist.</div>
+<div class="block">Call a script function, returning <code>null</code> without displaying an
+ error if the method does not exist.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -267,42 +274,42 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../resources/Language.html" title="class in resources">Language</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#getGlobalGameLanguageProvider--">getGlobalGameLanguageProvider</a></span>()</code>
-<div class="block">Returns the <a href="../../../../../resources/Language.html" title="class in resources"><code>Language</code></a> object that is used to look up game
- strings with <tt>#<i>string_key</i></tt> syntax.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#getGameLangProvider--">getGameLangProvider</a></span>()</code>
+<div class="block">Returns the <a href="../../../../../resources/Language.html" title="class in resources"><code>Language</code></a> object that is used to look up game strings
+ with <tt>#<i>string_key</i></tt> syntax.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
-<td class="colFirst"><code><a href="../../../../../resources/Language.html" title="class in resources">Language</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#getGlobalInterfaceLanguageProvider--">getGlobalInterfaceLanguageProvider</a></span>()</code>
-<div class="block">Returns the <a href="../../../../../resources/Language.html" title="class in resources"><code>Language</code></a> object that is used to look up interface
- strings with <tt>@<i>string_key</i></tt> syntax.</div>
-</td>
-</tr>
-<tr id="i9" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../resources/Settings.html" title="class in resources">Settings</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#getGlobalSettingsProvider--">getGlobalSettingsProvider</a></span>()</code>
-<div class="block">Returns the <a href="../../../../../resources/Settings.html" title="class in resources"><code>Settings</code></a> object that is used to look up settings
- with <tt>$<i>setting_name</i></tt> syntax.</div>
-</td>
-</tr>
-<tr id="i10" class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#getLibrary-java.lang.String-">getLibrary</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Returns a library as a string.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../resources/Settings.html" title="class in resources">Settings</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#getSettingProvider--">getSettingProvider</a></span>()</code>
+<div class="block">Returns the <a href="../../../../../resources/Settings.html" title="class in resources"><code>Settings</code></a> object that is used to look up settings with
+ <tt>$<i>setting_name</i></tt> syntax.</div>
+</td>
+</tr>
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptConsole.html" title="class in ca.cgjennings.apps.arkham.plugins">ScriptConsole</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#getSharedConsole--">getSharedConsole</a></span>()</code>
 <div class="block">Returns the shared script console.</div>
 </td>
 </tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../resources/Language.html" title="class in resources">Language</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#getUiLangProvider--">getUiLangProvider</a></span>()</code>
+<div class="block">Returns the <a href="../../../../../resources/Language.html" title="class in resources"><code>Language</code></a> object that is used to look up interface
+ strings with <tt>@<i>string_key</i></tt> syntax.</div>
+</td>
+</tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>&lt;T&gt;&nbsp;T</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#implement-java.lang.Class-">implement</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;klass)</code>
-<div class="block">Returns an object that implements a Java interface by calling
- script functions.</div>
+<div class="block">Returns an object that implements a Java interface by calling script
+ functions.</div>
 </td>
 </tr>
 <tr id="i13" class="rowColor">
@@ -346,30 +353,29 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#setGlobalGameLanguageProvider-resources.Language-">setGlobalGameLanguageProvider</a></span>(<a href="../../../../../resources/Language.html" title="class in resources">Language</a>&nbsp;language)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#setGameLangProvider-resources.Language-">setGameLangProvider</a></span>(<a href="../../../../../resources/Language.html" title="class in resources">Language</a>&nbsp;language)</code>
 <div class="block">Sets the <a href="../../../../../resources/Language.html" title="class in resources"><code>Language</code></a> object that is used to look up game strings
  with <tt>#<i>string_key</i></tt> syntax.</div>
 </td>
 </tr>
 <tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#setGlobalInterfaceLanguageProvider-resources.Language-">setGlobalInterfaceLanguageProvider</a></span>(<a href="../../../../../resources/Language.html" title="class in resources">Language</a>&nbsp;language)</code>
-<div class="block">Sets the <a href="../../../../../resources/Language.html" title="class in resources"><code>Language</code></a> object that is used to look up interface strings
- with <tt>@<i>string_key</i></tt> syntax.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#setInternalFileName-java.lang.String-">setInternalFileName</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
+<div class="block">The script engine tracks two identifiers for the source of the script.</div>
 </td>
 </tr>
 <tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#setGlobalSettingsProvider-resources.Settings-">setGlobalSettingsProvider</a></span>(<a href="../../../../../resources/Settings.html" title="class in resources">Settings</a>&nbsp;settings)</code>
-<div class="block">Sets the <a href="../../../../../resources/Settings.html" title="class in resources"><code>Settings</code></a> object that is used to look up settings
- with <tt>$<i>setting_name</i></tt> syntax.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#setSettingProvider-resources.Settings-">setSettingProvider</a></span>(<a href="../../../../../resources/Settings.html" title="class in resources">Settings</a>&nbsp;settings)</code>
+<div class="block">Sets the <a href="../../../../../resources/Settings.html" title="class in resources"><code>Settings</code></a> object that is used to look up settings with
+ <tt>$<i>setting_name</i></tt> syntax.</div>
 </td>
 </tr>
 <tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#setInternalFileName-java.lang.String-">setInternalFileName</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
-<div class="block">The script engine tracks two identifiers for the source of the
- script.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#setUiLangProvider-resources.Language-">setUiLangProvider</a></span>(<a href="../../../../../resources/Language.html" title="class in resources">Language</a>&nbsp;language)</code>
+<div class="block">Sets the <a href="../../../../../resources/Language.html" title="class in resources"><code>Language</code></a> object that is used to look up interface
+ strings with <tt>@<i>string_key</i></tt> syntax.</div>
 </td>
 </tr>
 </table>
@@ -401,10 +407,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>CLEAR_CONSOLE_ON_RUN_KEY</h4>
 <pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> CLEAR_CONSOLE_ON_RUN_KEY</pre>
-<div class="block">A boolean setting key that stores whether the script output console should be
- cleared before running a script. This applies to user-initiated actions,
- like right-clicking on a script editor and choosing <b>Run</b>. It has
- no effect in other circumstances, such as when plug-ins are being loaded.</div>
+<div class="block">A boolean setting key that stores whether the script output console
+ should be cleared before running a script. This applies to user-initiated
+ actions, like right-clicking on a script editor and choosing <b>Run</b>.
+ It has no effect in other circumstances, such as when plug-ins are being
+ loaded.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../constant-values.html#ca.cgjennings.apps.arkham.plugins.ScriptMonkey.CLEAR_CONSOLE_ON_RUN_KEY">Constant Field Values</a></dd>
@@ -418,8 +425,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>ON_INSTALL_EVENT_KEY</h4>
 <pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> ON_INSTALL_EVENT_KEY</pre>
-<div class="block">If a component's private settings set this key, then the script it contains
- will be executed when the component is installed in an editor.</div>
+<div class="block">If a component's private settings set this key, then the script it
+ contains will be executed when the component is installed in an editor.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../constant-values.html#ca.cgjennings.apps.arkham.plugins.ScriptMonkey.ON_INSTALL_EVENT_KEY">Constant Field Values</a></dd>
@@ -459,7 +466,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>VAR_APPLICATION</h4>
 <pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> VAR_APPLICATION</pre>
-<div class="block">The reserved variable name for the <a href="../../../../../ca/cgjennings/apps/arkham/StrangeEons.html" title="class in ca.cgjennings.apps.arkham">application instance</a> (<code>Eons</code>)</div>
+<div class="block">The reserved variable name for the
+ <a href="../../../../../ca/cgjennings/apps/arkham/StrangeEons.html" title="class in ca.cgjennings.apps.arkham">application instance</a> (<code>Eons</code>)</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../constant-values.html#ca.cgjennings.apps.arkham.plugins.ScriptMonkey.VAR_APPLICATION">Constant Field Values</a></dd>
@@ -473,7 +481,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>VAR_COMPONENT</h4>
 <pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> VAR_COMPONENT</pre>
-<div class="block">The reserved variable name for the active (edited) game component (<code>Component</code>).</div>
+<div class="block">The reserved variable name for the active (edited) game component
+ (<code>Component</code>).</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../constant-values.html#ca.cgjennings.apps.arkham.plugins.ScriptMonkey.VAR_COMPONENT">Constant Field Values</a></dd>
@@ -487,7 +496,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>VAR_CONTEXT</h4>
 <pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> VAR_CONTEXT</pre>
-<div class="block">The reserved variable name for the script's <a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>PluginContext</code></a> (<code>PluginContext</code>).</div>
+<div class="block">The reserved variable name for the script's
+ <a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>PluginContext</code></a> (<code>PluginContext</code>).</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../constant-values.html#ca.cgjennings.apps.arkham.plugins.ScriptMonkey.VAR_CONTEXT">Constant Field Values</a></dd>
@@ -501,7 +511,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>VAR_EDITOR</h4>
 <pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> VAR_EDITOR</pre>
-<div class="block">The reserved variable name for the active (selected) editor (<code>Editor</code>).</div>
+<div class="block">The reserved variable name for the active (selected) editor
+ (<code>Editor</code>).</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../constant-values.html#ca.cgjennings.apps.arkham.plugins.ScriptMonkey.VAR_EDITOR">Constant Field Values</a></dd>
@@ -515,7 +526,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>VAR_FILE</h4>
 <pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> VAR_FILE</pre>
-<div class="block">The reserved variable name for the source file name (<code>sourcefile</code>).</div>
+<div class="block">The reserved variable name for the source file name
+ (<code>sourcefile</code>).</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../constant-values.html#ca.cgjennings.apps.arkham.plugins.ScriptMonkey.VAR_FILE">Constant Field Values</a></dd>
@@ -542,8 +554,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>scriptFileName</code> - the identifier to associate with the code that will
-     be executed; this will be reported as the script's file name in error
-     messages</dd>
+ be executed; this will be reported as the script's file name in error
+ messages</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/plugins/ScriptMonkey.html#setInternalFileName-java.lang.String-"><code>setInternalFileName(java.lang.String)</code></a></dd>
 </dl>
@@ -565,9 +577,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>ambivalentCall</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;ambivalentCall(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;method,
                              <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;args)</pre>
-<div class="block">Call a script function, returning <code>null</code> without displaying
- an error if the method does not exist. If a script error occurs, an
- error message is displayed and <code>null</code> is returned.</div>
+<div class="block">Call a script function, returning <code>null</code> without displaying an
+ error if the method does not exist. If a script error occurs, an error
+ message is displayed and <code>null</code> is returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>method</code> - the name of a script function</dd>
@@ -587,7 +599,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Binds the specified <a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>PluginContext</code></a> to the global scope.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>pluginContext</code> - the plug-in context to bind (may be <code>null</code>)</dd>
+<dd><code>pluginContext</code> - the plug-in context to bind (may be
+ <code>null</code>)</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../ca/cgjennings/apps/arkham/plugins/PluginContextFactory.html" title="class in ca.cgjennings.apps.arkham.plugins"><code>PluginContextFactory</code></a></dd>
 </dl>
@@ -609,7 +622,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang">NullPointerException</a></code> - if the variable name is <code>null</code></dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if the variable name starts with a
-     reserved character ($, @, #)</dd>
+ reserved character ($, @, #)</dd>
 </dl>
 </li>
 </ul>
@@ -624,8 +637,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Call a script function. If the function does not exist, an error message
  is displayed and a <code>NoSuchMethodException</code> exception is
  returned. If a script error occurs, the error is printed on the console
- and returned. Otherwise, the return value of the function (or <code>null</code>)
- is returned.</div>
+ and returned. Otherwise, the return value of the function (or
+ <code>null</code>) is returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>method</code> - the name of a script function</dd>
@@ -642,8 +655,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>eval</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;eval(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/Reader.html?is-external=true" title="class or interface in java.io">Reader</a>&nbsp;r)</pre>
-<div class="block">Evaluates a script from a reader.
- Any errors will be displayed on the script console.</div>
+<div class="block">Evaluates a script from a reader. Any errors will be displayed on the
+ script console.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>r</code> - the reader that contains script code to execute</dd>
@@ -659,8 +672,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>eval</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;eval(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;s)</pre>
-<div class="block">Evaluates a script stored in a string.
- Any errors will be displayed on the script console.</div>
+<div class="block">Evaluates a script stored in a string. Any errors will be displayed on
+ the script console.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>s</code> - the script code to execute</dd>
@@ -676,8 +689,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>eval</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;eval(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net">URL</a>&nbsp;url)</pre>
-<div class="block">Evaluates a script from a URL.
- Any errors will be displayed on the script console.</div>
+<div class="block">Evaluates a script from a URL. Any errors will be displayed on the script
+ console.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>url</code> - the URL that contains script code to execute</dd>
@@ -686,48 +699,18 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
-<a name="getGlobalGameLanguageProvider--">
+<a name="getGameLangProvider--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>getGlobalGameLanguageProvider</h4>
-<pre>public&nbsp;<a href="../../../../../resources/Language.html" title="class in resources">Language</a>&nbsp;getGlobalGameLanguageProvider()</pre>
-<div class="block">Returns the <a href="../../../../../resources/Language.html" title="class in resources"><code>Language</code></a> object that is used to look up game
- strings with <tt>#<i>string_key</i></tt> syntax.</div>
+<h4>getGameLangProvider</h4>
+<pre>public&nbsp;<a href="../../../../../resources/Language.html" title="class in resources">Language</a>&nbsp;getGameLangProvider()</pre>
+<div class="block">Returns the <a href="../../../../../resources/Language.html" title="class in resources"><code>Language</code></a> object that is used to look up game strings
+ with <tt>#<i>string_key</i></tt> syntax.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the game language that is visible in the global scope</dd>
-</dl>
-</li>
-</ul>
-<a name="getGlobalInterfaceLanguageProvider--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getGlobalInterfaceLanguageProvider</h4>
-<pre>public&nbsp;<a href="../../../../../resources/Language.html" title="class in resources">Language</a>&nbsp;getGlobalInterfaceLanguageProvider()</pre>
-<div class="block">Returns the <a href="../../../../../resources/Language.html" title="class in resources"><code>Language</code></a> object that is used to look up interface
- strings with <tt>@<i>string_key</i></tt> syntax.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the interface language that is visible in the global scope</dd>
-</dl>
-</li>
-</ul>
-<a name="getGlobalSettingsProvider--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getGlobalSettingsProvider</h4>
-<pre>public&nbsp;<a href="../../../../../resources/Settings.html" title="class in resources">Settings</a>&nbsp;getGlobalSettingsProvider()</pre>
-<div class="block">Returns the <a href="../../../../../resources/Settings.html" title="class in resources"><code>Settings</code></a> object that is used to look up settings
- with <tt>$<i>setting_name</i></tt> syntax.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the settings that are visible in the global scope</dd>
 </dl>
 </li>
 </ul>
@@ -740,12 +723,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getLibrary(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)
                          throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                                 <a href="https://docs.oracle.com/javase/8/docs/api/java/net/MalformedURLException.html?is-external=true" title="class or interface in java.net">MalformedURLException</a></pre>
-<div class="block">Returns a library as a string. If the string contains <tt>:</tt>,
- it is treated as a URL and the library
- is fetched from that location.
+<div class="block">Returns a library as a string. If the string contains <tt>:</tt>, it is
+ treated as a URL and the library is fetched from that location.
  Otherwise, it is assumed to be a standard library that lives in
- <tt>resources/libraries</tt>. In this case, the ".js"
- extension is added automatically.</div>
+ <tt>resources/libraries</tt>. In this case, the ".js" extension is added
+ automatically.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - the library name (or a URL)</dd>
@@ -754,6 +736,21 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/net/MalformedURLException.html?is-external=true" title="class or interface in java.net">MalformedURLException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="getSettingProvider--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSettingProvider</h4>
+<pre>public&nbsp;<a href="../../../../../resources/Settings.html" title="class in resources">Settings</a>&nbsp;getSettingProvider()</pre>
+<div class="block">Returns the <a href="../../../../../resources/Settings.html" title="class in resources"><code>Settings</code></a> object that is used to look up settings with
+ <tt>$<i>setting_name</i></tt> syntax.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the settings that are visible in the global scope</dd>
 </dl>
 </li>
 </ul>
@@ -771,6 +768,21 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
+<a name="getUiLangProvider--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getUiLangProvider</h4>
+<pre>public&nbsp;<a href="../../../../../resources/Language.html" title="class in resources">Language</a>&nbsp;getUiLangProvider()</pre>
+<div class="block">Returns the <a href="../../../../../resources/Language.html" title="class in resources"><code>Language</code></a> object that is used to look up interface
+ strings with <tt>@<i>string_key</i></tt> syntax.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the interface language that is visible in the global scope</dd>
+</dl>
+</li>
+</ul>
 <a name="implement-java.lang.Class-">
 <!--   -->
 </a>
@@ -778,20 +790,19 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>implement</h4>
 <pre>public&nbsp;&lt;T&gt;&nbsp;T&nbsp;implement(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;T&gt;&nbsp;klass)</pre>
-<div class="block">Returns an object that implements a Java interface by calling
- script functions. Functions that are not defined
- in the evaluated script code will do nothing. If such missing functions
- return a value in the specified interface, they will return zero
- if the return type is a primitive numeric type, or <code>null</code>
- otherwise.</div>
+<div class="block">Returns an object that implements a Java interface by calling script
+ functions. Functions that are not defined in the evaluated script code
+ will do nothing. If such missing functions return a value in the
+ specified interface, they will return zero if the return type is a
+ primitive numeric type, or <code>null</code> otherwise.</div>
 <dl>
 <dt><span class="paramLabel">Type Parameters:</span></dt>
 <dd><code>T</code> - the type of the implemented interface</dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>klass</code> - the class value of the interface to implement</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>an instance of the requested class that is implemented by
-     script code</dd>
+<dd>an instance of the requested class that is implemented by script
+ code</dd>
 </dl>
 </li>
 </ul>
@@ -806,16 +817,17 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                            throws <a href="https://docs.oracle.com/javase/8/docs/api/javax/script/ScriptException.html?is-external=true" title="class or interface in javax.script">ScriptException</a>,
                                   <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                                   <a href="https://docs.oracle.com/javase/8/docs/api/java/net/MalformedURLException.html?is-external=true" title="class or interface in java.net">MalformedURLException</a></pre>
-<div class="block">Evaluate a library file within the current script context.
- This method is not intended for external use, although nothing prevents
- it. It is invoked from within scripts in order to process
- <code>useLibrary()</code> calls.</div>
+<div class="block">Evaluate a library file within the current script context. This method is
+ not intended for external use, although nothing prevents it. It is
+ invoked from within scripts in order to process <code>useLibrary()</code>
+ calls.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>engine</code> - the engine to add the library to</dd>
 <dd><code>name</code> - the library's identifier, or a URL that points to it</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/script/ScriptException.html?is-external=true" title="class or interface in javax.script">ScriptException</a></code> - if the library evaluation results in an error</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/script/ScriptException.html?is-external=true" title="class or interface in javax.script">ScriptException</a></code> - if the library evaluation results in
+ an error</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code> - if there is an error loading the library</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/net/MalformedURLException.html?is-external=true" title="class or interface in java.net">MalformedURLException</a></code> - if the URL is invalid</dd>
 </dl>
@@ -828,8 +840,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isLibraryNameAURL</h4>
 <pre>public static&nbsp;boolean&nbsp;isLibraryNameAURL(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;s)</pre>
-<div class="block">Returns <code>true</code> if a library identifier is actually a URL.
- For example, it would return <code>false</code> for "imageutils", but
+<div class="block">Returns <code>true</code> if a library identifier is actually a URL. For
+ example, it would return <code>false</code> for "imageutils", but
  <code>true</code> for "res://my/library.js".</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -846,17 +858,18 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>runResourceCreationScript</h4>
 <pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;runResourceCreationScript(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;resource)</pre>
-<div class="block">Runs a resource creation script stored in a resource file.
- The script is evaluated and then its <code>createResource()</code>
- method is invoked. The result of that function is then returned.
- If there is an error loading or running the script, a <code>null</code>
- value is returned. If the script is missing, an error message is shown.
- If there is an error in the script, it is displayed in the output console.</div>
+<div class="block">Runs a resource creation script stored in a resource file. The script is
+ evaluated and then its <code>createResource()</code> method is invoked.
+ The result of that function is then returned. If there is an error
+ loading or running the script, a <code>null</code> value is returned. If
+ the script is missing, an error message is shown. If there is an error in
+ the script, it is displayed in the output console.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>resource</code> - the resource file containing the script</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the object returned from <code>createResource()</code>, or <code>null</code></dd>
+<dd>the object returned from <code>createResource()</code>, or
+ <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -868,16 +881,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>runResourceScript</h4>
 <pre>public static&nbsp;boolean&nbsp;runResourceScript(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;resource,
                                         boolean&nbsp;debug)</pre>
-<div class="block">Runs a script file stored in a resource file.
- The script is simply evaluated; no specific function is called or
- result captured. Returns <code>true</code> if the script was loaded
- and run without error, <code>false</code> otherwise.</div>
+<div class="block">Runs a script file stored in a resource file. The script is simply
+ evaluated; no specific function is called or result captured. Returns
+ <code>true</code> if the script was loaded and run without error,
+ <code>false</code> otherwise.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>resource</code> - the resource file containing the script</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if a breakpoint should be set at the
-     start of the script</dd>
+<dd><code>true</code> if a breakpoint should be set at the start of
+ the script</dd>
 </dl>
 </li>
 </ul>
@@ -903,86 +916,88 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>setBreakpoint</h4>
 <pre>public&nbsp;void&nbsp;setBreakpoint(boolean&nbsp;breakpoint)</pre>
 <div class="block">If the debugger is enabled, sets whether a breakpoint should be set at
- the start of the next script evaluation.
- This setting reverts to false when the next script is evaluated.
- If the debugger is not enabled, this method has no effect.</div>
+ the start of the next script evaluation. This setting reverts to false
+ when the next script is evaluated. If the debugger is not enabled, this
+ method has no effect.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>breakpoint</code> - </dd>
 </dl>
 </li>
 </ul>
-<a name="setGlobalGameLanguageProvider-resources.Language-">
+<a name="setGameLangProvider-resources.Language-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>setGlobalGameLanguageProvider</h4>
-<pre>public&nbsp;void&nbsp;setGlobalGameLanguageProvider(<a href="../../../../../resources/Language.html" title="class in resources">Language</a>&nbsp;language)</pre>
+<h4>setGameLangProvider</h4>
+<pre>public&nbsp;void&nbsp;setGameLangProvider(<a href="../../../../../resources/Language.html" title="class in resources">Language</a>&nbsp;language)</pre>
 <div class="block">Sets the <a href="../../../../../resources/Language.html" title="class in resources"><code>Language</code></a> object that is used to look up game strings
  with <tt>#<i>string_key</i></tt> syntax. Passing <code>null</code> will
  reset the language to <code>Language.getGame()</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>language</code> - the game language whose strings will be visible in the global scope</dd>
-</dl>
-</li>
-</ul>
-<a name="setGlobalInterfaceLanguageProvider-resources.Language-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setGlobalInterfaceLanguageProvider</h4>
-<pre>public&nbsp;void&nbsp;setGlobalInterfaceLanguageProvider(<a href="../../../../../resources/Language.html" title="class in resources">Language</a>&nbsp;language)</pre>
-<div class="block">Sets the <a href="../../../../../resources/Language.html" title="class in resources"><code>Language</code></a> object that is used to look up interface strings
- with <tt>@<i>string_key</i></tt> syntax. Passing <code>null</code> will
- reset the language to <code>Language.getInterface()</code>.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>language</code> - the UI language whose strings will be visible in the global scope</dd>
-</dl>
-</li>
-</ul>
-<a name="setGlobalSettingsProvider-resources.Settings-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setGlobalSettingsProvider</h4>
-<pre>public&nbsp;void&nbsp;setGlobalSettingsProvider(<a href="../../../../../resources/Settings.html" title="class in resources">Settings</a>&nbsp;settings)</pre>
-<div class="block">Sets the <a href="../../../../../resources/Settings.html" title="class in resources"><code>Settings</code></a> object that is used to look up settings
- with <tt>$<i>setting_name</i></tt> syntax.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>settings</code> - the settings that will be visible in the global scope</dd>
+<dd><code>language</code> - the game language whose strings will be visible in the
+ global scope</dd>
 </dl>
 </li>
 </ul>
 <a name="setInternalFileName-java.lang.String-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>setInternalFileName</h4>
 <pre>public&nbsp;void&nbsp;setInternalFileName(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
-<div class="block">The script engine tracks two identifiers for the source of the
- script. One is the "sourcefile" variable available to the script.
- When a plug-in is running, this will normally be the same name
- as the other, true, identifier. But when running a script "on demand",
- as from the project <b>Run</b> command or the <b>Quickscript</b> window, then the
+<div class="block">The script engine tracks two identifiers for the source of the script.
+ One is the "sourcefile" variable available to the script. When a plug-in
+ is running, this will normally be the same name as the other, true,
+ identifier. But when running a script "on demand", as from the project
+ <b>Run</b> command or the <b>Quickscript</b> window, then the
  <code>ScriptMonkey</code> will typically be constructed using the file
  name "Quickscript", because many scripts check for this and change their
  behaviour accordingly. (For example, the source code for a plug-in might
- run a test of the plug-in functionality.)
- However, in this case the script will also report the identifier
- "Quickscript" in error messages, which may not be ideal.
- This method can be used to set the internal name to a different value
- than the one available to the script, so that error messages display
- a more appropriate name.</div>
+ run a test of the plug-in functionality.) However, in this case the
+ script will also report the identifier "Quickscript" in error messages,
+ which may not be ideal. This method can be used to set the internal name
+ to a different value than the one available to the script, so that error
+ messages display a more appropriate name.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - the internal identifier to use when the script is evaluated</dd>
+</dl>
+</li>
+</ul>
+<a name="setSettingProvider-resources.Settings-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSettingProvider</h4>
+<pre>public&nbsp;void&nbsp;setSettingProvider(<a href="../../../../../resources/Settings.html" title="class in resources">Settings</a>&nbsp;settings)</pre>
+<div class="block">Sets the <a href="../../../../../resources/Settings.html" title="class in resources"><code>Settings</code></a> object that is used to look up settings with
+ <tt>$<i>setting_name</i></tt> syntax.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>settings</code> - the settings that will be visible in the global scope</dd>
+</dl>
+</li>
+</ul>
+<a name="setUiLangProvider-resources.Language-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>setUiLangProvider</h4>
+<pre>public&nbsp;void&nbsp;setUiLangProvider(<a href="../../../../../resources/Language.html" title="class in resources">Language</a>&nbsp;language)</pre>
+<div class="block">Sets the <a href="../../../../../resources/Language.html" title="class in resources"><code>Language</code></a> object that is used to look up interface
+ strings with <tt>@<i>string_key</i></tt> syntax. Passing
+ <code>null</code> will reset the language to
+ <code>Language.getInterface()</code>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>language</code> - the UI language whose strings will be visible in the
+ global scope</dd>
 </dl>
 </li>
 </ul>
@@ -1006,6 +1021,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

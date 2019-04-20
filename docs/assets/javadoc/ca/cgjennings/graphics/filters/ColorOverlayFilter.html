@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -122,13 +124,14 @@ var activeTableTab = "activeTableTab";
 extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFilter.html" title="class in ca.cgjennings.graphics.filters">AbstractPixelwiseFilter</a></pre>
 <div class="block">Sets every pixel to a common RGB value without modifying the alpha channel.
  Where the alpha channel uses transparency to define a shape, the effect of
- this filter is to overlay the shape with a solid colour. To simply
- set every pixel to a single value, overwriting the alpha value, use a
- <a href="../../../../ca/cgjennings/graphics/filters/ClearFilter.html" title="class in ca.cgjennings.graphics.filters"><code>ClearFilter</code></a> instead. For more complex channel mixing and swapping
- of channels, see <a href="../../../../ca/cgjennings/graphics/filters/ChannelSwapFilter.html" title="class in ca.cgjennings.graphics.filters"><code>ChannelSwapFilter</code></a>.
- 
- <p><b>In-place filtering:</b> This class supports in-place filtering
- (the source and destination images may be the same).</div>
+ this filter is to overlay the shape with a solid colour. To simply set every
+ pixel to a single value, overwriting the alpha value, use a
+ <a href="../../../../ca/cgjennings/graphics/filters/ClearFilter.html" title="class in ca.cgjennings.graphics.filters"><code>ClearFilter</code></a> instead. For more complex channel mixing and swapping of
+ channels, see <a href="../../../../ca/cgjennings/graphics/filters/ChannelSwapFilter.html" title="class in ca.cgjennings.graphics.filters"><code>ChannelSwapFilter</code></a>.
+
+ <p>
+ <b>In-place filtering:</b> This class supports in-place filtering (the source
+ and destination images may be the same).</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -205,7 +208,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../ca/cgjennings/graphics/filters/ColorOverlayFilter.html#isAlphaInverted--">isAlphaInverted</a></span>()</code>
 <div class="block">Returns <code>true</code> if the alpha channel values will be inverted,
- changing the shape from the exterior to the interior of the original shape.</div>
+ changing the shape from the exterior to the interior of the original
+ shape.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -308,10 +312,11 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFilter.html#filterPixel-int-">AbstractPixelwiseFilter</a></code></span></div>
 <div class="block">Returns the result of applying the filter to a single ARGB pixel value.
 
- <p>The base class implementation creates a singleton array containing the
- pixel value and passes this to <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFilter.html#filterPixels-int:A-int-int-"><code>AbstractPixelwiseFilter.filterPixels(int[], int, int)</code></a>,
- returning the result.
- Subclasses may wish override this to provide a more efficient implementation.</div>
+ <p>
+ The base class implementation creates a singleton array containing the
+ pixel value and passes this to <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFilter.html#filterPixels-int:A-int-int-"><code>AbstractPixelwiseFilter.filterPixels(int[], int, int)</code></a>, returning the
+ result. Subclasses may wish override this to provide a more efficient
+ implementation.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFilter.html#filterPixel-int-">filterPixel</a></code>&nbsp;in class&nbsp;<code><a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFilter.html" title="class in ca.cgjennings.graphics.filters">AbstractPixelwiseFilter</a></code></dd>
@@ -333,8 +338,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
                          int&nbsp;end)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFilter.html#filterPixels-int:A-int-int-">AbstractPixelwiseFilter</a></code></span></div>
 <div class="block">This method is called with a block of ARGB values to be filtered.
- Subclasses must override this method to implement the actual
- filtering algorithm by replacing each pixel value in the range
+ Subclasses must override this method to implement the actual filtering
+ algorithm by replacing each pixel value in the range
  <code>argb[start] ... argb[end-1]</code> with the filtered value.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -353,9 +358,9 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <li class="blockList">
 <h4>getColor</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true" title="class or interface in java.awt">Color</a>&nbsp;getColor()</pre>
-<div class="block">Returns the colour to overlay as a <code>Color</code> object.
- If the colour was set from a colour object, this is not guaranteed
- to be the same instance.</div>
+<div class="block">Returns the colour to overlay as a <code>Color</code> object. If the
+ colour was set from a colour object, this is not guaranteed to be the
+ same instance.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the colour value to be applied</dd>
@@ -384,7 +389,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <h4>isAlphaInverted</h4>
 <pre>public&nbsp;boolean&nbsp;isAlphaInverted()</pre>
 <div class="block">Returns <code>true</code> if the alpha channel values will be inverted,
- changing the shape from the exterior to the interior of the original shape.</div>
+ changing the shape from the exterior to the interior of the original
+ shape.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if alpha values are inverted</dd>
@@ -456,6 +462,8 @@ extends <a href="../../../../ca/cgjennings/graphics/filters/AbstractPixelwiseFil
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../index-all.html">Index</a></li>
+<li><a href="../../../../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">

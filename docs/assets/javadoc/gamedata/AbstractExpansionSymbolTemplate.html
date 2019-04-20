@@ -40,6 +40,8 @@ var activeTableTab = "activeTableTab";
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../index-all.html">Index</a></li>
+<li><a href="../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
@@ -151,8 +153,8 @@ implements <a href="../gamedata/ExpansionSymbolTemplate.html" title="interface i
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../gamedata/AbstractExpansionSymbolTemplate.html#canGenerateVariantsAutomatically--">canGenerateVariantsAutomatically</a></span>()</code>
-<div class="block">Returns <code>true</code> if this template can automatically generate
- a family of variants given an example image.</div>
+<div class="block">Returns <code>true</code> if this template can automatically generate a
+ family of variants given an example image.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -199,9 +201,8 @@ implements <a href="../gamedata/ExpansionSymbolTemplate.html" title="interface i
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../gamedata/AbstractExpansionSymbolTemplate.html#isCustomDrawn--">isCustomDrawn</a></span>()</code>
-<div class="block">Returns
- <code>true</code> if the components for this game will draw the expansion
- symbols themselves instead of relying on the default mechanism.</div>
+<div class="block">Returns <code>true</code> if the components for this game will draw the
+ expansion symbols themselves instead of relying on the default mechanism.</div>
 </td>
 </tr>
 </table>
@@ -257,9 +258,10 @@ implements <a href="../gamedata/ExpansionSymbolTemplate.html" title="interface i
 <li class="blockList">
 <h4>canGenerateVariantsAutomatically</h4>
 <pre>public&nbsp;boolean&nbsp;canGenerateVariantsAutomatically()</pre>
-<div class="block">Returns <code>true</code> if this template can automatically generate
- a family of variants given an example image.
- <p>This abstract base class returns <code>false</code>.</div>
+<div class="block">Returns <code>true</code> if this template can automatically generate a
+ family of variants given an example image.
+ <p>
+ This abstract base class returns <code>false</code>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../gamedata/ExpansionSymbolTemplate.html#canGenerateVariantsAutomatically--">canGenerateVariantsAutomatically</a></code>&nbsp;in interface&nbsp;<code><a href="../gamedata/ExpansionSymbolTemplate.html" title="interface in gamedata">ExpansionSymbolTemplate</a></code></dd>
@@ -279,55 +281,58 @@ implements <a href="../gamedata/ExpansionSymbolTemplate.html" title="interface i
 <div class="block">Given an example image, generates a symbol variant automatically.
 
  <p>
- If <a href="../gamedata/AbstractExpansionSymbolTemplate.html#canGenerateVariantsAutomatically--"><code>canGenerateVariantsAutomatically()</code></a> returns <code>false</code>,
- then this method throws an <code>UnsupportedOperationException</code>.
- Otherwise, the abstract base class provides a default variant-generating algorithm
- based on the icons for Arkham Horror. This can be used as-is when
- appropriate, or if useful it can be used as a starting point for generating
- an appropriate image for the game in question. (For example, you could
- request variant 0 to get an image that is known to be black-and-white and
- have an alpha channel as described below.)
+ If <a href="../gamedata/AbstractExpansionSymbolTemplate.html#canGenerateVariantsAutomatically--"><code>canGenerateVariantsAutomatically()</code></a> returns
+ <code>false</code>, then this method throws an
+ <code>UnsupportedOperationException</code>. Otherwise, the abstract base
+ class provides a default variant-generating algorithm based on the icons
+ for Arkham Horror. This can be used as-is when appropriate, or if useful
+ it can be used as a starting point for generating an appropriate image
+ for the game in question. (For example, you could request variant 0 to
+ get an image that is known to be black-and-white and have an alpha
+ channel as described below.)
 
  <p>
  <b>Details of the default implementation:</b>
- In Arkham Horror, there are two different styles for
- expansion symbols. Older expansions used a single-colour
- dark logo which was inverted on cards with a dark background. Newer
- expansions use a single logo embedded in a circle. The circle has
- a dark outline and a light background, over which is laid a dark logo.
- This allows the same graphic to be seen easily on both light and dark
- cards. With Miskatonic Horror, a new "required" variant has been added
- that replaces the dark colour with a golden one.
+ In Arkham Horror, there are two different styles for expansion symbols.
+ Older expansions used a single-colour dark logo which was inverted on
+ cards with a dark background. Newer expansions use a single logo embedded
+ in a circle. The circle has a dark outline and a light background, over
+ which is laid a dark logo. This allows the same graphic to be seen easily
+ on both light and dark cards. With Miskatonic Horror, a new "required"
+ variant has been added that replaces the dark colour with a golden one.
 
- <p>To recreate these styles, this method proceeds as follows:
+ <p>
+ To recreate these styles, this method proceeds as follows:
  <ol>
  <li> Convert the image to greyscale.
  <li> Assume one of three cases:
-   <ol>
-   <li>The user has passed in a single-colour logo with proper transparency.
-   <li>The user has passed in a single-colour logo with no transparency, such as a scan of a paper sketch.
-   <li>The user has passed in a mixed-colour logo (the new style) with proper transparency.
-   </ol>
- To determine which case applies, the image pixels are analyzed.
-      If none of the pixels have any transparency (alpha=255), case 2 is assumed.
-      If there is a small range of pixel values, case 1 is assumed (the small
-      range allows for some noise). Otherwise, case 3 is assumed.
- <li> Cases 1 and 2 are based on the older single-colour logos. A logo is created
-      by setting each pixel to an appropriate colour for the variant type.
-      For case 1, the original transparency is kept. For case 2, the
-      transparency is taken from the pixel brightness: white pixels
-      (paper) will become transparent.
+ <ol>
+ <li>The user has passed in a single-colour logo with proper transparency.
+ <li>The user has passed in a single-colour logo with no transparency,
+ such as a scan of a paper sketch.
+ <li>The user has passed in a mixed-colour logo (the new style) with
+ proper transparency.
+ </ol>
+ To determine which case applies, the image pixels are analyzed. If none
+ of the pixels have any transparency (alpha=255), case 2 is assumed. If
+ there is a small range of pixel values, case 1 is assumed (the small
+ range allows for some noise). Otherwise, case 3 is assumed.
+ <li> Cases 1 and 2 are based on the older single-colour logos. A logo is
+ created by setting each pixel to an appropriate colour for the variant
+ type. For case 1, the original transparency is kept. For case 2, the
+ transparency is taken from the pixel brightness: white pixels (paper)
+ will become transparent.
  <li> For case 3, the range of brightness values present in the original
-      image will be mapped to a range of colours appropriate for the
-      variant. For variants 0 and 1, this is dark to white, For variant
-      2, this is golden to white.
+ image will be mapped to a range of colours appropriate for the variant.
+ For variants 0 and 1, this is dark to white, For variant 2, this is
+ golden to white.
  </ol></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../gamedata/ExpansionSymbolTemplate.html#generateVariant-java.awt.image.BufferedImage-int-">generateVariant</a></code>&nbsp;in interface&nbsp;<code><a href="../gamedata/ExpansionSymbolTemplate.html" title="interface in gamedata">ExpansionSymbolTemplate</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>baseSymbol</code> - the example symbol to base the new design on; usually
-      it has the same style as the symbol at position 0</dd>
+ it has the same style as the symbol at position 0</dd>
 <dd><code>variant</code> - the number of the symbol design to generate</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the generated symbol for position <code>n</code></dd>
@@ -345,9 +350,9 @@ implements <a href="../gamedata/ExpansionSymbolTemplate.html" title="interface i
  be used when selecting or editing a symbol with this variant. For
  example, the end user expansion dialog (Expansion|New) will use this for
  the drop boxes that the user drops symbol images on. If this method
- returns
- <code>null</code>, a default paint will be used.
- <p>This abstract base class always returns <code>null</code>, yielding a
+ returns <code>null</code>, a default paint will be used.
+ <p>
+ This abstract base class always returns <code>null</code>, yielding a
  default backdrop paint.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -369,7 +374,8 @@ implements <a href="../gamedata/ExpansionSymbolTemplate.html" title="interface i
 <pre>public&nbsp;int&nbsp;getLogicalVariantCount()</pre>
 <div class="block">Returns the number of logical variants for games that distinguish between
  visual variants and logical variants.
- <p>The abstract base class will return the same value as
+ <p>
+ The abstract base class will return the same value as
  <code>getVariantCount()</code>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -388,7 +394,8 @@ implements <a href="../gamedata/ExpansionSymbolTemplate.html" title="interface i
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing">Icon</a>&nbsp;getLogicalVariantIcon(int&nbsp;variant)</pre>
 <div class="block">Returns an icon that can accompany the logical variant name to visually
  distinguish the the variant.
- <p>The abstract base class will return the same value as
+ <p>
+ The abstract base class will return the same value as
  <code>getVariantIcon()</code>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -409,7 +416,8 @@ implements <a href="../gamedata/ExpansionSymbolTemplate.html" title="interface i
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getLogicalVariantName(int&nbsp;variant)</pre>
 <div class="block">Returns the name of the <code>n</code>th logical variant for games that
  distinguish between visual variants and logical variants.
- <p>The abstract base class will return the same value as
+ <p>
+ The abstract base class will return the same value as
  <code>getVariantName( variant )</code>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -431,8 +439,9 @@ implements <a href="../gamedata/ExpansionSymbolTemplate.html" title="interface i
 <div class="block">Returns an icon that can accompany the variant name to visually
  distinguish the style of the variant. A typical icon is a disc filled
  with a characteristic colour taken from the variant's design.
- <p>The abstract base class returns a icons that match the default
- variant styles.</div>
+ <p>
+ The abstract base class returns a icons that match the default variant
+ styles.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../gamedata/ExpansionSymbolTemplate.html#getVariantIcon-int-">getVariantIcon</a></code>&nbsp;in interface&nbsp;<code><a href="../gamedata/ExpansionSymbolTemplate.html" title="interface in gamedata">ExpansionSymbolTemplate</a></code></dd>
@@ -452,10 +461,10 @@ implements <a href="../gamedata/ExpansionSymbolTemplate.html" title="interface i
 <li class="blockList">
 <h4>isCustomDrawn</h4>
 <pre>public&nbsp;boolean&nbsp;isCustomDrawn()</pre>
-<div class="block">Returns
- <code>true</code> if the components for this game will draw the expansion
- symbols themselves instead of relying on the default mechanism.
- <p>This abstract base class returns <code>false</code>.</div>
+<div class="block">Returns <code>true</code> if the components for this game will draw the
+ expansion symbols themselves instead of relying on the default mechanism.
+ <p>
+ This abstract base class returns <code>false</code>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../gamedata/ExpansionSymbolTemplate.html#isCustomDrawn--">isCustomDrawn</a></code>&nbsp;in interface&nbsp;<code><a href="../gamedata/ExpansionSymbolTemplate.html" title="interface in gamedata">ExpansionSymbolTemplate</a></code></dd>
@@ -484,6 +493,8 @@ implements <a href="../gamedata/ExpansionSymbolTemplate.html" title="interface i
 <li><a href="package-summary.html">Package</a></li>
 <li class="navBarCell1Rev">Class</li>
 <li><a href="package-tree.html">Tree</a></li>
+<li><a href="../index-all.html">Index</a></li>
+<li><a href="../help-doc.html">Help</a></li>
 </ul>
 </div>
 <div class="subNav">
