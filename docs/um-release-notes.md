@@ -4,6 +4,8 @@
 
 The following changes are planned for inclusion in the next update. This list is *informational only*: nothing here is final until the update is actually published. Some items may be deferred or abandoned, and other items may be added at any time. In particular, changes to the APIs and script engine have the potential to introduce compatibility issues with plug-ins which might lead to those features being delayed or withdrawn.
 
+This is an **early access beta release**.
+
 ### Updates and changes
 
 * Further work on rewriting the script libraries to separate documentation from the libraries themselves and rewrite them in the more modern JS allowed by the recent engine update.
@@ -17,7 +19,7 @@ The following changes are planned for inclusion in the next update. This list is
 * `ImageUtils.crop`: the `width` and `height` are now optional; if left off they default to include the remainder of the image.
 * `ImageUtils.tint`: corrected the (new version of the) documentation to state that the hue shift is measured in rotations, not degrees.
 * Added `ImageUtils.trim` (trims transparent pixels from image edges).
-* The **SE2 Compatibility Mode** option is *deprecated*. It is now disabled by default. In a future version, this option, and the additional script code that it loads (`*.ljs` files), will be removed. It is not believed that any current plug-ins rely on this mode.
+* Support for **SE2 Compatibility Mode** has been removed: the class `PluginContext2xImpl` has been deleted and is no longer returned from `PluginContextFactory`; the `*.ljs` ("legacy" JS) versions of script libraries have been deleted; the **Preferences** dialog no longer lists the relevant settings; the setting key `script-SE2-compatibility` no longer has a default value, is not migrated, and has no effect if set.
 
 ### Bug fixes
 
@@ -54,6 +56,8 @@ This is an **early access beta release**.
 * The `--plugintest` command line option can now be passed multiple test bundles separated by the path separator character (`;` on Windows, `:` elsewhere).
 
 ### Script library updates
+
+* The **SE2 Compatibility Mode** option is *deprecated*. It is now disabled by default. In a future version, this option, and the additional script code that it loads (`*.ljs` files), will be removed. It is not believed that any current plug-ins rely on this mode.
 
 * The `sprintf`-style script library functions will now coerce numeric conversions when possible. This means that, for example, you can now pass a regular JS number to a `"%d"` conversion and it will not throw an exception. It is also now possible to pass a Locale or Language as the first argument to localize formatting (previously the interface locale was always used). Passing a locale of `null` as the first argument will prevent localization.
 
