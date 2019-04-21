@@ -10,7 +10,7 @@ This is an **early access beta release**.
 
 * Further work on rewriting the script libraries to separate documentation from the libraries themselves and rewrite them in the more modern JS allowed by the recent engine update.
 * `StrangeEons.fileBugReport` updated to link to a partially completed contact form; this also affects the **Help/Report a Bug** menu item.
-* The **Document Browser** is *deprecated*. In a future version, searchable API documentation will be accessible from the (system) Web browser. Plug-ins that rely on the document browser and associated text indexing classes will no longer work after this change.
+* The **Document Browser** has been removed. Related help links, which are now found under **Help/Developer Help**, display documentation in the default platform Web browser. Plug-ins that rely on the document browser no longer work.
 * The command line option `--xDisableGestures` was removed.
 
 ### Script library changes
@@ -55,6 +55,7 @@ This is an **early access beta release**.
 * [Projects](um-proj-intro..md) stored in a version control system will no longer want to commit their project and task folder settings (`seproject` files) every time the project closes.
 * The layout of the [root file editor](dm-eons-plugin.md) has been reorganized to better fit small screens.
 * The `--plugintest` command line option can now be passed multiple test bundles separated by the path separator character (`;` on Windows, `:` elsewhere).
+* The **Document Browser** is *deprecated*. In a future version, searchable API documentation will be accessible from the (system) Web browser. Plug-ins that rely on the document browser and associated text indexing classes will no longer work after this change.
 
 ### Script library updates
 
