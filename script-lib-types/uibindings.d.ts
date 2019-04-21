@@ -116,7 +116,7 @@ declare module uibindings {
          * @param sheetsToUpdate an array of the indices of the game component's sheets
          *     which should be repainted when the bound setting changes
          */
-        constructor(keyName: string, uiControl: JavaObject<"java.awt.Control">, gameComponent: JavaObject<"arkham.component.GameComponent">, sheetsToUpdate: number[]);
+        constructor(keyName: string, uiControl: JavaObject<"java.awt.Component">, gameComponent: JavaObject<"arkham.component.GameComponent">, sheetsToUpdate: number[]);
 
         /**
          * Updates the UI component setting using the current value of the
@@ -139,7 +139,7 @@ declare module uibindings {
          * @param uiControl the control whose state should be converted to a string
          * @returns the string representing the state of the control
          */
-        controlToSetting(uiControl: JavaObject<"java.awt.Control">): string;
+        controlToSetting(uiControl: JavaObject<"java.awt.Component">): string;
 
         /**
          * Changes the state of the `control` to reflect the provided
@@ -150,7 +150,7 @@ declare module uibindings {
          * @param value the string value to be mapped to a control state
          * @param uiControl the control to update
          */
-        settingToControl(value: string, uiControl: JavaObject<"java.awt.Control">): void;
+        settingToControl(value: string, uiControl: JavaObject<"java.awt.Component">): void;
     }
 
     /**
@@ -215,7 +215,7 @@ declare module uibindings {
          *  will be used to create the binding; by default a default binding class for the
          *  UI control type is looked up from the registry
          */
-        add(keyName: string, uiControl: JavaObject<"java.awt.Control">, sheetsToUpdate?: number[], bindClassConstructor?: new (...args) => Binding): void;
+        add(keyName: string, uiControl: JavaObject<"java.awt.Component">, sheetsToUpdate?: number[], bindClassConstructor?: new (...args) => Binding): void;
 
         /**
          * Adds multiple bindings to this set of bindings. The argument to this method is an array in which
@@ -231,7 +231,7 @@ declare module uibindings {
          *
          * @param bindingArray arrays of binding arguments
          */
-        addAll(...bindingArray: [string, JavaObject<"java.awt.Control">] | [string, JavaObject<"java.awt.Control">, number[]] | [string, JavaObject<"java.awt.Control">, number[], new (...args) => Binding]): void;
+        addAll(...bindingArray: [string, JavaObject<"java.awt.Component">] | [string, JavaObject<"java.awt.Component">, number[]] | [string, JavaObject<"java.awt.Component">, number[], new (...args) => Binding]): void;
 
         /**
          * Returns a function that will update all of the bindings in this set
