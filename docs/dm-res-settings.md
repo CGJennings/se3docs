@@ -2,7 +2,7 @@
 
 **File extension:** `.settings `
 
-Settings files are used to store a set of named string values. By reading in the settings files, you can refer to the settings by name instead of using the actual values. This makes it easier to modify the values consistently. Instead of hard-coding a value into your script, you look up the value by name everywhere it is used. If you decide to change the value later, you only need to update the definition in the `.settings` file and the new value will be used throughout your script without having to manually update each use. Many features in the DIY game components are built around reading configuration values from settings.
+Settings files are used to store a collection of [setting](dm-settings.md) definitions. Setting files let you define values for a group of features, like the regions where the various elements of a card will be drawn, in a single compact file. Instead of being hard coded in a script and spread all over your code, they are all collected together in one place. And, if you decide to change the value later, you only need to update the definition in the `.settings` file and the new value will be used throughout your script without having to manually update each use. Although setting files are optional, many features in the DIY game components are built around reading configuration values from settings.
 
 To *create a new settings resource*, right click a folder inside a plug-in task and choose **New/Settings File**.
 
@@ -20,7 +20,7 @@ s.addSettingsFrom(path);
 Settings instances *inherit* missing settings from a parent scope. If no scope is specified when creating the Settings instance, it will inherit from the global scope. To inherit from another scope, specify it in the constructor:
 
 ```js
-let s = new Settings(diy.settings);
+let s = new Settings(Settings.shared);
 s.addSettingsFrom(path);
 ```
 
@@ -34,6 +34,8 @@ function create( diy ) {
 }
 ```
 
+Alternatively, you can store default values for all of your component's in the [master settings for the relevant game](dm-setting-hierarchies.md).
+
 ## File format
 
 Settings files are plain text files that follow a specific syntax. Generally, each line in the file defines one setting using the format:
@@ -42,7 +44,7 @@ Settings files are plain text files that follow a specific syntax. Generally, ea
 key-name = text value
 ```
 
-The equals sign separates the name (called the key) from the value assigned to the name. Long values can be split over multiple lines: if the last character in a line is a backslash (\) then any spaces at the start of the next line will be ignored, and the rest of the line will be joined to the current line. This can be repeated for as many lines as required. For example:
+The equals sign separates the name (called the key) from the value assigned to the name. Long values can be split over multiple lines: if the last character in a line is a backslash (`\`) then any spaces at the start of the next line will be ignored, and the rest of the line will be joined to the current line. This can be repeated for as many lines as required. For example:
 
 ```properties
 # This will define the key alphabet to have
