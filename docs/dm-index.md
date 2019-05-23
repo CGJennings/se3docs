@@ -41,7 +41,7 @@
    9. [Memory use and cache control](dm-memory.md)
 6. **How to...**
    1. [Register new games and game expansions](dm-register-game.md)
-   2. [DIY components: create new game component types](dm-diy.md)
+   2. [Create new card types with DIY components](dm-diy.md)
    3. [Add portraits to DIY components](dm-diy-portraits.md)
    4. [Add bleed margins to DIY components](dm-diy-bleed-margins.md)
    5. [Change DIY components without breaking old save files](dm-compatibility.md)
