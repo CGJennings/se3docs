@@ -44,7 +44,7 @@ This is an **early access beta release**.
 ### Updates and changes
 
 * [Ink Saver](um-gc-preview.md#ink-saver), a new rendering mode which ensures that only the bare minimum is drawn. The standard behaviour (which some components may customize) is to draw a solid white background, text, and shapes (no images).
-* The ["Readme" Web page](um-gc-export.md#the-readme-file) that is included with exported images has been rewritten to modern Web standards, including support for printing and mobile devices.
+* The ["Readme" Web page](um-gc-export.md#the-readme-file) that is included with exported images has been rewritten to modern Web standards, including support for printing (at correct size) and mobile devices.
 * Help buttons now link to the new [documentation pages](index.md).
 * The recent file menu now lists projects before other files; within each section the items are still listed from most to least recently used.
 * [Typeface viewer](dm-type-viewer.md)/insert character dialog:
@@ -53,7 +53,7 @@ This is an **early access beta release**.
   * rows with no assigned Unicode code points are hidden;
   * enter a hexadecimal code point (e.g., `u+2c7e`) in the search field to go to that code point (or the nearest valid row).
 * [Projects](um-proj-intro..md) stored in a version control system will no longer want to commit their project and task folder settings (`seproject` files) every time the project closes.
-* The layout of the [root file editor](dm-eons-plugin.md) has been reorganized to better fit small screens.
+* The layout of the [root file editor](dm-eons-plugin.md) has been reorganized to better fit small display resolutions.
 * The `--plugintest` command line option can now be passed multiple test bundles separated by the path separator character (`;` on Windows, `:` elsewhere).
 * The **Document Browser** is *deprecated*. In a future version, searchable API documentation will be accessible from the (system) Web browser. Plug-ins that rely on the document browser and associated text indexing classes will no longer work after this change.
 
@@ -63,7 +63,7 @@ This is an **early access beta release**.
 
 * The `sprintf`-style script library functions will now coerce numeric conversions when possible. This means that, for example, you can now pass a regular JS number to a `"%d"` conversion and it will not throw an exception. It is also now possible to pass a Locale or Language as the first argument to localize formatting (previously the interface locale was always used). Passing a locale of `null` as the first argument will prevent localization.
 
-* Calling `@(keyStr, formatArgs...)` or `#(keyStr, formatArgs...)` will format interface and language strings (respectively). Previously, this was done by calling `string` and `gstring` (which still works). In other words, the following are now all equivalent:
+* Calling `@(keyStr, formatArgs...)` or `#(keyStr, formatArgs...)` will format interface and game language strings (respectively). Previously, this was done by calling `string` and `gstring` (which still works). In other words, the following are now all equivalent:
 
   ```js
   @("key-name", arg1, arg2, arg3);
@@ -107,17 +107,17 @@ Note that arrow functions cannot be used to [implement Java interfaces](dm-java-
 ```js
 // instead of
 let object = {
-    name: "Abigail",
-	greet: function(arg) {
-        println(this.name + " says hi to " + arg);
-	}  
+  name: "Abigail",
+  greet: function(arg) {
+    println(this.name + " says hi to " + arg);
+  }  
 };
 // you can write
 let object = {
-    name: "Abigail",
-    greet(arg) {
-        println(this.name + " says hi to " + arg);
-    }
+  name: "Abigail",
+  greet(arg) {
+    println(this.name + " says hi to " + arg);
+  }
 }
 ```
 
@@ -133,9 +133,9 @@ println(c); // 4
 
 // object matching
 let obj = {
-	height: 60,
-	age: 10,
-	name: "Cathy"	
+  height: 60,
+  age: 10,
+  name: "Cathy"	
 };
 
 let {age, height} = obj;
@@ -145,7 +145,7 @@ println(height); // 60
 
 // parameter matching
 function f([name, age]) {
-	return name + " is " + age;
+  return name + " is " + age;
 }
 
 let array = ["Bev", 52];
@@ -168,15 +168,15 @@ In addition to the above you can expect many more bug fixes and performance impr
 ### Java API changes
 
 - Added `HSBPanel.setTitle`/`getTitle` to change `tintPanel` title label.
-- Added `StrangeEons.getUrlForDocPage` to get a URL for a page in the se3docs site give its base file name (e.g., `"dm-preferences"`).
-- Method `FillInPreferenceCategory.addHelp` no longer takes third argument (old code will still work).
+- Added `StrangeEons.getUrlForDocPage` to get a URL for a page in the se3docs site given its base file name (e.g., `"dm-preferences"`).
+- Method `FillInPreferenceCategory.addHelp` no longer takes a third argument (old code will still work).
 - Deprecated `JHelpButton.setWikiPage`; this now forwards to `setHelpPage`.
 - Removed `arkham.project.PluginWizard` (superseded by `PluginWizardDialog`).
 - Removed deprecated `arkham.dialog.prefs.SBOrderedList`.
 - Removed `PlatformSupport.isOSXMinorVersionAtLeast`, `isUsingAquaDerivedLookAndFeel`, `isUsingOSXSystemLookAndFeel`, `isUsingQuaquaLookAndFeel`.
 - The `OPT_*` bit flags in DIY are now package private; the methods `getAdvancedFlags()`, `setAdvancedFlags` and `isAdvancedFlagAvailable` have been removed. Use the relevant public methods instead: `setTransparentFaces`, `setVariableSizedFaces`, `setPortraitBackgroundFilled`, `setMarkerBackgroundFilled`, `setPortraitScaleUsesMinimum`, `setMarkerScaleUsesMinimum`,  `setPortraitClipping`, `setMarkerClipping`, `setCustomPortraitHandling` and the complementary getters.
 - The following classes have been removed: GestureToolkit, GestureEvent, GestureListener, GestureEventAdapter, GestureCommand.
-- In class PluginBundlePublisher, methods that used to take a ProgressListener parameter no longer do, as the underlying infrastructure needed to support this has removed in newer versions of Java.
+- In class PluginBundlePublisher, methods that used to take a ProgressListener parameter no longer do, as underlying infrastructure needed to support this has been removed in newer versions of Java.
 
 ### Bug fixes
 
