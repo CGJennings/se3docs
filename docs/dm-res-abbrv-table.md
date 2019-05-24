@@ -15,4 +15,4 @@ See the main article for [Abbreviations](um-gc-abbreviations.md) for an explanat
 
 ## Using the abbreviation table editor to create the file
 
-To use the abbreviation table editor to create your default table, open the editor (choose the **Markup/Abbreviations**) and select your game. Changes that you make here will be saved to the `abbrev` subfolder of the [user folder](http://basement.cgjennings.ca/User+Folder), using the same file naming convention. This means that when you are done editing you can simple copy this file into your plug-in’s `abbrev` folder.
+To use the abbreviation table editor to create your default table, open the editor (choose the **Markup/Abbreviations**) and select your game. Changes that you make here will be saved to the `abbrev` subfolder of the [user folder](http://basement.cgjennings.ca/User+Folder), using the same file naming convention. This means that when you are done editing you can simply copy this file into your plug-in’s `abbrev` folder.
