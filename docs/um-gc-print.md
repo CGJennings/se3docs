@@ -2,7 +2,7 @@
 
 The **File/Print** menu is a quick way to print a single component. For more control, or to print a group of components together, you will want to create a [deck](um-deck-intro.md).
 
-> [Ink Saver mode](um-gc-preview.md#ink-saver) applies to all printed and exported images. Be sure to turn it off before exporting your final version!
+> [Ink Saver mode](um-gc-preview.md#ink-saver) applies to all printed and exported images. Be sure to turn it off before printing your final version!
 
 ![the print dialog](images/print.png)
 
