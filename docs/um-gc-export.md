@@ -25,7 +25,7 @@ Create medium-sized, medium-quality images that are large enough to be legible b
 Create large, high-quality images. Files typically take up 50–100 times more disk space than those produced by the first option.
 
 **I want general purpose images**  
-Create images in between the first two options. They will take up only a little more space that the images produced by the first option, but the quality is sufficient that you could print them if you had to.
+Create images in between the first two options. They will take up only a little more space than the images produced by the first option, but the quality is sufficient that you could print them if you had to.
 
 Choose **Export** to create the images. Depending on the destination, you may be prompted for more information. For example, if you are exporting to a ZIP archive, a file chooser will be displayed so you can choose the folder and file name to use.
 
@@ -39,11 +39,11 @@ For complete control over the image format, select the **custom settings** optio
 
 Choose from PNG, JPEG, JPEG 2000, BMP, or GIF. PNG image files are generally larger than the other image types, but they will reproduce the image exactly (they are *lossless*). JPEG images are generally smaller, but do not reproduce the image exactly (they are *lossy*). JPEG 2000 images can either be *lossy* or *lossless*, and are typically smaller than either PNG or JPEG files. However, they are not as widely supported by other applications. BMP and GIF files are outdated image formats and should only be selected if you need to work with a tool that doesn't support a better format.
 
-> **Transparency:** Some components produce images with transparent areas. The most common example is a component with non-rectangular edges. The JPEG format does not support transparency and will have a solid colour background added automatically.
+> **Transparency:** Some components produce images with transparent areas. The most common example is a component with non-rectangular edges. The JPEG format does not support transparency and will have a solid colour background added automatically. (JPEG 2000 *does* support transparency.) 
 
 ### Image quality
 
-This slider controls the compression level for lossy formats. Higher quality means the images a more exact reproduction but also larger file sizes. For JPEG 2000, the 100% quality setting results in lossless images.
+This slider controls the compression level for lossy formats. Higher quality means a more accurate reproduction but also a larger file size. For JPEG 2000, the 100% quality setting results in lossless images.
 
 ### Progressive scan
 
@@ -87,6 +87,6 @@ Clicking on an image or pressing <kbd>Space</kbd> will display a larger version.
 
 Your exported component can also be printed from the Readme page, just by choosing the **Print** button.  The result should print at the correct size, although it may use more pages than Strange Eons would when printing the same file. If the printed size is wrong, check for a setting like "Scale" in the browser's print options, which should be set to 100%. You may also want to switch to landscape layout, turn off any header/footer options, and adjust margins to fit more content on the page.
 
-> If images are split over two pages (but smaller than the physical page size), your browser does not correctly support the `page-break-inside` CSS property. You will need to update the browser or use a different one.
+> If an image is split over two pages (but the image is smaller than the size of a page), your browser does not correctly support the `page-break-inside` CSS property. You will need to update the browser or use a different one.
 
 ![printing from the readme file](images/export-readme-3.png)
