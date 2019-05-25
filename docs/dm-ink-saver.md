@@ -14,7 +14,7 @@ To *render images when Ink Saver mode is active*, call `getUnrestrictedGraphics(
 
 ## Mixing drawing modes
 
-If you feel some of your image-based content is critical to an understanding of the component, you have two choices. The first is to render it differently when in text saver mode (for example, using text instead of a symbol). The second is to bypass the special graphics context for selected elements. One approach for the latter is to use two variables for the graphics context used for drawing. One of these is always set to the context passed to your painting function and is used for most of your drawing. The other is normally set to the same context, but is set to the unrestricted context when Ink Saver is active. Then use the first variable for drawing except when it is critical that your content be rendered. Here is a rough outline:
+If you feel some of your image-based content is critical to an understanding of the component, you have two choices. The first is to render it differently when in Ink Saver mode (for example, using text instead of a symbol). The second is to bypass the special graphics context for selected elements. One approach for the latter is to use two variables for the graphics context used for drawing. One of these is always set to the context passed to your painting function and is used for most of your drawing. The other is normally set to the same context, but is set to the unrestricted context when Ink Saver is active. Then use the first variable for drawing except when it is critical that your content be rendered. Here is a rough outline:
 
 ```js
 const normalGraphics = g;
