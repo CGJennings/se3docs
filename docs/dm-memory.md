@@ -14,3 +14,4 @@ The left side of the window lists the different types of the caches used by the 
 
 ![the cache manager window](images/cache-manager.png)
 
+> Clearing the image cache can be useful during development if Strange Eons keeps using a cached version of an image that has changed, or if you accidentally draw on a cached image image instead of a copy.
