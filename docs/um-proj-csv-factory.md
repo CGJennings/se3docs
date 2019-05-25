@@ -84,8 +84,6 @@ factory.setDelimiter( ',' );
 factory.setQuote( '"' );
 //     if true, space around delimiters is ignored (default false)
 factory.setExtraSpaceIgnored( false );
-//     if false, and the CSV has a column that the factory does not know
-//     what to do with, the factory will throw an error (default false)
 ```
 
 The delimiter is the character that separates one cell from another within a row. It is usually `,` (hence, *Comma* Separated Value) but some files use Tab (`\t`) or another character.
@@ -96,7 +94,7 @@ The most common CSV formats treat spaces at the start or end of a cell value as 
 
 ### Changing the inputs or outputs
 
-You can change the file names used by the factory by changing the string constants near the start of the file. You can change how the input data is loaded using code near the top of script. For example, you could use the currently edited component as a template instead of reading it from a file or download the CSV file from a URL. If you want to do something with the modified component other than save it to a file, you can override the `write(GameComponent template, String fileName, long recordNumber)` method in `CsvFactory`.
+You can change the file names used by the factory by changing the string constants near the start of the file. You can change how the input data is loaded using code near the top of script. For example, you could use the currently edited component as a template instead of reading it from a file, or download the CSV file from a URL. If you want to do something with the modified component other than save it to a file, you can override the `write(GameComponent template, String fileName, long recordNumber)` method in `CsvFactory`.
 
 ### ⚠️ Custom column handling
 
