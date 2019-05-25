@@ -44,7 +44,7 @@ The meat of the plug-in will all be found in here. About the only exception is i
 ![html icon](images/project/html.png) **index.html**  
 This file contains the [blurb that pops up when the plug-in is installed](dm-installation.md). It's optional, but most plug-ins include one.
 
-![html icon](C:/Users/chris/Documents/Projects/se3docs/docs/images/project/root.png) **eons-plugin**  
+![html icon](images/project/root.png) **eons-plugin**  
 This is the [plug-in root file](dm-eons-plugin.md). Strange Eons looks at the plug-in root file in order to figure out what files it needs to load in order to start the plug-in. We can use it for the same purpose.
 
 *Double click **eons-plugin** to open the root file editor.*
