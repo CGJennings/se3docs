@@ -1,11 +1,11 @@
-useLibrary( 'extension' );
+useLibrary("extension");
 
 function getName() {
-    return 'Rise of the Servitors';
+    return "Rise of the Servitors";
 }
 
 function getDescription() {
-    return 'Adds Servitor cards';
+    return "Adds Servitor cards";
 }
 
 function getVersion() {
@@ -19,10 +19,10 @@ function initialize() {
 	// If not, return false so that the plug-in is not installed;
 	// otherwise, go ahead and load the settings and class map needed
 	// for our component.
-	const AH = Game.get( 'AH' );
-	if( AH == null ) return false;
+	const AH = Game.get("AH");
+	if(AH == null) return false;
 
-	AH.masterSettings.addSettingsFrom( 'cgj/servitors/card-layout.settings' );
-	ClassMap.add( 'cgj/servitors/rots.classmap' );
+	AH.masterSettings.addSettingsFrom("cgj/servitors/card-layout.settings");
+	ClassMap.add("cgj/servitors/rots.classmap");
 	return true;
 }
