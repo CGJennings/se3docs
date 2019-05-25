@@ -66,6 +66,7 @@ The following keys control the initial content and labels for the component's te
 | `-content-label` | The label used for the body content text field.              | `@prefab-l-content` |
 | `-tab-label`     | The label used for the tab added to the editor.              | `@prefab-l-tab`     |
 | `-panel-title`   | The title applied to the layout panel containing the controls. | null                |
+
 ### Title text keys
 
 The following keys control the location and style of the name (title) text.
