@@ -251,7 +251,9 @@ useLibrary("markup");
 
 These load some boilerplate for creating DIY components, support for building the user interface controls, and support for creating the markup boxes that will be used to format text on the card.
 
-The next bit does some stuff specific to Arkham Horror. Let's skip down to the `create` function. Here's the first block:
+### Setting up the card
+
+The next few lines do some stuff specific to Arkham Horror. Let's skip down to the `create` function. Here's the first block:
 
 ```js
 diy.version = 2;
@@ -297,6 +299,8 @@ $Benefit = "At the start of each combat round against the Ancient One, "
 
 The code uses [$-notation](dm-dollar-notation.md) for convenience. Otherwise, a line like `$Toughness = "3";` would be written `diy.settings.set("Toughness", "3");`.
 
+### Clearing the card content
+
 The next function, `onClear` is called when the user wants to clear the contents of the card. It sets the same settings as above to blank or default values:
 
 ```js
@@ -310,3 +314,99 @@ $Special = "";
 $Benefit = "";
 ```
 
+### Setting up the editing controls
+
+### Painting the card faces
+
+The job of painting the faces of your game component is split into two parts: setting up for painting, and actually painting. Set up is handled by the functions `createFrontPainter` and `createBackPainter`. These are called once whenever an instance of the component is created. The most common task that they perform is setting up a markup box to be used later, and that's what we see happening in this script's `createFrontPainter` as well. A markup box is used to typeset rich text that can include [markup text](um-gc-markup.md).
+
+This script's `createFrontPainter` function creates two markup boxes: one to typeset the title and one to typeset the reset of the card's text. Here is the section that sets up the title box:
+
+```js
+titleBox = markupBox(sheet);
+titleBox.setAlignment(MarkupBox.LAYOUT_CENTER | MarkupBox.LAYOUT_MIDDLE);
+let defaultStyle = titleBox.getDefaultStyle();
+defaultStyle.add(FAMILY, AHData.cardFamily);
+defaultStyle.add(SIZE, 11);
+titleBox.setTextFitting(MarkupBox.FIT_BOTH);
+```
+
+The markup box is created by calling the `markupBox` function, which was defined by including the [markup](assets/jsdoc/markup.html) script library. The `sheet` that is passed to this function is an object that represents the front card face (an instance of the [DIYSheet](assets/javadoc/ca/cgjennings/apps/arkham/diy/DIYSheet.html) class). The new markup box uses this to set itself up properly to work with the card face.
+
+The following lines set up the box's default style. The default text alignment is set to center the title text horizontally (`LAYOUT_CENTER`) and vertically (`LAYOUT_MIDDLE`), which makes sense for a title. Then the default text style is modified to set the desired font size and family. (The family uses an object defined by the Arkham Horror plug-in to get a font family name specific to that game.) A text style is a collection of attributes like font size, colour, underlining, and so on. As the name suggests, a box's default style is the initial style applied to text when no other styles apply. There are some built-in tags that modify the current style, like `<b>`/`</b>`, and you can define new ones. There are other kinds of tags you can define, too, like ones which replace the tag text with other content of your choice. This can be used, for example, to define tags that insert symbols or other content specific to the target game.
+
+The final line sets the box's *text fitting* mode. This feature allows Strange Eons to automatically "shrink" the contents of a box to make it fit in its region of the card face. It can either be done by reducing the space between lines or scaling down the font size, or both. While not ideal from a design perspective, this can be a useful option, especially for plug-ins meant for amateur designers.
+
+The next block sets up the text box that will contain the main text of the card:
+
+```js
+textBox = markupBox(sheet);
+textBox.setAlignment(MarkupBox.LAYOUT_CENTER | MarkupBox.LAYOUT_BOTTOM);
+textBox.setTextFitting(MarkupBox.FIT_BOTH);
+
+defaultStyle = textBox.getDefaultStyle();
+defaultStyle.add(FAMILY, AHData.bodyFamily);
+defaultStyle.add(SIZE, 8);
+
+let h1 = new TextStyle(WEIGHT, WEIGHT_BOLD, SIZE, 9);
+textBox.setStyleForTag("h1", h1);
+```
+
+It is similar to the set up of the title box. One notable difference is that in addition to a default style, this box also sets up a style for the `<h1>` heading tag. The tag is typically used to mark rule names or similar content.
+
+In contrast to `createFrontPainter`, the `createBackPainter` function is empty. There is nothing for it to do because the component type is set to `FaceStyle.PLAIN_BACK`, meaning that it uses a single fixed image for the back of every card, like a deck of regular playing cards. The image used for the card back was defined using the `servitor-back-sheet-template` setting; Strange Eons will take care of painting it for us.
+
+The `paintFront` and `paintBack` functions are called to paint the card faces. As with `createBackPainter`, the `paintBack` function is empty because Strange Eons will paint the back face for us. Let's look at the start of  `paintFront`:
+
+```js
+sheet.paintPortrait(g);
+sheet.paintTemplateImage(g);
+```
+
+As you may guess from the function names, these two lines paint the portrait image, then paint the front card face overtop of it. Keep in mind that the front face has a transparent "hole" cut out of it where the portrait will show through. The setting key `servitor-portrait-clip-region` determines the rectangular region that the portrait will cover. It consists of four numbers separated by commas (`,`): the number of pixels from the left edge of the template image; the number of pixels from the top edge of the template image; and the width and height of the region, again measured in pixels on the template image. The [Draw Regions tool](dm-draw-regions.md) can be used to quickly and easily define and edit region settings.
+
+```js
+g.setPaint(Color.BLACK);
+```
+
+This line sets the colour for painting text and shapes to black. Notice that some drawing commands are defined on `g`, while some&mdash;like the ones above&mdash;are defined on `sheet`. The `g` argument is a *graphics context*; it is used for low level drawing like lines, shapes, and arbitrary images. The painting support provided by `sheet` is higher level, like the call above that handles all the details of painting the portrait. Notice that these higher-level functions take `g` as an argument; ultimately all drawing on the card face goes through the graphics context.
+
+```js
+titleBox.markupText = diy.name + "<size 8>\nServitor";
+titleBox.draw(g, $$servitor-title-region.region);
+```
+
+These lines draw the title. The first line updates the text that the title markup box will draw by setting it to the component's name (plus some extra text). The second line tells the box to lay out and draw the text. Notice, again, that the `g` graphics context is passed to this function. The second argument describes the rectangular region where the text should be drawn (and that it must fit in if text fitting is enabled). This region has been defined in **card-layout.settings**, just after the setting keys for the template images and portrait. A similar region for the main text box is there, too:
+
+```properties
+servitor-title-region = 35,216,267,41
+servitor-text-region = 31,260,274,167
+```
+
+> There is one final line in the settings file, which defines `servitor-front-sheet-expsym-region`. This tells Strange Eons where to draw [expansion symbols](dm-register-game.md#expansion-symbols), which we won't cover here.
+
+The syntax used to fetch the region may seem odd at first. You have already seen $-notation used to read a setting value. In this case, if we wrote `$servitor-title-region`, we would get the value of the setting, namely the string `"35,216,267,41"`. Some high-level functions, like those defined on `sheet` may accept a string description of a region, but the box's `draw` method expects a [Region](assets/javadoc/resources/Settings.Region.html) object. The extra $ turns the setting name into something called a [live setting](dm-dollar-notation.md#live-settings), which can be used to parse the setting's string value directly into a Region (and into other useful objects as well). The equivalent to this without using $-notation is `diy.settings.getRegion("servitor-title")` (the function knows to add `-region` to the name for you).
+
+The rest of the painting code draws the rules and icons for the card face using the main text box. The content is fetched from the component's private settings; the same settings that were initialized in `create` and given interface components in `createInterface`. It is notable that the icons for values such as the Servitor's `$Toughness` are drawn directly but by appending `<image>` tags to the markup box content. As the comments state, this is slower than drawing the images directly but it can be convenient for plug-in authors.
+
+> If you are drawing fixed text that the user cannot change, such as a label or an attribute that can only be one of a group of set options, it is faster to draw this text directly using the functions provided by `g` or `sheet` than to use a markup box. While a markup box is flexible, that flexibility requires a lot of extra CPU power to parse and typeset.
+
+### Handling loading and saving
+
+Near the bottom of the script, the `onRead` and `onWrite` functions are defined, but they are empty placeholders as well. These functions are called when the game component is loaded or saved (respectively). These functions are only needed in a few cases:
+
+* When basic features of the component that are normally only settable in `create` change, such as changing the `faceStyle`, these features can be set to their new values in `onRead` to update old components to the new state.
+* When the game component design is updated in a way that means old save files would no longer work correctly, such as changing the meaning of one of the component's private settings, `onRead` can be used to [upgrade older files seamlessly](dm-compatibility.md).
+* When private settings are insufficient and you need to read and write custom objects in the save file. The most common case is components that use [multiple portraits](dm-diy-portraits.md#manual-portrait-handling).
+
+### Quick-testing the component
+
+The final block of code in the editor does some special handling when the script is run directly from the code editor. In this case, the value of `sourcefile` will always be `"Quickscript"`.
+
+```js
+if(sourcefile == "Quickscript") {
+    testDIYScript("AH");
+}
+```
+
+Running this script directly will cause the `testDIYScript` function to be called, which will immediately create a new game component editor using the script. If you try this now, you'll get an error because the settings in **card-layout.settings** won't have been loaded (as the plug-in itself is not installed). You can fix this by right clicking on the settings file and choose **Merge Settings Into/Arkham Horror**. This will add the settings to the master settings for that game, just as the plug-in script would have. (The test function is called with the `AH` game code, so the test component will know it belongs to that game and use it's master settings as the parent of the component's private settings.) Once this is done, you can test the component quickly without having to go through an entire **Test Plug-in** cycle. (The required Arkham Horror plug-in still needs to be installed, though.) It is usually possible to set up a quick testing cycle in this way, though some components may require additional steps within the `if` block.

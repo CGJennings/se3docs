@@ -142,7 +142,7 @@ function paintFront(g, diy, sheet) {
 
 	g.setPaint(Color.BLACK);
 	titleBox.markupText = diy.name + "<size 8>\nServitor";
-	titleBox.draw(g, $$servitor_title_region.region);
+	titleBox.draw(g, $$servitor-title-region.region);
 	let location = AHData.getLocationFromSymbol($Home);
 	let home, article;
 	if(location != null) {
@@ -185,14 +185,14 @@ function paintFront(g, diy, sheet) {
 	}
 
 	textBox.markupText = text;
-	textBox.draw(g, $$servitor_text_region.region);
+	textBox.draw(g, $$servitor-text-region.region);
 }
 
 function paintBack(g, diy, sheet) {}
 
 
-function onRead() {}
-function onWrite() {}
+function onRead(diy, objectInputStream) {}
+function onWrite(diy, objectOutputStream) {}
 
 // This doesn't do anything unless the script is run
 // directly from a code editor.
