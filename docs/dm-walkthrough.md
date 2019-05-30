@@ -24,7 +24,7 @@ The plug-in will be packed up into a plug-in bundle, then the test dialog will a
 
 *Click **Test** to [test the plug-in](dm-test-plugin.md) in a separate copy of Strange Eons.*
 
-The brown test edition of Strange Eons will open in a few moments.
+A special brown "test edition" of Strange Eons will open in a few moments. The instance of Strange Eons you were working from is still running in a separate window; you haven't lost any work and you can flip back to it at any time. In case your plug-in really goes off the rails and the test edition of Strange Eons stops working, you can close it from the original window using a control near the top of the window.
 
 *Locate and click on the new Servitor card type under Enemies and Minions, then click **Create**.*
 
@@ -264,7 +264,7 @@ diy.backTemplateKey = "servitor-back-sheet";
 diy.portraitKey = "servitor";
 ```
 
-The first line sets the version for this component to 2. This is used to ensure that [new versions of the script can still open files saved from a previous version of the script](dm-compatibility.md).
+The first line sets the version for this component to 2. This is used to ensure that [new versions of the script can still open files saved from a previous version of the script](dm-compatibility.md). The `diy` variable, which is an argument passed to our function, is an [object](assets/javadoc/ca/cgjennings/apps/arkham/diy/DIY.html) that represents the particular Servitor instance that the script is controlling at a given moment.
 
 The second line sets an optional hint for the user; if a user tries to load a Servitor but they don't have the right plug-in installed, this can be used to used to suggest which plug-in to install.
 
@@ -316,9 +316,90 @@ $Benefit = "";
 
 ### Setting up the editing controls
 
+The `createInterface` function is used to set up the editing controls that the user will interact with in order to create their custom Servitor. As users work with the interface controls (text fields, drop boxes, and so on), the matching private settings (such as `$Home` and `$Toughness`) will change to match the new values. At the same time, Strange Eons is notified that the relevant card faces are out of date, and it calls the script's painting functions to update them (described in the next section).
+
+Coordinating the action between the interface controls, the component, and the component faces is a bit like conducting an orchestra, but Strange Eons takes care of the details. Here again, the main article on DIY components already [provides a good overview of the process](dm-diy.md#createinterfacediy-editor), so here we'll focus on interesting parts of the code:
+
+```js
+let panelStack = new Stack();
+```
+
+This line creates a layout container that will act as the root from which the rest of the interface will grow. A layout container is used to organize other interface elements, including both controls and other containers.  This container simply organizes its child elements into a vertical stack. The interface for Servitor cards consists of a stack of three labelled panels, using the categories **Servitor**, **Effects**, and **Statistics**. Each of these sections contains a group of controls focused on editing content in its respective category:
+
+![Servitor editor interface](images/servitor-ui.png)
+
+Portrait editing is handled automatically on its own tab ([manual control](dm-diy-portraits.md#manual-portrait-handling) is also available).
+
+```js
+let panel = new Grid("fillx");
+```
+
+This line creates the first of the three panels (**Servitor**), which captures basic information about the card. As each section is completed, its respective panel is added to the panel stack and then the `panel` variable is reused to hold the panel for the next section. This has pros and cons. Using a new variable name for each panel (`servitorPanel`, `effectsPanel`, `statsPanel`) might make the code a little clearer, but using the same variable name for each panel makes it easy to reorganize the controls to find the best layout.
+
+> `Stack` and `Grid` are two of the available layout containers used to organize the interface. You can read more about how they work in the documentation for the [uilayout](assets/jsdoc/uilayout.html) script library. The `Grid` layout container is the most complex but also the most flexible. Beginners may want to start with the `TypeGrid` layout instead.
+
+```js
+let bindings = new Bindings(editor, diy);
+```
+
+This creates the Bindings object used to link each interface control to the private setting that it edits, and to trigger the repainting of card faces as needed. The script passes in two arguments (which were passed to `createInterface` as arguments in turn): `editor` which is an object representing the editor tab that will tie everything together, and `diy` which, again, is the object representing the game component itself. The Bindings object needs these for its own inner workings.
+
+```js
+let nameField = textField();
+diy.setNameField(nameField);
+let nameLabel = label("&Name", nameField);
+panel.place(nameLabel, "split", nameField, "growx, wrap");
+```
+
+These lines create a field for the user to type a name into, create a label for the field to tell the user what it is for, then add both to the **Servitors** panel. The name field is a special case, because every game component has to be "nameable". A component's name is not stored as a private setting but as a special property of the component object itself (`diy.name`). When a text field is created to edit that name, we also need to tell that to the component, which is what `diy.setNameField` does. The component itself, rather than the Bindings object, will manage changes to the name field.
+
+The text field itself is created by calling `textField()`. The [uicontrols](assets/jsdoc/uicontrols.html) script library lets you create several kinds of controls by calling functions like this. The label control is another example. It is passed two arguments: the text of the label, and the control being labelled. The label has to know what it is a label for to support screen readers (for accessibility), but also to allow the control to be activated by shortcut. In the interface you may notice that a letter is underlined in some labels. The underlined letter is a shortcut key that can be used to activated the relevant control by holding down <kbd>Alt</kbd> and pressing the underlined letter. The letter key is indicated by placing an ampersand (`&`) before it in the label text. For example, this name label can be activated by pressing <kbd>Alt</kbd>+<kbd>N</kbd>.
+
+The final line adds both the label and the text field to the current panel (the **Servitor** panel). Every layout container has a `place` function that can be used to add one or more controls; after each control you also pass a string that specifies any special options for how that control should be placed. Each kind of layout object uses different hints. (A few, like `Stack`, don't use hints, in which case controls can be placed by calling `add` instead, which takes a list of controls without any hint values.)
+
+The **Servitor** panel has another control, **Home**, but it uses a special control specific to Arkham Horror so, as before, we'll skip over it. The next few lines round out the first panel:
+
+```js
+panel.setTitle("Servitor");
+panelStack.add(panel);
+```
+
+These lines set the **Servitor** label on the panel as a whole, then add it to the vertical stack of panels that will make up the content of the editing tab.
+
+```js
+panel = new Grid("fillx");
+```
+
+The next line creates the next panel to be filled in, which will be titled **Effects**. Earlier we saw that the component's name gets special handling; let's look at how one of the "regular" properties, that is bound to a private setting works:
+
+```js
+let benefitField = textArea("", 5, 0, true);
+bindings.add("Benefit", benefitField, [0]);
+let benefitLabel = label("&Benefit", benefitField);
+```
+
+This code adds the control that manages the `Benefit` private setting, a block of text that describes a special rule. Instead of a `textField` it uses a `textArea`, which allows multiple lines. Some extra configuration details are passed in this time, setting the initial text, number of rows and columns (`0` being special), and whether it should allow scrollbars.
+
+The next line creates the necessary glue to link this text area to the `Benefit` setting: the three arguments are the setting name (as a string, and without the `$` we would use for $-notation), the control, and an array that lists which sheets (card faces) need to be redrawn when the value changes. Each face is numbered, starting from zero, so the value `[0]` tells the bindings instance that the front face needs to redrawn when the `Benefit` setting is updated. If both the front and back faces relied on the value of `Benefit`, you would instead use `[0,1]`. If only the back face relied used the value, you would specify that with `[1]`.
+
+Let's take a moment to go through an entire edit cycle based on the relationships set up by this code. Suppose you create a new Servitor card. (To make it easier to keep things straight, I'll use `$Benefit` when talking about the `Benefit` private setting.) Since the bindings link `benefitField` to the value of `$Benefit`, when the editor is first created that value will be written into the text area to start with. Since this is a new Servitor that was just created, the initial value of `$Benefit` is the one that was set in the `create` function, which is just an empty string (`""`). Now the editor tab for the new card is added to set of open editors and the interface appears. The user clicks in the `benefitField` control and enters `"Grants infinite wishes!"`. The control detects this edit automatically, and since `benefitField` is bound to `$Benefit`, the Bindings object will update `$Benefit` to the newly entered text. And since the binding also specifies that whenever `$Benefit` changes, the front card face needs to be repainted with the new text, a repaint will be triggered automatically in the next few hundred milliseconds or so, after which the preview image will update to reflect the changed content. If the user saves and closes the editor at this point, the private settings is the save file will reflect the edited value. The next time the user opens the file, `$Benefit` will be set to the saved ``"Grants infinite wishes!"` value, so when the editor tab appears the `benefitField` will have that text already preloaded instead of the blank string of a newly created card.
+
+The rest of `createInterface` consists of variants on this these, except for the last two lines: different kinds of components are created, bound to settings, given labels, and added to panels. The last two lines complete the interface:
+
+```js
+panelStack.addToEditor(editor, "Content", null, null, 0);
+bindings.bind();
+```
+
+The first line takes the root of our interface, the vertical stack of titled panels, and adds it to the game component editor as an editing tab labelled **Content**. If we didn't call this, the controls would exist but they wouldn't be part of the editor so we wouldn't be able to see or use them. The final line tells the Bindings object that we have added all of the controls that it will be responsible for, and that it should thus create all the behind-the-scenes connections that will link everything together.
+
 ### Painting the card faces
 
-The job of painting the faces of your game component is split into two parts: setting up for painting, and actually painting. Set up is handled by the functions `createFrontPainter` and `createBackPainter`. These are called once whenever an instance of the component is created. The most common task that they perform is setting up a markup box to be used later, and that's what we see happening in this script's `createFrontPainter` as well. A markup box is used to typeset rich text that can include [markup text](um-gc-markup.md).
+The job of painting the faces of your game component is split into two parts: setting up for painting, and actually painting. Set up is handled by the functions `createFrontPainter` and `createBackPainter`. These are called once whenever an instance of the component is created.
+
+> Setting up the interface controls is kept separate from setting up painting. This is intentional: the controls are only needed when the component is being placed in an editor tab. For other uses, such as [exporting](um-gc-export.md) or [adding a component to a deck](um-deck-adding-content.md), they are not needed and `createInterface` is never called. For this reason it is important to ensure that your painting code does not rely on values or objects that are only initialized in `createInterface`. Generally, your painting code should only rely on the content stored in private settings, layout parameters stored as private or game settings, objects you set up in `createFrontPainter`/`createBackPainter`, and the values passed directly to your painting functions.
+
+The most common task performed by the paint setup functions is to prepare a markup box to be used later, and that's what we see happening in this script's `createFrontPainter` as well. A markup box is used to typeset styled text that can include [markup tags](um-gc-markup.md).
 
 This script's `createFrontPainter` function creates two markup boxes: one to typeset the title and one to typeset the reset of the card's text. Here is the section that sets up the title box:
 
