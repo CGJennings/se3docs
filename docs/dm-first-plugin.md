@@ -1,4 +1,4 @@
-# My First Plug-in
+# Making your first plug-in
 
 This page will guide you through all the steps needed to create and build a plug-in without having to worry about what the plug-in does. This will give you a handle on the basic workflow needed to develop a plug-in before getting into the details, so that you have a frame of reference when reading other pages in this manual.
 

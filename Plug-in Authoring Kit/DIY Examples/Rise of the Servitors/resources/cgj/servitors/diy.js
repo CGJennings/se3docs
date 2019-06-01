@@ -75,9 +75,9 @@ function createInterface(diy, editor) {
 	panel = new Grid("fillx");
 	let benefitField = textArea("", 5, 0, true);
 	bindings.add("Benefit", benefitField, [0]);
+	let benefitLabel = label("&Benefit", benefitField);
 	let specialField = textArea("", 3, 0, true);
 	bindings.add("Special", specialField, [0]);
-	let benefitLabel = label("&Benefit", benefitField);
 	let specialLabel = label("&Special", specialField);
 	panel.place(
 		benefitLabel, "wrap", benefitField, "growx, wrap",

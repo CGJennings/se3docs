@@ -4,9 +4,9 @@
 
 1. **Getting started**
    1. [Overview of plug-in authoring](dm-overview.md)
-   2. [Walkthrough](dm-walkthrough.md)
+   2. [Taking a tour of a plug-in](dm-walkthrough.md)
    3. [Plug-in types](dm-plugin-types.md)
-   4. [My First Plug-in](dm-first-plugin.md)
+   4. [Making your first plug-in](dm-first-plugin.md)
    5. [The root file](dm-eons-plugin.md)
 2. **APIs and examples**
    1. [Script library API](dm-script-api.md)
