@@ -121,14 +121,14 @@ $hitpoints = "10";
 $gold = "0";
 ```
 
-Notice that I put all the values in quotes, meaning that they are strings (text) rather than numbers. Settings are always stored as strings internally. If you assign something to a setting that is not a string, it is always converted to a string first. This can lead to some surprises if you forget. For example, the following does not print “2” as you might expect but “1.01.0”:
+Notice that I put all the values in quotes, meaning that they are strings (text) rather than numbers. Settings are always stored as strings internally. If you assign something to a setting that is not a string, it is always converted to a string first. This can lead to some surprises if you forget. For example, the following does not print “2” as you might expect but “11”:
 
 ```js
 $x = 1;
 println($x + $x);
 ```
 
-Unless you are familiar with JavaScript’s implicit type coercion rules (actually, even if you *are* familiar with them), it’s a good idea to always be explicit about the fact that the setting value is a string.
+Unless you are familiar with JavaScript’s implicit [type coercion](https://www.oreilly.com/library/view/you-dont-know/9781491905159/ch04.html) rules (actually, even if you *are* familiar with them), it’s a good idea to always be explicit about the fact that the setting value is a string.
 
 > Note that you *can* use settings to store as other types of data, from simple numbers to rich types like rectangles, colours and more. The “strings-only” rule only applies when using $-notation to access the settings. 
 
