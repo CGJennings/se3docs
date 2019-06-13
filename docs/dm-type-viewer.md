@@ -10,7 +10,7 @@ To *preview a font file*, double click it in the project pane to open it in the 
 
 The main area of the viewer consists of a table in which each cell is a Unicode *code point* (a code number for a character). Each row of the table covers 16 code points. The heading at the start of each row gives a base offset for the row. The code point for a given character can be calculated by adding its position in the row to this base. For example, the code point for A is U+0041. You will find it in the `4x` row in column `1`. The character, code point, and Unicode name can also be seen by hovering over the glyph's cell with the mouse pointer.
 
-The colour of a cell indicates its status. Characters that are supported by the viewed font are shown in the cell for the appropriate code pint using dark text on a light background. Code points that do not represent printable characters supported by the font use other colours:
+The colour of a cell indicates its status. Characters that are supported by the viewed font are shown in the cell for the appropriate code point using dark text on a light background. Code points that do not represent printable characters supported by the font use other colours:
 
 <div class="box" style="background:#ef9a9a"></div> **Missing glyph**  
 The code point is not supported by the font. (The viewer will try to display a fallback from another font so you can see which character is missing.)
@@ -23,7 +23,7 @@ The code point has not been assigned a meaning under the Unicode standard. A cha
 
 ### Previewing characters and text
 
-Choosing any table cell with draw the associated glyph's outline in the large preview area in the lower-left corner of the dialog, print its Unicode name below the table, and insert it into the **Copy** field.
+Choosing any table cell will draw the associated glyph's outline in the large preview area in the lower-left corner of the dialog, print its Unicode name below the table, and insert it into the **Copy** field.
 
 To *enter test text in the target font*, click in the **Copy** field and enter the desired text.
 
