@@ -1,6 +1,6 @@
 # Create new prefab game component types
 
-A prefab component is a type of DIY component that requires almost no code to create. A prefab component includes a card design graphic (template), an optional title, an optional portrait (user-selected image), an optional title, and an optional markup box for rules or other content. The back face can either be a plain card design graphic or it can be identical to the front face. (If the base design does not meet your needs, it can be [changed and extended](#customizing-and-extending-prefab-designs).)
+A prefab component is a type of DIY component that requires almost no code to create. A prefab component includes a card design graphic (template), an optional portrait (user-selected image), an optional title, and an optional markup box for rules or other content. The back face can either be a plain card design graphic or it can be identical to the front face. (If the base design does not meet your needs, it can be [changed and extended](#customizing-and-extending-prefab-designs).)
 
 ## DIY script
 
