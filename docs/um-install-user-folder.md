@@ -18,7 +18,7 @@ On **macOS** and **Linux**, the user folder is a hidden directory under your hom
 
 Because the file is hidden (starts with `.`) it might not be visible under normal conditions, but if you have run Strange Eons it will exist!
 
-> If you are having trouble finding it you can open **Toolbox/Quickscript**, paste in the following script code, and run it:  
+> If you are having trouble finding your user folder you can open **Toolbox/Quickscript**, paste in the following script code, and run it:  
 >
 > ```js
 > println(Eons.getUserStorageFile(null));
@@ -33,13 +33,13 @@ You can specify a different location by setting the environment variable `STRANG
 Most of the files stored in the user folder have self-explanatory names. Here are some of the most common items you will find:
 
 `abbrev/*`  
-This folder contains your custom [abbreviations](um-gc-abbreviations.md). Deleted it will revert abbreviations to their defaults.
+This folder contains your custom [abbreviations](um-gc-abbreviations.md). Deleting it will revert abbreviations to their defaults.
 
 `cat-cache`  
-A copy of the last [plug-in catalogue](um-plugins-catalogue.md) you downloaded. If you open the catalogue several times in quick succession, this cached copy is used instead of downloading it again each time.
+A copy of the last [plug-in catalogue](um-plugins-catalogue.md) you downloaded. If you open the catalogue several times in quick succession, this cached copy is used instead of downloading it repeatedly.
 
 `debugger-client/*`  
-Stores preferences for the script debugger client application used by plug-in developers.
+Stores preferences for the [script debugger client application](dm-debugger.md) used by plug-in developers.
 
 `learned-spelling-words`  
 Contains your personal [spelling words](um-gc-spelling.md).
