@@ -63,7 +63,7 @@ $x = 1; // ⚠
 println($x + $x);
 ```
 
-Since `$x` only accepts strings, the `1` is first converted to the string `"1.0"`. As a result, the expression `$x + $x` will concatenate two copies of string together, resulting in `"1.01.0"`.
+Since `$x` only accepts strings, the `1` is first converted to the string `"1"`. As a result, the expression `$x + $x` will concatenate two copies of string together, resulting in `"11"`.
 
 ## Live settings
 
