@@ -6,8 +6,6 @@
 
 These pages will help you get the most out of [Strange Eons](cgjennings.ca/eons/), the tool for creating cards and other content for board and tabletop games.
 
-**Note:** this is a work in progress. Content is being moved here from https://basement.cgjennings.ca
-
 ## Tomes of knowledge
 
 ![](images/user-manual-logo.png){: .float-left} [User manual](um-index.md)  
