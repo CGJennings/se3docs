@@ -93,7 +93,7 @@ The following properties are available:
 
 `$$key.region`: a rectangular [Region](assets/javadoc/resources/Settings.Region.html)
 
-`$$key.region2D`: a rectangular [Region2D](assets/javadoc/resources/Settings.Region2D.html) (allows non-integer coordinates)
+`$$key.region2D`: a rectangular [Region2D](assets/javadoc/resources/Settings.Region2D.html) (allows fractional coordinates)
 
 `$$key.string` or `$$key.value`: a string (that is, the setting value)
 
