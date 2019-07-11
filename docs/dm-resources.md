@@ -1,6 +1,10 @@
 # Resources
 
-Plug-ins typically require access to resources such as [images](dm-res-image.md), [fonts](dm-res-font.md), and other data files. Resource files are included in a plug-in like any other file, by placing them in the plug-in's project task folder before it is bundled. For ease of access, resource files are typically stored in the plug-in under a folder called `resources`. As files in a plug-in are "visible" to all other plug-ins, it is important to avoid creating resources with the same path. The easiest way to do this is to store your files in a subfolder of `resources` based on your name, game code, plug-in UUID, or some other effectively unique string.
+Plug-ins typically require access to resources such as [images](dm-res-image.md), [fonts](dm-res-font.md), and other data files. Strange Eons makes it easy to access these files from plug-in code.
+
+## Adding resources to a plug-in
+
+Resource files are included in a plug-in like any other file, by placing them in the plug-in's project task folder before it is bundled. For ease of access, resource files are typically stored in the plug-in under a folder called `resources`. As files in a plug-in are "visible" to all other plug-ins, it is important to avoid creating resources with the same path. The easiest way to do this is to store your files in a subfolder of `resources` based on your name, game code, plug-in UUID, or some other effectively unique string.
 
 **Example**  
 Suppose Jane Simmons is writing a plug-in for a game called *SuperWhiz*. To keep her resource file names from colliding with other plug-ins, she might create a subfolder of `resources` named `jsimmons` and a subfolder of that named `superwhiz`. If she later creates a plug-in for a different game, she could store its resources in another subfolder of `jsimmons`.
