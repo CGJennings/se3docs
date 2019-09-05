@@ -21,7 +21,7 @@ Sets the game language to the given locale, such as `en_CA` for Canadian English
 Sets the game language to the given locale.
 
 `--plugintest bundlefile`
-Runs the application in [plug-in test mode](dm-test-plugin.md) in order to test the given bundle file. The bundle will be loaded as if it were the plug-in folder. This is usually used indirectly, by using the [**Test Plug-in** project command](dm-test-plugin.md).
+Runs the application in [plug-in test mode](dm-test-plugin.md) in order to test the specified plug-in bundle file. The bundle will be loaded as if it were the plug-in folder. This is usually used indirectly, by using the [**Test Plug-in** project command](dm-test-plugin.md). Multiple bundles can be listed by separating them with the path separator character (`;` on Windows, `:` elsewhere).
 
 `--resetprefs`
 Resets user preferences to their default values.
@@ -48,7 +48,7 @@ Prevents Strange Eons from trying to re-open the project that was open when the 
 `--xDisableFileRestore`
 Prevents Strange Eons from trying to re-open the files that were being edited when the app was last used. This is useful if a problem file is preventing the app from starting.
 
-`--XDisableFilterThreads`
+`--xDisableFilterThreads`
 Disables the use of multiple threads to improve graphics filter performance on multicore CPUs.
 
 `--xDisableBackgroundInit`
