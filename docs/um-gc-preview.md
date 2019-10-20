@@ -20,4 +20,4 @@ You can change the background behind the preview area using **View/Preview Backd
 
 ## Ink Saver
 
-You can switch to a simplified rendering of your game component using **View/Ink Saver**. By default, this renders only the component's text and shapes on a white background. (Some components may optionally render other elements.) Note that this option is global, and also affects printing and exporting.
+You can switch to a simplified rendering of your game component using **View/Ink Saver**. By default, this renders only the component's text and shapes on a white background. (Some components may optionally render other elements.) Note that this option affects all component drawing, including when printing and exporting.
