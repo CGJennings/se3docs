@@ -1,6 +1,14 @@
 # CSV Factories
 
-With a CSV factory, you can create groups of game components by filling in a template with data from a CSV file. A CSV (Comma Separated Value) file is a plain text file that stores tabular data (data arranged in rows and columns). Most spreadsheets and many other tools can be used to create them.
+With a CSV factory, you can automatically create a deck of cards from a table like this:
+
+| name | $gold | $agility | $strength | $wisdom | $ability |
+| ---- | ----- | -------- | --------- | ------- | -------- |
+| Bijou the Thief | 16 | 4 | 2 | 2 | Scales buildings in 1 turn. |
+| Galrak the Mighty | 8 | 2 | 5 | 1 | Smashes through locked doors. |
+| Zing the Strange | 10 | 3 | 1 | 4 | Invulnerable to negative mindsets. |
+
+A CSV factory creates groups of game components by filling them in using data from a CSV (Comma Separated Value) file. A CSV file is a plain text file that stores tabular data (data arranged in rows and columns). You can create CSV files using a spreadsheet or any text editor. Each row creates a new card or other component; the column values for the row fill in that component's unique details.
 
 To get started you need to install the CSV Factory plug-in from the [catalogue](um-plugins-catalogue.md):  
 `eonscat:964c`
@@ -24,7 +32,7 @@ Double clicking on the `make.ajs` script will clear the `output` folder of all f
 
 ## The template file
 
-The `template.eon` file should be an example of whatever kind of game component you want to create. Usually the exact *content* of the template does not matter: by default the factory will clear the template (as if by using **Edit/Clear**) before starting a new component. Just create a new component of the kind you want to make, and save it overtop of the sample template file.
+The `template.eon` file should be an example of whatever kind of game component you want to create. The *content* of the template does not matter: by default the factory will clear the template (as if by using **Edit/Clear**) before starting each new component. Just create a new component of the kind you want to make, and save it overtop of the sample template file.
 
 ## The CSV file
 
@@ -40,7 +48,7 @@ This table has three rows and three columns. The first row describes what each c
 
 The following rows would each lead to a new game component created from the supplied template. For the first row, the factory will set the template's name to `Fred`, its private setting `key1` to `value1`, and its private setting `key2` to `value2`. The second row will do the same, except the name will be set to `George`.
 
-> In the example, `value1` and `value2` are simply repeated in the second row. The factory does provide a shortcut for this, though: if a cell's value is exactly `"` then it will copy its value from the previous component row. (Note that due to the way CSV files work, that value has to be *escaped*, so in the actual CSV file this value appears as `""""`. As long as you use a program such as a spreadsheet to edit the file, you won't need to worry about the gory details of the CSV file format.)
+> In the example, `value1` and `value2` are repeated in the second row. The factory provides a shortcut for this: if a cell's value is exactly `"` then it will copy its value from the same column in the previous component row. (Note that due to the way CSV files work, that value has to be *escaped*, so in the actual CSV file this value appears as `""""`. As long as you use a program such as a spreadsheet to edit the file, you won't need to worry about the gory details of the CSV file format.)
 
 Empty rows have no effect on the factory and are simply skipped.
 
@@ -52,7 +60,7 @@ By default, the following rules are used to figure out how a component should be
 
 2. Names that start with a `$` will affect the private setting with that name. For example, the name `$title` would cause that column to change the component's `title` private setting. The **Setting Explorer** is helpful for determining which setting names a component uses. This is part of the **Developer Tools** plug-in, `eonscat:39f10fa9-6574-4be1-9dd6-3e658c9a6fd3`.    
 
-3. A column name that starts with `port` can affect a component's portrait. The rest of the name determines what part of the portrait the name affects:  
+3. A column name that *starts* with `port` can affect a component's portrait. The rest of the name determines what part of the portrait the name affects:  
   
    `portSource` or `portSrc`: the source image file (a file path or URL)  
    `portScale`: the scale factor  
@@ -98,7 +106,7 @@ You can change the file names used by the factory by changing the string constan
 
 ### ⚠️ Custom column handling
 
-To change how your factory deals with a column name, you can subclass the `CsvFactory` created in the `make.ajs` script and override the `processRow` method. This method provides three parameters: the `template` to be modified, a `Map<String,String>` from column names to their values in the current row (`rowValues`), and the same map with the previous row's values (`prevRowValues`). If you wish to process every column in order yourself, you can use `rowValues.keySet().iterator()`. Otherwise, you can handle whichever columns you want to customize yourself and then call the superclass method to use the standard handling algorithm:
+To change how your factory deals with a column name, you can subclass the `CsvFactory` created in the `make.ajs` script and override the `processRow` method. This method provides three parameters: the `template` to be modified, `rowValues`, which describes the current row, and `prevRowValues`, which describes the previous row. Both `rowValues` and `prevRowValues` consist of a map (technically, a `Map<String,String>`) from column names to their values in the relevant row. If you wish to process every column in order yourself, you can use `rowValues.keySet().iterator()`. Otherwise, you can handle whichever columns you want to customize yourself and then call the superclass method to use the standard handling algorithm:
 
 ```js
 factory = new JavaAdapter( CsvFactory, {
