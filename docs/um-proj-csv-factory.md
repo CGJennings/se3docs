@@ -26,7 +26,7 @@ The new task folder will include the following parts:
 - a `make.ajs` automation script that builds a set of components from the template and CSV data
 - a `readme.txt` file with a summary of these instructions
 
-### Running the factory
+## Running the factory
 
 Double clicking on the `make.ajs` script will clear the `output` folder of all files and then rebuild the component set. A new task starts with sample files that will create a couple of components for the Talisman game plug-in. If you want to test it out, you'll need to install that plug-in. When you are ready to start making your own components, replace `template.eon` and `data.csv`.
 
