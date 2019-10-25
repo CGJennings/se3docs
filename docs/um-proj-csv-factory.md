@@ -1,16 +1,16 @@
 # CSV Factories
 
+A CSV factory creates groups of game components by filling them in using data from a CSV (Comma Separated Value) file. A CSV file is a plain text file that stores tabular data (data arranged in rows and columns). You can create CSV files using a spreadsheet or any text editor.
+
 With a CSV factory, you can automatically create a deck of cards from a table like this:
 
 | name | $gold | $agility | $strength | $wisdom | $ability |
 | ---- | ----- | -------- | --------- | ------- | -------- |
-| Bijou the Thief | 16 | 4 | 2 | 2 | Scales buildings in 1 turn. |
-| Galrak the Mighty | 8 | 2 | 5 | 1 | Smashes through locked doors. |
-| Zing the Strange | 10 | 3 | 1 | 4 | Invulnerable to negative mindsets. |
+| Bijou the Thief | 16 | 4 | 2 | 2 | Scales buildings. |
+| Galrak the Mighty | 8 | 2 | 5 | 1 | Smashes locked doors. |
+| Zing the Strange | 10 | 3 | 1 | 4 | Has positive mindset. |
 
-A CSV factory creates groups of game components by filling them in using data from a CSV (Comma Separated Value) file. A CSV file is a plain text file that stores tabular data (data arranged in rows and columns). You can create CSV files using a spreadsheet or any text editor. Each row creates a new card or other component; the column values for the row fill in that component's unique details.
-
-To get started you need to install the CSV Factory plug-in from the [catalogue](um-plugins-catalogue.md):  
+Each row creates a new card or other component; the column values for the row fill in that component's unique details. To get started you need to install the CSV Factory plug-in from the [catalogue](um-plugins-catalogue.md):  
 `eonscat:964c`
 
 This will add a new option when adding a task to a project, the CSV Factory.
