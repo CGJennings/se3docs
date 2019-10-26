@@ -23,7 +23,7 @@ Sets the length of the line that is drawn, in points.
 
 ### Magic fold marks
 
-Game component designs can include permanent fold marks that are always drawn at certain points on a card face, but this is rare. Usually, fold marks are added automatically when the front and back faces of a design are snapped together in such a way that they can be cut out as a single piece and folded to produce a proper two-sided card. For example, if you align the two faces so that the bottom of one face touches the top of the other face, then one of the faces must be rotated 180° for them to fold together correctly. Otherwise, the flip side of the card would be upside-down when turned over. When matching front and back faces are aligned correctly, the solid crop mark that would normally appear will change into a dashed fold mark.
+Game component designs can include permanent fold marks that are always drawn at certain points on a card face, but this is rare. Usually, fold marks are added automatically when the front and back faces of a design are [snapped together](um-deck-snap.md) in such a way that they can be cut out as a single piece and folded to produce a proper two-sided card. For example, if you align the two faces so that the bottom of one face touches the top of the other face, then one of the faces must be rotated 180° for them to fold together correctly. Otherwise, the flip side of the card would be upside-down when turned over. When matching front and back faces are aligned correctly, the solid crop mark that would normally appear will change into a dashed fold mark.
 
 ![matching up front and back faces of a card](images/deck-magic-fold.gif)
 
