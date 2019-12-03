@@ -1,7 +1,3 @@
----
-typora-root-url: ./
----
-
 # Overview of plug-in authoring
 
 So you want to make a [plug-in](um-plugins-intro.md). Maybe? What's involved? How hard is it? Let's start with some of the things you can do with plug-ins:
@@ -12,6 +8,9 @@ So you want to make a [plug-in](um-plugins-intro.md). Maybe? What's involved? Ho
 * Add new export containers. For example, you could write a plug-in to let users [export images](um-gc-export.md) directly to their favourite file sharing service.
 
 Would you like to do any of the above? If so you are in the right place, so read on. If not, perhaps you are looking for the regular [user manual](um-index.md)?
+
+> **Before going further**  
+> If you have not yet downloaded the [Plug-in Authoring Kit](https://strangeeons.cgjennings.ca/download.html#pak), you should do so now. This is a Strange Eons project that includes a wealth of example plug-ins, code, and resources to get you started.
 
 ## What is involved?
 
@@ -33,7 +32,7 @@ Some kinds of plug-ins do involve writing small to medium amounts of script code
 
 ### Tools
 
-Most of the tools you need are already built into Strange Eons. You will probably want to install the Developer Tools plug-in (`eonscat:6574`). You will also want to enable support for the [script debugger](dm-debugger.md).
+Most of the tools you need are already built into Strange Eons. You will probably want to install the Developer Tools plug-in (`eonscat:6574`). You will also want to enable support for the [script debugger](dm-debugger.md). As mentioned above, you will also want to explore the [Plug-in Authoring Kit](https://strangeeons.cgjennings.ca/download.html#pak).
 
 #### Graphics apps
 
