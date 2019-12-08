@@ -4,7 +4,13 @@ This page describes the steps needed to install Strange Eons on PCs based on Lin
 
 ## System requirements
 
-Strange Eons requires Java 8. At least 2 GB of RAM recommended.
+**Strange Eons requires Java 8.** At least 2 GB of RAM recommended.
+
+> Supporting Java 9+ is in progress. To run Strange Eons under Java 9+, you must include an argument declaring that the `.selibrary` file is an "agent". For example:
+>
+> ```bash
+> java -Xmx2g -javaagent:./strange-eons.selibrary -cp ./strange-eons.selibrary strangeeons
+> ```
 
 ## Installation steps
 

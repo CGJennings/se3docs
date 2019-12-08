@@ -12,6 +12,7 @@ This is an **early access beta release**.
 * `StrangeEons.fileBugReport` updated to link to a partially completed contact form; this also affects the **Help/Report a Bug** menu item.
 * The **Document Browser** has been removed. Related help links, which are now found under **Help/Developer Help**, display documentation in the default platform Web browser. Plug-ins that rely on the document browser no longer work.
 * The command line option `--xDisableGestures` was removed.
+* The `register` tool for adding desktop icons under Linux now includes the [agent parameter](um-install-other.md) required for Java 9+ (this causes no harm if under Java 8).
 
 ### Script library changes
 
