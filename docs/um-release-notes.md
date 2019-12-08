@@ -20,10 +20,11 @@ This is an **early access beta release**.
 * `ImageUtils.crop`: the `width` and `height` are now optional; if left off they default to include the remainder of the image.
 * `ImageUtils.tint`: corrected the (new version of the) documentation to state that the hue shift is measured in rotations, not degrees.
 * Added `ImageUtils.trim` (trims transparent pixels from image edges).
-* Support for **SE2 Compatibility Mode** has been removed: the class `PluginContext2xImpl` has been deleted and is no longer returned from `PluginContextFactory`; the `*.ljs` ("legacy" JS) versions of script libraries have been deleted; the **Preferences** dialog no longer lists the relevant settings; the setting key `script-SE2-compatibility` no longer has a default value, is not migrated, and has no effect if set.
+* Support for **SE2 Compatibility Mode** has been removed: the class `PluginContext2xImpl` has been removed and is no longer returned from `PluginContextFactory`; the `*.ljs` ("legacy" JS) versions of script libraries have been removed; the **Preferences** dialog no longer lists the relevant settings; the setting key `script-SE2-compatibility` no longer has a default value, is not migrated, and has no effect if set.
 
 ### Bug fixes
 
+* Regression: When printing a component from the editor, no matter which faces you select (e.g., **Print Front Face Only**), all faces would be printed.
 * Help links to Miriam's Basement that used `HELP_CONTEXT_PROPERTY` on a specific UI control were missed when updating links.
 * `confirm.yesno` was accidentally renamed `yesNo`.
 * `Console.printHTML` was accidentally renamed `printHTMLprintHTML`.
