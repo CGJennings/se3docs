@@ -61,43 +61,43 @@ declare interface JavaPackage<T extends string> {
  * [class documentation](https://cgjennings.github.io/se3docs/assets/javadoc/).
  */
 declare interface JavaObject<T extends string> {
-    /** Returns a copy of this object, if it implements Cloneable.*/
-    clone(): JavaObject<T>;
-    /** Returns a string representation of the object. */
-    toString(): string;
-    /**
-     * Returns true if another object "equals" this one.
-     * @param Object the object to compare this object to
-     */
-    equals(Object: object): boolean;
-    /** Returns the class of the object. */
-    getClass(): JavaClass<T>;
-    /** Returns a hash code value for the object. */
-    hashCode(): number;
-    /** Wakes up a thread that is waiting on this object's monitor. */
-    notify(): void;
-    /** Wakes up all threads that are waiting on this object's monitor. */
-    notifyAll(): void;
-    /**
-     * Pauses the current thread until another thread calls this object's 
-     * [[notify]] or [[notifyAll]] method.
-     */
-    wait(): void;
-    /**
-     * Pauses the current thread until another thread calls this object's
-     * [[notify]] or [[notifyAll]] method or the specified timeout elapses.
-     * 
-     * @param msTimeout time to pause, in milliseconds
-     */
-    wait(msTimeout: number): void;
-    /**
-     * Pauses the current thread until another thread calls this object's
-     * [[notify]] or [[notifyAll]] method or the specified timeout elapses.
-     * 
-     * @param msTimeout time to pause, in milliseconds
-     * @param msTimeout additional time to pause, in nanoseconds
-     */
-    wait(msTimeout: number , nsTimeout: number): void;
+    // /** Returns a copy of this object, if it implements Cloneable.*/
+    // clone(): JavaObject<T>;
+    // /** Returns a string representation of the object. */
+    // toString(): string;
+    // /**
+    //  * Returns true if another object "equals" this one.
+    //  * @param Object the object to compare this object to
+    //  */
+    // equals(Object: object): boolean;
+    // /** Returns the class of the object. */
+    // getClass(): JavaClass<T>;
+    // /** Returns a hash code value for the object. */
+    // hashCode(): number;
+    // /** Wakes up a thread that is waiting on this object's monitor. */
+    // notify(): void;
+    // /** Wakes up all threads that are waiting on this object's monitor. */
+    // notifyAll(): void;
+    // /**
+    //  * Pauses the current thread until another thread calls this object's 
+    //  * [[notify]] or [[notifyAll]] method.
+    //  */
+    // wait(): void;
+    // /**
+    //  * Pauses the current thread until another thread calls this object's
+    //  * [[notify]] or [[notifyAll]] method or the specified timeout elapses.
+    //  * 
+    //  * @param msTimeout time to pause, in milliseconds
+    //  */
+    // wait(msTimeout: number): void;
+    // /**
+    //  * Pauses the current thread until another thread calls this object's
+    //  * [[notify]] or [[notifyAll]] method or the specified timeout elapses.
+    //  * 
+    //  * @param msTimeout time to pause, in milliseconds
+    //  * @param msTimeout additional time to pause, in nanoseconds
+    //  */
+    // wait(msTimeout: number , nsTimeout: number): void;
 }
 
 /**
