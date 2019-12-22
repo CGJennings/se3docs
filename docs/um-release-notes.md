@@ -8,11 +8,12 @@ This is an **early access beta release**.
 
 ### Updates and changes
 
-* Further work on rewriting the script libraries to separate documentation from the libraries themselves and rewrite them in the more modern JS allowed by the recent engine update.
+* Further work on rewriting the script libraries to separate documentation from the libraries themselves and rewrite them in the more modern JS allowed by the recent engine update. All documentation has now successfully been moved to [Typescript type definition files](https://github.com/CGJennings/se3docs/tree/master/script-lib-types), though some details may not be finalized.
 * `StrangeEons.fileBugReport` updated to link to a partially completed contact form; this also affects the **Help/Report a Bug** menu item.
-* The **Document Browser** has been removed. Related help links, which are now found under **Help/Developer Help**, display documentation in the default platform Web browser. Plug-ins that rely on the document browser no longer work. (Known plug-ins have been added to the "deprecated" list and will not be loaded if present.)
+* The **Document Browser** has been removed. Related help links, which are now found under **Help/Developer Help**, display documentation in the platform default Web browser. Plug-ins that rely on the document browser no longer work. (Known plug-ins have been added to the "deprecated" list and will not be loaded if present; these plug-ins will not appear in the catalog if running a version newer than build 3970.)
 * The command line option `--xDisableGestures` was removed.
 * The `register` tool for adding desktop icons under Linux now includes the [agent parameter](um-install-other.md) required for Java 9+ (this causes no harm if under Java 8).
+* Updated supporter list in **About** dialog.
 
 ### Script library changes
 
@@ -22,6 +23,8 @@ This is an **early access beta release**.
 * `ImageUtils.tint`: corrected the (new version of the) documentation to state that the hue shift is measured in rotations, not degrees.
 * Added `ImageUtils.trim` (trims transparent pixels from image edges).
 * Support for **SE2 Compatibility Mode** has been removed: the class `PluginContext2xImpl` has been removed and is no longer returned from `PluginContextFactory`; the `*.ljs` ("legacy" JS) versions of script libraries have been removed; the **Preferences** dialog no longer lists the relevant settings; the setting key `script-SE2-compatibility` no longer has a default value, is not migrated, and has no effect if set.
+* Support for reading API documentation via the `javadoc://` and `scriptdoc://` protocols was removed. The following classes (which supported those protocols) have also been removed: `ca.cgjennings.io.protocols.CapturedStream`, `ca.cgjennings.io.protocols.SurrogateConnection`, `ca.cgjennings.io.protocols.APIDocumentCache`.
+* The `libutils` script library is deprecated, with no plans for removal. It can still be used, but won't be featured in documentation and is no longer "registered" as a built-in library.
 
 ### Bug fixes
 
@@ -29,6 +32,7 @@ This is an **early access beta release**.
 * Help links to Miriam's Basement that used `HELP_CONTEXT_PROPERTY` on a specific UI control were missed when updating links.
 * `confirm.yesno` was accidentally renamed `yesNo`.
 * `Console.printHTML` was accidentally renamed `printHTMLprintHTML`.
+* Syntax checking in the script editor was checking against an older version of JavaScript. (For example, `for` ... `of` loops were marked as errors.)
 
 ### Java 9+ compatibility
 
