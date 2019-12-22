@@ -12,16 +12,16 @@
  */
 declare module diy {
     /** The DIY game component class. */
-    type DIY = JavaClass<"arkham.diy.DIY">;
+    type DIY = JavaObject<"arkham.diy.DIY">;
 
     /** The DIYSheet class used to create sheets (faces) for DIY components. */
-    type DIYSheet = JavaClass<"arkham.diy.DIYSheet">;
+    type DIYSheet = JavaObject<"arkham.diy.DIYSheet">;
 
     /** An enumeration of possible face styles. */
-    const FaceStyle: JavaClass<"arkham.diy.DIY.FaceStyle">;
+    type FaceStyle = JavaObject<"arkham.diy.DIY.FaceStyle">;
 
     /** An enumeration of possible rules for interacting with components in a deck. */
-    const DeckSnappingHint: JavaClass<"arkham.sheet.Sheet.DeckSnappingHint">;
+    type DeckSnappingHint = JavaObject<"arkham.sheet.Sheet.DeckSnappingHint">;
 
     /**
      * Enumeration of the values that can be set on

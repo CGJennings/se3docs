@@ -11,21 +11,21 @@
  */
 declare module project {
     /** Class representing a file or folder on the computer. */
-    type File = JavaClass<"java.io.File">;
+    type File = JavaObject<"java.io.File">;
     /** Class representing a member of a project (file in a project folder). */
-    type Member = JavaClass<"arkham.project.Member">;
+    type Member = JavaObject<"arkham.project.Member">;
     /** Class representing a project-related task. */
-    type Task = JavaClass<"arkham.project.Task">;
+    type Task = JavaObject<"arkham.project.Task">;
     /** Class representing a project. */
-    type Project = JavaClass<"arkham.project.Project">;
+    type Project = JavaObject<"arkham.project.Project">;
     /** The registry of all actions that can be performed on project members. */
-    type Actions = JavaClass<"arkham.project.Actions">;
+    type Actions = JavaObject<"arkham.project.Actions">;
     /** Class representing an action that can be performed in a project. */
-    type TaskAction = JavaClass<"arkham.project.TaskAction">;
+    type TaskAction = JavaObject<"arkham.project.TaskAction">;
     /** The task used to open project files, which can be extended for new file types. */
-    type Open = JavaClass<"arkham.project.Open">;
+    type Open = JavaObject<"arkham.project.Open">;
     /** Collection of utility functions that make implementing project extensions easier. */
-    type ProjectUtilities = JavaClass<"arkham.project.ProjectUtilities">;
+    type ProjectUtilities = JavaObject<"arkham.project.ProjectUtilities">;
     /** Alias for `ProjectUtilities`. (This matches the naming convention of other script utility objects.) */
     type ProjectUtils = ProjectUtilities;
 
@@ -89,7 +89,7 @@ declare module project {
      * in a project. The register function takes a task action and (optionally)
      * an action, or the name of an action, that this action should be inserted after.
      */
-    const NewActionRegistry: TrackedRegistry<JavaClass<"arkham.project.New.NewAction">>;
+    const NewActionRegistry: TrackedRegistry<JavaObject<"arkham.project.New.NewAction">>;
 
     /**
      * A tracked registry of internal openers. Internal openers are used by the

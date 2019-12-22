@@ -25,54 +25,54 @@ declare module common {
     const global: object;
 
     /** A reference to the `java` root package. */
-    const java: JavaPackage<"java">;
+    type java = JavaPackage<"java">;
     /** A reference to the `javax` root package. */
-    const javax: JavaPackage<"javax">;
+    type javax = JavaPackage<"javax">;
     /** A reference to the `org` root package. */
-    const org: JavaPackage<"org">;
+    type org = JavaPackage<"org">;
     /** A reference to the `ca` root package. */
-    const ca: JavaPackage<"ca">;
+    type ca = JavaPackage<"ca">;
     /** A reference to the `gamedata` root package. */
-    const gamedata: JavaPackage<"gamedata">;
+    type gamedata = JavaPackage<"gamedata">;
     /** A reference to the `resources` root package. */
-    const resources: JavaPackage<"resources">;
+    type resources = JavaPackage<"resources">;
     /** A shortcut for the `ca.cgjennings.apps.arkham` package. */
-    const arkham: JavaPackage<"arkham">;
+    type arkham = JavaPackage<"arkham">;
     /** A shortcut for the `javax.swing` package. */
-    const swing: JavaPackage<"swing">;
+    type swing = JavaPackage<"swing">;
 
     /** The [Settings](https://cgjennings.github.io/se3docs/assets/javadoc/resources/Settings.html) Java class. */
-    type Settings = JavaClass<"resources.Settings">;
+    type Settings = JavaObject<"resources.Settings">;
 
     /** The [Settings.Colour](https://cgjennings.github.io/se3docs/assets/javadoc/resources/Settings.Colour.html) Java class. */
-    type Color = JavaClass<"resources.Settings.Colour">;
+    type Color = JavaObject<"resources.Settings.Colour">;
 
     /** The [Settings.Color](https://cgjennings.github.io/se3docs/assets/javadoc/resources/Settings.Colour.html) Java class. */
-    type Colour = JavaClass<"resources.Settings.Colour">;
+    type Colour = JavaObject<"resources.Settings.Colour">;
 
     /** The standard `java.awt.Font` class. */
-    type Font = JavaClass<"java.awt.Font">;
+    type Font = JavaObject<"java.awt.Font">;
 
     /** The [Settings.Region](https://cgjennings.github.io/se3docs/assets/javadoc/resources/Settings.Region.html) Java class. */
-    type Region = JavaClass<"resources.Settings.Region">;
+    type Region = JavaObject<"resources.Settings.Region">;
 
     /** The [Settings.Region2D](https://cgjennings.github.io/se3docs/assets/javadoc/resources/Settings.Region2D.html) Java class. */
-    type Region2D = JavaClass<"resources.Settings.Region2D">;
+    type Region2D = JavaObject<"resources.Settings.Region2D">;
 
-    /** The standard `java.io.URL` class. */
-    type URL = JavaClass<"java.io.URL">;
+    /** The standard `java.net.URL` class, representing a Uniform Resource Locator such as `https://strangeeons.cgjennings.ca`. */
+    type URL = JavaObject<"java.net.URL">;
 
     /** The [ResorceKit](https://cgjennings.github.io/se3docs/assets/javadoc/resources/ResourceKit.html) Java class. */
-    type ResourceKit = JavaClass<"resources.ResourceKit">;
+    type ResourceKit = JavaObject<"resources.ResourceKit">;
 
     /** The [Language](https://cgjennings.github.io/se3docs/assets/javadoc/resources/Language.html) Java class. */
-    type Language = JavaClass<"resources.Language">;
+    type Language = JavaObject<"resources.Language">;
 
-    /** A reference to the main application object, an instance of the[StrangeEons](https://cgjennings.github.io/se3docs/assets/javadoc/ca/cgjennings/apps/arkham/StrangeEons.html) class. */
-    type Eons = JavaObject<"arkham.StrangeEons">;
+    /** A reference to the main application object, an instance of the [StrangeEons](https://cgjennings.github.io/se3docs/assets/javadoc/ca/cgjennings/apps/arkham/StrangeEons.html) class. */
+    const Eons: JavaObject<"arkham.StrangeEons">;
 
     /** A reference to the active editor tab, or null if none. All editors are a subclass of the [StrangeEonsEditor](https://cgjennings.github.io/se3docs/assets/javadoc/ca/cgjennings/apps/arkham/StrangeEonsEditor.html) class.*/
-    type Editor = JavaObject<"arkham.StrangeEonsEditor">;
+    const Editor: JavaObject<"arkham.StrangeEonsEditor">;
 
     /**
      * A reference to the game component edited by the active editor tab,
@@ -113,59 +113,19 @@ declare module common {
      * useLibrary("res://myname/myplugin/mylib.js");
      * ```
      * 
-     * @param library name of standard library, or resource path
+     * @param libraryName name of standard library, or resource path
      */
-    function useLibrary(library: string): void;
-
-    /**
-     * Imports a class into the global scope so that it can be used by its
-     * short class name. The effect is similar to using a Java `import`
-     * statement. For example, the following code would import the class 
-     * `java.io.File` so that it can be referred to simply as `File`:
-     * 
-     * ```
-     * importClass(java.io.File);
-     * 
-     * let currentDir = new File(".");
-     * println(currentDir.isDirectory());
-     * println(currentDir.lastModified());
-     * ```
-     * 
-     * The name is always added to the global scope of the script, even if called
-     * from another scope (such as inside of a function).
-     * Importing a class will fail if the class's short name is already in use.
-     * In that case, you can instead assign the class to a name of your choice:
-     * 
-     * ```
-     * const javaString = java.lang.String;
-     * ```
-     * 
-     * @param javaClass the Java class whose class name should be added to the global scope
-     * @see [[Packages]]
-     */
-    function importClass(javaClass: JavaClass<any>): void;
-
-    /**
-     * Imports all of the classes in a Java package into the script.
-     * The effect is similar to using a Java `import` statement with `.*` after the package name.
-     * When the script engine looks for a variable name, if it isn't defined in the current scope then before issuing an error it will check all of the imported packages to see if they contain a class of the same name, and if so that class will be imported. For example, in the following code `File` will match the class `java.io.File` from the `java.io` package, and this be implicitly imported:
-     * 
-     * ```
-     * importPackage(java.io);
-     * println(File.listRoots());
-     * ```
-     * 
-     * @param javaPackage the package to add to the list of packages to search for class names that match unknown variables
-     * @see [[Packages]]
-     */
-    function importPackage(javaPackage: JavaPackage<any>): void;
+    function useLibrary(libraryName: string): void;
 
     /**
      * Stops executing the script. If the script attached event listeners to objects or started other threads, they will continue to operate.
      */
     function exit(): void;
 
-    interface Error {
+    /**
+     * This object contains helper functions related to throwing and catching errors (exceptions).
+     */
+    const Error: {
         /**
          * Throws an error. If the argument is already an Error, it is thrown.
          * If it is a Java exception (Throwable), a JS Error that wraps the exception
@@ -214,13 +174,13 @@ declare module common {
          * event listener or other Java interface implementation. For example:
          * ```
          * function irritableFunction() {
-         *     if(--callsRemaining <= 0) {
+         *     if (--callsRemaining <= 0) {
          *         throw new Error("Arrrggh!");
          *     }
          *     println("Please stop!");
          * }
          * let button = new swing.JButton("Press Me!");
-         * button.addActionListener( function(event) {
+         * button.addActionListener(function(event) {
          *     try {
          *         irritableFunction();
          *     } catch(ex) {
@@ -246,7 +206,11 @@ declare module common {
     const confirm: {
         /**
          * Prompts the user to confirm an action by choosing **OK** or **Cancel**.
-         * Returns true if the user chooses **OK**, otherwise false.
+         * Returns true if the user chooses **OK**, otherwise false. For example:
+         * 
+         * ```
+         * confirm("Proceed?");
+         * ```
          * 
          * @param promptMessage a message to display
          * @param title an optional title for the prompt window
@@ -254,9 +218,14 @@ declare module common {
          */
         (promptMessage: string, title?: string): boolean;
         /**
+         * An alternative name for `confirm`.
          * Prompts the user to confirm an action by choosing **OK** or **Cancel**
          * (localized if possible).
-         * Returns true if the user chooses **OK**, otherwise false.
+         * Returns true if the user chooses **OK**, otherwise false. For example:
+         * 
+         * ```
+         * confirm.confirm("Proceed?");
+         * ```
          * 
          * @param promptMessage a message to display
          * @param title an optional title for the prompt window
@@ -266,14 +235,19 @@ declare module common {
 
         /**
          * Prompts the user to confirm an action by choosing **Yes** or **No**
-         * (localized if possible)..
+         * (localized if possible).
          * Returns true if the user chooses **Yes**, otherwise false.
+         * For example:
+         * 
+         * ```
+         * confirm.yesno("Do you agree?");
+         * ```
          * 
          * @param promptMessage a message to display
          * @param title an optional title for the prompt window
          * @returns true if the user confirms the action
          */
-        yesNo(promptMessage: string, title?: string): boolean;
+        yesno(promptMessage: string, title?: string): boolean;
 
         /**
          * Prompts the user to choose between one or more buttons.
@@ -281,6 +255,11 @@ declare module common {
          * Returns -1 if the user cancels the dialog.
          * Otherwise returns 0 if the user selected the first option,
          * 1 if the user selected the second option, and so on.
+         * For example:
+         * 
+         * ```
+         * confirm.choose("Favourite colour?", null, "Green", "Red", "Blue");
+         * ```
          * 
          * @param promptMessage a message to display
          * @param title an optional title for the prompt window
@@ -293,7 +272,11 @@ declare module common {
     /**
      * Displays a message to the user. If clicked, the message will disappear
      * instantly. Otherwise, if it is a plain message and not a warning or error
-     * message, it fades away over time.
+     * message, it fades away over time. For example:
+     * 
+     * ```
+     * alert("Caution:\nFloor is slippery when wet", false);
+     * ```
      * 
      * @param message the message to display
      * @param isErrorMessage if true, the message is presented as an error; if false, as a warning; if not specified, as a plain message
@@ -314,7 +297,11 @@ declare module common {
 
     /**
      * Prints an object to the script console. You may pass multiple arguments
-     * to this function; the arguments will be printed in sequence.
+     * to this function; the arguments will be printed in sequence. For example:
+     * 
+     * ```
+     * print("Hello");
+     * ```
      * 
      * @param obj the object to be printed
      */
@@ -325,6 +312,10 @@ declare module common {
      * You may pass multiple arguments to this function; the arguments
      * will be printed in sequence, then a new line will be started.
      * 
+     * ```
+     * for(let i=1; i<=10; ++i) println(i);
+     * ```
+     * 
      * @param obj the object to be printed
      */
     function println(...obj: any[]): void;
@@ -333,6 +324,12 @@ declare module common {
      * Prints a formatted message string. The effect is the same as
      * formatting the string with [[sprintf]] and then [[print]]ing
      * the result. Formatting will be localized using the interface language.
+     * For example:
+     * 
+     * ```
+     * printf("Your lucky number is %d\n", 1 + Math.random()*100);
+     * ```
+     * 
      * @param format the format string
      * @param args arguments referenced by the string's format specifiers
      */
@@ -341,8 +338,16 @@ declare module common {
     /**
      * Prints a formatted message string. The effect is the same as
      * formatting the string with [[sprintf]] and then [[print]]ing
-     * the result.
-     * @param language the language or local used to localize the formatting, or null for no localization
+     * the result. For example:
+     * 
+     * ```
+     * let languages = [new Language("en"), new Language("fr")];
+     * for(let lang of languages) {
+     *     printf(lang, "In %s, the decimal of 1/2 is %.1f\n", lang.locale.displayName, 1/2);
+     * }
+     * ```
+     * 
+     * @param language the language or locale used to localize the formatting, or null for no localization
      * @param format the format string
      * @param args arguments referenced by the string's format specifiers
      */
@@ -380,7 +385,7 @@ declare module common {
     function sprintf(language: Language, format, ...args: any[]): void;
 
     /**
-     * The Console object is used to interact with the Script Output window.
+     * The Console object is used to interact with the script output window.
      */
     class Console {
         /**
@@ -409,21 +414,22 @@ declare module common {
          * Prints an image or icon to the script console.
          * @param image the BufferedImage or Icon to be inserted into the console stream
          */
-        static printImage(image): void;
+        static printImage(image: JavaObject<"java.awt.image.BufferedImage">|JavaObject<"swing.Icon">): void;
 
         /**
          * Prints a user interface component to the script console.
          * @param uiComponent an interface control to be inserted into the console stream
          */
-        static printComponent(uiComponent): void;
+        static printComponent(uiComponent: JavaObject<"swing.JComponent">): void;
 
         /**
          * Prints a string formatted with basic HTML markup to the console.
          * For example, the string `"something <i>special</i>"` is printed with the
          * word *special* displayed in an italic style.
+         * 
          * @param html a string of simple HTML markup to be parsed, formatted, and inserted
          */
-        static printHTML(html): void;
+        static printHTML(html: string): void;
 
         /** Clears the script console. */
         static clear(): void;
@@ -449,11 +455,11 @@ declare module common {
          */
         static flush(): void;
 
-        /** A `java.io.PrintWriter` that can be used to write to the console's output stream. */
-        static out;
+        /** A PrintWriter that can be used to write to the console's output stream. */
+        static out: JavaObject<"java.io.PrintWriter">;
 
-        /** A `java.io.PrintWriter` that can be used to write to the console's error stream. */
-        static err;
+        /** A PrintWriter that can be used to write to the console's error stream. */
+        static err: JavaObject<"java.io.PrintWriter">;
     }
 
     /**
@@ -487,7 +493,7 @@ declare module common {
      *
      * @param source the settings source to use for `$` variables
      */
-    function useSettings(source): void;
+    function useSettings(source: Settings|JavaObject<"arkham.component.GameComponent">|null): void;
 
     /**
      * This object defines some helper functions that can be used

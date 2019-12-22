@@ -152,7 +152,7 @@ declare module threads {
          * A convenient reference to the ReentrantLock class that can be used for
          * synchronization purposes.
          */
-        static Lock: JavaClass<"java.util.concurrent.locks.ReentrantLock">;
+        static Lock: JavaObject<"java.util.concurrent.locks.ReentrantLock">;
     }
 
     /**

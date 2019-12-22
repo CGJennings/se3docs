@@ -15,7 +15,7 @@
  */
 declare module imageutils {
     /** The [BufferedImage](https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html) Java class. */
-    type BufferedImage = JavaClass<"java.awt.image.BufferedImage">;
+    type BufferedImage = JavaObject<"java.awt.image.BufferedImage">;
 
     /**
      * An object that defines a number of image-related utility functions.

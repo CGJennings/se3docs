@@ -32,7 +32,7 @@ declare module uibindings {
      * options is fixed, you could use `IndexedComboBoxBinding` for this
      * purpose.)
      */
-    type SettingBackedControl = JavaClass<"arkham.diy.SettingBackedControl">;
+    type SettingBackedControl = JavaObject<"arkham.diy.SettingBackedControl">;
 
     /**
      * A Binding is an association between a UI control
@@ -265,7 +265,7 @@ declare module uibindings {
          * @param controlClass the UI control subclass to return a default binding class for
          * @returns the binding class constructor for the default binding, or null
          */
-        static getBindingClass(controlClass: JavaClass<"java.awt.Component">): new (...args) => Binding | null;
+        static getBindingClass(controlClass: JavaObject<"java.awt.Component">): new (...args) => Binding | null;
 
         /**
          * Registers a binding class constructor to be the default Binding
@@ -274,7 +274,7 @@ declare module uibindings {
          * @param controlClass the UI control class that will have a default Binding registered; this may be a Java class or a string that names one
          * @param bindingClassConstructor a constructor for a Binding class that can convert between setting strings and control state
          */
-        static registerBindingClass(controlClass: string | JavaClass<"java.awt.Component">, bindingClassConstructor: new (...args) => Binding | null): void;
+        static registerBindingClass(controlClass: string | JavaObject<"java.awt.Component">, bindingClassConstructor: new (...args) => Binding | null): void;
     }
 
     /**

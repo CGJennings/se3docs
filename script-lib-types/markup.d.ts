@@ -10,11 +10,11 @@
  * See the plug-in authoring kit for examples that use this library.
  */
 declare module markup {
-    // type MarkupBox = JavaClass<"ca.cgjennings.layout.MarkupRenderer">;
-    // type GenderMarkupBox = JavaClass<"ca.cgjennings.layout.GenderAwareMarkupRenderer">;
-    // type TextStyle = JavaClass<"ca.cgjennings.layout.TextStyle">;
-    // type PageShape = JavaClass<"ca.cgjennings.layout.PageShape">;
-    type TextAttribute = JavaClass<"java.awt.font.TextAttribute">;
+    // type MarkupBox = JavaObject<"ca.cgjennings.layout.MarkupRenderer">;
+    // type GenderMarkupBox = JavaObject<"ca.cgjennings.layout.GenderAwareMarkupRenderer">;
+    // type TextStyle = JavaObject<"ca.cgjennings.layout.TextStyle">;
+    // type PageShape = JavaObject<"ca.cgjennings.layout.PageShape">;
+    type TextAttribute = JavaObject<"java.awt.font.TextAttribute">;
 
     /**
      * Creates a new markup renderer that can lay out text marked up with
@@ -24,7 +24,7 @@ declare module markup {
      * @param sheet the sheet that the box's text will be drawn on, such as that passed to [[createFrontPainter]]
      * @param genderAware if true, a GenderMarkupBox is returned
      */
-    function markupBox( sheet: JavaClass<"arkham.sheet.Sheet">, genderAware?: boolean ): MarkupBox|GenderMarkupBox;
+    function markupBox( sheet: JavaObject<"arkham.sheet.Sheet">, genderAware?: boolean ): MarkupBox|GenderMarkupBox;
     /**
      * Creates a new markup renderer that is optimized to lay out text marked up with
      * Strange Eons tags in a graphics context of the specified target resolution.
@@ -46,7 +46,7 @@ declare module markup {
      * `box.setDefaultStyle(style);` you can write
      * `box.defaultStyle = style;`
      */
-    class MarkupBox implements JavaClass<"ca.cgjennings.layout.MarkupRenderer"> {
+    class MarkupBox implements JavaObject<"ca.cgjennings.layout.MarkupRenderer"> {
         /**
          * Creates a default markup renderer for the specified resolution.
          * Rather than constructing a MarkupBox directly, they are usually
@@ -373,7 +373,7 @@ declare module markup {
      * `<capital option1/option2>` which has the same effect as `<option1/option2>`
      * except that the first letter will be capitalized.
      */
-    class GenderMarkupBox implements JavaClass<"ca.cgjennings.layout.GenderAwareMarkupRenderer"> {
+    class GenderMarkupBox implements JavaObject<"ca.cgjennings.layout.GenderAwareMarkupRenderer"> {
         /**
          * Creates a default markup renderer for the specified resolution.
          * Rather than constructing a MarkupBox directly, they are usually
@@ -417,7 +417,7 @@ declare module markup {
      * @param markupbox the box to update
      * @param gameComponent the component (such as a DIY component) to extract names from
      */
-    function updateNameTags(markupbox: MarkupBox, gameComponent: JavaClass<"arkham.component.GameComponent"> ): void;
+    function updateNameTags(markupbox: MarkupBox, gameComponent: JavaObject<"arkham.component.GameComponent"> ): void;
 
     /**
      * A text style combines one or more style attributes that can be applied to
@@ -425,7 +425,7 @@ declare module markup {
      * such as `SIZE` and `12`. If an attribute is added to an existing style that
      * already contains that attribute, the new value replaces the old one.
      */
-    class TextStyle implements JavaClass<"ca.cgjennings.layout.TextStyle"> {
+    class TextStyle implements JavaObject<"ca.cgjennings.layout.TextStyle"> {
         /**
          * Creates a new text style, adding the specified style attributes, if any.
          * 
@@ -645,7 +645,7 @@ declare module markup {
      * In addition to creating your own shapes, a number of predefined shapes
      * are available to handle common cases.
      */
-    class PageShape implements JavaClass<"ca.cgjennings.layout.PageShape"> {
+    class PageShape implements JavaObject<"ca.cgjennings.layout.PageShape"> {
         constructor();
 
         /**

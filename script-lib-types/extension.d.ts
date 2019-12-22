@@ -19,21 +19,21 @@
  */
 declare module extension {
     /** The `gamedata.Game` class. */
-    const Game: JavaClass<"gamedata.Game">;
+    type Game = JavaObject<"gamedata.Game">;
     /** The `gamedata.Expansion` class. */
-    const Expansion: JavaClass<"gamedata.Expansion">;
+    type Expansion = JavaObject<"gamedata.Expansion">;
     /** The `gamedata.ClassMap` class. */
-    const ClassMap: JavaClass<"gamedata.ClassMap">;
+    type ClassMap = JavaObject<"gamedata.ClassMap">;
     /** The `gamedata.ExpansionSymbolTemplate` class. */
-    const ExpansionSymbolTemplate: JavaClass<"gamedata.ExpansionSymbolTemplate">;
+    type ExpansionSymbolTemplate = JavaObject<"gamedata.ExpansionSymbolTemplate">;
     /** The `gamedata.AbstractExpansionSymbolTemplate` class. */
-    const AbstractExpansionSymbolTemplate: JavaClass<"gamedata.AbstractExpansionSymbolTemplate">;
+    type AbstractExpansionSymbolTemplate = JavaObject<"gamedata.AbstractExpansionSymbolTemplate">;
     /** The `gamedata.SymbolVariantUtilities` class. */
-    const SymbolVariantUtilities: JavaClass<"gamedata.SymbolVariantUtilities">;
+    type SymbolVariantUtilities = JavaObject<"gamedata.SymbolVariantUtilities">;
     /** The `gamedata.TileSet` class. */
-    const TileSet: JavaClass<"gamedata.TileSet">;
+    type TileSet = JavaObject<"gamedata.TileSet">;
     /** The `gamedata.Silhouette` class. */
-    const Silhouette: JavaClass<"gamedata.Silhouette">;
+    type Silhouette = JavaObject<"gamedata.Silhouette">;
 
     /**
      * Declares this plug-in script to be an `EXTENSION` plug-in.

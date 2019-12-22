@@ -42,7 +42,7 @@ declare module tints {
      * [Java interface](https://cgjennings.github.io/se3docs/assets/javadoc/ca/cgjennings/graphics/filters/TintingFilter.html)
      * of the same name.
      */
-    type TintingFilter = JavaClass<"ca.cgjennings.graphics.filters.TintingFilter">;
+    type TintingFilter = JavaObject<"ca.cgjennings.graphics.filters.TintingFilter">;
 
     /**
      * A tint filter that shifts the hue angle and scales the saturation
@@ -81,14 +81,14 @@ declare module tints {
      * A `ScaledTintFilter` gets and sets factors between 0 and 1 as usual,
      * but internally applies the requested scaling factors.
      */
-    type TintFilter = JavaClass<"ca.cgjennings.graphics.filters.TintFilter">;
+    type TintFilter = JavaObject<"ca.cgjennings.graphics.filters.TintFilter">;
 
     /**
      * A tint filter that replaces every pixel in the source image with a pixel
      * of the selected HSB colour. The alpha (translucency) of each pixel is not
      * affected.
      */
-    type TintOverlayFilter = JavaClass<"ca.cgjennings.graphics.filters.TintOverlayFilter">
+    type TintOverlayFilter = JavaObject<"ca.cgjennings.graphics.filters.TintOverlayFilter">
 
     /**
      * A tint filter that *replaces* the hue and saturation values, and *scales*
@@ -99,7 +99,7 @@ declare module tints {
      * wider range of possible tints. (For example, if the average brightness
      * of the source image is 50%, you might scale the brightness value by 2.)
      */
-    type ReplaceFilter = JavaClass<"ca.cgjennings.graphics.filters.ReplaceHueSaturationFilter">;
+    type ReplaceFilter = JavaObject<"ca.cgjennings.graphics.filters.ReplaceHueSaturationFilter">;
 
     /**
      * `Tintable` is a Java interface that is implemented by classes
@@ -113,7 +113,7 @@ declare module tints {
      * [[uibindings]] library that can read and write tints to a
      * private setting on a component.
      */
-    type Tintable = JavaClass<"arkham.Tintable">;
+    type Tintable = JavaObject<"arkham.Tintable">;
 
     /**
      * A `TintCache` improves drawing performance when working with
@@ -172,5 +172,5 @@ declare module tints {
      * tinted = TintCache.getTintedImage();
      * ```
      */
-    type TintCache = JavaClass<"ca.cgjennings.graphics.filters.TintCache">;
+    type TintCache = JavaObject<"ca.cgjennings.graphics.filters.TintCache">;
 }
