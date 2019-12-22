@@ -21,7 +21,7 @@ declare module markup {
      * Strange Eons tags. The renderer will be set up for use with
      * a particular component sheet, typically a DIY card face.
      * 
-     * @param sheet the sheet that the box's text will be drawn on, such as that passed to [[createFontPainter]]
+     * @param sheet the sheet that the box's text will be drawn on, such as that passed to [[createFrontPainter]]
      * @param genderAware if true, a GenderMarkupBox is returned
      */
     function markupBox( sheet: JavaClass<"arkham.sheet.Sheet">, genderAware?: boolean ): MarkupBox|GenderMarkupBox;
