@@ -10,13 +10,14 @@
 useLibrary( 'random' );
 
 // The number of guesses to give the user.
-// Since ceil( log2( 100 ) ) = 7, 7 attempts is sufficient
+// Since ceil(log2(100)) = 7, 7 attempts is sufficient
 // to guarantee a win with perfect play.
 const MAX_ATTEMPTS = 6;
 
 let guess;
-let message = 'I am thinking of a number between 1 and 100.';
+let message;
 do {
+	message = 'I am thinking of a number between 1 and 100.';
     let number = random.pick( 1, 100 );
     let attempt = 1;
 
