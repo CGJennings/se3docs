@@ -125,7 +125,7 @@ declare module common {
     /**
      * This object contains helper functions related to throwing and catching errors (exceptions).
      */
-    const Error: {
+    class Error {
         /**
          * Throws an error. If the argument is already an Error, it is thrown.
          * If it is a Java exception (Throwable), a JS Error that wraps the exception
@@ -134,7 +134,7 @@ declare module common {
          * 
          * @param messageOrErrorOrThrowable an object to be converted into an Error and thrown
          */
-        error(messageOrErrorOrThrowable?: any): void;
+        static error(messageOrErrorOrThrowable?: any): void;
 
         /**
          * If script warnings are enabled in the user preferences, 
@@ -148,7 +148,7 @@ declare module common {
          * @param message the text of the warning
          * @param stackFrame the relative position on the stack frame to report as the source of the warning 
          */
-        warn(message?: string, stackFrame?: number): void;
+        static warn(message?: string, stackFrame?: number): void;
 
         /**
          * If script warnings are enabled in the user preferences, 
@@ -165,7 +165,7 @@ declare module common {
          * @param message details about the deprecation and possible workarounds
          * @param stackFrame the relative position on the stack frame to report as the source of the warning 
          */
-        deprecated(message?: string, stackFrame?: number): void;
+        static deprecated(message?: string, stackFrame?: number): void;
 
         /**
          * Prints a standard error message to the console to describe an exception.
@@ -191,7 +191,7 @@ declare module common {
          * let callsRemaining = 3;
          * ```
          */
-        handleUncaught(error): void;
+        static handleUncaught(error): void;
     }
 
     /**
@@ -217,6 +217,7 @@ declare module common {
          * @returns true if the user confirms the action
          */
         (promptMessage: string, title?: string): boolean;
+
         /**
          * An alternative name for `confirm`.
          * Prompts the user to confirm an action by choosing **OK** or **Cancel**
