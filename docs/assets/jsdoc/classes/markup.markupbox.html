@@ -1,0 +1,1262 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>MarkupBox | Strange Eons JS API</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">Strange Eons JS API</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/markup.html">markup</a>
+				</li>
+				<li>
+					<a href="markup.markupbox.html">MarkupBox</a>
+				</li>
+			</ul>
+			<h1>Class MarkupBox</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>An object capable of laying out styled text by parsing plain text that is
+							marked up with HTML-like tags.
+							To create an object of this class, it is normally recommended that you use
+							the <code>markupBox(sheet)</code> function, which will set the correct
+						resolution and define standard tags.</p>
+					</div>
+					<p><strong>Note:</strong> Because it is based on a Java class, you may use the JavaScript engine&#39;s
+						getter/setter syntax with a MarkupBox. For example, instead of
+						<code>box.setDefaultStyle(style);</code> you can write
+					<code>box.defaultStyle = style;</code></p>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">MarkupBox</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implements</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../interfaces/javaobject.html" class="tsd-signature-type">JavaObject</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"<a href="https://cgjennings.github.io/se3docs/assets/javadoc/ca/cgjennings/layout/MarkupRenderer.html">ca.cgjennings.layout.MarkupRenderer</a>"</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#draw" class="tsd-kind-icon">draw</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#drawassingleline" class="tsd-kind-icon">draw<wbr>AsSingle<wbr>Line</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#getalignment" class="tsd-kind-icon">get<wbr>Alignment</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#getdefaultstyle" class="tsd-kind-icon">get<wbr>Default<wbr>Style</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#getheadlinealignment" class="tsd-kind-icon">get<wbr>Headline<wbr>Alignment</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#getlinetightness" class="tsd-kind-icon">get<wbr>Line<wbr>Tightness</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#getpageshape" class="tsd-kind-icon">get<wbr>Page<wbr>Shape</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#getparametricstylefortag" class="tsd-kind-icon">get<wbr>Parametric<wbr>Style<wbr>For<wbr>Tag</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#getreplacementfortag" class="tsd-kind-icon">get<wbr>Replacement<wbr>For<wbr>Tag</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#getscalinglimit" class="tsd-kind-icon">get<wbr>Scaling<wbr>Limit</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#getstylefortag" class="tsd-kind-icon">get<wbr>Style<wbr>For<wbr>Tag</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#gettabwidths" class="tsd-kind-icon">get<wbr>Tab<wbr>Widths</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#gettextfitting" class="tsd-kind-icon">get<wbr>Text<wbr>Fitting</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#gettightnesslimit" class="tsd-kind-icon">get<wbr>Tightness<wbr>Limit</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#measure" class="tsd-kind-icon">measure</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#parselibrary" class="tsd-kind-icon">parse<wbr>Library</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#removealltags" class="tsd-kind-icon">remove<wbr>All<wbr>Tags</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#setalignment" class="tsd-kind-icon">set<wbr>Alignment</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#setdefaultstyle" class="tsd-kind-icon">set<wbr>Default<wbr>Style</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#setheadlinealignment" class="tsd-kind-icon">set<wbr>Headline<wbr>Alignment</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#setlinetightness" class="tsd-kind-icon">set<wbr>Line<wbr>Tightness</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#setpageshape" class="tsd-kind-icon">set<wbr>Page<wbr>Shape</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#setparametricstylefortag" class="tsd-kind-icon">set<wbr>Parametric<wbr>Style<wbr>For<wbr>Tag</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#setreplacementfortag" class="tsd-kind-icon">set<wbr>Replacement<wbr>For<wbr>Tag</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#setscalinglimit" class="tsd-kind-icon">set<wbr>Scaling<wbr>Limit</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#setstylefortag" class="tsd-kind-icon">set<wbr>Style<wbr>For<wbr>Tag</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#settabwidth" class="tsd-kind-icon">set<wbr>Tab<wbr>Width</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#settextfitting" class="tsd-kind-icon">set<wbr>Text<wbr>Fitting</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-not-exported"><a href="markup.markupbox.html#settightnesslimit" class="tsd-kind-icon">set<wbr>Tightness<wbr>Limit</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Markup<wbr>Box<span class="tsd-signature-symbol">(</span>ppi<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="markup.markupbox.html" class="tsd-signature-type">MarkupBox</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a default markup renderer for the specified resolution.
+										Rather than constructing a MarkupBox directly, they are usually
+									created with the <code>markupBox(sheet)</code> helper function.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>ppi: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>the target resolution, in pixels per inch</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="markup.markupbox.html" class="tsd-signature-type">MarkupBox</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="draw" class="tsd-anchor"></a>
+					<h3>draw</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">draw<span class="tsd-signature-symbol">(</span>g<span class="tsd-signature-symbol">: </span><a href="../interfaces/javaobject.html" class="tsd-signature-type">JavaObject</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html">java.awt.Graphics2D</a>"</span><span class="tsd-signature-symbol">&gt;</span>, region<span class="tsd-signature-symbol">: </span><a href="../modules/common.html#region" class="tsd-signature-type">Region</a><span class="tsd-signature-symbol"> | </span><a href="../modules/common.html#region2d" class="tsd-signature-type">Region2D</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Lays out and draws the current markup text within the specified region.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>g: <a href="../interfaces/javaobject.html" class="tsd-signature-type">JavaObject</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html">java.awt.Graphics2D</a>"</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the graphics context to render the box content into</p>
+									</div>
+								</li>
+								<li>
+									<h5>region: <a href="../modules/common.html#region" class="tsd-signature-type">Region</a><span class="tsd-signature-symbol"> | </span><a href="../modules/common.html#region2d" class="tsd-signature-type">Region2D</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the rectangular area of the graphics context to lay out the content within</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>the y-coordinate where the next line would have started</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="drawassingleline" class="tsd-anchor"></a>
+					<h3>draw<wbr>AsSingle<wbr>Line</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">draw<wbr>AsSingle<wbr>Line<span class="tsd-signature-symbol">(</span>g<span class="tsd-signature-symbol">: </span><a href="../interfaces/javaobject.html" class="tsd-signature-type">JavaObject</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html">java.awt.Graphics2D</a>"</span><span class="tsd-signature-symbol">&gt;</span>, region<span class="tsd-signature-symbol">: </span><a href="../modules/common.html#region" class="tsd-signature-type">Region</a><span class="tsd-signature-symbol"> | </span><a href="../modules/common.html#region2d" class="tsd-signature-type">Region2D</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Lays out and draws the current markup text within the specified region
+										without inserting any line breaks.
+									The markup text must not contain any explicit newline characters, or the result is undefined.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>g: <a href="../interfaces/javaobject.html" class="tsd-signature-type">JavaObject</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html">java.awt.Graphics2D</a>"</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the graphics context to render the box content into</p>
+									</div>
+								</li>
+								<li>
+									<h5>region: <a href="../modules/common.html#region" class="tsd-signature-type">Region</a><span class="tsd-signature-symbol"> | </span><a href="../modules/common.html#region2d" class="tsd-signature-type">Region2D</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the rectangular area of the graphics context to lay out the content within</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>the width of the line in pixels</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="getalignment" class="tsd-anchor"></a>
+					<h3>get<wbr>Alignment</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Alignment<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the alignment bitmask that describes how text is laid out within
+									a drawn rectangle.</p>
+								</div>
+								<p>For example:</p>
+								<pre><code>if((<span class="hljs-name">box</span>.alignment &amp; LAYOUT_LEFT) != <span class="hljs-number">0</span>) println( <span class="hljs-string">"left-aligned text"</span> )<span class="hljs-comment">;</span></code></pre>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>the current alignment layout value</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="getdefaultstyle" class="tsd-anchor"></a>
+					<h3>get<wbr>Default<wbr>Style</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Default<wbr>Style<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="markup.textstyle.html" class="tsd-signature-type">TextStyle</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the default style applied to text when
+										no other tags are in effect. By modifying this style you control what
+									&quot;normal&quot; text looks like.</p>
+								</div>
+								<p>For example:</p>
+								<pre><code>box.defaultStyle = <span class="hljs-keyword">new</span> TextStyle(
+<span class="hljs-built_in">    FAMILY,</span> bodyFamily,
+<span class="hljs-built_in">    SIZE,</span>   <span class="hljs-number">7</span>,
+<span class="hljs-built_in">    WEIGHT,</span> WEIGHT_BOLD
+)<span class="hljs-comment">;</span></code></pre><p>You can modify the default style instead of replacing it with a new one.
+								The following changes just the size without affecting other attributes:</p>
+								<pre><code><span class="hljs-selector-tag">box</span><span class="hljs-selector-class">.defaultStyle</span><span class="hljs-selector-class">.add</span>(<span class="hljs-selector-tag">SIZE</span>, 10);</code></pre>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="markup.textstyle.html" class="tsd-signature-type">TextStyle</a></h4>
+							<p>the TextStyle applied to all text by default</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="getheadlinealignment" class="tsd-anchor"></a>
+					<h3>get<wbr>Headline<wbr>Alignment</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Headline<wbr>Alignment<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the current horizontal alignment setting for heading tags.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>the current heading alignment layout value</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="getlinetightness" class="tsd-anchor"></a>
+					<h3>get<wbr>Line<wbr>Tightness</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Line<wbr>Tightness<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the current line tightness.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>the line spacing tightness value</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="getpageshape" class="tsd-anchor"></a>
+					<h3>get<wbr>Page<wbr>Shape</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Page<wbr>Shape<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="markup.pageshape.html" class="tsd-signature-type">PageShape</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the shape that drawn text will conform to within the draw region.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="markup.pageshape.html" class="tsd-signature-type">PageShape</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="getparametricstylefortag" class="tsd-anchor"></a>
+					<h3>get<wbr>Parametric<wbr>Style<wbr>For<wbr>Tag</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Parametric<wbr>Style<wbr>For<wbr>Tag<span class="tsd-signature-symbol">(</span>tagName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/javaobject.html" class="tsd-signature-type">JavaObject</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"<a href="https://cgjennings.github.io/se3docs/assets/javadoc/ca/cgjennings/layout/ParametricStyleFactory.html">ca.cgjennings.layout.ParametricStyleFactory</a>"</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the style factory associated with the tag,
+										or null if the tag does not have a style factory set (including if it has
+									a replacement or style set).</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tagName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the name of the tag (without angle brackets) to get the factory for</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/javaobject.html" class="tsd-signature-type">JavaObject</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"<a href="https://cgjennings.github.io/se3docs/assets/javadoc/ca/cgjennings/layout/ParametricStyleFactory.html">ca.cgjennings.layout.ParametricStyleFactory</a>"</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>the previously set factory for the tag, or null</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="getreplacementfortag" class="tsd-anchor"></a>
+					<h3>get<wbr>Replacement<wbr>For<wbr>Tag</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Replacement<wbr>For<wbr>Tag<span class="tsd-signature-symbol">(</span>tagName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the replacement string associated with the tag, or null
+										if the tag does not have a replacement set (including if it has a style
+									or parametric style set).</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tagName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the name of the tag to return the replacement string for</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
+							<p>the replacement string for the tag, or null</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="getscalinglimit" class="tsd-anchor"></a>
+					<h3>get<wbr>Scaling<wbr>Limit</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Scaling<wbr>Limit<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the current scaling limit for text shrinking when the <code>FIT_SCALE_TEXT</code> fitting metod is enabled.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>the scaling limit factor</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="getstylefortag" class="tsd-anchor"></a>
+					<h3>get<wbr>Style<wbr>For<wbr>Tag</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Style<wbr>For<wbr>Tag<span class="tsd-signature-symbol">(</span>tagName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="markup.textstyle.html" class="tsd-signature-type">TextStyle</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the TextStyle associated with the tag, or null if the tag does not
+										have a non-parametric style set (including if it has a replacement or
+									parametric style set).</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tagName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the name of the tag (without angle brackets) to fetch the style of</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="markup.textstyle.html" class="tsd-signature-type">TextStyle</a></h4>
+							<p>the style for the requested tag, or null if it has no, or a different kind, of definition</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="gettabwidths" class="tsd-anchor"></a>
+					<h3>get<wbr>Tab<wbr>Widths</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Tab<wbr>Widths<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns an array of tab widths, in inches. (If only one stop has been set,
+									the length of the array is 1.)</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="gettextfitting" class="tsd-anchor"></a>
+					<h3>get<wbr>Text<wbr>Fitting</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Text<wbr>Fitting<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the constant representing the text fitting method to be used
+									to fit text within a region.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>the text fitting method</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="gettightnesslimit" class="tsd-anchor"></a>
+					<h3>get<wbr>Tightness<wbr>Limit</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Tightness<wbr>Limit<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns the current line tightness limit.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>the minimum line spacing tightness value</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="measure" class="tsd-anchor"></a>
+					<h3>measure</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">measure<span class="tsd-signature-symbol">(</span>g<span class="tsd-signature-symbol">: </span><a href="../interfaces/javaobject.html" class="tsd-signature-type">JavaObject</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html">java.awt.Graphics2D</a>"</span><span class="tsd-signature-symbol">&gt;</span>, region<span class="tsd-signature-symbol">: </span><a href="../modules/common.html#region" class="tsd-signature-type">Region</a><span class="tsd-signature-symbol"> | </span><a href="../modules/common.html#region2d" class="tsd-signature-type">Region2D</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Lays out but does not draw the current markup text, returning the height of the text.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>g: <a href="../interfaces/javaobject.html" class="tsd-signature-type">JavaObject</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html">java.awt.Graphics2D</a>"</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the graphics context to render the box content into</p>
+									</div>
+								</li>
+								<li>
+									<h5>region: <a href="../modules/common.html#region" class="tsd-signature-type">Region</a><span class="tsd-signature-symbol"> | </span><a href="../modules/common.html#region2d" class="tsd-signature-type">Region2D</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the rectangular area of the graphics context to lay out the content within</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>the height of the text in pixels</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="parselibrary" class="tsd-anchor"></a>
+					<h3>parse<wbr>Library</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">parse<wbr>Library<span class="tsd-signature-symbol">(</span>definitions<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Processes a markup string, retaining only any definitions that it creates
+										with <code>&lt;define&gt;</code> tags. This method clears the current markup text, and
+										setting markup text will clear any library definitions (after using them
+										to process the markup). Therefore, libraries must be parsed again before
+									<em>each</em> call to <code>setMarkupText</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>definitions: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>a string containing markup definitions</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="removealltags" class="tsd-anchor"></a>
+					<h3>remove<wbr>All<wbr>Tags</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>All<wbr>Tags<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes all tag definitions from the box.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="setalignment" class="tsd-anchor"></a>
+					<h3>set<wbr>Alignment</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Alignment<span class="tsd-signature-symbol">(</span>layoutBits<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the horizontal and vertical alignment of text within a drawn rectangle.
+										This is the logical <em>or</em> of one of <code>LAYOUT_LEFT</code>, <code>LAYOUT_RIGHT</code>,
+										or <code>LAYOUT_CENTER</code> with one of <code>LAYOUT_TOP</code>, <code>LAYOUT_BOTTOM</code>,
+										or <code>LAYOUT_MIDDLE</code>. In addition, if the <code>LAYOUT_JUSTIFY</code> bit
+										is set, then paragraphs will be fully justified so that they fill the
+									entire region width.</p>
+								</div>
+								<p>For example:</p>
+								<pre><code><span class="hljs-attr">box.alignment</span> = LAYOUT_CENTER | LAYOUT_TOP | LAYOUT_JUSTIFY<span class="hljs-comment">;</span></code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>layoutBits: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>a bitmask of alignment options</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="setdefaultstyle" class="tsd-anchor"></a>
+					<h3>set<wbr>Default<wbr>Style</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Default<wbr>Style<span class="tsd-signature-symbol">(</span>style<span class="tsd-signature-symbol">: </span><a href="markup.textstyle.html" class="tsd-signature-type">TextStyle</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the default style that is applied to text when no other tags affect it.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>style: <a href="markup.textstyle.html" class="tsd-signature-type">TextStyle</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the TextStyle applied to all text by default</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="setheadlinealignment" class="tsd-anchor"></a>
+					<h3>set<wbr>Headline<wbr>Alignment</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Headline<wbr>Alignment<span class="tsd-signature-symbol">(</span>layoutBits<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the horizontal alignment used for text in heading tags
+										(<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, and so on). This is similar to <a href="markup.markupbox.html#setalignment">setAlignment</a>,
+									but only the horizontal alignment component is used.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>layoutBits: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="setlinetightness" class="tsd-anchor"></a>
+					<h3>set<wbr>Line<wbr>Tightness</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Line<wbr>Tightness<span class="tsd-signature-symbol">(</span>tightness<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets how tightly lines are grouped together. For normal line spacing, use
+										1.0; double-spaced lines would be 2.0. Values less than 1 reduce the standard
+										amount of space between lines; at 0 the bottom of one line will normally touch
+									or overlap the top of the next. (The exact effect of this setting depends    * on the font being used.)</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tightness: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the tightness of interline spacing (normally 1.0)</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="setpageshape" class="tsd-anchor"></a>
+					<h3>set<wbr>Page<wbr>Shape</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Page<wbr>Shape<span class="tsd-signature-symbol">(</span>shape<span class="tsd-signature-symbol">: </span><a href="markup.pageshape.html" class="tsd-signature-type">PageShape</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the shape that lines of text will conform to.
+										A PageShape is used to flow text around other elements of a component.
+										The default shape is <code>PageShape.RECTANGLE_SHAPE</code>, which allows text
+									to cover the entire region passed to the <code>draw</code> method.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>shape: <a href="markup.pageshape.html" class="tsd-signature-type">PageShape</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the desired PageShape</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="setparametricstylefortag" class="tsd-anchor"></a>
+					<h3>set<wbr>Parametric<wbr>Style<wbr>For<wbr>Tag</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Parametric<wbr>Style<wbr>For<wbr>Tag<span class="tsd-signature-symbol">(</span>tagName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, factory<span class="tsd-signature-symbol">: </span><a href="../interfaces/javaobject.html" class="tsd-signature-type">JavaObject</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"<a href="https://cgjennings.github.io/se3docs/assets/javadoc/ca/cgjennings/layout/ParametricStyleFactory.html">ca.cgjennings.layout.ParametricStyleFactory</a>"</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets a parameter-based style for the given tag. When this tag occurs in the
+										markup text, the factory will be used to create the actual style based on
+									the tag&#39;s parameters. This is an advanced feature.</p>
+								</div>
+								<p>The <code>factory</code> is an object that implements the interface
+									<code>ca.cgjennings.layout.ParametricStyleFactory</code>, which consists
+									of the single method:
+								<code>TextStyle createStyle(java.lang.String[] parameters)</code>.</p>
+								<p>tagName : the name of the tag (without angle brackets) to set the factory for
+								factory : a ParametricStyleFactory to be used to generate styles for this tag</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tagName: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>factory: <a href="../interfaces/javaobject.html" class="tsd-signature-type">JavaObject</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"<a href="https://cgjennings.github.io/se3docs/assets/javadoc/ca/cgjennings/layout/ParametricStyleFactory.html">ca.cgjennings.layout.ParametricStyleFactory</a>"</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="setreplacementfortag" class="tsd-anchor"></a>
+					<h3>set<wbr>Replacement<wbr>For<wbr>Tag</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Replacement<wbr>For<wbr>Tag<span class="tsd-signature-symbol">(</span>tagName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, replacement<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets a replacement string to be associated with a particular tag.
+										When this exact tag occurs in the markup text,
+									it will be replaced by the replacement string.</p>
+								</div>
+								<p>For example:</p>
+								<pre><code><span class="hljs-comment">// make the &lt;copyright&gt; tag produce the text © when rendering</span>
+<span class="hljs-selector-tag">box</span><span class="hljs-selector-class">.setReplacementForTag</span>( <span class="hljs-string">"copyright"</span>, <span class="hljs-string">"©"</span> );</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tagName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the name of the replacement tag</p>
+									</div>
+								</li>
+								<li>
+									<h5>replacement: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the text to replace the tag with</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="setscalinglimit" class="tsd-anchor"></a>
+					<h3>set<wbr>Scaling<wbr>Limit</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Scaling<wbr>Limit<span class="tsd-signature-symbol">(</span>factor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the limit for shrinking text when the <code>FIT_SCALE_TEXT</code> fitting metod is enabled. Text will be scaled down to no more than <code>factor</code> * 100% of the original size.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>factor: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the limit, greater than 0 and less than or equal to 1, to apply to scaling</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="setstylefortag" class="tsd-anchor"></a>
+					<h3>set<wbr>Style<wbr>For<wbr>Tag</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Style<wbr>For<wbr>Tag<span class="tsd-signature-symbol">(</span>tagName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, style<span class="tsd-signature-symbol">: </span><a href="markup.textstyle.html" class="tsd-signature-type">TextStyle</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the style associated with a simple (non-parametric) tag.
+										If a style was set previously for this tag, it will be replaced by the new
+										style. If a replacement was associated with this tag, the replacement will be removed.
+									Do not include the angle brackets in the tag name.</p>
+								</div>
+								<p>For example:</p>
+								<pre><code>// <span class="hljs-built_in">define</span> a &lt;light&gt;...&lt;/light&gt; tag
+<span class="hljs-built_in">var</span> <span class="hljs-built_in">style</span> = <span class="hljs-built_in">new</span> TextStyle(WEIGHT, WEIGHT_LIGHT);
+<span class="hljs-built_in">box</span>.setStyleForTag(<span class="hljs-string">"light"</span>, <span class="hljs-built_in">style</span>);</code></pre>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tagName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the name of the tag (without angle brackets)</p>
+									</div>
+								</li>
+								<li>
+									<h5>style: <a href="markup.textstyle.html" class="tsd-signature-type">TextStyle</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the TextStyle to be applied to text within this tag</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="settabwidth" class="tsd-anchor"></a>
+					<h3>set<wbr>Tab<wbr>Width</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Tab<wbr>Width<span class="tsd-signature-symbol">(</span>tabWidthInInches<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Tab<wbr>Width<span class="tsd-signature-symbol">(</span>tabWidthsInInches<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the distance, in inches, between tab stops.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tabWidthInInches: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the gap between tab stops</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the distance, in inches, between tab stops.
+										This method accepts multiple tab positions as an array, which sets a
+									series of variable-width tab stops instead of a fixed tab size.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tabWidthsInInches: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the gaps between tab stops</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="settextfitting" class="tsd-anchor"></a>
+					<h3>set<wbr>Text<wbr>Fitting</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Text<wbr>Fitting<span class="tsd-signature-symbol">(</span>fittingMethod<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the fitting methods that will be used to shrink text that is too long
+									to fit in the text region. One of <code>FIT_NONE</code>, <code>FIT_TIGHTEN_LINE_SPACING</code>, <code>FIT_SCALE_TEXT</code>, or <code>FIT_BOTH</code>.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>fittingMethod: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the fitting method to use</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+					<a name="settightnesslimit" class="tsd-anchor"></a>
+					<h3>set<wbr>Tightness<wbr>Limit</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Tightness<wbr>Limit<span class="tsd-signature-symbol">(</span>minTightness<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the <em>minimum</em> line tightness that can be used when line spacing is reduced to fit long text due to the <code>FIT_TIGHTEN_LINE_SPACING</code> text fitting method.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>minTightness: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the smallest amount that line tightness can be reduced to when fitting text</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/cards.html">cards</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/common.html">common</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/diy.html">diy</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/extension.html">extension</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/fontutils.html">fontutils</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/imageutils.html">imageutils</a>
+					</li>
+					<li class="current tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/markup.html">markup</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/modifiers.html">modifiers</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/prefab.html">prefab</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/project.html">project</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/random.html">random</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/threads.html">threads</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/tints.html">tints</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/ui.html">ui</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/uibindings.html">uibindings</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/uicontrols.html">uicontrols</a>
+					</li>
+					<li class=" tsd-kind-module tsd-is-not-exported">
+						<a href="../modules/uilayout.html">uilayout</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-module tsd-is-not-exported">
+						<a href="markup.markupbox.html" class="tsd-kind-icon">Markup<wbr>Box</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#draw" class="tsd-kind-icon">draw</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#drawassingleline" class="tsd-kind-icon">draw<wbr>AsSingle<wbr>Line</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#getalignment" class="tsd-kind-icon">get<wbr>Alignment</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#getdefaultstyle" class="tsd-kind-icon">get<wbr>Default<wbr>Style</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#getheadlinealignment" class="tsd-kind-icon">get<wbr>Headline<wbr>Alignment</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#getlinetightness" class="tsd-kind-icon">get<wbr>Line<wbr>Tightness</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#getpageshape" class="tsd-kind-icon">get<wbr>Page<wbr>Shape</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#getparametricstylefortag" class="tsd-kind-icon">get<wbr>Parametric<wbr>Style<wbr>For<wbr>Tag</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#getreplacementfortag" class="tsd-kind-icon">get<wbr>Replacement<wbr>For<wbr>Tag</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#getscalinglimit" class="tsd-kind-icon">get<wbr>Scaling<wbr>Limit</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#getstylefortag" class="tsd-kind-icon">get<wbr>Style<wbr>For<wbr>Tag</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#gettabwidths" class="tsd-kind-icon">get<wbr>Tab<wbr>Widths</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#gettextfitting" class="tsd-kind-icon">get<wbr>Text<wbr>Fitting</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#gettightnesslimit" class="tsd-kind-icon">get<wbr>Tightness<wbr>Limit</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#measure" class="tsd-kind-icon">measure</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#parselibrary" class="tsd-kind-icon">parse<wbr>Library</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#removealltags" class="tsd-kind-icon">remove<wbr>All<wbr>Tags</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#setalignment" class="tsd-kind-icon">set<wbr>Alignment</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#setdefaultstyle" class="tsd-kind-icon">set<wbr>Default<wbr>Style</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#setheadlinealignment" class="tsd-kind-icon">set<wbr>Headline<wbr>Alignment</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#setlinetightness" class="tsd-kind-icon">set<wbr>Line<wbr>Tightness</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#setpageshape" class="tsd-kind-icon">set<wbr>Page<wbr>Shape</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#setparametricstylefortag" class="tsd-kind-icon">set<wbr>Parametric<wbr>Style<wbr>For<wbr>Tag</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#setreplacementfortag" class="tsd-kind-icon">set<wbr>Replacement<wbr>For<wbr>Tag</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#setscalinglimit" class="tsd-kind-icon">set<wbr>Scaling<wbr>Limit</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#setstylefortag" class="tsd-kind-icon">set<wbr>Style<wbr>For<wbr>Tag</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#settabwidth" class="tsd-kind-icon">set<wbr>Tab<wbr>Width</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#settextfitting" class="tsd-kind-icon">set<wbr>Text<wbr>Fitting</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-not-exported">
+								<a href="markup.markupbox.html#settightnesslimit" class="tsd-kind-icon">set<wbr>Tightness<wbr>Limit</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer>
+	<!--
+    <div class="container">
+        <h2>Legend</h2>
+        <div class="tsd-legend-group">
+            <ul class="tsd-legend">
+                <li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+                <li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+                <li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+                <li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+                <li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+                <li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+                <li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+            </ul>
+            <ul class="tsd-legend">
+                <li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+                <li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+                <li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+                <li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+            </ul>
+            <ul class="tsd-legend">
+                <li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+                <li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+                <li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+                <li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+                <li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+                <li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+            </ul>
+            <ul class="tsd-legend">
+                <li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+                <li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+                <li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+                <li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+                <li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+                <li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+                <li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+            </ul>
+            <ul class="tsd-legend">
+                <li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+                <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+                <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+                <li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+            </ul>
+            <ul class="tsd-legend">
+                <li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+                <li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+                <li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+            </ul>
+            <ul class="tsd-legend">
+                <li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+                <li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+                <li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+            </ul>
+            <ul class="tsd-legend">
+                <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+                <li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+            </ul>
+        </div>
+    </div>
+-->
+</footer>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>
