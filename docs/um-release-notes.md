@@ -8,7 +8,8 @@ This is an **early access beta release**.
 
 ### Updates and changes
 
-* Further work on rewriting the script libraries to separate documentation from the libraries themselves and rewrite them in the more modern JS allowed by the recent engine update. All documentation has now successfully been moved to [Typescript type definition files](https://github.com/CGJennings/se3docs/tree/master/script-lib-types), though some details may not be finalized.
+* Further work on rewriting the script libraries to use more modern JS and to pull out and improve documentation (see also next item).
+* [Improved scripting (JS) API documentation](assets/jsdoc/) is now in beta. This corrects and expands existing documentation, links to the Java API when relevant, and includes basic documentation for built-in JS objects (`Array`, `Function`, and so on). The [Typescript definition files](https://github.com/CGJennings/se3docs/tree/master/script-lib-types) used to generate these docs are included in the se3docs repository. Suggestions, corrections, and improvements welcome. The [original JS API documentation](assets/jsdoc-legacy/) is still available during the transition.
 * `StrangeEons.fileBugReport` updated to link to a partially completed contact form; this also affects the **Help/Report a Bug** menu item.
 * The **Document Browser** has been removed. Related help links, which are now found under **Help/Developer Help**, display documentation in the platform default Web browser. Plug-ins that rely on the document browser no longer work. (Known plug-ins have been added to the "deprecated" list and will not be loaded if present; these plug-ins will not appear in the catalog if running a version newer than build 3970.)
 * The command line option `--xDisableGestures` was removed.
