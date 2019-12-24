@@ -38,7 +38,7 @@ The script console window can display output from running scripts. Although the 
 
 ### Printing to the console
 
-The [built-in functions](assets/jsdoc/common.html) `print(object)`, `println(object)`, and `printf(object)` are the most common way that text is written the console window. For example:
+The [built-in functions](assets/jsdoc/modules/common.html) `print(object)`, `println(object)`, and `printf(object)` are the most common way that text is written the console window. For example:
 
 ```js
 for(let i=10; i>0; --i) {
@@ -53,7 +53,7 @@ The `print` function prints a representation of the object(s) passed to it to th
 printf("Grade: %.0f percent\n", 97.8);
 ```
 
-The built-in [`Console`](assets/jsdoc/common.html#Console) script object provides more complete control of the console and console output. For example `Console.clear()` can be used to clear the contents.
+The built-in [`Console`](assets/jsdoc/modules/common.html#Console) script object provides more complete control of the console and console output. For example `Console.clear()` can be used to clear the contents.
 
 ### Uncaught script errors
 

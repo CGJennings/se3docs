@@ -340,7 +340,7 @@ let panel = new Grid("fillx");
 
 This line creates the first of the three panels (**Servitor**), which captures basic information about the card. As each section is completed, its respective panel is added to the panel stack and then the `panel` variable is reused to hold the panel for the next section. This has pros and cons. Using a new variable name for each panel (`servitorPanel`, `effectsPanel`, `statsPanel`) might make the code a little clearer, but using the same variable name for each panel makes it easy to reorganize the controls to find the best layout.
 
-> `Stack` and `Grid` are two of the available layout containers used to organize the interface. You can read more about how they work in the documentation for the [uilayout](assets/jsdoc/uilayout.html) script library. The `Grid` layout container is the most complex but also the most flexible. Beginners may want to start with the `TypeGrid` layout instead.
+> `Stack` and `Grid` are two of the available layout containers used to organize the interface. You can read more about how they work in the documentation for the [uilayout](assets/jsdoc/modules/uilayout.html) script library. The `Grid` layout container is the most complex but also the most flexible. Beginners may want to start with the `TypeGrid` layout instead.
 
 ```js
 let bindings = new Bindings(editor, diy);
@@ -357,7 +357,7 @@ panel.place(nameLabel, "split", nameField, "growx, wrap");
 
 These lines create a field for the user to type a name into, create a label for the field to tell the user what it is for, then add both to the **Servitors** panel. The name field is a special case, because every game component has to be "nameable". A component's name is not stored as a private setting but as a special property of the component object itself (`diy.name`). When a text field is created to edit that name, we also need to tell that to the component, which is what `diy.setNameField` does. The component itself, rather than the Bindings object, will manage changes to the name field.
 
-The text field itself is created by calling `textField()`. The [uicontrols](assets/jsdoc/uicontrols.html) script library lets you create several kinds of controls by calling functions like this. The label control is another example. It is passed two arguments: the text of the label, and the control being labelled.
+The text field itself is created by calling `textField()`. The [uicontrols](assets/jsdoc/modules/uicontrols.html) script library lets you create several kinds of controls by calling functions like this. The label control is another example. It is passed two arguments: the text of the label, and the control being labelled.
 
 > The label has to know what it is a label for to support screen readers (for accessibility), but also to allow the control to be activated by shortcut. In the interface you may notice that a letter is underlined in some labels. The underlined letter is a shortcut key that can be used to activated the relevant control by holding down <kbd>Alt</kbd> and pressing the underlined letter. The letter key is indicated by placing an ampersand (`&`) before it in the label text. For example, this name label can be activated by pressing <kbd>Alt</kbd>+<kbd>N</kbd>.
 
@@ -418,7 +418,7 @@ defaultStyle.add(SIZE, 11);
 titleBox.setTextFitting(MarkupBox.FIT_BOTH);
 ```
 
-The markup box is created by calling the `markupBox` function, which was defined by including the [markup](assets/jsdoc/markup.html) script library. The `sheet` that is passed to this function is an object that represents the front card face (an instance of the [DIYSheet](assets/javadoc/ca/cgjennings/apps/arkham/diy/DIYSheet.html) class). The new markup box uses this to set itself up properly to work with the card face.
+The markup box is created by calling the `markupBox` function, which was defined by including the [markup](assets/jsdoc/modules/markup.html) script library. The `sheet` that is passed to this function is an object that represents the front card face (an instance of the [DIYSheet](assets/javadoc/ca/cgjennings/apps/arkham/diy/DIYSheet.html) class). The new markup box uses this to set itself up properly to work with the card face.
 
 The following lines set up the box's default style. The default text alignment is set to center the title text horizontally (`LAYOUT_CENTER`) and vertically (`LAYOUT_MIDDLE`), which makes sense for a title. Then the default text style is modified to set the desired font size and family. (The family uses an object defined by the Arkham Horror plug-in to get a font family name specific to that game; you can learn about [using your own fonts here](dm-res-font.md).) A text style is a collection of attributes like font size, colour, underlining, and so on. As the name suggests, a box's default style is the initial style applied to text when no other styles apply. There are some built-in tags that modify the current style, like `<b>`/`</b>`, and you can define new ones. There are other kinds of tags you can define, too, like ones which replace the tag text with other content of your choice. This can be used, for example, to define tags that insert symbols or other content specific to the target game.
 

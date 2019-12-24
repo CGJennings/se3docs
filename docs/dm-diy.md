@@ -52,7 +52,7 @@ If the user saves the card, the `onWrite` function is called so that you can wri
 
 ### Script functions in detail
 
-Now that you have an overview of how a DIY component operates, let’s look at each function in more detail. For more information, refer to the [diy script library documentation](assets/jsdoc/diy.html), and the corresponding [`ca.cgjennings.apps.arkham.diy`](assets/javadoc/ca/cgjennings/apps/arkham/diy/package-summary.html) Java package.
+Now that you have an overview of how a DIY component operates, let’s look at each function in more detail. For more information, refer to the [diy script library documentation](assets/jsdoc/modules/diy.html), and the corresponding [`ca.cgjennings.apps.arkham.diy`](assets/javadoc/ca/cgjennings/apps/arkham/diy/package-summary.html) Java package.
 
 #### `create(diy)`
 
@@ -157,16 +157,16 @@ For example, a character card might have a attribute for “race” (human, elf,
 
 Fortunately, Strange Eons provides a number of script libraries to make this process fairly painless:
 
-[uicontrols](assets/jsdoc/uicontrols.html)  
+[uicontrols](assets/jsdoc/modules/uicontrols.html)  
 Defines functions for creating UI controls like text fields, dropdown boxes, and so on.
 
-[uilayout](assets/jsdoc/uilayout.html)  
+[uilayout](assets/jsdoc/modules/uilayout.html)  
 Defines functions for arranging UI controls in groups.
 
-[uibindings](assets/jsdoc/uibindings.html)  
+[uibindings](assets/jsdoc/modules/uibindings.html)  
 Defines a script class, `Bindings` that can build and manage the two-way links between interface controls and component settings for you.
 
-There is also a script “library” called [ui](assets/jsdoc/ui.html) that simply loads all three of these libraries for you in one go.
+There is also a script “library” called [ui](assets/jsdoc/modules/ui.html) that simply loads all three of these libraries for you in one go.
 
 The `createInterface` function will typically follow these steps:
 

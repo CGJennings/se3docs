@@ -181,7 +181,7 @@ function onRead(diy, ois) {
 
 ### Adding panels to the editor
 
-Portraits are typically edited using a standard control, the [PortraitPanel](assets/javadoc/ca/cgjennings/apps/arkham/PortraitPanel.html). Like other interface controls, the [uicontrols](assets/jsdoc/uicontrols.html) library includes a function to help you create them:
+Portraits are typically edited using a standard control, the [PortraitPanel](assets/javadoc/ca/cgjennings/apps/arkham/PortraitPanel.html). Like other interface controls, the [uicontrols](assets/jsdoc/modules/uicontrols.html) library includes a function to help you create them:
 
 ```js
 function createInterface(diy, editor) {
