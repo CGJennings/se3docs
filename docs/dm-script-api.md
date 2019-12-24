@@ -23,7 +23,7 @@ useLibrary("res://path/to/my/library/under/resources/my-library.js");
 ## API documentation
 
 Documentation for all of the standard script libraries can be found here:  
-[Script API index](assets/jsdoc/modules/index.html). 
+[Script API index](assets/jsdoc/index.html).
 
 Here is a brief overview of some of the most commonly used libraries:
 
