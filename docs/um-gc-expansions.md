@@ -24,7 +24,7 @@ Some games include *style variants* for their expansion symbols. For example, on
 
 In some cases, multiple expansion symbols may apply to a component. For example, if the symbols indicate that an expansion is required and a component happens to require more than one.
 
-*To add or remove an expansion to the set of selected expansions,* hold down <kbd>Ctrl</kbd> while selecting it from the menu.
+*To add to or remove from the set of selected expansions,* hold down <kbd>Ctrl</kbd> while selecting an expansion from the menu.
 
 *To clear all selected expansions,* choose the **Expansion/Base Game** menu item.
 
