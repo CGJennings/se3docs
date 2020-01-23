@@ -8,15 +8,29 @@ Strange Eons lets you flag game components as belonging to a certain expansion. 
 
 ## Setting a component's expansion
 
-A game component's expansions are set from the **Expansion** menu. This will show an option for the **Base Game** and a list of any expansions available for the game. Typically the game's plug-in will add entries to this list for any official expansions. You can also define new expansions of your own (see below). Choose an entry from the list to assign an expansion. If the game plug-in and the particular game component support expansion symbols, the selected symbol will appear on the card. Choose  **Base Game** to clear any previously set expansion.
+A game component's expansions are set from the **Expansion** menu. This will show an option for the **Base Game** and a list of any expansions available for the game. Typically the game's plug-in will add entries to this list for any official expansions. You can also [define new expansions of your own](#custom-expansions). Choosing an entry from the list assigns an expansion to the edited component. If the game plug-in and the particular game component support expansion symbols, the selected symbol will appear on the card.
+
+*To mark a component as belonging to an expansion,* choose that expansion's entry in the **Expansion** menu.
+
+*To clear a previously set expansion from a component,* choose the **Expansion/Base Game** menu item.
 
 ### Variants
 
-Some games include style variants for their expansion symbols. For example, one variant might be used for light cards, while another is used for dark cards. Or, one variant might indicate that the card *belongs* to a certain expansion, while another variant indicates that it *requires* a certain expansion. When a game has variant symbol styles, you can choose a variant using the **Expansion/Variant** menu. Note that sometimes a symbol happens appear the same in both variants, so you might not see a difference.
+Some games include *style variants* for their expansion symbols. For example, one variant might be used for light cards, while another is used for dark cards. Or, one variant might indicate that the card *belongs* to a certain expansion, while another variant indicates that it *requires* a certain expansion. When supported by a game, you can switch between variants through the **Expansion/Variant** menu. Note that sometimes a symbol happens appear the same in both variants, so you might not see a difference. This can be true even when another expansion for the same game does change appearance depending on the selected variant.
+
+*To choose a style variant for an expansion symbol,* choose a style from the **Expansion/Variant** submenu.
 
 ### Selecting multiple expansions
 
-In some cases, multiple expansion symbols may apply to a component. For example, if the symbols indicate that an expansion is required and a component happens to require more than one. Hold down <kbd>Ctrl</kbd> while selecting an expansion from the menu to add it to the *set* of selected expansions (or remove it if it is already selected). Selecting **Base Game** will always clear the entire set. Alternatively, you can use the **Expansion/Choose** menu item to create the set by choosing from a list.
+In some cases, multiple expansion symbols may apply to a component. For example, if the symbols indicate that an expansion is required and a component happens to require more than one.
+
+*To add or remove an expansion to the set of selected expansions,* hold down <kbd>Ctrl</kbd> while selecting it from the menu.
+
+*To clear all selected expansions,* choose the **Expansion/Base Game** menu item.
+
+*To modify multiple expansions at once,* choose the **Expansion/Choose** menu item to list them in a dialog window.
+
+*To change the order that expansions are listed in on a component,* choose the **Expansion/Choose** menu item and drag the selected expansions into the desired order.
 
 ## Custom expansions
 
