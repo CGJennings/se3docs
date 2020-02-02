@@ -37,7 +37,7 @@ The list of keys on the left uses different colours to signal the key's translat
 | **black**                                     | already translated                                           |
 | <span style="color:#00f">**blue**</span>      | not translated in this regional variant, but translated for the base language file |
 | <span style="color:#777">**grey**</span>      | not translated, or the translation is identical to the default |
-| <span style="color:#d0680c">**orange</span>** | key does not exist in default translation (usually an error unless for additional [plural forms](tm-plurals.md)) |
+| <span style="color:#d0680c">**orange**</span>   | key does not exist in default translation (usually an error unless for additional [plural forms](tm-plurals.md)) |
 | <span style="color:red">**red**</span>        | default value has changed since previous version ([see below](#tracking-changes-between-versions)) |
 
 #### Adding, removing, and navigating through keys
