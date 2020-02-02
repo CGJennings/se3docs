@@ -22,6 +22,8 @@ The `%j` pattern will be replaced with the full path to the app's JAR file, whic
 
 The second field lets you specify additional [command line options](um-install-command-line-options.md#standard-options) to be passed to the test instance. Note that the `--plugintest`, `--glang`, `--ulang`, and `--loglevel` options will be set automatically using your **Test Options**.
 
+> It is also possible to test multiple plug-in bundles simultaneously, but only by starting Strange Eons in test mode from the [command line](um-install-command-line-options.md#standard-options).
+
 ## Strange Eons in test mode
 
 The test mode of Strange Eons behaves in most respects like a normal edition of Strange Eons, except:
