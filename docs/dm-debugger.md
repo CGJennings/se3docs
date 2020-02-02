@@ -54,7 +54,7 @@ To *connect to Strange Eons from the debugger manually*, switch to Strange Eons 
 
 Once the debugger has connected to Strange Eons, you can use it to inspect and walk through scripts. To do that, the script must first be *interrupted*. There are several ways to do this, depending on where you are when you start out. Here are some:
 
-> When a script is *interrupted*, in most cases Strange Eons will appear be frozen. It isn't really, it is just waiting for the script, and since the script is paused Strange Eons is effectively paused to. As soon as you let the script finish from the debugger, Strange Eons will "thaw" again and run normally.
+> When a script is *interrupted*, in most cases Strange Eons will appear be frozen. It isn't really, it is just waiting for the script, and since the script is paused Strange Eons is effectively paused, too. As soon as you let the script finish from the debugger, Strange Eons will "thaw" again and run normally.
 
 To *interrupt a script at the next opportunity from the debugger*, click the ![pause icon](images/debugger/pause.png) **Pause** button in the tool bar along the top of the window.
 
@@ -127,7 +127,7 @@ To *stop tracking a watch expression*, click on its **Value** column and press <
 
 ### Exploring the local scope
 
-A *scope* is the set of variables and other identifiers that can be "seen" from a given point in the script. For example, suppose you write a function that declares a variable named *horsies*. That variable is only visible  inside of that function. If you refer to it outside of the function it won't exist because it is only visible when you are *in the scope of the function*.
+A *scope* is the set of variables and other identifiers that can be "seen" from a given point in the script. For example, suppose you write a function that declares a variable named *horsies*. That variable is only visible to other code defined inside of that function, and only after it is declared. If you refer to it outside of the function you will get an error.
 
 ```js
 function equestrian() {
@@ -137,6 +137,19 @@ function equestrian() {
 }
 // ERROR, no "horsies" variable is visible (in scope) here
 println(horsies.length);
+```
+
+Scopes in JavaScript can get weird, but generally, if you avoid the `var` keyword then whenever you see braces `{` ... `}` a new scope has been created. The code inside the braces can refer to the variables declared outside of the braces, but not the other way around.
+
+```js
+let a = 1;
+{
+    let b = 2;
+    // this will work fine
+    println(a+b);
+}
+// this will not; b effectively ceased to exist at the }
+println(a+b);
 ```
 
 To *explore the graph of identifiers that are in scope (and their values)*, open either the `<scope>` or `<this>` branch of the **Local Scope** panel. To explore the children of the value assigned to any of the revealed identifiers, open that branch in turn. For example, if a variable has an object assigned to it, you can open that variable's branch to see a list of the names of that object's properties.
@@ -176,7 +189,7 @@ function factorial(n) {
 println(binco(4,2));
 ```
 
-When a script is interrupted, the **Call Stack** panel will show a list of one or more script locations. The first entry is the point of interruption: the line that will be run if **Step Over** is clicked. The second entry in the list (if any) is the call site of the the function that contains the point of interruption. That is, the location where the function that is currently interrupted was called from. The third entry is the call site for the function that contains the call site listed as the second entry, and so on. (If this seems confusing, take a moment to play with the call stack when you have a script interruption and there are 4 or 5 entries in the list!)
+When a script is interrupted, the **Call Stack** panel will show a list of one or more script locations. The first entry is the point of interruption: the line that will be run if **Step Over** is clicked. The second entry in the list (if any) is the call site of the function that contains the point of interruption. That is, the location where the function that is currently interrupted was called from. The third entry is the call site for the function that contains the call site listed as the second entry, and so on. (If this seems confusing, take a moment to play with the call stack when you have a script interruption and there are 4 or 5 entries in the list!)
 
 To *examine a call site in the call stack and its scope,* click the relevant entry in the **Call Stack**. The **Source** panel will switch to the call site, the **Watch Expressions** will be re-evaluated using the scope of the call site, and the **Local Scope** panel will be changed to reflect the contents of that scope.
 
