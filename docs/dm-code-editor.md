@@ -8,7 +8,7 @@ The code editor is a syntax-highlighting text editor that is built into Strange 
 
 ### Abbreviations
 
-[Abbreviations](um-gc-abbreviations.md ) are short letter patterns you type in and then expand into longer text sequences by typing <kbd>Tab</kbd>. For example, in script code files you can type <kbd>f</kbd> <kbd>n</kbd> <kbd>Tab</kbd> to insert the skeleton of a new function definition. The available abbreviations match the type of file you are editing, and you can add new abbreviations of your own.
+[Abbreviations](um-gc-abbreviations.md ) are short letter patterns you type in and then expand into longer text sequences by typing <kbd>Tab</kbd>. For example, in script code files you can type `fn` <kbd>Tab</kbd> to insert the skeleton of a new function definition. The available abbreviations match the type of file you are editing, and you can add new abbreviations of your own.
 
 To *edit the abbreviations used in the code editor*, choose **Source/Abbreviations**.
 
