@@ -32,7 +32,7 @@ The test mode of Strange Eons behaves in most respects like a normal edition of 
 * It ignores the single instance setting, so it launches even if the app is already running.
 * If started from an already running instance of Strange Eons, its output and error streams will be connected to the script output window of the host app. Once effect of this is that you can observe the entire application log from startup (the [Log Viewer](dm-quickscript.md#viewing-the-application-log) only displays the tail end).
 * It will not attempt to re-open the last project or open file tabs.
-* If the [script debugger](dm-debugger.md) is running in both the host instance of Strange Eons and the test instance, the test instance will use a random available port number. Hover the mouse pointer over the bug icon in the upper-right corner to see which port was selected. Clicking the bug should start the debugger, but if started manually you will need to enter this port number to connect the debugger to the test instance.
+* If the [script debugger](dm-debugger.md) is running in both the host instance of Strange Eons and the test instance, the test instance will use a random available port number. Hover the mouse pointer over the bug icon in the upper-right corner to see which port was selected. Clicking the bug should start the debugger, but if started manually you will need to [enter this port number](dm-debugger.md#manual-connections) to connect the debugger to the test instance.
 * It uses a special brown-green theme. The distinctive colour scheme makes it clear from a glance which copy of Strange Eons has loaded the test bundle. The file name of the bundle also appears in the title bar.
 
 ![app running in test mode](images/test-mode.png)
