@@ -10,7 +10,7 @@ Factory tasks come in different flavours depending on exactly how they create co
 
 ### CSV Factory
 
-This factory produces components by reading data from a CSV data table.  It is not built in, but added by installing a plug-in. It is described in detail in its own [manual page](um-proj-csv-factory.md).
+This factory produces components by reading data from a CSV data table.  It is not built in, but added by installing a plug-in. It is described in detail on its own [manual page](um-proj-csv-factory.md).
 
 ### ⚠️ Scripted Factory
 
@@ -24,4 +24,4 @@ To *lay out a deck of components automatically*, right click the task folder and
 
 To *test a deck of cards without printing them*, right click the task folder and choose **Virtual Deck**.
 
-> The [Gilman Memorial Exhibit](http://cgjennings.ca/eons/samples/gilman.html) is a sample project that implements an expansion for the Arkham Horror board game. It uses scripted factories to create French and Spanish translations of the original English cards and might be a useful reference for using this factory type.
+> The [Gilman Memorial Exhibit](http://cgjennings.ca/eons/samples/gilman.html) is a sample project that implements an expansion for the Arkham Horror board game. It uses scripted factories to create French and Spanish translations of the original English cards and can be a useful reference for using this factory type.
