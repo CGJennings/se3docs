@@ -16,7 +16,7 @@ The font for the card, and the small icons or the horror damage, combat damage, 
 
 ### Trying it out
 
-It isn't strictly necessary, but it might help to play around with a Servitor card. First you'll want to install it's required "Arkham Horror (2nd ed)" plug-in from the [catalogue](um-plugins-catalogue.md) and restart Strange Eons. Then you should be able to build and test the plug-in:
+It isn't strictly necessary, but it might help to play around with a Servitor card. First you'll want to install its required "Arkham Horror (2nd ed)" plug-in from the [catalogue](um-plugins-catalogue.md) and restart Strange Eons. Then you should be able to build and test the plug-in:
 
 *Right click on the **Rise of the Servitors** folder and choose **Test Plug-in**.*
 
