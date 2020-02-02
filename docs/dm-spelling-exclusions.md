@@ -20,29 +20,29 @@ To ignore a large number of words, first create a text file in an appropriate ar
 
 ```js
 function ignoreWordList( resource ) {
-	var wordList, inStream;
-	var spelling = ca.cgjennings.spelling;
+    var wordList, inStream;
+    var spelling = ca.cgjennings.spelling;
 
-	// create an empty word list that matches the file format
-	if( resource.endsWith( '.cpl' ) ) {
-		wordList = new spelling.dict.BucketList();
-	} else if( resource.endsWith( '.3tree' ) ) {
-		wordList = new spelling.dict.TernaryTreeList();
-	} else {
-		throw new Error( 'Unknown word list format: ' + resource );
-	}
+    // create an empty word list that matches the file format
+    if( resource.endsWith( '.cpl' ) ) {
+        wordList = new spelling.dict.BucketList();
+    } else if( resource.endsWith( '.3tree' ) ) {
+        wordList = new spelling.dict.TernaryTreeList();
+    } else {
+        throw new Error( 'Unknown word list format: ' + resource );
+    }
 
-	// read in the word list
-	inStream = null;
-	try {
-		inStream = ResourceKit.getInputStream( resource );
-		wordList.read( inStream );
-	} finally {
-		if( inStream != null ) inStream.close();
-	}
+    // read in the word list
+    inStream = null;
+    try {
+        inStream = ResourceKit.getInputStream( resource );
+        wordList.read( inStream );
+    } finally {
+        if( inStream != null ) inStream.close();
+    }
     
     // ignore the contents of the list
-	spelling.SpellingChecker.sharedInstance.ignoreAll( wordList );
+    spelling.SpellingChecker.sharedInstance.ignoreAll( wordList );
 }
 ```
 
