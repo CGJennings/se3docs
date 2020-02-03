@@ -20,7 +20,7 @@ Your new, empty, project will be created and then immediately opened.
 
 ![the new project dialog](images/new-project.png)
 
-> **Projects crates**
+> **Project crates**
 >
 > Instead of storing your project in a folder, you can choose a project package file, or crate. This is essentially a ZIP archive that uses the extension `.seproject`. This can make it more convenient to share, but whenever you open or close the project there will be a delay as the contents  are unpacked or repacked, respectively. You can always convert between the two by right clicking on the project name in Strange Eons and choosing the **Packaging** option.
 
