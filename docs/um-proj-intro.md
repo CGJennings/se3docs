@@ -1,6 +1,6 @@
 # Projects
 
-If making one card is fun, making a whole deck of cards is a whole deck of a lot of fun, especially if you use a project to organize them. In fact, projects are useful anytime you are working with a group of files in Strange Eons, such as [writing your own plug-in](dm-index.md).
+Projects allow you to easily work with a set of related files, such as a [deck of cards](um-proj-deck-task.md), or when [writing your own plug-in](dm-index.md).
 
 ## How they work
 
@@ -20,7 +20,7 @@ Your new, empty, project will be created and then immediately opened.
 
 ![the new project dialog](images/new-project.png)
 
-> **Storing projects in crates (`.seproject` files)**
+> **Projects crates**
 >
 > Instead of storing your project in a folder, you can choose a project package file, or crate. This is essentially a ZIP archive that uses the extension `.seproject`. This can make it more convenient to share, but whenever you open or close the project there will be a delay as the contents  are unpacked or repacked, respectively. You can always convert between the two by right clicking on the project name in Strange Eons and choosing the **Packaging** option.
 
