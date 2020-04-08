@@ -29,6 +29,7 @@ This is an **early access beta release**.
 
 ### Bug fixes
 
+* The synthetic bleed option setting is not remembered between image exports.
 * Regression: When printing a component from the editor, no matter which faces you select (e.g., **Print Front Face Only**), all faces would be printed.
 * Help links to Miriam's Basement that used `HELP_CONTEXT_PROPERTY` on a specific UI control were missed when updating links.
 * `confirm.yesno` was accidentally renamed `yesNo`.
