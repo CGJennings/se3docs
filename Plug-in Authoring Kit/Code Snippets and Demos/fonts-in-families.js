@@ -15,10 +15,10 @@ const allFonts = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment()
         .getAllFonts();
 
 for(let i=0; i<allFonts.length; ++i) {
-	// Notice that we explicitly convert all of the Java strings
-	// to JavaScript strings; if we didn't, then JSON.stringify
-	// would not work as intended.
-	let f = allFonts[i];
+    // Notice that we explicitly convert all of the Java strings
+    // to JavaScript strings; if we didn't, then JSON.stringify
+    // would not work as intended.
+    let f = allFonts[i];
     let family = String(f.getFamily());
     let mapping = fontMap[family];
     if(!mapping) {
