@@ -8,6 +8,7 @@ This is an **early access beta release**.
 
 ### Updates and changes
 
+* The `DefaultPortrait.setSyntheticEdgeLimit` method lets developers extend the edges of the portrait, similar to adding synthetic bleed margins to a `Sheet`.
 * Further work on rewriting the script libraries to use more modern JS and to pull out and improve documentation (see also next item).
 * [Improved scripting (JS) API documentation](assets/jsdoc/) is now in beta. This corrects and expands existing documentation, links to the Java API when relevant, and includes basic documentation for built-in JS objects (`Array`, `Function`, and so on). The [Typescript definition files](https://github.com/CGJennings/se3docs/tree/master/script-lib-types) used to generate these docs are included in the se3docs repository. Suggestions, corrections, and improvements welcome. The [original JS API documentation](assets/jsdoc-legacy/) is still available during the transition.
 * `StrangeEons.fileBugReport` updated to link to a partially completed contact form; this also affects the **Help/Report a Bug** menu item.
