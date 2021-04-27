@@ -17,16 +17,16 @@ At least 2 GB of RAM recommended.
 3. Open a new **Finder** window and choose **Applications** from the **Favorites** list.
 4. Drag and drop (or copy and paste) the Strange Eons app into your **Applications** folder. If upgrading a previous version, choose **Replace** when prompted.
 
-![dragging into the Applications folder](images/macos-install.png)
+    ![dragging into the Applications folder](images/macos-install.png)
 
 5. Wait for the file to copy, then double click the app in your **Applications** folder to start it. The first time, you start it, you will see a message that the app is being *verified*.
 6. Since the app was downloaded from the Internet outside of the app store, your Mac will double check that you meant to run it. Choose **Open**.
 
-![macOS security dialog](images/macos-verify.png)
+    ![macOS security dialog](images/macos-verify.png)
 
 7. After the file has been copied, you can eject the mounted DMG volume.
 
-![ejecting the disk image volume](images/macos-eject.png)
+    ![ejecting the disk image volume](images/macos-eject.png)
 
 ## Troubleshooting
 
