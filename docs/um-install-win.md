@@ -4,19 +4,24 @@ This page describes the steps needed to install Strange Eons on Windows-based PC
 
 ## System requirements
 
-One of Windows 7 SP1, Windows 8, Windows 10
+* 64-bit edition of Windows 7 SP1, Windows 8, or Windows 10.
 
-At least 2 GB of RAM recommended.
-
-A 64-bit processor (and 64-bit version of Windows) are recommended.
+* At least 2 GB of RAM recommended.
 
 Before installing, it is a good idea to make sure that you have installed the latest graphics drivers for your graphics card. Check the support page of the Web site for your computer or graphics card manufacturer.
 
 ## Installation steps
 
-1. [Download one of the Windows installers](http://cgjennings.ca/eons/download/update.html?platform=win): the 64-bit version if you have 64-bit Windows; otherwise use the 32-bit version.
+1. [Download the Windows installer.](http://cgjennings.ca/eons/download.html)
 2.  Start the installer by double-clicking it in your downloads folder or opening it from your Web browser.
 3. An installation wizard will guide you through the rest of the process. If you are not sure what to do, stick with the default options.
+
+>  **Windows SmartScreen:** When a new update is released, Windows may warn you that the file has not been downloaded many times and may therefore be risky. To install the update:
+>
+> 1. Click **More info**.
+> 2. Choose **Run anyway**.
+>
+> ![installing with smart screen](images/smartscreen.png)
 
 ## Troubleshooting
 

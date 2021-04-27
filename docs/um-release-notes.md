@@ -1,54 +1,113 @@
 # Release notes
 
+<!--
+
 ## Next
 
 The following changes are planned for inclusion in the next update. This list is *informational only*: nothing here is final until the update is actually published. Some items may be deferred or abandoned, and other items may be added at any time. In particular, changes to the APIs and script engine have the potential to introduce compatibility issues with plug-ins which might lead to those features being delayed or withdrawn.
 
 This is an **early access beta release**.
 
-### Updates and changes
+-->
 
-* The `DefaultPortrait.setSyntheticEdgeLimit` method lets developers extend the edges of the portrait, similar to adding synthetic bleed margins to a `Sheet`.
-* Further work on rewriting the script libraries to use more modern JS and to pull out and improve documentation (see also next item).
+## Build 4163
+
+This is a **production** (non-beta) release.
+
+*This description combines **all** changes from interim releases since the last production version, which was build 3784.*
+
+### Features and enhancements
+
+* Added support for Mac computers with Apple silicon.
+* [Ink Saver](um-gc-preview.md#ink-saver), a new rendering mode which draws the bare minimum to speed up design and reduce ink/toner use when testing. The standard behaviour (which can be customized for particular components) is to draw a solid white background, text, and shapes (no images).
+* The ["Readme" Web page](um-gc-export.md#the-readme-file) that is included with exported images has been rewritten to modern Web standards, including support for printing (at correct size) and mobile devices.
+* Help buttons link to the new open source [documentation](index.md).
+
+* The recent file menu now lists projects before other files; within each section the items are still listed from most to least recently used.
+* [Typeface viewer](dm-type-viewer.md)/insert character dialog:
+  * press <kbd>Enter</kbd> (<kbd>Shift</kbd>+<kbd>Enter</kbd>) to move to the next (previous) character *actually supported* by the font;
+  * highlights the following cell types using different colours: control characters, code points not supported by selected font, unassigned code points;
+  * whole rows with no assigned Unicode code points are hidden;
+  * enter a hexadecimal code point (e.g., `u+2c7e`) in the search field to go to that code point (or the nearest valid row).
+* The `--plugintest` command line option can now be passed multiple test bundles separated by the path separator character (`;` on Windows, `:` elsewhere).
+
+### For plug-in developers:
+
+* A host of script engine updates bring the JS engine close to ES6 level. This includes arrow functions, object/class methods, destructuring assignment improvements, new native JS object methods, and many bug fixes and performance improvements. More details and examples of these changes can be found under the notes for beta build 3970.
 * [Improved scripting (JS) API documentation](assets/jsdoc/) is now in beta. This corrects and expands existing documentation, links to the Java API when relevant, and includes basic documentation for built-in JS objects (`Array`, `Function`, and so on). The [Typescript definition files](https://github.com/CGJennings/se3docs/tree/master/script-lib-types) used to generate these docs are included in the se3docs repository. Suggestions, corrections, and improvements welcome. The [original JS API documentation](assets/jsdoc-legacy/) is still available during the transition.
+* The `DefaultPortrait.setSyntheticEdgeLimit` method lets developers extend the edges of the portrait, similar to adding synthetic bleed margins to a `Sheet`.
+* Added `HSBPanel.setTitle`/`getTitle` to change `tintPanel` title label.
+* Added `StrangeEons.getUrlForDocPage` to get a URL for a page in the se3docs site given its base file name (e.g., `"dm-preferences"`).
+* Method `FillInPreferenceCategory.addHelp` no longer takes a third argument (old code will still work).
+* Deprecated `JHelpButton.setWikiPage`; this now forwards to `setHelpPage`.
+* Removed `arkham.project.PluginWizard` (superseded by `PluginWizardDialog`).
+* Removed deprecated `arkham.dialog.prefs.SBOrderedList`.
+* Removed `PlatformSupport.isOSXMinorVersionAtLeast`, `isUsingAquaDerivedLookAndFeel`, `isUsingOSXSystemLookAndFeel`, `isUsingQuaquaLookAndFeel`.
+* The `OPT_*` bit flags in DIY are now package private; the methods `getAdvancedFlags()`, `setAdvancedFlags` and `isAdvancedFlagAvailable` have been removed. Use the relevant public methods instead: `setTransparentFaces`, `setVariableSizedFaces`, `setPortraitBackgroundFilled`, `setMarkerBackgroundFilled`, `setPortraitScaleUsesMinimum`, `setMarkerScaleUsesMinimum`,  `setPortraitClipping`, `setMarkerClipping`, `setCustomPortraitHandling` and the complementary getters.
+* The following classes have been removed: `GestureToolkit`, `GestureEvent`, `GestureListener`, `GestureEventAdapter`, `GestureCommand`.
+* In class `PluginBundlePublisher`, methods that used to take a `ProgressListener` parameter no longer do, as underlying infrastructure needed to support this has been removed in newer versions of Java.
 * `StrangeEons.fileBugReport` updated to link to a partially completed contact form; this also affects the **Help/Report a Bug** menu item.
-* The **Document Browser** has been removed. Related help links, which are now found under **Help/Developer Help**, display documentation in the platform default Web browser. Plug-ins that rely on the document browser no longer work. (Known plug-ins have been added to the "deprecated" list and will not be loaded if present; these plug-ins will not appear in the catalog if running a version newer than build 3970.)
-* The command line option `--xDisableGestures` was removed.
-* The `register` tool for adding desktop icons under Linux now includes the [agent parameter](um-install-other.md) required for Java 9+ (this causes no harm if under Java 8).
-* Updated supporter list in **About** dialog.
-
-### Script library changes
-
 * The constant `self` is set to the script's global scope for consistency with other JS environments.
-* The `debug` script library has been removed. A source-level debugger has been available for many years. The `uiutils` library has been removed. The most useful functionality from both libraries can be found in `utils.js` in the Plug-in Authoring Kit.
+* The `debug` script library has been removed. Use the built-in [source-level debugger](dm-debugger.md) instead. The `uiutils` library has been removed, though some useful functions from that library are now included in `utils.js` in the [Plug-in Authoring Kit](dm-pak.md).
+* The `libutils` script library is deprecated, with no plans for removal. It can still be used, but won't be featured in documentation and is no longer "registered" as a built-in library.
 * `ImageUtils.crop`: the `width` and `height` are now optional; if left off they default to include the remainder of the image.
 * `ImageUtils.tint`: corrected the (new version of the) documentation to state that the hue shift is measured in rotations, not degrees.
 * Added `ImageUtils.trim` (trims transparent pixels from image edges).
 * Support for **SE2 Compatibility Mode** has been removed: the class `PluginContext2xImpl` has been removed and is no longer returned from `PluginContextFactory`; the `*.ljs` ("legacy" JS) versions of script libraries have been removed; the **Preferences** dialog no longer lists the relevant settings; the setting key `script-SE2-compatibility` no longer has a default value, is not migrated, and has no effect if set.
-* Support for reading API documentation via the `javadoc://` and `scriptdoc://` protocols was removed. The following classes (which supported those protocols) have also been removed: `ca.cgjennings.io.protocols.CapturedStream`, `ca.cgjennings.io.protocols.SurrogateConnection`, `ca.cgjennings.io.protocols.APIDocumentCache`.
-* The `libutils` script library is deprecated, with no plans for removal. It can still be used, but won't be featured in documentation and is no longer "registered" as a built-in library.
+* Removed support for reading API documentation via the `javadoc://` and `scriptdoc://` protocols. The related classes `ca.cgjennings.io.protocols.CapturedStream`, `ca.cgjennings.io.protocols.SurrogateConnection`, `ca.cgjennings.io.protocols.APIDocumentCache` have also been removed.
+
+* The `sprintf`-style script library functions will now coerce numeric values when possible. This means that, for example, you can now pass a regular JS number to a `"%d"` conversion and it will not throw an exception. It is also now possible to pass a `Locale` or `Language` as the first argument to localize formatting (previously the interface locale was always used). Passing a locale of `null` as the first argument will prevent localization.
+
+* Calling `@(keyStr, formatArgs...)` or `#(keyStr, formatArgs...)` will format interface and game language strings (respectively). Previously, this was done by calling `string` and `gstring` (which still works). In other words, the following are now all equivalent:
+
+  ```js
+  @("key-name", arg1, arg2, arg3);
+  string("key-name", arg1, arg2, arg3);
+  sprintf(@key-name, arg1, arg2, arg3);
+  ```
 
 ### Bug fixes
 
+* [Projects](um-proj-intro..md) stored in a version control system will no longer register changes to project and task folder settings (`seproject` files) every time the project closes.
+* The layout of the [root file editor](dm-eons-plugin.md) has been reorganized to better fit small display resolutions.
+* The `register` tool for adding desktop icons under Linux now includes the [agent parameter](um-install-other.md) required for Java 9+ (this causes no harm under Java 8).
 * The synthetic bleed option setting is not remembered between image exports.
-* Regression: When printing a component from the editor, no matter which faces you select (e.g., **Print Front Face Only**), all faces would be printed.
-* Help links to Miriam's Basement that used `HELP_CONTEXT_PROPERTY` on a specific UI control were missed when updating links.
-* `confirm.yesno` was accidentally renamed `yesNo`.
-* `Console.printHTML` was accidentally renamed `printHTMLprintHTML`.
+* Regression: when printing a component from the editor, no matter which faces you select (e.g., **Print Front Face Only**), all faces would be printed.
+* `confirm.yesno` was accidentally renamed `yesNo` in a beta release.
+* `Console.printHTML` was accidentally renamed `printHTMLprintHTML` in a beta release.
 * Syntax checking in the script editor was checking against an older version of JavaScript. (For example, `for` ... `of` loops were marked as errors.)
+* The startup version check has been updated to check for Java 8 exclusively.
+* In the [Test Plug-in](dm-test-plugin) dialog, only explicitly selected locales are passed to the test instance (entering a locale code directly in the text field had no effect).
+* Script function `Console.printComponent` failed due to an argument name mismatch.
+* [Quickscript](dm-quickscript.md): Printing of the return value could evaluate a Scriptable outside of a JS context.
+* [Root file editor](dm-eons-plugin.md): Changing the list of interface languages does not update the description language combo.
+* Fixed an issue with immediate repainting of the script console when running code from the UI thread.
+* Command line help for [`register`](um-install-other.md), used to register the app via `xdg-utils` (for Linux-based systems) did not list the `--uninstall` option.
+* The [Image Export](um-gc-export.md) dialog allowed the mutually exclusive "combining faces" and "excluding simple faces" options to be selected at the same time.
+* Opening a `project:` URL when no project is open now throws a suitable `FileNotFound` exception.
+
+### Other changes
+
+* Strange Eons no longer depends on JavaFX. This will make it easier to develop for newer versions of Java and also significantly decreases the download size of installation packages. As part of this, the **Document Browser** has been removed; plug-ins that require it will no longer work.
+* Work has begun on rewriting the script libraries to use more modern JS.
+* The command line option `--xDisableGestures` was removed.
+* Updated supporter list in **About** dialog.
+* Moved files in `resources/alt/` and gave them transparent names.
+* Removed themed splash variants that were specific to a particular game.
+* 32-bit builds for Windows are no longer being produced. Strange Eons now generally uses too much memory to run reliably as a 32-bit app. If you have been using the 32-bit Windows build successfully for a particular purpose, you can [contact me](https://cgjennings.ca/contact/) for a 32-bit installer.
 
 ### Java 9+ compatibility
 
 Officially, Strange Eons currently requires Java 8, but work is underway to support Java 9 and later. Here is a summary of the current status:
 
-- The major obstacles have been solved and SE can be started under Java 9 starting with build 3970.
-- SE can be built under Java 9 and Java 11 (except for errors related to JavaFX not being available).
+- The major obstacles have been solved and SE can be started under Java 9 starting with build 3970. (However, build 4163 will refuse to start in newer versions; running under Java 9+ is currently for development purposes only.)
+- SE can be built under Java 9 and Java 11.
 - When starting SE from the command line, the option <code>-javaagent:<em>path/to/strange-eons.selibrary</em></code> must be added. Starting with build 3970 the launcher executables for Windows and macOS have been modified to include this option.
-- The deprecation, for removal, of the Pack200 format and related tools will require reworking how plug-in bundles are stored on the server (and unpacked) at some point after Java 11.
+- The removal of the Pack200 format and related tools will require reworking how plug-in bundles are stored on the server (and unpacked).
 
 ## Build 3970
 
-This is an **early access beta release**.
+This is an **early access beta release**. Features may continue to evolve; the release notes for the next production (non-beta) edition will include the definitive description of the feature.
 
 ### Updates and changes
 
@@ -72,13 +131,8 @@ This is an **early access beta release**.
 
 * The `sprintf`-style script library functions will now coerce numeric conversions when possible. This means that, for example, you can now pass a regular JS number to a `"%d"` conversion and it will not throw an exception. It is also now possible to pass a Locale or Language as the first argument to localize formatting (previously the interface locale was always used). Passing a locale of `null` as the first argument will prevent localization.
 
-* Calling `@(keyStr, formatArgs...)` or `#(keyStr, formatArgs...)` will format interface and game language strings (respectively). Previously, this was done by calling `string` and `gstring` (which still works). In other words, the following are now all equivalent:
+* Calling `@(keyStr, formatArgs...)` or `#(keyStr, formatArgs...)` will format interface and game language strings (respectively).
 
-  ```js
-  @("key-name", arg1, arg2, arg3);
-  string("key-name", arg1, arg2, arg3);
-  sprintf(@key-name, arg1, arg2, arg3);
-  ```
 
 ### Script engine updates
 
