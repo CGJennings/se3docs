@@ -10,6 +10,10 @@ This is an **early access beta release**.
 
 * Enabled LCD text antialiasing by default on Linux, and added a command line option to change the antialiasing mode.
 
+### Other changes
+
+* The now meaningless command line option `xDisableFX` has been removed.
+
 ## Build 4163
 
 This is a **production** (non-beta) release.
