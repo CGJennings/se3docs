@@ -10,6 +10,10 @@ This is an **early access beta release**.
 
 * Enabled LCD text antialiasing by default on Linux, and added a command line option to change the antialiasing mode.
 
+### For plug-in developers
+
+* The `PlatformSupport.PLATFORM_IS_OSX` constant has been deprecated with no intention to remove. Instead, use `PlatformSupport.PLATFORM_IS_MAC`.
+
 ### Other changes
 
 * The now meaningless command line option `xDisableFX` has been removed.
