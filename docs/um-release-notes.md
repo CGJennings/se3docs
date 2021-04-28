@@ -1,14 +1,14 @@
 # Release notes
 
-<!--
-
 ## Next
 
-The following changes are planned for inclusion in the next update. This list is *informational only*: nothing here is final until the update is actually published. Some items may be deferred or abandoned, and other items may be added at any time. In particular, changes to the APIs and script engine have the potential to introduce compatibility issues with plug-ins which might lead to those features being delayed or withdrawn.
+The following changes are planned for inclusion in the next update. This list is *informational only*: nothing here is final until the update is actually published. Some items may be deferred or abandoned, and other items may be added at any time. In particular, changes to the APIs and script engine have the potential to introduce compatibility issues with plug-ins which might lead to those features being delayed, changed, or withdrawn.
 
 This is an **early access beta release**.
 
--->
+### Features and enhancements
+
+* Enabled LCD text antialiasing by default on Linux, and added a command line option to change the antialiasing mode.
 
 ## Build 4163
 
@@ -31,7 +31,7 @@ This is a **production** (non-beta) release.
   * enter a hexadecimal code point (e.g., `u+2c7e`) in the search field to go to that code point (or the nearest valid row).
 * The `--plugintest` command line option can now be passed multiple test bundles separated by the path separator character (`;` on Windows, `:` elsewhere).
 
-### For plug-in developers:
+### For plug-in developers
 
 * A host of script engine updates bring the JS engine close to ES6 level. This includes arrow functions, object/class methods, destructuring assignment improvements, new native JS object methods, and many bug fixes and performance improvements. More details and examples of these changes can be found under the notes for beta build 3970.
 * [Improved scripting (JS) API documentation](assets/jsdoc/) is now in beta. This corrects and expands existing documentation, links to the Java API when relevant, and includes basic documentation for built-in JS objects (`Array`, `Function`, and so on). The [Typescript definition files](https://github.com/CGJennings/se3docs/tree/master/script-lib-types) used to generate these docs are included in the se3docs repository. Suggestions, corrections, and improvements welcome. The [original JS API documentation](assets/jsdoc-legacy/) is still available during the transition.
