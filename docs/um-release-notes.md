@@ -12,11 +12,17 @@ This is an **early access beta release**.
 
 ### For plug-in developers
 
+* The method `StrangeImage.exists(identifier)` can be used to check whether a portrait-style image path points to a real image.
+* The method `StrangeImage.getAsBufferedImage` works like `StrangeImage.get` but converts vector images directly into bitmaps. (Prefer `StrangeImage.get` where possible.)
 * The `PlatformSupport.PLATFORM_IS_OSX` constant has been deprecated with no intention to remove. Instead, use `PlatformSupport.PLATFORM_IS_MAC`.
 
 ### Other changes
 
 * The now meaningless command line option `xDisableFX` has been removed.
+
+### Bug fixes
+
+* Double clicking an item in a list in the deck editor could result in an infinite loop of searching for a location to fit the item.
 
 ## Build 4163
 
