@@ -14,12 +14,25 @@ If you have persistent problems trying to download the plug-in catalogue itself 
 
 If you are not sure whether you access the Internet through a proxy or what your proxy settings are, consult the intranet of your institution or ask a systems administrator.
 
-## Graphics issues
+## Text quality issues
 
-Some Windows machines have weird graphics glitches when running Strange Eons, such as bits of the interface not being drawn or being drawn in the wrong place. If this happens to you, try these steps:
+Text appears smoother when drawn with a technique called [*anti-aliasing*](https://en.wikipedia.org/wiki/Spatial_anti-aliasing). Strange Eons normally tries to use the text anti-aliasing settings of your operating system. However, this is not always reliable on Linux devices, so by default Strange Eons will instead guess and that it can use a particular kind of [*subpixel antialiasing*](https://en.wikipedia.org/wiki/Subpixel_rendering). This works well on most modern LCD panels, but you can specify a different method using the command line argument `--xAAText` with one of the following values:
+
+| Option                                         | Effect                                                       |
+| ---------------------------------------------- | ------------------------------------------------------------ |
+| `auto`                                         | Use value read from system settings, if possible. *This is the default on Windows and macOS.* |
+| `off`                                          | Disable all text antialiasing.                               |
+| `on`                                           | Use greyscale (opacity) antialiasing.                        |
+| `gasp`                                         | Use greyscale (opacity) antialiasing as specified by each font (using each the font's GASP table, if any). |
+| `lcd`                                          | Use the most common LCD subpixel antialiasing (`lcd_hrgb`). *This is the default on Linux.* |
+| `lcd_hrgb`, `lcd_hbgr`, `lcd_vrgb`, `lcd_vbgr` | Use the specified type of LCD subpixel antialiasing. Correct subpixel antialiasing depends on the precise arrangement of the red, green, and blue light sources that make up each pixel. The default works for most displays, but if your display uses a different arrangement you can select it with these options. |
+
+## Other graphics issues
+
+Some Windows devices have weird graphics glitches when running Strange Eons, such as bits of the interface not being drawn or being drawn in the wrong place. If this happens to you, try these steps:
 
 1. Update your graphics driver to the latest version. Once installed and the the computer reboots, try starting Strange Eons again.
-2. If your computer has two graphics chipsets (one power saving and one high performance), make sure Strange Eons uses the high performance chip.
+2. If your computer has two graphics chipsets (one power saving and one high performance), try using Strange Eons with each in turn.
 3. Right click on the shortcut icon that you use to start Strange Eons and choose **Properties**. Look for the field labelled **Target**. In this field you will find something like `"C:\Program Files\Strange Eons\bin\strangeeons.exe"`. Edit this by adding a space, then the following (all *after* the `.exe"`):
    `-J-Dsun.java2d.ddoffscreen=false`
    Click **OK** and try running the app again.
