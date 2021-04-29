@@ -10,15 +10,9 @@ This page describes the steps needed to install Strange Eons on PCs based on var
 
 At least 2 GB of RAM recommended.
 
-<!--
-
-> Supporting Java 9+ is in progress. To run Strange Eons under Java 9+, you must include an argument naming the `.jar` file an "agent". For example:
+> **Java 9+ support**
 >
-> ```bash
-> java -Xmx2g -javaagent:./strange-eons.jar -cp ./strange-eons.jar strangeeons
-> ```
-
--->
+> Strange Eons now has experimental support for newer versions of Java. It should run under Java 9 when started with the command given below (the `-javaagent` is required). Development builds are currently being tested against Java 11. Note that builds for Java 11+ are not compatible with all *published plug-in bundles* (bundles that use Pack200 compression cannot be created or installed). If you have a build *newer than* 4163, you can try it with unsupported Java versions by adding the command line option `--xDisableJreCheck` to the end of the standard command given below.
 
 ## Installation steps
 
@@ -34,7 +28,7 @@ At least 2 GB of RAM recommended.
 3. This will extract a single file named `strange-eons.jar`. This file contains the main Strange Eons application and support tools. You can start Strange Eons with a command like the following:
 
    ```bash
-   java -Xmx2g -cp strange-eons.jar strangeeons
+   java -Xmx2g -javaagent:strange-eons.jar -cp strange-eons.jar strangeeons
    ```
    
    > **Important:** Currently, Strange Eons only works with Java 8 so ensure that that is the version you have installed. You can check with `java -version`. The reported version number should start with 1.8.
