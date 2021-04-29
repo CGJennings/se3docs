@@ -29,7 +29,7 @@ for( let index of indices ) {
   do {
     match = linkRegex.exec(text);
     if(match && match[2].endsWith(".md") && match[2] !== "index.md") {
-      nav.title[nav.title.length] = match[1];
+      nav.title[nav.title.length] = match[1].replace(/\*/g, "");
       nav.file[nav.file.length] = match[2].substring(0, match[2].length - ".md".length);
     }
   } while(match);
