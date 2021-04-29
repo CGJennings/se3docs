@@ -4,11 +4,16 @@ This page describes the steps needed to install Strange Eons on Windows-based PC
 
 ## System requirements
 
+* 64-bit Intel or AMD processor.
 * 64-bit edition of Windows 7 SP1, Windows 8, or Windows 10.
 
 * At least 2 GB of RAM recommended.
 
-Before installing, it is a good idea to make sure that you have installed the latest graphics drivers for your graphics card. Check the support page of the Web site for your computer or graphics card manufacturer.
+> **Windows ARM support?**
+>
+> Open Java distributions are starting to include Windows ARM 64 support. Once that support has trickled down through the tool chain used to build Strange Eons you can expect official support. In the meantime if you have installed your own ARM 64 JRE, you can try running Strange Eons using the instructions for [other devices](um-install-other.md).
+
+Before installing, it is a good idea to check that you have the latest graphics drivers installed. Check the support page of the Web site for your computer or graphics card manufacturer.
 
 ## Installation steps
 
