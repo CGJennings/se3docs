@@ -21,6 +21,7 @@ This is an **early access beta release**.
 ### Other changes
 
 * The now meaningless command line option `xDisableFX` has been removed.
+* Plug-in catalog now uses https by default.
 * Publishing a plug-in bundle (preparing it for a catalog by creating a file ending in `.pbz`, `.pgz`, or `.plzm`) no longer applies Pack200 compression as part of the publication process. This change is necessary for Strange Eons to run under Java 14+, which drops support for Pack200. Existing plug-ins in the official catalog have been re-published without Pack200. (Older versions of Strange Eons can detect that Pack200 was not applied and will correctly install the repacked versions.) **If you operate a third party plug-in catalog**, you must re-publish your plug-ins as well. You can do this as follows:
   1. Make sure you have a plain bundle for each published plug-in. A published bundle can be unpacked to a plain bundle by opening (double clicking) it in a project. *This must be done using build 4163 or earlier.*
   2. Now start any build of Strange Eons *after* build 4163.
