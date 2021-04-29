@@ -13,6 +13,10 @@ At least 2 GB of RAM recommended.
 > **Java 9+ support**
 >
 > Strange Eons now has experimental support for newer versions of Java. It should run under Java 9 when started with the command given below (the `-javaagent` is required). Development builds are currently being tested against Java 11. Note that builds for Java 11+ are not compatible with all *published plug-in bundles* (bundles that use Pack200 compression cannot be created or installed). If you have a build *newer than* 4163, you can try it with unsupported Java versions by adding the command line option `--xDisableJreCheck` to the end of the standard command given below.
+>
+> **Java 16+ support**
+>
+> Due to how the script engine currently works, the command line argument `--illegal-access=permit` must be passed to Java for scripted plug-ins to function correctly. (This option is not as scary as it sounds.)
 
 ## Installation steps
 
