@@ -12,17 +12,17 @@ At least 2 GB of RAM recommended.
 
 <!--
 
-> Supporting Java 9+ is in progress. To run Strange Eons under Java 9+, you must include an argument declaring that the `.selibrary` file is an "agent". For example:
+> Supporting Java 9+ is in progress. To run Strange Eons under Java 9+, you must include an argument naming the `.jar` file an "agent". For example:
 >
 > ```bash
-> java -Xmx2g -javaagent:./strange-eons.selibrary -cp ./strange-eons.selibrary strangeeons
+> java -Xmx2g -javaagent:./strange-eons.jar -cp ./strange-eons.jar strangeeons
 > ```
 
 -->
 
 ## Installation steps
 
-1. [Download the latest version of Strange Eons for "other" systems.](http://cgjennings.ca/eons/download/update.html?platform=other) This version is packaged as a gzipped tarball (`.tar.gz`). Copy the archive to wherever you want to install it.
+1. [Download the latest version of Strange Eons for "other" systems.](http://cgjennings.ca/eons/download/update.html?platform=other) This version is a plain JAR file packaged as a gzipped tarball (`.tar.gz`). Copy the archive to wherever you want to install it.
 
 2. Unpack the tarball:
 
@@ -37,7 +37,7 @@ At least 2 GB of RAM recommended.
    java -Xmx2g -cp strange-eons.jar strangeeons
    ```
    
-   > **Important:** Currently, Strange Eons only works with Java 8 so ensure that that is the version you have installed. You can check with `java -version`, the reported version number should start with 1.8.
+   > **Important:** Currently, Strange Eons only works with Java 8 so ensure that that is the version you have installed. You can check with `java -version`. The reported version number should start with 1.8.
    
 4. On many Unix-like systems, Strange Eons can integrate itself with the desktop environments to make it easier to start and to open saved files. To perform this step, run the following command:
 
@@ -59,6 +59,8 @@ At least 2 GB of RAM recommended.
 
 ## Troubleshooting
 
-Installation problems are rare but frustrating. If unpacking the tarball or pack file fails, it usually means that the file did not download correctly. Try downloading it again. If it fails again, it may be corrupt on the server: [please report the issue](https://cgjennings.ca/contact.html).
+Installation problems are rare but frustrating.
+
+If unpacking the tarball or pack file fails, it usually means that the file did not download correctly. Try downloading it again. If it fails again, it may be corrupt on the server: [please report the issue](https://cgjennings.ca/contact.html).
 
 For issues that occur after installation, refer to the [Troubleshooting](um-install-troubleshooting.md) page.

@@ -8,7 +8,8 @@ This is an **early access beta release**.
 
 ### Features and enhancements
 
-* Enabled LCD text antialiasing by default on Linux, and added a command line option to change the antialiasing mode.
+* Added arm64 support for Linux.
+* LCD text antialiasing is enabled by default on Linux, with a command line option to change the antialiasing mode.
 
 ### For plug-in developers
 
@@ -22,7 +23,7 @@ This is an **early access beta release**.
 
 ### Bug fixes
 
-* Double clicking an item in a list in the deck editor could result in an infinite loop of searching for a location to fit the item.
+* Double clicking an item in a list in the deck editor could result in an infinite loop trying to fit the item.
 
 ## Build 4163
 

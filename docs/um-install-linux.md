@@ -4,7 +4,7 @@ This page describes the steps needed to install Strange Eons on desktop PCs runn
 
 ## System requirements
 
-A Debian package (`.deb`) is available for amd64 (64-bit Intel/AMD) devices. This includes a precompiled private Java runtime, ensuring that Strange Eons has a compatible runtime that will not interfere with any edition of Java you may have installed for general use. If your device is not compatible, see the instructions for [other devices](um-install-other.md) instead.
+Debian packages (`.deb`) are available for devices with 64-bit Intel/AMD (amd64) and ARM64 (arm64) processors. This includes a precompiled private runtime, ensuring that an existing Java installation does not interfere with Strange Eons. If your device's processor is not compatible with one of these packages, see the instructions for [other devices](um-install-other.md) instead.
 
 At least 2 GB of RAM is recommended.
 
@@ -12,15 +12,15 @@ At least 2 GB of RAM is recommended.
 
 1. [Download the latest version of Strange Eons for Linux systems.](http://cgjennings.ca/eons/download/update.html?platform=nix) This version is provided as a Debian package (`.deb`).
 
-2. On many systems, including [Chromebooks with the Linux feature enabled](https://support.google.com/chromebook/answer/9145439?hl=en), you can double click on the `.deb` file to install it. Otherwise, in a shell window, in the directory where you downloaded the file, run the following (replacing `{xxxx}` with the correct build number):
+2. On many systems, you can double click on the `.deb` file to install it. Otherwise, in a shell window, in the directory where you downloaded the file, run the following (replacing `{arch}` and  `{xxxx}` with the correct architecture code (amd64/arm64) and build number):
 
    ```bash
-   dpkg -i strange-eons-linux-b{xxxx}.deb
+   dpkg -i strange-eons-linux-{arch}-b{xxxx}.deb
    ```
    
-3. An icon for Strange Eons should be added to your desktop launcher. Open it as you would any other application.
+3. An icon for Strange Eons should be added to your desktop launcher. Open it as you would any other application. You can also start Strange Eons from a shell with the command `strangeeons`.
 
-4. After installation, it is safe to delete the downloaded `.deb` package if you wish.
+4. After installation, it is safe to delete the downloaded `.deb` package.
 
 ## Troubleshooting
 
