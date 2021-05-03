@@ -8,6 +8,7 @@ This is an **early access beta release**.
 
 ### Features and enhancements
 
+* Added a [non-interactive script running mode](um-run-script.md), activated with command line option `--run <file>`.
 * Added support for Linux/arm64.
 * LCD text antialiasing is enabled by default on Linux, with a command line option to change the antialiasing mode.
 * The command line option `--xDisableJreCheck` skips the normal Java version checking performed at startup, allowing developers and expert users to try running the app with unsupported Java versions.
