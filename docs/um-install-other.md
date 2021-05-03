@@ -16,7 +16,11 @@ At least 2 GB of RAM recommended.
 >
 > **Java 16+ support**
 >
-> Due to how the script engine currently works, the command line argument `--illegal-access=permit` must be passed to Java for scripted plug-ins to function correctly. (This option is not as scary as it sounds.)
+> Due to how the script engine currently works, the command line argument `--illegal-access=permit` must be passed to Java for scripted plug-ins to function correctly. (This option is not as scary as it sounds.) Altogether this means a command line like the following:
+>
+> ```bash
+> java -Xmx2g --illegal-access=permit -javaagent:strange-eons.jar -cp strange-eons.jar strangeeons --xDisableJreCheck
+> ```
 
 ## Installation steps
 
