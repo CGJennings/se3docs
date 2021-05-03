@@ -35,9 +35,15 @@ Sets the minimum logging level. This determines the level of detail used to repo
 `--resfolder path`
 Adds the files in the specified path to the application as if they were internal resources.
 
+`--run scriptfile`  
+Starts the app in [non-interactive script running mode](um-run-script.md).
+
 ## Non-standard options
 
 Non-standard options are set just like standard options, but they can change from version to version. These option names all start with `x`.
+
+`--xAAText aatype`  
+Sets which [text anti-aliasing mode to use](um-install-troubleshooting.md#text-quality-issues). Used to correct text quality issues.
 
 `--xDebugException`
 Causes a fatal startup error. Used for testing.
