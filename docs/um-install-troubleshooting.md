@@ -64,6 +64,16 @@ Sets a 2 GiB limit (as 2048 MiB). This is usually plenty.
 `-Xmx2g`
 This also sets a 2 GiB limit.
 
+### Plug-in fails to start or has errors
+
+If a plug-in exhibits `ReferenceErrors` or messages stating that something is undefined, this may indicate that the plug-in was written for a previous version of Strange Eons and has not been updated. You might be able to get the plug-in to run by enabling script compatibility mode.
+
+*To enable script compatibility mode,* open the Preferences dialog, choose the **Plug-ins** category, and check **Compatibility mode**. If the problem is with an extension, exit and restart the app.
+
+> Enabling script compatibility mode may add a small performance hit. It also adds objects to the global scope, which may interfere with other scripts if they try to define constants with the same name. Where possible, the plug-in or script should be updated to use current APIs.
+
+Another potential cause of plug-in errors is that a plug-in may depend on other plug-ins that are not installed. Check for plug-ins in the catalogue that look like they may be interrelated to the problem plug-in and install them. If this corrects the problem, contact the plug-in author to suggest that they update the plug-in to [list its dependencies](dm-eons-plugin.html#requires).
+
 ### The plug-in bundle *X* could not be updated
 
 This indicates that you have downloaded an update for a plug-in that required a [relaunch](um-plugins-relaunching.md), but when Strange Eons restarted it was unable to replace the old plug-in for some reason. To investigate, you'll need to check your plug-in folder. If the app finishes starting, you can do this from the [plug-in manager](um-plugins-manager.md). Otherwise, find the `plug-ins` subfolder inside your [inside your user folder](um-install-user-folder.md). You should find a file with the name indicated by the error message and the file extension `.autoupdate`. You will usually also find a file with the same name but no `.autoupdate`. For example:

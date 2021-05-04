@@ -23,10 +23,12 @@ This is an **early access beta release**.
 
 * The now meaningless command line option `xDisableFX` has been removed.
 * Plug-in catalog now uses https by default.
+* A simplified version of the previous script compatibility feature has been reinstated (off by default).
 
 ### Bug fixes
 
 * Double clicking an item in a list in the deck editor could result in an infinite loop trying to fit the item.
+* Script functions `string`, `gstring`, etc., do not pass format specifiers correctly.
 
 ### Pack 200 transition
 
