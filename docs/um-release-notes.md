@@ -24,6 +24,7 @@ This is an **early access beta release**.
 * The now meaningless command line option `xDisableFX` has been removed.
 * Plug-in catalog now uses https by default.
 * A simplified version of the previous script compatibility feature has been reinstated (off by default).
+* Removed the legacy version of the [script library docs](http://se3docs.cgjennings.ca/assets/jsdoc/).
 
 ### Bug fixes
 
