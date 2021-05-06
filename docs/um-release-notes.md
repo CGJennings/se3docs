@@ -8,7 +8,7 @@ This is an **early access beta release**.
 
 ### Features and enhancements
 
-* Added a [non-interactive script running mode](um-run-script.md), activated with command line option `--run <file>`.
+* Added a [non-interactive script runner mode](um-run-script.md), activated with command line option `--run <file>`.
 * Added support for Linux/arm64.
 * LCD text antialiasing is enabled by default on Linux, with a command line option to change the antialiasing mode.
 * The command line option `--xDisableJreCheck` skips the normal Java version checking performed at startup, allowing developers and expert users to try running the app with unsupported Java versions.
@@ -18,6 +18,7 @@ This is an **early access beta release**.
 * The method `StrangeImage.exists(identifier)` can be used to check whether a portrait-style image path points to a real image.
 * The method `StrangeImage.getAsBufferedImage` works like `StrangeImage.get` but converts vector images directly into bitmaps. (Prefer `StrangeImage.get` where possible.)
 * The `PlatformSupport.PLATFORM_IS_OSX` constant has been deprecated with no intention to remove. Instead, use `PlatformSupport.PLATFORM_IS_MAC`.
+* The method 
 
 ### Other changes
 

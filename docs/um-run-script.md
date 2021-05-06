@@ -2,7 +2,7 @@
 
 > **Note:** This feature is available starting in version 3.2. It is currently considered experimental.
 
-Strange Eons can be started in a *non-interactive script running mode*, meaning that it can be used to run a script without displaying an interface. To do this, start the app from the command line with the `-run` (or `--run`) argument and the name of the script file. For example, under Windows you might use:
+Strange Eons can be started in a *non-interactive script runner mode*, meaning that it can be used to run a script without displaying an interface. To do this, start the app from the command line with the `-run` (or `--run`) argument and the name of the script file. For example, under Windows you might use:
 
 ```bash
 strangeeons -run script-to-run.js
@@ -12,19 +12,19 @@ strangeeons -run script-to-run.js
 
 The app will start without showing a splash screen or main application window. It will load extensions and plug-ins normally. Once the app is ready, it will load and run the specified script file, then exit. (The script runs at about the same point as the application window would normally be shown.)
 
-## Detecting script running mode
+## Detecting script runner mode
 
-The main `StrangeEons` class has a method `getScriptRunningMode()` that returns `null` if the app is **not** in script running mode. If the app is in script running mode, it returns an object that can be used to get information about the mode and modify its default behaviour.
+The main `StrangeEons` class has a method `getScriptRunner()` that returns `null` if the app is **not** in script runner mode. If the app is in script runner mode, it returns an object that can be used to get information about the mode and modify its default behaviour.
 
-The following code could be used in a plug-in or other script to detect if the app is running in script running mode:
+The following code could be used in a plug-in or other script to detect if the app is in script runner mode:
 
 ```js
-if (Eons.scriptRunningMode != null) {
-    // running in script running mode
+if (Eons.scriptRunner != null) {
+    // script runner mode is active
 }
 ```
 
-The `scriptRunningMode` object has the following informational properties:
+The returned `ScriptRunnerState` object has the following informational properties:
 
 `file`  
 Returns a `File` object for the script file that was specified on the command line.
@@ -40,7 +40,7 @@ Returns `true` if the app has finished running the script file. That is, if it s
 Normally, as soon as the main script file finishes, the app will exit. You might wish to prevent this behaviour if your script starts new threads or is waiting for an event listener to fire. The following script code will keep the app running:
 
 ```js
-Eons.scriptRunningMode.keepAlive = true;
+Eons.scriptRunner.keepAlive = true;
 ```
 
 If used, this flag must be set before reaching the end of the script. To stop the application at a later time, you can use the following:
