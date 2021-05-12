@@ -50,6 +50,15 @@ Rarely, you will need to connect to Strange Eons manually. For example, if you a
 
 To *connect to Strange Eons from the debugger manually*, switch to Strange Eons and look for the bug icon near the upper right corner. Hover over the icon and observe the note that pops up. It will say something like "Listening at 127.0.0.1:8888". The part after the colon is the port number. The part before the colon (and after *Listening at*) is the host name. Enter this information in the connection screen in the debugger app, and it should connect momentarily.
 
+### Debugging an extension
+
+To debug an extension script that fails while the app is starting, you can follow these steps:
+
+1. Add the line `debugger;` at the top of the extension plug-in script.
+2. Build the plug-in bundle, then double click to install it.
+3. After installing the bundle, you will be prompted to relaunch the app. **Before you do so,** open the debugger.
+4. Restart the app. When it loads the extension plug-in script and reaches the `debugger;` line, the script will be interrupted as if by a breakpoint. You can now proceed as described below.
+
 ## The debugger
 
 Once the debugger has connected to Strange Eons, you can use it to inspect and walk through scripts. To do that, the script must first be *interrupted*. There are several ways to do this, depending on where you are when you start out. Here are some:
