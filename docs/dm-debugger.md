@@ -32,7 +32,7 @@ To *start the debugger by launching it as a separate app*, just double click its
 
 > Depending on how you installed Strange Eons, you might not have an app icon. If all else fails, you can start the debugger manually.
 
-To *start the debugger manually*, use a command similar to the following in the Strange Eons installation directory. (The command should be similar to the command you use to start Strange Eons itself.)
+To *start the debugger manually*, use a command similar to the following in the Strange Eons installation directory. (The command should be [similar to a command you might use to start Strange Eons itself](um-install-other.md), but with `debugger` replacing `strangeeons`.)
 
 ```bash
 java -Xms64m -cp strange-eons.selibrary debugger
