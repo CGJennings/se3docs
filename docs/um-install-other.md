@@ -1,6 +1,6 @@
 # Installation on other platforms
 
-This page describes the steps needed to install Strange Eons on PCs based on various devices that support desktop Java.
+This page describes the steps needed to install Strange Eons on any device that supports *desktop* Java.
 
 **Note:** On most consumer Linux PCs, you can install Strange Eons with an easy to use Debian (DEB) package instead. [See this page for details.](um-install-linux.md)
 
