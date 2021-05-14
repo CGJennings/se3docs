@@ -15,10 +15,11 @@ This is an **early access beta release**.
 
 ### For plug-in developers
 
+* The [script debugger client](dm-debugger.md) now has a command line option, `--search` to find instances of Strange Eons with an available debug server and report their host and port for connecting.
+* The `SplitJoin` class can now create instances with a specified number of threads (for I/O-bound tasks).
 * The method `StrangeImage.exists(identifier)` can be used to check whether a portrait-style image path points to a real image.
 * The method `StrangeImage.getAsBufferedImage` works like `StrangeImage.get` but converts vector images directly into bitmaps. (Prefer `StrangeImage.get` where possible.)
 * The `PlatformSupport.PLATFORM_IS_OSX` constant has been deprecated with no intention to remove. Instead, use `PlatformSupport.PLATFORM_IS_MAC`.
-* The method 
 
 ### Other changes
 

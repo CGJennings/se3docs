@@ -22,21 +22,43 @@ Once you change these settings, you can continue using Strange Eons normally. Yo
 
 There are a few different ways to start the debugger: from inside Strange Eons, by launching it separately, and manually from the command line.
 
+#### From the app
+
 To *start the debugger from Strange Eons*, click on the little bug icon that appears when debugging is enabled.
 
 > If clicking the bug icon works, you generally won't need to start the debugger at all: Strange Eons will start it automatically when needed. If the bug doesn't work, you can fix it by adjusting the **Automatic Launch** command in your preferences.
 
-To *start the debugger by launching it as a separate app*, just double click its app icon like usual:
+#### From the desktop
+
+To *start the debugger by launching it as a separate app*, just double click its app icon as usual:
 
 ![debugger app icon](images/debugger-icon.png)
 
-> Depending on how you installed Strange Eons, you might not have an app icon. If all else fails, you can start the debugger manually.
+> Depending on how you installed Strange Eons, you might not have an app icon. If all else fails, you can start the debugger manually from the command line.
 
-To *start the debugger manually*, use a command similar to the following in the Strange Eons installation directory. (The command should be [similar to a command you might use to start Strange Eons itself](um-install-other.md), but with `debugger` replacing `strangeeons`.)
+#### From the command line
+
+To *start the debugger manually from the command line*, use a command similar to the following in the Strange Eons installation directory. (The command should be [similar to a command you might use to start Strange Eons itself](um-install-other.md), but with `debugger` replacing `strangeeons`.)
 
 ```bash
 java -Xms64m -cp strange-eons.selibrary debugger
 ```
+
+When starting from the command line, you can append the options `--host` and/or `--port` to specify the address and port of the debug server you wish to connect to. If you are not sure where the server is located, you can use the `--search` option, which will scan the local host (or the specified `--host`) for debug servers and list any that it finds. For example, if a regular Strange Eons session started a separate [plug-in test session](dm-test-plugin.md), it might produce output like the following:
+
+```
+Host:         127.0.0.1, port 8888
+ID:           21308.4b0d8096
+Version:      build 4165 (3.2)
+Test bundles: 
+
+Host:         127.0.0.1, port 58765
+ID:           28608.cc648ab8
+Version:      build 4165 (3.2)
+Test bundles: C:\Users\UserName\Documents\PluginProject\CoolGame.seext
+```
+
+This indicates that two debug servers were detected. The **Host** field identifies which host and port to use to connect to a particular server; the **ID** field is a unique string that can be used to help identify a specific instance of the app; the **Version** field describes which version of the app is running; and the **Test bundles** field lists the bundles that the instance has loaded in test mode, if any.
 
 ### Connecting to Strange Eons
 
@@ -278,6 +300,6 @@ To debug an extension script that fails while the app is starting, you can follo
 
 #### Stuck at the splash screen
 
-After adding `debugger` as outlined above, if you start Strange Eons without starting the debugger, it will "get stuck" on the splash screen when it hits the breakpoint you added with the `debugger` statement. The app is waiting for you to connect with the debugger and tell it how to proceed, and it will happily wait forever. You'll need to start and connect the debugger independently ([as a separate app](#starting-a-debugging-session)) to continue.
+After adding `debugger` as outlined above, if you start Strange Eons without starting the debugger, it will "get stuck" on the splash screen when it hits the breakpoint you added with the `debugger` statement. The app is waiting for you to connect with the debugger and tell it how to proceed, and it will happily wait forever. You'll need to start and connect the debugger client independently ([as a separate app](#starting-a-debugging-session)) to continue. If you are not sure which host and port to connect to, you can start the client with the `--search` argument.
 
 > Failing that, you'll have to forcibly end Strange Eons (using, e.g.,  <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Delete</kbd> on Windows or <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>Escape</kbd> on macOS, or using **System Monitor** on Linux). You can then manually uninstall the plug-in (in the [user folder](um-install-user-folder.md), temporarily rename the file to add the extension `.x`). Then restart Strange Eons, use it to start the debugger, quit Strange Eons but keep the debugger running, restore the plug-in (by removing the `.x`), and, finally, start Strange Eons again. This time, it will still "get stuck", but the debugger will connect and then you can use it to continue loading.
