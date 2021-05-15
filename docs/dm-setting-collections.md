@@ -8,7 +8,7 @@ The default settings collection consists of the default values for the setting k
 
 ## Global settings
 
-The global settings are temporary setting space between the default settings and the user settings. Changes to the global setting space last only until the application exists. The global settings are initialized at startup from the default settings. Plug-ins can then [define temporary settings here](assets/javadoc/resources/RawSettings.html) that contain defaults for their own user preferences. Because these vanish when the application ends, if the plug-in is uninstalled and the keys are not overridden by user preferences, the settings will simply vanish without clogging up the user's preference file.
+The global settings are a temporary setting space between the default settings and the user settings. Changes to the global setting space last only until the application exits. The global settings are initialized at startup from the default settings. Plug-ins can then [define temporary settings here](assets/javadoc/resources/RawSettings.html) that contain defaults for their own user preferences. Because these vanish when the application ends, if the plug-in is uninstalled and the keys are not overridden by user preferences, the settings will simply vanish without clogging up the user's preference file.
 
 ## User settings
 
