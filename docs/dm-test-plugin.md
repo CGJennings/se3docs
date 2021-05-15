@@ -18,7 +18,7 @@ The **Advanced Configuration** panel lets you configure the command used to star
 
 The `java` command name will be replaced with a command that will start an appropriate version of Java automatically. This should just work, but if necessary you can replace it with an explicit command.
 
-The `%j` pattern will be replaced with the full path to the app's JAR file, which is typically the file `strange-eons.selibrary` in the installation folder.
+The `%j` pattern will be replaced with the full path to the app's JAR file, which is typically the file `strange-eons.jar` in the installation folder.
 
 The second field lets you specify additional [command line options](um-install-command-line-options.md#standard-options) to be passed to the test instance. Note that the `--plugintest`, `--glang`, `--ulang`, and `--loglevel` options will be set automatically using your **Test Options**.
 

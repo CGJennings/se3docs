@@ -54,7 +54,7 @@ Develop a plug-in using Java is a matter of setting up your IDE appropriately. T
 1. Create a new project in your IDE.
 2. Set the source and binary formats to something suitable (e.g., JDK 8).
 3. Set the default encoding to UTF-8.
-4. Add `strange-eons.selibrary` (from the Strange Eons install folder) as a JAR library for the project.
+4. Add `strange-eons.jar` (from the Strange Eons install folder) as a JAR library for the project.
 5. Set the build options to produce a JAR file of your project. This will be your plug-in bundle. Note the name and location of the file.
 6. Set the run options to start `strangeeons` (in the default package) as the main class. In the VM options, enter a suitable memory limit such as `-Xmx2g`.
 7. Modify the build script for your project so that it copies the JAR file produced after building to your plug-in folder. For example, for an Ant-based project on Windows you might add something like the following (just before `</project>`):

@@ -142,7 +142,7 @@ Officially, Strange Eons currently requires Java 8, but work is underway to supp
 
 - The major obstacles have been solved and SE can be started under Java 9 starting with build 3970. (However, build 4163 will refuse to start in newer versions; running under Java 9+ is currently for development purposes only.)
 - SE can be built under Java 9 and Java 11.
-- When starting SE from the command line, the option <code>-javaagent:<em>path/to/strange-eons.selibrary</em></code> must be added. Starting with build 3970 the launcher executables for Windows and macOS have been modified to include this option.
+- When starting SE from the command line, the option <code>-javaagent:<em>path/to/strange-eons.jar</em></code> must be added. Starting with build 3970 the launcher executables for Windows and macOS have been modified to include this option.
 - The removal of the Pack200 format and related tools will require reworking how plug-in bundles are stored on the server (and unpacked).
 
 ## Build 3970

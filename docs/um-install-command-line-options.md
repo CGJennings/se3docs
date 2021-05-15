@@ -104,7 +104,7 @@ where `[options...]` is the list of options you want to use, separated by spaces
 When starting the app from the command line, use the following template:
 
 ```bash
-java [vmoptions...] -cp strange-eons.selibrary strangeeons [options...]
+java [vmoptions...] -cp strange-eons.jar strangeeons [options...]
 ```
 
 Replace `[vmoptions...]` with the list of desired VM options, and `[options...]` with list of desired app options. Note that SE needs a limit of at least 1 GB of memory to run correctly (more is better), so at a minimum you should include a VM option like `-Xmx2g`. If the location of the java binary is not included in the path, you will need to replace `java` with the complete path to the Java binary.
