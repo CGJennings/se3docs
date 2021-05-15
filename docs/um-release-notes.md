@@ -16,6 +16,9 @@ This is an **early access beta release**.
 
 ### For plug-in developers
 
+* The [Test Plug-in dialog](dm-test-plugin.md) has new options:
+  * prevent other plug-ins from being loaded
+  * reset the JVM command field to its default value
 * The [script debugger client](dm-debugger.md) now has a command line option, `--search` to find instances of Strange Eons with an available debug server and report their host and port for connecting.
 * The `SplitJoin` class can now create instances with a specified number of threads (for I/O-bound tasks).
 * The method `StrangeImage.exists(identifier)` can be used to check whether a portrait-style image path points to a real image.

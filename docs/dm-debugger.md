@@ -41,7 +41,7 @@ To *start the debugger by launching it as a separate app*, just double click its
 To *start the debugger manually from the command line*, use a command similar to the following in the Strange Eons installation directory. (The command should be [similar to a command you might use to start Strange Eons itself](um-install-other.md), but with `debugger` replacing `strangeeons`.)
 
 ```bash
-java -Xms64m -cp strange-eons.selibrary debugger
+java -Xms64m -cp strange-eons.jar debugger
 ```
 
 When starting from the command line, you can append the options `--host` and/or `--port` to specify the address and port of the debug server you wish to connect to. If you are not sure where the server is located, you can use the `--search` option, which will scan the local host (or the specified `--host`) for debug servers and list any that it finds. For example, if a regular Strange Eons session started a separate [plug-in test session](dm-test-plugin.md), it might produce output like the following:
@@ -59,6 +59,9 @@ Test bundles: C:\Users\UserName\Documents\PluginProject\CoolGame.seext
 ```
 
 This indicates that two debug servers were detected. The **Host** field identifies which host and port to use to connect to a particular server; the **ID** field is a unique string that can be used to help identify a specific instance of the app; the **Version** field describes which version of the app is running; and the **Test bundles** field lists the bundles that the instance has loaded in test mode, if any.
+
+> **Tip:** You can also print this list from the app (if unblocked) by running the following line in the Quickscript window:  
+> `arkham.Subprocess.launch("debugger", "--search").start();`
 
 ### Connecting to Strange Eons
 
@@ -141,7 +144,7 @@ To *examine the current value of a variable in the **Source** panel*, hover over
 
 ![hovering over a variable to reveal its value](images/debugger-mouseover.png)
 
-To *track how a variable or other expression changes over time*, click **New watch** in the **Watch Expressions** panel, then enter an expression to track, such as `x` or `diy.name` or even `(pixels[x][y] & 0xff)/255`. Each time you take another **Step** or otherwise interrupt the script, the expressions will be re-evaluated and their string value displayed in the table.
+To *track how a variable or other expression changes over time*, click **New watch** in the **Watch Expressions** panel, then enter an expression to track, such as `x` or `diy.name` or even `(pixels[x][y] & 0xff)/255`. Each time you take another **Step** or otherwise interrupt the script, the expressions will be re-evaluated and their string values displayed in the table.
 
 To *edit an existing watch expression*, click the expression, edit it, and press <kbd>Enter</kbd>.
 
