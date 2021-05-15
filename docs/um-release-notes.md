@@ -12,6 +12,7 @@ This is an **early access beta release**.
 * Added support for Linux/arm64.
 * LCD text antialiasing is enabled by default on Linux, with a command line option to change the antialiasing mode.
 * The command line option `--xDisableJreCheck` skips the normal Java version checking performed at startup, allowing developers and expert users to try running the app with unsupported Java versions.
+* The command line option `--xDisablePluginLoading` prevents plug-ins from being loaded from bundles (except test bundles) for development and troubleshooting purposes.
 
 ### For plug-in developers
 
