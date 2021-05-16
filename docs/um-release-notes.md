@@ -14,26 +14,6 @@ This is an **early access beta release**.
 * The command line option `--xDisableJreCheck` skips the normal Java version checking performed at startup, allowing developers and expert users to try running the app with unsupported Java versions.
 * The command line option `--xDisablePluginLoading` prevents plug-ins from being loaded from bundles (except test bundles) for development and troubleshooting purposes.
 
-### Changes to how subprocesses are launched
-
-Certain preference settings could be used to launch subprocesses such as the script debugging client. These settings are no longer used. Instead the app will launch these tools itself, without reference to these keys. This allows the exact command used to launch these commands to be updated automatically to keep up to date with changes to the Java runtime.
-
-While the old keys are no longer used, it is still possible to override how these tools are launched if for some reason the automatic launch process does not work on a given system. However, there is no UI to edit these user settings so they must be [set "by hand"](dm-setting-explorer.md). The following new keys are used (all with no initial value, meaning that the default automatic method is used):
-
-`test-bundle-launch`  
-Controls how the plug-in test command starts a bundle test instance.
-
-`script-debug-client-launch`  
-Controls how the script debugger client is started.
-
-These keys can contain the following variables, which will be expanded to the relevant value:
-
-`%j` the path to the Java runtime executable
-`%v` the virtual machine arguments used to launch the main app
-`%c` the class path used to launch the main app
-`%h` the host name of the debug server (debugger client only)
-`%p` the port number of the debug server (debugger client only)
-
 ### For plug-in developers
 
 * The [Test Plug-in dialog](dm-test-plugin.md) has new options:
@@ -59,6 +39,26 @@ These keys can contain the following variables, which will be expanded to the re
 
 * Double clicking an item in a list in the deck editor could result in an infinite loop trying to fit the item.
 * Script functions `string`, `gstring`, etc., do not pass format specifiers correctly.
+
+### Changes to how subprocesses are launched
+
+Certain preference settings could be used to launch subprocesses such as the script debugging client. These settings are no longer used. Instead the app will launch these tools itself, without reference to these keys. This allows the exact command used to launch these commands to be updated automatically to keep up to date with changes to the Java runtime.
+
+While the old keys are no longer used, it is still possible to override how these tools are launched if for some reason the automatic launch process does not work on a given system. However, there is no UI to edit these user settings so they must be [set "by hand"](dm-setting-explorer.md). The following new keys are used (all with no initial value, meaning that the default automatic method is used):
+
+`test-bundle-launch`  
+Controls how the plug-in test command starts a bundle test instance.
+
+`script-debug-client-launch`  
+Controls how the script debugger client is started.
+
+These keys can contain the following variables, which will be expanded to the relevant value:
+
+`%j` the path to the Java runtime executable
+`%v` the virtual machine arguments used to launch the main app
+`%c` the class path used to launch the main app
+`%h` the host name of the debug server (debugger client only)
+`%p` the port number of the debug server (debugger client only)
 
 ### Pack 200 transition
 
