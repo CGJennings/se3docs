@@ -14,6 +14,26 @@ This is an **early access beta release**.
 * The command line option `--xDisableJreCheck` skips the normal Java version checking performed at startup, allowing developers and expert users to try running the app with unsupported Java versions.
 * The command line option `--xDisablePluginLoading` prevents plug-ins from being loaded from bundles (except test bundles) for development and troubleshooting purposes.
 
+### Changes to how subprocesses are launched
+
+Certain preference settings could be used to launch subprocesses such as the script debugging client. These settings are no longer used. Instead the app will launch these tools itself, without reference to these keys. This allows the exact command used to launch these commands to be updated automatically to keep up to date with changes to the Java runtime.
+
+While the old keys are no longer used, it is still possible to override how these tools are launched if for some reason the automatic launch process does not work on a given system. However, there is no UI to edit these user settings so they must be [set "by hand"](dm-setting-explorer.md). The following new keys are used (all with no initial value, meaning that the default automatic method is used):
+
+`test-bundle-launch`  
+Controls how the plug-in test command starts a bundle test instance.
+
+`script-debug-client-launch`  
+Controls how the script debugger client is started.
+
+These keys can contain the following variables, which will be expanded to the relevant value:
+
+`%j` the path to the Java runtime executable
+`%v` the virtual machine arguments used to launch the main app
+`%c` the class path used to launch the main app
+`%h` the host name of the debug server (debugger client only)
+`%p` the port number of the debug server (debugger client only)
+
 ### For plug-in developers
 
 * The [Test Plug-in dialog](dm-test-plugin.md) has new options:
@@ -21,6 +41,9 @@ This is an **early access beta release**.
   * reset the JVM command field to its default value
 * The [script debugger client](dm-debugger.md) now has a command line option, `--search` to find instances of Strange Eons with an available debug server and report their host and port for connecting.
 * The `SplitJoin` class can now create instances with a specified number of threads (for I/O-bound tasks).
+* The `Subprocess` class can now optionally disable redirection of the process's I/O streams to the script console.
+* The method `Subprocess.launch` makes it easier to launch app tools from the app with the same VM arguments as the app itself.
+* The method `ProjectUtilities.execAsync` has been added to complement `ProjectUtilities.exec`.
 * The method `StrangeImage.exists(identifier)` can be used to check whether a portrait-style image path points to a real image.
 * The method `StrangeImage.getAsBufferedImage` works like `StrangeImage.get` but converts vector images directly into bitmaps. (Prefer `StrangeImage.get` where possible.)
 * The `PlatformSupport.PLATFORM_IS_OSX` constant has been deprecated with no intention to remove. Instead, use `PlatformSupport.PLATFORM_IS_MAC`.
@@ -73,27 +96,50 @@ This is a **production** (non-beta) release.
 
 ### For plug-in developers
 
+* Added `arkham.Subprocess.launch` to simplify starting a child process that uses an executable class in the app JAR.
+
 * A host of script engine updates bring the JS engine close to ES6 level. This includes arrow functions, object/class methods, destructuring assignment improvements, new native JS object methods, and many bug fixes and performance improvements. More details and examples of these changes can be found under the notes for beta build 3970.
+
 * [Improved scripting (JS) API documentation](assets/jsdoc/) is now in beta. This corrects and expands existing documentation, links to the Java API when relevant, and includes basic documentation for built-in JS objects (`Array`, `Function`, and so on). The [Typescript definition files](https://github.com/CGJennings/se3docs/tree/master/script-lib-types) used to generate these docs are included in the se3docs repository. Suggestions, corrections, and improvements welcome. The [original JS API documentation](assets/jsdoc-legacy/) is still available during the transition.
+
 * The `DefaultPortrait.setSyntheticEdgeLimit` method lets developers extend the edges of the portrait, similar to adding synthetic bleed margins to a `Sheet`.
+
 * Added `HSBPanel.setTitle`/`getTitle` to change `tintPanel` title label.
+
 * Added `StrangeEons.getUrlForDocPage` to get a URL for a page in the se3docs site given its base file name (e.g., `"dm-preferences"`).
+
 * Method `FillInPreferenceCategory.addHelp` no longer takes a third argument (old code will still work).
+
 * Deprecated `JHelpButton.setWikiPage`; this now forwards to `setHelpPage`.
+
 * Removed `arkham.project.PluginWizard` (superseded by `PluginWizardDialog`).
+
 * Removed deprecated `arkham.dialog.prefs.SBOrderedList`.
+
 * Removed `PlatformSupport.isOSXMinorVersionAtLeast`, `isUsingAquaDerivedLookAndFeel`, `isUsingOSXSystemLookAndFeel`, `isUsingQuaquaLookAndFeel`.
+
 * The `OPT_*` bit flags in DIY are now package private; the methods `getAdvancedFlags()`, `setAdvancedFlags` and `isAdvancedFlagAvailable` have been removed. Use the relevant public methods instead: `setTransparentFaces`, `setVariableSizedFaces`, `setPortraitBackgroundFilled`, `setMarkerBackgroundFilled`, `setPortraitScaleUsesMinimum`, `setMarkerScaleUsesMinimum`,  `setPortraitClipping`, `setMarkerClipping`, `setCustomPortraitHandling` and the complementary getters.
+
 * The following classes have been removed: `GestureToolkit`, `GestureEvent`, `GestureListener`, `GestureEventAdapter`, `GestureCommand`.
+
 * In class `PluginBundlePublisher`, methods that used to take a `ProgressListener` parameter no longer do, as underlying infrastructure needed to support this has been removed in newer versions of Java.
+
 * `StrangeEons.fileBugReport` updated to link to a partially completed contact form; this also affects the **Help/Report a Bug** menu item.
+
 * The constant `self` is set to the script's global scope for consistency with other JS environments.
+
 * The `debug` script library has been removed. Use the built-in [source-level debugger](dm-debugger.md) instead. The `uiutils` library has been removed, though some useful functions from that library are now included in `utils.js` in the [Plug-in Authoring Kit](dm-pak.md).
+
 * The `libutils` script library is deprecated, with no plans for removal. It can still be used, but won't be featured in documentation and is no longer "registered" as a built-in library.
+
 * `ImageUtils.crop`: the `width` and `height` are now optional; if left off they default to include the remainder of the image.
+
 * `ImageUtils.tint`: corrected the (new version of the) documentation to state that the hue shift is measured in rotations, not degrees.
+
 * Added `ImageUtils.trim` (trims transparent pixels from image edges).
+
 * Support for **SE2 Compatibility Mode** has been removed: the class `PluginContext2xImpl` has been removed and is no longer returned from `PluginContextFactory`; the `*.ljs` ("legacy" JS) versions of script libraries have been removed; the **Preferences** dialog no longer lists the relevant settings; the setting key `script-SE2-compatibility` no longer has a default value, is not migrated, and has no effect if set.
+
 * Removed support for reading API documentation via the `javadoc://` and `scriptdoc://` protocols. The related classes `ca.cgjennings.io.protocols.CapturedStream`, `ca.cgjennings.io.protocols.SurrogateConnection`, `ca.cgjennings.io.protocols.APIDocumentCache` have also been removed.
 
 * The `sprintf`-style script library functions will now coerce numeric values when possible. This means that, for example, you can now pass a regular JS number to a `"%d"` conversion and it will not throw an exception. It is also now possible to pass a `Locale` or `Language` as the first argument to localize formatting (previously the interface locale was always used). Passing a locale of `null` as the first argument will prevent localization.
