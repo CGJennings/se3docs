@@ -46,7 +46,7 @@ Non-standard options are set just like standard options, but they can change fro
 Sets which [text anti-aliasing mode to use](um-install-troubleshooting.md#text-quality-issues). Used to correct text quality issues.
 
 `--xDebugException`
-Causes a fatal startup error. Used for testing.
+Causes a fatal start-up error. Used for testing.
 
 `--xDisableProjectRestore`
 Prevents Strange Eons from trying to re-open the project that was open when the app was last used. This is useful if a problem with this folder is preventing the app from starting.
