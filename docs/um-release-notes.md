@@ -11,7 +11,7 @@ This is an **early access beta release**.
 * Added a [non-interactive script runner mode](um-run-script.md), activated with command line option `--run <file>`.
 * Added support for Linux/arm64.
 * LCD text antialiasing is enabled by default on Linux, with a command line option to change the antialiasing mode.
-* The command line option `--xDisableJreCheck` skips the normal Java version checking performed at startup, allowing developers and expert users to try running the app with unsupported Java versions.
+* The command line option `--xDisableJreCheck` skips the normal Java version checking performed at startup, allowing developers and expert users to try running the app with unsupported Java versions. Currently, a Java version from 8 to 11 must be used if this flag is not set.
 * The command line option `--xDisablePluginLoading` prevents plug-ins from being loaded from bundles (except test bundles) for development and troubleshooting purposes.
 
 ### For plug-in developers
@@ -20,6 +20,7 @@ This is an **early access beta release**.
   * prevent other plug-ins from being loaded
   * reset the JVM command field to its default value
 * The [script debugger client](dm-debugger.md) now has a command line option, `--search` to find instances of Strange Eons with an available debug server and report their host and port for connecting.
+* Link labels now have a themeable default colour (`Theme.LINK_LABEL_FOREGROUND`).
 * The `SplitJoin` class can now create instances with a specified number of threads (for I/O-bound tasks).
 * The `Subprocess` class can now optionally disable redirection of the process's I/O streams to the script console.
 * The method `Subprocess.launch` makes it easier to launch app tools from the app with the same VM arguments as the app itself.
@@ -27,6 +28,7 @@ This is an **early access beta release**.
 * The method `StrangeImage.exists(identifier)` can be used to check whether a portrait-style image path points to a real image.
 * The method `StrangeImage.getAsBufferedImage` works like `StrangeImage.get` but converts vector images directly into bitmaps. (Prefer `StrangeImage.get` where possible.)
 * The `PlatformSupport.PLATFORM_IS_OSX` constant has been deprecated with no intention to remove. Instead, use `PlatformSupport.PLATFORM_IS_MAC`.
+* Overridable Method `Theme.isDarkOnLight()` simplifies creation of dark mode themes.
 
 ### Other changes
 
@@ -34,11 +36,14 @@ This is an **early access beta release**.
 * Plug-in catalog now uses https by default.
 * A simplified version of the previous script compatibility feature has been reinstated (off by default).
 * Removed the legacy version of the [script library docs](http://se3docs.cgjennings.ca/assets/jsdoc/).
+* Added dark theme colours for source code editor.
 
 ### Bug fixes
 
 * Double clicking an item in a list in the deck editor could result in an infinite loop trying to fit the item.
 * Script functions `string`, `gstring`, etc., do not pass format specifiers correctly.
+* Icon background of message dialog did not match theme colour.
+* About dialog colours now enforce light-on-dark even in dark themes, as some graphical elements do not work with dark themes.
 
 ### Changes to how subprocesses are launched
 
