@@ -16,11 +16,11 @@ function getVersion() {
 }
 
 function run() {
-	alert( 'Installer Example: Plug-in loaded' );
+    alert('Installer Example: Plug-in loaded');
 }
 
 function unload() {
-	alert( 'Installer Example: Plug-in unloaded' );
+    alert('Installer Example: Plug-in unloaded');
 }
 
 /**
@@ -30,5 +30,5 @@ function unload() {
  * plug-in is loaded.
  */
 function getPluginType() {
-	return arkham.plugins.Plugin.INJECTED;
+    return arkham.plugins.Plugin.INJECTED;
 }

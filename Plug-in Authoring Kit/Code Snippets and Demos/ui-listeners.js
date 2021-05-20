@@ -6,24 +6,24 @@
  * making one interface control react to the state
  * of another.
  */
- 
-useLibrary( 'ui' );
+
+useLibrary('ui');
 
 let c1, c2, panel;
-c1 = checkBox( 'Check box', true, function listener( actionEvent ) {
-	try {
-		// disable the second check box if the first check box
-		// is not selected (checked)
-		c2.enabled = c1.selected;
-	} catch( ex ) {
-		Error.handleUncaught( ex );
-	}
+c1 = checkBox('Check box', true, function listener(actionEvent) {
+    try {
+        // disable the second check box if the first check box
+        // is not selected (checked)
+        c2.enabled = c1.selected;
+    } catch (ex) {
+        Error.handleUncaught(ex);
+    }
 });
-c2 = checkBox( 'Dependent check box' );
+c2 = checkBox('Dependent check box');
 
 panel = new Stack();
-panel.add( c1, c2 );
-panel.createDialog( 'Test', '' ).showDialog();
+panel.add(c1, c2);
+panel.createDialog('Test', '').showDialog();
 
 //
 // A less compact way of adding the listener function would be:

@@ -43,7 +43,7 @@ function getVersion() {
  * (if any), and a PluginContext instance.
  */
 function run() {
-    println( 'Plug-in activated' );
+    println('Plug-in activated');
     bellClip.play();
 }
 
@@ -53,13 +53,13 @@ function run() {
  * resources you are using or perform other cleanup.
  */
 function unload() {
-	// If we successfully created the ClipPlayer object, it
-	// needs to be closed when we are done in order to free
-	// up the resources used by the audio system.
-	if( bellClip != null ) {
-		bellClip.close();
-		bellClip = null;
-	}
+    // If we successfully created the ClipPlayer object, it
+    // needs to be closed when we are done in order to free
+    // up the resources used by the audio system.
+    if (bellClip != null) {
+        bellClip.close();
+        bellClip = null;
+    }
 }
 
 /*
@@ -68,7 +68,7 @@ function unload() {
    to play a bell sound when the plug-in is activated.
 */
 let bellClip = new ca.cgjennings.ui.ClipPlayer(
-	new java.net.URL( 'res://example/bell.wav' ), false
+    new java.net.URL('res://example/bell.wav'), false
 );
 
 /*
@@ -79,7 +79,7 @@ let bellClip = new ca.cgjennings.ui.ClipPlayer(
    It lets us simulate the user activating the plug-in
    while we are testing and developing the code.
 */
-if( sourcefile == 'Quickscript' ) {
-	run();
-	unload();
+if (sourcefile == 'Quickscript') {
+    run();
+    unload();
 }

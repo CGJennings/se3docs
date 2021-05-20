@@ -4,7 +4,7 @@
  * This script demonstrates some of the capabilities of
  * printf/sprintf style functions.
  */
- 
+
 // The printf function prints formatted text to the console,
 // while sprintf returns the formatted text as a string.
 // You supply a pattern or template, and it fills in
@@ -40,19 +40,19 @@ printf("%i %d %o %x %X\n", 255, 255, 255, 255, 255);
 // the object for an integer conversion. Floating point types will have
 // their fractional part chopped off.
 printf("%d\n".repeat(10),
-	// JS number
-	3.5,
-	// Java integer types
-	new java.lang.Byte(127),
-	new java.lang.Short(32767),
-	new java.lang.Character(65535),
-	new java.lang.Integer(2147483647),
-	java.lang.Long.valueOf("9223372036854775807"),
-	new java.math.BigInteger("265252859812191058636308480000000"),
-	// Java floating point types
-	new java.lang.Float(3.40282e+38),
-	new java.lang.Double(1.79769e+308),
-	new java.math.BigDecimal("9876543210.123456789")
+    // JS number
+    3.5,
+    // Java integer types
+    new java.lang.Byte(127),
+    new java.lang.Short(32767),
+    new java.lang.Character(65535),
+    new java.lang.Integer(2147483647),
+    java.lang.Long.valueOf("9223372036854775807"),
+    new java.math.BigInteger("265252859812191058636308480000000"),
+    // Java floating point types
+    new java.lang.Float(3.40282e+38),
+    new java.lang.Double(1.79769e+308),
+    new java.math.BigDecimal("9876543210.123456789")
 );
 
 // Here are the conversion codes for floating point numbers:

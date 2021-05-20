@@ -4,7 +4,7 @@
  * Demonstrates the use of Thread.busyWindow.
  */
 
-useLibrary( 'threads' );
+useLibrary('threads');
 
 /*
   Thread.busyWindow allows you to perform a long-running
@@ -16,11 +16,11 @@ useLibrary( 'threads' );
 */
 
 function task1() {
-	// simulate doing a lot of work
-	sleep( 1500 );
+    // simulate doing a lot of work
+    sleep(1500);
 }
 
-Thread.busyWindow( task1 );
+Thread.busyWindow(task1);
 
 
 
@@ -33,15 +33,15 @@ Thread.busyWindow( task1 );
   you to provide feedback on the progress being made.
 */
 
-function task2( callback ) {
-	callback.maximumProgress = 15;
-	for( let i=0; i<=15; ++i ) {
-		callback.currentProgress = i;
-		sleep( 100 );
-	}
+function task2(callback) {
+    callback.maximumProgress = 15;
+    for (let i = 0; i <= 15; ++i) {
+        callback.currentProgress = i;
+        sleep(100);
+    }
 }
 
-Thread.busyWindow( task2, 'Making Progress...' );
+Thread.busyWindow(task2, 'Making Progress...');
 
 
 
@@ -50,19 +50,19 @@ Thread.busyWindow( task2, 'Making Progress...' );
   using the callback.
 */
 
-function task3( callback ) {
-	callback.maximumProgress = 100;
-	for( let i=0; i<=100; ++i ) {
-		if( i == 50 ) {
-			callback.title = 'Phase II';
-		}
-		callback.currentProgress = i;
-		callback.status = 'Step ' + i, 100;
-		sleep( 50 );
-	}
+function task3(callback) {
+    callback.maximumProgress = 100;
+    for (let i = 0; i <= 100; ++i) {
+        if (i == 50) {
+            callback.title = 'Phase II';
+        }
+        callback.currentProgress = i;
+        callback.status = 'Step ' + i, 100;
+        sleep(50);
+    }
 }
 
-Thread.busyWindow( task3, 'Phase I' );
+Thread.busyWindow(task3, 'Phase I');
 
 
 
@@ -75,18 +75,18 @@ Thread.busyWindow( task3, 'Phase I' );
   and you should stop the operation at the earliest
   opportunity.
 */
- 
-function task4( callback ) {
-	callback.maximumProgress = 1000;
-	for( let i=0; i<=1000; ++i ) {
-		// quit if the user presses Cancel
-		if( callback.cancelled ) return;
-		callback.currentProgress = i;
-		sleep( 10 );
-	}
+
+function task4(callback) {
+    callback.maximumProgress = 1000;
+    for (let i = 0; i <= 1000; ++i) {
+        // quit if the user presses Cancel
+        if (callback.cancelled) return;
+        callback.currentProgress = i;
+        sleep(10);
+    }
 }
 
-Thread.busyWindow( task4, 'Lengthy Task...', true );
+Thread.busyWindow(task4, 'Lengthy Task...', true);
 
 
 /*

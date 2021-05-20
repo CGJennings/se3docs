@@ -30,7 +30,7 @@ const UIUtils = {};
  *
  * returns the subcomponent of parent with the specified name, or null
  */
-UIUtils.findComponentByName = (function () {
+UIUtils.findComponentByName = (function() {
     function _findComponentByName(parent, name) {
         if (parent.name === name)
             return parent;
@@ -79,7 +79,7 @@ UIUtils.findComponentByName = (function () {
  * parent : the root of the component tree to print
  * prints a component tree
  */
-UIUtils.printTree = (function () {
+UIUtils.printTree = (function() {
     function _printTree(buff, parent, level) {
         for (let i = 0; i < level; ++i)
             buff.append("  ");
@@ -182,22 +182,22 @@ const AOP = {};
  * functionName : the name of the member function
  * beforeFunction : the function to be called before the affected function
  */
-AOP.addBefore = function addBefore( object, functionName, beforeFunction ) {
-	if( arguments.length == 2 ) {
-		AOP.addBefore( null, arguments[0], arguments[1] );
-		return;
-	}
-	if( typeof functionName == "function" )
-		throw new Error( "pass the function's name, not the function itself" );
-	if( !object ) object = self;
-	let innerFunc = object[ functionName ];
-	if( innerFunc === undefined )
-		throw new Error( "no function with this name in object: " + functionName );
-	let outerFunc = function before_function() {
-		return innerFunc.apply( this, beforeFunction( arguments, innerFunc, this, functionName ) );
-	};
-	outerFunc._innerFunction = innerFunc;
-	object[ functionName ] = outerFunc;
+AOP.addBefore = function addBefore(object, functionName, beforeFunction) {
+    if (arguments.length == 2) {
+        AOP.addBefore(null, arguments[0], arguments[1]);
+        return;
+    }
+    if (typeof functionName == "function")
+        throw new Error("pass the function's name, not the function itself");
+    if (!object) object = self;
+    let innerFunc = object[functionName];
+    if (innerFunc === undefined)
+        throw new Error("no function with this name in object: " + functionName);
+    let outerFunc = function before_function() {
+        return innerFunc.apply(this, beforeFunction(arguments, innerFunc, this, functionName));
+    };
+    outerFunc._innerFunction = innerFunc;
+    object[functionName] = outerFunc;
 };
 
 /**
@@ -209,23 +209,23 @@ AOP.addBefore = function addBefore( object, functionName, beforeFunction ) {
  * functionName : the name of the member function
  * afterFunction : the function to be called after the affected function
  */
-AOP.addAfter = function addAfter( object, functionName, afterFunction ) {
-	if( arguments.length == 2 ) {
-		AOP.addAfter( null, arguments[0], arguments[1] );
-		return;
-	}
-	if( typeof functionName == "function" )
-		throw new Error( "pass the function's name, not the function itself" );
-	if( !object ) object = self;
-	let innerFunc = object[ functionName ];
-	if( innerFunc === undefined )
-		throw new Error( "no function with this name in object: " + functionName );
-	let outerFunc = function after_function() {
-		var retVal = innerFunc.apply( this, arguments );
-		return afterFunction( retVal, arguments, innerFunc, this, functionName );
-	};
-	outerFunc._innerFunction = innerFunc;
-	object[ functionName ] = outerFunc;
+AOP.addAfter = function addAfter(object, functionName, afterFunction) {
+    if (arguments.length == 2) {
+        AOP.addAfter(null, arguments[0], arguments[1]);
+        return;
+    }
+    if (typeof functionName == "function")
+        throw new Error("pass the function's name, not the function itself");
+    if (!object) object = self;
+    let innerFunc = object[functionName];
+    if (innerFunc === undefined)
+        throw new Error("no function with this name in object: " + functionName);
+    let outerFunc = function after_function() {
+        var retVal = innerFunc.apply(this, arguments);
+        return afterFunction(retVal, arguments, innerFunc, this, functionName);
+    };
+    outerFunc._innerFunction = innerFunc;
+    object[functionName] = outerFunc;
 };
 
 /**
@@ -235,25 +235,25 @@ AOP.addAfter = function addAfter( object, functionName, afterFunction ) {
  * object : the object that contains the function (default is the global object)
  * functionName : the name of the member function
  */
-AOP.removeAll = function removeAll( object, functionName ) {
-	if( arguments.length == 1 ) {
-		AOP.removeBeforeAfter( null, arguments[0] );
-		return;
-	}
-	if( typeof functionName == "function" )
-		throw new Error( "pass the function's name, not the function itself" );
-	if( !object ) object = self;
-	let outerFunc = object[ functionName ];
-	if( outerFunc === undefined )
-		throw new Error( "no function with this name in object: " + functionName );
-	let innerFunc = outerFunc["_innerFunction"];
+AOP.removeAll = function removeAll(object, functionName) {
+    if (arguments.length == 1) {
+        AOP.removeBeforeAfter(null, arguments[0]);
+        return;
+    }
+    if (typeof functionName == "function")
+        throw new Error("pass the function's name, not the function itself");
+    if (!object) object = self;
+    let outerFunc = object[functionName];
+    if (outerFunc === undefined)
+        throw new Error("no function with this name in object: " + functionName);
+    let innerFunc = outerFunc["_innerFunction"];
 
-	// there are no more before or afters set on the function
-	if( !innerFunc )
-		return;
+    // there are no more before or afters set on the function
+    if (!innerFunc)
+        return;
 
-	object[ functionName ] = innerFunc;
+    object[functionName] = innerFunc;
 
-	// recursively check the restored function to remove all levels of before/after
-	AOP.removeBeforeAfter( object, functionName, remove );
+    // recursively check the restored function to remove all levels of before/after
+    AOP.removeBeforeAfter(object, functionName, remove);
 };

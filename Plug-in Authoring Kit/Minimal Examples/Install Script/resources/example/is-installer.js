@@ -20,9 +20,9 @@
  * Called after the bundle is linked to the application,
  * but before the plug-in is loaded.
  */
-function install( pluginBundle ) {
-	java.awt.Toolkit.getDefaultToolkit().beep();
-	java.lang.System.out.println( 'install called for ' + pluginBundle.file.name );
+function install(pluginBundle) {
+    java.awt.Toolkit.getDefaultToolkit().beep();
+    java.lang.System.out.println('install called for ' + pluginBundle.file.name);
 }
 
 /**
@@ -30,7 +30,7 @@ function install( pluginBundle ) {
  * Called when the application is exiting after the
  * user requests that the plug-in be uninstalled.
  */
-function uninstall( pluginBundle ) {
-	java.awt.Toolkit.getDefaultToolkit().beep();
-	java.lang.System.out.println( 'uninstall called for ' + pluginBundle.file.name );
+function uninstall(pluginBundle) {
+    java.awt.Toolkit.getDefaultToolkit().beep();
+    java.lang.System.out.println('uninstall called for ' + pluginBundle.file.name);
 }

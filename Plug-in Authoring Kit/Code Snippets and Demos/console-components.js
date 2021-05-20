@@ -33,28 +33,28 @@
  * main application window.
  */
 
-useLibrary( 'imageutils' );
-importPackage( javax.swing );
+useLibrary('imageutils');
+importPackage(javax.swing);
 
 let nameField = new JTextField();
-let okBtn = new JButton( 'OK' );
+let okBtn = new JButton('OK');
 
 // A project: URL locates files in the currently open project
-let yellowSign = ImageUtils.get( 'project:Code Snippets and Demos/yellow-sign.png', true );
+let yellowSign = ImageUtils.get('project:Code Snippets and Demos/yellow-sign.png', true);
 
 okBtn.addActionListener(
-	function actionPerformed() {		
-		println( '\nHey there, ' + nameField.text + '.' );
-		print( 'Tell me, have you seen the yellow sign? ' );
-		Console.printImage( yellowSign );
-		println();
-		Console.printHTML( '<b><i>Well you have now!</i></b>' );
-		println();
-	}
+    function actionPerformed() {
+        println('\nHey there, ' + nameField.text + '.');
+        print('Tell me, have you seen the yellow sign? ');
+        Console.printImage(yellowSign);
+        println();
+        Console.printHTML('<b><i>Well you have now!</i></b>');
+        println();
+    }
 );
 
-print( 'Name: ' );
-Console.printComponent( nameField );
-print( '   ' );
-Console.printComponent( okBtn );
-println( '   ' );
+print('Name: ');
+Console.printComponent(nameField);
+print('   ');
+Console.printComponent(okBtn);
+println('   ');

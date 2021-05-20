@@ -26,12 +26,12 @@
 // Create a new Arkham Horror investigator; this will require
 // the Arkham Horror plug-in, so we ensure that's installed first.
 resources.CoreComponents.validateCoreComponents(
-	'CATALOGUEID{7c299a1e-3ed6-49ea-9830-fc5c967764e9:2013-7-27-0-0-0-0}'
+    'CATALOGUEID{7c299a1e-3ed6-49ea-9830-fc5c967764e9:2013-7-27-0-0-0-0}'
 );
-Eons.addEditor( new arkham.InvestigatorEditor() );
+Eons.addEditor(new arkham.InvestigatorEditor());
 
 // Use the new component's private settings for $-notation:
-useSettings( Component );
+useSettings(Component);
 
 // Set this to the standard location of the sanity value;
 // this controls where we will paint our value, and should
@@ -61,44 +61,44 @@ $sanity-region = '-200,-200,100,100';
 // The arguments passed to this function are: a graphics context that
 // can be used to paint on the sheet; the game component being updated;
 // and the specific sheet of the game component that is being repainted.
-function onPaint( g, gc, sheet ) {
-	let font, region;
+function onPaint(g, gc, sheet) {
+    let font, region;
 
-	// This is called for every sheet (card face); we need to make
-	// sure that we are dealing with the *front* face since that
-	// is the only one we want to modify. To do that we ask the
-	// component for the array of faces currently attached to it,
-	// and check if the one we are drawing matched the one at
-	// index 0 of that array. (The order of the elements in this
-	// array will match the order of the tabs in the preview area
-	// of the component editor.)
-	if( sheet != gc.sheets[0] ) return;
+    // This is called for every sheet (card face); we need to make
+    // sure that we are dealing with the *front* face since that
+    // is the only one we want to modify. To do that we ask the
+    // component for the array of faces currently attached to it,
+    // and check if the one we are drawing matched the one at
+    // index 0 of that array. (The order of the elements in this
+    // array will match the order of the tabs in the preview area
+    // of the component editor.)
+    if (sheet != gc.sheets[0]) return;
 
-	// Change $-notation to refer to the game component being updated.
-	useSettings( gc );
-	// The rest of the function is specific to painting a fixed Sanity
-	// value: we set the drawing colour of the graphics context to the
-	// colour used for black by Arkham Horror components (which is stored
-	// in one of the master settings for that game). We then create a
-	// region based on the custom region we defined for our component;
-	// this is where we will draw our Sanity value, and it should match
-	// the original location before we moved that off the card face.
-	// We then get the font we want to use; the ArkhamFonts class is defined
-	// by the Arkham Typefaces plug-in and is used to share fonts between
-	// the various games in the Arkham Horror family (Arkham Horror,
-	// Mansions of Madness, etc.). Finally, we draw the string '3' at the
-	// location and size used for the Sanity attribute, replacing the
-	// calculated value (which was already drawn, but now appears off the
-	// card face area so it isn't visible) with our custom, fixed value.
-	// See https://cgjennings.github.io/se3docs/assets/javadoc/ca/cgjennings/apps/arkham/sheet/Sheet
-	// for details on the drawTitle method.
-	g.setPaint( new Colour( $ah-black-colour ) );
-	// for demo purposes, draw the sanity value in red to make it stand out;
-	// if you were really customizing a component, you'd delete this line:
-	g.setPaint( new Colour( $ah-red-colour ) );
-	region = new Region( $fixed-sanity-region );
-	font = resources.ArkhamFonts.monoTitleFont;
-	sheet.drawTitle( g, '3', region, font, $sanity-pointsize, 0 );
+    // Change $-notation to refer to the game component being updated.
+    useSettings(gc);
+    // The rest of the function is specific to painting a fixed Sanity
+    // value: we set the drawing colour of the graphics context to the
+    // colour used for black by Arkham Horror components (which is stored
+    // in one of the master settings for that game). We then create a
+    // region based on the custom region we defined for our component;
+    // this is where we will draw our Sanity value, and it should match
+    // the original location before we moved that off the card face.
+    // We then get the font we want to use; the ArkhamFonts class is defined
+    // by the Arkham Typefaces plug-in and is used to share fonts between
+    // the various games in the Arkham Horror family (Arkham Horror,
+    // Mansions of Madness, etc.). Finally, we draw the string '3' at the
+    // location and size used for the Sanity attribute, replacing the
+    // calculated value (which was already drawn, but now appears off the
+    // card face area so it isn't visible) with our custom, fixed value.
+    // See https://cgjennings.github.io/se3docs/assets/javadoc/ca/cgjennings/apps/arkham/sheet/Sheet
+    // for details on the drawTitle method.
+    g.setPaint(new Colour($ah-black-colour));
+    // for demo purposes, draw the sanity value in red to make it stand out;
+    // if you were really customizing a component, you'd delete this line:
+    g.setPaint(new Colour($ah-red-colour));
+    region = new Region($fixed-sanity-region);
+    font = resources.ArkhamFonts.monoTitleFont;
+    sheet.drawTitle(g, '3', region, font, $sanity-pointsize, 0);
 }
 
 // Calling the toSource() function returns a copy of the source

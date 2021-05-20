@@ -44,60 +44,60 @@ let myControl = new swing.JTextField(20);
 // You need to use JavaAdapter to extend Java classes in nontrivial ways:
 
 let myPrefs = new JavaAdapter(
-	// This is the class you want to extend:
-	arkham.dialog.prefs.FillInPreferenceCategory,
-	// After the class you could also have a list of interfaces to implement,
-	// but we don't need to do that here.
-	// (Java is single inheritance, so at most one class is allowed, but
-	// any number of interfaces)
-	
-	// After the class/interface list, you provide a script object with the
-	// functions (methods) that you want to override from the superclass:
-	{
-		loadSettings: function() {
-			// This weird syntax lets us call the superclass, in this case
-			// so that it will load settings for the *managed* controls.
-			this.super$loadSettings();
+    // This is the class you want to extend:
+    arkham.dialog.prefs.FillInPreferenceCategory,
+    // After the class you could also have a list of interfaces to implement,
+    // but we don't need to do that here.
+    // (Java is single inheritance, so at most one class is allowed, but
+    // any number of interfaces)
 
-			// Now that we took care of managed controls, we can set up
-			// our unmanaged controls:
-			let msss = this.settings.get( 'my-super-secret-setting', 'shhhh!!' );
-			printf( "Loaded the secret setting '%s'.\n", msss );
-			myControl.text = msss;
-		},
-		storeSettings: function() {
-			// Again, we want to let the superclass do its thing:
-			this.super$storeSettings();
-			
-			// And then we can examine our custom controls and write our
-			// own settings out accordingly:
-			let msss = myControl.text;
-			this.settings.set( 'my-super-secret-setting', msss );
-			printf( "Stored the secret setting '%s'.\n", msss );
-		}
-	},
-	
-	// These are the parameters for the FillInPreferenceCategory constructor:
-	// that constructor has more than one possible signature; we're using
-	// the (String,String) one that takes a title and icon resource.
-	'My Custom Prefs',
-	'icons/application/prefs-drawing.png'
+    // After the class/interface list, you provide a script object with the
+    // functions (methods) that you want to override from the superclass:
+    {
+        loadSettings: function() {
+            // This weird syntax lets us call the superclass, in this case
+            // so that it will load settings for the *managed* controls.
+            this.super$loadSettings();
+
+            // Now that we took care of managed controls, we can set up
+            // our unmanaged controls:
+            let msss = this.settings.get('my-super-secret-setting', 'shhhh!!');
+            printf("Loaded the secret setting '%s'.\n", msss);
+            myControl.text = msss;
+        },
+        storeSettings: function() {
+            // Again, we want to let the superclass do its thing:
+            this.super$storeSettings();
+
+            // And then we can examine our custom controls and write our
+            // own settings out accordingly:
+            let msss = myControl.text;
+            this.settings.set('my-super-secret-setting', msss);
+            printf("Stored the secret setting '%s'.\n", msss);
+        }
+    },
+
+    // These are the parameters for the FillInPreferenceCategory constructor:
+    // that constructor has more than one possible signature; we're using
+    // the (String,String) one that takes a title and icon resource.
+    'My Custom Prefs',
+    'icons/application/prefs-drawing.png'
 );
 
 // This demonstrates myPrefs REALLY is a subclass, so you can pass it to any
 // part of the API that calls for a PreferenceCategory without type errors:
-println( myPrefs.getClass().getSuperclass() );
+println(myPrefs.getClass().getSuperclass());
 
 // Call some methods on the superclass, including adding both a managed
 // control AND the text field that we will manage ourselves:
-myPrefs.heading( 'Obvious stuff' );
-myPrefs.addCheckBox( 'my-super-obvious-setting', 'Obvious setting is obvious', true );
-myPrefs.heading( 'Secret stuff' );
-myPrefs.label( 'Set the super secret setting to:' );
-myPrefs.addUnmanagedControl( myControl );
+myPrefs.heading('Obvious stuff');
+myPrefs.addCheckBox('my-super-obvious-setting', 'Obvious setting is obvious', true);
+myPrefs.heading('Secret stuff');
+myPrefs.label('Set the super secret setting to:');
+myPrefs.addUnmanagedControl(myControl);
 
 // Add our custom category, demo it, and then remove it again:
 const Preferences = arkham.dialog.prefs.Preferences;
-Preferences.registerCategory( myPrefs );
-Eons.window.showPreferencesDialog( null, myPrefs );
-Preferences.unregisterCategory( myPrefs );
+Preferences.registerCategory(myPrefs);
+Eons.window.showPreferencesDialog(null, myPrefs);
+Preferences.unregisterCategory(myPrefs);
