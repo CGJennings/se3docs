@@ -10,11 +10,13 @@ This is an **early access beta release**.
 
 * Added a [non-interactive script runner mode](um-run-script.md), activated with command line option `--run <file>`.
 * Code editor tabs can format supported file types.
+* The find/replace fields in the code editor will remember the most recently used patterns and use them when the panel is first opened (unless a selection is active, in which case the selection is used).
 * Added a preference option to ignore missing semicolons in script files (some JS programming styles leave these out intentionally).
 * Added support for Linux/arm64.
 * LCD text antialiasing is enabled by default on Linux, with a command line option to change the antialiasing mode.
 * The command line option `--xDisableJreCheck` skips the normal Java version checking performed at startup, allowing developers and expert users to try running the app with unsupported Java versions. Currently, a Java version from 8 to 11 must be used if this flag is not set.
 * The command line option `--xDisablePluginLoading` prevents plug-ins from being loaded from bundles (except test bundles) for development and troubleshooting purposes.
+* Experimental [TypeScript support](dm-typescript.md).
 
 ### For plug-in developers
 
