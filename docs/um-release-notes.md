@@ -20,6 +20,7 @@ This is an **early access beta release**.
 
 ### For plug-in developers
 
+* Basic support for loading CommonJS-style (or Node.js) modules with `require(relativePathToModuleScript)`. See example [Code Snippets and Demos/commonjs-modules.js](https://github.com/CGJennings/se3docs/blob/main/Plug-in%20Authoring%20Kit/Code%20Snippets%20and%20Demos/commonjs-modules.js).
 * The [Test Plug-in dialog](dm-test-plugin.md) has new options:
   * prevent other plug-ins from being loaded
   * reset the JVM command field to its default value
