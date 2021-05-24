@@ -9,31 +9,14 @@ This is an **early access beta release**.
 ### Features and enhancements
 
 * Added a [non-interactive script runner mode](um-run-script.md), activated with command line option `--run <file>`.
-* Code editor tabs can format supported file types.
-* The find/replace fields in the code editor will remember the most recently used patterns and use them when the panel is first opened (unless a selection is active, in which case the selection is used).
-* Added a preference option to ignore missing semicolons in script files (some JS programming styles leave these out intentionally).
+* Added a new dark theme, *Yuggoth*, which is now the default if dark mode is detected on app start. Separate light and dark themes can be selected in the [Preferences](um-ui-preferences.md) dialog. Note, though, that since changing the theme requires an app restart the app won't respond dynamically to theme changes.
 * Added support for Linux/arm64.
-* LCD text antialiasing is enabled by default on Linux, with a command line option to change the antialiasing mode.
+* LCD text antialiasing is enabled by default on Linux, with a [command line option to change the antialiasing mode](um-install-troubleshooting.md#text-quality-issues).
 * The command line option `--xDisableJreCheck` skips the normal Java version checking performed at startup, allowing developers and expert users to try running the app with unsupported Java versions. Currently, a Java version from 8 to 11 must be used if this flag is not set.
 * The command line option `--xDisablePluginLoading` prevents plug-ins from being loaded from bundles (except test bundles) for development and troubleshooting purposes.
-* Experimental [TypeScript support](dm-typescript.md).
-
-### For plug-in developers
-
-* Basic support for loading CommonJS-style (or Node.js) modules with `require(relativePathToModuleScript)`. See example [Code Snippets and Demos/commonjs-modules.js](https://github.com/CGJennings/se3docs/blob/main/Plug-in%20Authoring%20Kit/Code%20Snippets%20and%20Demos/commonjs-modules.js).
-* The [Test Plug-in dialog](dm-test-plugin.md) has new options:
-  * prevent other plug-ins from being loaded
-  * reset the JVM command field to its default value
-* The [script debugger client](dm-debugger.md) now has a command line option, `--search` to find instances of Strange Eons with an available debug server and report their host and port for connecting.
-* Link labels now have a themeable default colour (`Theme.LINK_LABEL_FOREGROUND`).
-* The `SplitJoin` class can now create instances with a specified number of threads (for I/O-bound tasks).
-* The `Subprocess` class can now optionally disable redirection of the process's I/O streams to the script console.
-* The method `Subprocess.launch` makes it easier to launch app tools from the app with the same VM arguments as the app itself.
-* The method `ProjectUtilities.execAsync` has been added to complement `ProjectUtilities.exec`.
-* The method `StrangeImage.exists(identifier)` can be used to check whether a portrait-style image path points to a real image.
-* The method `StrangeImage.getAsBufferedImage` works like `StrangeImage.get` but converts vector images directly into bitmaps. (Prefer `StrangeImage.get` where possible.)
-* The `PlatformSupport.PLATFORM_IS_OSX` constant has been deprecated with no intention to remove. Instead, use `PlatformSupport.PLATFORM_IS_MAC`.
-* Overridable Method `Theme.isDarkOnLight()` simplifies creation of dark mode themes.
+* Text editor tabs can **Format** supported file types.
+* The find/replace fields in the code editor will remember the most recently used patterns and use them when the panel is first opened (unless a selection is active, in which case the selection is used).
+* Added a preference option to ignore missing semicolons in script files even with warnings enabled (some JS programming styles leave these out intentionally).
 
 ### Other changes
 
@@ -49,6 +32,25 @@ This is an **early access beta release**.
 * Script functions `string`, `gstring`, etc., do not pass format specifiers correctly.
 * Icon background of message dialog did not match theme colour.
 * About dialog colours now enforce light-on-dark even in dark themes, as some graphical elements do not work with dark themes.
+* Fixed issues that could prevent documents from opening when the Tcho Tcho theme was used on Windows.
+
+### For plug-in developers
+
+* Experimental [TypeScript support](dm-typescript.md).
+* Basic support for loading CommonJS-style (or Node.js) modules with `require(relativePathToModuleScript)`. See the example [commonjs-modules.js](https://github.com/CGJennings/se3docs/blob/main/Plug-in%20Authoring%20Kit/Code%20Snippets%20and%20Demos/commonjs-modules.js).
+* The [Test Plug-in dialog](dm-test-plugin.md) has new options:
+  * prevent other plug-ins from being loaded
+  * reset the JVM command field to its default value
+* The [script debugger client](dm-debugger.md) now has a command line option, `--search` to find instances of Strange Eons with an available debug server and report their host and port for connecting.
+* Link labels now have a themeable default colour (`Theme.LINK_LABEL_FOREGROUND`).
+* The `SplitJoin` class can now create instances with a specified number of threads (for I/O-bound tasks).
+* The `Subprocess` class can now optionally disable redirection of the process's I/O streams to the script console.
+* The method `Subprocess.launch` makes it easier to launch app tools from the app with the same VM arguments as the app itself.
+* The method `ProjectUtilities.execAsync` has been added to complement `ProjectUtilities.exec`.
+* The method `StrangeImage.exists(identifier)` can be used to check whether a portrait-style image path points to a real image.
+* The method `StrangeImage.getAsBufferedImage` works like `StrangeImage.get` but converts vector images directly into bitmaps. (Prefer `StrangeImage.get` where possible.)
+* The `PlatformSupport.PLATFORM_IS_OSX` constant has been deprecated with no intention to remove. Instead, use `PlatformSupport.PLATFORM_IS_MAC`.
+* Overridable Method `Theme.isDarkOnLight()` simplifies creation of dark mode themes.
 
 ### Changes to how subprocesses are launched
 
