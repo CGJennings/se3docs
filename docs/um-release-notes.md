@@ -6,10 +6,11 @@ The following changes are planned for inclusion in the next update. This list is
 
 This is an **early access beta release**.
 
-### Features and enhancements
+### Features, enhancements, and changes
 
 * Added a [non-interactive script runner mode](um-run-script.md), activated with command line option `--run <file>`.
 * Added a new dark theme, *Yuggoth*, which is now the default if dark mode is detected on app start. Separate light and dark themes can be selected in the [Preferences](um-ui-preferences.md) dialog. Note, though, that since changing the theme requires an app restart the app won't respond dynamically to theme changes.
+* Added dark theme colours to the text/code editor.
 * Added support for Linux/arm64.
 * LCD text antialiasing is enabled by default on Linux, with a [command line option to change the antialiasing mode](um-install-troubleshooting.md#text-quality-issues).
 * The command line option `--xDisableJreCheck` skips the normal Java version checking performed at startup, allowing developers and expert users to try running the app with unsupported Java versions. Currently, a Java version from 8 to 11 must be used if this flag is not set.
@@ -17,22 +18,9 @@ This is an **early access beta release**.
 * Text editor tabs can **Format** supported file types.
 * The find/replace fields in the code editor will remember the most recently used patterns and use them when the panel is first opened (unless a selection is active, in which case the selection is used).
 * Added a preference option to ignore missing semicolons in script files even with warnings enabled (some JS programming styles leave these out intentionally).
-
-### Other changes
-
+* The plug-in catalog now uses https by default.
 * The now meaningless command line option `xDisableFX` has been removed.
-* Plug-in catalog now uses https by default.
-* A simplified version of the previous script compatibility feature has been reinstated (off by default).
-* Removed the legacy version of the [script library docs](http://se3docs.cgjennings.ca/assets/jsdoc/).
-* Added dark theme colours for source code editor.
-
-### Bug fixes
-
-* Double clicking an item in a list in the deck editor could result in an infinite loop trying to fit the item.
-* Script functions `string`, `gstring`, etc., do not pass format specifiers correctly.
-* Icon background of message dialog did not match theme colour.
-* About dialog colours now enforce light-on-dark even in dark themes, as some graphical elements do not work with dark themes.
-* Fixed issues that could prevent documents from opening when the Tcho Tcho theme was used on Windows.
+* A simplified, less performance-degrading, version of the previous script compatibility feature has been reinstated (off by default, enable in **Preferences/Plug-ins/Compatibility Mode**).
 
 ### For plug-in developers
 
@@ -51,8 +39,9 @@ This is an **early access beta release**.
 * The method `StrangeImage.getAsBufferedImage` works like `StrangeImage.get` but converts vector images directly into bitmaps. (Prefer `StrangeImage.get` where possible.)
 * The `PlatformSupport.PLATFORM_IS_OSX` constant has been deprecated with no intention to remove. Instead, use `PlatformSupport.PLATFORM_IS_MAC`.
 * Overridable Method `Theme.isDarkOnLight()` simplifies creation of dark mode themes.
+* Removed the legacy version of the [script library docs](http://se3docs.cgjennings.ca/assets/jsdoc/).
 
-### Changes to how subprocesses are launched
+#### Changes to how subprocesses are launched
 
 Certain preference settings could be used to launch subprocesses such as the script debugging client. These settings are no longer used. Instead the app will launch these tools itself, without reference to these keys. This allows the exact command used to launch these commands to be updated automatically to keep up to date with changes to the Java runtime.
 
@@ -72,7 +61,7 @@ These keys can contain the following variables, which will be expanded to the re
 `%h` the host name of the debug server (debugger client only)
 `%p` the port number of the debug server (debugger client only)
 
-### Pack 200 transition
+#### Pack 200 transition
 
 Publishing a plug-in bundle (preparing it for a catalog by creating a file ending in `.pbz`, `.pgz`, or `.plzm`) no longer applies Pack200 compression as part of the publication process. This change is necessary for Strange Eons to run under Java 14+, which drops support for Pack200. Existing plug-ins in the official catalog have been re-published without Pack200. (Older versions of Strange Eons can detect that Pack200 was not applied and will correctly install the repacked versions.) **If you operate a third party plug-in catalog**, you must re-publish your plug-ins as well. You can do this as follows:
 1. Make sure you have a plain bundle for each published plug-in. A published bundle can be unpacked to a plain bundle by opening (double clicking) it in a project. *This must be done using build 4163 or earlier.*
@@ -84,6 +73,14 @@ Publishing a plug-in bundle (preparing it for a catalog by creating a file endin
 7. Wait for the published bundles to be rebuilt.
 8. Change the `true` back to `false`, then save and close the script file.
 9. Upload the contents of the **Upload Queue** to your catalog server as you normally would.
+
+### Bug fixes
+
+* Double clicking an item in a list in the deck editor could result in an infinite loop trying to fit the item.
+* Script functions `string`, `gstring`, etc., do not pass format specifiers correctly.
+* Icon background of message dialog did not match theme colour.
+* About dialog colours now enforce light-on-dark even in dark themes, as some graphical elements do not work with dark themes.
+* Fixed issues that could prevent documents from opening when the Tcho Tcho theme was used on Windows.
 
 ## Build 4163
 
