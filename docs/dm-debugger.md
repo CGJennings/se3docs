@@ -1,32 +1,30 @@
 # Script debugger
 
-Strange Eons includes a *source-level debugger* to help you find and solve bugs in your script code. It allows you to run scripts line-by-line and watch how the values of script variables change and what values your functions are returning. This lets you verify whether your code is doing what you think it is doing, and if not, why not. This page will show you how to get the debugger running and provide some strategies you can use to fix (and prevent!) bugs.
+Strange Eons includes a *source-level debugger* to help you find and solve bugs in your script code. It allows you to run scripts line-by-line and observe how the values of script variables change, what values your functions are returning, and what decisions are being made at branch points like *if* statements. This lets you verify whether your code is doing what you think it is doing, and if not, why not. This page will show you how to get the debugger running and provide some strategies you can use to fix (and prevent!) bugs.
 
 ## Setting up
 
-The script debugger is a separate app that communicates with Strange Eons while it is running. This communication happens over a network connection. When debugging is enabled in Strange Eons, it will open a local network port. When you start the debugger, it will connect to that port. Then the two apps can "talk" to each other to exchange the information needed for debugging to work.
-
-> Enabling the debugger *does not* expose Strange Eons to the entire Internet. Using the default settings, it will only be visible to apps on the same device. There is, however, a preference option to **Enable remote debugging** that will let you debug Strange Eons using a copy of the debugger running on another computer. This can be convenient (each app gets its own screen), but make sure you have set up a firewall or other appropriate security precautions. This topic is beyond the scope of this introduction.
+The debugging system has two parts: a *client* and a *server*. The server runs inside Strange Eons. The client is a separate app that talks to the the server to get information about the state of the script system and pass on your debugging commands. It takes the information that it gets from the server and presents it to you in a sensible way.
 
 To *enable debugging in Strange Eons*, follow the steps below. You only need to do this once.
 
 1. Open the [Preferences dialog](um-ui-preferences.md) and choose the **Plug-ins** category.
-2. Scroll down to the **Script Debugger** section and ensure the **Enable Debugger** is checked.
+2. Scroll down to the **Script Debugger** section and ensure that **Enable Debugger** is checked.
 3. When the debugger is active, you will see a small bug icon in the upper right corner of the application window. Moving the pointer over the bug icon will display the information needed to connect to the debugger client.
 
 ![debugger preference settings](images/debugger-prefs.png)
 
-Once you change these settings, you can continue using Strange Eons normally. You only need to start the debugger when you actually want to use it.
+Once you change these settings, you can continue using Strange Eons normally. You only need to start the separate debugger app (the *client*) when you actually want to use it.
 
 ## Starting a debugging session
 
-There are a few different ways to start the debugger: from inside Strange Eons, by launching it separately, and manually from the command line.
+Once debugging is enabled as described above, you can launch the client app to start a debugging session. There are a few different ways to start the debugger client: from inside Strange Eons, by launching it separately, and manually from the command line.
 
 #### From the app
 
-To *start the debugger from Strange Eons*, click on the little bug icon that appears when debugging is enabled.
+To *start the debugger from Strange Eons*, click on the little bug icon that appears when debugging is enabled. In the majority of cases, this will "just work."
 
-> If clicking the bug icon works, you generally won't need to start the debugger at all: Strange Eons will start it automatically when needed. If the bug doesn't work, you can fix it by adjusting the **Automatic Launch** command in your preferences.
+> If clicking the bug doesn't work, you can fix how it launches the client by setting the `script-debug-client-launch` key to an appropriate command.
 
 #### From the desktop
 
@@ -34,7 +32,7 @@ To *start the debugger by launching it as a separate app*, just double click its
 
 ![debugger app icon](images/debugger-icon.png)
 
-> Depending on how you installed Strange Eons, you might not have an app icon. If all else fails, you can start the debugger manually from the command line.
+> Depending on how you installed Strange Eons, you might not have an app icon. In this case, start the debugger manually from the command line.
 
 #### From the command line
 
@@ -44,7 +42,11 @@ To *start the debugger manually from the command line*, use a command similar to
 java -Xms64m -cp strange-eons.jar debugger
 ```
 
-When starting from the command line, you can append the options `--host` and/or `--port` to specify the address and port of the debug server you wish to connect to. If you are not sure where the server is located, you can use the `--search` option, which will scan the local host (or the specified `--host`) for debug servers and list any that it finds. For example, if a regular Strange Eons session started a separate [plug-in test session](dm-test-plugin.md), it might produce output like the following:
+> When starting from the command line, you can append the options `--host` and/or `--port` to specify the address and port of the debug server you wish to connect to (as described below). If you are not sure where the server is located, you can use the `--search` option, which will scan the local host (or the specified `--host`) for debug servers and list any that it finds. This is similar to using the **Scan** button described below, except that results are printed to the console.
+
+
+
+---
 
 ```
 Host:         127.0.0.1, port 8888
@@ -65,19 +67,50 @@ This indicates that two debug servers were detected. The **Host** field identifi
 
 ### Connecting to Strange Eons
 
-Once the debugger starts it will begin trying to connect to Strange Eons automatically. If you are running Strange Eons on the same device and you have enabled debugging using the default settings, it will normally connect automatically within a few seconds. 
+A soon as the client starts it will try to connect with the server running in Strange Eons. This happens over a local network connection. If you are running Strange Eons on the same device and you have enabled debugging using the default settings, it will normally connect automatically within a few seconds.
+
+(If the client connected automatically for you, you can [skip the rest of this section](#the-debugger).)
+
+> Enabling the debugger *does not* expose Strange Eons to the entire Internet. In fact, you don't even need to be able to connect to the Internet for debugging to work. Using the default settings, it will only be visible to apps on the same device. There is, however, a preference option to **Enable remote debugging** that will let you debug Strange Eons using a copy of the debugger running on another computer. This can be convenient (for example, each app can have its own screen), but if you use this option you should also set up an appropriate firewall.
 
 #### Manual connections
 
-Rarely, you will need to connect to Strange Eons manually. For example, if you are already running an app that is using the port that the debugger expects to connect to Strange Eons with. In these cases you will need to help the debugger find Strange Eons. It's easy.
+Rarely, you will need to connect to Strange Eons manually. For example, if a different app is already using the *port* that Strange Eons uses by default, then the debugger won't be able to find Strange Eons where it expects to. In that case you will see a screen like the one below. You will have to give the debugger a hand, but don't panic! It's easy:
 
 ![debugger connection settings](images/debugger-connect.png)
 
-To *connect to Strange Eons from the debugger manually*, switch to Strange Eons and look for the bug icon near the upper right corner. Hover over the icon and observe the note that pops up. It will say something like "Listening at 127.0.0.1:8888". The part after the colon is the port number. The part before the colon (and after *Listening at*) is the host name. Enter this information in the connection screen in the debugger app, and it should connect momentarily.
+To connect you just need to know the *host* and *port* to connect to. Fill these in, choose **Connect**, and the client will complete the connection.
+
+The host is the device where the server is running. If you are using the default settings, this is just `localhost`. If you are allowing connections from other devices, then this is your device's IP address. The port is a specific address on your device where the debug server is listening for connections from a client. You can think of the host as being like the telephone number for a business, and the port being the particular extension where Strange Eons will pick up the phone. You can't easily guess the port number, but you can find it:
+
+##### Getting the host and port from Strange Eons
+
+Switch to Strange Eons and look for the bug icon ![](images/debugger/bug-icon.png) near the upper right corner. Hover over the icon and observe the note that pops up. It will say something like "Listening at localhost:8888". The part after the last colon is the port number (8888 in this case). The part before that colon (and after *Listening at*) is the host name. It could be a name or a string of numbers. In either case, enter this information in the appropriate fields on the connection screen in the debugger app, then choose **Connect**.
+
+![finding host details in Strange Eons](images/debugger-host-info.png)
+
+##### Scanning for servers
+
+Sometimes you can't use the bug icon. For example, the Strange Eons user interface may be frozen if a running script has already been interrupted. Or, the main window might not be available yet if a plug-in script has been interrupted during startup. And sometimes you may have multiple copies of Strange Eons open, each with its own debug server running (for example, when testing a plug-in). You can search your device for debug servers from the connection screen by choosing **Scan**. A small dialog box will open and the client will start scanning. The scan consists of checking the ports on your device for a debug server, which can take *several minutes* to complete.  However, you do not usually have to wait for the entire scan. As each debug server is discovered, it is added to the list. You can connect to a listed server at any time by choosing its **Connect** button.
+
+![the scan dialog](images/debugger-scan.png)
+
+Each discovered server will be listed with:
+
+1. A unique ID string. The string for a given instance of Strange Eons never changes. You can use this to differentiate servers if needed.
+2. The host and port number that will connect to that server.
+3. The build number and version number.
+4. If the server was started in plug-in test mode, the file names of the plug-in bundles it is testing.
+
+> **Important:** During scanning, the progress bar may appear to stall for long periods of time. This is normal. It usually indicates that the scanner has found a port that is connected to some *other* kind of server. The client is asking it if it is a debug server, but it is not saying anything back so the client waits a while for an answer before moving on.
+
+#### Switching between multiple servers
+
+If you have multiple instances of Strange Eons running, each will have its own debug server. To switch between multiple servers, choose the back arrow from  the debugging screen. This will take you back to the connection screen. From here, enter the host and port for the target instance and press **Connect** to switch servers.
 
 ## The debugger
 
-Once the debugger has connected to Strange Eons, you can use it to inspect and walk through scripts. To do that, the script must first be *interrupted*. There are several ways to do this, depending on where you are when you start out. Here are some:
+Once the debugger has connected to Strange Eons, you can use it to inspect and step through scripts. To step through a script, the script must first be *interrupted*. There are several ways to do this, depending on where you are when you start out. Here are some:
 
 > When a script is *interrupted*, in most cases Strange Eons will appear be frozen. It isn't really, it is just waiting for the script, and since the script is paused Strange Eons is effectively paused, too. As soon as you let the script finish from the debugger, Strange Eons will "thaw" again and run normally.
 
@@ -131,7 +164,7 @@ Interrupts a script whenever any function is called.
 Interrupts a script whenever any function returns.
 
 ![break on throw icon](images/debugger/break-on-throw.png) **Break on Throw**  
-Interrupts a script whenever an **Error** is thrown using the `throw` keyword..
+Interrupts a script whenever an **Error** is thrown using the `throw` keyword.
 
 ![break on debugger icon](images/debugger/break-on-debugger.png) **Break on Debugger**  
 Interrupts a script whenever a `debugger;` statement is reached. This is the only break type that is turned on by default.
@@ -254,6 +287,10 @@ Let's try putting this together with some practice:
 
 Let's say you have a plug-in that isn't behaving as you expect. How do can you fix it? To answer that, let's first describe the situation more clearly. When you have a bug in your script, you don't know right away what the cause of the bug is. Instead, you have signs or symptoms that the script is not behaving as intended. You have to work backwards from the symptoms to the cause. This may not be easy: there might be more than one possible cause that for the symptoms you are observe, and the symptoms may be far removed from the root cause. Here are some basic strategies that can help you find that root cause:
 
+### Keep it together
+
+To fix a bug you will need to engage the logical and creative parts of your mind. Both of these get "deactivated" when you are upset, which makes debugging that much harder. Take a deep breath. Try to approach the process like you are solving a puzzle: solving problems is an inseparable part of the programming process. When you find that you are upset, research shows that naming what you are feeling can help re-engage the rational part of your mind: "I'm frustrated because I keep stepping through this and I can't find where the problem is."
+
 ### Learn to reproduce the bug reliably
 
 Sometimes a bug manifests intermittently. In such cases, a good strategy is to experiment with the program to look for cases where the symptoms do and do not appear, until you know the exact combination of conditions are necessary to reproduce the bug. This will not only help you to form hypotheses about the underlying cause, but it also gives you a reliable way to test whether the problem still occurs after you think you have fixed it.
@@ -292,17 +329,25 @@ function setId(id) {
 
 When an error (or other exception) is thrown but not caught by your script, a *script trace* will appear in the script output window. This will show the chain of function calls that led to the error being thrown, along with source file names and line numbers of those calls. You can click on these lines in the source output window to open the source file at the indicated line. (Depending on where the source file is located, it may be opened read-only so that you cannot edit it.) If you use the technique above to throw your own errors, the second element in the script trace will be the function that passed you the the invalid argument, so you can start your investigation there.
 
+## Tips
+
+### A script is "stuck"
+
+A rogue script can cause Strange Eons to stop responding. For example, it is easy to accidentally create an infinite loop that will run forever. However, things might not *actually* be stuck. It may be that your script reached a breakpoint or a `debugger;` statement and it is waiting for you to resume the script from the client app. Try connecting the client first to check the situation out (use **Scan** if needed). Choose the **Pause** button and wait to see if a script gets interrupted. You may be able to simply continue the script or modify the state of some variables to work around the cause of the issue. Failing that, you can force the connected Strange Eons instance to close.
+
+If the debugger is not running, you can forcibly quit Strange Eons.  Use <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Delete</kbd> on Windows, <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>Escape</kbd> on macOS, or the **System Monitor** on Linux.
+
+If the issue was caused by a plug-in, you can prevent Strange Eons from trying to start it by opening the [user folder](um-install-user-folder.md), and either deleting or temporarily renaming the problem plug-in (for example, add a `.x` extension).
+
 ### Debugging an extension
 
 To debug an extension script that fails while the app is starting, you can follow these steps:
 
 1. Add the line `debugger;` at the top of the extension plug-in script.
-2. [Build the plug-in bundle](dm-first-plugin.md#building-the-plug-in-bundle), then double click to install it.
-3. After installing the bundle, you will be prompted to relaunch the app. **Before you do, make sure the [debugger is running](#starting-a-debugging-session).**
-4. Restart the app. When it loads the extension plug-in script and reaches the `debugger;` line, the script will be interrupted as if by a breakpoint. You can now proceed as described below.
-
-#### Stuck at the splash screen
-
-After adding `debugger` as outlined above, if you start Strange Eons without starting the debugger, it will "get stuck" on the splash screen when it hits the breakpoint you added with the `debugger` statement. The app is waiting for you to connect with the debugger and tell it how to proceed, and it will happily wait forever. You'll need to start and connect the debugger client independently ([as a separate app](#starting-a-debugging-session)) to continue. If you are not sure which host and port to connect to, you can start the client with the `--search` argument.
-
-> Failing that, you'll have to forcibly end Strange Eons (using, e.g.,  <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Delete</kbd> on Windows or <kbd>Command</kbd>+<kbd>Option</kbd>+<kbd>Escape</kbd> on macOS, or using **System Monitor** on Linux). You can then manually uninstall the plug-in (in the [user folder](um-install-user-folder.md), temporarily rename the file to add the extension `.x`). Then restart Strange Eons, use it to start the debugger, quit Strange Eons but keep the debugger running, restore the plug-in (by removing the `.x`), and, finally, start Strange Eons again. This time, it will still "get stuck", but the debugger will connect and then you can use it to continue loading.
+2. [Build the plug-in bundle](dm-first-plugin.md#building-the-plug-in-bundle), then right click on it and choose **Test Plug-in**.
+4. Restart the app. When it loads the extension plug-in script and reaches the `debugger;` line, the script will be interrupted. Progress on starting the app will stop the script completes.
+4. Start the debugger client, if it is not already running.
+5. The client will likely connect to the main Strange Eons debug server, not the plug-in test instance. You will need to find and enter the correct host and port to connect. There are a few ways to do this:
+   1. Look at the script output window in the main Strange Eons app. Amongst the logging information will be a message like the following: `WARNING: default debug server port in use; switched to port 50,429`. Enter the port number on the connection screen and **Connect**.
+   2. From the **Connect** screen, press **Scan** and wait. Multiple servers will be detected, one at a time, one for each running instance of Strange Eons. You can identify the test instance because it will list the test plug-in bundle name (it will be using a temporary file name generated by the test command).
+6. Once connected, you can step through the extension script as you would with any other debugging. Once the script completes, the test instance will be complete its startup process.
