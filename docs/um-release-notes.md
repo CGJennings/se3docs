@@ -351,7 +351,7 @@ In addition to the above you can expect many more bug fixes and performance impr
 
 This is an incomplete set of release notes for historic, now long obsolete versions. [Available historic versions can be downloaded here.](https://github.com/CGJennings/strange-eons/releases/tag/v0.0).
 
-## 2.1
+### 2.1
 
 **Deck Editor**
 
@@ -449,7 +449,7 @@ This is an incomplete set of release notes for historic, now long obsolete versi
 - uibindings: editable combo boxes are not updated correctly when the settings value is not in the drop-down list.
 - DIY Card Type (regression): setting the portrait key to null caused editor creation to fail.
 
-## 2.0
+### 2.0
 
 Version 2 represents the biggest change for Strange Eons since its initial release.
 
@@ -918,9 +918,7 @@ Based on the existing deck editor, SE 2 now supports the creation of custom expa
 
 - Suggestion windows can be rolled up but not back down.
 
-## 1.80 (Apr 2008)
-
-## 1.71 (Nov 2007)
+### 1.71 (Nov 2007)
 
 **Arkham Encounter Card Editor**
 
@@ -958,7 +956,7 @@ Based on the existing deck editor, SE 2 now supports the creation of custom expa
 - Custom location names entered in the gate location box are now correctly drawn on the card.
 - Tint panel and portrait adjustment panel fields update tint/portrait state when tabbing from the field to the next control.
 
-## 1.70
+### 1.70
 
 **King in Yellow Expansion Support**
 
@@ -1055,7 +1053,7 @@ Based on the existing deck editor, SE 2 now supports the creation of custom expa
 
 - This feature has been deferred until a later version.
 
-## 1.62
+### 1.62
 
 **Deck Editor**
 
@@ -1094,7 +1092,7 @@ Based on the existing deck editor, SE 2 now supports the creation of custom expa
 - Clear command failed to effect monster special text.
 - Changing the value of a replacement tag (such as a character's name) in a paragraph layout, and changing gender in a gender-aware paragraph layout, now correctly force the markup to be reinterpreted before being rendered with again.
 
-## 1.61
+### 1.61
 
 **All Editors**
 
@@ -1118,7 +1116,7 @@ Based on the existing deck editor, SE 2 now supports the creation of custom expa
 - A bug introduced in 1.60 caused character markers to print too large.
 - If the language of the host system was not one of the supported game languages and the game language setting was "decide automatically," the message "You have requested cards with a language code of EN. This is not in my list of supported languages. English (EN) will be used instead." would appear. Once the message was dismissed, the program would proceed normally.
 
-## 1.60
+### 1.60
 
 **Investigator Editor**
 
@@ -1151,7 +1149,7 @@ Based on the existing deck editor, SE 2 now supports the creation of custom expa
 
 - Updated language files: Spanish, French, and Italian translations for 1.60 features; French translations for allies and monster similarity. Further updates to the localization files will be made as they become available.
 
-## 1.50 (Feb 2007)
+### 1.50 (Feb 2007)
 
 **Monster Editor**
 
@@ -1206,7 +1204,7 @@ Based on the existing deck editor, SE 2 now supports the creation of custom expa
 - [Windows .exe Version] Double-clicking multiple .eon files opens each in its own copy of SE instead of opening them in a single window.
 - [Corrected in beta 1c] Bugs related to File|Close, File|Exit and clicking close button on window. File|Close did not correctly close the window, failing to offer to save unsaved cards. Modified cards that were disposed of but not removed from their container, causing a later null pointer exception that prevented the main window close button from completing the close operation and exiting the program.
 
-## 1.12 (Dec 2006)
+### 1.12 (Dec 2006)
 
 **Added**:
 
@@ -1228,7 +1226,7 @@ Based on the existing deck editor, SE 2 now supports the creation of custom expa
 - If the character's name contains characters that are illegal in a file name, it it won't export to a .zip file correctly. (Version 1.50 silently drops characters that are illegal under MacOS, Windows, and Unix when using them in file names while exporting.)
 - It is impossible to completely translate the generated cards because some elements are not configurable.
 
-## 1.10 (Nov 2006)
+### 1.10 (Nov 2006)
 
 **Added:**
 
@@ -1244,7 +1242,7 @@ Based on the existing deck editor, SE 2 now supports the creation of custom expa
 - Fixed and random possessions now render as a single paragraph, so the Random Possessions label floats and long item lists can be resized to fit (up to five lines of items are now possible).
 - Ancient One editor fields reorganized to match the layout on the cards.
 
-## 0.92
+### 0.92
 
 **Added:**
 
@@ -1256,10 +1254,10 @@ Based on the existing deck editor, SE 2 now supports the creation of custom expa
 
 - A free clue is provided when starting at an unstable location.
 
-## 0.91
+### 0.91
 
 Minor bug fixes.
 
-## 0.90 (Autumn 2006)
+### 0.90 (Autumn 2006)
 
 First public release.
