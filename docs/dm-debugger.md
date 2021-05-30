@@ -44,27 +44,6 @@ java -Xms64m -cp strange-eons.jar debugger
 
 > When starting from the command line, you can append the options `--host` and/or `--port` to specify the address and port of the debug server you wish to connect to (as described below). If you are not sure where the server is located, you can use the `--search` option, which will scan the local host (or the specified `--host`) for debug servers and list any that it finds. This is similar to using the **Scan** button described below, except that results are printed to the console.
 
-
-
----
-
-```
-Host:         127.0.0.1, port 8888
-ID:           21308.4b0d8096
-Version:      build 4165 (3.2)
-Test bundles: 
-
-Host:         127.0.0.1, port 58765
-ID:           28608.cc648ab8
-Version:      build 4165 (3.2)
-Test bundles: C:\Users\UserName\Documents\PluginProject\CoolGame.seext
-```
-
-This indicates that two debug servers were detected. The **Host** field identifies which host and port to use to connect to a particular server; the **ID** field is a unique string that can be used to help identify a specific instance of the app; the **Version** field describes which version of the app is running; and the **Test bundles** field lists the bundles that the instance has loaded in test mode, if any.
-
-> **Tip:** You can also print this list from the app (if unblocked) by running the following line in the Quickscript window:  
-> `arkham.Subprocess.launch("debugger", "--search").start();`
-
 ### Connecting to Strange Eons
 
 A soon as the client starts it will try to connect with the server running in Strange Eons. This happens over a local network connection. If you are running Strange Eons on the same device and you have enabled debugging using the default settings, it will normally connect automatically within a few seconds.
