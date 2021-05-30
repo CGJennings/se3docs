@@ -1,6 +1,6 @@
 # Release notes
 
-## Next
+## 3.2 (pre-production)
 
 The following changes are planned for inclusion in the next update. This list is *informational only*: nothing here is final until the update is actually published. Some items may be deferred or abandoned, and other items may be added at any time. In particular, changes to the APIs and script engine have the potential to introduce compatibility issues with plug-ins which might lead to those features being delayed, changed, or withdrawn.
 
@@ -82,7 +82,7 @@ Publishing a plug-in bundle (preparing it for a catalog by creating a file endin
 * About dialog colours now enforce light-on-dark even in dark themes, as some graphical elements do not work with dark themes.
 * Fixed issues that could prevent documents from opening when the Tcho Tcho theme was used on Windows.
 
-## Build 4163
+## 3.1 (build 4163)
 
 This is a **production** (non-beta) release.
 
@@ -200,7 +200,7 @@ Officially, Strange Eons currently requires Java 8, but work is underway to supp
 - When starting SE from the command line, the option <code>-javaagent:<em>path/to/strange-eons.jar</em></code> must be added. Starting with build 3970 the launcher executables for Windows and macOS have been modified to include this option.
 - The removal of the Pack200 format and related tools will require reworking how plug-in bundles are stored on the server (and unpacked).
 
-## Build 3970
+## 3.0 (build 3970)
 
 This is an **early access beta release**. Features may continue to evolve; the release notes for the next production (non-beta) edition will include the definitive description of the feature.
 
