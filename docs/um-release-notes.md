@@ -2,15 +2,16 @@
 
 ## 3.2 (pre-production)
 
-The following changes are planned for inclusion in the next update. This list is *informational only*: nothing here is final until the update is actually published. Some items may be deferred or abandoned, and other items may be added at any time. In particular, changes to the APIs and script engine have the potential to introduce compatibility issues with plug-ins which might lead to those features being delayed, changed, or withdrawn.
-
-This is an **early access beta release**.
+The following changes are planned for inclusion in the **next update**. This list is *informational only*: nothing here is final until the update is actually published. Some items may be deferred or abandoned, and other items may be added at any time. In particular, changes to the APIs and script engine have the potential to introduce compatibility issues with plug-ins which might lead to those features being delayed, changed, or withdrawn.
 
 ### Features, enhancements, and changes
 
-* Added a [non-interactive script runner mode](um-run-script.md), activated with command line option `--run <file>`.
-* Added a new dark theme, *Yuggoth*, which is now the default if dark mode is detected on app start. Separate light and dark themes can be selected in the [Preferences](um-ui-preferences.md) dialog. Note, though, that since changing the theme requires an app restart the app won't respond dynamically to theme changes.
-* Added dark theme colours to the text/code editor.
+* Added a [non-interactive script runner mode](um-run-script.md), activated with command line option `--run <script-file.js>`.
+* Added support for "dark" themes; separate light and dark themes can be selected in the [Preferences](um-ui-preferences.md) dialog. The app will attempt to detect the OS settings and choose a theme accordingly. Note that the app won't respond dynamically to theme changes since changing the theme requires an app restart.
+* Three new themes have been added:
+  * *Yuggoth,* a dark theme based on the default *Hydra* theme;
+  * *Ulthar,* a theme with a flat design motif and a light colour scheme;
+  * *Dreamlands,* a dark version of *Ulthar*.
 * Added support for Linux/arm64.
 * LCD text antialiasing is enabled by default on Linux, with a [command line option to change the antialiasing mode](um-install-troubleshooting.md#text-quality-issues).
 * The command line option `--xDisableJreCheck` skips the normal Java version checking performed at startup, allowing developers and expert users to try running the app with unsupported Java versions. Currently, a Java version from 8 to 11 must be used if this flag is not set.
@@ -30,7 +31,6 @@ This is an **early access beta release**.
   * prevent other plug-ins from being loaded
   * reset the JVM command field to its default value
 * The [script debugger client](dm-debugger.md) now has a command line option, `--search` to find instances of Strange Eons with an available debug server and report their host and port for connecting.
-* Link labels now have a themeable default colour (`Theme.LINK_LABEL_FOREGROUND`).
 * The `SplitJoin` class can now create instances with a specified number of threads (for I/O-bound tasks).
 * The `Subprocess` class can now optionally disable redirection of the process's I/O streams to the script console.
 * The method `Subprocess.launch` makes it easier to launch app tools from the app with the same VM arguments as the app itself.
@@ -38,7 +38,8 @@ This is an **early access beta release**.
 * The method `StrangeImage.exists(identifier)` can be used to check whether a portrait-style image path points to a real image.
 * The method `StrangeImage.getAsBufferedImage` works like `StrangeImage.get` but converts vector images directly into bitmaps. (Prefer `StrangeImage.get` where possible.)
 * The `PlatformSupport.PLATFORM_IS_OSX` constant has been deprecated with no intention to remove. Instead, use `PlatformSupport.PLATFORM_IS_MAC`.
-* Overridable Method `Theme.isDarkOnLight()` simplifies creation of dark mode themes.
+* Overridable Method `Theme.isDark()` simplifies creation of dark mode themes. The `Theme` class defines several new constants that can be used to refine themes via `UIManager`. For example, the link colour of link labels can be customized with code like `UIManager.put(LINK_LABEL_FOREGROUND, Color.RED)` in a theme's `modifyManagerDefaults` method.
+* Plug-in code can detect whether a dark theme is installed using `UIManager.getBoolean("useDarkTheme")`, which returns `true` when a dark theme is active.
 * Removed the legacy version of the [script library docs](http://se3docs.cgjennings.ca/assets/jsdoc/).
 
 #### Changes to how subprocesses are launched
@@ -84,7 +85,7 @@ Publishing a plug-in bundle (preparing it for a catalog by creating a file endin
 
 ## 3.1 (build 4163)
 
-This is a **production** (non-beta) release.
+This is a **production** release.
 
 *This description combines **all** changes from interim releases since the last production version, which was build 3784.*
 
