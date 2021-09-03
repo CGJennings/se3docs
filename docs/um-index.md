@@ -71,3 +71,4 @@
    1. [Running a script from the command line](um-run-script.md)
 8. **Appendix**
    1. [Release notes](um-release-notes.md)
+   2. [Java 9+ compatibility](um-java-compatibility.md)

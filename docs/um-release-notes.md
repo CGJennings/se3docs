@@ -21,7 +21,7 @@ The following changes are planned for inclusion in the **next update**. This lis
 * Added a preference option to ignore missing semicolons in script files even with warnings enabled (some JS programming styles leave these out intentionally).
 * The plug-in catalog now uses https by default.
 * The now meaningless command line option `xDisableFX` has been removed.
-* A simplified, less performance-degrading, version of the previous script compatibility feature has been reinstated (off by default, enable in **Preferences/Plug-ins/Compatibility Mode**).
+* A simplified, less performance-degrading, version of the script compatibility feature has been reinstated (off by default, enable in **Preferences/Plug-ins/Compatibility Mode**).
 
 ### For plug-in developers
 
@@ -64,8 +64,8 @@ These keys can contain the following variables, which will be expanded to the re
 
 #### Pack 200 transition
 
-Publishing a plug-in bundle (preparing it for a catalog by creating a file ending in `.pbz`, `.pgz`, or `.plzm`) no longer applies Pack200 compression as part of the publication process. This change is necessary for Strange Eons to run under Java 14+, which drops support for Pack200. Existing plug-ins in the official catalog have been re-published without Pack200. (Older versions of Strange Eons can detect that Pack200 was not applied and will correctly install the repacked versions.) **If you operate a third party plug-in catalog**, you must re-publish your plug-ins as well. You can do this as follows:
-1. Make sure you have a plain bundle for each published plug-in. A published bundle can be unpacked to a plain bundle by opening (double clicking) it in a project. *This must be done using build 4163 or earlier.*
+Publishing a plug-in bundle (preparing it for a catalog by creating a file ending in `.pbz`, `.pgz`, or `.plzm`) no longer applies Pack200 compression as part of the publication process. This change is necessary for Strange Eons to run under Java 14+, which [drops support for Pack200](https://openjdk.java.net/jeps/367). Existing plug-ins in the official catalog have been re-published without Pack200. Older versions of Strange Eons will detect that Pack200 was not applied and will correctly install the repacked versions. **If you operate a third party plug-in catalog**, you must re-publish your plug-ins as well. You can do this as follows:
+1. Make sure you have a plain bundle for each published plug-in. A published bundle can be unpacked to a plain bundle by opening (double clicking) it in a project. *This must be done using [build 4163](https://github.com/CGJennings/strange-eons/releases/tag/v3.1.4163) or earlier.*
 2. Now start any build of Strange Eons *after* build 4163.
 3. Using your catalog tools task folder, copy all of your plain plug-in bundles to the **Staging Area**.
 4. Right click on the **Publish to Local Catalog** script (![robot](images/project/auto.png) icon), and choose **Open**.
@@ -191,15 +191,6 @@ This is a **production** release.
 * Moved files in `resources/alt/` and gave them transparent names.
 * Removed themed splash variants that were specific to a particular game.
 * 32-bit builds for Windows are no longer being produced. Strange Eons now generally uses too much memory to run reliably as a 32-bit app. If you have been using the 32-bit Windows build successfully for a particular purpose, you can [contact me](https://cgjennings.ca/contact/) for a 32-bit installer.
-
-### Java 9+ compatibility
-
-Officially, Strange Eons currently requires Java 8, but work is underway to support Java 9 and later. Here is a summary of the current status:
-
-- The major obstacles have been solved and SE can be started under Java 9 starting with build 3970. (However, build 4163 will refuse to start in newer versions; running under Java 9+ is currently for development purposes only.)
-- SE can be built under Java 9 and Java 11.
-- When starting SE from the command line, the option <code>-javaagent:<em>path/to/strange-eons.jar</em></code> must be added. Starting with build 3970 the launcher executables for Windows and macOS have been modified to include this option.
-- The removal of the Pack200 format and related tools will require reworking how plug-in bundles are stored on the server (and unpacked).
 
 ## 3.0 (build 3970)
 
