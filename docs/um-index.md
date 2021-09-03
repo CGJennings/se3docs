@@ -65,7 +65,8 @@
    7. [Searching projects](um-proj-search.md)
    8. [Automation scripts](um-proj-automation.md)
    9. [Making cards from a CSV data file](um-proj-csv-factory.md)
-   10. [Supported file types](um-proj-file-types.md)
+   10. [Bulk exporting to image files](um-bulk-export.md)
+   11. [Supported project file types](um-proj-file-types.md)
 7. **Running in non-interactive mode**
    1. [Running a script from the command line](um-run-script.md)
 8. **Appendix**
