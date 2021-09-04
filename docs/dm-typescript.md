@@ -112,17 +112,15 @@ Import paths that do not contain a `/` are treated specially. They bypass the us
 import "diy";
 ```
 
-The TypeScript `import` statements will be translated to CommonJS-style (or "Node-style") `require()` calls, for which support was added to Strange Eons&nbsp;3.2.
+> The TypeScript compiler translates `import` statements into CommonJS-style (or "Node-style") `require()` calls, for which support was added to Strange Eons&nbsp;3.2.
 
 ## Want to help?
 
 In principle, it should be possible to provide more-or-less complete support for TypeScript-based plug-ins. This includes:
 
-- Automated compilation (e.g., saving a `.ts` file in a project could trigger automatic compilation to a matching `.js` file).
+- ~~Automated compilation (e.g., saving a `.ts` file in a project could trigger automatic compilation to a matching `.js` file).~~ A basic version of this was implemented. Be aware that saving a `.ts` file will cause a `.js` file with the same name in the same folder to be overwritten without warning.
 - ~~Support for `import` (ES Modules) instead of `useLibrary`.~~ See above.
-- Editing support via TS language services. The code editor should be able to provide:
-  - error feedback
-  - code completion
+- Editing support via TS language services. The code editor should be able to provide error feedback and code completion via these services.
 - Type definition support: to make full use of code completion, etc., requires proper type definitions. There are TypeScript-compatible `.d.ts` [type definitions for the script libraries](https://github.com/CGJennings/se3docs/tree/main/script-lib-types), but they were only intended to be used to produce the [library doc pages](assets/jsdoc/).
 
 If you'd like to work on any of the above, [contributions are welcome](https://github.com/CGJennings/strange-eons)!
