@@ -13,7 +13,7 @@ The following changes are planned for inclusion in the **next update**. This lis
   * *Ulthar,* a theme with a flat design motif and a light colour scheme;
   * *Dreamlands,* a dark version of *Ulthar*.
 * Added support for Linux/arm64.
-* LCD text antialiasing is enabled by default on Linux, with a [command line option to change the antialiasing mode](um-install-troubleshooting.md#text-quality-issues).
+* LCD text antialiasing (for the user interface) is enabled by default on Linux, with a [command line option to change the antialiasing mode](um-install-troubleshooting.md#text-quality-issues).
 * The command line option `--xDisableJreCheck` skips the normal Java version checking performed at startup, allowing developers and expert users to try running the app with unsupported Java versions. Currently, a Java version from 8 to 11 must be used if this flag is not set.
 * The command line option `--xDisablePluginLoading` prevents plug-ins from being loaded from bundles (except test bundles) for development and troubleshooting purposes.
 * Text editor tabs can **Format** supported file types.
@@ -21,7 +21,7 @@ The following changes are planned for inclusion in the **next update**. This lis
 * Added a preference option to ignore missing semicolons in script files even with warnings enabled (some JS programming styles leave these out intentionally).
 * The plug-in catalog now uses https by default.
 * The now meaningless command line option `xDisableFX` has been removed.
-* A simplified, less performance-degrading, version of the script compatibility feature has been reinstated (off by default, enable in **Preferences/Plug-ins/Compatibility Mode**).
+* A simplified, less performance-degrading, version of the script compatibility feature has been reinstated (turn on or off with **Preferences/Plug-ins/Compatibility Mode**).
 
 ### For plug-in developers
 
@@ -81,7 +81,7 @@ Publishing a plug-in bundle (preparing it for a catalog by creating a file endin
 * About dialog colours now enforce light-on-dark even in dark themes, as some graphical elements do not work with dark themes.
 * Fixed issues that could prevent documents from opening when the Tcho Tcho theme was used on Windows.
 * Fixed plug-in compatibility issues:
-  * The Lord of the Rings LCG `getPortraitImage` error
+  * The Lord of the Rings LCG `getPortraitImage` error (note that this plug-in also currently requires compatibility mode to be enabled).
 
 ## 3.1 (build 4163)
 
