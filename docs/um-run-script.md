@@ -30,20 +30,20 @@ The returned `ScriptRunnerState` object has the following informational properti
 Returns a `File` object for the script file that was specified on the command line.
 
 `started`  
-Returns `true` if the app has at least started to load and run the script file. This is `false` until the app has finished starting up and it ready to run the script. (So, for example, it is `false` while extensions are loaded.) Once `true`, it never reverts to being `false` for the rest of the session.
+Returns `true` if the app has at least started to load and run the script file. This is `false` until the app has started up and is ready to run the script. (So, for example, it is `false` while extensions are loaded.) Once `true`, it does not change again.
 
 `finished`  
-Returns `true` if the app has finished running the script file. That is, if it started running the script and the script returned. Note that if the script starts other threads or installs event handlers, these will not prevent the script from finishing. Immediately after this becomes `true`, the app will start to exit unless prevented from doing so.
+Returns `true` if the app has finished running the script file. That is, if it started running the script *and* the script returned. Note that if the script starts other threads or installs event handlers, these will not prevent the script from finishing. Immediately after this becomes `true`, the app will start to exit unless prevented from doing so.
 
 ### Preventing app exit
 
-Normally, as soon as the main script file finishes, the app will exit. You might wish to prevent this behaviour if your script starts new threads or is waiting for an event listener to fire. The following script code will keep the app running:
+Normally, as soon as the main script file finishes, the app will exit. If your script starts new threads or is waiting for an event listener to fire, you can prevent the app from exiting with:
 
 ```js
 Eons.scriptRunner.keepAlive = true;
 ```
 
-If used, this flag must be set before reaching the end of the script. To stop the application at a later time, you can use the following:
+If used, this flag must be set before reaching the end of the script. You must ensure that you stop the app at a later time by calling:
 
 ```js
 Eons.window.exitApplication(false);
@@ -61,4 +61,5 @@ Eons.window.visible = true;
 
 Because the app window is not made visible, your script can be blocked if you perform an action that opens a *modal dialog*. (A modal dialog is one that prevents you from using the rest of the app until the dialog closes.)
 
-If your script throws an uncaught exception (uncaught error in JavaScript parlance), the app will exit regardless of the value of the `keepAlive` property. This is intentional.
+If your script throws an uncaught exception (uncaught error in JavaScript parlance), the app will exit regardless of the value of `keepAlive` property. This is intentional.
+
