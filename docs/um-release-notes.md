@@ -79,7 +79,10 @@ Publishing a plug-in bundle (preparing it for a catalog by creating a file endin
 * Double clicking an item in a list in the deck editor could result in an infinite loop trying to fit the item.
 * Script functions `string`, `gstring`, etc., do not pass format specifiers correctly.
 * Icon background of message dialog did not match theme colour.
-* About dialog colours now enforce light-on-dark even in dark themes, as some graphical elements do not work with dark themes.
+* About dialog colour scheme did not adapt well to dark themes.
+* Filter field icon on catalog dialog did not match theme.
+* Choose expansion symbols dialog instruction text did not match theme.
+* Plug-in manager dialog elements did not match theme.
 * Fixed issues that could prevent documents from opening when the Tcho Tcho theme was used on Windows.
 * Fixed plug-in compatibility issues:
   * The Lord of the Rings LCG `getPortraitImage` error (note that this plug-in also currently requires compatibility mode to be enabled).
@@ -342,7 +345,7 @@ In addition to the above you can expect many more bug fixes and performance impr
 
 ## Historic versions
 
-This is an incomplete set of release notes for historic, now long obsolete versions. [Available historic versions can be downloaded here.](https://github.com/CGJennings/strange-eons/releases/tag/v0.0).
+This is an incomplete set of release notes for historic, now long obsolete versions. [Available historic versions can be downloaded here](https://github.com/CGJennings/strange-eons/releases/tag/v0.0).
 
 ### 2.1
 
