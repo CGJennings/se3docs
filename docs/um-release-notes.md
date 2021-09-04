@@ -74,6 +74,7 @@ Publishing a plug-in bundle (preparing it for a catalog by creating a file endin
 
 ### Bug fixes
 
+* Project folder dialog did not remember most recent selection on next app run.
 * Markup boxes (text boxes) would sometimes incorrectly break a line in the middle of a word.
 * Double clicking an item in a list in the deck editor could result in an infinite loop trying to fit the item.
 * Script functions `string`, `gstring`, etc., do not pass format specifiers correctly.
