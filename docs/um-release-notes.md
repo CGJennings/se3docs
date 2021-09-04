@@ -84,6 +84,7 @@ Publishing a plug-in bundle (preparing it for a catalog by creating a file endin
 * Choose expansion symbols dialog instruction text did not match theme.
 * Plug-in manager dialog elements did not match theme.
 * Fixed issues that could prevent documents from opening when the Tcho Tcho theme was used on Windows.
+* Regression: publishing a Web-safe bundle threw an exception after converting bundle to plain.
 * Fixed plug-in compatibility issues:
   * The Lord of the Rings LCG `getPortraitImage` error (note that this plug-in also currently requires compatibility mode to be enabled).
 
