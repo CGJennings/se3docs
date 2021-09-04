@@ -66,22 +66,22 @@ These keys can contain the following variables, which will be expanded to the re
 
 Publishing a plug-in bundle (preparing it for a catalog by creating a file ending in `.pbz`, `.pgz`, or `.plzm`) no longer applies Pack200 compression as part of the publication process. This change is necessary for Strange Eons to run under Java 14+, which [drops support for Pack200](https://openjdk.java.net/jeps/367). Existing plug-ins in the official catalog have been re-published without Pack200. Older versions of Strange Eons will detect that Pack200 was not applied and will correctly install the repacked versions. **If you operate a third party plug-in catalog**, you must re-publish your plug-ins as well. You can do this as follows:
 1. Make sure you have a plain bundle for each published plug-in. A published bundle can be unpacked to a plain bundle by opening (double clicking) it in a project. *This must be done using [build 4163](https://github.com/CGJennings/strange-eons/releases/tag/v3.1.4163) or earlier.*
-2. Now start any build of Strange Eons *after* build 4163.
+2. Now start any build of Strange Eons that is *at least [build 4169](https://github.com/CGJennings/strange-eons/releases/tag/v3.2.4169)*.
 3. Using your catalog tools task folder, copy all of your plain plug-in bundles to the **Staging Area**.
-4. Right click on the **Publish to Local Catalog** script (![robot](images/project/auto.png) icon), and choose **Open**.
-5. Find the line `const FORCE_OVERWRITE = false;` and change `false` to `true`.
-6. Right click on the script editor and choose **Run file**.
-7. Wait for the published bundles to be rebuilt.
-8. Change the `true` back to `false`, then save and close the script file.
+4. Double click on **Publish to Local Catalog** (![robot](images/project/auto.png) icon) to run the script. You can expect a warning for each bundle, since it will have the same version timestamp as the already published version (it is the same version, we just want to recompress it without Pack200 and update the catalog accordingly).
+5. Wait for the published bundles to be rebuilt.
 9. Upload the contents of the **Upload Queue** to your catalog server as you normally would.
 
 ### Bug fixes
 
+* Markup boxes (text boxes) would sometimes incorrectly break a line in the middle of a word.
 * Double clicking an item in a list in the deck editor could result in an infinite loop trying to fit the item.
 * Script functions `string`, `gstring`, etc., do not pass format specifiers correctly.
 * Icon background of message dialog did not match theme colour.
 * About dialog colours now enforce light-on-dark even in dark themes, as some graphical elements do not work with dark themes.
 * Fixed issues that could prevent documents from opening when the Tcho Tcho theme was used on Windows.
+* Fixed plug-in compatibility issues:
+  * The Lord of the Rings LCG `getPortraitImage` error
 
 ## 3.1 (build 4163)
 
