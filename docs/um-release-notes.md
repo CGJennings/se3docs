@@ -72,6 +72,18 @@ Publishing a plug-in bundle (preparing it for a catalog by creating a file endin
 5. Wait for the published bundles to be rebuilt.
 9. Upload the contents of the **Upload Queue** to your catalog server as you normally would.
 
+#### Changes to how text is rendered
+
+You may notice differences in how text is rendered compared to previous versions of Strange Eons. Perhaps most noticeable is that the ascent of fonts is slightly different so that text no longer aligns with elements the same way that it used to. These variations are unavoidable due to a change in the underlying font engine being used to draw text.
+
+##### Why did the font engine change?
+
+The original Sun (later Oracle) Java runtimes that came with previous versions of Strange Eons used a commercial font engine called [T2K (later renamed Font Fusion)](https://en.wikipedia.org/wiki/Font_Fusion) and/or the engine of the host platform. When Sun opened the source code for the Java runtime, a process began to find open source replacements for proprietary components like T2K. In the case of T2K, the [replacement](https://openjdk.java.net/projects/font-scaler/) was [FreeType](https://www.freetype.org/). Between the initial release of Java versions 8 and 9, Oracle changed the licensing rules for their Java runtime. The result was that Strange Eons could no longer include Oracle's runtime and had to switch to runtimes based on OpenJDK. Moreover, [starting with Java 11](https://docs.oracle.com/en/java/javase/11/migrate/index.html#JSMIG-GUID-5657F44A-B2D7-4FB6-AAD7-295AC4533ABC), Oracle replaced the font engine in their own runtime from T2K to FreeType. Thus, this change is likely both long-term and universal and will need to be adapted to rather than avoided.
+
+##### What can be done?
+
+FreeType is a mature, high-quality font engine capable of producing results comparable to T2K. However, rendering type is a complex and subjective problem. This means that the results from any two font engines are inevitably going to vary. In most if not all cases, the issue is not that the result from FreeType is "bad". Rather, the issue is that the text layout was designed against the original font engine, so it needs some additional tweaking for the new font engine. Plug-in developers may want to adjust the region boxes, font sizes, or other details for the new engine. Since the new engine will handle each font a little differently, it seems unlikely that a single simple set of adjustments will cover all cases. That said, if you want to experiment and offer some suggested standard adjustment that covers a majority of cases, feel free to share your settings and/or submit a pull request.
+
 ### Bug fixes
 
 * Project folder dialog did not remember most recent selection on next app run.
