@@ -59,7 +59,6 @@ Eons.window.visible = true;
 
 ## Caveats
 
-Because the app window is not made visible, your script can be blocked if you perform an action that opens a *modal dialog*. (A modal dialog is one that prevents you from using the rest of the app until the dialog closes.)
+Because the app window is not normally made visible, your script can be blocked if you perform an action that opens a *modal dialog*. (A modal dialog is one that prevents you from using the rest of the app until the dialog closes.)
 
-If your script throws an uncaught exception (uncaught error in JavaScript parlance), the app will exit regardless of the value of `keepAlive` property. This is intentional.
-
+If your script throws an uncaught exception (uncaught error in JavaScript parlance), the app will exit regardless of the value of `keepAlive` property. This is intentional. This applies only to errors thrown when the main script is run. For example, if you attach an event listener that throws an exception when the event is fired, the app will continue to run.

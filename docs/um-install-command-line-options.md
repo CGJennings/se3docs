@@ -79,7 +79,7 @@ Open a command prompt by pressing <kbd>Windows</kbd>+<kbd>R</kbd>, then typing `
 cd "%programfiles%/StrangeEons/bin"
 ```
 
-Starting with build 4198, you can then start SE with a second command of the form:
+Starting with build 4198, you can then start SE with a separate command of the form:
 
 ```bash
 eons [options...]
@@ -87,7 +87,7 @@ eons [options...]
 
 where `[options...]` is the list of options you want to use, separated by spaces. For VM options, you must put `-J` in front of the option name (for example, `-J-Xmx1200m`).
 
-> The `eons` application will launch the app without detaching it from the console mode, meaning that console output such as log messages will be printed to the console window.
+The `eons` application will launch the app without detaching it from the console mode. This makes Strange Eons behave more like a command line program. Console output such as log messages will be printed to the console window, and the shell will be blocked until the app exits.
 
 To use the same options every time you run Strange Eons, right click on the shortcut icon that you use to start Strange Eons and choose **Properties**. Look for the field labelled **Target**. In this field you will find something like `"C:\Program Files\Strange Eons\bin\strangeeons.exe"`. Edit this by adding a space, then the list of options you wish to set (all after the `.exe"`).
 
@@ -106,7 +106,7 @@ where `[options...]` is the list of options you want to use, separated by spaces
 When starting the app from the command line, use the following template:
 
 ```bash
-java [vmoptions...] -cp strange-eons.jar strangeeons [options...]
+java [vmoptions...] -javaagent:strange-eons.jar -cp strange-eons.jar strangeeons [options...]
 ```
 
 Replace `[vmoptions...]` with the list of desired VM options, and `[options...]` with list of desired app options. Note that SE needs a limit of at least 1 GB of memory to run correctly (more is better), so at a minimum you should include a VM option like `-Xmx2g`. If the location of the java binary is not included in the path, you will need to replace `java` with the complete path to the Java binary.
