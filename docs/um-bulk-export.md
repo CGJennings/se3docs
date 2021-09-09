@@ -87,6 +87,8 @@ All postprocessing scripts begin with the following objects defined in addition 
 * the [`ImageUtilities`](assets/javadoc/ca/cgjennings/graphics/ImageUtilities.html) class;
 * all classes in the [`ca.cgjennings.graphics.filters`](assets/javadoc/ca/cgjennings/graphics/filters/package-summary.html) package.
 
+> The `bulkItem` object is a specific Java object that is exposed to your script code. Replacing it with a new script object that happens to use the same property names won't work. You must modify the properties of the existing object.
+
 ### Examples
 
 Only export back faces:
