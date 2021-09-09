@@ -26,7 +26,7 @@ The following changes are planned for inclusion in the **next update**. This lis
 ### For plug-in developers
 
 * Experimental [TypeScript support](dm-typescript.md).
-* Basic support for loading CommonJS-style (or Node.js) modules with `require(relativePathToModuleScript)`. See the example [commonjs-modules.js](https://github.com/CGJennings/se3docs/blob/main/Plug-in%20Authoring%20Kit/Code%20Snippets%20and%20Demos/commonjs-modules.js).
+* Basic support for loading CommonJS-style modules with `require(relativePathToModuleScript)`. See the example [commonjs-modules.js](https://github.com/CGJennings/se3docs/blob/main/Plug-in%20Authoring%20Kit/Code%20Snippets%20and%20Demos/commonjs-modules.js).
 * The [Test Plug-in dialog](dm-test-plugin.md) has new options:
   * prevent other plug-ins from being loaded
   * reset the JVM command field to its default value
@@ -40,6 +40,7 @@ The following changes are planned for inclusion in the **next update**. This lis
 * The `PlatformSupport.PLATFORM_IS_OSX` constant has been deprecated with no intention to remove. Instead, use `PlatformSupport.PLATFORM_IS_MAC`.
 * Overridable Method `Theme.isDark()` simplifies creation of dark mode themes. The `Theme` class defines several new constants that can be used to refine themes via `UIManager`. For example, the link colour of link labels can be customized with code like `UIManager.put(LINK_LABEL_FOREGROUND, Color.RED)` in a theme's `modifyManagerDefaults` method.
 * Plug-in code can detect whether a dark theme is installed using `UIManager.getBoolean("useDarkTheme")`, which returns `true` when a dark theme is active.
+* When initializing their painting graphics context for a particular `RenderTarget`, `Sheet`s now use the helper class `ca.cgjennings.apps.arkham.sheet.StandardHints` to initialize rendering hints quickly and consistently. This class can also be used to experiment with different hint values.
 * Removed the legacy version of the [script library docs](http://se3docs.cgjennings.ca/assets/jsdoc/).
 
 #### Changes to how subprocesses are launched
@@ -86,7 +87,7 @@ FreeType is a mature, high-quality font engine capable of producing results comp
 
 ### Bug fixes
 
-* Project folder dialog did not remember most recent selection on next app run.
+* Open project folder dialog did not remember most recently used folder.
 * Markup boxes (text boxes) would sometimes incorrectly break a line in the middle of a word.
 * Double clicking an item in a list in the deck editor could result in an infinite loop trying to fit the item.
 * Script functions `string`, `gstring`, etc., do not pass format specifiers correctly.
@@ -97,6 +98,7 @@ FreeType is a mature, high-quality font engine capable of producing results comp
 * Plug-in manager dialog elements did not match theme.
 * Fixed issues that could prevent documents from opening when the Tcho Tcho theme was used on Windows.
 * Regression: publishing a Web-safe bundle threw an exception after converting bundle to plain.
+* Regression: font dialog and other dialog using an [ArcBorder](http://se3docs.cgjennings.ca/assets/javadoc/ca/cgjennings/ui/ArcBorder.html) with `ARC_BOTTOM_LEFT` throw an exception.
 * Fixed plug-in compatibility issues:
   * The Lord of the Rings LCG `getPortraitImage` error (note that this plug-in also currently requires compatibility mode to be enabled).
 
@@ -125,7 +127,7 @@ This is a **production** release.
 
 * Added `arkham.Subprocess.launch` to simplify starting a child process that uses an executable class in the app JAR.
 
-* A host of script engine updates bring the JS engine close to ES6 level. This includes arrow functions, object/class methods, destructuring assignment improvements, new native JS object methods, and many bug fixes and performance improvements. More details and examples of these changes can be found under the notes for beta build 3970.
+* A host of script engine updates bring the JS engine closer to ES6 level. This includes arrow functions, object/class methods, destructuring assignment improvements, new native JS object methods, and many bug fixes and performance improvements. More details and examples of these changes can be found under the notes for beta build 3970.
 
 * [Improved scripting (JS) API documentation](assets/jsdoc/) is now in beta. This corrects and expands existing documentation, links to the Java API when relevant, and includes basic documentation for built-in JS objects (`Array`, `Function`, and so on). The [Typescript definition files](https://github.com/CGJennings/se3docs/tree/master/script-lib-types) used to generate these docs are included in the se3docs repository. Suggestions, corrections, and improvements welcome. The [original JS API documentation](assets/jsdoc-legacy/) is still available during the transition.
 
