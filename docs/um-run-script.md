@@ -5,7 +5,7 @@
 Strange Eons can be started in a *non-interactive script runner mode*, meaning that it can be used to run a script without displaying an interface. To do this, start the app from the command line with the `-run` (or `--run`) argument and the name of the script file. For example, under Windows you might use:
 
 ```bash
-strangeeons -run script-to-run.js
+"c:\program files\strangeeons\bin\eons" -run script-to-run.js
 ```
 
 [How to specify command line options on different platforms](um-install-command-line-options.md#setting-command-line-options)

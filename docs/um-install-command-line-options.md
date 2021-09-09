@@ -79,13 +79,15 @@ Open a command prompt by pressing <kbd>Windows</kbd>+<kbd>R</kbd>, then typing `
 cd "%programfiles%/StrangeEons/bin"
 ```
 
-You can then start SE with a second command of the form:
+Starting with build 4198, you can then start SE with a second command of the form:
 
 ```bash
-strangeeons [options...]
+eons [options...]
 ```
 
 where `[options...]` is the list of options you want to use, separated by spaces. For VM options, you must put `-J` in front of the option name (for example, `-J-Xmx1200m`).
+
+> The `eons` application will launch the app without detaching it from the console mode, meaning that console output such as log messages will be printed to the console window.
 
 To use the same options every time you run Strange Eons, right click on the shortcut icon that you use to start Strange Eons and choose **Properties**. Look for the field labelled **Target**. In this field you will find something like `"C:\Program Files\Strange Eons\bin\strangeeons.exe"`. Edit this by adding a space, then the list of options you wish to set (all after the `.exe"`).
 
