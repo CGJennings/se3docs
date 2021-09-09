@@ -22,7 +22,7 @@ At least 2 GB of RAM is recommended.
    
     ![notification that appears once app is installed](images/chromebook-installed-notification.png)
     
-5. An icon for the app should be added to the Launcher automatically. In the corner of the screen, choose the Launcher **◯**, then the upward-pointing arrow ([more information](https://support.google.com/chromebook/answer/6206362?hl=en)). Choose the Strange Eons app in the list . If for some reason it is not listed, you can also start the app by opening a terminal window and entering the command `strangeeons`.
+5. An icon for the app should be added to the Launcher automatically. In the corner of the screen, choose the Launcher **◯**, then the upward-pointing arrow ([more information](https://support.google.com/chromebook/answer/6206362?hl=en)). Choose the Strange Eons app in the list. If for some reason it is not listed, you can also start the app by opening a terminal window and entering the command `strangeeons`.
    
     ![the application icon](images/icons/app.png)
     
