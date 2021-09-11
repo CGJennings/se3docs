@@ -7,6 +7,7 @@ The following changes are planned for inclusion in the **next update**. This lis
 ### Features, enhancements, and changes
 
 * Added a [non-interactive script runner mode](um-run-script.md), activated with command line option `--run <script-file.js>`.
+* Windows installer: a separate executable named `eons` is installed to start Strange Eons in *console mode*. This keeps Strange Eons "attached" to the console it is started from so that log messages and other console output are visible. This is also useful when running in non-interactive mode: for example, a batch file will wait for Strange Eons to exit before running the next command in the script.
 * Added support for "dark" themes; separate light and dark themes can be selected in the [Preferences](um-ui-preferences.md) dialog. The app will attempt to detect the OS settings and choose a theme accordingly. Note that the app won't respond dynamically to theme changes since changing the theme requires an app restart.
 * Three new themes have been added:
   * *Yuggoth,* a dark theme based on the default *Hydra* theme;
@@ -91,14 +92,21 @@ FreeType is a mature, high-quality font engine capable of producing results comp
 * Markup boxes (text boxes) would sometimes incorrectly break a line in the middle of a word.
 * Double clicking an item in a list in the deck editor could result in an infinite loop trying to fit the item.
 * Script functions `string`, `gstring`, etc., do not pass format specifiers correctly.
-* Icon background of message dialog did not match theme colour.
-* About dialog colour scheme did not adapt well to dark themes.
-* Filter field icon on catalog dialog did not match theme.
-* Choose expansion symbols dialog instruction text did not match theme.
-* Plug-in manager dialog elements did not match theme.
 * Fixed issues that could prevent documents from opening when the Tcho Tcho theme was used on Windows.
 * Regression: publishing a Web-safe bundle threw an exception after converting bundle to plain.
 * Regression: font dialog and other dialog using an [ArcBorder](http://se3docs.cgjennings.ca/assets/javadoc/ca/cgjennings/ui/ArcBorder.html) with `ARC_BOTTOM_LEFT` throw an exception.
+* Fixed issues where UI elements did not adapt well to dark themes or themes not based on Nimbus:
+  * Preferences dialog;
+  * portrait panel background;
+  * icon background of message dialog;
+  * About dialog colour scheme;
+  * filter field icon on catalog dialog;
+  * Choose expansion symbol dialog instruction text;
+  * New expansion symbol dialog instruction text;
+  * Plug-in manager dialog elements;
+  * language part of locale icons did not match theme;
+  * graphic background of New Component/New Project/Add New Task dialogs;
+  * component/resource preview panel used in file open dialog etc.
 * Fixed plug-in compatibility issues:
   * The Lord of the Rings LCG `getPortraitImage` error (note that this plug-in also currently requires compatibility mode to be enabled).
 
