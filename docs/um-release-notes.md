@@ -88,6 +88,7 @@ FreeType is a mature, high-quality font engine capable of producing results comp
 
 ### Bug fixes
 
+* Fixed an issue that prevented the `ImageUtils.stitch` function from stitching images along the vertical edge. [Thanks to Adam Goldsmith]
 * Open project folder dialog did not remember most recently used folder.
 * Markup boxes (text boxes) would sometimes incorrectly break a line in the middle of a word.
 * Double clicking an item in a list in the deck editor could result in an infinite loop trying to fit the item.
@@ -106,7 +107,8 @@ FreeType is a mature, high-quality font engine capable of producing results comp
   * Plug-in manager dialog elements;
   * language part of locale icons did not match theme;
   * graphic background of New Component/New Project/Add New Task dialogs;
-  * component/resource preview panel used in file open dialog etc.
+  * component/resource preview panel used in file open dialog etc.;
+  * and others.
 * Fixed plug-in compatibility issues:
   * The Lord of the Rings LCG `getPortraitImage` error (note that this plug-in also currently requires compatibility mode to be enabled).
 
