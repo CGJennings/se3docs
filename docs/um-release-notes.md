@@ -40,7 +40,7 @@ The following changes are planned for inclusion in the **next update**. This lis
 * The method `StrangeImage.getAsBufferedImage` works like `StrangeImage.get` but converts vector images directly into bitmaps. (Prefer `StrangeImage.get` where possible.)
 * The `PlatformSupport.PLATFORM_IS_OSX` constant has been deprecated with no intention to remove. Instead, use `PlatformSupport.PLATFORM_IS_MAC`.
 * Overridable Method `Theme.isDark()` simplifies creation of dark mode themes. The `Theme` class defines several new constants that can be used to refine themes via `UIManager`. For example, the link colour of link labels can be customized with code like `UIManager.put(LINK_LABEL_FOREGROUND, Color.RED)` in a theme's `modifyManagerDefaults` method.
-* Plug-in code can detect whether a dark theme is installed using `UIManager.getBoolean("useDarkTheme")`, which returns `true` when a dark theme is active.
+* Plug-in code can detect whether a dark theme is installed using `javax.swing.UIManager.getBoolean("useDarkTheme")`, which returns `true` when a dark theme is active. If the plug-in is run in older versions of Strange Eons, it will always (and correctly) return `false`.
 * When initializing their painting graphics context for a particular `RenderTarget`, `Sheet`s now use the helper class `ca.cgjennings.apps.arkham.sheet.StandardHints` to initialize rendering hints quickly and consistently. This class can also be used to experiment with different hint values.
 * Removed the legacy version of the [script library docs](http://se3docs.cgjennings.ca/assets/jsdoc/).
 
