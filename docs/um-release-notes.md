@@ -97,6 +97,7 @@ FreeType is a mature, high-quality font engine capable of producing results comp
 * Regression: publishing a Web-safe bundle threw an exception after converting bundle to plain.
 * Regression: font dialog and other dialog using an [ArcBorder](http://se3docs.cgjennings.ca/assets/javadoc/ca/cgjennings/ui/ArcBorder.html) with `ARC_BOTTOM_LEFT` throw an exception.
 * Fixed issues where UI elements did not adapt well to dark themes or themes not based on Nimbus:
+  * the `AbstractVerbalDesignSupport` default design support view;
   * Preferences dialog;
   * portrait panel background;
   * icon background of message dialog;
