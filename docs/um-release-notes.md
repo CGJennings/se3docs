@@ -1,13 +1,13 @@
 # Release notes
 
-## 3.2 (pre-production)
+<!--The following changes are planned for inclusion in the **next update**. This list is *informational only*: nothing here is final until the update is actually published. Some items may be deferred or abandoned, and other items may be added at any time. In particular, changes to the APIs and script engine have the potential to introduce compatibility issues with plug-ins which might lead to those features being delayed, changed, or withdrawn.-->
 
-The following changes are planned for inclusion in the **next update**. This list is *informational only*: nothing here is final until the update is actually published. Some items may be deferred or abandoned, and other items may be added at any time. In particular, changes to the APIs and script engine have the potential to introduce compatibility issues with plug-ins which might lead to those features being delayed, changed, or withdrawn.
+## 3.2 (build 4202)
 
 ### Features, enhancements, and changes
 
 * Added a [non-interactive script runner mode](um-run-script.md), activated with command line option `--run <script-file.js>`.
-* Windows installer: a separate executable named `eons` is installed to start Strange Eons in *console mode*. This keeps Strange Eons "attached" to the console it is started from so that log messages and other console output are visible. This is also useful when running in non-interactive mode: for example, a batch file will wait for Strange Eons to exit before running the next command in the script.
+* Windows installer: a separate executable named `eons` is installed to start Strange Eons in *console mode*. This keeps Strange Eons "attached" to the console it is started from so that console output is visible. This is also useful when running in non-interactive mode: for example, a batch file will wait for Strange Eons to exit before running the next command in the script.
 * Added support for "dark" themes; separate light and dark themes can be selected in the [Preferences](um-ui-preferences.md) dialog. The app will attempt to detect the OS settings and choose a theme accordingly. Note that the app won't respond dynamically to theme changes since changing the theme requires an app restart.
 * Three new themes have been added:
   * *Yuggoth,* a dark theme based on the default *Hydra* theme;
@@ -23,6 +23,8 @@ The following changes are planned for inclusion in the **next update**. This lis
 * The plug-in catalog now uses https by default.
 * The now meaningless command line option `xDisableFX` has been removed.
 * A simplified, less performance-degrading, version of the script compatibility feature has been reinstated (turn on or off with **Preferences/Plug-ins/Compatibility Mode**).
+* Updated supporter list in **About** dialog.
+* Updated underlying embedded Java version to 8u302.
 
 ### For plug-in developers
 
