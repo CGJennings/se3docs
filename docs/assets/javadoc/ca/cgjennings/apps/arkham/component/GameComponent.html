@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6};
+var data = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -175,19 +175,35 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#convertFrom(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">convertFrom</a></span>&#8203;(<a href="conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a>&nbsp;session)</code></th>
+<td class="colLast">
+<div class="block">Called on a component that is being converted into another component
+ type.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#convertTo(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">convertTo</a></span>&#8203;(<a href="conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a>&nbsp;session)</code></th>
+<td class="colLast">
+<div class="block">Called on the replacement component when converting a component to
+ another component type.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#coreCheck()">coreCheck</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Checks if all required libraries and extensions are installed.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="../AbstractGameComponentEditor.html" title="class in ca.cgjennings.apps.arkham">AbstractGameComponentEditor</a>&lt;? extends <a href="GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createDefaultEditor()">createDefaultEditor</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Creates an editor capable of modifying this component.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sheet</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createDefaultSheets()">createDefaultSheets</a></span>()</code></th>
 <td class="colLast">
@@ -196,28 +212,36 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
  <a href="#setSheets(ca.cgjennings.apps.arkham.sheet.Sheet%5B%5D)"><code>setSheets(ca.cgjennings.apps.arkham.sheet.Sheet[])</code></a>.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code><a href="conversion/UpgradeConversionTrigger.html" title="class in ca.cgjennings.apps.arkham.component.conversion">UpgradeConversionTrigger</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createUpgradeConversionTrigger()">createUpgradeConversionTrigger</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Returns the <a href="conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion"><code>ConversionSession</code></a> created when the component type no
+ longer handles the component.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getComment()">getComment</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the design rationale comments associated with this component.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFullName()">getFullName</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the "full name" of this component.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getName()">getName</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the name of this component.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../resources/Settings.html" title="class in resources">Settings</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSettings()">getSettings</a></span>()</code></th>
 <td class="colLast">
@@ -225,7 +249,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
  private settings.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="../sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sheet</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSheets()">getSheets</a></span>()</code></th>
 <td class="colLast">
@@ -233,14 +257,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
  <code>null</code> if no sheets are attached.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSheetTitles()">getSheetTitles</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns human-readable names for the sheets used by this component.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasChanged()">hasChanged</a></span>()</code></th>
 <td class="colLast">
@@ -248,14 +272,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
  last call to <code>hasChanged()</code>.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasUnsavedChanges()">hasUnsavedChanges</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the value of this component's unsaved changes flag.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isDeckLayoutSupported()">isDeckLayoutSupported</a></span>()</code></th>
 <td class="colLast">
@@ -263,7 +287,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
  deck.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#markChanged(int)">markChanged</a></span>&#8203;(int&nbsp;i)</code></th>
 <td class="colLast">
@@ -271,7 +295,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
  <code>i</code>the sheet to be redrawn.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#markSaved()">markSaved</a></span>()</code></th>
 <td class="colLast">
@@ -279,14 +303,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
  saved to clear the component's unsaved changes flag.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#markUnsavedChanges()">markUnsavedChanges</a></span>()</code></th>
 <td class="colLast">
 <div class="block">This method sets the component's unsaved changes flag.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSheets(ca.cgjennings.apps.arkham.sheet.Sheet%5B%5D)">setSheets</a></span>&#8203;(<a href="../sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sheet</a>[]&nbsp;sheets)</code></th>
 <td class="colLast">
@@ -642,7 +666,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
 <a id="coreCheck()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>coreCheck</h4>
 <pre class="methodSignature">void&nbsp;coreCheck()</pre>
@@ -664,6 +688,64 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
  it on demand</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../resources/CoreComponents.html" title="enum in resources"><code>CoreComponents</code></a></dd>
+</dl>
+</li>
+</ul>
+<a id="createUpgradeConversionTrigger()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createUpgradeConversionTrigger</h4>
+<pre class="methodSignature"><a href="conversion/UpgradeConversionTrigger.html" title="class in ca.cgjennings.apps.arkham.component.conversion">UpgradeConversionTrigger</a>&nbsp;createUpgradeConversionTrigger()</pre>
+<div class="block">Returns the <a href="conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion"><code>ConversionSession</code></a> created when the component type no
+ longer handles the component. This method is called after a component is
+ read from file. Should return <code>null</code> when no conversion is needed.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a conversion context if the upgrade requires a conversion</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion"><code>ConversionSession</code></a></dd>
+</dl>
+</li>
+</ul>
+<a id="convertFrom(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>convertFrom</h4>
+<pre class="methodSignature">void&nbsp;convertFrom&#8203;(<a href="conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a>&nbsp;session)</pre>
+<div class="block">Called on a component that is being converted into another component
+ type. Based on the conversion strategy, the old component may modify the
+ new component directly, or modify the conversion context, or do nothing.
+ This method is called before calling
+ <code>#convertTo(GameComponent, ConversionContext)</code> on the target, and
+ before any automatic conversion steps.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>target</code> - the new component that will replace this one</dd>
+<dd><code>context</code> - the conversion context</dd>
+</dl>
+</li>
+</ul>
+<a id="convertTo(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>convertTo</h4>
+<pre class="methodSignature">void&nbsp;convertTo&#8203;(<a href="conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a>&nbsp;session)</pre>
+<div class="block">Called on the replacement component when converting a component to
+ another component type. Based on the conversion strategy, the new
+ component may modify itself directly, or modify the conversion context,
+ or do nothing. This method is called after calling
+ <code>#convertFrom(GameComponent, ConversionContext)</code> on the source, but
+ before any automatic conversion steps.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>source</code> - the old component that will be replaced</dd>
+<dd><code>context</code> - the conversion context</dd>
 </dl>
 </li>
 </ul>

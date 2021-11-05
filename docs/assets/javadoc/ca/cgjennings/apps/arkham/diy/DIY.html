@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":9,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10,"i40":10,"i41":10,"i42":10,"i43":10,"i44":10,"i45":10,"i46":10,"i47":10,"i48":10,"i49":10,"i50":10,"i51":10,"i52":10,"i53":10,"i54":10,"i55":10,"i56":10,"i57":10,"i58":10,"i59":10,"i60":10,"i61":10,"i62":10,"i63":10,"i64":10,"i65":10,"i66":10,"i67":10,"i68":10,"i69":10,"i70":10,"i71":10,"i72":10,"i73":10,"i74":10,"i75":10,"i76":10,"i77":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":9,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10,"i40":10,"i41":10,"i42":10,"i43":10,"i44":10,"i45":10,"i46":10,"i47":10,"i48":10,"i49":10,"i50":10,"i51":10,"i52":10,"i53":10,"i54":10,"i55":10,"i56":10,"i57":10,"i58":10,"i59":10,"i60":10,"i61":10,"i62":10,"i63":10,"i64":10,"i65":10,"i66":10,"i67":10,"i68":10,"i69":10,"i70":10,"i71":10,"i72":10,"i73":10,"i74":10,"i75":10,"i76":10,"i77":10,"i78":10,"i79":10,"i80":10,"i81":10,"i82":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -302,12 +302,46 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#convertFrom(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">convertFrom</a></span>&#8203;(<a href="../component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a>&nbsp;session)</code></th>
+<td class="colLast">
+<div class="block">Called on a component that is being converted into another component
+ type.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#convertTo(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">convertTo</a></span>&#8203;(<a href="../component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a>&nbsp;session)</code></th>
+<td class="colLast">
+<div class="block">Called on the replacement component when converting a component to
+ another component type.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#convertToComponentType(java.lang.String)">convertToComponentType</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;className)</code></th>
+<td class="colLast">
+<div class="block">This method can be called by the DIY component if it wants to initiate
+ conversion to another component type during <code>onRead</code>.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#convertToComponentType(java.lang.String,java.lang.String,java.lang.String)">convertToComponentType</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;className,
+                      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;extensionName,
+                      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;extensionId)</code></th>
+<td class="colLast">
+<div class="block">This method can be called by the DIY component if it wants to initiate
+ conversion to another component type during <code>onRead</code>.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#create(ca.cgjennings.apps.arkham.diy.DIY)">create</a></span>&#8203;(<a href="DIY.html" title="class in ca.cgjennings.apps.arkham.diy">DIY</a>&nbsp;diy)</code></th>
 <td class="colLast">
 <div class="block">Calls the script's <code>create</code> function.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createBackPainter(ca.cgjennings.apps.arkham.diy.DIY,ca.cgjennings.apps.arkham.diy.DIYSheet)">createBackPainter</a></span>&#8203;(<a href="DIY.html" title="class in ca.cgjennings.apps.arkham.diy">DIY</a>&nbsp;diy,
                  <a href="DIYSheet.html" title="class in ca.cgjennings.apps.arkham.diy">DIYSheet</a>&nbsp;sheet)</code></th>
@@ -315,7 +349,7 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
 <div class="block">Calls the script's <code>createBackPainter</code> function.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="DIYEditor.html" title="class in ca.cgjennings.apps.arkham.diy">DIYEditor</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createDefaultEditor()">createDefaultEditor</a></span>()</code></th>
 <td class="colLast">
@@ -323,7 +357,7 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  for editing.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sheet</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createDefaultSheets()">createDefaultSheets</a></span>()</code></th>
 <td class="colLast">
@@ -331,7 +365,7 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  them as the current sheet set.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createFrontPainter(ca.cgjennings.apps.arkham.diy.DIY,ca.cgjennings.apps.arkham.diy.DIYSheet)">createFrontPainter</a></span>&#8203;(<a href="DIY.html" title="class in ca.cgjennings.apps.arkham.diy">DIY</a>&nbsp;diy,
                   <a href="DIYSheet.html" title="class in ca.cgjennings.apps.arkham.diy">DIYSheet</a>&nbsp;sheet)</code></th>
@@ -339,7 +373,7 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
 <div class="block">Calls the script's <code>createFrontPainter</code> function.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createInterface(ca.cgjennings.apps.arkham.diy.DIY,ca.cgjennings.apps.arkham.diy.DIYEditor)">createInterface</a></span>&#8203;(<a href="DIY.html" title="class in ca.cgjennings.apps.arkham.diy">DIY</a>&nbsp;diy,
                <a href="DIYEditor.html" title="class in ca.cgjennings.apps.arkham.diy">DIYEditor</a>&nbsp;editor)</code></th>
@@ -347,7 +381,7 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
 <div class="block">Calls the script's <code>createInterface</code> function.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>static <a href="DIY.html" title="class in ca.cgjennings.apps.arkham.diy">DIY</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createTestInstance(ca.cgjennings.apps.arkham.diy.Handler,java.lang.String)">createTestInstance</a></span>&#8203;(<a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.diy">Handler</a>&nbsp;h,
                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;gameCode)</code></th>
@@ -356,21 +390,29 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  purposes using just a <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> implementation.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i14" class="altColor">
+<td class="colFirst"><code><a href="../component/conversion/UpgradeConversionTrigger.html" title="class in ca.cgjennings.apps.arkham.component.conversion">UpgradeConversionTrigger</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createUpgradeConversionTrigger()">createUpgradeConversionTrigger</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Returns the <a href="../component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion"><code>ConversionSession</code></a> created when the component type no
+ longer handles the component.</div>
+</td>
+</tr>
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBackTemplateKey()">getBackTemplateKey</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the template key for the back face of this component.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBleedMargin()">getBleedMargin</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the bleed margin for this component, in points.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>double[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCustomFoldMarks(int)">getCustomFoldMarks</a></span>&#8203;(int&nbsp;faceIndex)</code></th>
 <td class="colLast">
@@ -378,14 +420,14 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  face, or <code>null</code> if the face has no custom fold marks.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code><a href="../sheet/Sheet.DeckSnappingHint.html" title="enum in ca.cgjennings.apps.arkham.sheet">Sheet.DeckSnappingHint</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDeckSnappingHint()">getDeckSnappingHint</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the deck snapping hint for the component.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getExtensionName()">getExtensionName</a></span>()</code></th>
 <td class="colLast">
@@ -393,21 +435,21 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  required for this component to load correctly.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code><a href="DIY.FaceStyle.html" title="enum in ca.cgjennings.apps.arkham.diy">DIY.FaceStyle</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFaceStyle()">getFaceStyle</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the <a href="DIY.FaceStyle.html" title="enum in ca.cgjennings.apps.arkham.diy"><code>DIY.FaceStyle</code></a> used by this card.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFrontTemplateKey()">getFrontTemplateKey</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the template key for the front face of this component.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHandlerScript()">getHandlerScript</a></span>()</code></th>
 <td class="colLast">
@@ -416,14 +458,14 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  from a <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.diy"><code>Handler</code></a> instance.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code><a href="DIY.HighResolutionMode.html" title="enum in ca.cgjennings.apps.arkham.diy">DIY.HighResolutionMode</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getHighResolutionSubstitutionMode()">getHighResolutionSubstitutionMode</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the high resolution image substitution mode for this component.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMarkerClipping()">getMarkerClipping</a></span>()</code></th>
 <td class="colLast">
@@ -432,7 +474,7 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  <a href="DIYSheet.html#paintMarkerPortrait(java.awt.Graphics2D)"><code>DIYSheet.paintMarkerPortrait(java.awt.Graphics2D)</code></a>.</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMarkerScaleUsesMinimum()">getMarkerScaleUsesMinimum</a></span>()</code></th>
 <td class="colLast">
@@ -440,7 +482,7 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  marker for newly installed portrait images.</div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code><a href="../sheet/MarkerStyle.html" title="enum in ca.cgjennings.apps.arkham.sheet">MarkerStyle</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMarkerStyle()">getMarkerStyle</a></span>()</code></th>
 <td class="colLast">
@@ -448,21 +490,21 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  <a href="DIY.FaceStyle.html#CARD_AND_MARKER"><code>DIY.FaceStyle.CARD_AND_MARKER</code></a> component.</div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/JTextComponent.html?is-external=true" title="class or interface in javax.swing.text" class="externalLink">JTextComponent</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getNameField()">getNameField</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the name field used to hold the name of the component.</div>
 </td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i28" class="altColor">
 <td class="colFirst"><code><a href="../component/Portrait.html" title="interface in ca.cgjennings.apps.arkham.component">Portrait</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPortrait(int)">getPortrait</a></span>&#8203;(int&nbsp;index)</code></th>
 <td class="colLast">
 <div class="block">Returns the specified <a href="../component/Portrait.html" title="interface in ca.cgjennings.apps.arkham.component"><code>Portrait</code></a>.</div>
 </td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i29" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPortraitClipping()">getPortraitClipping</a></span>()</code></th>
 <td class="colLast">
@@ -470,21 +512,21 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  when drawn with <a href="DIYSheet.html#paintPortrait(java.awt.Graphics2D)"><code>DIYSheet.paintPortrait(java.awt.Graphics2D)</code></a>.</div>
 </td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i30" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPortraitCount()">getPortraitCount</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the number of portraits provided by this component.</div>
 </td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i31" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPortraitImage()">getPortraitImage</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the current portrait image as a bitmap.</div>
 </td>
 </tr>
-<tr id="i27" class="rowColor">
+<tr id="i32" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPortraitKey()">getPortraitKey</a></span>()</code></th>
 <td class="colLast">
@@ -492,28 +534,28 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  system.</div>
 </td>
 </tr>
-<tr id="i28" class="altColor">
+<tr id="i33" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPortraitPanX()">getPortraitPanX</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the horizontal position of the portrait.</div>
 </td>
 </tr>
-<tr id="i29" class="rowColor">
+<tr id="i34" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPortraitPanY()">getPortraitPanY</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the vertical position of the portrait.</div>
 </td>
 </tr>
-<tr id="i30" class="altColor">
+<tr id="i35" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPortraitScale()">getPortraitScale</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the scale factor of the portrait.</div>
 </td>
 </tr>
-<tr id="i31" class="rowColor">
+<tr id="i36" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPortraitScaleUsesMinimum()">getPortraitScaleUsesMinimum</a></span>()</code></th>
 <td class="colLast">
@@ -521,14 +563,14 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  installed portrait images.</div>
 </td>
 </tr>
-<tr id="i32" class="altColor">
+<tr id="i37" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPortraitSource()">getPortraitSource</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the portrait source identifier.</div>
 </td>
 </tr>
-<tr id="i33" class="rowColor">
+<tr id="i38" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSheetTitles()">getSheetTitles</a></span>()</code></th>
 <td class="colLast">
@@ -536,14 +578,14 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  component.</div>
 </td>
 </tr>
-<tr id="i34" class="altColor">
+<tr id="i39" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTemplateKey(int)">getTemplateKey</a></span>&#8203;(int&nbsp;index)</code></th>
 <td class="colLast">
 <div class="block">Returns the base template key name for the face with the given index.</div>
 </td>
 </tr>
-<tr id="i35" class="rowColor">
+<tr id="i40" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTransparentFaces()">getTransparentFaces</a></span>()</code></th>
 <td class="colLast">
@@ -551,21 +593,21 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  pixels.</div>
 </td>
 </tr>
-<tr id="i36" class="altColor">
+<tr id="i41" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getVariableSizedFaces()">getVariableSizedFaces</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns <code>true</code> if the card faces can change in size.</div>
 </td>
 </tr>
-<tr id="i37" class="rowColor">
+<tr id="i42" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getVersion()">getVersion</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the version number of this component.</div>
 </td>
 </tr>
-<tr id="i38" class="altColor">
+<tr id="i43" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isCustomPortraitHandling()">isCustomPortraitHandling</a></span>()</code></th>
 <td class="colLast">
@@ -573,7 +615,7 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  <a href="../component/Portrait.html" title="interface in ca.cgjennings.apps.arkham.component"><code>Portrait</code></a>s through script code.</div>
 </td>
 </tr>
-<tr id="i39" class="rowColor">
+<tr id="i44" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isMarkerBackgroundFilled()">isMarkerBackgroundFilled</a></span>()</code></th>
 <td class="colLast">
@@ -581,7 +623,7 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  solid white before painting the marker portrait.</div>
 </td>
 </tr>
-<tr id="i40" class="altColor">
+<tr id="i45" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isPortraitBackgroundFilled()">isPortraitBackgroundFilled</a></span>()</code></th>
 <td class="colLast">
@@ -589,14 +631,14 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  white before painting the portrait.</div>
 </td>
 </tr>
-<tr id="i41" class="rowColor">
+<tr id="i46" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onClear(ca.cgjennings.apps.arkham.diy.DIY)">onClear</a></span>&#8203;(<a href="DIY.html" title="class in ca.cgjennings.apps.arkham.diy">DIY</a>&nbsp;diy)</code></th>
 <td class="colLast">
 <div class="block">Calls the script's <code>onClear</code> function.</div>
 </td>
 </tr>
-<tr id="i42" class="altColor">
+<tr id="i47" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onRead(ca.cgjennings.apps.arkham.diy.DIY,java.io.ObjectInputStream)">onRead</a></span>&#8203;(<a href="DIY.html" title="class in ca.cgjennings.apps.arkham.diy">DIY</a>&nbsp;diy,
       <a href="https://docs.oracle.com/javase/8/docs/api/java/io/ObjectInputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">ObjectInputStream</a>&nbsp;objectInputStream)</code></th>
@@ -604,7 +646,7 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
 <div class="block">Calls the script's <code>onRead</code> function.</div>
 </td>
 </tr>
-<tr id="i43" class="rowColor">
+<tr id="i48" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onWrite(ca.cgjennings.apps.arkham.diy.DIY,java.io.ObjectOutputStream)">onWrite</a></span>&#8203;(<a href="DIY.html" title="class in ca.cgjennings.apps.arkham.diy">DIY</a>&nbsp;diy,
        <a href="https://docs.oracle.com/javase/8/docs/api/java/io/ObjectOutputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">ObjectOutputStream</a>&nbsp;objectOutputStream)</code></th>
@@ -612,7 +654,7 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
 <div class="block">Calls the script's <code>onWrite</code> function.</div>
 </td>
 </tr>
-<tr id="i44" class="altColor">
+<tr id="i49" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#paintBack(java.awt.Graphics2D,ca.cgjennings.apps.arkham.diy.DIY,ca.cgjennings.apps.arkham.diy.DIYSheet)">paintBack</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt" class="externalLink">Graphics2D</a>&nbsp;g,
          <a href="DIY.html" title="class in ca.cgjennings.apps.arkham.diy">DIY</a>&nbsp;diy,
@@ -621,7 +663,7 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
 <div class="block">Calls the script's <code>paintBack</code> function.</div>
 </td>
 </tr>
-<tr id="i45" class="rowColor">
+<tr id="i50" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#paintFront(java.awt.Graphics2D,ca.cgjennings.apps.arkham.diy.DIY,ca.cgjennings.apps.arkham.diy.DIYSheet)">paintFront</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt" class="externalLink">Graphics2D</a>&nbsp;g,
           <a href="DIY.html" title="class in ca.cgjennings.apps.arkham.diy">DIY</a>&nbsp;diy,
@@ -630,21 +672,21 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
 <div class="block">Calls the script's <code>paintFront</code> function.</div>
 </td>
 </tr>
-<tr id="i46" class="altColor">
+<tr id="i51" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setBackTemplateKey(java.lang.String)">setBackTemplateKey</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;backTemplateKey)</code></th>
 <td class="colLast">
 <div class="block">Sets the template key for the back face of this component.</div>
 </td>
 </tr>
-<tr id="i47" class="rowColor">
+<tr id="i52" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setBleedMargin(double)">setBleedMargin</a></span>&#8203;(double&nbsp;marginInPoints)</code></th>
 <td class="colLast">
 <div class="block">Sets the size of the bleed margin for this component, in points.</div>
 </td>
 </tr>
-<tr id="i48" class="altColor">
+<tr id="i53" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCustomFoldMarks(int,double%5B%5D)">setCustomFoldMarks</a></span>&#8203;(int&nbsp;faceIndex,
                   double[]&nbsp;foldMarkTuples)</code></th>
@@ -652,7 +694,7 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
 <div class="block">Sets an array of custom fold marks to be used by this component.</div>
 </td>
 </tr>
-<tr id="i49" class="rowColor">
+<tr id="i54" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCustomPortraitHandling(boolean)">setCustomPortraitHandling</a></span>&#8203;(boolean&nbsp;scripted)</code></th>
 <td class="colLast">
@@ -661,7 +703,7 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  used.</div>
 </td>
 </tr>
-<tr id="i50" class="altColor">
+<tr id="i55" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setDeckSnappingHint(ca.cgjennings.apps.arkham.sheet.Sheet.DeckSnappingHint)">setDeckSnappingHint</a></span>&#8203;(<a href="../sheet/Sheet.DeckSnappingHint.html" title="enum in ca.cgjennings.apps.arkham.sheet">Sheet.DeckSnappingHint</a>&nbsp;deckSnappingHint)</code></th>
 <td class="colLast">
@@ -669,7 +711,7 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  a deck editor.</div>
 </td>
 </tr>
-<tr id="i51" class="rowColor">
+<tr id="i56" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setExtensionName(java.lang.String)">setExtensionName</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;extensionName)</code></th>
 <td class="colLast">
@@ -677,28 +719,28 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  required by this component cannot be found.</div>
 </td>
 </tr>
-<tr id="i52" class="altColor">
+<tr id="i57" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setFaceStyle(ca.cgjennings.apps.arkham.diy.DIY.FaceStyle)">setFaceStyle</a></span>&#8203;(<a href="DIY.FaceStyle.html" title="enum in ca.cgjennings.apps.arkham.diy">DIY.FaceStyle</a>&nbsp;faceStyle)</code></th>
 <td class="colLast">
 <div class="block">Sets the <a href="DIY.FaceStyle.html" title="enum in ca.cgjennings.apps.arkham.diy"><code>DIY.FaceStyle</code></a> used by this card.</div>
 </td>
 </tr>
-<tr id="i53" class="rowColor">
+<tr id="i58" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setFrontTemplateKey(java.lang.String)">setFrontTemplateKey</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;frontTemplateKey)</code></th>
 <td class="colLast">
 <div class="block">Sets the template key for the front face of this component.</div>
 </td>
 </tr>
-<tr id="i54" class="altColor">
+<tr id="i59" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setHighResolutionSubstitutionMode(ca.cgjennings.apps.arkham.diy.DIY.HighResolutionMode)">setHighResolutionSubstitutionMode</a></span>&#8203;(<a href="DIY.HighResolutionMode.html" title="enum in ca.cgjennings.apps.arkham.diy">DIY.HighResolutionMode</a>&nbsp;mode)</code></th>
 <td class="colLast">
 <div class="block">Sets the high resolution image substitution mode used by the component.</div>
 </td>
 </tr>
-<tr id="i55" class="rowColor">
+<tr id="i60" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setMarkerBackgroundFilled(boolean)">setMarkerBackgroundFilled</a></span>&#8203;(boolean&nbsp;fill)</code></th>
 <td class="colLast">
@@ -706,14 +748,14 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  white before painting the portrait on the marker.</div>
 </td>
 </tr>
-<tr id="i56" class="altColor">
+<tr id="i61" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setMarkerClipping(boolean)">setMarkerClipping</a></span>&#8203;(boolean&nbsp;clipping)</code></th>
 <td class="colLast">
 <div class="block">Sets whether the marker portrait is clipped.</div>
 </td>
 </tr>
-<tr id="i57" class="rowColor">
+<tr id="i62" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setMarkerClipStencil(java.awt.image.BufferedImage)">setMarkerClipStencil</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;stencil)</code></th>
 <td class="colLast">
@@ -721,7 +763,7 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  <a href="DIY.FaceStyle.html#CARD_AND_MARKER"><code>DIY.FaceStyle.CARD_AND_MARKER</code></a> component.</div>
 </td>
 </tr>
-<tr id="i58" class="altColor">
+<tr id="i63" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setMarkerClipStencilRegion(java.awt.Rectangle)">setMarkerClipStencilRegion</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Rectangle.html?is-external=true" title="class or interface in java.awt" class="externalLink">Rectangle</a>&nbsp;region)</code></th>
 <td class="colLast">
@@ -729,7 +771,7 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  portrait.</div>
 </td>
 </tr>
-<tr id="i59" class="rowColor">
+<tr id="i64" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setMarkerScaleUsesMinimum(boolean)">setMarkerScaleUsesMinimum</a></span>&#8203;(boolean&nbsp;useMinimum)</code></th>
 <td class="colLast">
@@ -737,7 +779,7 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  portrait.</div>
 </td>
 </tr>
-<tr id="i60" class="altColor">
+<tr id="i65" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setMarkerStyle(ca.cgjennings.apps.arkham.sheet.MarkerStyle)">setMarkerStyle</a></span>&#8203;(<a href="../sheet/MarkerStyle.html" title="enum in ca.cgjennings.apps.arkham.sheet">MarkerStyle</a>&nbsp;markerStyle)</code></th>
 <td class="colLast">
@@ -745,14 +787,14 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  <a href="DIY.FaceStyle.html#CARD_AND_MARKER"><code>DIY.FaceStyle.CARD_AND_MARKER</code></a> component.</div>
 </td>
 </tr>
-<tr id="i61" class="rowColor">
+<tr id="i66" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setNameField(javax.swing.text.JTextComponent)">setNameField</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/JTextComponent.html?is-external=true" title="class or interface in javax.swing.text" class="externalLink">JTextComponent</a>&nbsp;nameField)</code></th>
 <td class="colLast">
 <div class="block">Sets the field that contains the component's name.</div>
 </td>
 </tr>
-<tr id="i62" class="altColor">
+<tr id="i67" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPortraitBackgroundFilled(boolean)">setPortraitBackgroundFilled</a></span>&#8203;(boolean&nbsp;fill)</code></th>
 <td class="colLast">
@@ -760,70 +802,70 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  before painting the portrait.</div>
 </td>
 </tr>
-<tr id="i63" class="rowColor">
+<tr id="i68" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPortraitClipping(boolean)">setPortraitClipping</a></span>&#8203;(boolean&nbsp;clipping)</code></th>
 <td class="colLast">
 <div class="block">Sets whether the portrait is clipped.</div>
 </td>
 </tr>
-<tr id="i64" class="altColor">
+<tr id="i69" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPortraitClipStencil(java.awt.image.BufferedImage)">setPortraitClipStencil</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;stencil)</code></th>
 <td class="colLast">
 <div class="block">Sets an explicit clip stencil for this component's portrait.</div>
 </td>
 </tr>
-<tr id="i65" class="rowColor">
+<tr id="i70" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPortraitClipStencilRegion(java.awt.Rectangle)">setPortraitClipStencilRegion</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Rectangle.html?is-external=true" title="class or interface in java.awt" class="externalLink">Rectangle</a>&nbsp;region)</code></th>
 <td class="colLast">
 <div class="block">Sets an explicit clip stencil region for this component's portrait.</div>
 </td>
 </tr>
-<tr id="i66" class="altColor">
+<tr id="i71" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPortraitKey(java.lang.String)">setPortraitKey</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;portraitKey)</code></th>
 <td class="colLast">
 <div class="block">Sets the base portrait key for this component.</div>
 </td>
 </tr>
-<tr id="i67" class="rowColor">
+<tr id="i72" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPortraitPanX(double)">setPortraitPanX</a></span>&#8203;(double&nbsp;x)</code></th>
 <td class="colLast">
 <div class="block">Sets the horizontal position of the portrait.</div>
 </td>
 </tr>
-<tr id="i68" class="altColor">
+<tr id="i73" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPortraitPanY(double)">setPortraitPanY</a></span>&#8203;(double&nbsp;y)</code></th>
 <td class="colLast">
 <div class="block">Sets the vertical position of the portrait.</div>
 </td>
 </tr>
-<tr id="i69" class="rowColor">
+<tr id="i74" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPortraitScale(double)">setPortraitScale</a></span>&#8203;(double&nbsp;factor)</code></th>
 <td class="colLast">
 <div class="block">Sets the scale factor of the portrait.</div>
 </td>
 </tr>
-<tr id="i70" class="altColor">
+<tr id="i75" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPortraitScaleUsesMinimum(boolean)">setPortraitScaleUsesMinimum</a></span>&#8203;(boolean&nbsp;useMinimum)</code></th>
 <td class="colLast">
 <div class="block">Sets how the portrait's initial scale is determined.</div>
 </td>
 </tr>
-<tr id="i71" class="rowColor">
+<tr id="i76" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPortraitSource(java.lang.String)">setPortraitSource</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;source)</code></th>
 <td class="colLast">
 <div class="block">Sets the portrait source.</div>
 </td>
 </tr>
-<tr id="i72" class="altColor">
+<tr id="i77" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSheetTitle(int,java.lang.String)">setSheetTitle</a></span>&#8203;(int&nbsp;index,
              <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;title)</code></th>
@@ -831,7 +873,7 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
 <div class="block">Sets a custom title for the sheet with the specified index.</div>
 </td>
 </tr>
-<tr id="i73" class="rowColor">
+<tr id="i78" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTemplateKey(int,java.lang.String)">setTemplateKey</a></span>&#8203;(int&nbsp;index,
               <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;templateKey)</code></th>
@@ -839,7 +881,7 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
 <div class="block">Sets the template key for the face with the given index.</div>
 </td>
 </tr>
-<tr id="i74" class="altColor">
+<tr id="i79" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTransparentFaces(boolean)">setTransparentFaces</a></span>&#8203;(boolean&nbsp;transparent)</code></th>
 <td class="colLast">
@@ -847,21 +889,21 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
  pixels; for example, if the faces have a nonrectangular shape.</div>
 </td>
 </tr>
-<tr id="i75" class="rowColor">
+<tr id="i80" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setVariableSizedFaces(boolean)">setVariableSizedFaces</a></span>&#8203;(boolean&nbsp;variable)</code></th>
 <td class="colLast">
 <div class="block">Sets whether faces can change in size.</div>
 </td>
 </tr>
-<tr id="i76" class="altColor">
+<tr id="i81" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setVersion(int)">setVersion</a></span>&#8203;(int&nbsp;version)</code></th>
 <td class="colLast">
 <div class="block">Sets the version number of this component.</div>
 </td>
 </tr>
-<tr id="i77" class="rowColor">
+<tr id="i82" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toString()">toString</a></span>()</code></th>
 <td class="colLast">
@@ -2798,7 +2840,7 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
 <a id="toString()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>toString</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;toString()</pre>
@@ -2809,6 +2851,109 @@ implements <a href="Handler.html" title="interface in ca.cgjennings.apps.arkham.
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang" class="externalLink">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a string describing this DIY component</dd>
+</dl>
+</li>
+</ul>
+<a id="createUpgradeConversionTrigger()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>createUpgradeConversionTrigger</h4>
+<pre class="methodSignature">public&nbsp;<a href="../component/conversion/UpgradeConversionTrigger.html" title="class in ca.cgjennings.apps.arkham.component.conversion">UpgradeConversionTrigger</a>&nbsp;createUpgradeConversionTrigger()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../component/GameComponent.html#createUpgradeConversionTrigger()">GameComponent</a></code></span></div>
+<div class="block">Returns the <a href="../component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion"><code>ConversionSession</code></a> created when the component type no
+ longer handles the component. This method is called after a component is
+ read from file. Should return <code>null</code> when no conversion is needed.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../component/GameComponent.html#createUpgradeConversionTrigger()">createUpgradeConversionTrigger</a></code>&nbsp;in interface&nbsp;<code><a href="../component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../component/AbstractGameComponent.html#createUpgradeConversionTrigger()">createUpgradeConversionTrigger</a></code>&nbsp;in class&nbsp;<code><a href="../component/AbstractGameComponent.html" title="class in ca.cgjennings.apps.arkham.component">AbstractGameComponent</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a conversion context if the upgrade requires a conversion</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion"><code>ConversionSession</code></a></dd>
+</dl>
+</li>
+</ul>
+<a id="convertFrom(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>convertFrom</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;convertFrom&#8203;(<a href="../component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a>&nbsp;session)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../component/GameComponent.html#convertFrom(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">GameComponent</a></code></span></div>
+<div class="block">Called on a component that is being converted into another component
+ type. Based on the conversion strategy, the old component may modify the
+ new component directly, or modify the conversion context, or do nothing.
+ This method is called before calling
+ <code>#convertTo(GameComponent, ConversionContext)</code> on the target, and
+ before any automatic conversion steps.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../component/GameComponent.html#convertFrom(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">convertFrom</a></code>&nbsp;in interface&nbsp;<code><a href="../component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../component/AbstractGameComponent.html#convertFrom(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">convertFrom</a></code>&nbsp;in class&nbsp;<code><a href="../component/AbstractGameComponent.html" title="class in ca.cgjennings.apps.arkham.component">AbstractGameComponent</a></code></dd>
+</dl>
+</li>
+</ul>
+<a id="convertTo(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>convertTo</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;convertTo&#8203;(<a href="../component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a>&nbsp;session)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../component/GameComponent.html#convertTo(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">GameComponent</a></code></span></div>
+<div class="block">Called on the replacement component when converting a component to
+ another component type. Based on the conversion strategy, the new
+ component may modify itself directly, or modify the conversion context,
+ or do nothing. This method is called after calling
+ <code>#convertFrom(GameComponent, ConversionContext)</code> on the source, but
+ before any automatic conversion steps.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../component/GameComponent.html#convertTo(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">convertTo</a></code>&nbsp;in interface&nbsp;<code><a href="../component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../component/AbstractGameComponent.html#convertTo(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">convertTo</a></code>&nbsp;in class&nbsp;<code><a href="../component/AbstractGameComponent.html" title="class in ca.cgjennings.apps.arkham.component">AbstractGameComponent</a></code></dd>
+</dl>
+</li>
+</ul>
+<a id="convertToComponentType(java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>convertToComponentType</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;convertToComponentType&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;className)</pre>
+<div class="block">This method can be called by the DIY component if it wants to initiate
+ conversion to another component type during <code>onRead</code>. The new type
+ is assumed to belong to the same extension. If this is not the case, use
+ <code>#convertToComponentType(String, String)</code> instead.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>className</code> - the class or script identifier to convert to</dd>
+</dl>
+</li>
+</ul>
+<a id="convertToComponentType(java.lang.String,java.lang.String,java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>convertToComponentType</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;convertToComponentType&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;className,
+                                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;extensionName,
+                                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;extensionId)</pre>
+<div class="block">This method can be called by the DIY component if it wants to initiate
+ conversion to another component type during <code>onRead</code>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>className</code> - the class or script identifier to convert to</dd>
+<dd><code>extensionName</code> - the name of the extension containing the new type</dd>
+<dd><code>extensionId</code> - the UUID of the extension containing the new type</dd>
 </dl>
 </li>
 </ul>

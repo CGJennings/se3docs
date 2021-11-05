@@ -189,6 +189,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Creates a compressor with the requested compression level.</div>
 </dd>
+<dt><a href="ca/cgjennings/apps/arkham/component/conversion/AbstractConversionTrigger.html" title="class in ca.cgjennings.apps.arkham.component.conversion"><span class="typeNameLink">AbstractConversionTrigger</span></a> - Class in <a href="ca/cgjennings/apps/arkham/component/conversion/package-summary.html">ca.cgjennings.apps.arkham.component.conversion</a></dt>
+<dd>
+<div class="block">Provides default implementations for the <a href="ca/cgjennings/apps/arkham/component/conversion/ConversionTrigger.html" title="interface in ca.cgjennings.apps.arkham.component.conversion"><code>ConversionTrigger</code></a> interface.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/AbstractConversionTrigger.html#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String)">AbstractConversionTrigger(String, String, String)</a></span> - Constructor for class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/AbstractConversionTrigger.html" title="class in ca.cgjennings.apps.arkham.component.conversion">AbstractConversionTrigger</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="ca/cgjennings/graphics/filters/AbstractConvolver.html" title="class in ca.cgjennings.graphics.filters"><span class="typeNameLink">AbstractConvolver</span></a> - Class in <a href="ca/cgjennings/graphics/filters/package-summary.html">ca.cgjennings.graphics.filters</a></dt>
 <dd>
 <div class="block">An abstract base class for filters that perform convolutions.</div>
@@ -2123,6 +2129,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>&nbsp;</dd>
 <dt><a href="ca/cgjennings/apps/arkham/component/package-summary.html">ca.cgjennings.apps.arkham.component</a> - package ca.cgjennings.apps.arkham.component</dt>
 <dd>&nbsp;</dd>
+<dt><a href="ca/cgjennings/apps/arkham/component/conversion/package-summary.html">ca.cgjennings.apps.arkham.component.conversion</a> - package ca.cgjennings.apps.arkham.component.conversion</dt>
+<dd>&nbsp;</dd>
 <dt><a href="ca/cgjennings/apps/arkham/component/design/package-summary.html">ca.cgjennings.apps.arkham.component.design</a> - package ca.cgjennings.apps.arkham.component.design</dt>
 <dd>&nbsp;</dd>
 <dt><a href="ca/cgjennings/apps/arkham/deck/package-summary.html">ca.cgjennings.apps.arkham.deck</a> - package ca.cgjennings.apps.arkham.deck</dt>
@@ -2286,6 +2294,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/project/Searcher.html#cancel()">cancel()</a></span> - Method in class ca.cgjennings.apps.arkham.project.<a href="ca/cgjennings/apps/arkham/project/Searcher.html" title="class in ca.cgjennings.apps.arkham.project">Searcher</a></dt>
 <dd>
 <div class="block">Cancels the search before it completes.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html#cancel(java.lang.String)">cancel(String)</a></span> - Method in class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a></dt>
+<dd>
+<div class="block">Can be called to cancel the conversion process.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/deck/item/TextBox.html#cancelActiveEditor()">cancelActiveEditor()</a></span> - Static method in class ca.cgjennings.apps.arkham.deck.item.<a href="ca/cgjennings/apps/arkham/deck/item/TextBox.html" title="class in ca.cgjennings.apps.arkham.deck.item">TextBox</a></dt>
 <dd>&nbsp;</dd>
@@ -2503,6 +2515,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/plugins/catalog/Catalog.html#%3Cinit%3E(java.net.URL,java.util.Collection)">Catalog(URL, Collection&lt;Listing&gt;)</a></span> - Constructor for class ca.cgjennings.apps.arkham.plugins.catalog.<a href="ca/cgjennings/apps/arkham/plugins/catalog/Catalog.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog">Catalog</a></dt>
 <dd>
 <div class="block">Creates a catalog from a collection of <a href="ca/cgjennings/apps/arkham/plugins/catalog/Listing.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog"><code>Listing</code></a>s.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/plugins/catalog/CatalogDialog.html#CATALOG_PROPERTY">CATALOG_PROPERTY</a></span> - Static variable in class ca.cgjennings.apps.arkham.plugins.catalog.<a href="ca/cgjennings/apps/arkham/plugins/catalog/CatalogDialog.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog">CatalogDialog</a></dt>
+<dd>
+<div class="block">Property that changes when the dialog switches to a new catalog.</div>
 </dd>
 <dt><a href="ca/cgjennings/apps/arkham/plugins/catalog/Catalog.CatalogIsLockedException.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog"><span class="typeNameLink">Catalog.CatalogIsLockedException</span></a> - Exception in <a href="ca/cgjennings/apps/arkham/plugins/catalog/package-summary.html">ca.cgjennings.apps.arkham.plugins.catalog</a></dt>
 <dd>
@@ -3935,12 +3951,49 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">A modifier constant indicating that a Control or Ctrl key was held down.</div>
 </dd>
+<dt><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionException.html" title="class in ca.cgjennings.apps.arkham.component.conversion"><span class="typeNameLink">ConversionException</span></a> - Exception in <a href="ca/cgjennings/apps/arkham/component/conversion/package-summary.html">ca.cgjennings.apps.arkham.component.conversion</a></dt>
+<dd>
+<div class="block">This exception is thrown when a conversion can not be completed for any
+ reason.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionException.html#%3Cinit%3E(java.lang.String)">ConversionException(String)</a></span> - Constructor for exception ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/ConversionException.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionException</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionException.html#%3Cinit%3E(java.lang.String,java.lang.Throwable)">ConversionException(String, Throwable)</a></span> - Constructor for exception ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/ConversionException.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionException</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion"><span class="typeNameLink">ConversionSession</span></a> - Class in <a href="ca/cgjennings/apps/arkham/component/conversion/package-summary.html">ca.cgjennings.apps.arkham.component.conversion</a></dt>
+<dd>
+<div class="block">A <code>ConversionSession</code> instance is created by
+ <code>#convertGameComponent(ConversionTrigger, GameComponent)</code> in order to
+ perform the conversion of a <a href="ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component"><code>GameComponent</code></a> into another component
+ type.</div>
+</dd>
+<dt><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionTrigger.html" title="interface in ca.cgjennings.apps.arkham.component.conversion"><span class="typeNameLink">ConversionTrigger</span></a> - Interface in <a href="ca/cgjennings/apps/arkham/component/conversion/package-summary.html">ca.cgjennings.apps.arkham.component.conversion</a></dt>
+<dd>
+<div class="block">A <code>ConversionTrigger</code> object must be provided when initiating
+ conversion of a <a href="ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component"><code>GameComponent</code></a>.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/Length.html#convert(double,int,int)">convert(double, int, int)</a></span> - Static method in class ca.cgjennings.apps.arkham.<a href="ca/cgjennings/apps/arkham/Length.html" title="class in ca.cgjennings.apps.arkham">Length</a></dt>
 <dd>
 <div class="block">Returns the a measurement in terms of a different unit.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/project/ConvertSpellingDictionary.Converter.html#%3Cinit%3E(java.lang.String,java.lang.String)">Converter(String, String)</a></span> - Constructor for class ca.cgjennings.apps.arkham.project.<a href="ca/cgjennings/apps/arkham/project/ConvertSpellingDictionary.Converter.html" title="class in ca.cgjennings.apps.arkham.project">ConvertSpellingDictionary.Converter</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/AbstractGameComponent.html#convertFrom(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">convertFrom(ConversionSession)</a></span> - Method in class ca.cgjennings.apps.arkham.component.<a href="ca/cgjennings/apps/arkham/component/AbstractGameComponent.html" title="class in ca.cgjennings.apps.arkham.component">AbstractGameComponent</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/GameComponent.html#convertFrom(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">convertFrom(ConversionSession)</a></span> - Method in interface ca.cgjennings.apps.arkham.component.<a href="ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></dt>
+<dd>
+<div class="block">Called on a component that is being converted into another component
+ type.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/deck/Deck.html#convertFrom(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">convertFrom(ConversionSession)</a></span> - Method in class ca.cgjennings.apps.arkham.deck.<a href="ca/cgjennings/apps/arkham/deck/Deck.html" title="class in ca.cgjennings.apps.arkham.deck">Deck</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/diy/DIY.html#convertFrom(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">convertFrom(ConversionSession)</a></span> - Method in class ca.cgjennings.apps.arkham.diy.<a href="ca/cgjennings/apps/arkham/diy/DIY.html" title="class in ca.cgjennings.apps.arkham.diy">DIY</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html#convertGameComponent(ca.cgjennings.apps.arkham.component.conversion.ConversionTrigger,ca.cgjennings.apps.arkham.component.GameComponent,boolean)">convertGameComponent(ConversionTrigger, GameComponent, boolean)</a></span> - Static method in class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a></dt>
+<dd>
+<div class="block">Creates a new <a href="ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component"><code>GameComponent</code></a> which represents the given component
+ converted to another component type.</div>
+</dd>
 <dt><a href="ca/cgjennings/apps/arkham/project/ConvertImage.html" title="class in ca.cgjennings.apps.arkham.project"><span class="typeNameLink">ConvertImage</span></a> - Class in <a href="ca/cgjennings/apps/arkham/project/package-summary.html">ca.cgjennings.apps.arkham.project</a></dt>
 <dd>
 <div class="block">A task action tree that can convert and/or recompress a source image to one
@@ -3961,6 +4014,27 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Converts a <code>Strings</code> containing &lt;br&gt; tags into one that
  uses newlines instead.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/AbstractGameComponent.html#convertTo(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">convertTo(ConversionSession)</a></span> - Method in class ca.cgjennings.apps.arkham.component.<a href="ca/cgjennings/apps/arkham/component/AbstractGameComponent.html" title="class in ca.cgjennings.apps.arkham.component">AbstractGameComponent</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/GameComponent.html#convertTo(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">convertTo(ConversionSession)</a></span> - Method in interface ca.cgjennings.apps.arkham.component.<a href="ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></dt>
+<dd>
+<div class="block">Called on the replacement component when converting a component to
+ another component type.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/deck/Deck.html#convertTo(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">convertTo(ConversionSession)</a></span> - Method in class ca.cgjennings.apps.arkham.deck.<a href="ca/cgjennings/apps/arkham/deck/Deck.html" title="class in ca.cgjennings.apps.arkham.deck">Deck</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/diy/DIY.html#convertTo(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">convertTo(ConversionSession)</a></span> - Method in class ca.cgjennings.apps.arkham.diy.<a href="ca/cgjennings/apps/arkham/diy/DIY.html" title="class in ca.cgjennings.apps.arkham.diy">DIY</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/diy/DIY.html#convertToComponentType(java.lang.String)">convertToComponentType(String)</a></span> - Method in class ca.cgjennings.apps.arkham.diy.<a href="ca/cgjennings/apps/arkham/diy/DIY.html" title="class in ca.cgjennings.apps.arkham.diy">DIY</a></dt>
+<dd>
+<div class="block">This method can be called by the DIY component if it wants to initiate
+ conversion to another component type during <code>onRead</code>.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/diy/DIY.html#convertToComponentType(java.lang.String,java.lang.String,java.lang.String)">convertToComponentType(String, String, String)</a></span> - Method in class ca.cgjennings.apps.arkham.diy.<a href="ca/cgjennings/apps/arkham/diy/DIY.html" title="class in ca.cgjennings.apps.arkham.diy">DIY</a></dt>
+<dd>
+<div class="block">This method can be called by the DIY component if it wants to initiate
+ conversion to another component type during <code>onRead</code>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/spelling/phonetics/PhoneticHashAlgorithm.html#convertVowel(char)">convertVowel(char)</a></span> - Static method in class ca.cgjennings.spelling.phonetics.<a href="ca/cgjennings/spelling/phonetics/PhoneticHashAlgorithm.html" title="class in ca.cgjennings.spelling.phonetics">PhoneticHashAlgorithm</a></dt>
 <dd>
@@ -4065,8 +4139,29 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Copy the style information for the current selection into the global
  style clipboard.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html#copyAllPortraits(boolean)">copyAllPortraits(boolean)</a></span> - Method in class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a></dt>
+<dd>
+<div class="block">Copies the portraits from the old component to the new.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html#copyAllSettings()">copyAllSettings()</a></span> - Method in class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a></dt>
+<dd>
+<div class="block">Copies all settings from the old component to the new.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html#copyAllSettingsExcept(java.lang.String...)">copyAllSettingsExcept(String...)</a></span> - Method in class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a></dt>
+<dd>
+<div class="block">Copies all settings from the old component to the new, except for the
+ given keys.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/graphics/PrototypingGraphics2D.html#copyArea(int,int,int,int,int,int)">copyArea(int, int, int, int, int, int)</a></span> - Method in class ca.cgjennings.graphics.<a href="ca/cgjennings/graphics/PrototypingGraphics2D.html" title="class in ca.cgjennings.graphics">PrototypingGraphics2D</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html#copyComment()">copyComment()</a></span> - Method in class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a></dt>
+<dd>
+<div class="block">Copies the comments of the old component to the new.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html#copyExpansions()">copyExpansions()</a></span> - Method in class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a></dt>
+<dd>
+<div class="block">Copies the expansions from the old component to the new.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/project/ProjectUtilities.html#copyFile(java.io.File,java.io.File)">copyFile(File, File)</a></span> - Static method in class ca.cgjennings.apps.arkham.project.<a href="ca/cgjennings/apps/arkham/project/ProjectUtilities.html" title="class in ca.cgjennings.apps.arkham.project">ProjectUtilities</a></dt>
 <dd>
 <div class="block">Copy a file.</div>
@@ -4078,6 +4173,18 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/project/ProjectUtilities.html#copyFolder(java.io.File,java.io.File)">copyFolder(File, File)</a></span> - Static method in class ca.cgjennings.apps.arkham.project.<a href="ca/cgjennings/apps/arkham/project/ProjectUtilities.html" title="class in ca.cgjennings.apps.arkham.project">ProjectUtilities</a></dt>
 <dd>
 <div class="block">Recursively copy a file or folder into a folder.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html#copyName()">copyName()</a></span> - Method in class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a></dt>
+<dd>
+<div class="block">Copies the name of the old component to the new.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html#copyPortrait(int,boolean)">copyPortrait(int, boolean)</a></span> - Method in class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a></dt>
+<dd>
+<div class="block">Copies a portrait from the old component to the new.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html#copyPortrait(int,int,boolean)">copyPortrait(int, int, boolean)</a></span> - Method in class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a></dt>
+<dd>
+<div class="block">Copies a portrait from the old component to the new.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/project/ProjectUtilities.html#copyReader(java.io.Reader,java.io.File)">copyReader(Reader, File)</a></span> - Static method in class ca.cgjennings.apps.arkham.project.<a href="ca/cgjennings/apps/arkham/project/ProjectUtilities.html" title="class in ca.cgjennings.apps.arkham.project">ProjectUtilities</a></dt>
 <dd>
@@ -4095,6 +4202,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Copy the content from a file stored in the application resources to a
  file.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html#copySettings(java.lang.String...)">copySettings(String...)</a></span> - Method in class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a></dt>
+<dd>
+<div class="block">Copies the settings for the given keys from the old component to the new.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/project/ProjectUtilities.html#copyStream(java.io.InputStream,java.io.File)">copyStream(InputStream, File)</a></span> - Static method in class ca.cgjennings.apps.arkham.project.<a href="ca/cgjennings/apps/arkham/project/ProjectUtilities.html" title="class in ca.cgjennings.apps.arkham.project">ProjectUtilities</a></dt>
 <dd>
@@ -4801,6 +4912,17 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Copies the bundle content into a ZIP archive with no file compression
  (all files in the archive are <code>STORE</code>d).</div>
 </dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/AbstractGameComponent.html#createUpgradeConversionTrigger()">createUpgradeConversionTrigger()</a></span> - Method in class ca.cgjennings.apps.arkham.component.<a href="ca/cgjennings/apps/arkham/component/AbstractGameComponent.html" title="class in ca.cgjennings.apps.arkham.component">AbstractGameComponent</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/GameComponent.html#createUpgradeConversionTrigger()">createUpgradeConversionTrigger()</a></span> - Method in interface ca.cgjennings.apps.arkham.component.<a href="ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></dt>
+<dd>
+<div class="block">Returns the <a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion"><code>ConversionSession</code></a> created when the component type no
+ longer handles the component.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/deck/Deck.html#createUpgradeConversionTrigger()">createUpgradeConversionTrigger()</a></span> - Method in class ca.cgjennings.apps.arkham.deck.<a href="ca/cgjennings/apps/arkham/deck/Deck.html" title="class in ca.cgjennings.apps.arkham.deck">Deck</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/diy/DIY.html#createUpgradeConversionTrigger()">createUpgradeConversionTrigger()</a></span> - Method in class ca.cgjennings.apps.arkham.diy.<a href="ca/cgjennings/apps/arkham/diy/DIY.html" title="class in ca.cgjennings.apps.arkham.diy">DIY</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/ui/FilteredDocument.html#createUpperCaseDocument(java.util.Locale)">createUpperCaseDocument(Locale)</a></span> - Static method in class ca.cgjennings.ui.<a href="ca/cgjennings/ui/FilteredDocument.html" title="class in ca.cgjennings.ui">FilteredDocument</a></dt>
 <dd>
 <div class="block">Returns a new document that converts all text to upper case.</div>
@@ -5508,6 +5630,19 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/diy/DIY.HighResolutionMode.html#DISABLE">DISABLE</a></span> - ca.cgjennings.apps.arkham.diy.<a href="ca/cgjennings/apps/arkham/diy/DIY.HighResolutionMode.html" title="enum in ca.cgjennings.apps.arkham.diy">DIY.HighResolutionMode</a></dt>
 <dd>
 <div class="block">Never substitute high resolution images.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html#disableAutomaticConversion()">disableAutomaticConversion()</a></span> - Method in class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a></dt>
+<dd>
+<div class="block">Disables all automatic conversion steps.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html#disableAutomaticCopyBasics()">disableAutomaticCopyBasics()</a></span> - Method in class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a></dt>
+<dd>
+<div class="block">Disables the automatic conversion for component name, comments and
+ expansions.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html#disableAutomaticCopyPortraits()">disableAutomaticCopyPortraits()</a></span> - Method in class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a></dt>
+<dd>
+<div class="block">Disables the automatic conversion for component portraits.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/design/SupportPreferences.FeedbackLevel.html#DISABLED">DISABLED</a></span> - ca.cgjennings.apps.arkham.component.design.<a href="ca/cgjennings/apps/arkham/component/design/SupportPreferences.FeedbackLevel.html" title="enum in ca.cgjennings.apps.arkham.component.design">SupportPreferences.FeedbackLevel</a></dt>
 <dd>
@@ -8745,6 +8880,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Returns an immutable set of the entries associated with a particular
  category.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionTrigger.html#getCause()">getCause()</a></span> - Method in interface ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/ConversionTrigger.html" title="interface in ca.cgjennings.apps.arkham.component.conversion">ConversionTrigger</a></dt>
+<dd>
+<div class="block">Returns a string identifying why the conversion was triggered.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/UpgradeConversionTrigger.html#getCause()">getCause()</a></span> - Method in class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/UpgradeConversionTrigger.html" title="class in ca.cgjennings.apps.arkham.component.conversion">UpgradeConversionTrigger</a></dt>
+<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/ui/table/KeyStrokeCellEditor.html#getCellEditorValue()">getCellEditorValue()</a></span> - Method in class ca.cgjennings.ui.table.<a href="ca/cgjennings/ui/table/KeyStrokeCellEditor.html" title="class in ca.cgjennings.ui.table">KeyStrokeCellEditor</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/graphics/Histogram.html#getChannelMask()">getChannelMask()</a></span> - Method in class ca.cgjennings.graphics.<a href="ca/cgjennings/graphics/Histogram.html" title="class in ca.cgjennings.graphics">Histogram</a></dt>
@@ -12324,6 +12465,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Returns the <a href="ca/cgjennings/apps/arkham/plugins/PluginBundle.html" title="class in ca.cgjennings.apps.arkham.plugins"><code>PluginBundle</code></a> associated with a loaded
  plug-in bundle, or <code>null</code> if the file is not a loaded bundle.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/plugins/BundleInstaller.html#getPluginBundle(java.util.UUID)">getPluginBundle(UUID)</a></span> - Static method in class ca.cgjennings.apps.arkham.plugins.<a href="ca/cgjennings/apps/arkham/plugins/BundleInstaller.html" title="class in ca.cgjennings.apps.arkham.plugins">BundleInstaller</a></dt>
+<dd>
+<div class="block">Returns the <a href="ca/cgjennings/apps/arkham/plugins/PluginBundle.html" title="class in ca.cgjennings.apps.arkham.plugins"><code>PluginBundle</code></a> associated with the loaded
+ plug-in that has the specified UUID, or <code>null</code> if there is no such
+ loaded bundle.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/plugins/AbstractInstalledPlugin.html#getPluginClass()">getPluginClass()</a></span> - Method in class ca.cgjennings.apps.arkham.plugins.<a href="ca/cgjennings/apps/arkham/plugins/AbstractInstalledPlugin.html" title="class in ca.cgjennings.apps.arkham.plugins">AbstractInstalledPlugin</a></dt>
 <dd>
 <div class="block">Returns the class or script identifier, in normalized form, that this
@@ -12870,6 +13017,18 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/plugins/QuickscriptPlugin.html#getRepresentativeImage()">getRepresentativeImage()</a></span> - Method in class ca.cgjennings.apps.arkham.plugins.<a href="ca/cgjennings/apps/arkham/plugins/QuickscriptPlugin.html" title="class in ca.cgjennings.apps.arkham.plugins">QuickscriptPlugin</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/AbstractConversionTrigger.html#getRequiredExtensionId()">getRequiredExtensionId()</a></span> - Method in class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/AbstractConversionTrigger.html" title="class in ca.cgjennings.apps.arkham.component.conversion">AbstractConversionTrigger</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionTrigger.html#getRequiredExtensionId()">getRequiredExtensionId()</a></span> - Method in interface ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/ConversionTrigger.html" title="interface in ca.cgjennings.apps.arkham.component.conversion">ConversionTrigger</a></dt>
+<dd>
+<div class="block">Returns the UUID of required extension for the new component type.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/AbstractConversionTrigger.html#getRequiredExtensionName()">getRequiredExtensionName()</a></span> - Method in class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/AbstractConversionTrigger.html" title="class in ca.cgjennings.apps.arkham.component.conversion">AbstractConversionTrigger</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionTrigger.html#getRequiredExtensionName()">getRequiredExtensionName()</a></span> - Method in interface ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/ConversionTrigger.html" title="interface in ca.cgjennings.apps.arkham.component.conversion">ConversionTrigger</a></dt>
+<dd>
+<div class="block">Returns the name of required extension for the new component type.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/deck/item/Tile.html#getResolution()">getResolution()</a></span> - Method in class ca.cgjennings.apps.arkham.deck.item.<a href="ca/cgjennings/apps/arkham/deck/item/Tile.html" title="class in ca.cgjennings.apps.arkham.deck.item">Tile</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/layout/GraphicStyleFactory.html#getResolution()">getResolution()</a></span> - Method in class ca.cgjennings.layout.<a href="ca/cgjennings/layout/GraphicStyleFactory.html" title="class in ca.cgjennings.layout">GraphicStyleFactory</a></dt>
@@ -13438,6 +13597,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Returns the source reported by listener events.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html#getSource()">getSource()</a></span> - Method in class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a></dt>
+<dd>
+<div class="block">Returns the original component that is being converted.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/DefaultPortrait.html#getSource()">getSource()</a></span> - Method in class ca.cgjennings.apps.arkham.component.<a href="ca/cgjennings/apps/arkham/component/DefaultPortrait.html" title="class in ca.cgjennings.apps.arkham.component">DefaultPortrait</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/Portrait.html#getSource()">getSource()</a></span> - Method in interface ca.cgjennings.apps.arkham.component.<a href="ca/cgjennings/apps/arkham/component/Portrait.html" title="interface in ca.cgjennings.apps.arkham.component">Portrait</a></dt>
@@ -13693,6 +13856,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Return an array of parameters included in the current tag.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html#getTarget()">getTarget()</a></span> - Method in class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a></dt>
+<dd>
+<div class="block">Returns the new component that will become the converted component.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/ContextBar.Context.html#getTarget()">getTarget()</a></span> - Method in class ca.cgjennings.apps.arkham.<a href="ca/cgjennings/apps/arkham/ContextBar.Context.html" title="class in ca.cgjennings.apps.arkham">ContextBar.Context</a></dt>
 <dd>
 <div class="block">Returns the control that the bar is attached to.</div>
@@ -13704,6 +13871,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="ca/cgjennings/graphics/filters/SubstitutionFilter.html#getTarget()">getTarget()</a></span> - Method in class ca.cgjennings.graphics.filters.<a href="ca/cgjennings/graphics/filters/SubstitutionFilter.html" title="class in ca.cgjennings.graphics.filters">SubstitutionFilter</a></dt>
 <dd>
 <div class="block">Returns the target value.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/AbstractConversionTrigger.html#getTargetClassName()">getTargetClassName()</a></span> - Method in class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/AbstractConversionTrigger.html" title="class in ca.cgjennings.apps.arkham.component.conversion">AbstractConversionTrigger</a></dt>
+<dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionTrigger.html#getTargetClassName()">getTargetClassName()</a></span> - Method in interface ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/ConversionTrigger.html" title="interface in ca.cgjennings.apps.arkham.component.conversion">ConversionTrigger</a></dt>
+<dd>
+<div class="block">Returns the identifier for the new component type to convert the
+ <a href="ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component"><code>GameComponent</code></a> to.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/ImageExporter.html#getTargetResolution()">getTargetResolution()</a></span> - Method in class ca.cgjennings.apps.arkham.<a href="ca/cgjennings/apps/arkham/ImageExporter.html" title="class in ca.cgjennings.apps.arkham">ImageExporter</a></dt>
 <dd>
@@ -14064,6 +14238,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="ca/cgjennings/ui/FolderTree.html#getTreePathForFolder(java.io.File)">getTreePathForFolder(File)</a></span> - Method in class ca.cgjennings.ui.<a href="ca/cgjennings/ui/FolderTree.html" title="class in ca.cgjennings.ui">FolderTree</a></dt>
 <dd>
 <div class="block">Returns a tree path for the specified file, or <code>null</code>.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html#getTrigger()">getTrigger()</a></span> - Method in class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a></dt>
+<dd>
+<div class="block">Returns the <a href="ca/cgjennings/apps/arkham/component/conversion/ConversionTrigger.html" title="interface in ca.cgjennings.apps.arkham.component.conversion"><code>ConversionTrigger</code></a> that initiated the conversion.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/plugins/typescript/TypeScriptServiceProvider.html#getTs()">getTs()</a></span> - Method in class ca.cgjennings.apps.arkham.plugins.typescript.<a href="ca/cgjennings/apps/arkham/plugins/typescript/TypeScriptServiceProvider.html" title="class in ca.cgjennings.apps.arkham.plugins.typescript">TypeScriptServiceProvider</a></dt>
 <dd>
@@ -19503,6 +19681,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/deck/Deck.html#moveSelectionToFront()">moveSelectionToFront()</a></span> - Method in class ca.cgjennings.apps.arkham.deck.<a href="ca/cgjennings/apps/arkham/deck/Deck.html" title="class in ca.cgjennings.apps.arkham.deck">Deck</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html#moveSettings(java.lang.String...)">moveSettings(String...)</a></span> - Method in class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a></dt>
+<dd>
+<div class="block">Copies settings from the old component to the new, based on the given key
+ pairs.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/project/ProjectView.html#moveToLocusOfAttention(java.awt.Window)">moveToLocusOfAttention(Window)</a></span> - Method in class ca.cgjennings.apps.arkham.project.<a href="ca/cgjennings/apps/arkham/project/ProjectView.html" title="class in ca.cgjennings.apps.arkham.project">ProjectView</a></dt>
 <dd>
 <div class="block">Place a window near the (inferred) locus of attention in the project
@@ -20829,6 +21012,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd>
 <div class="block">Called to swap the buttons of this agnostic dialog.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html#performAutomaticConversion()">performAutomaticConversion()</a></span> - Method in class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a></dt>
+<dd>
+<div class="block">Performs the enabled automatic conversion steps, then disables all
+ conversion steps.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/plugins/catalog/AutomaticUpdater.html#performAutomaticUpdate()">performAutomaticUpdate()</a></span> - Static method in class ca.cgjennings.apps.arkham.plugins.catalog.<a href="ca/cgjennings/apps/arkham/plugins/catalog/AutomaticUpdater.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog">AutomaticUpdater</a></dt>
 <dd>
 <div class="block">Checks if an update is overdue, and if so checks if updates are available
@@ -21051,6 +21239,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/commands/Commands.html#PLUGIN_MANAGER">PLUGIN_MANAGER</a></span> - Static variable in class ca.cgjennings.apps.arkham.commands.<a href="ca/cgjennings/apps/arkham/commands/Commands.html" title="class in ca.cgjennings.apps.arkham.commands">Commands</a></dt>
 <dd>
 <div class="block">Opens the plug-in manager.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/ui/theme/Theme.html#PLUGIN_README_BACKGROUND">PLUGIN_README_BACKGROUND</a></span> - Static variable in class ca.cgjennings.ui.theme.<a href="ca/cgjennings/ui/theme/Theme.html" title="class in ca.cgjennings.ui.theme">Theme</a></dt>
+<dd>
+<div class="block">UI key for plug-in installation notes and catalog info background colour.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/ui/theme/Theme.html#PLUGIN_README_FOREGROUND">PLUGIN_README_FOREGROUND</a></span> - Static variable in class ca.cgjennings.ui.theme.<a href="ca/cgjennings/ui/theme/Theme.html" title="class in ca.cgjennings.ui.theme">Theme</a></dt>
+<dd>
+<div class="block">UI key for plug-in installation notes and catalog info foreground colour.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/project/NewTaskType.html#PLUGIN_TYPE">PLUGIN_TYPE</a></span> - Static variable in class ca.cgjennings.apps.arkham.project.<a href="ca/cgjennings/apps/arkham/project/NewTaskType.html" title="class in ca.cgjennings.apps.arkham.project">NewTaskType</a></dt>
 <dd>
@@ -23800,6 +23996,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/ui/JIconDrop.html#SELECTED_IMAGE_CHANGED_PROPERTY">SELECTED_IMAGE_CHANGED_PROPERTY</a></span> - Static variable in class ca.cgjennings.ui.<a href="ca/cgjennings/ui/JIconDrop.html" title="class in ca.cgjennings.ui">JIconDrop</a></dt>
 <dd>&nbsp;</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/plugins/catalog/CatalogDialog.html#selectFilteredListingsForInstallation()">selectFilteredListingsForInstallation()</a></span> - Method in class ca.cgjennings.apps.arkham.plugins.catalog.<a href="ca/cgjennings/apps/arkham/plugins/catalog/CatalogDialog.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog">CatalogDialog</a></dt>
+<dd>
+<div class="block">Selects all currently visible plug-ins for installation if possible.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/ui/dnd/ScrapBook.Selection.html#%3Cinit%3E(K,java.awt.datatransfer.DataFlavor)">Selection(K, DataFlavor)</a></span> - Constructor for class ca.cgjennings.ui.dnd.<a href="ca/cgjennings/ui/dnd/ScrapBook.Selection.html" title="class in ca.cgjennings.ui.dnd">ScrapBook.Selection</a></dt>
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/deck/PageView.html#SELECTION">SELECTION</a></span> - Static variable in class ca.cgjennings.apps.arkham.deck.<a href="ca/cgjennings/apps/arkham/deck/PageView.html" title="class in ca.cgjennings.apps.arkham.deck">PageView</a></dt>
@@ -23927,7 +24127,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/sheet/StandardHints.html#set(java.lang.Object,java.lang.Object,ca.cgjennings.apps.arkham.sheet.RenderTarget)">set(Object, Object, RenderTarget)</a></span> - Static method in class ca.cgjennings.apps.arkham.sheet.<a href="ca/cgjennings/apps/arkham/sheet/StandardHints.html" title="class in ca.cgjennings.apps.arkham.sheet">StandardHints</a></dt>
 <dd>
-<div class="block">For testing and experimentation.Changes a hint for all render targets or the specified target.</div>
+<div class="block">For testing and experimentation.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/plugins/catalog/Listing.html#set(java.lang.String,java.lang.String)">set(String, String)</a></span> - Method in class ca.cgjennings.apps.arkham.plugins.catalog.<a href="ca/cgjennings/apps/arkham/plugins/catalog/Listing.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog">Listing</a></dt>
 <dd>
@@ -29999,6 +30199,23 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="memberNameLink"><a href="ca/cgjennings/ui/JTip.html#updateTipComponent()">updateTipComponent()</a></span> - Method in class ca.cgjennings.ui.<a href="ca/cgjennings/ui/JTip.html" title="class in ca.cgjennings.ui">JTip</a></dt>
 <dd>
 <div class="block">Allows subclasses to modify the tip component just prior to display.</div>
+</dd>
+<dt><a href="ca/cgjennings/apps/arkham/component/conversion/UpgradeConversionTrigger.html" title="class in ca.cgjennings.apps.arkham.component.conversion"><span class="typeNameLink">UpgradeConversionTrigger</span></a> - Class in <a href="ca/cgjennings/apps/arkham/component/conversion/package-summary.html">ca.cgjennings.apps.arkham.component.conversion</a></dt>
+<dd>
+<div class="block">A <a href="ca/cgjennings/apps/arkham/component/conversion/ConversionTrigger.html" title="interface in ca.cgjennings.apps.arkham.component.conversion"><code>ConversionTrigger</code></a> created by
+ <a href="ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component"><code>GameComponent</code></a>s after being read
+ from file to indicate that the component need to be converted to a new
+ component type.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/UpgradeConversionTrigger.html#%3Cinit%3E(java.lang.String)">UpgradeConversionTrigger(String)</a></span> - Constructor for class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/UpgradeConversionTrigger.html" title="class in ca.cgjennings.apps.arkham.component.conversion">UpgradeConversionTrigger</a></dt>
+<dd>
+<div class="block">Creates a new <code>UpgradeConversionTrigger</code> indicating a component
+ needs to be upgraded to another component type.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="ca/cgjennings/apps/arkham/component/conversion/UpgradeConversionTrigger.html#%3Cinit%3E(java.lang.String,java.lang.String,java.lang.String)">UpgradeConversionTrigger(String, String, String)</a></span> - Constructor for class ca.cgjennings.apps.arkham.component.conversion.<a href="ca/cgjennings/apps/arkham/component/conversion/UpgradeConversionTrigger.html" title="class in ca.cgjennings.apps.arkham.component.conversion">UpgradeConversionTrigger</a></dt>
+<dd>
+<div class="block">Creates a new <code>UpgradeConversionTrigger</code> indicating a component
+ needs to be upgraded to another component type.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="ca/cgjennings/math/Combinatorics.html#upperCumulativeDistribution(int,int,double)">upperCumulativeDistribution(int, int, double)</a></span> - Static method in class ca.cgjennings.math.<a href="ca/cgjennings/math/Combinatorics.html" title="class in ca.cgjennings.math">Combinatorics</a></dt>
 <dd>

@@ -4,6 +4,7 @@ ca.cgjennings.apps
 ca.cgjennings.apps.arkham
 ca.cgjennings.apps.arkham.commands
 ca.cgjennings.apps.arkham.component
+ca.cgjennings.apps.arkham.component.conversion
 ca.cgjennings.apps.arkham.component.design
 ca.cgjennings.apps.arkham.deck
 ca.cgjennings.apps.arkham.deck.item

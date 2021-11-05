@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":9,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
+var data = {"i0":10,"i1":9,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -233,6 +233,13 @@ implements <a href="../../../../platform/AgnosticDialog.html" title="interface i
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CATALOG_PROPERTY">CATALOG_PROPERTY</a></span></code></th>
+<td class="colLast">
+<div class="block">Property that changes when the dialog switches to a new catalog.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CATLINK_PREFIX">CATLINK_PREFIX</a></span></code></th>
 <td class="colLast">
 <div class="block">The string "eonscat:", the prefix that marks a Strange Eons <i>cat
@@ -367,12 +374,19 @@ implements <a href="../../../../platform/AgnosticDialog.html" title="interface i
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#selectFilteredListingsForInstallation()">selectFilteredListingsForInstallation</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Selects all currently visible plug-ins for installation if possible.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setListingFilter(java.lang.String)">setListingFilter</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;filter)</code></th>
 <td class="colLast">
 <div class="block">Sets the current listing filter.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPopupText(java.lang.String)">setPopupText</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;popupText)</code></th>
 <td class="colLast">
@@ -439,6 +453,20 @@ implements <a href="../../../../platform/AgnosticDialog.html" title="interface i
 <!--   -->
 </a>
 <h3>Field Detail</h3>
+<a id="CATALOG_PROPERTY">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CATALOG_PROPERTY</h4>
+<pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> CATALOG_PROPERTY</pre>
+<div class="block">Property that changes when the dialog switches to a new catalog.</div>
+<dl>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../../constant-values.html#ca.cgjennings.apps.arkham.plugins.catalog.CatalogDialog.CATALOG_PROPERTY">Constant Field Values</a></dd>
+</dl>
+</li>
+</ul>
 <a id="CATLINK_PREFIX">
 <!--   -->
 </a>
@@ -570,6 +598,18 @@ implements <a href="../../../../platform/AgnosticDialog.html" title="interface i
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#setListingFilter(java.lang.String)"><code>setListingFilter(java.lang.String)</code></a></dd>
 </dl>
+</li>
+</ul>
+<a id="selectFilteredListingsForInstallation()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>selectFilteredListingsForInstallation</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;selectFilteredListingsForInstallation()</pre>
+<div class="block">Selects all currently visible plug-ins for installation if possible.
+ Does not affect the selection state of any plug-ins that are filtered
+ out of the view.</div>
 </li>
 </ul>
 <a id="setPopupText(java.lang.String)">
