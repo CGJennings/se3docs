@@ -1,8 +1,20 @@
 # Release notes
 
-<!--The following changes are planned for inclusion in the **next update**. This list is *informational only*: nothing here is final until the update is actually published. Some items may be deferred or abandoned, and other items may be added at any time. In particular, changes to the APIs and script engine have the potential to introduce compatibility issues with plug-ins which might lead to those features being delayed, changed, or withdrawn.-->
+## 3.3 (upcoming version)
+
+The following changes are planned for inclusion in the **next update**. This list is *informational only*: nothing here is final until the update is actually published. Some items may be deferred or abandoned, and other items may be added at any time. In particular, changes to the APIs and script engine have the potential to introduce compatibility issues with plug-ins which might lead to those features being delayed, changed, or withdrawn.
+
+### For plug-in developers
+
+- A new API has been added to support transitioning legacy components to a new component type. [Thanks to Henrik Rostedt]
+
+### Bug fixes
+
+- The plug-in installation notes, plug-in overviews in the plug-in manager and catalogue, and catalogue relaunch warning message are now themeable and have proper dark defaults for dark themes.
 
 ## 3.2 (build 4202)
+
+> **Important:** If you have problems with a plug-in (for example, creating a component for a particular game) after updating, ensure that **Compatibilty mode** is checked in the [**Preferences** dialog](http://se3docs.cgjennings.ca/um-ui-preferences.html) (in category **Plug-ins**, under **Plug-in Scripts/Compiler Options**).
 
 ### Features, enhancements, and changes
 
