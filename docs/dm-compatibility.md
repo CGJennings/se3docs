@@ -148,7 +148,7 @@ function onConvertFrom(diy, session) {
 >
 > ```js
 > function onConvertFrom(diy, session) {
-> 	session
+>     session
 >         .copyPortrait(0, 1, false)
 >         .copyAllSettingsExcept("game", "money")
 >         .moveSettings("money", "treasure");
