@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":9,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10};
+var data = {"i0":10,"i1":9,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -299,6 +299,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  conversion steps.</div>
 </td>
 </tr>
+<tr id="i19" class="rowColor">
+<td class="colFirst"><code><a href="ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSettings(java.lang.String...)">setSettings</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>...&nbsp;keyValuePairs)</code></th>
+<td class="colLast">
+<div class="block">Sets one or more settings on the new component, based on the given
+ (key, value) pairs.</div>
+</td>
+</tr>
 </table>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
@@ -395,7 +403,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  performed by default.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the conversion session</dd>
+<dd>this conversion session</dd>
 </dl>
 </li>
 </ul>
@@ -411,7 +419,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  automatically performed by default.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the conversion session</dd>
+<dd>this conversion session</dd>
 </dl>
 </li>
 </ul>
@@ -427,7 +435,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>keys</code> - the settings keys to copy</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the conversion session</dd>
+<dd>this conversion session</dd>
 </dl>
 </li>
 </ul>
@@ -442,7 +450,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  from parent settings are not copied.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the conversion session</dd>
+<dd>this conversion session</dd>
 </dl>
 </li>
 </ul>
@@ -459,7 +467,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>excludedKeys</code> - the settings keys to exclude</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the conversion session</dd>
+<dd>this conversion session</dd>
 </dl>
 </li>
 </ul>
@@ -472,13 +480,35 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public&nbsp;<a href="ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a>&nbsp;moveSettings&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>...&nbsp;pairs)</pre>
 <div class="block">Copies settings from the old component to the new, based on the given key
  pairs. The setting for the first key in the pair is fetched from the old
- component and stored using the second key in the new component. If an odd
- number of keys is given, the last key is ignored.</div>
+ component and stored using the second key in the new component.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>pairs</code> - the pairs of keys to copy</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the conversion session</dd>
+<dd>this conversion session</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if the array of key name pairs has an odd
+     length</dd>
+</dl>
+</li>
+</ul>
+<a id="setSettings(java.lang.String...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSettings</h4>
+<pre class="methodSignature">public&nbsp;<a href="ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a>&nbsp;setSettings&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>...&nbsp;keyValuePairs)</pre>
+<div class="block">Sets one or more settings on the new component, based on the given
+ (key, value) pairs.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>keyValuePairs</code> - </dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>this conversion session</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if the array of setting pairs has an odd
+     length</dd>
 </dl>
 </li>
 </ul>
@@ -493,7 +523,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  automatically performed by default.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the conversion session</dd>
+<dd>this conversion session</dd>
 </dl>
 </li>
 </ul>
@@ -516,7 +546,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>targetIndex</code> - the index of the portrait in the target component</dd>
 <dd><code>copyLayout</code> - whether to copy the adjustments of the portrait or not</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the conversion session</dd>
+<dd>this conversion session</dd>
 </dl>
 </li>
 </ul>
@@ -537,7 +567,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>index</code> - the index of the portrait</dd>
 <dd><code>copyLayout</code> - whether to copy the adjustments of the portrait or not</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the conversion session</dd>
+<dd>this conversion session</dd>
 </dl>
 </li>
 </ul>
@@ -557,7 +587,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>copyLayouts</code> - whether to copy the individual adjustments of the
  portraits or not</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the conversion session</dd>
+<dd>this conversion session</dd>
 </dl>
 </li>
 </ul>
@@ -573,7 +603,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  component manually.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the conversion session</dd>
+<dd>this conversion session</dd>
 </dl>
 </li>
 </ul>
@@ -588,7 +618,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  called if modifying portraits on the target component manually.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the conversion session</dd>
+<dd>this conversion session</dd>
 </dl>
 </li>
 </ul>
@@ -602,7 +632,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Disables all automatic conversion steps.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the conversion session</dd>
+<dd>this conversion session</dd>
 </dl>
 </li>
 </ul>
@@ -619,7 +649,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  target component, so the changes are not overwritten.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the conversion session</dd>
+<dd>this conversion session</dd>
 </dl>
 </li>
 </ul>
