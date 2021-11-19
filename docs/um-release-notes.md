@@ -10,6 +10,7 @@ The following changes are planned for inclusion in the **next update**. This lis
 
 ### Bug fixes
 
+- The **File/Open Recent** menu listed deleted files. A side effect of this is that deleted projects would be listed under the wrong section.
 - The plug-in installation notes, plug-in overviews in the plug-in manager and catalogue, and catalogue relaunch warning message are now themeable and have proper dark defaults for dark themes.
 
 ## 3.2 (build 4202)
