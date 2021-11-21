@@ -1,6 +1,6 @@
 # Publisher's marks and bleed margins
 
-The deck editor includes features designed to make it easier to cut and assemble your published projects on the your projects. These features can managed from the **Publisher's Marks** tab.
+The deck editor includes features designed to make it easier to cut and assemble your finished projects. These features are accessed from the **Publisher's Marks** tab.
 
 ![the Publisher's Marks tab](images/deck-pubmarks.png)
 
