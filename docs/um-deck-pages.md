@@ -18,7 +18,7 @@ To *reorder the pages*, drag and drop the tabs into the new sequence.
 
 ## Paper size
 
-You can change deck's page size using the **Deck** tab's **Paper Size** dropdown. (If you have selected a game for the deck, there may also be additional page sizes listed. These are sized for making game boards or other game-specific objects.)
+You can change a deck's page size using the **Deck** tab's **Paper Size** dropdown. (If you have selected a game for the deck, there may also be additional page sizes listed. These are sized for making game boards or other game-specific objects.)
 
 You can define a new paper size by choosing **Custom**:
 

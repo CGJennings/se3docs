@@ -1,6 +1,6 @@
 # Creating fold-up boxes
 
-With the deck editor you can easily create boxes for storing your cards and other playing pieces in. These boxes are similar to those that playing cards might come in, sometimes called tuck boxes.
+With the deck editor you can easily create boxes for storing your cards and other playing pieces. These boxes are similar to those that playing cards might come in, sometimes called *tuck boxes*.
 
 ![sample box template](images/box-template.png)
 
@@ -53,18 +53,18 @@ Assembling a box is not difficult. There are several ways to do it, but if you a
 
 ### Materials
 
-1. Thick card paper (Bristol board/poster board/poster paper, card stock, or even a cereal box)
-2. Scissors or a craft knife and cutting mat
-3. Glue or double-sided tape
-4. Masking tape (optional)
+1. Thick card paper (Bristol board/poster board/poster paper, card stock, or even a cereal box).
+2. Scissors or a craft knife and cutting mat.
+3. Glue, double-sided tape, or other adhesive.
+4. Masking tape (optional).
 
-### Adhesives
+### Adhesive
 
 Any glue that bonds paper can be used. Glues that remain flexible when dry, such as regular white glue, will work best since the box will flex slightly during use. Glue sticks may not work well as some become brittle after drying. For easy assembly, you can also use double-sided tape. If you don't care what the box looks like, regular tape works, too!
 
 ### Printing
 
-The templates are meant to be cut from thick card (about 0.15 mm thick or 220-250 g/m²). If your printer supports it, you can print the template onto the card. Otherwise, you can print the template on plain paper and tape or trace it onto the card. If the template has a design, you can print it onto sticker paper and then stick it onto the card before cutting.
+The templates are meant to be cut from thick card (about 0.15 mm thick or 220-250 g/m²). If your printer supports it, you can print the template directly onto cardstock. Otherwise, you can print the template on plain paper and tape or trace it onto the card. If the template has a design, you can print it onto sticker paper and then stick it onto the card before cutting.
 
 ### Cutting
 
