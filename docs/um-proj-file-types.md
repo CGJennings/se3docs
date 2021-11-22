@@ -41,7 +41,7 @@ To *convert or optimize a bitmap image*, right click and choose [**Convert To** 
 |                                                  | Windows Bitmap | `.bmp`          | widely supported legacy format                               |
 |                                                  | GIF            | `.gif`          | widely supported legacy format                               |
 |                                                  | Photoshop      | `.psd`          | to *convert to a regular bitmap image*, double click to **View** then choose **Save As** |
-| ![vector-image](images/project/vector-image.png) | SVG            | `.svg`, `.svgz` | requires core component ([details](dm-res-image.md))         |
+| ![vector-image](images/project/vector-image.png) | SVG            | `.svg`, `.svgz` | vector image format; requires core component ([details](dm-res-image.md)) |
 
 ## Plug-in files
 
@@ -55,14 +55,15 @@ To *convert or optimize a bitmap image*, right click and choose [**Convert To** 
 
 ### Data
 
-| Icon                                         | Type                   | Extension(s)             | Notes                                              |
-| -------------------------------------------- | ---------------------- | ------------------------ | -------------------------------------------------- |
-| ![root](images/project/root.png)             | Plug-in root           | exact name `eons-plugin` | tells Strange Eons how to load the plug-in         |
-| ![classmap](images/project/classmap.png)     | Class map              | `.classmap`              | used to add new game component types               |
-| ![properties](images/project/properties.png) | String table           | `.properties`            | stores translated text for a specific locale       |
-| ![settings](images/project/settings.png)     | Settings               | `.settings`, `.txt`      | stores settings that control game component layout |
-| ![sil](images/project/sil.png)               | Silhouette definitions | `.silhouettes`           | used to add new shapes to the token editor         |
-| ![tiles](images/project/tiles.png)           | Tile definitions       | `.tiles`                 | used to add new objects to the deck editor         |
+| Icon                                          | Type                                           | Extension(s)             | Notes                                                |
+| --------------------------------------------- | ---------------------------------------------- | ------------------------ | ---------------------------------------------------- |
+| ![root](images/project/root.png)              | [Plug-in root](dm-eons-plugin.md)              | exact name `eons-plugin` | tells Strange Eons how to load the plug-in           |
+| ![classmap](images/project/classmap.png)      | [Class map](dm-res-classmap.md)                | `.classmap`              | defines new game component types                     |
+| ![classmap](images/project/conversionmap.png) | [Conversion map](dm-res-conversionmap.md)      | `.conversionmap`         | defines optional conversions between component types |
+| ![properties](images/project/properties.png)  | [String table](dm-res-string-table.md)         | `.properties`            | stores translated text for a specific locale         |
+| ![settings](images/project/settings.png)      | [Settings](dm-res-settings.md)                 | `.settings`, `.txt`      | stores settings that control game component layout   |
+| ![sil](images/project/sil.png)                | [Silhouette definitions](dm-res-silhouette.md) | `.silhouettes`           | used to add new shapes to the token editor           |
+| ![tiles](images/project/tiles.png)            | [Tile definitions](dm-res-tile-set.md)         | `.tiles`                 | used to add new objects to the deck editor           |
 
 ### Fonts
 
@@ -92,13 +93,6 @@ To *pack a plug-in bundle*, right click the bundle and choose **Publish**. Doubl
 | ![packed-bundle](images/project/packed-bundle.png) | Packed bundle            | `.pbz`, `.pgz`, `plzm` | a highly compressed plug-in bundle; this is how plug-ins are downloaded from the [catalogue](um-plugins-catalogue.md) |
 
 ## Special purpose file types
-
-### Document browser collections
-
-| Icon                                         | Type                | Extension(s)  | Notes                                                   |
-| -------------------------------------------- | ------------------- | ------------- | ------------------------------------------------------- |
-| ![collection](images/project/collection.png) | Document collection | `.collection` | defines the documents that make up a browser collection |
-| ![idx](images/project/idx.png)               | Search index        | `.idx`        | index for a document browser collection                 |
 
 ### Spelling dictionaries
 
