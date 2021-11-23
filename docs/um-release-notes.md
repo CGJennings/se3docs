@@ -6,11 +6,15 @@ The following changes are planned for inclusion in the **next update**. This lis
 
 ### For plug-in developers
 
-- A new API has been added to support transitioning legacy components to a new component type. [Thanks to Henrik Rostedt]
+- A new API has been added to support converting components to new types. [Thanks to Henrik Rostedt]
+- `ResourceParser` constructor can take a user-specified character set encoding.
+- The `arkham.TextEncoding` class provides a single class to get the correct text encoding for standard file formats.
+- Game components have a new method, `getClassName()`, to get their class map description.
 
 ### Bug fixes
 
 - The **File/Open Recent** menu listed deleted files. A side effect of this is that deleted projects would be listed under the wrong section.
+- When editing class maps, tile sets, and silhouette files, the code editor would incorrectly indicate that a colon `:` could be used to separate keys from values.
 - The plug-in installation notes, plug-in overviews in the plug-in manager and catalogue, and catalogue relaunch warning message are now themeable and have proper dark defaults for dark themes.
 
 ## 3.2 (build 4202)
