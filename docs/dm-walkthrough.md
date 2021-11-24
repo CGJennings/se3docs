@@ -30,6 +30,12 @@ A special brown "test edition" of Strange Eons will open in a few moments. The i
 
 You can now play with the various controls to get a sense of what they do. When you are done, close the test edition window and continue in the original Strange Eons window.
 
+## The big picture
+
+We're about to explore the individual files that make up the plug-in, but first let's get a feel for the terrain. The diagram below shows, in general terms, the types of files used in a plug-in that adds new game components and how they are related. You might find it helpful to have this image open in another tab or window so you can refer back to it as you work through the rest of this page. Think of it as your map through the wilds that follow.
+
+![overview of files used in a plug-in and how they are linked](images/diy-plugin-overview.svg)
+
 ## The root
 
 Let's explore the source code and resources that make up this plug-in, starting from the top-level folder and working inward.
