@@ -51,7 +51,7 @@ The meat of the plug-in will all be found in here. About the only exception is i
 This file contains the [blurb that pops up when the plug-in is installed](dm-installation.md). It's optional, but most plug-ins include one.
 
 ![html icon](images/project/root.png) **eons-plugin**  
-This is the [plug-in root file](dm-eons-plugin.md). Every plug-in has one. Strange Eons looks at this file in order to figure out what files it needs to load in order to start the plug-in. We can use it for the same purpose.
+This is the [plug-in root file](dm-eons-plugin.md). Every plug-in has one. Strange Eons looks at this in order to find out what file to load in order to start the plug-in. We can use it for the same purpose: finding out which file to look at next.
 
 *Double click **eons-plugin** to open the root file editor.*
 
@@ -61,13 +61,13 @@ In the root file editor, on the main **Plug-in Control** tab, you will see a lis
 
 *Have a quick look at the rest of the dialog:*
 
-The **Catalogue Information** section is used by Strange Eons to tell different plug-ins, and different versions of the same plug-in, apart. If you were adapting this plug-in into something else, you would want to **Generate** a new **UUID** so that Strange Eons knows that your adapted code is a totally different plug-in and not an update of "Rise of the Servitors".
+The **Catalogue Information** section is used by Strange Eons to tell different plug-ins, and different versions of the same plug-in, apart. If you were adapting this plug-in into something else, you would want to **Generate** a new **UUID** (Universally Unique Identifier) so that Strange Eons knows that your adapted code is a totally different plug-in and not an update of "Rise of the Servitors".
 
 The **Catalogue Entry** tab lets us describe how the plug-in should be listed in the [catalogue](um-plugins-catalogue.md).
 
 The **Library Description** tab is only used for the rare [library plug-in type](dm-plugin-types.md#library).
 
-The **Referenced Bundles** tab can be used if your plug-in requires another plug-in to be installed. This particular plug-in is an expansion for the game Arkham Horror, so the plug-in for that game is listed as being required. We could click that entry and use the **Cut** button to the right to remove the requirement.
+The **Referenced Bundles** tab can be used if your plug-in requires another plug-in to order to work. This particular plug-in is an expansion for the game *Arkham Horror*, so the plug-in for that game is listed as being required. We could click that entry and use the **Cut** button to the right to remove the requirement.
 
 The **Advanced** tab has less commonly used options. This plug-in uses it to set the **Bundle Priority** to `EXPANSION` in order to ensure that this plug-in loads *after* the required Arkham Horror plug-in, and the **For Game** field marks this plug-in as being related to that game. The **Tags** field includes some tags that can be used when searching the catalogue.
 
@@ -111,7 +111,7 @@ As you might guess, this is the image for the front of the card. If you look at 
 This is the sample portrait that will be used by default when the user doesn't choose one of their own. It is customary for new components to start filled in with an example. This helps new users come to grips quickly with the purpose of each control. Users who prefer to start fresh can quickly discard the example by choosing **Edit/Clear** from the application menu.
 
 ![image icon](images/project/classmap.png) **rots.classmap**  
-This is a [class map file](dm-res-classmap.md). A class map file describes one or more new game component types in a kind of data table. The main plug-in script asks Strange Eons to register these new component types by reading the file. We'll see this when we look at the main plug-in script.
+This is a [class map file](dm-res-classmap.md). A class map file is a data table that describes new kinds of game components to be added to the app. The main plug-in script asks Strange Eons to register these new component types by reading the file. As we'll see, the main plug-in script registers the component listed in this file, and that listing names `diy.js` as the script that controls our new component type.
 
 ![script file icon](images/project/script.png) **servitors.js**  
 Here it is, the main [plug-in script]() that was named in the root file! We'll look at it in the next section.
