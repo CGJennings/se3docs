@@ -4,18 +4,79 @@
 
 The following changes are planned for inclusion in the **next update**. This list is *informational only*: nothing here is final until the update is actually published. Some items may be deferred or abandoned, and other items may be added at any time. In particular, changes to the APIs and script engine have the potential to introduce compatibility issues with plug-ins which might lead to those features being delayed, changed, or withdrawn.
 
+Thanks to Henrik Rostedt for contributions to this update!
+
+### Features, enhancements, and changes
+
+- The previewer can now optionally show rounded card corners.
+- Exporting designs with a bleed margin has been simplified. Previously, if the designer provided a bleed margin it would always be included, and if not then a synthetic margin could optionally be generated. Now, there is simply an option to include a margin or not. If the designer provided a margin and none is desired, it will be clipped off.
+- You can disable spelling checking in code editor tabs separately from game component tabs in the **Language** preferences panel. This prevents a sea of error highlights when editing code with comments written in a language other than the game language.
+
 ### For plug-in developers
 
-- A new API has been added to support converting components to new types. [Thanks to Henrik Rostedt]
+- A new API has been added to support [converting components](dm-res-conversionmap.md) to new types, either at user request or as part of [upgrading a component](dm-compatibility.md#transitioning-to-a-new-component-class).
+- An `UndecoratedCardBack` can now specify a designed bleed margin (previously, creating a subclass was required).
+- Sheets with rounded corners can set a corner radius, either through `setCornerRadius(radiusInPoints)` or by adding a `-corner-radius` template key.
 - `ResourceParser` constructor can take a user-specified character set encoding.
-- The `arkham.TextEncoding` class provides a single class to get the correct text encoding for standard file formats.
-- Game components have a new method, `getClassName()`, to get their class map description.
+- The `arkham.TextEncoding` class provides a single place to get the correct text encoding for standard file formats.
+- Game components have a new method, `getClassName()`, to get their class map class name (e.g., `diy:adj/squirrel/tree.diy`).
+- `StrangeEons.addStartupTask(Runnable)` added to complement `addExitTask`.
+
+#### Script engine updates
+
+> The interface to the script engine is undergoing significant change, but this should not affect developers who either rely on Strange Eons to manage loading and running scripts on their behalf, or interact with the engine through the higher-level `ScriptMonkey ` class.
+
+This release expands support for modern JavaScript features, and includes numerous performance and bug fixes. Summary of new JS features:
+
+##### `Array`
+
+- spreadable array syntax, `Symbol.isConcatSpreadable`
+
+  ```js
+  let array1 = [1,2,3];
+  let array2 = [4,5,6];
+  println([...array1, ...array2]);
+  // => [1,2,3,4,5,6]
+  ```
+
+- `Array` methods: `copyWithin`, `fill`, `from`, `of`, `keys`, `values`, `entries`
+
+##### `Function`
+
+- support for ES6 generators
+
+##### `Set` and `Map`
+
+- adds the `Map`, `Set`, `WeakMap` and `WeakSet` classes
+
+##### `String`
+
+- `String` methods: `fromCodePoint`, `padStart`, `padEnd`, `trimStart`, `trimEnd`
+
+##### `Math`
+
+- `Math` functions: `acosh`, `asinh`, `atanh`, `clz32`, `fround`, `log2`, `sign`
+
+##### Interop with Java classes
+
+- Java arrays are spreadable
+- lookup Java list elements with array syntax `list[i]`, read `size()` using `.length`
+
+#### Experimental TypeScript support updates
+
+- The startup time for the TypeScript services thread has been reduced to a reasonable duration (about a second, down from 2&ndash;3 minutes when warnings are enabled).
+- When a `.js` file with a matching `.ts` source is opened in the editor, it will be treated as read-only.
+- After transpiling a `.ts` file, the matching `.js` file editor (if open) will automatically update.
+- Basic syntax highlighting (tokenizer) and formatter support in code editors.
+
 
 ### Bug fixes
 
 - The **File/Open Recent** menu listed deleted files. A side effect of this is that deleted projects would be listed under the wrong section.
 - When editing class maps, tile sets, and silhouette files, the code editor would incorrectly indicate that a colon `:` could be used to separate keys from values.
 - The plug-in installation notes, plug-in overviews in the plug-in manager and catalogue, and catalogue relaunch warning message are now themeable and have proper dark defaults for dark themes.
+- On Windows, the installer added the console version of Strange Eons to the start menu with the same name as the standard version.
+- Help buttons with text did not use the theme's link colour.
 
 ## 3.2 (build 4202)
 
