@@ -11,6 +11,7 @@ Thanks to Henrik Rostedt for contributions to this update!
 - The previewer can now optionally show rounded card corners.
 - Exporting designs with a bleed margin has been simplified. Previously, if the designer provided a bleed margin it would always be included, and if not then a synthetic margin could optionally be generated. Now, there is simply an option to include a margin or not. If the designer provided a margin and none is desired, it will be clipped off.
 - You can disable spelling checking in code editor tabs separately from game component tabs in the **Language** preferences panel. This prevents a sea of error highlights when editing code with comments written in a language other than the game language.
+- Document tab icons are more visible in dark themes.
 
 ### For plug-in developers
 
@@ -30,15 +31,7 @@ This release expands support for modern JavaScript features, and includes numero
 
 ##### `Array`
 
-- spreadable array syntax, `Symbol.isConcatSpreadable`
-
-  ```js
-  let array1 = [1,2,3];
-  let array2 = [4,5,6];
-  println([...array1, ...array2]);
-  // => [1,2,3,4,5,6]
-  ```
-
+- `Symbol.isConcatSpreadable`
 - `Array` methods: `copyWithin`, `fill`, `from`, `of`, `keys`, `values`, `entries`
 
 ##### `Function`
@@ -51,16 +44,27 @@ This release expands support for modern JavaScript features, and includes numero
 
 ##### `String`
 
+- template literals: <code>`the sum is ${x+2}`</code>, `String.raw`
 - `String` methods: `fromCodePoint`, `padStart`, `padEnd`, `trimStart`, `trimEnd`
 
-##### `Math`
+##### `Math`, `Number`, `BigInt`, etc.
 
+- exponentiation operator: `x ** y` = x<sup>y</sup>
+- `BigInt` integers: `32n ** 64n - BigInt("24")`
 - `Math` functions: `acosh`, `asinh`, `atanh`, `clz32`, `fround`, `log2`, `sign`
+- `Number.EPSILON`
+
+##### `Object`
+
+- `Object` methods: `values`, `entries`, `fromEntries`
+- better support for shorthand property names: `let fruit = "apple", amount = 100; let o = {fruit, amount};`
 
 ##### Interop with Java classes
 
-- Java arrays are spreadable
-- lookup Java list elements with array syntax `list[i]`, read `size()` using `.length`
+- Java arrays are concat spreadable
+- Java `Iterable`s can be used in JS for-of loops
+- lookup Java list elements with array syntax `list[i]`, read `size()` using `.length`, remove with `delete `/`length`
+- `JSON.stringify` will create string/number/boolean entries from equivalent Java types, and convert Java collections and arrays to JS arrays; maps will convert to JS objects (using string keys only)
 
 #### Experimental TypeScript support updates
 
