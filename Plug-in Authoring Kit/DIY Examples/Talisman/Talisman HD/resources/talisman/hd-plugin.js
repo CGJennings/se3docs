@@ -1,4 +1,4 @@
-useLibrary( 'extension' );
+useLibrary('extension');
 
 function getName() {
     return 'Talisman HD';
@@ -16,13 +16,13 @@ function getVersion() {
 // plug-in is set to a higher priority than this plug-in in its root
 // file (eons-plugin), the main Talisman plug is guaranteed to be
 // started first if installed.
-let talismanGame = Game.get( 'TAL' );
+let talismanGame = Game.get('TAL');
 
-if( game != null ) {
-	// add the keys needed to activate high resolution mode
-	talismanGame.masterSettings.addSettingsFrom( 'talisman/hd.settings' );
+if (game != null) {
+    // add the keys needed to activate high resolution mode
+    talismanGame.masterSettings.addSettingsFrom('talisman/hd.settings');
 } else {
-	Eons.log.warning( 'Talisman HD cannot find Talisman' );
+    Eons.log.warning('Talisman HD cannot find Talisman');
 }
 
 // NOTE: to save space in the plug-in authoring kit, the high-res images in

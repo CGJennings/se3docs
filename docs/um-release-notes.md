@@ -2,28 +2,34 @@
 
 ## 3.3 (upcoming version)
 
-The following changes are planned for inclusion in the **next update**. This list is *informational only*: nothing here is final until the update is actually published. Some items may be deferred or abandoned, and other items may be added at any time. In particular, changes to the APIs and script engine have the potential to introduce compatibility issues with plug-ins which might lead to those features being delayed, changed, or withdrawn.
+> ⚠️ The following changes are *planned* for inclusion in the **next update**. This list is *informational only*: nothing here is final until the update is actually published. Some items may be deferred or abandoned, and other items may be added at any time. In particular, changes to the APIs and script engine have the potential to introduce compatibility issues with plug-ins which might lead to those features being delayed, changed, or withdrawn.
 
-Thanks to Henrik Rostedt for contributions to this update!
+Thanks to Henrik Rostedt for contributions to this update! [Contribute your own features and bug fixes on GitHub.](https://github.com/CGJennings/strange-eons)
 
 ### Features, enhancements, and changes
 
-- The previewer can now optionally show rounded card corners.
-- Exporting designs with a bleed margin has been simplified. Previously, if the designer provided a bleed margin it would always be included, and if not then a synthetic margin could optionally be generated. Now, there is simply an option to include a margin or not. If the designer provided a margin and none is desired, it will be clipped off.
+- The preview area can now show how game components will look with a bleed margin, or (when supported by the component type) with rounded corners trimmed off. (**View/Edge Finish**). This replaces the previous, hard-to-understand system for bleed margins in which components that included a bleed margin in the design would always include it, while components without a margin could optionally synthesize one. (Faces with transparency (an alpha channel), do not support bleed margins at this time.) The default is to show rounded corners, although it will take time before plug-ins support for this feature is widespread. For slower devices, setting this to show squared corners may yield a small performance boost.
+- In the deck editor and export dialog, the option to synthesize a bleed margin for components that don’t include has been replaced by options to use rounded corners (with no bleed margin), square corners (with no bleed margin), or a bleed margin. In the deck editor, the deck has a default setting that is applied to faces when they are added to the deck, but individual faces can be adjusted by right clicking them and choosing **Edit Style**.
+- Several design guides have been added. When enabled, these guides add brightly coloured lines to component faces to highlight selected areas. These are most useful for designing new game component types, but can be helpful in other cases as well. The options, found under the **View** menu, are:
+  - **Region Boxes:** highlights the bounding box of text regions (markup boxes) and certain other elements in magenta. Text regions with shaped edges will show the edge contour as a dashed blue line. This option was previously part of the the Developer Tools plug-in. The latest update to that plug-in will still add the option, but only in older versions in Strange Eons that don’t already have it.
+  - **Portrait Boxes:** highlights the bounding box of portrait areas in cyan, and the bounding box of the current portrait image in dashed magenta.
+  - **True Face Edge:** outlines the true face edge in yellow, taking both rounded corners and any bleed margin into account. This is the line you would cut along if the face was printed.
+  - **Unsafe Area:** paints a red warning zone over the unsafe area of the card; content in this area could be clipped off during commercial printing.
+- Some component types may start offering options to convert them into other types. For example, from a component from the 1st edition of a game to 2nd edition; or, from one type to another, related, type that shares much of the same information. When this option is available, it will appear under the **Edit/Convert To** menu.
+- Since storage and network costs are generally much lower than when Strange Eons was first introduced, the default “I want to…” options in the export dialog have been bumped up to a higher quality standard.
 - You can disable spelling checking in code editor tabs separately from game component tabs in the **Language** preferences panel. This prevents a sea of error highlights when editing code with comments written in a language other than the game language.
-- Document tab icons are more visible in dark themes.
 
 ### For plug-in developers
 
 - A new API has been added to support [converting components](dm-res-conversionmap.md) to new types, either at user request or as part of [upgrading a component](dm-compatibility.md#transitioning-to-a-new-component-class).
 - An `UndecoratedCardBack` can now specify a designed bleed margin (previously, creating a subclass was required).
-- Sheets with rounded corners can set a corner radius, either through `setCornerRadius(radiusInPoints)` or by adding a `-corner-radius` template key.
+- Sheets with rounded corners can set a corner radius, either through `setCornerRadius(radiusInPoints)` or by adding a `-corner-radius` template key. Strange Eons can then trim off these corners when requested by the user.
 - `ResourceParser` constructor can take a user-specified character set encoding.
 - The `arkham.TextEncoding` class provides a single place to get the correct text encoding for standard file formats.
 - Game components have a new method, `getClassName()`, to get their class map class name (e.g., `diy:adj/squirrel/tree.diy`).
 - `StrangeEons.addStartupTask(Runnable)` added to complement `addExitTask`.
 
-#### Script engine updates
+#### Script engine update
 
 > The interface to the script engine is undergoing significant change, but this should not affect developers who either rely on Strange Eons to manage loading and running scripts on their behalf, or interact with the engine through the higher-level `ScriptMonkey ` class.
 
@@ -62,25 +68,31 @@ This release expands support for modern JavaScript features, and includes numero
 ##### Interop with Java classes
 
 - Java arrays are concat spreadable
-- Java `Iterable`s can be used in JS for-of loops
-- lookup Java list elements with array syntax `list[i]`, read `size()` using `.length`, remove with `delete `/`length`
+- Java `Iterable`s can be used in JS `for`-`of` loops
+- look up Java list elements with array syntax `list[i]`, read `size()` using `.length`, remove with `delete `/`length`
 - `JSON.stringify` will create string/number/boolean entries from equivalent Java types, and convert Java collections and arrays to JS arrays; maps will convert to JS objects (using string keys only)
 
 #### Experimental TypeScript support updates
 
 - The startup time for the TypeScript services thread has been reduced to a reasonable duration (about a second, down from 2&ndash;3 minutes when warnings are enabled).
 - When a `.js` file with a matching `.ts` source is opened in the editor, it will be treated as read-only.
-- After transpiling a `.ts` file, the matching `.js` file editor (if open) will automatically update.
+- After transpiling a `.ts` file, a matching `.js` file editor will automatically update.
 - Basic syntax highlighting (tokenizer) and formatter support in code editors.
 
 
 ### Bug fixes
 
-- The **File/Open Recent** menu listed deleted files. A side effect of this is that deleted projects would be listed under the wrong section.
+- **Dark theme fixes** the following UI elements have been improved for dark themes:
+  - document tab icons are more visible in dark themes
+  - plug-in installation notes
+  - plug-in overviews in the plug-in manager and catalogue
+  - the catalogue relaunch warning message
+  - the instruction text when editing a text box in the deck editor
+  - the find field in the component area of the deck editor
+  - help buttons with text did not use the theme's link colour
+- The **File/Open Recent** menu listed deleted files, and a side effect of this is that deleted projects would be listed under the wrong section. Projects and documents are now kept in separate recent file lists. The old list will be converted automatically, but the recent file list may be wrong for a few seconds on the first time you launch Strange Eons after updating.
 - When editing class maps, tile sets, and silhouette files, the code editor would incorrectly indicate that a colon `:` could be used to separate keys from values.
-- The plug-in installation notes, plug-in overviews in the plug-in manager and catalogue, and catalogue relaunch warning message are now themeable and have proper dark defaults for dark themes.
-- On Windows, the installer added the console version of Strange Eons to the start menu with the same name as the standard version.
-- Help buttons with text did not use the theme's link colour.
+- The Windows installer for version 3.3 added the console version of Strange Eons to the start menu with the same name as the standard version.
 
 ## 3.2 (build 4202)
 

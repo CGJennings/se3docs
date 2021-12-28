@@ -1,4 +1,4 @@
-useLibrary( 'extension' );
+useLibrary('extension');
 
 function getName() {
     return 'Mutual Exclusion Buttons Example';
@@ -13,4 +13,4 @@ function getVersion() {
 }
 
 // Add our example card to the New Component Dialog
-ClassMap.add( 'example/mutex.classmap' );
+ClassMap.add('example/mutex.classmap');

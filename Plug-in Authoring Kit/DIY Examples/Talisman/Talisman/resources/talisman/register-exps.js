@@ -4,11 +4,11 @@
  * done when the plug-in loads, but the test-lib will also register
  * them for testing purposes.
  */
- 
-useLibrary( 'imageutils' );
- 
-importClass( gamedata.Game );
-importClass( gamedata.Expansion );
+
+useLibrary('imageutils');
+
+importClass(gamedata.Game);
+importClass(gamedata.Expansion);
 
 /**
  * registerExpansion( code, baseKey, customWhite, customGold )
@@ -23,57 +23,57 @@ importClass( gamedata.Expansion );
  * as the black variant, using the names {baseKey}-white.jp2 and
  * {baseKey}-gold.jp2, respectively.
  */
-function registerExpansion( code, baseKey, customWhite, customGold ) {
-	// expansion already registered (may happen while testing)
-	if( Expansion.get( code ) != null ) return;
+function registerExpansion(code, baseKey, customWhite, customGold) {
+    // expansion already registered (may happen while testing)
+    if (Expansion.get(code) != null) return;
 
-	// add expansions to the Talisman game if available,
-	// but fall back to the All Games game if not (for testing)
-	let gameInstalled = true;
-	let game = Game.get( Eons.namedObjects.Talisman.GAME_CODE );
-	if( game == null ) {
-		gameInstalled = false;
-		game = Game.get( Game.ALL_GAMES_CODE );
-	}
+    // add expansions to the Talisman game if available,
+    // but fall back to the All Games game if not (for testing)
+    let gameInstalled = true;
+    let game = Game.get(Eons.namedObjects.Talisman.GAME_CODE);
+    if (game == null) {
+        gameInstalled = false;
+        game = Game.get(Game.ALL_GAMES_CODE);
+    }
 
-	const folder = 'talisman/expansions/';
-	let blackImage = ImageUtils.get( folder + baseKey + '.jp2' );
-	let whiteImage;
-	let goldImage;
+    const folder = 'talisman/expansions/';
+    let blackImage = ImageUtils.get(folder + baseKey + '.jp2');
+    let whiteImage;
+    let goldImage;
 
-	// for testing when the game is not installed
-	if( !gameInstalled ) {
-		whiteImage = blackImage;
-		goldImage = blackImage;
-	} else {
-		let template = game.symbolTemplate;
-		if( customWhite ) {
-			whiteImage = ImageUtils.get( folder + baseKey + '-white.jp2' );
-		} else {
-			whiteImage = template.generateVariant( blackImage, 1 );
-		}
-		if( customGold ) {
-			goldImage = ImageUtils.get( folder + baseKey + '-gold.jp2' );
-		} else {
-			goldImage = template.generateVariant( blackImage, 2 );
-		}
-	}
+    // for testing when the game is not installed
+    if (!gameInstalled) {
+        whiteImage = blackImage;
+        goldImage = blackImage;
+    } else {
+        let template = game.symbolTemplate;
+        if (customWhite) {
+            whiteImage = ImageUtils.get(folder + baseKey + '-white.jp2');
+        } else {
+            whiteImage = template.generateVariant(blackImage, 1);
+        }
+        if (customGold) {
+            goldImage = ImageUtils.get(folder + baseKey + '-gold.jp2');
+        } else {
+            goldImage = template.generateVariant(blackImage, 2);
+        }
+    }
 
-	Expansion.register(
-		game, code, @('tal-exp-' + baseKey), #('tal-exp-' + baseKey),
-		ImageUtils.get( 'talisman/expansions/' + baseKey + '-icon.jp2' ),
-		[
-			blackImage,
-			whiteImage,
-			goldImage
-		]
-	);
+    Expansion.register(
+        game, code, @('tal-exp-' + baseKey), #('tal-exp-' + baseKey),
+        ImageUtils.get('talisman/expansions/' + baseKey + '-icon.jp2'),
+        [
+            blackImage,
+            whiteImage,
+            goldImage
+        ]
+    );
 }
 
-registerExpansion( 'TAL-RP', 'reaper' );
-registerExpansion( 'TAL-DN', 'dungeon' );
-registerExpansion( 'TAL-FM', 'frostmarch' );
-registerExpansion( 'TAL-HI', 'highland' );
-registerExpansion( 'TAL-SP', 'sacredpool' );
-registerExpansion( 'TAL-DR', 'dragon' );
-registerExpansion( 'TAL-BM', 'bloodmoon' );
+registerExpansion('TAL-RP', 'reaper');
+registerExpansion('TAL-DN', 'dungeon');
+registerExpansion('TAL-FM', 'frostmarch');
+registerExpansion('TAL-HI', 'highland');
+registerExpansion('TAL-SP', 'sacredpool');
+registerExpansion('TAL-DR', 'dragon');
+registerExpansion('TAL-BM', 'bloodmoon');

@@ -32,13 +32,13 @@ Text appears smoother when drawn with a technique called [*anti-aliasing*](https
 Some Windows devices have weird graphics glitches when running Strange Eons, such as bits of the interface not being drawn or being drawn in the wrong place. If this happens to you, try these steps:
 
 1. Update your graphics driver to the latest version. Once installed and the the computer reboots, try starting Strange Eons again.
-2. If your computer has two graphics chipsets (one power saving and one high performance), try using Strange Eons with each in turn.
+2. If your computer has two graphics chipsets (one power saving and one high performance), try using Strange Eons with each in turn. Usually the high performance graphics option works best.
 3. Right click on the shortcut icon that you use to start Strange Eons and choose **Properties**. Look for the field labelled **Target**. In this field you will find something like `"C:\Program Files\Strange Eons\bin\strangeeons.exe"`. Edit this by adding a space, then the following (all *after* the `.exe"`):
-   `-J-Dsun.java2d.ddoffscreen=false`
-   Click **OK** and try running the app again.
-4. The option above usually does the trick, but if that doesn't work, you can also try adding the following in various combinations to see if you can find one that works (put a space between each extra option, as well as between the options and the end of the `.exe"` bit):
-   `-J-Dsun.java2d.opengl=true`
    `-J-Dsun.java2d.d3d=false`
+   Click **OK** and try running the app again.
+4. The above option usually does the trick, but may make Strange Eons run slower. You can also try adding a space followed by an additional option:
+   `-J-Dsun.java2d.opengl=true`
+   This will enable drawing OpenGL, which may help Strange Eons run faster again. However, in some cases it may cause graphics glitches of its own.
 
 ## Error messages
 
@@ -50,19 +50,21 @@ When this message appears, you have two options: either use less memory at a tim
 
 #### Increasing the memory limit
 
-If you continue to run into this message, you will need to increase the memory available to Strange Eons by modifying the [Strange Eons VM options](um-install-command-line-options.md). Here are some example settings:
-
-`-Xmx1024m`
-Sets a 1024 MiB (megabyte) limit, also known as 1 GiB (gigabyte). This is *lowest recommended value* for running Strange Eons.
-
-`-Xmx1200m`
-Sets a 1200 MiB limit, or roughly 1.2 GiB. This is about the highest setting you can safely use on 32-bit Windows; the app may fail to start without an error message if a higher value is specified.
-
-`-Xmx2048m`
-Sets a 2 GiB limit (as 2048 MiB). This is usually plenty.
+If you continue to run into this message, you should increase the memory available to Strange Eons by modifying the [Strange Eons VM options](um-install-command-line-options.md). Here are some example settings:
 
 `-Xmx2g`
-This also sets a 2 GiB limit.
+This sets the limit to 2&nbsp;GiB (gigabytes). This is *lowest recommended value* for running Strange Eons.
+
+`-Xmx2028m`
+Sets a 2048&nbsp;MiB (megabyte) limit. This is the same as the 2&nbsp;GiB option above.
+
+`-Xmx3g`
+This sets the limit to 3&nbsp;GiB (gigabytes). This should be acceptable if your system has 8&nbsp;GiB of system RAM.
+
+`-Xmx4g`
+This sets the limit to 4&nbsp;GiB (gigabytes). Try starting here if you have at least 16&nbsp;GiB of system RAM. This is usually plenty, but as long as you have more system memory you can increase it if needed. To avoid performance issues, don’t set the limit to more than about 40% of your total system RAM.
+
+> Note that this is a *maximum limit*; Strange Eons will use this much memory all of the time. 
 
 ### Plug-in fails to start or has errors
 
@@ -70,7 +72,7 @@ If a plug-in exhibits `ReferenceErrors` or messages stating that something is un
 
 *To enable script compatibility mode,* open the Preferences dialog, choose the **Plug-ins** category, and check **Compatibility mode**. If the problem is with an extension, exit and restart the app.
 
-> Enabling script compatibility mode may add a small performance hit. It also adds objects to the global scope, which may interfere with other scripts if they try to define constants with the same name. Where possible, the plug-in or script should be updated to use current APIs.
+> Enabling script compatibility mode may add a small performance hit. It also *adds objects to the global scope*, which may interfere with other scripts if they try to define constants with the same name. Where possible, the plug-in or script should be updated to use current APIs.
 
 Another potential cause of plug-in errors is that a plug-in may depend on other plug-ins that are not installed. Check for plug-ins in the catalogue that look like they may be interrelated to the problem plug-in and install them. If this corrects the problem, contact the plug-in author to suggest that they update the plug-in to [list its dependencies](dm-eons-plugin.html#requires).
 

@@ -15,14 +15,14 @@ function getVersion() {
 // This function is called when the plug-in is first loaded. If it
 // returns false, the plug-in will not be started.
 function initialize() {
-	// Is Arkham Horror installed?
-	// If not, return false so that the plug-in is not installed;
-	// otherwise, go ahead and load the settings and class map needed
-	// for our component.
-	const AH = Game.get("AH");
-	if(AH == null) return false;
+    // Is Arkham Horror installed?
+    // If not, return false so that the plug-in is not installed;
+    // otherwise, go ahead and load the settings and class map needed
+    // for our component.
+    const AH = Game.get("AH");
+    if (AH == null) return false;
 
-	AH.masterSettings.addSettingsFrom("cgj/servitors/card-layout.settings");
-	ClassMap.add("cgj/servitors/rots.classmap");
-	return true;
+    AH.masterSettings.addSettingsFrom("cgj/servitors/card-layout.settings");
+    ClassMap.add("cgj/servitors/rots.classmap");
+    return true;
 }

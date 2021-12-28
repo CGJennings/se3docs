@@ -17,62 +17,62 @@
  ****************************************************************
  */
 
-useLibrary( 'diy' );
-useLibrary( 'ui' );
-useLibrary( 'markup' );
+useLibrary('diy');
+useLibrary('ui');
+useLibrary('markup');
 
-importClass( ca.cgjennings.graphics.composites.BlendMode );
+importClass(ca.cgjennings.graphics.composites.BlendMode);
 
 
-function create( diy ) {
-	diy.faceStyle = FaceStyle.CARD_AND_MARKER;
-	
-	// Since this is just an example, we'll set the keys
-	// we need directly in the component script. For a
-	// complete plug-in for a real game, it would be best
-	// to load these value's into the game's master settings
-	// file when the plug-in loads.
-	$char_front_template = 'example/character-front.jp2';
-	$char_back_template = 'example/character-back.jp2';
-	$char_marker_template = 'example/token.jp2';
-	
-	$char_portrait_template = 'example/character-portrait.jp2';
-	$char_portrait_clip_region = '7,4,302,391';
-	// This acts just like the portrait clip region, but it
-	// sets the clip region for drawing the portrait on the marker:
-	$char_marker_clip_region = '3,5,144,192';
-	
-	$char_name_region = '109,303,105,34';
-	$char_stats_region = '355,62,195,273';
-	
-	diy.frontTemplateKey = 'char-front';
-	diy.backTemplateKey = 'char-back';
-	diy.portraitKey = 'char';
-	
-	// Beyond the standard front and back templates, we need
-	// to set template keys using their index; the index of
-	// the front key is 0; of the back key is 1; and of the
-	// marker is 2.
-	diy.setTemplateKey( 2, 'char-marker' );
-	
-	// default character attributes
-	diy.name = 'John H. Watson';
-	$Prowess = '4';
-	$Wits = '3';
-	$Logic = '2';
-	$Etiquette = '3';
+function create(diy) {
+    diy.faceStyle = FaceStyle.CARD_AND_MARKER;
 
-	// Prevent unsaved file warnings since this is just a demo:
-	diy.markSaved();
+    // Since this is just an example, we'll set the keys
+    // we need directly in the component script. For a
+    // complete plug-in for a real game, it would be best
+    // to load these value's into the game's master settings
+    // file when the plug-in loads.
+    $char_front_template = 'example/character-front.jp2';
+    $char_back_template = 'example/character-back.jp2';
+    $char_marker_template = 'example/token.jp2';
+
+    $char_portrait_template = 'example/character-portrait.jp2';
+    $char_portrait_clip_region = '7,4,302,391';
+    // This acts just like the portrait clip region, but it
+    // sets the clip region for drawing the portrait on the marker:
+    $char_marker_clip_region = '3,5,144,192';
+
+    $char_name_region = '109,303,105,34';
+    $char_stats_region = '355,62,195,273';
+
+    diy.frontTemplateKey = 'char-front';
+    diy.backTemplateKey = 'char-back';
+    diy.portraitKey = 'char';
+
+    // Beyond the standard front and back templates, we need
+    // to set template keys using their index; the index of
+    // the front key is 0; of the back key is 1; and of the
+    // marker is 2.
+    diy.setTemplateKey(2, 'char-marker');
+
+    // default character attributes
+    diy.name = 'John H. Watson';
+    $Prowess = '4';
+    $Wits = '3';
+    $Logic = '2';
+    $Etiquette = '3';
+
+    // Prevent unsaved file warnings since this is just a demo:
+    diy.markSaved();
 }
 
 // This example doesn't create any controls, it just shows how to
 // set up the faces; but there is nothing extraordinary to do here
 // for more than two faces; just remember to use 2 as the sheet index
 // for the token.
-function createInterface( diy, editor ) {}
+function createInterface(diy, editor) {}
 
-let foreground = new Colour( 0x3a330b );
+let foreground = new Colour(0x3a330b);
 let nameBox, statsBox;
 
 
@@ -84,28 +84,28 @@ let nameBox, statsBox;
 // for the token.
 // The index of the sheet you are creating or painting can be
 // looked up from "sheet.sheetIndex".
-function createFrontPainter( diy, sheet ) {
-	if( sheet.sheetIndex == 0 ) {
-		// setup the front face of the card
-		nameBox = markupBox( sheet );
-		let style = nameBox.defaultStyle;
-		style.add(
-			FAMILY, FAMILY_BODY,
-			SIZE, 12,
-			WEIGHT, WEIGHT_BOLD,
-			POSTURE, POSTURE_OBLIQUE
-		);
-		nameBox.alignment = LAYOUT_CENTER | LAYOUT_MIDDLE;
-		
-		statsBox = markupBox( sheet );
-		statsBox.defaultStyle = style;
-		statsBox.alignment =  LAYOUT_JUSTIFY | LAYOUT_CENTER | LAYOUT_MIDDLE;
-		statsBox.lineTightness = 4;
-		statsBox.setDefinitionForTag( 'hello', '@1;' );
-	} else {
-		// setup the token
-		// (we don't need to do any setup in this case, though)
-	}
+function createFrontPainter(diy, sheet) {
+    if (sheet.sheetIndex == 0) {
+        // setup the front face of the card
+        nameBox = markupBox(sheet);
+        let style = nameBox.defaultStyle;
+        style.add(
+            FAMILY, FAMILY_BODY,
+            SIZE, 12,
+            WEIGHT, WEIGHT_BOLD,
+            POSTURE, POSTURE_OBLIQUE
+        );
+        nameBox.alignment = LAYOUT_CENTER | LAYOUT_MIDDLE;
+
+        statsBox = markupBox(sheet);
+        statsBox.defaultStyle = style;
+        statsBox.alignment = LAYOUT_JUSTIFY | LAYOUT_CENTER | LAYOUT_MIDDLE;
+        statsBox.lineTightness = 4;
+        statsBox.setDefinitionForTag('hello', '@1;');
+    } else {
+        // setup the token
+        // (we don't need to do any setup in this case, though)
+    }
 }
 
 // The create and paint functions for the back face work
@@ -114,57 +114,57 @@ function createFrontPainter( diy, sheet ) {
 // three faces, this will only be called once. Moreover,
 // there isn't much to do since this painter just draws
 // a static image.
-function createBackPainter( diy, sheet ) {
-}
+function createBackPainter(diy, sheet) {}
 
 
 // When there are more than two faces, this gets called for each
 // front face; these are the faces with even index numbers
 // (0, 2, 4, ...). You can find out which one you are painting
 // using "sheet.sheetIndex".
-function paintFront( g, diy, sheet ) {
-	// Check if we are painting the marker, and if so do that in
-	// its own separate function.
-	if( sheet.sheetIndex == 2 ) {
-		paintMarker( g, diy, sheet );
-		return;
-	}
-	
-	// It isn't the marker, so it must be the front face of the
-	// card: draw its content.
-	sheet.paintPortrait( g );
-	sheet.paintTemplateImage( g );
+function paintFront(g, diy, sheet) {
+    // Check if we are painting the marker, and if so do that in
+    // its own separate function.
+    if (sheet.sheetIndex == 2) {
+        paintMarker(g, diy, sheet);
+        return;
+    }
 
-	g.setPaint( foreground );
-	g.setComposite( BlendMode.LinearBurn );
-	nameBox.markupText = diy.fullName;
-	nameBox.draw( g, new Region( $char_name_region ) );
-	
-	statsBox.markupText =
-		  'Prowess ......... '    + $Prowess +
-		'\nWits ............... ' + $Wits +
-		'\nLogic .............. ' + $Logic +
-		'\nEtiquette ........ '   + $Etiquette
-	;
-	statsBox.draw( g, new Region( $char_stats_region ) );
+    // It isn't the marker, so it must be the front face of the
+    // card: draw its content.
+    sheet.paintPortrait(g);
+    sheet.paintTemplateImage(g);
+
+    g.setPaint(foreground);
+    g.setComposite(BlendMode.LinearBurn);
+    nameBox.markupText = diy.fullName;
+    nameBox.draw(g, new Region($char_name_region));
+
+    statsBox.markupText =
+        'Prowess ......... ' + $Prowess +
+        '\nWits ............... ' + $Wits +
+        '\nLogic .............. ' + $Logic +
+        '\nEtiquette ........ ' + $Etiquette;
+    statsBox.draw(g, new Region($char_stats_region));
 }
 
-function paintBack( g, diy, sheet ) {
-	sheet.paintTemplateImage( g );
+function paintBack(g, diy, sheet) {
+    sheet.paintTemplateImage(g);
 }
 
 // Our own function for drawing the marker face; we call this
 // from paintFront when the sheet index tells us the marker is
 // being painted.
-function paintMarker( g, diy, sheet ) {
-	// This works just like paintPortrait, but it uses the
-	// clip region for the marker portrait instead of main portrait.
-	sheet.paintMarkerPortrait( g );
-	sheet.paintTemplateImage( g );
+function paintMarker(g, diy, sheet) {
+    // This works just like paintPortrait, but it uses the
+    // clip region for the marker portrait instead of main portrait.
+    sheet.paintMarkerPortrait(g);
+    sheet.paintTemplateImage(g);
 }
 
 function onClear() {}
-function onRead( diy, ois ) {}
-function onWrite( diy, oos ) {}
+
+function onRead(diy, ois) {}
+
+function onWrite(diy, oos) {}
 
 testDIYScript();

@@ -1,4 +1,4 @@
-useLibrary( 'extension' );
+useLibrary('extension');
 
 function getName() {
     return 'Three and Four Face Examples';
@@ -13,4 +13,4 @@ function getVersion() {
 }
 
 // Add our example cards to the New Component Dialog
-ClassMap.add( 'example/faces.classmap' );
+ClassMap.add('example/faces.classmap');

@@ -14,49 +14,53 @@
  * choose from, and display only the selected child underneath.
  */
 
-useLibrary( 'diy' );
-useLibrary( 'ui' );
-useLibrary( 'markup' );
+useLibrary('diy');
+useLibrary('ui');
+useLibrary('markup');
 
 
-function create( diy ) {
-	diy.faceStyle = FaceStyle.PLAIN_BACK;
-	diy.name = 'Scrollable Tabs';
+function create(diy) {
+    diy.faceStyle = FaceStyle.PLAIN_BACK;
+    diy.name = 'Scrollable Tabs';
 }
 
-function createInterface( diy, editor ) {
-	let stack = new Stack();
+function createInterface(diy, editor) {
+    let stack = new Stack();
 
-	// this is all we need to do to make the stack scrollable
-	// when added to an editor's tabs
-	stack.editorTabScrolling = true;
-	
-	for( let i=1; i<=50; ++i ) {
-		let r = new Row();
-		r.add( 'Label ' + i, textField( 'Field ' + i ) );
-		stack.add( r );
-	}
+    // this is all we need to do to make the stack scrollable
+    // when added to an editor's tabs
+    stack.editorTabScrolling = true;
 
-	// For this demo we don't need to create a Bindings object
-	// since the controls don't actually do anything
+    for (let i = 1; i <= 50; ++i) {
+        let r = new Row();
+        r.add('Label ' + i, textField('Field ' + i));
+        stack.add(r);
+    }
 
-	stack.addToEditor( editor, 'Very Tall Layout' );
+    // For this demo we don't need to create a Bindings object
+    // since the controls don't actually do anything
+
+    stack.addToEditor(editor, 'Very Tall Layout');
 }
 
-function createFrontPainter( diy, sheet ) {}
-function createBackPainter( diy, sheet ) {}
+function createFrontPainter(diy, sheet) {}
 
-function paintFront( g, diy, sheet ) {
-	// Prevent unsaved file warnings since this is just a demo:
-	diy.markSaved();
-	sheet.paintTemplateImage( g );
+function createBackPainter(diy, sheet) {}
+
+function paintFront(g, diy, sheet) {
+    // Prevent unsaved file warnings since this is just a demo:
+    diy.markSaved();
+    sheet.paintTemplateImage(g);
 }
 
-function paintBack( g, diy, sheet ) {}
+function paintBack(g, diy, sheet) {}
+
 function onClear() {}
-function onRead( diy, ois ) {}
-function onWrite( diy, oos ) {}
 
-if( sourcefile == 'Quickscript' ) {
-	testDIYScript();
+function onRead(diy, ois) {}
+
+function onWrite(diy, oos) {}
+
+if (sourcefile == 'Quickscript') {
+    testDIYScript();
 }

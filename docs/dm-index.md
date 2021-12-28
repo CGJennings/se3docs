@@ -45,7 +45,7 @@
    1. [Register new games and game expansions](dm-register-game.md)
    2. [Create new card types with DIY components](dm-diy.md)
    3. [Add portraits to DIY components](dm-diy-portraits.md)
-   4. [Add bleed margins to DIY components](dm-diy-bleed-margins.md)
+   4. [Add bleed margins and rounded corners](dm-diy-bleed-margins.md)
    5. [Change DIY components without breaking old save files](dm-compatibility.md)
    6. [Prefab components: create new component types without code](dm-diy-prefab.md)
    7. [Customize how a component is drawn in Ink Saver mode](dm-ink-saver.md)
