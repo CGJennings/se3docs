@@ -1,4 +1,4 @@
-useLibrary( 'extension' );
+useLibrary('extension');
 
 function getName() {
     return 'Multiple Portraits Example';
@@ -13,4 +13,4 @@ function getVersion() {
 }
 
 // Add our example card to the New Component Dialog
-ClassMap.add( 'example/multi-portrait.classmap' );
+ClassMap.add('example/multi-portrait.classmap');
