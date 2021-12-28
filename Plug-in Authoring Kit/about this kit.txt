@@ -3,7 +3,14 @@ write plug-ins for Strange Eons 3. You will also
 want to consult the Developer Manual for additional
 background and context on these examples.
 
+Developer manual:
+http://se3docs.cgjennings.ca/dm-index.html
 
+JavaScript (.js) API docs:
+http://se3docs.cgjennings.ca/assets/jsdoc/index.html
+
+Java class API docs:
+http://se3docs.cgjennings.ca/assets/javadoc/
 
 ---
 
@@ -13,5 +20,5 @@ You can reuse the example code and files in the
 Licensed under CC BY 4.0:
 https://creativecommons.org/licenses/by/4.0/
 
-(This does not apply to other resources, e.g. fonts,
-which are covered by their own licenses.)
+(This does not apply to third party resources such
+as fonts, which are covered by their own licenses.)
