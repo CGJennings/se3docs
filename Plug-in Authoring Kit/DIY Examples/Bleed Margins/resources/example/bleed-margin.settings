@@ -1,0 +1,40 @@
+#
+# Bleed margin component demo
+#
+
+# Run bleed-margin-diy.js to see the result
+
+bleed-margin-front-template = example/bleed-margin-template.png
+
+# This is the resolution of the template image, in pixels per inch.
+# This determines the physical size of the component from the
+# width and height of the template image: if the image is 300 pixels
+# wide then since we set this to 150 the card will be
+# 300/150 = 2 inches wide.
+#
+# We want our card to be 1 inch square, so 150x150 pixels;
+# but we also want a standard 9 pt (1/8"/3 mm) bleed margin
+# to be part of our design. So we need to add 9/72 * 150 pixels
+# (rounded up) to each side of our template image. So, if you
+# click on bleed-margin-template.png in the project you will
+# see it is 188x188 pixels (the bleed margin adds 19 pixels to
+# each side).
+bleed-margin-front-ppi = 150
+
+# This tells Strange Eons that our template includes a 9 pt
+# bleed margin. This part will not normally be included in
+# the editor preview (depending on View options), but will
+# be included in decks and exports (when requested).
+#
+# The bleed margin area of the template image is red so that
+# it is clearly visible in this demo. Normally, it would just
+# be an extension of the existing card design. (Note how the
+# star pattern continues uninterrupted over the entire
+# template image.)
+bleed-margin-front-bleed-margin = 9
+
+# This will make our card have rounded corners with a corner
+# radius of 12 pt. If you set the View/Edge Finish to
+# rounded corners, they will be cut off the outside of the card
+# (from the true card edge, not the bleed margin).
+bleed-margin-front-corner-radius = 12

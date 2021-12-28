@@ -1,0 +1,6 @@
+#
+# Bleed Margin Demo Class Map
+#
+
+@cat-example
+    Bleed Margin Demo = diy:example/bleed-margin-diy.js ||
