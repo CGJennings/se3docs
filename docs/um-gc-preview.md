@@ -26,6 +26,8 @@ You can change the background behind the preview area using **View/Preview Backd
 
 You can change whether or not a bleed margin is shown in the preview area using the **View/Edge Finish** menu. The available options include:
 
+![image comparing the finish styles side-by-side](images/edge-finish.png)
+
 1. **Rounded corners:** If the design specifies that the face has rounded corners, the corners will be “cut off “ in the preview, matching the intended finished product. (If the design does not have rounded corners, then the result is the same as **Square corners**.)
 2. **Squared corners:** The design will not include a bleed margin, and round corners are not clipped. If you do not have a fast CPU or are low on memory, this option usually gives the best performance.
 3. **Include bleed margin:** The design is shown with a 9 point bleed margin, similar to how it would be prepared for commercial printing. If the design includes a true bleed margin, that will be used. If it does not, a bleed margin will be synthesized. Because this needs to be done quickly, the quality of the result can vary, but it is usually good enough. Since the error made by commercial printers is typically only a fraction of the standard bleed margin width, even a bad synthesized margin is acceptable in most cases.
