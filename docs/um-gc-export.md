@@ -51,7 +51,11 @@ When checked, the image is saved in multiple passes. When shown in a Web browser
 
 ### Resolution
 
-The resolution that the images are drawn at. Higher resolution images are higher in quality because they use more pixels to represent the same physical area. Resolution is measured in pixels per inch (ppi) or pixels per centimetre (ppcm). Typical resolution for print purposes is 300 ppi. Typical resolution for screen use is 150-200 ppi.
+The resolution that the images are drawn at. Higher resolution images are higher in quality because they use more pixels to represent the same physical area. Resolution is measured in pixels per inch (ppi) or pixels per centimetre (ppcm). Typical resolution for print purposes is 300 ppi. Typical resolution for screen use is 150&ndash;200 ppi.
+
+### Edge finish
+
+This lets you choose whether or not to include a [bleed margin](um-deck-pubmarks.md#bleed-margins) as part of the exported faces, where supported by the component face. If you choose not to include a bleed margin, you can select [squared or rounded corners](um-gc-preview.md#edge-finish). Rounded corners may be more aesthetically pleasing, especially if the images may be viewed against coloured or textured backgrounds. However, for this option to work as intended you must choose an image format that supports transparency (not JPEG). It may also significantly increase the image file size. (Some faces are meant to have square corners, in which case choosing rounded will have the same effect as choosing squared.)
 
 ### Combine front and back faces
 
@@ -62,10 +66,6 @@ When checked, front and back faces of the same component will be joined into a s
 Many game components have a simple back face that consists of a either a fixed image or are an identical copy of the front face. Checking this option skips these simple faces.
 
 > The *Combine front and back faces* and *Exclude simple back faces* can't be selected at the same time.
-
-### Add bleed margin to game components without one
-
-If the component design does not include a bleed margin, Strange Eons will synthesize a fake one. Not all component types support this option.
 
 ## The "Readme" file
 
