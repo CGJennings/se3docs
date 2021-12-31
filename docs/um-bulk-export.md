@@ -34,9 +34,9 @@ The option to **Limit the width and height** can be useful to meet the requireme
 
 Check **Exclude simple back faces** to skip writing an image for a card back that consists of a fixed image.
 
-Check **Add bleed margin to game components without one** to synthesize a bleed margin when none is included in the component design. Not all component types support this option.
+Check **Add a bleed margin** to add a standard 9 point bleed margin when supported by the component type. If unchecked, images with no bleed margins and squared corners are produced. (The type and size can be customized using a postprocessing script if required.)
 
-Check **Postprocess** to perform custom postprocessing on each image before it is written. When selected, you must specify a script file in the field below. The script is executed once for each generated image, allowing you to modify it as desired before it is written.
+Check **Postprocess** to perform custom postprocessing on each image before it is written. When selected, you must specify a script file in the field below. The script is executed once for each generated image, allowing you to modify each image as desired before it is written.
 
 ## Postprocessing scripts
 
@@ -61,9 +61,9 @@ The selected script will run once for each image that would be exported. The glo
   // True if this face is a "simple back face"
   simpleBackFace,
   // True if the option to synthesize bleed margins was selected
-  synthesizeBleedMargin,
+  bleedMargin,
 
-  // The following properties can be modified to affect the final result:
+  // The following can be changed to affect the output:
 
   // String that gives the full path to image file to be written
   exportPath,
@@ -78,7 +78,7 @@ The selected script will run once for each image that would be exported. The glo
 }
 ```
 
-Your script can use the value of any of these properties to modify the export process. If the `image` property is replaced by a different `BufferedImage`, then the new image will be exported instead of the original. If the `exportPath` property is replaced with a new file path, then the image will be written to that file instead of the original file. If it is set to `null` or an empty string, then the image will be skipped. Changing other properties has no effect.
+Your script can use the value of any of these properties to modify the export process. If the `image` property is replaced by a different `BufferedImage`, then the new image will be exported instead of the original. If the `exportPath` property is replaced with a new file path, then the image will be written to that file instead of the original file. If it is set to `null` or an empty string, then the image will be skipped. Changing the `format`, `quality`, and `progressive` options will modify the file format and format options used to write the image file.
 
 All postprocessing scripts begin with the following objects defined in addition to those defined by the standard scripting environment:
 
@@ -117,8 +117,15 @@ Ignore the chosen resolution and export at 400 ppi:
 
 ```js
 if (bulkItem.ppi !== 400) {
-    bulkItem.image = bulkItem.sheet.paint(RenderTarget.EXPORT, 400, bulkItem.synthesizeBleedMargin);
+    bulkItem.image = bulkItem.sheet.paint(RenderTarget.EXPORT, 400);
 }
+```
+
+Add a non-standard bleed margin that is twice the usual width (requires Strange Eons 3.3 or newer):	
+
+```js
+bulkItem.sheet.userBleedMargin = 18;
+bulkItem.image = bulkItem.sheet.paint(RenderTarget.EXPORT, bulkItem.ppi);
 ```
 
 Force ink saver mode, and then save even more ink by converting the image to greyscale and making it lighter:
@@ -126,7 +133,7 @@ Force ink saver mode, and then save even more ink by converting the image to gre
 ```js
 let sheet = bulkItem.sheet;
 sheet.setPrototypeRenderingModeEnabled(true);
-let image = sheet.paint(RenderTarget.EXPORT, bulkItem.ppi, bulkItem.synthesizeBleedMargin);
+let image = sheet.paint(RenderTarget.EXPORT, bulkItem.ppi);
 new GreyscaleFilter().filter(image, image);
 new BrightnessContrastFilter(0.2, 0).filter(image, image);
 bulkItem.image = image;
@@ -140,4 +147,3 @@ let extensionStart = bulkItem.exportPath.lastIndexOf(".") + 1;
 bulkItem.exportPath = bulkItem.exportPath.substring(0, extensionStart) + FORMAT;
 bulkItem.format = FORMAT;
 ```
-
