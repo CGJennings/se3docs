@@ -1,17 +1,99 @@
 # Release notes
 
-## 3.3 (upcoming version)
+## 3.4 (upcoming version)
 
-> ⚠️ The following changes are *planned* for inclusion in the **next update**. This list is *informational only*: nothing here is final until the update is actually published. Some items may be deferred or abandoned, and other items may be added at any time. In particular, changes to the APIs and script engine have the potential to introduce compatibility issues with plug-ins which might lead to those features being delayed, changed, or withdrawn.
+> ⚠️ The following changes are *planned* for inclusion in a **future update**. This list is *informational only*: nothing here is final until the update is actually published. Some items may be deferred or abandoned, and other items may be added at any time. In particular, changes to the APIs and script engine have the potential to introduce compatibility issues with plug-ins which might lead to those features being delayed, changed, or withdrawn.
+>
+> **Special note:** Because version 3.4 involves *major architectural changes*, it is more likely than normal than the information below will change substantially before release.
 
-Thanks to Henrik Rostedt for contributions to this update! [Contribute your own features and bug fixes on GitHub.](https://github.com/CGJennings/strange-eons)
+***Developers can preview this version by [checking out the `java-9+` branch](https://github.com/CGJennings/strange-eons/tree/java-9+).***
 
 ### Features, enhancements, and changes
 
-- The preview area can now show how game components will look with a bleed margin, or (when supported by the component type) with rounded corners trimmed off. (**View/Edge Finish**). This replaces the previous, hard-to-understand system for bleed margins in which components that included a bleed margin in the design would always include it, while components without a margin could optionally synthesize one. (Faces with transparency (an alpha channel), do not support bleed margins at this time.) The default is to show rounded corners, although it will take time before plug-ins support for this feature is widespread. For slower devices, setting this to show squared corners may yield a small performance boost.
+The primary difference in this version is that it makes the jump from requiring Java 8 to Java 11. However, most users should not notice this difference since the installer packages for Strange Eons include their own private Java environment.
+
+- High DPI monitor support. This means proper support for “retina” displays or setups that use desktop scaling. Note that the *underlying* support at both the Java and operating system level is not always perfect. For example, you may encounter weird issues when moving windows between two displays with different scaling factors.
+- Improvements to the text/source code editing experience, including:
+  - search and replace highlights all matches
+  - highlight occurrences of identifier under caret
+  - updated syntax colour themes
+  - a more modern default font for markup and code editing (Windows and Mac)
+
+### For plug-in developers
+
+#### High DPI support
+
+A high DPI display is a display which uses a scaling factor when rendering the desktop. The typical cases are a Mac with a “retina” display, or a Windows device with desktop scaling set to more than 100%. For example, a 4K UHD monitor has a resolution of 3840 × 2160 pixels. Using such a monitor without scaling would be difficult because typical text and icons would be tiny. If a two-times desktop scaling factor is applied, then the icons and text will be the same *physical* size as they would be at standard HD resolution (1920 × 1080 pixels), but with greater clarity and detail since the same content is drawn with four times as may pixels.
+
+While fonts and vector images can be scaled up easily without losing quality, this is not true of bitmap images such as PNGs or JPEGs. However, Strange Eons provides a number of tools to help you address this.
+
+> While *desktop* scaling is only relevant when drawing user interface elements and not game component faces (`Sheet`s), you can also use multi-resolution images when drawing sheets to get higher quality results when the sheet is rendered at a resolution greater than that of the template image.
+
+##### Plug-in icons
+
+By default, Strange Eons creates icons for your plug-in by looking for a PNG or JP2 image in the same folder and with the same file name as the plug-in script or class. For example, if you place `MyPlugin.png` together with `MyPlugin.js` in the same folder, the image is used automatically. This continues to work, and you can also add other resolutions using `@Nx` tags as described below.
+
+> If you overrode the default mechanism, be aware that the “representative image” methods have been deprecated.
+
+##### Game and expansion icons
+
+The `Game.register` method has signatures that accept a resource URL string or icon that can be used instead of providing a `BufferedImage` directly. Methods that accept a `BufferedImage` have been deprecated.
+
+##### Other icons
+
+Icons obtained via `ResourceKit.getIcon(resUrl)` have high DPI support built in. If your icon resource is a bitmap image, it can use `@Nx` tags as described below. (You can also create such icons yourself directly with the `ThemedImageIcon` class.)
+
+If you have a custom font containing symbols, you can create icons from those symbols using `ThemedGlyphIcon`. For example: `new ca.cgjennings.ui.theme.ThemedGlyphIcon(symbolFont, codePointOfSymbol, foregroundColor, backgroundColor)`.
+
+If you want an icon to represent a `Color` or `Paint`, use `PaintSampleIcon`.
+
+You can build up complex icons via layering with `ThemedCompoundIcon`.
+
+All of these “themed” icon classes implement a common `ThemedIcon` interface that includes the ability to derive alternate versions of the icon at arbitrary sizes.
+
+##### Multi-resolution image support
+
+In order to support high-DPI displays properly, user interface images must either be resolution independent (vector images) or supply one or more variants at different resolutions. Strange Eons supports multi-resolution bitmap images with a new class, `MultiResolutionImageResource`. This class uses a strategy similar to that of macOS: in addition to a standard resolution image, you can add variants by adding a tag like `@2x` to the file name. For example, if you have an image like `myplugin/images/dinosaur.png`, then if you also include an image named `myplugin/images/dinosaur@2x.png`, it will be used automatically when a higher-resolution version is required. (This image should be exactly twice the original image’s width and height.) Multiple versions can be provided for different scenarios. The following standard tags are recognized: `@1.25x`, `@1.5x`, `@1.75x`, `@2x`, `@2.25x`, `@2.5x`, `@3x`, `@3.5x`, `@4x`, `@8x`, `@16x`. Not all of these sizes need to be provided.
+
+##### Multi-resolution icons
+
+Icons obtained via `ResourceKit.getIcon(resUrl)` will already include high DPI support. Resources that point to bitmap images will support the same multi-resolution tag system described above.
+
+All icons returned from `getIcon` also implement the `ThemedIcon` interface. Among other features, this lets you derive different icon sizes from a single multi-resolution source.
+
+##### Cursors
+
+Custom cursors (mouse pointers) can be created with `ResourceKit.createCustomCursor`, which will leverage multiresolution bitmap images if available.
+
+#### Other changes
+
+- Themes can now instantiate their own L&F instead of returning a class name.
+
+## 3.3 (upcoming version)
+
+**This version is currently available as a release candidate from GitHub. Alternatively, developers can preview this version by [checking out the `main` branch](https://github.com/CGJennings/strange-eons/tree/main).**
+
+Thanks to Henrik Rostedt for contributions to this update! [Contribute your own features and bug fixes on GitHub.](https://github.com/CGJennings/strange-eons)
+
+### Changes to hardware acceleration defaults
+
+**Note:** If you have unusual graphics issues, you can disable all acceleration with the command line flag `-xDisableAcceleration`.
+
+**Windows: hardware acceleration is now disabled by default**  
+Many graphics card drivers do not fully support the Direct3D-based acceleration that was previously used by default. The typical result is that parts of windows were repainted in the wrong places, making the application all but unusable. To avoid this confusing experience for new users, acceleration is now disabled by default. This may noticeably slow down the app on your device, particularly if you do not have a powerful CPU. You can opt into acceleration by adding the `-xEnableWindowsAcceleration` command line switch.
+
+**Linux: XRender acceleration is now enabled by default, when supported**  
+Previously, the default was to use OpenGL-based acceleration. In this version, XRender-based acceleration will be used instead if available. If this causes problems, you can revert to OpenGL acceleration by adding the command line switch `-xOpenGL`.
+
+**Mac: Metal acceleration is now enabled by default, when supported**  
+Previously, the default was to use OpenGL-based acceleration. Starting in this version, Metal-based acceleration is possible, though it is generally only available when running Strange Eons with compatible builds of Java 17, which is not what Strange Eons currently ships with.
+
+### Features, enhancements, and changes
+
+- The preview area can now show how game components will look with a bleed margin, or (when supported by the component type) with rounded corners trimmed off. (**View/Edge Finish**). This replaces the previous, hard-to-understand system for bleed margins in which components that included a bleed margin in the design would always include it, while components without a margin could optionally synthesize one. (Faces with transparency (an alpha channel), do not support bleed margins at this time.) The default is to show rounded corners, although it will take time before plug-in support for this feature is widespread. For slower devices, setting this to show squared corners may yield a small performance boost.
 - In the deck editor and export dialog, the option to synthesize a bleed margin for components that don’t include has been replaced by options to use rounded corners (with no bleed margin), square corners (with no bleed margin), or a bleed margin. In the deck editor, the deck has a default setting that is applied to faces when they are added to the deck, but individual faces can be adjusted by right clicking them and choosing **Edit Style**.
 - Several design guides have been added. When enabled, these guides add brightly coloured lines to component faces to highlight selected areas. These are most useful for designing new game component types, but can be helpful in other cases as well. The options, found under the **View** menu, are:
-  - **Region Boxes:** highlights the bounding box of text regions (markup boxes) and certain other elements in magenta. Text regions with shaped edges will show the edge contour as a dashed blue line. This option was previously part of the the Developer Tools plug-in. The latest update to that plug-in will still add the option, but only in older versions in Strange Eons that don’t already have it.
+  - **Region Boxes:** highlights the bounding box of text regions (markup boxes) and certain other elements in magenta. Text regions with shaped edges will show the edge contour as a dashed blue line. This option was previously part of the the Developer Tools plug-in. 
   - **Portrait Boxes:** highlights the bounding box of portrait areas in cyan, and the bounding box of the current portrait image in dashed magenta.
   - **True Face Edge:** outlines the true face edge in yellow, taking both rounded corners and any bleed margin into account. This is the line you would cut along if the face was printed.
   - **Unsafe Area:** paints a red warning zone over the unsafe area of the card; content in this area could be clipped off during commercial printing.
@@ -90,9 +172,10 @@ This release expands support for modern JavaScript features, and includes numero
   - the instruction text when editing a text box in the deck editor
   - the find field in the component area of the deck editor
   - help buttons with text did not use the theme's link colour
+  - printing contents of a code editor
 - The **File/Open Recent** menu listed deleted files, and a side effect of this is that deleted projects would be listed under the wrong section. Projects and documents are now kept in separate recent file lists. The old list will be converted automatically, but the recent file list may be wrong for a few seconds on the first time you launch Strange Eons after updating.
 - When editing class maps, tile sets, and silhouette files, the code editor would incorrectly indicate that a colon `:` could be used to separate keys from values.
-- The Windows installer for version 3.3 added the console version of Strange Eons to the start menu with the same name as the standard version.
+- The Windows installer added the console version of Strange Eons to the start menu with the same name as the standard version.
 
 ## 3.2 (build 4202)
 
