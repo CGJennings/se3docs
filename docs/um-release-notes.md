@@ -176,6 +176,7 @@ This release expands support for modern JavaScript features, and includes numero
 - The **File/Open Recent** menu listed deleted files, and a side effect of this is that deleted projects would be listed under the wrong section. Projects and documents are now kept in separate recent file lists. The old list will be converted automatically, but the recent file list may be wrong for a few seconds on the first time you launch Strange Eons after updating.
 - When editing class maps, tile sets, and silhouette files, the code editor would incorrectly indicate that a colon `:` could be used to separate keys from values.
 - The Windows installer added the console version of Strange Eons to the start menu with the same name as the standard version.
+- An issue with the portrait panel prevented AH 2nd ed Mythos cards from opening the Gate tab.
 
 ## 3.2 (build 4202)
 
