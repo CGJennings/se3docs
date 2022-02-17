@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -160,8 +160,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#equals(java.lang.Object)">equals</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;obj)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the specified object is a
- <code>Property</code> with the same name and value.</div>
+<div class="block">Returns <code>true</code> if the specified object is a <code>Property</code>
+ with the same name and value.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -175,16 +175,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;? extends <a href="Style.html" title="interface in ca.cgjennings.apps.arkham.deck.item">Style</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getStyle()">getStyle</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the <code>Class</code> object for the <a href="Style.html" title="interface in ca.cgjennings.apps.arkham.deck.item"><code>Style</code></a> interface
- that this property belongs to.</div>
+<div class="block">Returns the <code>Class</code> object for the <a href="Style.html" title="interface in ca.cgjennings.apps.arkham.deck.item"><code>Style</code></a> interface that
+ this property belongs to.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;?&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getType()">getType</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the <code>Class</code> instance that represents the original
- type of the property.</div>
+<div class="block">Returns the <code>Class</code> instance that represents the original type
+ of the property.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -203,8 +203,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isConflicted()">isConflicted</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the property has had different values
- during the life of this capture.</div>
+<div class="block">Returns <code>true</code> if the property has had different values during
+ the life of this capture.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -298,11 +298,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getType</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;?&gt;&nbsp;getType()</pre>
-<div class="block">Returns the <code>Class</code> instance that represents the original
- type of the property. For example, if the property being read has
- type <code>float</code> then the object returned by {#link
- getValue()} will be a <code>Float</code> instance and the type
- returned by this method will be <code>float.class</code>.</div>
+<div class="block">Returns the <code>Class</code> instance that represents the original type
+ of the property. For example, if the property being read has type
+ <code>float</code> then the object returned by {#link getValue()} will be
+ a <code>Float</code> instance and the type returned by this method will be
+ <code>float.class</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the actual type of the captured property value, as declared
@@ -317,8 +317,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getStyle</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;? extends <a href="Style.html" title="interface in ca.cgjennings.apps.arkham.deck.item">Style</a>&gt;&nbsp;getStyle()</pre>
-<div class="block">Returns the <code>Class</code> object for the <a href="Style.html" title="interface in ca.cgjennings.apps.arkham.deck.item"><code>Style</code></a> interface
- that this property belongs to.</div>
+<div class="block">Returns the <code>Class</code> object for the <a href="Style.html" title="interface in ca.cgjennings.apps.arkham.deck.item"><code>Style</code></a> interface that
+ this property belongs to.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the style interface that the property is declared in</dd>
@@ -332,12 +332,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isConflicted</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isConflicted()</pre>
-<div class="block">Returns <code>true</code> if the property has had different values
- during the life of this capture.</div>
+<div class="block">Returns <code>true</code> if the property has had different values during
+ the life of this capture.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if different values have been captured for
- this property</dd>
+<dd><code>true</code> if different values have been captured for this
+ property</dd>
 </dl>
 </li>
 </ul>
@@ -377,18 +377,18 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>equals</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;equals&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;obj)</pre>
-<div class="block">Returns <code>true</code> if the specified object is a
- <code>Property</code> with the same name and value. (If this returns
- <code>true</code> the type and style must match unless the contract
- for <a href="Style.html" title="interface in ca.cgjennings.apps.arkham.deck.item"><code>Style</code></a> has been violated.)</div>
+<div class="block">Returns <code>true</code> if the specified object is a <code>Property</code>
+ with the same name and value. (If this returns <code>true</code> the type
+ and style must match unless the contract for <a href="Style.html" title="interface in ca.cgjennings.apps.arkham.deck.item"><code>Style</code></a> has been
+ violated.)</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>obj</code> - the object to compare this property with</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the object represents the same property
- and has an equal value</dd>
+<dd><code>true</code> if the object represents the same property and
+ has an equal value</dd>
 </dl>
 </li>
 </ul>

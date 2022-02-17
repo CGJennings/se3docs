@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -155,9 +155,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 
  <p>
  Consequences may be divided into categories, with a separate formatter for
- each category. Because all formatting is written to a
- <code>StringBuilder</code> provided by the caller, the results from each
- category can easily be collected into a single formatted document.
+ each category. Because all formatting is written to a <code>StringBuilder</code>
+ provided by the caller, the results from each category can easily be
+ collected into a single formatted document.
 
  <p>
  If for some reason you cannot process each possible consequence in the same
@@ -662,12 +662,12 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <pre class="methodSignature">public&nbsp;void&nbsp;setDeletedEntryMarkup&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;prologue,
                                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;epilogue)</pre>
 <div class="block">Sets the markup to write before and after the text of a deleted entry.
- Typically this will include a <code>&amp;lt;li&amp;gt;</code> tag pair and some
- style instructions.</div>
+ Typically this will include a <code>&amp;lt;li&amp;gt;</code> tag pair and some style
+ instructions.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>prologue</code> - the markup to write before the entry, or
- <code>null</code> to suppress the entry</dd>
+<dd><code>prologue</code> - the markup to write before the entry, or <code>null</code> to
+ suppress the entry</dd>
 <dd><code>epilogue</code> - the markup to write after the entry</dd>
 </dl>
 </li>
@@ -682,12 +682,11 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
                                <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;epilogue)</pre>
 <div class="block">Sets the markup to write before and after the text of an entry that does
  not change from the previous consequence set to this one. Typically this
- will include a <code>&amp;lt;li&amp;gt;</code> tag pair and some style
- instructions.</div>
+ will include a <code>&amp;lt;li&amp;gt;</code> tag pair and some style instructions.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>prologue</code> - the markup to write before the entry, or
- <code>null</code> to suppress the entry</dd>
+<dd><code>prologue</code> - the markup to write before the entry, or <code>null</code> to
+ suppress the entry</dd>
 <dd><code>epilogue</code> - the markup to write after the entry</dd>
 </dl>
 </li>
@@ -705,8 +704,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
  include a <code>&amp;lt;li&amp;gt;</code> tag pair and some style instructions.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>prologue</code> - the markup to write before the entry, or
- <code>null</code> to suppress the entry</dd>
+<dd><code>prologue</code> - the markup to write before the entry, or <code>null</code> to
+ suppress the entry</dd>
 <dd><code>epilogue</code> - the markup to write after the entry</dd>
 </dl>
 </li>
@@ -802,8 +801,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
                           int&nbsp;undeletedItemNumber)</pre>
 <div class="block">Writes a decorated consequence list entry into the string builder. The
  base class will use the currently set markup for the entry type to
- compose the entry, replacing the text <code>@n;</code> with the undeleted
- item number.</div>
+ compose the entry, replacing the text <code>@n;</code> with the undeleted item
+ number.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>b</code> - the destination for the markup text</dd>

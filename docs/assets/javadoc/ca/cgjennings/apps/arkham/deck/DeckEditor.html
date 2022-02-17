@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -163,7 +163,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd><code><a href="../commands/Commandable.html" title="interface in ca.cgjennings.apps.arkham.commands">Commandable</a></code>, <code><a href="../StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor</a></code>, <code><a href="../../../io/FileChangeListener.html" title="interface in ca.cgjennings.io">FileChangeListener</a></code>, <code><a href="../../../ui/TabbedPaneReorderListener.html" title="interface in ca.cgjennings.ui">TabbedPaneReorderListener</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/ImageObserver.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">ImageObserver</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/MenuContainer.html?is-external=true" title="class or interface in java.awt" class="externalLink">MenuContainer</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/print/Printable.html?is-external=true" title="class or interface in java.awt.print" class="externalLink">Printable</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/accessibility/Accessible.html?is-external=true" title="class or interface in javax.accessibility" class="externalLink">Accessible</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/RootPaneContainer.html?is-external=true" title="class or interface in javax.swing" class="externalLink">RootPaneContainer</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/WindowConstants.html?is-external=true" title="class or interface in javax.swing" class="externalLink">WindowConstants</a></code></dd>
 </dl>
 <hr>
-<pre>public class <span class="typeNameLabel">DeckEditor</span>
+<pre>public final class <span class="typeNameLabel">DeckEditor</span>
 extends <a href="../AbstractGameComponentEditor.html" title="class in ca.cgjennings.apps.arkham">AbstractGameComponentEditor</a>&lt;<a href="Deck.html" title="class in ca.cgjennings.apps.arkham.deck">Deck</a>&gt;
 implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/print/Printable.html?is-external=true" title="class or interface in java.awt.print" class="externalLink">Printable</a>, <a href="../../../ui/TabbedPaneReorderListener.html" title="interface in ca.cgjennings.ui">TabbedPaneReorderListener</a>, <a href="../../../io/FileChangeListener.html" title="interface in ca.cgjennings.io">FileChangeListener</a></pre>
 <div class="block">Editor for decks of cards (collections of game components laid out on pages)
@@ -460,16 +460,16 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/print/Pri
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isAttached()">isAttached</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this editor is currently attached to the
- document tab strip.</div>
+<div class="block">Returns <code>true</code> if this editor is currently attached to the document
+ tab strip.</div>
 </td>
 </tr>
 <tr id="i19" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isCommandApplicable(ca.cgjennings.apps.arkham.commands.AbstractCommand)">isCommandApplicable</a></span>&#8203;(<a href="../commands/AbstractCommand.html" title="class in ca.cgjennings.apps.arkham.commands">AbstractCommand</a>&nbsp;command)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the <code>command</code> can be performed by
- this commandable in its current state.</div>
+<div class="block">Returns <code>true</code> if the <code>command</code> can be performed by this
+ commandable in its current state.</div>
 </td>
 </tr>
 <tr id="i20" class="altColor">
@@ -954,8 +954,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/print/Pri
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>command</code> - the command to be performed</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if this commandable wishes to handle the
- command (even if it cannot execute the command currently)</dd>
+<dd><code>true</code> if this commandable wishes to handle the command
+ (even if it cannot execute the command currently)</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../commands/Commands.html" title="class in ca.cgjennings.apps.arkham.commands"><code>Commands</code></a></dd>
 </dl>
@@ -969,9 +969,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/print/Pri
 <h4>isCommandApplicable</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isCommandApplicable&#8203;(<a href="../commands/AbstractCommand.html" title="class in ca.cgjennings.apps.arkham.commands">AbstractCommand</a>&nbsp;command)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../AbstractStrangeEonsEditor.html#isCommandApplicable(ca.cgjennings.apps.arkham.commands.AbstractCommand)">AbstractStrangeEonsEditor</a></code></span></div>
-<div class="block">Returns <code>true</code> if the <code>command</code> can be performed by
- this commandable in its current state. If <a href="../commands/Commandable.html#canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)"><code>Commandable.canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a>
- would return false for this command, then this must also return false.
+<div class="block">Returns <code>true</code> if the <code>command</code> can be performed by this
+ commandable in its current state. If <a href="../commands/Commandable.html#canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)"><code>Commandable.canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a> would
+ return false for this command, then this must also return false.
 
  The base class returns the value of <a href="../AbstractStrangeEonsEditor.html#canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)"><code>AbstractStrangeEonsEditor.canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a>, except
  that if the command is SAVE, it returns false if the editor does not have
@@ -1006,7 +1006,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/print/Pri
  The base class provides a framework for handling common document
  commands. To use the framework, override <a href="../AbstractStrangeEonsEditor.html#canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)"><code>AbstractStrangeEonsEditor.canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a> to
  return true for the commands you wish to support. Then this method will
- call the following methods (as appropriate):      <a href="../AbstractStrangeEonsEditor.html#clear()"><code>AbstractStrangeEonsEditor.clear()</code></a>, <a href="../AbstractStrangeEonsEditor.html#save()"><code>AbstractStrangeEonsEditor.save()</code></a>, <a href="../AbstractStrangeEonsEditor.html#saveAs()"><code>AbstractStrangeEonsEditor.saveAs()</code></a>, <a href="../AbstractStrangeEonsEditor.html#export()"><code>AbstractStrangeEonsEditor.export()</code></a>,
+ call the following methods (as appropriate): null null null     <a href="../AbstractStrangeEonsEditor.html#clear()"><code>AbstractStrangeEonsEditor.clear()</code></a>, <a href="../AbstractStrangeEonsEditor.html#save()"><code>AbstractStrangeEonsEditor.save()</code></a>, <a href="../AbstractStrangeEonsEditor.html#saveAs()"><code>AbstractStrangeEonsEditor.saveAs()</code></a>, <a href="../AbstractStrangeEonsEditor.html#export()"><code>AbstractStrangeEonsEditor.export()</code></a>,
  <a href="../AbstractStrangeEonsEditor.html#spinOff()"><code>AbstractStrangeEonsEditor.spinOff()</code></a>, or <a href="../AbstractStrangeEonsEditor.html#print()"><code>AbstractStrangeEonsEditor.print()</code></a>. These methods handle common
  details of implementing these commands, then pass control to a matching
  implementation method which the subclass must override to perform those
@@ -1043,8 +1043,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/print/Pri
  <li> if <code>newComponent</code> has an on-install event in its private
  settings, then the on-install event is called
  <li> the editor is updated to point to <code>newComponent</code> and it
- creates a new set of sheets from <code>newComponent</code> and installs
- them in the preview window
+ creates a new set of sheets from <code>newComponent</code> and installs them
+ in the preview window
  <li> the current state of <code>newComponent</code> is copied from the
  component to the editor controls
  </ol></div>
@@ -1074,9 +1074,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/print/Pri
 
  This implementation handles the details of determining the file to be
  written and exception handling. If <a href="../AbstractStrangeEonsEditor.html#getFile()"><code>AbstractStrangeEonsEditor.getFile()</code></a> returns
- <code>null</code>, this method calls <a href="../AbstractStrangeEonsEditor.html#saveAs()"><code>AbstractStrangeEonsEditor.saveAs()</code></a> to determine the
- file to save to. Otherwise, it calls <a href="../AbstractStrangeEonsEditor.html#saveImpl(java.io.File)"><code>AbstractStrangeEonsEditor.saveImpl(java.io.File)</code></a> to write the file.
- To use it, override <a href="../AbstractStrangeEonsEditor.html#saveImpl(java.io.File)"><code>AbstractStrangeEonsEditor.saveImpl(java.io.File)</code></a>.</div>
+ <code>null</code>, this method calls <a href="../AbstractStrangeEonsEditor.html#saveAs()"><code>AbstractStrangeEonsEditor.saveAs()</code></a> to determine the file
+ to save to. Otherwise, it calls <a href="../AbstractStrangeEonsEditor.html#saveImpl(java.io.File)"><code>AbstractStrangeEonsEditor.saveImpl(java.io.File)</code></a> to write the file. To
+ use it, override <a href="../AbstractStrangeEonsEditor.html#saveImpl(java.io.File)"><code>AbstractStrangeEonsEditor.saveImpl(java.io.File)</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../StrangeEonsEditor.html#save()">save</a></code>&nbsp;in interface&nbsp;<code><a href="../StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor</a></code></dd>
@@ -1163,8 +1163,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/print/Pri
  begins.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>direct</code> - if <code>true</code>, no deck-specific print options are
- shown</dd>
+<dd><code>direct</code> - if <code>true</code>, no deck-specific print options are shown</dd>
 </dl>
 </li>
 </ul>
@@ -1374,11 +1373,11 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/print/Pri
 <h4>setAttached</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setAttached&#8203;(boolean&nbsp;attach)</pre>
 <div class="block">Sets whether this editor is attached to the document tab strip. If
- <code>true</code>, the editor is attached; this is the default state for
- new editors. If <code>false</code>, the editor is detached from the tab
- strip. When detached, the editor appears in its own floating window
- separate from the main application window. The editor reattaches when the
- window is closed.</div>
+ <code>true</code>, the editor is attached; this is the default state for new
+ editors. If <code>false</code>, the editor is detached from the tab strip.
+ When detached, the editor appears in its own floating window separate
+ from the main application window. The editor reattaches when the window
+ is closed.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>attach</code> - if <code>true</code>, attaches the window to the tab strip</dd>
@@ -1392,8 +1391,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/print/Pri
 <li class="blockList">
 <h4>isAttached</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isAttached()</pre>
-<div class="block">Returns <code>true</code> if this editor is currently attached to the
- document tab strip.</div>
+<div class="block">Returns <code>true</code> if this editor is currently attached to the document
+ tab strip.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the editor is attached</dd>

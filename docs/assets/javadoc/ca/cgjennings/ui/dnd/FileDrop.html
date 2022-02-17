@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -313,16 +313,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public&nbsp;FileDrop&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true" title="class or interface in java.awt" class="externalLink">Component</a>&nbsp;component,
                 <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComponent</a>&nbsp;borderOwner,
                 boolean&nbsp;attachToDescendants)</pre>
-<div class="block">Creates a new <code>FileDrop</code> on the component. If the component is
- a <code>JComponent</code>, a <a href="DropBorder.html" title="class in ca.cgjennings.ui.dnd"><code>DropBorder</code></a> will appear when dragging
- files over it.</div>
+<div class="block">Creates a new <code>FileDrop</code> on the component. If the component is a
+ <code>JComponent</code>, a <a href="DropBorder.html" title="class in ca.cgjennings.ui.dnd"><code>DropBorder</code></a> will appear when dragging files
+ over it.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>component</code> - the component that will accept files</dd>
-<dd><code>borderOwner</code> - if non-<code>null</code>, a component whose border
- will change to indicate that files are being dragged over the component</dd>
-<dd><code>attachToDescendants</code> - if <code>true</code>, then all of the
- descendants of the component will also listen for file drops</dd>
+<dd><code>borderOwner</code> - if non-<code>null</code>, a component whose border will
+ change to indicate that files are being dragged over the component</dd>
+<dd><code>attachToDescendants</code> - if <code>true</code>, then all of the descendants
+ of the component will also listen for file drops</dd>
 </dl>
 </li>
 </ul>
@@ -334,9 +334,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>FileDrop</h4>
 <pre>public&nbsp;FileDrop&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true" title="class or interface in java.awt" class="externalLink">Component</a>&nbsp;component,
                 <a href="FileDrop.Listener.html" title="interface in ca.cgjennings.ui.dnd">FileDrop.Listener</a>&nbsp;listener)</pre>
-<div class="block">Creates a new <code>FileDrop</code> on the component. If the component is
- a <code>JComponent</code>, a <a href="DropBorder.html" title="class in ca.cgjennings.ui.dnd"><code>DropBorder</code></a> will appear when dragging
- files over it.</div>
+<div class="block">Creates a new <code>FileDrop</code> on the component. If the component is a
+ <code>JComponent</code>, a <a href="DropBorder.html" title="class in ca.cgjennings.ui.dnd"><code>DropBorder</code></a> will appear when dragging files
+ over it.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>component</code> - the component that will accept files</dd>
@@ -353,14 +353,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public&nbsp;FileDrop&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true" title="class or interface in java.awt" class="externalLink">Component</a>&nbsp;component,
                 <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComponent</a>&nbsp;borderOwner,
                 <a href="FileDrop.Listener.html" title="interface in ca.cgjennings.ui.dnd">FileDrop.Listener</a>&nbsp;listener)</pre>
-<div class="block">Creates a new <code>FileDrop</code> on the component. If
- <code>borderOwner</code> is not <code>null</code>, a <a href="DropBorder.html" title="class in ca.cgjennings.ui.dnd"><code>DropBorder</code></a>
- will appear when dragging files over the component.</div>
+<div class="block">Creates a new <code>FileDrop</code> on the component. If <code>borderOwner</code>
+ is not <code>null</code>, a <a href="DropBorder.html" title="class in ca.cgjennings.ui.dnd"><code>DropBorder</code></a> will appear when dragging files
+ over the component.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>component</code> - the component that will accept files</dd>
-<dd><code>borderOwner</code> - if non-<code>null</code>, a component whose border
- will change to indicate that files are being dragged over the component</dd>
+<dd><code>borderOwner</code> - if non-<code>null</code>, a component whose border will
+ change to indicate that files are being dragged over the component</dd>
 <dd><code>listener</code> - the simple listener that will be notified when files are
  dropped</dd>
 </dl>
@@ -376,16 +376,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                 <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComponent</a>&nbsp;borderOwner,
                 boolean&nbsp;attachToDescendants,
                 <a href="FileDrop.Listener.html" title="interface in ca.cgjennings.ui.dnd">FileDrop.Listener</a>&nbsp;listener)</pre>
-<div class="block">Creates a new <code>FileDrop</code> on the component. If the component is
- a <code>JComponent</code>, a <a href="DropBorder.html" title="class in ca.cgjennings.ui.dnd"><code>DropBorder</code></a> will appear when dragging
- files over it.</div>
+<div class="block">Creates a new <code>FileDrop</code> on the component. If the component is a
+ <code>JComponent</code>, a <a href="DropBorder.html" title="class in ca.cgjennings.ui.dnd"><code>DropBorder</code></a> will appear when dragging files
+ over it.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>component</code> - the component that will accept files</dd>
-<dd><code>borderOwner</code> - if non-<code>null</code>, a component whose border
- will change to indicate that files are being dragged over the component</dd>
-<dd><code>attachToDescendants</code> - if <code>true</code>, then all of the
- descendants of the component will also listen for file drops</dd>
+<dd><code>borderOwner</code> - if non-<code>null</code>, a component whose border will
+ change to indicate that files are being dragged over the component</dd>
+<dd><code>attachToDescendants</code> - if <code>true</code>, then all of the descendants
+ of the component will also listen for file drops</dd>
 <dd><code>listener</code> - an optional simple listener that will be notified when
  files are dropped</dd>
 </dl>
@@ -462,8 +462,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>component</code> - the top-level component to modify</dd>
-<dd><code>recursive</code> - if <code>true</code>, apply recursively to all
- descendants</dd>
+<dd><code>recursive</code> - if <code>true</code>, apply recursively to all descendants</dd>
 </dl>
 </li>
 </ul>

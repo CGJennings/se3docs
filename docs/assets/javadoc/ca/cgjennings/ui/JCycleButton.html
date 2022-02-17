@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -643,8 +643,8 @@ public final&nbsp;void&nbsp;setCycleModel&#8203;(<a href="JCycleButton.html" tit
 <div class="block">Selects the item that matches the specified setting value. If this button
  was created with setting proxies, the index of the proxy that equals the
  specified value will become the selected index. Otherwise, the element in
- the model whose <code>toString</code> value matches the specified value
- is selected.</div>
+ the model whose <code>toString</code> value matches the specified value is
+ selected.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../apps/arkham/diy/SettingBackedControl.html#fromSetting(java.lang.String)">fromSetting</a></code>&nbsp;in interface&nbsp;<code><a href="../apps/arkham/diy/SettingBackedControl.html" title="interface in ca.cgjennings.apps.arkham.diy">SettingBackedControl</a></code></dd>
@@ -662,8 +662,8 @@ public final&nbsp;void&nbsp;setCycleModel&#8203;(<a href="JCycleButton.html" tit
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;toSetting()</pre>
 <div class="block">Returns a setting value to represent the selected item. If this button
  was created with setting proxies, the proxy for the selected item is
- returned. Otherwise, the <code>toString()</code> value of the selected
- item is returned.</div>
+ returned. Otherwise, the <code>toString()</code> value of the selected item is
+ returned.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../apps/arkham/diy/SettingBackedControl.html#toSetting()">toSetting</a></code>&nbsp;in interface&nbsp;<code><a href="../apps/arkham/diy/SettingBackedControl.html" title="interface in ca.cgjennings.apps.arkham.diy">SettingBackedControl</a></code></dd>

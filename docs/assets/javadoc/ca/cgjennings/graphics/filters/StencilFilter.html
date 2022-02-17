@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -221,8 +221,7 @@ extends <a href="AbstractRowwiseFilter.html" title="class in ca.cgjennings.graph
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isAlphaReplaceMode()">isAlphaReplaceMode</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns whether the stencil's alpha values are copied over
- (<code>true</code>), or blended with the source image
- (<code>false</code>).</div>
+ (<code>true</code>), or blended with the source image (<code>false</code>).</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -340,14 +339,14 @@ extends <a href="AbstractRowwiseFilter.html" title="class in ca.cgjennings.graph
 <pre class="methodSignature">public&nbsp;void&nbsp;setAlphaReplaceMode&#8203;(boolean&nbsp;replaceMode)</pre>
 <div class="block">Sets whether the stencil is applied in alpha replace mode, in which the
  output image's alpha channel is copied unmodified from the stencil image.
- This is the default. The alternative, when this is set to
- <code>false</code>, is that the alpha values from the source and stencil
- image are blended by multiplying them together.</div>
+ This is the default. The alternative, when this is set to <code>false</code>,
+ is that the alpha values from the source and stencil image are blended by
+ multiplying them together.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>replaceMode</code> - <code>true</code> if the stencil's alpha values should
- simply replace the alpha values in the source; <code>false</code> if the
- alpha values should be multiplied</dd>
+ simply replace the alpha values in the source; <code>false</code> if the alpha
+ values should be multiplied</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#isAlphaReplaceMode()"><code>isAlphaReplaceMode()</code></a></dd>
 </dl>
@@ -361,13 +360,12 @@ extends <a href="AbstractRowwiseFilter.html" title="class in ca.cgjennings.graph
 <h4>isAlphaReplaceMode</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isAlphaReplaceMode()</pre>
 <div class="block">Returns whether the stencil's alpha values are copied over
- (<code>true</code>), or blended with the source image
- (<code>false</code>).</div>
+ (<code>true</code>), or blended with the source image (<code>false</code>).</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the stencil's alpha values should simply
- replace the alpha values in the source; <code>false</code> if the alpha
- values should be multiplied</dd>
+<dd><code>true</code> if the stencil's alpha values should simply replace
+ the alpha values in the source; <code>false</code> if the alpha values should
+ be multiplied</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#setAlphaReplaceMode(boolean)"><code>setAlphaReplaceMode(boolean)</code></a></dd>
 </dl>

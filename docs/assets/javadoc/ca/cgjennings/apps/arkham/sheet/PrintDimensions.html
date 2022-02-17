@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -165,17 +165,19 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </td>
 </tr>
 <tr class="rowColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(int,int,double)">PrintDimensions</a></span>&#8203;(int&nbsp;pixelWidth,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(int,int,double,double)">PrintDimensions</a></span>&#8203;(int&nbsp;pixelWidth,
                int&nbsp;pixelHeight,
-               double&nbsp;pixelsPerInch)</code></th>
+               double&nbsp;pixelsPerInch,
+               double&nbsp;bleedMargin)</code></th>
 <td class="colLast">
 <div class="block">Creates a new print dimensions instance based on dimensions measured in
  pixels.</div>
 </td>
 </tr>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.awt.image.BufferedImage,double)">PrintDimensions</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;image,
-               double&nbsp;pixelsPerInch)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.awt.image.BufferedImage,double,double)">PrintDimensions</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;image,
+               double&nbsp;pixelsPerInch,
+               double&nbsp;bleedMargin)</code></th>
 <td class="colLast">
 <div class="block">Creates a new print dimensions instance based on an image.</div>
 </td>
@@ -202,16 +204,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#equals(ca.cgjennings.apps.arkham.sheet.PrintDimensions)">equals</a></span>&#8203;(<a href="PrintDimensions.html" title="class in ca.cgjennings.apps.arkham.sheet">PrintDimensions</a>&nbsp;other)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if <code>other</code> represents the same
- printed size as this.</div>
+<div class="block">Returns <code>true</code> if <code>other</code> represents the same printed size as
+ this.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#equals(java.lang.Object)">equals</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;obj)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if <code>obj</code> is a print dimensions
- instance that represents the same printed size as this instance.</div>
+<div class="block">Returns <code>true</code> if <code>obj</code> is a print dimensions instance that
+ represents the same printed size as this instance.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -293,7 +295,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
-<a id="&lt;init&gt;(int,int,double)">
+<a id="&lt;init&gt;(int,int,double,double)">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -301,7 +303,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>PrintDimensions</h4>
 <pre>public&nbsp;PrintDimensions&#8203;(int&nbsp;pixelWidth,
                        int&nbsp;pixelHeight,
-                       double&nbsp;pixelsPerInch)</pre>
+                       double&nbsp;pixelsPerInch,
+                       double&nbsp;bleedMargin)</pre>
 <div class="block">Creates a new print dimensions instance based on dimensions measured in
  pixels.</div>
 <dl>
@@ -309,22 +312,27 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>pixelWidth</code> - the width, in pixels</dd>
 <dd><code>pixelHeight</code> - the height, in pixels</dd>
 <dd><code>pixelsPerInch</code> - the print resolution, in pixels per inch</dd>
+<dd><code>bleedMargin</code> - the size of any additional bleed margin, measured in
+ points</dd>
 </dl>
 </li>
 </ul>
-<a id="&lt;init&gt;(java.awt.image.BufferedImage,double)">
+<a id="&lt;init&gt;(java.awt.image.BufferedImage,double,double)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>PrintDimensions</h4>
 <pre>public&nbsp;PrintDimensions&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;image,
-                       double&nbsp;pixelsPerInch)</pre>
+                       double&nbsp;pixelsPerInch,
+                       double&nbsp;bleedMargin)</pre>
 <div class="block">Creates a new print dimensions instance based on an image.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>image</code> - the image whose pixel width and height will be used</dd>
 <dd><code>pixelsPerInch</code> - the print resolution, in pixels per inch</dd>
+<dd><code>bleedMargin</code> - the size of any additional bleed margin, measured in
+ points</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>image</code> is <code>null</code></dd>
 </dl>
@@ -407,16 +415,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>equals</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;equals&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;obj)</pre>
-<div class="block">Returns <code>true</code> if <code>obj</code> is a print dimensions
- instance that represents the same printed size as this instance.</div>
+<div class="block">Returns <code>true</code> if <code>obj</code> is a print dimensions instance that
+ represents the same printed size as this instance.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>obj</code> - the object to compare this to</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if and only if they are print dimensions of the
- same size, within one one hundred thousandth of a point in any dimension</dd>
+<dd><code>true</code> if and only if they are print dimensions of the same
+ size, within one one hundred thousandth of a point in any dimension</dd>
 </dl>
 </li>
 </ul>
@@ -427,14 +435,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>equals</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;equals&#8203;(<a href="PrintDimensions.html" title="class in ca.cgjennings.apps.arkham.sheet">PrintDimensions</a>&nbsp;other)</pre>
-<div class="block">Returns <code>true</code> if <code>other</code> represents the same
- printed size as this.</div>
+<div class="block">Returns <code>true</code> if <code>other</code> represents the same printed size as
+ this.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>other</code> - the object to compare this to</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if and only if they are print dimensions of the
- same size, within one one hundred thousandth of a point in any dimension</dd>
+<dd><code>true</code> if and only if they are print dimensions of the same
+ size, within one one hundred thousandth of a point in any dimension</dd>
 </dl>
 </li>
 </ul>

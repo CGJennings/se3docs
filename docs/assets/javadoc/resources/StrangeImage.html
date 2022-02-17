@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -145,9 +145,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <a href="#paint(java.awt.Graphics2D,int,int,int,int,boolean)">painted directly</a>.
 
  <p>
- A <code>StrangeImage</code> must have a positive width and height. Breaking
- this condition will lead to bugs that may be hard to detect. If you must
- return a representation of an image with a zero width or height, return an
+ A <code>StrangeImage</code> must have a positive width and height. Breaking this
+ condition will lead to bugs that may be hard to detect. If you must return a
+ representation of an image with a zero width or height, return an
  <a href="#getInvisibleImage()">invisible image</a> instead.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
@@ -437,8 +437,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>y</code> - the y-coordinate of the upper-left corner of the image</dd>
 <dd><code>width</code> - the width of the image</dd>
 <dd><code>height</code> - the height of the image</dd>
-<dd><code>fitToSize</code> - if <code>true</code>, the image's original aspect ratio
- will be maintained</dd>
+<dd><code>fitToSize</code> - if <code>true</code>, the image's original aspect ratio will
+ be maintained</dd>
 </dl>
 </li>
 </ul>
@@ -465,8 +465,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>y</code> - the y-coordinate of the upper-left corner of the image</dd>
 <dd><code>width</code> - the width of the image</dd>
 <dd><code>height</code> - the height of the image</dd>
-<dd><code>fitToSize</code> - if <code>true</code>, the image's original aspect ratio
- will be maintained</dd>
+<dd><code>fitToSize</code> - if <code>true</code>, the image's original aspect ratio will
+ be maintained</dd>
 </dl>
 </li>
 </ul>
@@ -486,8 +486,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>g</code> - the graphics context</dd>
 <dd><code>rect</code> - the rectangle defining the upper-left corner and dimensions
  of the image</dd>
-<dd><code>fitToSize</code> - if <code>true</code>, the image's original aspect ratio
- will be maintained</dd>
+<dd><code>fitToSize</code> - if <code>true</code>, the image's original aspect ratio will
+ be maintained</dd>
 </dl>
 </li>
 </ul>
@@ -538,9 +538,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                                      boolean&nbsp;fitToSize)</pre>
 <div class="block">Returns a new buffered image representing the image content. The image
  will be resized, if necessary, to the specified size. If
- <code>fitToSize</code> is <code>true</code>, then the original aspect
- ratio of the image will be maintained. The returned image is guaranteed
- to use an RGB or ARGB pixel format.</div>
+ <code>fitToSize</code> is <code>true</code>, then the original aspect ratio of the
+ image will be maintained. The returned image is guaranteed to use an RGB
+ or ARGB pixel format.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>width</code> - the image width</dd>
@@ -644,13 +644,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isTransparent</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isTransparent()</pre>
-<div class="block">Returns <code>true</code> if some parts of the image may not be opaque.
- If this returns <code>false</code>, then it is guaranteed that the image
+<div class="block">Returns <code>true</code> if some parts of the image may not be opaque. If
+ this returns <code>false</code>, then it is guaranteed that the image
  completely covers a rectangular area described by the specified width and
  height when
  <a href="#paint(java.awt.Graphics2D,int,int,int,int,boolean)">painted</a>.
- If this method returns <code>true</code>, then some parts of the painted
- area <i>may</i> not be completely covered.</div>
+ If this method returns <code>true</code>, then some parts of the painted area
+ <i>may</i> not be completely covered.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the image may have transparent areas;
@@ -666,9 +666,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isVectorFormat</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isVectorFormat()</pre>
-<div class="block">Returns <code>true</code> if the underlying image is a vector image. If
- you wish to work with the original image in its underlying form, you can
- use code like the following:
+<div class="block">Returns <code>true</code> if the underlying image is a vector image. If you
+ wish to work with the original image in its underlying form, you can use
+ code like the following:
  <pre>
  if( si.isVectorFormat() ) {
      VectorImage vi = si.asVectorImage();
@@ -698,8 +698,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the source image</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a view of the source image as a <code>StrangeImage</code>
- instance</dd>
+<dd>a view of the source image as a <code>StrangeImage</code> instance</dd>
 </dl>
 </li>
 </ul>
@@ -716,8 +715,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the source image</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a view of the source image as a <code>StrangeImage</code>
- instance</dd>
+<dd>a view of the source image as a <code>StrangeImage</code> instance</dd>
 </dl>
 </li>
 </ul>
@@ -728,12 +726,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>get</h4>
 <pre class="methodSignature">public static&nbsp;<a href="StrangeImage.html" title="class in resources">StrangeImage</a>&nbsp;get&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;identifier)</pre>
-<div class="block">Returns a <code>StrangeImage</code> for the given identifier. The
- identifier can be a local file path or a <code>file:</code>,
- <code>http:</code>, <code>res:</code>, or <code>project:</code> URL. Any
- string that is valid in a portrait panel will produce the same image
- here, except for the empty string that produce's the component-specific
- default portrait.</div>
+<div class="block">Returns a <code>StrangeImage</code> for the given identifier. The identifier
+ can be a local file path or a <code>file:</code>,
+ <code>http:</code>, <code>res:</code>, or <code>project:</code> URL. Any string that is
+ valid in a portrait panel will produce the same image here, except for
+ the empty string that produce's the component-specific default portrait.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>identifier</code> - the identifier to use to locate the file</dd>
@@ -749,17 +746,17 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getAsBufferedImage</h4>
 <pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;getAsBufferedImage&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;identifier)</pre>
-<div class="block">Returns a <code>BufferedImage</code> for the given identifier. The
- identifier can be a local file path or a <code>file:</code>,
- <code>http:</code>, <code>res:</code>, or <code>project:</code> URL. Any
- string that is valid in a portrait panel will produce the same image
- here, except for the empty string that produce's the component-specific
- default portrait.
+<div class="block">Returns a <code>BufferedImage</code> for the given identifier. The identifier
+ can be a local file path or a <code>file:</code>,
+ <code>http:</code>, <code>res:</code>, or <code>project:</code> URL. Any string that is
+ valid in a portrait panel will produce the same image here, except for
+ the empty string that produce's the component-specific default portrait.
 
- <p>This method is similar to <a href="#get(java.lang.String)"><code>get(java.lang.String)</code></a>, but ensures that the returned
+ <p>
+ This method is similar to <a href="#get(java.lang.String)"><code>get(java.lang.String)</code></a>, but ensures that the returned
  image is a <code>BufferedImage</code> bitmap. Vector images will be converted
- to bitmaps automatically. Where possible, prefer code that works
- with both bitmaps and vectors transparently by using <a href="#get(java.lang.String)"><code>get(java.lang.String)</code></a> instead.</div>
+ to bitmaps automatically. Where possible, prefer code that works with
+ both bitmaps and vectors transparently by using <a href="#get(java.lang.String)"><code>get(java.lang.String)</code></a> instead.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>identifier</code> - the identifier to use to locate the file</dd>
@@ -777,10 +774,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>exists</h4>
 <pre class="methodSignature">public static&nbsp;boolean&nbsp;exists&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;identifier)</pre>
-<div class="block">Returns whether or not an identifier refers to a valid image.
- For example, passing a file identifier for a file that does not exist
- would return false. Note that this will load (and cache) the image
- if it is not already loaded.</div>
+<div class="block">Returns whether or not an identifier refers to a valid image. For
+ example, passing a file identifier for a file that does not exist would
+ return false. Note that this will load (and cache) the image if it is not
+ already loaded.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>identifier</code> - the identifier to use to locate the file</dd>
@@ -799,9 +796,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>identifierToURL</h4>
 <pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net" class="externalLink">URL</a>&nbsp;identifierToURL&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;identifier)</pre>
 <div class="block">Returns a URL for a user image identifier, or <code>null</code>. If the
- identifier is <code>null</code> or empty, then <code>null</code> is
- returned. (An empty string is typically used to indicate that a default
- image should be used.)</div>
+ identifier is <code>null</code> or empty, then <code>null</code> is returned. (An
+ empty string is typically used to indicate that a default image should be
+ used.)</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>identifier</code> - an identifier string containing a local file path or
@@ -837,9 +834,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getInvisibleImage</h4>
 <pre class="methodSignature">public static&nbsp;<a href="StrangeImage.html" title="class in resources">StrangeImage</a>&nbsp;getInvisibleImage()</pre>
-<div class="block">Returns a <code>StrangeImage</code> that is completely invisible. This
- can be used as a stand-in image for an image with a zero width or height,
- since <code>StrangeImage</code>s must have a non-zero area.</div>
+<div class="block">Returns a <code>StrangeImage</code> that is completely invisible. This can be
+ used as a stand-in image for an image with a zero width or height, since
+ <code>StrangeImage</code>s must have a non-zero area.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a completely transparent image</dd>

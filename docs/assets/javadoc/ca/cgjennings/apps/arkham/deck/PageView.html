@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -225,8 +225,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponen
 <td class="colFirst"><code>static boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#DEBUG_DRAW">DEBUG_DRAW</a></span></code></th>
 <td class="colLast">
-<div class="block">If <code>true</code>, feedback about view performance will be printed at
- the top of the view.</div>
+<div class="block">If <code>true</code>, feedback about view performance will be printed at the
+ top of the view.</div>
 </td>
 </tr>
 <tr class="altColor">
@@ -601,10 +601,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponen
 <li class="blockList">
 <h4>DEBUG_DRAW</h4>
 <pre>public static&nbsp;boolean DEBUG_DRAW</pre>
-<div class="block">If <code>true</code>, feedback about view performance will be printed at
- the top of the view. This is initially <code>true</code> only if the
- release type is <code>DEVELOPMENT</code>, but it can be changed at any
- time.</div>
+<div class="block">If <code>true</code>, feedback about view performance will be printed at the
+ top of the view. This is initially <code>true</code> only if the release type
+ is <code>DEVELOPMENT</code>, but it can be changed at any time.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../StrangeEons.html#getReleaseType()"><code>StrangeEons.getReleaseType()</code></a></dd>
@@ -1047,8 +1046,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponen
 <dd><code>x</code> - the x-offset from the left edge of the component</dd>
 <dd><code>y</code> - the y-offset from the top of the component</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the location of the point <code>(x,y)</code> in the document
- space</dd>
+<dd>the location of the point <code>(x,y)</code> in the document space</dd>
 </dl>
 </li>
 </ul>

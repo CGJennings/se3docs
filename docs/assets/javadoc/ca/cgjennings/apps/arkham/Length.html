@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -248,8 +248,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#equals(java.lang.Object)">equals</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;obj)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if and only if the compared object is a length
- of equal size.</div>
+<div class="block">Returns <code>true</code> if and only if the compared object is a length of
+ equal size.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -283,8 +283,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#set(double,int)">set</a></span>&#8203;(double&nbsp;measurement,
    int&nbsp;unit)</code></th>
 <td class="colLast">
-<div class="block">Sets this length to the distance specified by the
- <code>measurement</code> and <code>unit</code>.</div>
+<div class="block">Sets this length to the distance specified by the <code>measurement</code> and
+ <code>unit</code>.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
@@ -427,8 +427,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <h4>set</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;set&#8203;(double&nbsp;measurement,
                 int&nbsp;unit)</pre>
-<div class="block">Sets this length to the distance specified by the
- <code>measurement</code> and <code>unit</code>.</div>
+<div class="block">Sets this length to the distance specified by the <code>measurement</code> and
+ <code>unit</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>measurement</code> - the magnitude of the distance</dd>
@@ -446,8 +446,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <div class="block">Returns the value of this length measurement in the requested unit.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>unit</code> - the desired unit, such as <code>CM</code>, <code>IN</code>,
- or <code>PT</code></dd>
+<dd><code>unit</code> - the desired unit, such as <code>CM</code>, <code>IN</code>, or
+ <code>PT</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this object's length measurement expressed in the specified unit</dd>
 </dl>
@@ -509,16 +509,16 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <li class="blockList">
 <h4>equals</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;equals&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;obj)</pre>
-<div class="block">Returns <code>true</code> if and only if the compared object is a length
- of equal size.</div>
+<div class="block">Returns <code>true</code> if and only if the compared object is a length of
+ equal size.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>obj</code> - the object to compare this to</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if <code>obj</code> is a <code>Length</code>
- that represents the same distance</dd>
+<dd><code>true</code> if <code>obj</code> is a <code>Length</code> that represents
+ the same distance</dd>
 </dl>
 </li>
 </ul>

@@ -26,14 +26,14 @@
     catch(err) {
     }
 //-->
-var data = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9,"i7":9,"i8":9,"i9":9,"i10":9,"i11":9,"i12":9,"i13":9,"i14":9,"i15":9,"i16":9,"i17":9,"i18":9,"i19":9,"i20":9,"i21":9,"i22":9,"i23":9};
+var data = {"i0":9,"i1":9,"i2":9,"i3":9,"i4":9,"i5":9,"i6":9,"i7":9,"i8":9,"i9":9,"i10":9,"i11":9,"i12":9,"i13":9,"i14":9,"i15":9,"i16":9,"i17":9,"i18":9,"i19":9,"i20":9,"i21":9,"i22":9,"i23":9,"i24":9,"i25":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -227,9 +227,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>static boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#backButton(java.awt.event.InputEvent)">backButton</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/event/InputEvent.html?is-external=true" title="class or interface in java.awt.event" class="externalLink">InputEvent</a>&nbsp;e)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the "back" mouse button was held down during
- the given <code>InputEvent</code> and this button can be detected by this
- JVM.</div>
+<div class="block">Returns <code>true</code> if the "back" mouse button was held down during the
+ given <code>InputEvent</code> and this button can be detected by this JVM.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -241,29 +240,43 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#enable(boolean,javax.swing.JComponent...)">enable</a></span>&#8203;(boolean&nbsp;enable,
+      <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComponent</a>...&nbsp;components)</code></th>
+<td class="colLast">
+<div class="block">Enable or disable a group list of components.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#enable(boolean,javax.swing.JComponent,javax.swing.JComponent)">enable</a></span>&#8203;(boolean&nbsp;enable,
+      <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComponent</a>&nbsp;component1,
+      <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComponent</a>&nbsp;component2)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#enableTree(javax.swing.JComponent,boolean)">enableTree</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComponent</a>&nbsp;component,
           boolean&nbsp;enable)</code></th>
 <td class="colLast">
 <div class="block">Recursively enable or disable a tree of components.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Window.html?is-external=true" title="class or interface in java.awt" class="externalLink">Window</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#findWindow(java.awt.Component)">findWindow</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true" title="class or interface in java.awt" class="externalLink">Component</a>&nbsp;component)</code></th>
 <td class="colLast">
 <div class="block">Returns the window that a component is contained within, if any.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>static boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#forwardButton(java.awt.event.InputEvent)">forwardButton</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/event/InputEvent.html?is-external=true" title="class or interface in java.awt.event" class="externalLink">InputEvent</a>&nbsp;e)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the "forward" mouse button was held down
- during the given <code>InputEvent</code> and this button can be detected
- by this JVM.</div>
+<div class="block">Returns <code>true</code> if the "forward" mouse button was held down during
+ the given <code>InputEvent</code> and this button can be detected by this JVM.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Dimension.html?is-external=true" title="class or interface in java.awt" class="externalLink">Dimension</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPreferredSizeForHTMLLabel(java.lang.String,boolean,int)">getPreferredSizeForHTMLLabel</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;html,
                             boolean&nbsp;width,
@@ -273,17 +286,17 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  specified width (height).</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hideWaitCursor(java.awt.Component)">hideWaitCursor</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true" title="class or interface in java.awt" class="externalLink">Component</a>&nbsp;c)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#installDisabledHTMLFix(javax.swing.JComponent)">installDisabledHTMLFix</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComponent</a>&nbsp;c)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>static boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isAcceleratorInUse(javax.swing.JMenuBar,javax.swing.KeyStroke)">isAcceleratorInUse</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JMenuBar.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JMenuBar</a>&nbsp;bar,
                   <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/KeyStroke.html?is-external=true" title="class or interface in javax.swing" class="externalLink">KeyStroke</a>&nbsp;accel)</code></th>
@@ -291,24 +304,24 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Checks whether an accelerator key is already in use in a menu bar.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>static boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isButtonDown(int,java.awt.event.InputEvent)">isButtonDown</a></span>&#8203;(int&nbsp;button,
             <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/event/InputEvent.html?is-external=true" title="class or interface in java.awt.event" class="externalLink">InputEvent</a>&nbsp;e)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the mouse button with the indicated number
- is down.</div>
+<div class="block">Returns <code>true</code> if the mouse button with the indicated number is
+ down.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>static boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#leftButton(java.awt.event.InputEvent)">leftButton</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/event/InputEvent.html?is-external=true" title="class or interface in java.awt.event" class="externalLink">InputEvent</a>&nbsp;e)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the left mouse button was held down during
- the given <code>InputEvent</code>.</div>
+<div class="block">Returns <code>true</code> if the left mouse button was held down during the
+ given <code>InputEvent</code>.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>static boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#makeUtilityWindow(java.awt.Window)">makeUtilityWindow</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Window.html?is-external=true" title="class or interface in java.awt" class="externalLink">Window</a>&nbsp;window)</code></th>
 <td class="colLast">
@@ -316,23 +329,23 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  "utility" window.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>static boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#midButton(java.awt.event.InputEvent)">midButton</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/event/InputEvent.html?is-external=true" title="class or interface in java.awt.event" class="externalLink">InputEvent</a>&nbsp;e)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the middle mouse button was held down during
- the given <code>InputEvent</code>.</div>
+<div class="block">Returns <code>true</code> if the middle mouse button was held down during the
+ given <code>InputEvent</code>.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>static boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#rightButton(java.awt.event.InputEvent)">rightButton</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/event/InputEvent.html?is-external=true" title="class or interface in java.awt.event" class="externalLink">InputEvent</a>&nbsp;e)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the right mouse button was held down during
- the given <code>InputEvent</code>.</div>
+<div class="block">Returns <code>true</code> if the right mouse button was held down during the
+ given <code>InputEvent</code>.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setIconPair(javax.swing.AbstractButton,java.lang.String,java.lang.String,boolean)">setIconPair</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/AbstractButton.html?is-external=true" title="class or interface in javax.swing" class="externalLink">AbstractButton</a>&nbsp;button,
            <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;standard,
@@ -342,7 +355,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Applies a pair of icons to a button.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setIconPair(javax.swing.AbstractButton,javax.swing.Icon,javax.swing.Icon,boolean)">setIconPair</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/AbstractButton.html?is-external=true" title="class or interface in javax.swing" class="externalLink">AbstractButton</a>&nbsp;button,
            <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Icon</a>&nbsp;standard,
@@ -352,12 +365,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Applies a pair of icons to a button.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#showWaitCursor(java.awt.Component)">showWaitCursor</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Component.html?is-external=true" title="class or interface in java.awt" class="externalLink">Component</a>&nbsp;c)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#snapToDesktop(java.awt.Window)">snapToDesktop</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Window.html?is-external=true" title="class or interface in java.awt" class="externalLink">Window</a>&nbsp;window)</code></th>
 <td class="colLast">
@@ -365,7 +378,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  the display or overlap system areas (such as the task bar on Windows).</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#snapToPoint(java.awt.Window,java.awt.Point,int,int)">snapToPoint</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Window.html?is-external=true" title="class or interface in java.awt" class="externalLink">Window</a>&nbsp;window,
            <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Point.html?is-external=true" title="class or interface in java.awt" class="externalLink">Point</a>&nbsp;point,
@@ -375,14 +388,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Adjusts a window's location to align it with a point on the screen.</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#snapToPointer(java.awt.Window)">snapToPointer</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Window.html?is-external=true" title="class or interface in java.awt" class="externalLink">Window</a>&nbsp;window)</code></th>
 <td class="colLast">
 <div class="block">Adjusts a window's location so that the center is under the pointer.</div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#snapToPointer(java.awt.Window,int,int)">snapToPointer</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Window.html?is-external=true" title="class or interface in java.awt" class="externalLink">Window</a>&nbsp;window,
              int&nbsp;halign,
@@ -392,7 +405,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  pointer on screen.</div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#threadAssert()">threadAssert</a></span>()</code></th>
 <td class="colLast">
@@ -400,7 +413,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  thread.</div>
 </td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#uninstallDisabledHTMLFix(javax.swing.JComponent)">uninstallDisabledHTMLFix</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComponent</a>&nbsp;c)</code></th>
 <td class="colLast">&nbsp;</td>
@@ -499,6 +512,28 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a id="enable(boolean,javax.swing.JComponent...)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>enable</h4>
+<pre class="methodSignature">public static&nbsp;void&nbsp;enable&#8203;(boolean&nbsp;enable,
+                          <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComponent</a>...&nbsp;components)</pre>
+<div class="block">Enable or disable a group list of components.</div>
+</li>
+</ul>
+<a id="enable(boolean,javax.swing.JComponent,javax.swing.JComponent)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>enable</h4>
+<pre class="methodSignature">public static&nbsp;void&nbsp;enable&#8203;(boolean&nbsp;enable,
+                          <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComponent</a>&nbsp;component1,
+                          <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComponent</a>&nbsp;component2)</pre>
+</li>
+</ul>
 <a id="enableTree(javax.swing.JComponent,boolean)">
 <!--   -->
 </a>
@@ -632,11 +667,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  information to a selected output stream.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>out</code> - the stream to print to (<code>System.err</code> if
- <code>null</code>)</dd>
+<dd><code>out</code> - the stream to print to (<code>System.err</code> if <code>null</code>)</dd>
 <dd><code>component</code> - the component to add listeners to</dd>
-<dd><code>includeAllMoveEvents</code> - if <code>true</code>, low-level cursor
- movements are included</dd>
+<dd><code>includeAllMoveEvents</code> - if <code>true</code>, low-level cursor movements
+ are included</dd>
 <dd><code>recursive</code> - if <code>true</code>, listeners are added recursively to
  children</dd>
 </dl>
@@ -668,11 +702,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>isButtonDown</h4>
 <pre class="methodSignature">public static&nbsp;boolean&nbsp;isButtonDown&#8203;(int&nbsp;button,
                                    <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/event/InputEvent.html?is-external=true" title="class or interface in java.awt.event" class="externalLink">InputEvent</a>&nbsp;e)</pre>
-<div class="block">Returns <code>true</code> if the mouse button with the indicated number
- is down. If the button number is greater than the number of buttons
- recognized by this JVM, <code>false</code> is returned. Buttons from 1 to
- 3 can always be recognized; higher-numbered buttons may be recognized.
- The highest possible button number that might be recognized is
+<div class="block">Returns <code>true</code> if the mouse button with the indicated number is
+ down. If the button number is greater than the number of buttons
+ recognized by this JVM, <code>false</code> is returned. Buttons from 1 to 3
+ can always be recognized; higher-numbered buttons may be recognized. The
+ highest possible button number that might be recognized is
  <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/MouseInfo.html?is-external=true#getNumberOfButtons()" title="class or interface in java.awt" class="externalLink"><code>MouseInfo.getNumberOfButtons()</code></a>. Button numbers higher
  than this can be safely requested but will return <code>false</code>.</div>
 <dl>
@@ -693,8 +727,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>leftButton</h4>
 <pre class="methodSignature">public static&nbsp;boolean&nbsp;leftButton&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/event/InputEvent.html?is-external=true" title="class or interface in java.awt.event" class="externalLink">InputEvent</a>&nbsp;e)</pre>
-<div class="block">Returns <code>true</code> if the left mouse button was held down during
- the given <code>InputEvent</code>.</div>
+<div class="block">Returns <code>true</code> if the left mouse button was held down during the
+ given <code>InputEvent</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>e</code> - the event to test</dd>
@@ -710,8 +744,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>midButton</h4>
 <pre class="methodSignature">public static&nbsp;boolean&nbsp;midButton&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/event/InputEvent.html?is-external=true" title="class or interface in java.awt.event" class="externalLink">InputEvent</a>&nbsp;e)</pre>
-<div class="block">Returns <code>true</code> if the middle mouse button was held down during
- the given <code>InputEvent</code>.</div>
+<div class="block">Returns <code>true</code> if the middle mouse button was held down during the
+ given <code>InputEvent</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>e</code> - the event to test</dd>
@@ -727,8 +761,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>rightButton</h4>
 <pre class="methodSignature">public static&nbsp;boolean&nbsp;rightButton&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/event/InputEvent.html?is-external=true" title="class or interface in java.awt.event" class="externalLink">InputEvent</a>&nbsp;e)</pre>
-<div class="block">Returns <code>true</code> if the right mouse button was held down during
- the given <code>InputEvent</code>.</div>
+<div class="block">Returns <code>true</code> if the right mouse button was held down during the
+ given <code>InputEvent</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>e</code> - the event to test</dd>
@@ -744,9 +778,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>backButton</h4>
 <pre class="methodSignature">public static&nbsp;boolean&nbsp;backButton&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/event/InputEvent.html?is-external=true" title="class or interface in java.awt.event" class="externalLink">InputEvent</a>&nbsp;e)</pre>
-<div class="block">Returns <code>true</code> if the "back" mouse button was held down during
- the given <code>InputEvent</code> and this button can be detected by this
- JVM.</div>
+<div class="block">Returns <code>true</code> if the "back" mouse button was held down during the
+ given <code>InputEvent</code> and this button can be detected by this JVM.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>e</code> - the event to test</dd>
@@ -764,9 +797,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>forwardButton</h4>
 <pre class="methodSignature">public static&nbsp;boolean&nbsp;forwardButton&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/event/InputEvent.html?is-external=true" title="class or interface in java.awt.event" class="externalLink">InputEvent</a>&nbsp;e)</pre>
-<div class="block">Returns <code>true</code> if the "forward" mouse button was held down
- during the given <code>InputEvent</code> and this button can be detected
- by this JVM.</div>
+<div class="block">Returns <code>true</code> if the "forward" mouse button was held down during
+ the given <code>InputEvent</code> and this button can be detected by this JVM.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>e</code> - the event to test</dd>
@@ -792,8 +824,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>window</code> - the window to make into a utility window</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the attempt succeeds, <code>false</code>
- otherwise</dd>
+<dd><code>true</code> if the attempt succeeds, <code>false</code> otherwise</dd>
 </dl>
 </li>
 </ul>
@@ -821,12 +852,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/border/Border.html?is-external=true" title="class or interface in javax.swing.border" class="externalLink">Border</a>&nbsp;createCompoundBorder&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/border/Border.html?is-external=true" title="class or interface in javax.swing.border" class="externalLink">Border</a>...&nbsp;outerToInner)</pre>
 <div class="block">Returns a border that is the composition of any number of other borders.
  Unlike <code>BorderFactory.createCompoundBorder</code>, this method can
- compose an arbitrary number of borders. In no case will <code>null</code>
- be returned; if no borders are passed in, an empty border will be
- returned. If one border is passed in, it is returned unchanged. If two
- borders are passed in, a simple compound border will be returned.
- Otherwise, a nested compound border that composes the borders is
- returned.</div>
+ compose an arbitrary number of borders. In no case will <code>null</code> be
+ returned; if no borders are passed in, an empty border will be returned.
+ If one border is passed in, it is returned unchanged. If two borders are
+ passed in, a simple compound border will be returned. Otherwise, a nested
+ compound border that composes the borders is returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>outerToInner</code> - the borders to compose</dd>
@@ -937,8 +967,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>bar</code> - the menu bar to search</dd>
 <dd><code>accel</code> - the accelerator key stroke to check for</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the accelerator is used by an item in the
- menu bar</dd>
+<dd><code>true</code> if the accelerator is used by an item in the menu
+ bar</dd>
 </dl>
 </li>
 </ul>

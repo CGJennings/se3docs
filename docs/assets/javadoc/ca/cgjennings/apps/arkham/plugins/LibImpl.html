@@ -26,14 +26,14 @@
     catch(err) {
     }
 //-->
-var data = {"i0":9,"i1":9};
+var data = {"i0":9,"i1":9,"i2":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
@@ -142,6 +142,31 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="summary">
 <ul class="blockList">
 <li class="blockList">
+<!-- ======== NESTED CLASS SUMMARY ======== -->
+<section role="region">
+<ul class="blockList">
+<li class="blockList"><a id="nested.class.summary">
+<!--   -->
+</a>
+<h3>Nested Class Summary</h3>
+<table class="memberSummary">
+<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colSecond" scope="col">Class</th>
+<th class="colLast" scope="col">Description</th>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static class&nbsp;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="LibImpl.ScriptTraceElement.html" title="class in ca.cgjennings.apps.arkham.plugins">LibImpl.ScriptTraceElement</a></span></code></th>
+<td class="colLast">
+<div class="block">Information about a single frame on the script call stack.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+</section>
 <!-- ========== METHOD SUMMARY =========== -->
 <section role="region">
 <ul class="blockList">
@@ -157,17 +182,25 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static <a href="LibImpl.ScriptTraceElement.html" title="class in ca.cgjennings.apps.arkham.plugins">LibImpl.ScriptTraceElement</a>[]</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getScriptTrace()">getScriptTrace</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Return an array of <a href="LibImpl.ScriptTraceElement.html" title="class in ca.cgjennings.apps.arkham.plugins"><code>LibImpl.ScriptTraceElement</code></a>s that represents the script
+ stack frames for the current thread.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#require(java.lang.String,java.lang.String,ca.cgjennings.script.mozilla.javascript.Scriptable,ca.cgjennings.script.mozilla.javascript.Scriptable,ca.cgjennings.script.mozilla.javascript.Scriptable)">require</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;source,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#require(java.lang.String,java.lang.String,org.mozilla.javascript.Scriptable,org.mozilla.javascript.Scriptable,org.mozilla.javascript.Scriptable)">require</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;source,
        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;modulePath,
-       ca.cgjennings.script.mozilla.javascript.Scriptable&nbsp;module,
-       ca.cgjennings.script.mozilla.javascript.Scriptable&nbsp;exports,
-       ca.cgjennings.script.mozilla.javascript.Scriptable&nbsp;cache)</code></th>
+       org.mozilla.javascript.Scriptable&nbsp;module,
+       org.mozilla.javascript.Scriptable&nbsp;exports,
+       org.mozilla.javascript.Scriptable&nbsp;cache)</code></th>
 <td class="colLast">
 <div class="block">Implements CommonJS require() support.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sprintf(java.util.Locale,java.lang.String,java.lang.Object...)">sprintf</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html?is-external=true" title="class or interface in java.util" class="externalLink">Locale</a>&nbsp;loc,
        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;format,
@@ -210,40 +243,41 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                              <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;format,
                              <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>...&nbsp;args)</pre>
 <div class="block">Formats a string using C-style % format codes. The result is nearly
- identical to <code>String.format</code> but it is more lenient about
- which format specifiers will accept which types.
- 
- <p>In particular, numeric format codes accept any type of number.
- If a floating point type is passed to an integer format specifier,
- or vice-versa, it will be converted to the appropriate type rather
- than throwing an error.</div>
+ identical to <code>String.format</code> but it is more lenient about which
+ format specifiers will accept which types.
+
+ <p>
+ In particular, numeric format codes accept any type of number. If a
+ floating point type is passed to an integer format specifier, or
+ vice-versa, it will be converted to the appropriate type rather than
+ throwing an error.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>loc</code> - The locale to apply during formatting. If null then no
-         localization is applied.</dd>
-<dd><code>format</code> - A format string as described in <a href="#syntax">Format string
-         syntax</a></dd>
+ localization is applied.</dd>
+<dd><code>format</code> - A format string as described in <a href="#syntax">Format
+ string syntax</a></dd>
 <dd><code>args</code> - Arguments referenced by the format specifiers in the format
-         string.  If there are more arguments than format specifiers, the
-         extra arguments are ignored.  The maximum number of arguments is
-         limited by the maximum dimension of a Java array as defined by
-         <cite>The Java&trade; Virtual Machine Specification</cite>.</dd>
+ string. If there are more arguments than format specifiers, the extra
+ arguments are ignored. The maximum number of arguments is limited by the
+ maximum dimension of a Java array as defined by
+ <cite>The Java&trade; Virtual Machine Specification</cite>.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the formatted string</dd>
 </dl>
 </li>
 </ul>
-<a id="require(java.lang.String,java.lang.String,ca.cgjennings.script.mozilla.javascript.Scriptable,ca.cgjennings.script.mozilla.javascript.Scriptable,ca.cgjennings.script.mozilla.javascript.Scriptable)">
+<a id="require(java.lang.String,java.lang.String,org.mozilla.javascript.Scriptable,org.mozilla.javascript.Scriptable,org.mozilla.javascript.Scriptable)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>require</h4>
 <pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;require&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;source,
                              <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;modulePath,
-                             ca.cgjennings.script.mozilla.javascript.Scriptable&nbsp;module,
-                             ca.cgjennings.script.mozilla.javascript.Scriptable&nbsp;exports,
-                             ca.cgjennings.script.mozilla.javascript.Scriptable&nbsp;cache)
+                             org.mozilla.javascript.Scriptable&nbsp;module,
+                             org.mozilla.javascript.Scriptable&nbsp;exports,
+                             org.mozilla.javascript.Scriptable&nbsp;cache)
                       throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <div class="block">Implements CommonJS require() support.</div>
 <dl>
@@ -254,6 +288,21 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>exports</code> - the module.exports object to pass to the module</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a id="getScriptTrace()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getScriptTrace</h4>
+<pre class="methodSignature">public static&nbsp;<a href="LibImpl.ScriptTraceElement.html" title="class in ca.cgjennings.apps.arkham.plugins">LibImpl.ScriptTraceElement</a>[]&nbsp;getScriptTrace()</pre>
+<div class="block">Return an array of <a href="LibImpl.ScriptTraceElement.html" title="class in ca.cgjennings.apps.arkham.plugins"><code>LibImpl.ScriptTraceElement</code></a>s that represents the script
+ stack frames for the current thread.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>returns a script stack trace for the current thread</dd>
 </dl>
 </li>
 </ul>
@@ -307,7 +356,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#nested.class.summary">Nested</a>&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>

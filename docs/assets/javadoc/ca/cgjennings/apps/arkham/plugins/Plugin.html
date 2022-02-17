@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -258,16 +258,16 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isPluginShowing()">isPluginShowing</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this plug-in's interface is currently
- showing, or, if it has no interface, if it is currently running.</div>
+<div class="block">Returns <code>true</code> if this plug-in's interface is currently showing,
+ or, if it has no interface, if it is currently running.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isPluginUsable()">isPluginUsable</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if it is currently valid to activate this
- plug-in by calling <a href="#showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext,boolean)"><code>showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a>.</div>
+<div class="block">Returns <code>true</code> if it is currently valid to activate this plug-in by
+ calling <a href="#showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext,boolean)"><code>showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a>.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
@@ -322,8 +322,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  <li>If the plug-in has a representative image (and the user enables this
  feature), then that image will be used to create an icon for the menu
  item.
- <li>If <a href="#isPluginUsable()"><code>isPluginUsable()</code></a> returns <code>true</code>, the item will
- be enabled; otherwise disabled.
+ <li>If <a href="#isPluginUsable()"><code>isPluginUsable()</code></a> returns <code>true</code>, the item will be
+ enabled; otherwise disabled.
  <li>If the plug-in is showing, then the item will have a check mark,
  otherwise it will not.
  <li>If the menu item is selected by the user, then the plug-in will
@@ -344,11 +344,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <h4>INJECTED</h4>
 <pre>static final&nbsp;int INJECTED</pre>
-<div class="block">A plug-in type value. An <code>INJECTED</code> plug-in fills a role
- between the <code>ACTIVATED</code> and <code>EXTENSION</code> types. Like
- an <code>ACTIVATED</code> plug-in, it is loaded and unloaded on demand.
- However, like an <code>EXTENSION</code> plug-in, there is no explicit
- predetermined means to activate the effect (i.e., there is no
+<div class="block">A plug-in type value. An <code>INJECTED</code> plug-in fills a role between
+ the <code>ACTIVATED</code> and <code>EXTENSION</code> types. Like an
+ <code>ACTIVATED</code> plug-in, it is loaded and unloaded on demand. However,
+ like an <code>EXTENSION</code> plug-in, there is no explicit predetermined
+ means to activate the effect (i.e., there is no
  <b>Toolbox</b>
  menu item). Either the plug-in adds its own explicit activation
  method(s), or the plug-in is activated passively.
@@ -365,10 +365,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 
  <p>
  When loaded, the <a href="#showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext,boolean)"><code>showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a> method will be called once with
- <code>show == true</code>, at which time it should install its
- modifications. These should continue to take effect until
- <a href="#unloadPlugin()"><code>unloadPlugin()</code></a> is called, at which time the modifications should
- be removed.</div>
+ <code>show == true</code>, at which time it should install its modifications.
+ These should continue to take effect until <a href="#unloadPlugin()"><code>unloadPlugin()</code></a> is
+ called, at which time the modifications should be removed.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../constant-values.html#ca.cgjennings.apps.arkham.plugins.Plugin.INJECTED">Constant Field Values</a></dd>
@@ -426,12 +425,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">This method will be called once for each registered plug-in before any
  other methods are called. It allows the plug-in to perform any required
  initialization prior to the plug-in being shown. If initialization
- succeeds, it should return <code>true</code>. Otherwise, the plug-in will
- not be made available to the user. If this method returns
- <code>false</code>, a warning is logged but no other action is taken.
- This allows the plug-in the opportunity to display its own error message.
- If this method throws an exception, a dialog is displayed that will
- include the message text of the exception (if any).
+ succeeds, it should return <code>true</code>. Otherwise, the plug-in will not
+ be made available to the user. If this method returns <code>false</code>, a
+ warning is logged but no other action is taken. This allows the plug-in
+ the opportunity to display its own error message. If this method throws
+ an exception, a dialog is displayed that will include the message text of
+ the exception (if any).
  <p>
  Sometimes a plug-in is instantiated only in order to determine its name,
  description, version, and type. In such cases, the plug-in's
@@ -452,8 +451,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd><code>context</code> - a <a href="PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>PluginContext</code></a> instance that can be accessed
  during initialization</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the plug-in was initialized;
- <code>false</code> if initialization failed</dd>
+<dd><code>true</code> if the plug-in was initialized; <code>false</code> if
+ initialization failed</dd>
 </dl>
 </li>
 </ul>
@@ -475,11 +474,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  terminates abnormally.
  <li>This method will never be called more than once for a given
  <i>instance</i> of a plug-in. (More than one instance of an
- <code>ACTIVATED</code> or <code>INJECTED</code> plug-in may be created
- during a session.)
+ <code>ACTIVATED</code> or <code>INJECTED</code> plug-in may be created during a
+ session.)
  <li>For <code>ACTIVATED</code> plug-ins that are currently showing,
- <a href="#showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext,boolean)"><code>showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a> will be called with <code>false</code> (in order to
- hide the plug-in) before this method is called.
+ <a href="#showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext,boolean)"><code>showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a> will be called with <code>false</code> (in order to hide
+ the plug-in) before this method is called.
  </ol></div>
 </li>
 </ul>
@@ -492,11 +491,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre class="methodSignature"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getPluginName()</pre>
 <div class="block">Returns the name that should be shown to the user for this plug-in,
  ideally in the UI locale. This should be a short name that describes the
- plug-in's purpose in three words or less. If this is an
- <code>ACTIVATED</code> plug-in, the returned value should ideally be a
- verb phrase that describes the effect of activating the plug-in, such as
- "Select All Lines". It should not include extraneous information, such as
- the author's name; this kind of information can be included in the
+ plug-in's purpose in three words or less. If this is an <code>ACTIVATED</code>
+ plug-in, the returned value should ideally be a verb phrase that
+ describes the effect of activating the plug-in, such as "Select All
+ Lines". It should not include extraneous information, such as the
+ author's name; this kind of information can be included in the
  description string or, ideally, in the plug-in's catalogue description.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -565,10 +564,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Show (activate) or hide (deactivate) the plug-in. This method is most
  often called when the user activates the plug-in's menu item.
  <p>
- Typically, the value of <code>show</code> will be the opposite of the
- value currently returned by <a href="#isPluginShowing()"><code>isPluginShowing()</code></a>. If the plug-in uses
- a modeless dialog box, then <code>isPluginShowing</code> should thus
- return <code>true</code> when the dialog is showing.
+ Typically, the value of <code>show</code> will be the opposite of the value
+ currently returned by <a href="#isPluginShowing()"><code>isPluginShowing()</code></a>. If the plug-in uses a
+ modeless dialog box, then <code>isPluginShowing</code> should thus return
+ <code>true</code> when the dialog is showing.
  <p>
  If a modal dialog is shown, or if an operation that blocks the calling
  thread is performed, then it will not be possible for the user to
@@ -576,9 +575,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  <code>isPluginShowing</code> can be implemented to simply return
  <code>false</code>.
  <p>
- <b>Notes:</b> This method is never called for <code>EXTENSION</code>
- plug-ins. It is only called once, after initialization, for
- <code>INJECTED</code> plug-ins.</div>
+ <b>Notes:</b> This method is never called for <code>EXTENSION</code> plug-ins.
+ It is only called once, after initialization, for <code>INJECTED</code>
+ plug-ins.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>context</code> - a valid <a href="PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>PluginContext</code></a></dd>
@@ -596,8 +595,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <h4>isPluginShowing</h4>
 <pre class="methodSignature">boolean&nbsp;isPluginShowing()</pre>
-<div class="block">Returns <code>true</code> if this plug-in's interface is currently
- showing, or, if it has no interface, if it is currently running.
+<div class="block">Returns <code>true</code> if this plug-in's interface is currently showing,
+ or, if it has no interface, if it is currently running.
  <p>
  If the plug-in blocks the event thread when shown (for example, if it
  displays a modal dialog), then this method can simply return
@@ -617,10 +616,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <h4>isPluginUsable</h4>
 <pre class="methodSignature">boolean&nbsp;isPluginUsable()</pre>
-<div class="block">Returns <code>true</code> if it is currently valid to activate this
- plug-in by calling <a href="#showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext,boolean)"><code>showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a>. For example, a plug-in that only
- works on components from a certain game might return <code>false</code>
- if the currently edited component is not from that game.
+<div class="block">Returns <code>true</code> if it is currently valid to activate this plug-in by
+ calling <a href="#showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext,boolean)"><code>showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a>. For example, a plug-in that only works on
+ components from a certain game might return <code>false</code> if the
+ currently edited component is not from that game.
 
  <p>
  <b>Note:</b> Plug-ins must still check for any conditions that are
@@ -633,8 +632,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  <code>true</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the plug-in can be successfully and
- meaningfully activated</dd>
+<dd><code>true</code> if the plug-in can be successfully and meaningfully
+ activated</dd>
 </dl>
 </li>
 </ul>
@@ -665,8 +664,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Return a string that describes the key stroke that is the preferred
  default accelerator key for this plug-in. In most cases, you should
  return <code>null</code> for no default accelerator. The user can always
- assign an accelerator key of their choice to an <code>ACTIVATED</code>
- plug-in through the plug-in manager dialog.
+ assign an accelerator key of their choice to an <code>ACTIVATED</code> plug-in
+ through the plug-in manager dialog.
  <p>
  The format of the string is similar to that used by
  <code>javax.swing.KeyStroke</code>, but the special modifier
@@ -677,8 +676,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  another command.)
 
  <p>
- <b>Note:</b> An accelerator key is only meaningful for
- <code>ACTIVATED</code> plug-ins.</div>
+ <b>Note:</b> An accelerator key is only meaningful for <code>ACTIVATED</code>
+ plug-ins.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a description of the preferred default accelerator</dd>

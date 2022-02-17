@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -400,8 +400,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JDialog.h
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isCancelled()">isCancelled</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this dialog has a cancel button and it has
- been pressed by the user.</div>
+<div class="block">Returns <code>true</code> if this dialog has a cancel button and it has been
+ pressed by the user.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -595,8 +595,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JDialog.h
  perform the specified operation in a separate thread. The dialog's parent
  window will be the main application window. The dialog will include a
  Cancel button that can be clicked by the user. When pressed, the
- specified listener's <code>actionPerformed</code> method will be called
- from the event dispatch thread.</div>
+ specified listener's <code>actionPerformed</code> method will be called from
+ the event dispatch thread.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>title</code> - the initial title message</dd>
@@ -618,10 +618,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JDialog.h
                   <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/event/ActionListener.html?is-external=true" title="class or interface in java.awt.event" class="externalLink">ActionListener</a>&nbsp;cancelAction)</pre>
 <div class="block">Creates a new busy dialog with the specified title message that will
  perform the specified operation in a separate thread. The dialog's parent
- frame will default to the main application window if <code>null</code>.
- The dialog will include a Cancel button that can be clicked by the user.
- When pressed, the specified listener's <code>actionPerformed</code>
- method will be called from the event dispatch thread.</div>
+ frame will default to the main application window if <code>null</code>. The
+ dialog will include a Cancel button that can be clicked by the user. When
+ pressed, the specified listener's <code>actionPerformed</code> method will be
+ called from the event dispatch thread.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>parent</code> - the parent frame</dd>
@@ -746,9 +746,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JDialog.h
                                    int&nbsp;delay)</pre>
 <div class="block">Sets the current progress value of the <i>current</i> busy dialog. This
  version of the method will not actually update the progress more often
- than once per <code>delay</code> milliseconds. This prevents progress
- updates from dominating the time spent doing real work If no busy dialog
- is open, this method has no effect.
+ than once per <code>delay</code> milliseconds. This prevents progress updates
+ from dominating the time spent doing real work If no busy dialog is open,
+ this method has no effect.
 
  <p>
  This method can be called from any thread.</div>
@@ -796,8 +796,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JDialog.h
  called from the Runnable that was passed to a BusyDialog constructor,
  then it will return the dialog that is displaying progress for that
  Runnable. Otherwise, it returns the most recently created BusyDialog that
- is still open. If no BusyDialog is open, it will return
- <code>null</code>. The static methods
+ is still open. If no BusyDialog is open, it will return <code>null</code>. The
+ static methods
  <a href="#titleText(java.lang.String)"><code>titleText(java.lang.String)</code></a>, <a href="#statusText(java.lang.String)"><code>statusText(java.lang.String)</code></a>, <a href="#currentProgress(int)"><code>currentProgress(int)</code></a>, and
  <a href="#maximumProgress(int)"><code>maximumProgress(int)</code></a> all modify the state of the current dialog.
 
@@ -805,8 +805,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JDialog.h
  This method can be called from any thread.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the busy dialog that this thread should modify, or
- <code>null</code></dd>
+<dd>the busy dialog that this thread should modify, or <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -897,8 +896,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JDialog.h
  long the task will take to complete.
 
  <p>
- When this method is called and the <code>maximumValue</code> is not
- negative, the current progress value is reset to 0.
+ When this method is called and the <code>maximumValue</code> is not negative,
+ the current progress value is reset to 0.
 
  <p>
  This method can be called from any thread.</div>
@@ -931,12 +930,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JDialog.h
 <li class="blockList">
 <h4>isCancelled</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isCancelled()</pre>
-<div class="block">Returns <code>true</code> if this dialog has a cancel button and it has
- been pressed by the user.</div>
+<div class="block">Returns <code>true</code> if this dialog has a cancel button and it has been
+ pressed by the user.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the user has indicated that they wish to
- cancel the operation</dd>
+<dd><code>true</code> if the user has indicated that they wish to cancel
+ the operation</dd>
 </dl>
 </li>
 </ul>

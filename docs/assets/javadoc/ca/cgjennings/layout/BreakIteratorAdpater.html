@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -144,13 +144,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/text/BreakIterat
  out undesired break points returned by a <code>java.text.BreakIterator</code>
  instance.
  <p>
- It works by wrapping an existing base <code>BreakIterator</code> that returns
- a superset of the desired break points. Before any potential break point is
+ It works by wrapping an existing base <code>BreakIterator</code> that returns a
+ superset of the desired break points. Before any potential break point is
  returned from the adaptor, the adapter will validate it by calling
- <a href="#isBreakValidInternal(int)"><code>isBreakValidInternal(int)</code></a>. If that returns <code>true</code>, then
- the break is returned to the caller. If it returns <code>false</code>, the
- break will be filtered out. The next valid break in the same direction will
- then be substituted until an acceptable break is found.</div>
+ <a href="#isBreakValidInternal(int)"><code>isBreakValidInternal(int)</code></a>. If that returns <code>true</code>, then the
+ break is returned to the caller. If it returns <code>false</code>, the break will
+ be filtered out. The next valid break in the same direction will then be
+ substituted until an acceptable break is found.</div>
 </li>
 </ul>
 </div>

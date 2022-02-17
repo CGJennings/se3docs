@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -145,9 +145,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">InstalledPlugin</span>
 extends <a href="AbstractInstalledPlugin.html" title="class in ca.cgjennings.apps.arkham.plugins">AbstractInstalledPlugin</a></pre>
-<div class="block">An <code>InstalledPlugin</code> bridges the gap between a plug-in bundle and
- the plug-ins that it contains. It is not the plug-in itself, but it creates
- and manages instances of the plug-in on demand. When a plug-in bundle is
+<div class="block">An <code>InstalledPlugin</code> bridges the gap between a plug-in bundle and the
+ plug-ins that it contains. It is not the plug-in itself, but it creates and
+ manages instances of the plug-in on demand. When a plug-in bundle is
  installed, an instance is created for each plug-in listed in the bundle's
  root file.</div>
 <dl>
@@ -282,12 +282,11 @@ extends <a href="AbstractInstalledPlugin.html" title="class in ca.cgjennings.app
 <li class="blockList">
 <h4>isEnabled</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isEnabled()</pre>
-<div class="block">Returns <code>true</code> if this plug-in is disabled. This state is
- tracked in user <a href="../../../../../resources/Settings.html" title="class in resources"><code>Settings</code></a>.</div>
+<div class="block">Returns <code>true</code> if this plug-in is disabled. This state is tracked
+ in user <a href="../../../../../resources/Settings.html" title="class in resources"><code>Settings</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the plug-in is enabled (which it is by
- default)</dd>
+<dd><code>true</code> if the plug-in is enabled (which it is by default)</dd>
 </dl>
 </li>
 </ul>

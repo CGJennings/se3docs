@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -333,8 +333,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>member</code> - the member being searched</dd>
 <dd><code>reader</code> - a reader than can be used to read text content to be
  searched</dd>
-<dd><code>isBinaryType</code> - <code>true</code> if the file is binary rather than a
- text file</dd>
+<dd><code>isBinaryType</code> - <code>true</code> if the file is binary rather than a text
+ file</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if an I/O error occurs while reading the file</dd>
 </dl>
@@ -348,8 +348,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>isExcluded</h4>
 <pre class="methodSignature">protected&nbsp;boolean&nbsp;isExcluded&#8203;(<a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;member)</pre>
 <div class="block">Returns <code>true</code> if the given member should be skipped by the
- searcher. (The base class returns <code>false</code>, meaning that all
- files are searched.)</div>
+ searcher. (The base class returns <code>false</code>, meaning that all files
+ are searched.)</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>member</code> - the file to test</dd>
@@ -374,8 +374,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>member</code> - the member to determine an encoding for</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>an encoding to use for scanning, or <code>null</code> if none
- applies</dd>
+<dd>an encoding to use for scanning, or <code>null</code> if none applies</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="MetadataSource.html#getDefaultCharset(ca.cgjennings.apps.arkham.project.Member)"><code>MetadataSource.getDefaultCharset(ca.cgjennings.apps.arkham.project.Member)</code></a></dd>
 </dl>

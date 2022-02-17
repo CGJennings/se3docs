@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -239,8 +239,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isMultipleLineTextEditor()">isMultipleLineTextEditor</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the context bar is attached to some kind
- of text editor, and that editor supports more than a single line of
+<div class="block">Returns <code>true</code> if the context bar is attached to some kind of
+ text editor, and that editor supports more than a single line of
  text.</div>
 </td>
 </tr>
@@ -322,16 +322,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isMultipleLineTextEditor</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isMultipleLineTextEditor()</pre>
-<div class="block">Returns <code>true</code> if the context bar is attached to some kind
- of text editor, and that editor supports more than a single line of
- text. For example, a context bar attached to a
- <code>JTextField</code> would return <code>false</code>, while a
- context bar attached to a <code>JTextArea</code> would return
- <code>true</code>.</div>
+<div class="block">Returns <code>true</code> if the context bar is attached to some kind of
+ text editor, and that editor supports more than a single line of
+ text. For example, a context bar attached to a <code>JTextField</code>
+ would return <code>false</code>, while a context bar attached to a
+ <code>JTextArea</code> would return <code>true</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the context bar is attached to a
- multi-line text editor</dd>
+<dd><code>true</code> if the context bar is attached to a multi-line
+ text editor</dd>
 </dl>
 </li>
 </ul>
@@ -354,8 +353,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  </pre></div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the type of code being edited, or <code>null</code>; if code
- is being edited but the type is indeterminate, script code
+<dd>the type of code being edited, or <code>null</code>; if code is
+ being edited but the type is indeterminate, script code
  (<code>CodeType.JAVASCRIPT</code>) is assumed</dd>
 </dl>
 </li>

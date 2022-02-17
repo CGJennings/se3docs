@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -145,11 +145,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">FilteredDocument</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/PlainDocument.html?is-external=true" title="class or interface in javax.swing.text" class="externalLink">PlainDocument</a></pre>
-<div class="block">An extension of <code>PlainDocument</code> that transparently filters out
- certain characters. A set of characters is provided as a string, and the
- filter operates as either a white list (allowing only characters in the
- filter string) or a black list (allowing all characters except those in the
- filter string).</div>
+<div class="block">An extension of <code>PlainDocument</code> that transparently filters out certain
+ characters. A set of characters is provided as a string, and the filter
+ operates as either a white list (allowing only characters in the filter
+ string) or a black list (allowing all characters except those in the filter
+ string).</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../serialized-form.html#ca.cgjennings.ui.FilteredDocument">Serialized Form</a></dd>
@@ -349,9 +349,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isWhiteList()">isWhiteList</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the filter characters form a white list
- (list of the allowed characters), or <code>false</code> if they form a
- black list (list of excluded characters).</div>
+<div class="block">Returns <code>true</code> if the filter characters form a white list (list of
+ the allowed characters), or <code>false</code> if they form a black list (list
+ of excluded characters).</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
@@ -373,8 +373,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setWhiteList(boolean)">setWhiteList</a></span>&#8203;(boolean&nbsp;isWhiteList)</code></th>
 <td class="colLast">
-<div class="block">Sets whether the list is treated as a white list (<code>true</code>) or
- black list (<code>false</code>).</div>
+<div class="block">Sets whether the list is treated as a white list (<code>true</code>) or black
+ list (<code>false</code>).</div>
 </td>
 </tr>
 </table>
@@ -438,8 +438,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>blackList</code> - the characters to exclude</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>filterList</code> is
- <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>filterList</code> is <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -459,8 +458,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
 <dd><code>isWhiteList</code> - whether the filter includes or excludes the filter
  list</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>filterList</code> is
- <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>filterList</code> is <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -481,8 +479,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
 <li class="blockList">
 <h4>setWhiteList</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setWhiteList&#8203;(boolean&nbsp;isWhiteList)</pre>
-<div class="block">Sets whether the list is treated as a white list (<code>true</code>) or
- black list (<code>false</code>).</div>
+<div class="block">Sets whether the list is treated as a white list (<code>true</code>) or black
+ list (<code>false</code>).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>isWhiteList</code> - <code>true</code> if the filter characters are
@@ -497,9 +495,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
 <li class="blockList">
 <h4>isWhiteList</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isWhiteList()</pre>
-<div class="block">Returns <code>true</code> if the filter characters form a white list
- (list of the allowed characters), or <code>false</code> if they form a
- black list (list of excluded characters).</div>
+<div class="block">Returns <code>true</code> if the filter characters form a white list (list of
+ the allowed characters), or <code>false</code> if they form a black list (list
+ of excluded characters).</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the list is a white list</dd>
@@ -519,8 +517,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Plai
 <dd><code>filterList</code> - each character in this string will be excluded or
  included (depending on whether the set is a whitelist)</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>filterList</code> is
- <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>filterList</code> is <code>null</code></dd>
 </dl>
 </li>
 </ul>

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -435,8 +435,8 @@ implements <a href="../RegionPicker.RegionChangeListener.html" title="interface 
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isAttached()">isAttached</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this editor is currently attached to the
- document tab strip.</div>
+<div class="block">Returns <code>true</code> if this editor is currently attached to the document
+ tab strip.</div>
 </td>
 </tr>
 <tr id="i13" class="rowColor">
@@ -561,7 +561,7 @@ implements <a href="../RegionPicker.RegionChangeListener.html" title="interface 
                  throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <div class="block">Creates a new card layout editor for the specified layout file. As they
  are part of a project, a card layout is always tied to a file (i.e., it
- never has a  <code>null</code> file value).</div>
+ never has a <code>null</code> file value).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>f</code> - the file to edit</dd>
@@ -621,8 +621,8 @@ implements <a href="../RegionPicker.RegionChangeListener.html" title="interface 
 <dd><code>m</code> - the new member associated with the file, if
  available</dd>
 <dd><code>oldFile</code> - the original file name</dd>
-<dd><code>newFile</code> - the new file name, or <code>null</code> if the file
- was deleted</dd>
+<dd><code>newFile</code> - the new file name, or <code>null</code> if the file was
+ deleted</dd>
 </dl>
 </li>
 </ul>
@@ -662,8 +662,8 @@ implements <a href="../RegionPicker.RegionChangeListener.html" title="interface 
 <div class="block">Subclasses should override this to export the edited content if EXPORT is
  a supported command. The value of <code>type</code> is the index of the
  element in <a href="../AbstractSupportEditor.html#getExportExtensions()"><code>AbstractSupportEditor.getExportExtensions()</code></a> for the file type that was
- selected by the user. The value of <code>file</code> is the destination
- file to write content to.</div>
+ selected by the user. The value of <code>file</code> is the destination file
+ to write content to.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../AbstractSupportEditor.html#exportImpl(int,java.io.File)">exportImpl</a></code>&nbsp;in class&nbsp;<code><a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.apps.arkham">AbstractSupportEditor</a></code></dd>
@@ -812,9 +812,8 @@ implements <a href="../RegionPicker.RegionChangeListener.html" title="interface 
 <h4>getTemplateLayer</h4>
 <pre class="methodSignature">public&nbsp;int&nbsp;getTemplateLayer()</pre>
 <div class="block">Returns the index of the layer that will represent the card template.
- This is the index of the lowest visible layer with type
- <code>IMAGE</code> located at (0,0). If there is no suitable layer,
- returns -1.</div>
+ This is the index of the lowest visible layer with type <code>IMAGE</code>
+ located at (0,0). If there is no suitable layer, returns -1.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the index of the template layer, or -1</dd>
@@ -849,8 +848,8 @@ implements <a href="../RegionPicker.RegionChangeListener.html" title="interface 
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>command</code> - the command to be performed</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if this commandable wishes to handle the
- command (even if it cannot execute the command currently)</dd>
+<dd><code>true</code> if this commandable wishes to handle the command
+ (even if it cannot execute the command currently)</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../commands/Commands.html" title="class in ca.cgjennings.apps.arkham.commands"><code>Commands</code></a></dd>
 </dl>
@@ -916,11 +915,11 @@ implements <a href="../RegionPicker.RegionChangeListener.html" title="interface 
 <h4>setAttached</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setAttached&#8203;(boolean&nbsp;attach)</pre>
 <div class="block">Sets whether this editor is attached to the document tab strip. If
- <code>true</code>, the editor is attached; this is the default state for
- new editors. If <code>false</code>, the editor is detached from the tab
- strip. When detached, the editor appears in its own floating window
- separate from the main application window. The editor reattaches when the
- window is closed.</div>
+ <code>true</code>, the editor is attached; this is the default state for new
+ editors. If <code>false</code>, the editor is detached from the tab strip.
+ When detached, the editor appears in its own floating window separate
+ from the main application window. The editor reattaches when the window
+ is closed.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>attach</code> - if <code>true</code>, attaches the window to the tab strip</dd>
@@ -934,8 +933,8 @@ implements <a href="../RegionPicker.RegionChangeListener.html" title="interface 
 <li class="blockList">
 <h4>isAttached</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isAttached()</pre>
-<div class="block">Returns <code>true</code> if this editor is currently attached to the
- document tab strip.</div>
+<div class="block">Returns <code>true</code> if this editor is currently attached to the document
+ tab strip.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the editor is attached</dd>

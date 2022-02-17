@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -185,8 +185,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canFinish()">canFinish</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the wizard can be finished in its current
- state.</div>
+<div class="block">Returns <code>true</code> if the wizard can be finished in its current state.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -411,9 +410,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <h4>canFinish</h4>
 <pre class="methodSignature">boolean&nbsp;canFinish()</pre>
-<div class="block">Returns <code>true</code> if the wizard can be finished in its current
- state. This method must always return <code>false</code> when progress is
- blocked.</div>
+<div class="block">Returns <code>true</code> if the wizard can be finished in its current state.
+ This method must always return <code>false</code> when progress is blocked.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>whether the finish button should be enabled</dd>
@@ -486,14 +484,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre class="methodSignature">void&nbsp;setProgressBlocked&#8203;(boolean&nbsp;block)</pre>
 <div class="block">Sets whether or not progress is blocked. When progress is blocked,
  <a href="#canGoForward()"><code>canGoForward()</code></a> and <a href="#canFinish()"><code>canFinish()</code></a> must always return
- <code>false</code>. The progress blocking state can be cleared by calling
- this method with false, and is cleared automatically if the page changes.
+ <code>false</code>. The progress blocking state can be cleared by calling this
+ method with false, and is cleared automatically if the page changes.
  Blocking provides a mechanism for individual pages to prevent progress if
  they are missing required information.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>block</code> - if <code>true</code>, prevents the user from going to the
- next page or finishing the dialog.</dd>
+<dd><code>block</code> - if <code>true</code>, prevents the user from going to the next
+ page or finishing the dialog.</dd>
 </dl>
 </li>
 </ul>

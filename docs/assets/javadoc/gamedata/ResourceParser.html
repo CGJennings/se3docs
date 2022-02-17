@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -134,7 +134,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><code><a href="ClassMap.Parser.html" title="class in gamedata">ClassMap.Parser</a></code>, <code><a href="TileSet.Parser.html" title="class in gamedata">TileSet.Parser</a></code></dd>
+<dd><code><a href="ClassMap.Parser.html" title="class in gamedata">ClassMap.Parser</a></code>, <code><a href="ConversionMap.Parser.html" title="class in gamedata">ConversionMap.Parser</a></code>, <code><a href="TileSet.Parser.html" title="class in gamedata">TileSet.Parser</a></code></dd>
 </dl>
 <hr>
 <pre>public abstract class <span class="typeNameLabel">ResourceParser&lt;R&gt;</span>
@@ -191,10 +191,26 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.
 </td>
 </tr>
 <tr class="rowColor">
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.io.InputStream,java.lang.String,boolean)">ResourceParser</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">InputStream</a>&nbsp;in,
+              <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;charset,
+              boolean&nbsp;gentle)</code></th>
+<td class="colLast">
+<div class="block">Creates a parser for the specified input stream and encoding.</div>
+</td>
+</tr>
+<tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,boolean)">ResourceParser</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;resource,
               boolean&nbsp;gentle)</code></th>
 <td class="colLast">
 <div class="block">Creates a parser for the specified resource file.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,java.lang.String,boolean)">ResourceParser</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;resource,
+              <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;charset,
+              boolean&nbsp;gentle)</code></th>
+<td class="colLast">
+<div class="block">Creates a parser for the specified resource file and encoding.</div>
 </td>
 </tr>
 </table>
@@ -280,8 +296,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.
 <td class="colFirst"><code>abstract <a href="ResourceParser.html" title="type parameter in ResourceParser">R</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#next()">next</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the next resource listed in the file, or <code>null</code> if
- there are no more resources available.</div>
+<div class="block">Returns the next resource listed in the file, or <code>null</code> if there
+ are no more resources available.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
@@ -378,10 +394,31 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.
 </dl>
 </li>
 </ul>
+<a id="&lt;init&gt;(java.lang.String,java.lang.String,boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>ResourceParser</h4>
+<pre>public&nbsp;ResourceParser&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;resource,
+                      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;charset,
+                      boolean&nbsp;gentle)
+               throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<div class="block">Creates a parser for the specified resource file and encoding.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>resource</code> - the location of the desired tile set resource</dd>
+<dd><code>charset</code> - the name of the character set to use, such as "UTF-8"</dd>
+<dd><code>gentle</code> - if <code>true</code>, parses in gentle mode</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
 <a id="&lt;init&gt;(java.io.InputStream,boolean)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>ResourceParser</h4>
 <pre>public&nbsp;ResourceParser&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">InputStream</a>&nbsp;in,
@@ -391,6 +428,27 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>in</code> - the input stream to read from</dd>
+<dd><code>gentle</code> - if <code>true</code>, parses in gentle mode</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if an I/O error occurs</dd>
+</dl>
+</li>
+</ul>
+<a id="&lt;init&gt;(java.io.InputStream,java.lang.String,boolean)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>ResourceParser</h4>
+<pre>public&nbsp;ResourceParser&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">InputStream</a>&nbsp;in,
+                      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;charset,
+                      boolean&nbsp;gentle)
+               throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<div class="block">Creates a parser for the specified input stream and encoding.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>in</code> - the input stream to read from</dd>
+<dd><code>charset</code> - the name of the character set to use, such as "UTF-8"</dd>
 <dd><code>gentle</code> - if <code>true</code>, parses in gentle mode</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if an I/O error occurs</dd>
@@ -415,8 +473,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.
 <h4>next</h4>
 <pre class="methodSignature">public abstract&nbsp;<a href="ResourceParser.html" title="type parameter in ResourceParser">R</a>&nbsp;next()
                 throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
-<div class="block">Returns the next resource listed in the file, or <code>null</code> if
- there are no more resources available.</div>
+<div class="block">Returns the next resource listed in the file, or <code>null</code> if there
+ are no more resources available.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the next resource</dd>
@@ -483,8 +541,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.
 <div class="block">Returns an identifier that can be used in error messages. If the parser
  was created with the resource-based constructor, this will default to the
  resource name. Otherwise it will default to <code>null</code>, but can be
- changed with <a href="#setIdentifier(java.lang.String)"><code>setIdentifier(java.lang.String)</code></a>. If the identifier is
- <code>null</code>, then this will return <code>&amp;lt;???&amp;gt;</code>.</div>
+ changed with <a href="#setIdentifier(java.lang.String)"><code>setIdentifier(java.lang.String)</code></a>. If the identifier is <code>null</code>,
+ then this will return <code>&amp;lt;???&amp;gt;</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the identifier, or the "unknown identifier" if the identifier is
@@ -499,9 +557,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.
 <li class="blockList">
 <h4>getIdentifier</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getIdentifier()</pre>
-<div class="block">Returns the identifier. If <code>null</code>, then <code>null</code> is
- returned. Otherwise, this is exactly the same as
- <a href="#getIdentifierString()"><code>getIdentifierString()</code></a>.</div>
+<div class="block">Returns the identifier. If <code>null</code>, then <code>null</code> is returned.
+ Otherwise, this is exactly the same as <a href="#getIdentifierString()"><code>getIdentifierString()</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the identifier, or <code>null</code></dd>
@@ -588,8 +645,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.
  implement parsing.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the next non-comment line, or <code>null</code> if the end of
- file was reached</dd>
+<dd>the next non-comment line, or <code>null</code> if the end of file was
+ reached</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if an I/O error occurs while reading from the source</dd>
 </dl>
@@ -608,8 +665,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.
  implement parsing.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the next non-empty line, or <code>null</code> if the end of file
- was reached</dd>
+<dd>the next non-empty line, or <code>null</code> if the end of file was
+ reached</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if an I/O error occurs while reading from the source</dd>
 </dl>
@@ -647,11 +704,11 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.
  empty line is read, then both the key and value will be empty strings.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>skipEmptyLines</code> - if <code>true</code>, empty lines are skipped and
- the next non-empty line is parsed</dd>
+<dd><code>skipEmptyLines</code> - if <code>true</code>, empty lines are skipped and the
+ next non-empty line is parsed</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the next line split into a [key, value] pair, or
- <code>null</code> if the end of file was reached</dd>
+<dd>the next line split into a [key, value] pair, or <code>null</code> if
+ the end of file was reached</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if an I/O error occurs while reading from the source</dd>
 </dl>

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -133,11 +133,15 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="description">
 <ul class="blockList">
 <li class="blockList">
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><code><a href="ResourceFileTokenizer.html" title="class in ca.cgjennings.ui.textedit.tokenizers">ResourceFileTokenizer</a></code></dd>
+</dl>
 <hr>
 <pre>public class <span class="typeNameLabel">PropertyTokenizer</span>
 extends ca.cgjennings.ui.textedit.Tokenizer</pre>
-<div class="block">Tokenizer for editing settings files, string tables
- (<code>.properties</code>), and related files.</div>
+<div class="block">Tokenizer for editing settings files, string tables (<code>.properties</code>),
+ and related files.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.1</dd>
@@ -189,7 +193,7 @@ extends ca.cgjennings.ui.textedit.Tokenizer</pre>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(boolean)">PropertyTokenizer</a></span>&#8203;(boolean&nbsp;ignoreColon)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(boolean)">PropertyTokenizer</a></span>&#8203;(boolean&nbsp;ignoreColons)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -297,7 +301,7 @@ extends ca.cgjennings.ui.textedit.Tokenizer</pre>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>PropertyTokenizer</h4>
-<pre>public&nbsp;PropertyTokenizer&#8203;(boolean&nbsp;ignoreColon)</pre>
+<pre>public&nbsp;PropertyTokenizer&#8203;(boolean&nbsp;ignoreColons)</pre>
 </li>
 </ul>
 </li>

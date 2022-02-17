@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -219,8 +219,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getVariable(char)">getVariable</a></span>&#8203;(char&nbsp;name)</code></th>
 <td class="colLast">
-<div class="block">Returns the value of a variable, or <code>null</code> if the variable is
- not defined.</div>
+<div class="block">Returns the value of a variable, or <code>null</code> if the variable is not
+ defined.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -328,11 +328,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                         <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;value)</pre>
 <div class="block">Defines a variable that will replaced when formatting a command. When a
  percent sign (%) occurs in a command template and is followed by this
- variable name, it will be replaced by calling
- <code>value.toString()</code>. Setting a variable name to
- <code>null</code> will remove the variable, if it has been defined. The
- variable % is reserved so that the sequence "%%" always produces "%" in
- the formatted command.</div>
+ variable name, it will be replaced by calling <code>value.toString()</code>.
+ Setting a variable name to <code>null</code> will remove the variable, if it
+ has been defined. The variable % is reserved so that the sequence "%%"
+ always produces "%" in the formatted command.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - the variable name</dd>
@@ -349,8 +348,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getVariable</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;getVariable&#8203;(char&nbsp;name)</pre>
-<div class="block">Returns the value of a variable, or <code>null</code> if the variable is
- not defined.</div>
+<div class="block">Returns the value of a variable, or <code>null</code> if the variable is not
+ defined.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - the variable name</dd>

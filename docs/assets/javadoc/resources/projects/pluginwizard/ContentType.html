@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -214,8 +214,8 @@ implements <a href="../../../ca/cgjennings/ui/IconProvider.html" title="interfac
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBundleFileExtension()">getBundleFileExtension</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the file name extension, including initial dot, used by
- plug-in bundles that store plug-ins of this type.</div>
+<div class="block">Returns the file name extension, including initial dot, used by plug-in
+ bundles that store plug-ins of this type.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -410,11 +410,12 @@ not permitted.)</div>
 <li class="blockList">
 <h4>getBundleFileExtension</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getBundleFileExtension()</pre>
-<div class="block">Returns the file name extension, including initial dot, used by
- plug-in bundles that store plug-ins of this type.</div>
+<div class="block">Returns the file name extension, including initial dot, used by plug-in
+ bundles that store plug-ins of this type.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the file name extension for the plug-in type, such as ".seplugin".</dd>
+<dd>the file name extension for the plug-in type, such as
+ ".seplugin".</dd>
 </dl>
 </li>
 </ul>

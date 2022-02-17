@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -346,9 +346,9 @@ implements <a href="../../../../platform/AgnosticDialog.html" title="interface i
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCatalogSearchClip()">getCatalogSearchClip</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the current <code>eonscat:</code> link text that is on the
- clipboard, or <code>null</code> if the clipboard is empty or not an
- <code>eonscat:</code> link.</div>
+<div class="block">Returns the current <code>eonscat:</code> link text that is on the clipboard,
+ or <code>null</code> if the clipboard is empty or not an <code>eonscat:</code>
+ link.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -607,9 +607,9 @@ implements <a href="../../../../platform/AgnosticDialog.html" title="interface i
 <li class="blockList">
 <h4>selectFilteredListingsForInstallation</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;selectFilteredListingsForInstallation()</pre>
-<div class="block">Selects all currently visible plug-ins for installation if possible.
- Does not affect the selection state of any plug-ins that are filtered
- out of the view.</div>
+<div class="block">Selects all currently visible plug-ins for installation if possible. Does
+ not affect the selection state of any plug-ins that are filtered out of
+ the view.</div>
 </li>
 </ul>
 <a id="setPopupText(java.lang.String)">
@@ -620,10 +620,10 @@ implements <a href="../../../../platform/AgnosticDialog.html" title="interface i
 <h4>setPopupText</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setPopupText&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;popupText)</pre>
 <div class="block">Sets a text message that will be displayed the next time the this dialog
- gains focus, or clears the current message if <code>null</code>. This can
- be used to provide an explanatory message or additional help when the
- dialog is being displayed under program control (for example, if the
- program is specifying the filter text).</div>
+ gains focus, or clears the current message if <code>null</code>. This can be
+ used to provide an explanatory message or additional help when the dialog
+ is being displayed under program control (for example, if the program is
+ specifying the filter text).</div>
 </li>
 </ul>
 <a id="getCatalogSearchClip()">
@@ -633,12 +633,12 @@ implements <a href="../../../../platform/AgnosticDialog.html" title="interface i
 <li class="blockList">
 <h4>getCatalogSearchClip</h4>
 <pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getCatalogSearchClip()</pre>
-<div class="block">Returns the current <code>eonscat:</code> link text that is on the
- clipboard, or <code>null</code> if the clipboard is empty or not an
- <code>eonscat:</code> link. On platforms with a system selection
- (primarily those based on the X Window System), the system selection is
- checked first. If there is no system selection or it does not contain a
- link, then then system clipboard is checked.</div>
+<div class="block">Returns the current <code>eonscat:</code> link text that is on the clipboard,
+ or <code>null</code> if the clipboard is empty or not an <code>eonscat:</code>
+ link. On platforms with a system selection (primarily those based on the
+ X Window System), the system selection is checked first. If there is no
+ system selection or it does not contain a link, then then system
+ clipboard is checked.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a catalogue link, without the <a href="#CATLINK_PREFIX"><code>CATLINK_PREFIX</code></a>, if one is

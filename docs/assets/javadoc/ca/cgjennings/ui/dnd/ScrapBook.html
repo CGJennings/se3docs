@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -388,8 +388,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Returns whether there is text available on the clipboard.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the clipboard contains text (or can be
- converted to text)</dd>
+<dd><code>true</code> if the clipboard contains text (or can be converted
+ to text)</dd>
 </dl>
 </li>
 </ul>
@@ -401,8 +401,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getSystemSelectionText</h4>
 <pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getSystemSelectionText()</pre>
 <div class="block">Returns the text stored in the system selection on platforms that support
- this feature. Returns <code>null</code> if the platform does not have a
- system selection or it does not have any text available.</div>
+ this feature. Returns <code>null</code> if the platform does not have a system
+ selection or it does not have any text available.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the system selection text</dd>

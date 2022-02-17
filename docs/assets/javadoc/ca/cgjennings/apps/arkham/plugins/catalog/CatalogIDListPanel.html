@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -332,8 +332,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JPanel.ht
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toCatalogString()">toCatalogString</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Identical to <a href="#toString()"><code>toString()</code></a>, but returns <code>null</code> if the
- list is empty.</div>
+<div class="block">Identical to <a href="#toString()"><code>toString()</code></a>, but returns <code>null</code> if the list is
+ empty.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -403,8 +403,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JPanel.ht
 <h4>LIST_MODIFIED_PROPERTY</h4>
 <pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> LIST_MODIFIED_PROPERTY</pre>
 <div class="block">A property that changes when entries are added to or removed from the
- list. When an ID is removed, the new value will be <code>null</code>.
- When an ID is added or replaced, the new value will be the the new ID.</div>
+ list. When an ID is removed, the new value will be <code>null</code>. When an
+ ID is added or replaced, the new value will be the the new ID.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../../constant-values.html#ca.cgjennings.apps.arkham.plugins.catalog.CatalogIDListPanel.LIST_MODIFIED_PROPERTY">Constant Field Values</a></dd>
@@ -535,8 +535,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JPanel.ht
 <li class="blockList">
 <h4>toCatalogString</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;toCatalogString()</pre>
-<div class="block">Identical to <a href="#toString()"><code>toString()</code></a>, but returns <code>null</code> if the
- list is empty.</div>
+<div class="block">Identical to <a href="#toString()"><code>toString()</code></a>, but returns <code>null</code> if the list is
+ empty.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a string suitable for setting in a catalog listing</dd>

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -114,14 +114,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <main role="main">
 <div class="header">
 <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">ca.cgjennings.ui.theme</a></div>
-<h2 title="Class CachingPainter" class="title">Class CachingPainter</h2>
+<h2 title="Class CachingPainter" class="title">Class CachingPainter&lt;T&gt;</h2>
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li>ca.cgjennings.ui.theme.CachingPainter</li>
+<li>ca.cgjennings.ui.theme.CachingPainter&lt;T&gt;</li>
 </ul>
 </li>
 </ul>
@@ -130,12 +130,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Painter.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Painter</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Painter.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Painter</a>&lt;T&gt;</code></dd>
 </dl>
 <hr>
-<pre>public class <span class="typeNameLabel">CachingPainter</span>
+<pre>public class <span class="typeNameLabel">CachingPainter&lt;T&gt;</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>
-implements <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Painter.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Painter</a></pre>
+implements <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Painter.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Painter</a>&lt;T&gt;</pre>
 <div class="block">This painter wraps another painter, buffering the wrapped painter so that it
  only needs to be called when the width or height changes. This can
  significantly increase painting speed if the wrapped painter is
@@ -161,14 +161,14 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Painte
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(javax.swing.Painter)">CachingPainter</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Painter.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Painter</a>&nbsp;painter)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(javax.swing.Painter)">CachingPainter</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Painter.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Painter</a>&lt;<a href="CachingPainter.html" title="type parameter in CachingPainter">T</a>&gt;&nbsp;painter)</code></th>
 <td class="colLast">
 <div class="block">Cache painting calls for the specified painter, only using the wrapped
  painter when the size of the paint area changes.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(javax.swing.Painter,int,int)">CachingPainter</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Painter.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Painter</a>&nbsp;painter,
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(javax.swing.Painter,int,int)">CachingPainter</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Painter.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Painter</a>&lt;<a href="CachingPainter.html" title="type parameter in CachingPainter">T</a>&gt;&nbsp;painter,
               int&nbsp;standardWidth,
               int&nbsp;standardHeight)</code></th>
 <td class="colLast">
@@ -211,8 +211,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Painte
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#paint(java.awt.Graphics2D,java.lang.Object,int,int)">paint</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt" class="externalLink">Graphics2D</a>&nbsp;g,
-     <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;c,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#paint(java.awt.Graphics2D,T,int,int)">paint</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt" class="externalLink">Graphics2D</a>&nbsp;g,
+     <a href="CachingPainter.html" title="type parameter in CachingPainter">T</a>&nbsp;c,
      int&nbsp;width,
      int&nbsp;height)</code></th>
 </tr>
@@ -246,7 +246,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Painte
 <ul class="blockList">
 <li class="blockList">
 <h4>CachingPainter</h4>
-<pre>public&nbsp;CachingPainter&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Painter.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Painter</a>&nbsp;painter)</pre>
+<pre>public&nbsp;CachingPainter&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Painter.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Painter</a>&lt;<a href="CachingPainter.html" title="type parameter in CachingPainter">T</a>&gt;&nbsp;painter)</pre>
 <div class="block">Cache painting calls for the specified painter, only using the wrapped
  painter when the size of the paint area changes.</div>
 <dl>
@@ -261,7 +261,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Painte
 <ul class="blockListLast">
 <li class="blockList">
 <h4>CachingPainter</h4>
-<pre>public&nbsp;CachingPainter&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Painter.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Painter</a>&nbsp;painter,
+<pre>public&nbsp;CachingPainter&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Painter.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Painter</a>&lt;<a href="CachingPainter.html" title="type parameter in CachingPainter">T</a>&gt;&nbsp;painter,
                       int&nbsp;standardWidth,
                       int&nbsp;standardHeight)</pre>
 <div class="block">Using this constructor will create a cache image at a single standard
@@ -287,17 +287,19 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Painte
 <h3>Method Detail</h3>
 <a id="paint(java.awt.Graphics2D,java.lang.Object,int,int)">
 <!--   -->
+</a><a id="paint(java.awt.Graphics2D,T,int,int)">
+<!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>paint</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;paint&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt" class="externalLink">Graphics2D</a>&nbsp;g,
-                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;c,
+                  <a href="CachingPainter.html" title="type parameter in CachingPainter">T</a>&nbsp;c,
                   int&nbsp;width,
                   int&nbsp;height)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Painter.html?is-external=true#paint(java.awt.Graphics2D,T,int,int)" title="class or interface in javax.swing" class="externalLink">paint</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Painter.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Painter</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Painter.html?is-external=true#paint(java.awt.Graphics2D,T,int,int)" title="class or interface in javax.swing" class="externalLink">paint</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Painter.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Painter</a>&lt;<a href="CachingPainter.html" title="type parameter in CachingPainter">T</a>&gt;</code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>g</code> - a graphics context for painting</dd>
 <dd><code>width</code> - the width of the visible console area</dd>

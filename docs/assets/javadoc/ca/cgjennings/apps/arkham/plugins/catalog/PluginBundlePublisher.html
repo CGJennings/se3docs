@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -138,20 +138,20 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 
  <p>
  A published bundle compresses an existing bundle with a high-efficiency
- compression method. For best results, the existing bundle should first
- be re-packed so that the underlying ZIP/JAR does not compress any entries
- (i.e. all entries are written with <code>STORE</code>). This will reduce the
- overall file size compared to compressing an already compressed bundle.
- (The project command to publish a bundle performs this step automatically.)
+ compression method. For best results, the existing bundle should first be
+ re-packed so that the underlying ZIP/JAR does not compress any entries (i.e.
+ all entries are written with <code>STORE</code>). This will reduce the overall
+ file size compared to compressing an already compressed bundle. (The project
+ command to publish a bundle performs this step automatically.)
 
- <p><b>Note:</b> Previously, a two-process was used in which the original
- bundle (a type of JAR file) was compressed with Pack200, then the result
- compressed as described above. However, support for Pack200 was removed
- from Java. As the required tools are no longer distributed with JREs
- starting in Java 14, bundles published with older versions of the app
- can no longer be decompressed by newer versions of the app. (They can
- be unpacked by an older version, then the bundle installed in the newer
- version.)</div>
+ <p>
+ <b>Note:</b> Previously, a two-process was used in which the original bundle
+ (a type of JAR file) was compressed with Pack200, then the result compressed
+ as described above. However, support for Pack200 was removed from Java. As
+ the required tools are no longer distributed with JREs starting in Java 14,
+ bundles published with older versions of the app can no longer be
+ decompressed by newer versions of the app. (They can be unpacked by an older
+ version, then the bundle installed in the newer version.)</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -274,8 +274,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the uncompressed source file</dd>
 <dd><code>dest</code> - the compressed file to create</dd>
-<dd><code>method</code> - the compression method to use; if <code>null</code>, the
- default method is selected</dd>
+<dd><code>method</code> - the compression method to use; if <code>null</code>, the default
+ method is selected</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if an error occurs</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if either file is <code>null</code></dd>
@@ -293,9 +293,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                               <a href="PluginBundlePublisher.CompressionMethod.html" title="enum in ca.cgjennings.apps.arkham.plugins.catalog">PluginBundlePublisher.CompressionMethod</a>&nbsp;method)
                        throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <div class="block">Decompresses a file previously compressed with the specified compression
- method. If the method is <code>null</code>, then a compression method
- will be chosen based on the input file name. If no method can be detected
- from the file name, an <code>IOException</code> will be thrown.</div>
+ method. If the method is <code>null</code>, then a compression method will be
+ chosen based on the input file name. If no method can be detected from
+ the file name, an <code>IOException</code> will be thrown.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the compressed source file</dd>
@@ -325,14 +325,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <p>
  The compression method is detected automatically from the file name. If
  the destination is <code>null</code>, a file in the same folder with the
- publication extension (such as <code>.pbz</code>) removed will be used.
- An optional listener may be supplied that will be notified of the
- unpacking progress.</div>
+ publication extension (such as <code>.pbz</code>) removed will be used. An
+ optional listener may be supplied that will be notified of the unpacking
+ progress.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the source file to convert</dd>
-<dd><code>dest</code> - the destination bundle file; may be <code>null</code> to
- create a destination based on the source</dd>
+<dd><code>dest</code> - the destination bundle file; may be <code>null</code> to create a
+ destination based on the source</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the name of the destination file; useful if <code>null</code> was
  specified to determine the name automatically</dd>

@@ -26,14 +26,14 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10};
+var data = {"i0":10,"i1":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -173,7 +173,7 @@ extends <a href="Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sh
 <!--   -->
 </a>
 <h3>Fields inherited from class&nbsp;ca.cgjennings.apps.arkham.sheet.<a href="Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sheet</a></h3>
-<code><a href="Sheet.html#ALIGN_CENTER">ALIGN_CENTER</a>, <a href="Sheet.html#ALIGN_LEADING">ALIGN_LEADING</a>, <a href="Sheet.html#ALIGN_LEFT">ALIGN_LEFT</a>, <a href="Sheet.html#ALIGN_RIGHT">ALIGN_RIGHT</a>, <a href="Sheet.html#ALIGN_TRAILING">ALIGN_TRAILING</a>, <a href="Sheet.html#ON_PAINT_EVENT_METHOD">ON_PAINT_EVENT_METHOD</a>, <a href="Sheet.html#ROTATE_LEFT">ROTATE_LEFT</a>, <a href="Sheet.html#ROTATE_NONE">ROTATE_NONE</a>, <a href="Sheet.html#ROTATE_RIGHT">ROTATE_RIGHT</a>, <a href="Sheet.html#ROTATE_UPSIDE_DOWN">ROTATE_UPSIDE_DOWN</a></code></li>
+<code><a href="Sheet.html#ALIGN_CENTER">ALIGN_CENTER</a>, <a href="Sheet.html#ALIGN_LEADING">ALIGN_LEADING</a>, <a href="Sheet.html#ALIGN_LEFT">ALIGN_LEFT</a>, <a href="Sheet.html#ALIGN_RIGHT">ALIGN_RIGHT</a>, <a href="Sheet.html#ALIGN_TRAILING">ALIGN_TRAILING</a>, <a href="Sheet.html#DEBUG_BLEED_MARGIN">DEBUG_BLEED_MARGIN</a>, <a href="Sheet.html#DEBUG_PORTRAIT_REGION">DEBUG_PORTRAIT_REGION</a>, <a href="Sheet.html#DEBUG_UNSAFE_AREA">DEBUG_UNSAFE_AREA</a>, <a href="Sheet.html#ON_PAINT_EVENT_METHOD">ON_PAINT_EVENT_METHOD</a>, <a href="Sheet.html#ROTATE_LEFT">ROTATE_LEFT</a>, <a href="Sheet.html#ROTATE_NONE">ROTATE_NONE</a>, <a href="Sheet.html#ROTATE_RIGHT">ROTATE_RIGHT</a>, <a href="Sheet.html#ROTATE_UPSIDE_DOWN">ROTATE_UPSIDE_DOWN</a></code></li>
 </ul>
 </li>
 </ul>
@@ -196,6 +196,19 @@ extends <a href="Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sh
                    <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;templateKey)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
+<tr class="rowColor">
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(ca.cgjennings.apps.arkham.component.GameComponent,java.lang.String,double)">UndecoratedCardBack</a></span>&#8203;(<a href="../component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>&nbsp;component,
+                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;templateKey,
+                   double&nbsp;bleedMargin)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(ca.cgjennings.apps.arkham.component.GameComponent,java.lang.String,double,double)">UndecoratedCardBack</a></span>&#8203;(<a href="../component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>&nbsp;component,
+                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;templateKey,
+                   double&nbsp;bleedMargin,
+                   double&nbsp;cornerRadius)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
 </table>
 </li>
 </ul>
@@ -215,6 +228,14 @@ extends <a href="Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sh
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBleedMargin()">getBleedMargin</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Returns the size of the <em>designed</em> bleed margin included on each
+ edge of the component, in points.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#paintSheet(ca.cgjennings.apps.arkham.sheet.RenderTarget)">paintSheet</a></span>&#8203;(<a href="RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target)</code></th>
 <td class="colLast">
@@ -227,7 +248,7 @@ extends <a href="Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sh
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;ca.cgjennings.apps.arkham.sheet.<a href="Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sheet</a></h3>
-<code><a href="Sheet.html#applyContextHints(java.awt.Graphics2D)">applyContextHints</a>, <a href="Sheet.html#applyContextScale(java.awt.Graphics2D)">applyContextScale</a>, <a href="Sheet.html#createGraphics()">createGraphics</a>, <a href="Sheet.html#createGraphics(java.awt.image.BufferedImage,boolean,boolean)">createGraphics</a>, <a href="Sheet.html#createTemporaryImage(int,int,boolean)">createTemporaryImage</a>, <a href="Sheet.html#doStandardRendererInitialization(ca.cgjennings.layout.MarkupRenderer)">doStandardRendererInitialization</a>, <a href="Sheet.html#drawOutlinedTitle(java.awt.Graphics2D,java.lang.String,java.awt.Rectangle,java.awt.Font,float,float,java.awt.Paint,java.awt.Paint,int,boolean)">drawOutlinedTitle</a>, <a href="Sheet.html#drawRegionBox(java.awt.Graphics2D,java.awt.Rectangle)">drawRegionBox</a>, <a href="Sheet.html#drawRotatedTitle(java.awt.Graphics2D,java.lang.String,java.awt.Rectangle,java.awt.Font,float,int,int)">drawRotatedTitle</a>, <a href="Sheet.html#drawTitle(java.awt.Graphics2D,java.lang.String,java.awt.Rectangle,java.awt.Font,float,int)">drawTitle</a>, <a href="Sheet.html#fitTitle(java.awt.Graphics2D,java.lang.String,java.awt.Rectangle,java.awt.Font,float,int)">fitTitle</a>, <a href="Sheet.html#freeCachedResources()">freeCachedResources</a>, <a href="Sheet.html#getBleedMargin()">getBleedMargin</a>, <a href="Sheet.html#getDeckSnappingHint()">getDeckSnappingHint</a>, <a href="Sheet.html#getDestinationBuffer()">getDestinationBuffer</a>, <a href="Sheet.html#getExpansionSymbol(gamedata.Expansion,java.lang.String,int)">getExpansionSymbol</a>, <a href="Sheet.html#getExpansionSymbolKey()">getExpansionSymbolKey</a>, <a href="Sheet.html#getFoldMarks()">getFoldMarks</a>, <a href="Sheet.html#getGameComponent()">getGameComponent</a>, <a href="Sheet.html#getMarkerStyle()">getMarkerStyle</a>, <a href="Sheet.html#getPaintingResolution()">getPaintingResolution</a>, <a href="Sheet.html#getPrintDimensions()">getPrintDimensions</a>, <a href="Sheet.html#getScalingFactor()">getScalingFactor</a>, <a href="Sheet.html#getSuggestedUpsampleFactor()">getSuggestedUpsampleFactor</a>, <a href="Sheet.html#getSyntheticBleedMargin()">getSyntheticBleedMargin</a>, <a href="Sheet.html#getTemplateHeight()">getTemplateHeight</a>, <a href="Sheet.html#getTemplateImage()">getTemplateImage</a>, <a href="Sheet.html#getTemplateKey()">getTemplateKey</a>, <a href="Sheet.html#getTemplateResolution()">getTemplateResolution</a>, <a href="Sheet.html#getTemplateWidth()">getTemplateWidth</a>, <a href="Sheet.html#hasChanged()">hasChanged</a>, <a href="Sheet.html#hasCropMarks()">hasCropMarks</a>, <a href="Sheet.html#hasFoldMarks()">hasFoldMarks</a>, <a href="Sheet.html#initializeTemplate(java.lang.String)">initializeTemplate</a>, <a href="Sheet.html#initializeTemplate(java.lang.String,java.awt.image.BufferedImage,java.lang.String,double,double)">initializeTemplate</a>, <a href="Sheet.html#isCachedTemporaryImageInvalid()">isCachedTemporaryImageInvalid</a>, <a href="Sheet.html#isPrototypeRenderingModeEnabled()">isPrototypeRenderingModeEnabled</a>, <a href="Sheet.html#isTransparent()">isTransparent</a>, <a href="Sheet.html#isVariableSize()">isVariableSize</a>, <a href="Sheet.html#markChanged()">markChanged</a>, <a href="Sheet.html#paint(ca.cgjennings.apps.arkham.sheet.RenderTarget,double)">paint</a>, <a href="Sheet.html#paint(ca.cgjennings.apps.arkham.sheet.RenderTarget,double,boolean)">paint</a>, <a href="Sheet.html#parseExpansionList(java.lang.String)">parseExpansionList</a>, <a href="Sheet.html#replaceTemplateImage(java.awt.image.BufferedImage)">replaceTemplateImage</a>, <a href="Sheet.html#setExpansionSymbolKey(java.lang.String)">setExpansionSymbolKey</a>, <a href="Sheet.html#setNamesForRenderer(ca.cgjennings.layout.MarkupRenderer,java.lang.String,java.lang.String,java.lang.String)">setNamesForRenderer</a>, <a href="Sheet.html#setPrototypeRenderingModeEnabled(boolean)">setPrototypeRenderingModeEnabled</a>, <a href="Sheet.html#synthesizeBleedMargin(java.awt.image.BufferedImage,boolean,double)">synthesizeBleedMargin</a>, <a href="Sheet.html#toString()">toString</a></code></li>
+<code><a href="Sheet.html#allowTemplateUseInBleedSynthesis()">allowTemplateUseInBleedSynthesis</a>, <a href="Sheet.html#applyContextHints(java.awt.Graphics2D)">applyContextHints</a>, <a href="Sheet.html#applyContextScale(java.awt.Graphics2D)">applyContextScale</a>, <a href="Sheet.html#applyFinishingOptions(java.awt.image.BufferedImage,ca.cgjennings.apps.arkham.sheet.RenderTarget,double)">applyFinishingOptions</a>, <a href="Sheet.html#createGraphics()">createGraphics</a>, <a href="Sheet.html#createGraphics(java.awt.image.BufferedImage,boolean,boolean)">createGraphics</a>, <a href="Sheet.html#createTemporaryImage(int,int,boolean)">createTemporaryImage</a>, <a href="Sheet.html#doStandardRendererInitialization(ca.cgjennings.layout.MarkupRenderer)">doStandardRendererInitialization</a>, <a href="Sheet.html#drawOutlinedTitle(java.awt.Graphics2D,java.lang.String,java.awt.Rectangle,java.awt.Font,float,float,java.awt.Paint,java.awt.Paint,int,boolean)">drawOutlinedTitle</a>, <a href="Sheet.html#drawPortraitBox(java.awt.Graphics2D,java.awt.geom.Rectangle2D,ca.cgjennings.apps.arkham.component.Portrait)">drawPortraitBox</a>, <a href="Sheet.html#drawPortraitBox(java.awt.Graphics2D,java.awt.geom.Rectangle2D,java.awt.image.BufferedImage,double,double,double,double)">drawPortraitBox</a>, <a href="Sheet.html#drawRegionBox(java.awt.Graphics2D,java.awt.Rectangle)">drawRegionBox</a>, <a href="Sheet.html#drawRotatedTitle(java.awt.Graphics2D,java.lang.String,java.awt.Rectangle,java.awt.Font,float,int,int)">drawRotatedTitle</a>, <a href="Sheet.html#drawTitle(java.awt.Graphics2D,java.lang.String,java.awt.Rectangle,java.awt.Font,float,int)">drawTitle</a>, <a href="Sheet.html#fitTitle(java.awt.Graphics2D,java.lang.String,java.awt.Rectangle,java.awt.Font,float,int)">fitTitle</a>, <a href="Sheet.html#freeCachedResources()">freeCachedResources</a>, <a href="Sheet.html#getCornerRadius()">getCornerRadius</a>, <a href="Sheet.html#getDeckSnappingHint()">getDeckSnappingHint</a>, <a href="Sheet.html#getDestinationBuffer()">getDestinationBuffer</a>, <a href="Sheet.html#getExpansionSymbol(gamedata.Expansion,java.lang.String,int)">getExpansionSymbol</a>, <a href="Sheet.html#getExpansionSymbolKey()">getExpansionSymbolKey</a>, <a href="Sheet.html#getFoldMarks()">getFoldMarks</a>, <a href="Sheet.html#getGameComponent()">getGameComponent</a>, <a href="Sheet.html#getMarkerStyle()">getMarkerStyle</a>, <a href="Sheet.html#getPaintingResolution()">getPaintingResolution</a>, <a href="Sheet.html#getPrintDimensions()">getPrintDimensions</a>, <a href="Sheet.html#getRenderedBleedMargin()">getRenderedBleedMargin</a>, <a href="Sheet.html#getScalingFactor()">getScalingFactor</a>, <a href="Sheet.html#getSuggestedUpsampleFactor()">getSuggestedUpsampleFactor</a>, <a href="Sheet.html#getTemplateHeight()">getTemplateHeight</a>, <a href="Sheet.html#getTemplateImage()">getTemplateImage</a>, <a href="Sheet.html#getTemplateKey()">getTemplateKey</a>, <a href="Sheet.html#getTemplateResolution()">getTemplateResolution</a>, <a href="Sheet.html#getTemplateWidth()">getTemplateWidth</a>, <a href="Sheet.html#getUserBleedMargin()">getUserBleedMargin</a>, <a href="Sheet.html#hasChanged()">hasChanged</a>, <a href="Sheet.html#hasCropMarks()">hasCropMarks</a>, <a href="Sheet.html#hasFoldMarks()">hasFoldMarks</a>, <a href="Sheet.html#initializeTemplate(java.lang.String)">initializeTemplate</a>, <a href="Sheet.html#initializeTemplate(java.lang.String,java.awt.image.BufferedImage,java.lang.String,double,double)">initializeTemplate</a>, <a href="Sheet.html#isCachedTemporaryImageInvalid()">isCachedTemporaryImageInvalid</a>, <a href="Sheet.html#isMarginSynthesisAllowed()">isMarginSynthesisAllowed</a>, <a href="Sheet.html#isPrototypeRenderingModeEnabled()">isPrototypeRenderingModeEnabled</a>, <a href="Sheet.html#isTransparent()">isTransparent</a>, <a href="Sheet.html#isVariableSize()">isVariableSize</a>, <a href="Sheet.html#markChanged()">markChanged</a>, <a href="Sheet.html#paint(ca.cgjennings.apps.arkham.sheet.RenderTarget,double)">paint</a>, <a href="Sheet.html#parseExpansionList(java.lang.String)">parseExpansionList</a>, <a href="Sheet.html#replaceTemplateImage(java.awt.image.BufferedImage)">replaceTemplateImage</a>, <a href="Sheet.html#setCornerRadius(double)">setCornerRadius</a>, <a href="Sheet.html#setExpansionSymbolKey(java.lang.String)">setExpansionSymbolKey</a>, <a href="Sheet.html#setNamesForRenderer(ca.cgjennings.layout.MarkupRenderer,java.lang.String,java.lang.String,java.lang.String)">setNamesForRenderer</a>, <a href="Sheet.html#setPrototypeRenderingModeEnabled(boolean)">setPrototypeRenderingModeEnabled</a>, <a href="Sheet.html#setUserBleedMargin(double)">setUserBleedMargin</a>, <a href="Sheet.html#toString()">toString</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
@@ -255,11 +276,34 @@ extends <a href="Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sh
 <a id="&lt;init&gt;(ca.cgjennings.apps.arkham.component.GameComponent,java.lang.String)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>UndecoratedCardBack</h4>
 <pre>public&nbsp;UndecoratedCardBack&#8203;(<a href="../component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>&nbsp;component,
                            <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;templateKey)</pre>
+</li>
+</ul>
+<a id="&lt;init&gt;(ca.cgjennings.apps.arkham.component.GameComponent,java.lang.String,double)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>UndecoratedCardBack</h4>
+<pre>public&nbsp;UndecoratedCardBack&#8203;(<a href="../component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>&nbsp;component,
+                           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;templateKey,
+                           double&nbsp;bleedMargin)</pre>
+</li>
+</ul>
+<a id="&lt;init&gt;(ca.cgjennings.apps.arkham.component.GameComponent,java.lang.String,double,double)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>UndecoratedCardBack</h4>
+<pre>public&nbsp;UndecoratedCardBack&#8203;(<a href="../component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>&nbsp;component,
+                           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;templateKey,
+                           double&nbsp;bleedMargin,
+                           double&nbsp;cornerRadius)</pre>
 </li>
 </ul>
 </li>
@@ -275,7 +319,7 @@ extends <a href="Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sh
 <a id="paintSheet(ca.cgjennings.apps.arkham.sheet.RenderTarget)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>paintSheet</h4>
 <pre class="methodSignature">protected&nbsp;void&nbsp;paintSheet&#8203;(<a href="RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target)</pre>
@@ -298,6 +342,91 @@ extends <a href="Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sh
 <dd><code><a href="Sheet.html#paintSheet(ca.cgjennings.apps.arkham.sheet.RenderTarget)">paintSheet</a></code>&nbsp;in class&nbsp;<code><a href="Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sheet</a>&lt;<a href="../component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>&gt;</code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>target</code> - the rendering target</dd>
+</dl>
+</li>
+</ul>
+<a id="getBleedMargin()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getBleedMargin</h4>
+<pre class="methodSignature">public&nbsp;double&nbsp;getBleedMargin()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="Sheet.html#getBleedMargin()">Sheet</a></code></span></div>
+<div class="block">Returns the size of the <em>designed</em> bleed margin included on each
+ edge of the component, in points. A
+ <a href="http://se3docs.cgjennings.ca/um-deck-pubmarks.html#bleed-margins">bleed
+ margin</a>
+ adds extra content to the edges of the component to allow for imperfect
+ cuts when cutting the component from a larger sheet of paper. By
+ returning a positive value, you indicate that your design already
+ includes a bleed margin of the specified size. (Usually, the graphics for
+ a designed bleed margin are built into the template image.)
+
+ <p>
+ By default, this method returns 0, meaning that the design includes no
+ margin. When the designed margin is 0, or if its size if too small,
+ Strange Eons will attempt to synthesize bleed margin graphics, with
+ results of varying quality.
+
+ <p>
+ Strange Eons will not synthesize a bleed margin for transparent sheet
+ images. (That is, if <a href="Sheet.html#isTransparent()"><code>Sheet.isTransparent()</code></a> is true.)
+
+ <p>
+
+ content as part o
+
+
+ Returning a positive value * indicates that your component graphics
+ include
+
+
+
+
+
+ Returns the size of the margin around the component edge that should be
+ cropped off, measured in points. (The bleed margin will be the same on
+ all sides.) This allows you to create components with an extra margin
+ that allows for slight misalignment when cutting. The height of the card
+ after cutting will be the height of the card produced by the sheet, less
+ twice this margin. Likewise for the width. If <a href="Sheet.html#hasCropMarks()"><code>Sheet.hasCropMarks()</code></a>
+ returns <code>true</code>, then the automatic crop marks will be moved toward
+ the inside of this card by an amount equal to the bleed margin.
+ <p>
+ In the example below, the actual card to be cut and kept is indicated by
+ the blank area, while the X'd area indicates the bleed margin. Card
+ content covers the entire area, including the bleed margin, but nothing
+ important should appear in the bleed margin or within a distance about
+ the same size as the bleed margin on the card interior.
+
+ <pre>
+ XXXXXXXXXXXXXXXXXX
+ XX              XX
+ X                X
+ X                X
+ X     Actual     X
+ X      Card      X
+ X     Content    X
+ X       (tm)     X
+ X                X
+ X                X
+ X                X
+ XX              XX
+ XXXXXXXXXXXXXXXXXX
+ </pre>
+
+ <p>
+ The base class looks up the setting
+ <i>templateKey</i><code>-bleed-margin</code> to determine the bleed margin,
+ defaulting to 0 if none is defined.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="Sheet.html#getBleedMargin()">getBleedMargin</a></code>&nbsp;in class&nbsp;<code><a href="Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sheet</a>&lt;<a href="../component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>&gt;</code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the size of the bleed margin, in points (1 point = 1/72 inch)</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="Sheet.html#hasCropMarks()"><code>Sheet.hasCropMarks()</code></a></dd>
 </dl>
 </li>
 </ul>

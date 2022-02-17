@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -262,9 +262,9 @@ extends <a href="commands/Commandable.html" title="interface in ca.cgjennings.ap
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFile()">getFile</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the file used to save this component, or <code>null</code> if it
- is a new, unsaved file or the editor is not associated with any
- particular file.</div>
+<div class="block">Returns the file used to save this component, or <code>null</code> if it is a
+ new, unsaved file or the editor is not associated with any particular
+ file.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -293,8 +293,8 @@ extends <a href="commands/Commandable.html" title="interface in ca.cgjennings.ap
 <td class="colFirst"><code><a href="component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getGameComponent()">getGameComponent</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the edited game component, or <code>null</code> if this editor is
- not editing a game component.</div>
+<div class="block">Returns the edited game component, or <code>null</code> if this editor is not
+ editing a game component.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
@@ -323,8 +323,8 @@ extends <a href="commands/Commandable.html" title="interface in ca.cgjennings.ap
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasUnsavedChanges()">hasUnsavedChanges</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this editor is editing a file that has
- unsaved changes.</div>
+<div class="block">Returns <code>true</code> if this editor is editing a file that has unsaved
+ changes.</div>
 </td>
 </tr>
 <tr id="i14" class="altColor">
@@ -338,8 +338,8 @@ extends <a href="commands/Commandable.html" title="interface in ca.cgjennings.ap
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isCommandApplicable(ca.cgjennings.apps.arkham.commands.AbstractCommand)">isCommandApplicable</a></span>&#8203;(<a href="commands/AbstractCommand.html" title="class in ca.cgjennings.apps.arkham.commands">AbstractCommand</a>&nbsp;command)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the <code>command</code> can be performed by
- this commandable in its current state.</div>
+<div class="block">Returns <code>true</code> if the <code>command</code> can be performed by this
+ commandable in its current state.</div>
 </td>
 </tr>
 <tr id="i16" class="altColor">
@@ -468,12 +468,11 @@ extends <a href="commands/Commandable.html" title="interface in ca.cgjennings.ap
 <h4>getTitle</h4>
 <pre class="methodSignature"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getTitle()</pre>
 <div class="block">Returns the title used to describe this editor. The returned value is
- never <code>null</code>; if a <code>null</code> title is set with
- <a href="#setTitle(java.lang.String)"><code>setTitle(java.lang.String)</code></a> then this method returns an empty string.</div>
+ never <code>null</code>; if a <code>null</code> title is set with <a href="#setTitle(java.lang.String)"><code>setTitle(java.lang.String)</code></a>
+ then this method returns an empty string.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the current title, which is guaranteed not to be
- <code>null</code></dd>
+<dd>the current title, which is guaranteed not to be <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -522,8 +521,8 @@ extends <a href="commands/Commandable.html" title="interface in ca.cgjennings.ap
 <div class="block">Sets the tool tip text to display for the editor's tab.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>toolTipText</code> - the text to display, or <code>null</code> to clear the
- tool tip</dd>
+<dd><code>toolTipText</code> - the text to display, or <code>null</code> to clear the tool
+ tip</dd>
 </dl>
 </li>
 </ul>
@@ -535,12 +534,12 @@ extends <a href="commands/Commandable.html" title="interface in ca.cgjennings.ap
 <h4>getToolTipText</h4>
 <pre class="methodSignature"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getToolTipText()</pre>
 <div class="block">Returns the tool tip text displayed for the editor's tab. If no tool tip
- has been explicitly set and <a href="#getFile()"><code>getFile()</code></a> returns a
- non-<code>null</code> value, then a default tool tip will be returned.</div>
+ has been explicitly set and <a href="#getFile()"><code>getFile()</code></a> returns a non-<code>null</code>
+ value, then a default tool tip will be returned.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the tool tip text to display, or <code>null</code> to clear the
- tool tip</dd>
+<dd>the tool tip text to display, or <code>null</code> to clear the tool
+ tip</dd>
 </dl>
 </li>
 </ul>
@@ -570,8 +569,8 @@ extends <a href="commands/Commandable.html" title="interface in ca.cgjennings.ap
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>returns <code>true</code> if the editor was actually closed, or
- <code>false</code> if the user cancelled the attempt or closing was
- otherwise prevented</dd>
+ <code>false</code> if the user cancelled the attempt or closing was otherwise
+ prevented</dd>
 </dl>
 </li>
 </ul>
@@ -586,8 +585,8 @@ extends <a href="commands/Commandable.html" title="interface in ca.cgjennings.ap
  shown in its own window, independent of the main application window.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>attach</code> - if <code>true</code>, attach a detached editor; otherwise
- detach the editor from the tab strip</dd>
+<dd><code>attach</code> - if <code>true</code>, attach a detached editor; otherwise detach
+ the editor from the tab strip</dd>
 </dl>
 </li>
 </ul>
@@ -601,8 +600,8 @@ extends <a href="commands/Commandable.html" title="interface in ca.cgjennings.ap
 <div class="block">Returns <code>true</code> if the editor is attached to the tab strip.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the editor is attached to the main
- application window</dd>
+<dd><code>true</code> if the editor is attached to the main application
+ window</dd>
 </dl>
 </li>
 </ul>
@@ -631,8 +630,8 @@ extends <a href="commands/Commandable.html" title="interface in ca.cgjennings.ap
 <li class="blockList">
 <h4>getGameComponent</h4>
 <pre class="methodSignature"><a href="component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>&nbsp;getGameComponent()</pre>
-<div class="block">Returns the edited game component, or <code>null</code> if this editor is
- not editing a game component.</div>
+<div class="block">Returns the edited game component, or <code>null</code> if this editor is not
+ editing a game component.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the game component currently being edited by this editor, or
@@ -699,9 +698,9 @@ extends <a href="commands/Commandable.html" title="interface in ca.cgjennings.ap
 <li class="blockList">
 <h4>getFile</h4>
 <pre class="methodSignature"><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;getFile()</pre>
-<div class="block">Returns the file used to save this component, or <code>null</code> if it
- is a new, unsaved file or the editor is not associated with any
- particular file.</div>
+<div class="block">Returns the file used to save this component, or <code>null</code> if it is a
+ new, unsaved file or the editor is not associated with any particular
+ file.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the save file</dd>
@@ -719,13 +718,13 @@ extends <a href="commands/Commandable.html" title="interface in ca.cgjennings.ap
 <li class="blockList">
 <h4>hasUnsavedChanges</h4>
 <pre class="methodSignature">boolean&nbsp;hasUnsavedChanges()</pre>
-<div class="block">Returns <code>true</code> if this editor is editing a file that has
- unsaved changes. If the content cannot be saved or does not use files,
- then this method should return <code>false</code>.</div>
+<div class="block">Returns <code>true</code> if this editor is editing a file that has unsaved
+ changes. If the content cannot be saved or does not use files, then this
+ method should return <code>false</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the editor's content may be different from
- the saved version</dd>
+<dd><code>true</code> if the editor's content may be different from the
+ saved version</dd>
 </dl>
 </li>
 </ul>
@@ -748,8 +747,8 @@ extends <a href="commands/Commandable.html" title="interface in ca.cgjennings.ap
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>command</code> - the command to be performed</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if this commandable wishes to handle the
- command (even if it cannot execute the command currently)</dd>
+<dd><code>true</code> if this commandable wishes to handle the command
+ (even if it cannot execute the command currently)</dd>
 </dl>
 </li>
 </ul>
@@ -760,9 +759,9 @@ extends <a href="commands/Commandable.html" title="interface in ca.cgjennings.ap
 <li class="blockList">
 <h4>isCommandApplicable</h4>
 <pre class="methodSignature">boolean&nbsp;isCommandApplicable&#8203;(<a href="commands/AbstractCommand.html" title="class in ca.cgjennings.apps.arkham.commands">AbstractCommand</a>&nbsp;command)</pre>
-<div class="block">Returns <code>true</code> if the <code>command</code> can be performed by
- this commandable in its current state. If <a href="commands/Commandable.html#canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)"><code>Commandable.canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a>
- would return false for this command, then this must also return false.</div>
+<div class="block">Returns <code>true</code> if the <code>command</code> can be performed by this
+ commandable in its current state. If <a href="commands/Commandable.html#canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)"><code>Commandable.canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a> would
+ return false for this command, then this must also return false.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="commands/Commandable.html#isCommandApplicable(ca.cgjennings.apps.arkham.commands.AbstractCommand)">isCommandApplicable</a></code>&nbsp;in interface&nbsp;<code><a href="commands/Commandable.html" title="interface in ca.cgjennings.apps.arkham.commands">Commandable</a></code></dd>

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -150,8 +150,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">SortedProperties</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html?is-external=true" title="class or interface in java.util" class="externalLink">Properties</a></pre>
-<div class="block">A subclass of <code>java.util.Properties</code> that stores its entries in
- sorted order.</div>
+<div class="block">A subclass of <code>java.util.Properties</code> that stores its entries in sorted
+ order.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>1.5</dd>
@@ -338,9 +338,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Properties.
 <li class="blockList">
 <h4>getComparator</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util" class="externalLink">Comparator</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&gt;&nbsp;getComparator()</pre>
-<div class="block">Return a comparator that will be used to sort the keys. If
- <code>null</code> is returned, keys will be sorted according to their
- natural order.</div>
+<div class="block">Return a comparator that will be used to sort the keys. If <code>null</code>
+ is returned, keys will be sorted according to their natural order.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the comparator implementing the sort order, or <code>null</code></dd>
@@ -354,8 +353,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Properties.
 <li class="blockList">
 <h4>setComparator</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setComparator&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util" class="externalLink">Comparator</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&gt;&nbsp;comparator)</pre>
-<div class="block">Set the comparator that will be used to sort the keys. If
- <code>null</code>, keys will be sorted according to their natural order.</div>
+<div class="block">Set the comparator that will be used to sort the keys. If <code>null</code>,
+ keys will be sorted according to their natural order.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>comparator</code> - the comparator implementing the sort order, or

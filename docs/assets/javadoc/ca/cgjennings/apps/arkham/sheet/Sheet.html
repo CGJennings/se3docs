@@ -26,14 +26,14 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":9,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":9,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10,"i40":10,"i41":10,"i42":6,"i43":9,"i44":10,"i45":10,"i46":9,"i47":10,"i48":10,"i49":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":9,"i8":10,"i9":9,"i10":9,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":9,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10,"i40":10,"i41":10,"i42":10,"i43":10,"i44":10,"i45":10,"i46":10,"i47":10,"i48":6,"i49":9,"i50":10,"i51":10,"i52":10,"i53":9,"i54":10,"i55":10,"i56":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -129,6 +129,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <ul class="blockList">
 <li class="blockList">
 <dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>G</code> - the type of component for which this is a sheet</dd>
+</dl>
+<dl>
 <dt>Direct Known Subclasses:</dt>
 <dd><code><a href="../diy/DIYSheet.html" title="class in ca.cgjennings.apps.arkham.diy">DIYSheet</a></code>, <code><a href="MarkerSheet.html" title="class in ca.cgjennings.apps.arkham.sheet">MarkerSheet</a></code>, <code><a href="UndecoratedCardBack.html" title="class in ca.cgjennings.apps.arkham.sheet">UndecoratedCardBack</a></code></dd>
 </dl>
@@ -136,8 +140,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre>public abstract class <span class="typeNameLabel">Sheet&lt;G extends <a href="../component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>&gt;</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
 <div class="block">An abstract base class for objects that paint one face (side) of a
- <a href="../component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component"><code>GameComponent</code></a>. Subclasses must provide a <i>template key</i>
- before the sheet can be used. This is normally  <a href="#%3Cinit%3E(G,java.lang.String)">provided during construction</a>, but sheets with more complex initialization
+ <a href="../component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component"><code>GameComponent</code></a>.Subclasses must provide a <i>template key</i>
+ before the sheet can be used. This is normally <a href="#%3Cinit%3E(G,java.lang.String)">provided during construction</a>, but sheets with more complex initialization
  may delay this step and call
  <a href="#initializeTemplate(java.lang.String)"><code>initializeTemplate</code></a> later to set
  the key.
@@ -151,15 +155,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <code>BufferedImage</code>.
 
  <p>
- This class provides a number of static helper methods for drawing tasks that
- are commonly needed when drawing components, such as drawing text within
- rectangular regions of the face  (<a href="#drawTitle(java.awt.Graphics2D,java.lang.String,java.awt.Rectangle,java.awt.Font,float,int)"><code>drawTitle</code></a>,
+ This class provides a number of helper methods for drawing tasks that are
+ commonly needed when drawing components, such as drawing text within
+ rectangular regions of the face null (<a href="#drawTitle(java.awt.Graphics2D,java.lang.String,java.awt.Rectangle,java.awt.Font,float,int)"><code>drawTitle</code></a>,
  <a href="#fitTitle(java.awt.Graphics2D,java.lang.String,java.awt.Rectangle,java.awt.Font,float,int)"><code>fitTitle</code></a>
  <a href="#drawOutlinedTitle(java.awt.Graphics2D,java.lang.String,java.awt.Rectangle,java.awt.Font,float,float,java.awt.Paint,java.awt.Paint,int,boolean)"><code>drawOutlinedTitle</code></a>,
  <a href="#drawRotatedTitle(java.awt.Graphics2D,java.lang.String,java.awt.Rectangle,java.awt.Font,float,int,int)"><code>drawRotatedTitle</code></a>),
  performing custom handling of expansion symbols
  (<a href="#getExpansionSymbol(gamedata.Expansion,java.lang.String,int)"><code>getExpansionSymbol</code></a>, <a href="#parseExpansionList(java.lang.String)"><code>parseExpansionList</code></a>),
- and setting up markup text boxes  (<a href="#doStandardRendererInitialization(ca.cgjennings.layout.MarkupRenderer)"><code>doStandardRendererInitialization</code></a>,
+ and setting up markup text boxes null (<a href="#doStandardRendererInitialization(ca.cgjennings.layout.MarkupRenderer)"><code>doStandardRendererInitialization</code></a>,
  <a href="#setNamesForRenderer(ca.cgjennings.layout.MarkupRenderer,java.lang.String,java.lang.String,java.lang.String)"><code>setNamesForRenderer</code></a>).</div>
 </li>
 </ul>
@@ -249,13 +253,28 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#DEBUG_BLEED_MARGIN">DEBUG_BLEED_MARGIN</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#DEBUG_PORTRAIT_REGION">DEBUG_PORTRAIT_REGION</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>static boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#DEBUG_UNSAFE_AREA">DEBUG_UNSAFE_AREA</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ON_PAINT_EVENT_METHOD">ON_PAINT_EVENT_METHOD</a></span></code></th>
 <td class="colLast">
 <div class="block">The name of the function called in an on-paint script.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ROTATE_LEFT">ROTATE_LEFT</a></span></code></th>
 <td class="colLast">
@@ -263,7 +282,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <a href="#drawRotatedTitle(java.awt.Graphics2D,java.lang.String,java.awt.Rectangle,java.awt.Font,float,int,int)"><code>drawRotatedTitle(java.awt.Graphics2D, java.lang.String, java.awt.Rectangle, java.awt.Font, float, int, int)</code></a>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ROTATE_NONE">ROTATE_NONE</a></span></code></th>
 <td class="colLast">
@@ -271,7 +290,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <a href="#drawRotatedTitle(java.awt.Graphics2D,java.lang.String,java.awt.Rectangle,java.awt.Font,float,int,int)"><code>drawRotatedTitle(java.awt.Graphics2D, java.lang.String, java.awt.Rectangle, java.awt.Font, float, int, int)</code></a>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ROTATE_RIGHT">ROTATE_RIGHT</a></span></code></th>
 <td class="colLast">
@@ -279,7 +298,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <a href="#drawRotatedTitle(java.awt.Graphics2D,java.lang.String,java.awt.Rectangle,java.awt.Font,float,int,int)"><code>drawRotatedTitle(java.awt.Graphics2D, java.lang.String, java.awt.Rectangle, java.awt.Font, float, int, int)</code></a>.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ROTATE_UPSIDE_DOWN">ROTATE_UPSIDE_DOWN</a></span></code></th>
 <td class="colLast">
@@ -337,6 +356,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#allowTemplateUseInBleedSynthesis()">allowTemplateUseInBleedSynthesis</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Calling this method sets an internal flag allowing the template image to
+ be used for bleed margin synthesis.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#applyContextHints(java.awt.Graphics2D)">applyContextHints</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt" class="externalLink">Graphics2D</a>&nbsp;g)</code></th>
 <td class="colLast">
@@ -344,21 +371,31 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  rendering hints.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#applyContextScale(java.awt.Graphics2D)">applyContextScale</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt" class="externalLink">Graphics2D</a>&nbsp;g)</code></th>
 <td class="colLast">
 <div class="block">Scales a graphics context to reflect the requested drawing resolution.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#applyFinishingOptions(java.awt.image.BufferedImage,ca.cgjennings.apps.arkham.sheet.RenderTarget,double)">applyFinishingOptions</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;sheetImage,
+                     <a href="RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target,
+                     double&nbsp;resolution)</code></th>
+<td class="colLast">
+<div class="block">Applies finishing options such as bleed margin adjustment and corner cuts
+ to a painted sheet.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt" class="externalLink">Graphics2D</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createGraphics()">createGraphics</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Creates a graphics context that can be used to draw this sheet.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt" class="externalLink">Graphics2D</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createGraphics(java.awt.image.BufferedImage,boolean,boolean)">createGraphics</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;bufferSource,
               boolean&nbsp;scaleForResolution,
@@ -367,7 +404,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">This method creates a graphics context for drawing sheet graphics.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createTemporaryImage(int,int,boolean)">createTemporaryImage</a></span>&#8203;(int&nbsp;templateWidth,
                     int&nbsp;templateHeight,
@@ -376,12 +413,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Creates a new temporary image to use while painting a sheet face.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#doStandardRendererInitialization(ca.cgjennings.layout.MarkupRenderer)">doStandardRendererInitialization</a></span>&#8203;(<a href="../../../layout/MarkupRenderer.html" title="class in ca.cgjennings.layout">MarkupRenderer</a>&nbsp;r)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawOutlinedTitle(java.awt.Graphics2D,java.lang.String,java.awt.Rectangle,java.awt.Font,float,float,java.awt.Paint,java.awt.Paint,int,boolean)">drawOutlinedTitle</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt" class="externalLink">Graphics2D</a>&nbsp;g,
                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
@@ -397,7 +434,31 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Draws text within a region.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code>static void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawPortraitBox(java.awt.Graphics2D,java.awt.geom.Rectangle2D,ca.cgjennings.apps.arkham.component.Portrait)">drawPortraitBox</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt" class="externalLink">Graphics2D</a>&nbsp;g,
+               <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Rectangle2D.html?is-external=true" title="class or interface in java.awt.geom" class="externalLink">Rectangle2D</a>&nbsp;region,
+               <a href="../component/Portrait.html" title="interface in ca.cgjennings.apps.arkham.component">Portrait</a>&nbsp;portrait)</code></th>
+<td class="colLast">
+<div class="block">A helper function that can be called from custom portrait painting code
+ to draw the portrait debug box, if enabled.</div>
+</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code>static void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawPortraitBox(java.awt.Graphics2D,java.awt.geom.Rectangle2D,java.awt.image.BufferedImage,double,double,double,double)">drawPortraitBox</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt" class="externalLink">Graphics2D</a>&nbsp;g,
+               <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Rectangle2D.html?is-external=true" title="class or interface in java.awt.geom" class="externalLink">Rectangle2D</a>&nbsp;region,
+               <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;portraitImage,
+               double&nbsp;panX,
+               double&nbsp;panY,
+               double&nbsp;scale,
+               double&nbsp;angle)</code></th>
+<td class="colLast">
+<div class="block">A helper function that can be called from custom portrait painting code
+ to draw the portrait debug box, if enabled.</div>
+</td>
+</tr>
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawRegionBox(java.awt.Graphics2D,java.awt.Rectangle)">drawRegionBox</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt" class="externalLink">Graphics2D</a>&nbsp;g,
              <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Rectangle.html?is-external=true" title="class or interface in java.awt" class="externalLink">Rectangle</a>&nbsp;region)</code></th>
@@ -406,7 +467,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  has been enabled.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawRotatedTitle(java.awt.Graphics2D,java.lang.String,java.awt.Rectangle,java.awt.Font,float,int,int)">drawRotatedTitle</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt" class="externalLink">Graphics2D</a>&nbsp;g,
                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
@@ -419,7 +480,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Draws text within a region.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#drawTitle(java.awt.Graphics2D,java.lang.String,java.awt.Rectangle,java.awt.Font,float,int)">drawTitle</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt" class="externalLink">Graphics2D</a>&nbsp;g,
          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
@@ -431,7 +492,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Draws text within a region.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fitTitle(java.awt.Graphics2D,java.lang.String,java.awt.Rectangle,java.awt.Font,float,int)">fitTitle</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt" class="externalLink">Graphics2D</a>&nbsp;g,
         <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
@@ -444,7 +505,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  be scaled down to fit.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#freeCachedResources()">freeCachedResources</a></span>()</code></th>
 <td class="colLast">
@@ -452,15 +513,23 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  other purposes.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBleedMargin()">getBleedMargin</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the size of the margin around the component edge that should be
- cropped off, measured in points.</div>
+<div class="block">Returns the size of the <em>designed</em> bleed margin included on each
+ edge of the component, in points.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i17" class="rowColor">
+<td class="colFirst"><code>double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCornerRadius()">getCornerRadius</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Returns the radius that should be used to round the corners of the
+ component, measured in points.</div>
+</td>
+</tr>
+<tr id="i18" class="altColor">
 <td class="colFirst"><code><a href="Sheet.DeckSnappingHint.html" title="enum in ca.cgjennings.apps.arkham.sheet">Sheet.DeckSnappingHint</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDeckSnappingHint()">getDeckSnappingHint</a></span>()</code></th>
 <td class="colLast">
@@ -468,7 +537,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  deck.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDestinationBuffer()">getDestinationBuffer</a></span>()</code></th>
 <td class="colLast">
@@ -476,7 +545,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink"><code>BufferedImage</code></a> object.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getExpansionSymbol(gamedata.Expansion,java.lang.String,int)">getExpansionSymbol</a></span>&#8203;(<a href="../../../../../gamedata/Expansion.html" title="class in gamedata">Expansion</a>&nbsp;expansion,
                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;booleanOrIntegerVariant,
@@ -485,7 +554,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Returns the symbol to be painted on cards for an expansion.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getExpansionSymbolKey()">getExpansionSymbolKey</a></span>()</code></th>
 <td class="colLast">
@@ -493,7 +562,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  expansion painting mechanism.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>double[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFoldMarks()">getFoldMarks</a></span>()</code></th>
 <td class="colLast">
@@ -501,14 +570,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  on this face when it is placed in a deck.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code><a href="Sheet.html" title="type parameter in Sheet">G</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getGameComponent()">getGameComponent</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the game component that this sheet was created for.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code><a href="MarkerStyle.html" title="enum in ca.cgjennings.apps.arkham.sheet">MarkerStyle</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMarkerStyle()">getMarkerStyle</a></span>()</code></th>
 <td class="colLast">
@@ -516,22 +585,31 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  the marker.</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPaintingResolution()">getPaintingResolution</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the resolution that the sheet is being painted at, in pixels per
- inch.</div>
+ inch.If called when the sheet is not being painted, returns the value
+ that was active during the last paint request.</div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code><a href="PrintDimensions.html" title="class in ca.cgjennings.apps.arkham.sheet">PrintDimensions</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPrintDimensions()">getPrintDimensions</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Return the printed size of the sheet, measured in points.</div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i27" class="rowColor">
+<td class="colFirst"><code>double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRenderedBleedMargin()">getRenderedBleedMargin</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Returns the actual bleed margin width that will be rendered for this
+ sheet.</div>
+</td>
+</tr>
+<tr id="i28" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getScalingFactor()">getScalingFactor</a></span>()</code></th>
 <td class="colLast">
@@ -539,7 +617,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  the sheet is being painted at to the template resolution.</div>
 </td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i29" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSuggestedUpsampleFactor()">getSuggestedUpsampleFactor</a></span>()</code></th>
 <td class="colLast">
@@ -547,22 +625,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  onscreen.</div>
 </td>
 </tr>
-<tr id="i24" class="altColor">
-<td class="colFirst"><code>double</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSyntheticBleedMargin()">getSyntheticBleedMargin</a></span>()</code></th>
-<td class="colLast">
-<div class="block">Returns the size of the synthetic bleed margin produced by this sheet, in
- points.</div>
-</td>
-</tr>
-<tr id="i25" class="rowColor">
+<tr id="i30" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTemplateHeight()">getTemplateHeight</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the height of the template image used by this sheet.</div>
 </td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i31" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTemplateImage()">getTemplateImage</a></span>()</code></th>
 <td class="colLast">
@@ -571,14 +641,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <a href="#replaceTemplateImage(java.awt.image.BufferedImage)"><code>replaceTemplateImage(java.awt.image.BufferedImage)</code></a>.</div>
 </td>
 </tr>
-<tr id="i27" class="rowColor">
+<tr id="i32" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTemplateKey()">getTemplateKey</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the setting key that defines the template image for this face.</div>
 </td>
 </tr>
-<tr id="i28" class="altColor">
+<tr id="i33" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTemplateResolution()">getTemplateResolution</a></span>()</code></th>
 <td class="colLast">
@@ -586,22 +656,28 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  (ppi).</div>
 </td>
 </tr>
-<tr id="i29" class="rowColor">
+<tr id="i34" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTemplateWidth()">getTemplateWidth</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the width of the template image used by this sheet.</div>
 </td>
 </tr>
-<tr id="i30" class="altColor">
+<tr id="i35" class="rowColor">
+<td class="colFirst"><code>double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUserBleedMargin()">getUserBleedMargin</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Returns the ideal bleed margin for this sheet, in points.</div>
+</td>
+</tr>
+<tr id="i36" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasChanged()">hasChanged</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the sheet is currently marked as out of
- date.</div>
+<div class="block">Returns <code>true</code> if the sheet is currently marked as out of date.</div>
 </td>
 </tr>
-<tr id="i31" class="rowColor">
+<tr id="i37" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasCropMarks()">hasCropMarks</a></span>()</code></th>
 <td class="colLast">
@@ -609,15 +685,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  added when printed or placed in a deck.</div>
 </td>
 </tr>
-<tr id="i32" class="altColor">
+<tr id="i38" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasFoldMarks()">hasFoldMarks</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this sheet should have special fold marks
- added when printed.</div>
+<div class="block">Returns <code>true</code> if this sheet should have special fold marks added
+ when printed.When this returns <code>true</code> one or more fold marks will
+ be shown at locations determined by <a href="#getFoldMarks()"><code>getFoldMarks()</code></a>.</div>
 </td>
 </tr>
-<tr id="i33" class="rowColor">
+<tr id="i39" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#initializeTemplate(java.lang.String)">initializeTemplate</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;templateKey)</code></th>
 <td class="colLast">
@@ -625,7 +702,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  location, and upsample rate from a base key name.</div>
 </td>
 </tr>
-<tr id="i34" class="altColor">
+<tr id="i40" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#initializeTemplate(java.lang.String,java.awt.image.BufferedImage,java.lang.String,double,double)">initializeTemplate</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;pseudoKey,
                   <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;template,
@@ -636,43 +713,50 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Initializes the sheet from raw values instead of from settings.</div>
 </td>
 </tr>
-<tr id="i35" class="rowColor">
+<tr id="i41" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isCachedTemporaryImageInvalid()">isCachedTemporaryImageInvalid</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns a hint value to help manage partial rendering caches.</div>
 </td>
 </tr>
-<tr id="i36" class="altColor">
+<tr id="i42" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isMarginSynthesisAllowed()">isMarginSynthesisAllowed</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Returns whether the sheet is allowed to synthesize a bleed margin when
+ the designed margin is less than the user-requested margin.</div>
+</td>
+</tr>
+<tr id="i43" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isPrototypeRenderingModeEnabled()">isPrototypeRenderingModeEnabled</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns whether prototype rendering mode is enabled.</div>
 </td>
 </tr>
-<tr id="i37" class="rowColor">
+<tr id="i44" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isTransparent()">isTransparent</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns <code>true</code> if the sheets for this card are transparent.</div>
 </td>
 </tr>
-<tr id="i38" class="altColor">
+<tr id="i45" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isVariableSize()">isVariableSize</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the sheets created by this card can vary in
- size.</div>
+<div class="block">Returns <code>true</code> if the sheets created by this card can vary in size.</div>
 </td>
 </tr>
-<tr id="i39" class="rowColor">
+<tr id="i46" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#markChanged()">markChanged</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Marks this face as out of date.</div>
 </td>
 </tr>
-<tr id="i40" class="altColor">
+<tr id="i47" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#paint(ca.cgjennings.apps.arkham.sheet.RenderTarget,double)">paint</a></span>&#8203;(<a href="RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target,
      double&nbsp;resolution)</code></th>
@@ -680,24 +764,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Returns an image of the sheet content.</div>
 </td>
 </tr>
-<tr id="i41" class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#paint(ca.cgjennings.apps.arkham.sheet.RenderTarget,double,boolean)">paint</a></span>&#8203;(<a href="RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target,
-     double&nbsp;resolution,
-     boolean&nbsp;synthesizeBleedMargin)</code></th>
-<td class="colLast">
-<div class="block">Returns an image of the sheet content as it should appear when printed or
- exported.</div>
-</td>
-</tr>
-<tr id="i42" class="altColor">
+<tr id="i48" class="altColor">
 <td class="colFirst"><code>protected abstract void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#paintSheet(ca.cgjennings.apps.arkham.sheet.RenderTarget)">paintSheet</a></span>&#8203;(<a href="RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target)</code></th>
 <td class="colLast">
 <div class="block">Paints the content of this sheet.</div>
 </td>
 </tr>
-<tr id="i43" class="rowColor">
+<tr id="i49" class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../gamedata/Expansion.html" title="class in gamedata">Expansion</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#parseExpansionList(java.lang.String)">parseExpansionList</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;settingValue)</code></th>
 <td class="colLast">
@@ -706,14 +780,22 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  array of the expansions represented by the codes.</div>
 </td>
 </tr>
-<tr id="i44" class="altColor">
+<tr id="i50" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#replaceTemplateImage(java.awt.image.BufferedImage)">replaceTemplateImage</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;newTemplate)</code></th>
 <td class="colLast">
 <div class="block">Replaces the template image for the sheet.</div>
 </td>
 </tr>
-<tr id="i45" class="rowColor">
+<tr id="i51" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCornerRadius(double)">setCornerRadius</a></span>&#8203;(double&nbsp;radiusInPoints)</code></th>
+<td class="colLast">
+<div class="block">Sets the corner radius used to round corners of the component, measured
+ in points.</div>
+</td>
+</tr>
+<tr id="i52" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setExpansionSymbolKey(java.lang.String)">setExpansionSymbolKey</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;expsymKey)</code></th>
 <td class="colLast">
@@ -721,7 +803,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  expansion symbol painting mechanism.</div>
 </td>
 </tr>
-<tr id="i46" class="altColor">
+<tr id="i53" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setNamesForRenderer(ca.cgjennings.layout.MarkupRenderer,java.lang.String,java.lang.String,java.lang.String)">setNamesForRenderer</a></span>&#8203;(<a href="../../../layout/MarkupRenderer.html" title="class in ca.cgjennings.layout">MarkupRenderer</a>&nbsp;r,
                    <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;first,
@@ -729,25 +811,22 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                    <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;fullname)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i47" class="rowColor">
+<tr id="i54" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPrototypeRenderingModeEnabled(boolean)">setPrototypeRenderingModeEnabled</a></span>&#8203;(boolean&nbsp;prototype)</code></th>
 <td class="colLast">
-<div class="block">Sets whether the sheet is rendered in prototype mode, with a white background
- and only text and shapes (no images).</div>
+<div class="block">Sets whether the sheet is rendered in prototype mode, with a white
+ background and only text and shapes (no images).</div>
 </td>
 </tr>
-<tr id="i48" class="altColor">
-<td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#synthesizeBleedMargin(java.awt.image.BufferedImage,boolean,double)">synthesizeBleedMargin</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;sheetImage,
-                     boolean&nbsp;synthesize,
-                     double&nbsp;resolution)</code></th>
+<tr id="i55" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setUserBleedMargin(double)">setUserBleedMargin</a></span>&#8203;(double&nbsp;marginInPoints)</code></th>
 <td class="colLast">
-<div class="block">Generates a simulated bleed margin for components that do not provide
- one.</div>
+<div class="block">Sets the ideal bleed margin for this sheet, in points.</div>
 </td>
 </tr>
-<tr id="i49" class="rowColor">
+<tr id="i56" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toString()">toString</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
@@ -789,12 +868,38 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  that key will be executed as script code and then the function with this
  name ("onPaint") will be called. The function is passed a graphics
  context for the sheet image buffer, a reference to the game component,
- and a reference to this sheet. Plug-ins can use this to produce special
- effects or to customize existing component types.</div>
+ and a reference to this sheet.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../constant-values.html#ca.cgjennings.apps.arkham.sheet.Sheet.ON_PAINT_EVENT_METHOD">Constant Field Values</a></dd>
 </dl>
+</li>
+</ul>
+<a id="DEBUG_BLEED_MARGIN">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEBUG_BLEED_MARGIN</h4>
+<pre>public static&nbsp;boolean DEBUG_BLEED_MARGIN</pre>
+</li>
+</ul>
+<a id="DEBUG_UNSAFE_AREA">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEBUG_UNSAFE_AREA</h4>
+<pre>public static&nbsp;boolean DEBUG_UNSAFE_AREA</pre>
+</li>
+</ul>
+<a id="DEBUG_PORTRAIT_REGION">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>DEBUG_PORTRAIT_REGION</h4>
+<pre>public static&nbsp;boolean DEBUG_PORTRAIT_REGION</pre>
 </li>
 </ul>
 <a id="ALIGN_LEFT">
@@ -962,8 +1067,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public&nbsp;Sheet&#8203;(<a href="Sheet.html" title="type parameter in Sheet">G</a>&nbsp;gameComponent,
              <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;templateKey)</pre>
 <div class="block">Creates a component face for a game component that will use a template
- image defined by the value of the <code>templateKey</code> setting. Note
- that the sheet is not required to actually use the template image. For
+ image defined by the value of the <code>templateKey</code> setting. Note that
+ the sheet is not required to actually use the template image. For
  example, the actual template image that gets drawn may be selected from
  one of several different images depending on settings in the associated
  game component.</div>
@@ -1003,19 +1108,21 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <li> The <a href="../../../../../resources/Settings.html" title="class in resources"><code>Settings</code></a> of the game component associated with this
  sheet are fetched to look up the keys below.
  <li> The template image is loaded using <i>templateKey</i>.
- <li> If <i>templateKey</i> ends with <code>-template</code>, this is
- removed.
+ <li> If <i>templateKey</i> ends with <code>-template</code>, this is removed.
  <li> The default region for drawing expansion symbols, if any, is read
- from <code>&lt;i&gt;templateKey&lt;/i&gt;-expsym</code>.
+ from <i>templateKey</i><code>-expsym</code>.
  <li> The template image resolution, in pixels per inch, is read from
- <code>&lt;i&gt;templateKey&lt;/i&gt;-ppi</code>; if undefined, the default is 150
- ppi. (The suffix <code>-dpi</code> can also be used.)
+ <i>templateKey</i>@code -ppi}; if undefined, the default is 150 ppi. (The
+ suffix <code>-dpi</code> can also be used.)
  <li> The preferred display upsample factor is read from
- <code>&lt;i&gt;templateKey&lt;/i&gt;-upsample</code>; if undefined, the default is 1;
- this is multiplied by the template resolution to determine the default
+ <i>templateKey</i><code>-upsample</code>; if undefined, the default is 1; this
+ is multiplied by the template resolution to determine the default
  resolution for rendering. The default resolution is used by the preview
  window; components with extremely small text can be made more legible by
  increasing this value.
+ <li> The initial corner radius is set from
+ <i>templateKey</i><code>-corner-radius</code>; if undefined the default is 0.
+ See also <a href="#getBleedMargin()"><code>getBleedMargin()</code></a>.
  </ol></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -1064,8 +1171,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getMarkerStyle</h4>
 <pre class="methodSignature">public&nbsp;<a href="MarkerStyle.html" title="enum in ca.cgjennings.apps.arkham.sheet">MarkerStyle</a>&nbsp;getMarkerStyle()</pre>
 <div class="block">If this sheet represents an embedded marker, returns the layout style of
- the marker. For regular sheets, this method returns <code>null</code>.
- (The base class returns <code>null</code>.)</div>
+ the marker. For regular sheets, this method returns <code>null</code>. (The
+ base class returns <code>null</code>.)</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the token style of the embedded token, or <code>null</code> for
@@ -1080,8 +1187,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>setPrototypeRenderingModeEnabled</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setPrototypeRenderingModeEnabled&#8203;(boolean&nbsp;prototype)</pre>
-<div class="block">Sets whether the sheet is rendered in prototype mode, with a white background
- and only text and shapes (no images).</div>
+<div class="block">Sets whether the sheet is rendered in prototype mode, with a white
+ background and only text and shapes (no images). This feature is called
+ "ink saver" in the UI.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>prototype</code> - true if prototype mode should be enabled</dd>
@@ -1095,7 +1203,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isPrototypeRenderingModeEnabled</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isPrototypeRenderingModeEnabled()</pre>
-<div class="block">Returns whether prototype rendering mode is enabled.</div>
+<div class="block">Returns whether prototype rendering mode is enabled. This feature is
+ called "ink saver" in the UI.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>true if prototype rendering is enabled</dd>
@@ -1113,8 +1222,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Returns an image of the sheet content. The caller must not modify the
  contents of the returned image, as the image may be reused to speed up
  subsequent paint requests. (If you need to modify the returned image,
- make a copy first and modify the copy; see
- <a href="../../../graphics/ImageUtilities.html#copy(java.awt.image.BufferedImage)"><code>ImageUtilities.copy(java.awt.image.BufferedImage)</code></a>.)
+ <a href="../../../graphics/ImageUtilities.html#copy(java.awt.image.BufferedImage)">use a copy</a>.)
 
  <p>
  If the sheet needs to be redrawn to satisfy the request, this method will
@@ -1122,11 +1230,6 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  component-specific content. It will then execute the game component's on
  paint event handler (<a href="../plugins/ScriptMonkey.html#ON_PAINT_EVENT_KEY"><code>ScriptMonkey.ON_PAINT_EVENT_KEY</code></a>), if any,
  and perform default expansion symbol drawing before returning the image.
-
- <p>
- The target is a hint to the sheet as to how the result will be used.
- Several methods in this class will take advantage of this hint
- automatically, and it is also passed to <a href="#paintSheet(ca.cgjennings.apps.arkham.sheet.RenderTarget)"><code>paintSheet(ca.cgjennings.apps.arkham.sheet.RenderTarget)</code></a>.
 
  <p>
  The resolution parameter determines the resolution of the result, in
@@ -1153,46 +1256,143 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
-<a id="paint(ca.cgjennings.apps.arkham.sheet.RenderTarget,double,boolean)">
+<a id="applyFinishingOptions(java.awt.image.BufferedImage,ca.cgjennings.apps.arkham.sheet.RenderTarget,double)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>paint</h4>
-<pre class="methodSignature">public final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;paint&#8203;(<a href="RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target,
-                                 double&nbsp;resolution,
-                                 boolean&nbsp;synthesizeBleedMargin)</pre>
-<div class="block">Returns an image of the sheet content as it should appear when printed or
- exported. If the component has a designed bleed margin (that is, if
- <a href="#getBleedMargin()"><code>getBleedMargin()</code></a> returns a positive value), then this is
- equivalent to <code>paint( target, resolution )</code>. Otherwise, the
- image returned by that method will be passed to
- <a href="#synthesizeBleedMargin(java.awt.image.BufferedImage,boolean,double)"><code>synthesizeBleedMargin(java.awt.image.BufferedImage, boolean, double)</code></a>
- as a starting image, and the sheet will be given the opportunity to
- modify the base image, or not, with a synthetic bleed margin. Note that
- the method is called even if the parameter
- <code>synthesizeBleedMargin</code> is <code>false</code>; some sheet
- implementations may choose to decorate the image when a bleed margin is
- not requested, for example, by adding rounded corners.</div>
+<h4>applyFinishingOptions</h4>
+<pre class="methodSignature">protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;applyFinishingOptions&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;sheetImage,
+                                              <a href="RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target,
+                                              double&nbsp;resolution)</pre>
+<div class="block">Applies finishing options such as bleed margin adjustment and corner cuts
+ to a painted sheet.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>target</code> - the target hint to use for painting</dd>
-<dd><code>resolution</code> - the resolution of the returned image, or -1 for the
- sheet's default resolution</dd>
+<dd><code>sheetImage</code> - a rendered sheet image</dd>
+<dd><code>target</code> - a target describing the general quality and purpose</dd>
+<dd><code>resolution</code> - the desired image resolution, in pixels per inch</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>an image representing the content of the component face
- represented by this sheet</dd>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if target is <code>null</code></dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if the resolution is less than 1 but not
- the special default value (-1)</dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ConcurrentModificationException.html?is-external=true" title="class or interface in java.util" class="externalLink">ConcurrentModificationException</a></code> - if the sheet is already being
- painted</dd>
-<dt><span class="simpleTagLabel">Since:</span></dt>
-<dd>3.0.3680</dd>
+<dd>the original image, or a new image that has been modified to
+ apply the selected finishing options</dd>
+</dl>
+</li>
+</ul>
+<a id="allowTemplateUseInBleedSynthesis()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>allowTemplateUseInBleedSynthesis</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;allowTemplateUseInBleedSynthesis()</pre>
+<div class="block">Calling this method sets an internal flag allowing the template image to
+ be used for bleed margin synthesis. This can improve the quality of the
+ synthesized margin since the synthesized material will not include text
+ and other painted content. However, some card designs modify the template
+ on the fly: for example, with tinting or by substituting different
+ graphics based on a user selection. Since this would result in a
+ glaringly wrong bleed margin and Strange Eons cannot know if this may
+ occur, it will not use the template unless explicitly told that this is
+ safe by calling this method.</div>
+</li>
+</ul>
+<a id="isMarginSynthesisAllowed()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isMarginSynthesisAllowed</h4>
+<pre class="methodSignature">public&nbsp;boolean&nbsp;isMarginSynthesisAllowed()</pre>
+<div class="block">Returns whether the sheet is allowed to synthesize a bleed margin when
+ the designed margin is less than the user-requested margin. The base
+ class returns true.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if the sheet can synthesize a missing bleed margin</dd>
+</dl>
+</li>
+</ul>
+<a id="setUserBleedMargin(double)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setUserBleedMargin</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setUserBleedMargin&#8203;(double&nbsp;marginInPoints)</pre>
+<div class="block">Sets the ideal bleed margin for this sheet, in points. The possible
+ values and their effects are:
+
+ <table>
+ <tr><th><code>marginInPoints</code> <th>Effect</tr>
+ <tr><td><code>&gt;  0</code> <td>Include a bleed margin of this width. If the
+ designed bleed margin is too small, missing content will be synthesized
+ using a simple algorithm. If the designed bleed margin is larger, the
+ extra material will be cropped off.</tr>
+ <tr><td><code>=  0</code> <td>Do not include a bleed margin. If there is a
+ designed bleed margin, it will be cropped off.</tr>
+ <tr><td><code>= -1</code> <td>Do not include a bleed margin. If the sheet has
+ a positive corner radius, the final sheet image will "cut" the card
+ corners.
+ </table>
+
+ <p>
+ The sheet will attempt to honour the requested margin. Values of 0 and -1
+ are always rendered exactly. In some cases where the requested size is
+ larger than the designed bleed margin, it is not possible to synthesize a
+ reasonable bleed margin. In such cases, the actual bleed margin will be
+ limited to the designed bleed margin width. The true margin width can be
+ obtained by calling <a href="#getRenderedBleedMargin()"><code>getRenderedBleedMargin()</code></a>.
+
+ <p>
+ The recommended standard margin is 9 points, as this is compatible with
+ virtually all commercial printers.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>marginInPoints</code> - the target bleed margin in points, or -1 to inset
+ the card edges to the boundary described by the corner radius</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="#paintSheet(ca.cgjennings.apps.arkham.sheet.RenderTarget)"><code>paintSheet(ca.cgjennings.apps.arkham.sheet.RenderTarget)</code></a>, 
-<a href="#applyContextHints(java.awt.Graphics2D)"><code>applyContextHints(java.awt.Graphics2D)</code></a></dd>
+<dd><a href="#getRenderedBleedMargin()"><code>getRenderedBleedMargin()</code></a>, 
+<a href="#getBleedMargin()"><code>getBleedMargin()</code></a>, 
+<a href="#getCornerRadius()"><code>getCornerRadius()</code></a>, 
+<a href="#getUserBleedMargin()"><code>getUserBleedMargin()</code></a></dd>
+</dl>
+</li>
+</ul>
+<a id="getUserBleedMargin()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getUserBleedMargin</h4>
+<pre class="methodSignature">public&nbsp;double&nbsp;getUserBleedMargin()</pre>
+<div class="block">Returns the ideal bleed margin for this sheet, in points. Refer to
+ <a href="#setUserBleedMargin(double)"><code>setUserBleedMargin(double)</code></a> for a description of the possible
+ return values and their implications.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the ideal bleed margin, or -1 for a 0 bleed margin with cut
+ corners</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="#setUserBleedMargin(double)"><code>setUserBleedMargin(double)</code></a></dd>
+</dl>
+</li>
+</ul>
+<a id="getRenderedBleedMargin()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRenderedBleedMargin</h4>
+<pre class="methodSignature">public&nbsp;double&nbsp;getRenderedBleedMargin()</pre>
+<div class="block">Returns the actual bleed margin width that will be rendered for this
+ sheet. This may be less than the user bleed margin. The returned value is
+ always a physical width; if the user margin is negative, this will return
+ zero.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a non-negative width in points</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="#setUserBleedMargin(double)"><code>setUserBleedMargin(double)</code></a></dd>
 </dl>
 </li>
 </ul>
@@ -1215,12 +1415,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>hasChanged</h4>
 <pre class="methodSignature">public final&nbsp;boolean&nbsp;hasChanged()</pre>
-<div class="block">Returns <code>true</code> if the sheet is currently marked as out of
- date.</div>
+<div class="block">Returns <code>true</code> if the sheet is currently marked as out of date.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the <a href="#markChanged()"><code>markChanged()</code></a> has been called
- since the last time the card was drawn</dd>
+<dd><code>true</code> if the <a href="#markChanged()"><code>markChanged()</code></a> has been called since
+ the last time the card was drawn</dd>
 </dl>
 </li>
 </ul>
@@ -1245,8 +1444,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isTransparent</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isTransparent()</pre>
-<div class="block">Returns <code>true</code> if the sheets for this card are transparent.
- The base class returns <code>false</code>; subclasses that want to create
+<div class="block">Returns <code>true</code> if the sheets for this card are transparent. The
+ base class returns <code>false</code>; subclasses that want to create
  non-rectangular card faces must override this method. When this method
  returns <code>true</code>, the framework guarantees the following:
  <ol>
@@ -1269,9 +1468,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isVariableSize</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isVariableSize()</pre>
-<div class="block">Returns <code>true</code> if the sheets created by this card can vary in
- size. Subclasses that wish to create variably-sized sheets must override
- this method to return <code>true</code>.
+<div class="block">Returns <code>true</code> if the sheets created by this card can vary in size.
+ Subclasses that wish to create variably-sized sheets must override this
+ method to return <code>true</code>.
 
  <p>
  Typically a variably-sized sheet is also transparent. When this is the
@@ -1332,8 +1531,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getDeckSnappingHint</h4>
 <pre class="methodSignature">public&nbsp;<a href="Sheet.DeckSnappingHint.html" title="enum in ca.cgjennings.apps.arkham.sheet">Sheet.DeckSnappingHint</a>&nbsp;getDeckSnappingHint()</pre>
 <div class="block">Returns a hint describing how this sheet should behave when snapped in a
- deck. The default is <code>CARD</code>, meaning that the sheet behaves
- like one face of a playing card.</div>
+ deck. The default is <code>CARD</code>, meaning that the sheet behaves like
+ one face of a playing card.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a hint describing the default behaviour of this face when it is
@@ -1348,14 +1547,46 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getBleedMargin</h4>
 <pre class="methodSignature">public&nbsp;double&nbsp;getBleedMargin()</pre>
-<div class="block">Returns the size of the margin around the component edge that should be
+<div class="block">Returns the size of the <em>designed</em> bleed margin included on each
+ edge of the component, in points. A
+ <a href="http://se3docs.cgjennings.ca/um-deck-pubmarks.html#bleed-margins">bleed
+ margin</a>
+ adds extra content to the edges of the component to allow for imperfect
+ cuts when cutting the component from a larger sheet of paper. By
+ returning a positive value, you indicate that your design already
+ includes a bleed margin of the specified size. (Usually, the graphics for
+ a designed bleed margin are built into the template image.)
+
+ <p>
+ By default, this method returns 0, meaning that the design includes no
+ margin. When the designed margin is 0, or if its size if too small,
+ Strange Eons will attempt to synthesize bleed margin graphics, with
+ results of varying quality.
+
+ <p>
+ Strange Eons will not synthesize a bleed margin for transparent sheet
+ images. (That is, if <a href="#isTransparent()"><code>isTransparent()</code></a> is true.)
+
+ <p>
+
+ content as part o
+
+
+ Returning a positive value * indicates that your component graphics
+ include
+
+
+
+
+
+ Returns the size of the margin around the component edge that should be
  cropped off, measured in points. (The bleed margin will be the same on
  all sides.) This allows you to create components with an extra margin
  that allows for slight misalignment when cutting. The height of the card
  after cutting will be the height of the card produced by the sheet, less
  twice this margin. Likewise for the width. If <a href="#hasCropMarks()"><code>hasCropMarks()</code></a>
- returns <code>true</code>, then the automatic crop marks will be moved
- toward the inside of this card by an amount equal to the bleed margin.
+ returns <code>true</code>, then the automatic crop marks will be moved toward
+ the inside of this card by an amount equal to the bleed margin.
  <p>
  In the example below, the actual card to be cut and kept is indicated by
  the blank area, while the X'd area indicates the bleed margin. Card
@@ -1380,12 +1611,48 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  </pre>
 
  <p>
- The base class defines a margin of 0.</div>
+ The base class looks up the setting
+ <i>templateKey</i><code>-bleed-margin</code> to determine the bleed margin,
+ defaulting to 0 if none is defined.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the size of the bleed margin, in points (1 point = 1/72 inch)</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#hasCropMarks()"><code>hasCropMarks()</code></a></dd>
+</dl>
+</li>
+</ul>
+<a id="getCornerRadius()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCornerRadius</h4>
+<pre class="methodSignature">public&nbsp;double&nbsp;getCornerRadius()</pre>
+<div class="block">Returns the radius that should be used to round the corners of the
+ component, measured in points. This allows you to specify how the corners
+ of the component will be rounded when the trimmed edge style is selected.
+ The default is a radius of 0, meaning there is no rounding.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the size of the corner radius, in points (1 point = 1/72 inch)</dd>
+</dl>
+</li>
+</ul>
+<a id="setCornerRadius(double)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setCornerRadius</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setCornerRadius&#8203;(double&nbsp;radiusInPoints)</pre>
+<div class="block">Sets the corner radius used to round corners of the component, measured
+ in points. Subclasses can use this instead of overriding
+ <a href="#getCornerRadius()"><code>getCornerRadius()</code></a> and design tools can use this to help
+ developers find the right radius for their design.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>radiusInPoints</code> - the new, non-negative radius to set</dd>
 </dl>
 </li>
 </ul>
@@ -1398,13 +1665,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public&nbsp;boolean&nbsp;hasCropMarks()</pre>
 <div class="block">Returns true if this sheet should have automatic crop and fold marks
  added when printed or placed in a deck. If this method returns
- <code>true</code>, then crop marks will be created automatically around
- the edges of the face; the bleed margin of these marks is determined by
- <a href="#getBleedMargin()"><code>getBleedMargin()</code></a>. In certain circumstances, some of these crop
- marks will be converted automatically into fold marks. Typically, this
- happens when the front and back face of a card are snapped next to each
- other such that folding along the line indicated by the crop mark would
- produce a complete two-sided card.
+ <code>true</code>, then crop marks will be created automatically around the
+ edges of the face; the bleed margin of these marks is determined by
+ <a href="#getRenderedBleedMargin()"><code>getRenderedBleedMargin()</code></a>. In certain circumstances, some of
+ these crop marks will be converted automatically into fold marks.
+ Typically, this happens when the front and back face of a card are
+ snapped next to each other such that folding along the line indicated by
+ the crop mark would produce a complete two-sided card.
 
  <p>
  The base class implementation returns <code>true</code>.</div>
@@ -1421,11 +1688,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>hasFoldMarks</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;hasFoldMarks()</pre>
-<div class="block">Returns <code>true</code> if this sheet should have special fold marks
- added when printed. When this returns <code>true</code>, one or more fold
- marks will be shown at locations determined by <a href="#getFoldMarks()"><code>getFoldMarks()</code></a>.
- This can be used to produce complex 3D components that require assembly
- before use.
+<div class="block">Returns <code>true</code> if this sheet should have special fold marks added
+ when printed.When this returns <code>true</code> one or more fold marks will
+ be shown at locations determined by <a href="#getFoldMarks()"><code>getFoldMarks()</code></a>. This can be
+ used to produce complex 3D components that require assembly before use.
 
  <p>
  Note that the fold marks produced by this method are completely
@@ -1434,6 +1700,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 
  <p>
  The base class returns <code>false</code>.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if <a href="#getFoldMarks()"><code>getFoldMarks()</code></a> should be consulted for the
+ location of special fold marks</dd>
+</dl>
 </li>
 </ul>
 <a id="getFoldMarks()">
@@ -1445,16 +1716,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public&nbsp;double[]&nbsp;getFoldMarks()</pre>
 <div class="block">Returns an array that describes the extra fold marks that should appear
  on this face when it is placed in a deck. This method is only called if
- <a href="#hasFoldMarks()"><code>hasFoldMarks()</code></a> returns <code>true</code>. It should return an
- array of double values. Each fold mark to be added by the deck is
- described by a sequence of four doubles in the array. The first pair is
- the location of a start point for the fold mark (in x, y order). The
- location is relative to the width and height of the face, so for example
- the pair (0.5, 0) would start a fold mark in the center of the top edge.
- The second pair is a unit vector that describes the direction that the
- fold mark should extend from the start point. (Recall that a unit vector
- is a vector of length one, that is, sqrt(x<sup>2</sup>+y<sup>2</sup>) ==
- 1.)
+ <a href="#hasFoldMarks()"><code>hasFoldMarks()</code></a> returns <code>true</code>. It should return an array of
+ double values. Each fold mark to be added by the deck is described by a
+ sequence of four doubles in the array. The first pair is the location of
+ a start point for the fold mark (in x, y order). The location is relative
+ to the width and height of the face, so for example the pair (0.5, 0)
+ would start a fold mark in the center of the top edge. The second pair is
+ a unit vector that describes the direction that the fold mark should
+ extend from the start point. (Recall that a unit vector is a vector of
+ length one, that is, sqrt(x<sup>2</sup>+y<sup>2</sup>) == 1.)
  <p>
  Fold marks typically come in pairs, one on each side of the face. For
  example, the following fold mark array would indicate the face should be
@@ -1478,7 +1748,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getPrintDimensions</h4>
 <pre class="methodSignature">public&nbsp;<a href="PrintDimensions.html" title="class in ca.cgjennings.apps.arkham.sheet">PrintDimensions</a>&nbsp;getPrintDimensions()</pre>
-<div class="block">Return the printed size of the sheet, measured in points.</div>
+<div class="block">Return the printed size of the sheet, measured in points. The returned
+ size will account for the current bleed margin settings.
+
+ <p>
+ The base class implementation is only valid for fixed-size sheets.
+ Variable-sized sheets must override this method to return the correct
+ size.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the dimensions of the bounding rectangle of this sheet when
@@ -1618,8 +1894,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getPaintingResolution</h4>
 <pre class="methodSignature">public final&nbsp;double&nbsp;getPaintingResolution()</pre>
 <div class="block">Returns the resolution that the sheet is being painted at, in pixels per
- inch. If called when the sheet is not being painted, returns the value
+ inch.If called when the sheet is not being painted, returns the value
  that was active during the last paint request.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the current or most recently used resolution, in pixels per inch</dd>
+</dl>
 </li>
 </ul>
 <a id="getSuggestedUpsampleFactor()">
@@ -1653,8 +1933,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Creates a graphics context that can be used to draw this sheet. The
  context will be scaled for the current resolution and set up
  appropriately for the current rendering target. This is a convenience
- method equivalent to calling
- <code>createGraphics( null, true, true )</code>.
+ method equivalent to calling <code>createGraphics( null, true, true )</code>.
 
  <p>
  <b>Safe only when painting</b></div>
@@ -1674,33 +1953,33 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                                  boolean&nbsp;scaleForResolution,
                                  boolean&nbsp;applyHints)</pre>
 <div class="block">This method creates a graphics context for drawing sheet graphics. If the
- <code>bufferSource</code> is <code>null</code>, then the returned
- graphics context will draw to this sheet's internal sheet image buffer.
- Alternatively, passing in a <code>BufferedImage</code> of your choice
- will create a graphics context for that image as if by calling
- <code>bufferSource.createGraphics()</code>, and then apply scaling and
- hints as described below. This allows you to create intermediate images
- as part of the rendering process.
+ <code>bufferSource</code> is <code>null</code>, then the returned graphics context
+ will draw to this sheet's internal sheet image buffer. Alternatively,
+ passing in a <code>BufferedImage</code> of your choice will create a graphics
+ context for that image as if by calling
+ <code>bufferSource.createGraphics()</code>, and then apply scaling and hints
+ as described below. This allows you to create intermediate images as part
+ of the rendering process.
 
  <p>
- If <code>scaleForResolution</code> is <code>true</code>, the graphics
- context will be scaled so that 1 unit in the context is equal to 1 pixel
- in the template image. This assumes that the passed-in image has been
- scaled according to the upsample factor. (The internal sheet image buffer
- is always correctly scaled, as will an image obtained by calling
+ If <code>scaleForResolution</code> is <code>true</code>, the graphics context will
+ be scaled so that 1 unit in the context is equal to 1 pixel in the
+ template image. This assumes that the passed-in image has been scaled
+ according to the upsample factor. (The internal sheet image buffer is
+ always correctly scaled, as will an image obtained by calling
  <a href="#createTemporaryImage(int,int,boolean)"><code>createTemporaryImage(int, int, boolean)</code></a>.) If the context is not
  scaled now, it can be scaled later by calling <a href="#applyContextScale(java.awt.Graphics2D)"><code>applyContextScale(java.awt.Graphics2D)</code></a>.
 
  <p>
- If <code>applyHints</code> is <code>true</code>, then the graphics
- context's rendering settings will be initialized for the active target as
- if by calling <a href="#applyContextHints(java.awt.Graphics2D)"><code>applyContextHints(java.awt.Graphics2D)</code></a>.
+ If <code>applyHints</code> is <code>true</code>, then the graphics context's
+ rendering settings will be initialized for the active target as if by
+ calling <a href="#applyContextHints(java.awt.Graphics2D)"><code>applyContextHints(java.awt.Graphics2D)</code></a>.
 
  <p>
  The caller is responsible for disposing of the returned graphics context.
  To ensure that the context is always disposed of properly, the drawing
- code should be placed in a <code>try</code> block, and
- <code>dispose()</code> called in the <code>finally</code> clause, e.g.:
+ code should be placed in a <code>try</code> block, and <code>dispose()</code>
+ called in the <code>finally</code> clause, e.g.:
  <pre>
  Graphics2D g = sheet.createGraphics( null, true, true );
  try {
@@ -1714,12 +1993,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <b>Safe only when painting</b></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>bufferSource</code> - the image to create a context for, or
- <code>null</code> to draw on the sheet image</dd>
-<dd><code>scaleForResolution</code> - if <code>true</code>, the context is scaled to
- suit the current resolution</dd>
-<dd><code>applyHints</code> - if <code>true</code>, rendering hints suited to the
- current target will be applied to the context</dd>
+<dd><code>bufferSource</code> - the image to create a context for, or <code>null</code> to
+ draw on the sheet image</dd>
+<dd><code>scaleForResolution</code> - if <code>true</code>, the context is scaled to suit
+ the current resolution</dd>
+<dd><code>applyHints</code> - if <code>true</code>, rendering hints suited to the current
+ target will be applied to the context</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a graphics context for the requested destination, optionally
  scaled and hinted</dd>
@@ -1826,10 +2105,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  relative to the template image. The dimensions of the actual image will
  be scaled for the current drawing resolution. (To get a suitable graphics
  context for the image, use
- <code>createGraphics( tempImage, true, true )</code>.) Passing 0 for
- either the width or height is equivalent to using
- <code>getTemplateWidth()</code> or <code>getTemplateHeight()</code>,
- respectively.
+ <code>createGraphics( tempImage, true, true )</code>.) Passing 0 for either
+ the width or height is equivalent to using <code>getTemplateWidth()</code> or
+ <code>getTemplateHeight()</code>, respectively.
 
  <p>
  <b>Safe only when painting</b></div>
@@ -1839,12 +2117,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  cover, or 0 to cover the entire width</dd>
 <dd><code>templateHeight</code> - the height of the area of the template image to
  cover, or 0 to cover the entire height</dd>
-<dd><code>includeAlphaChannel</code> - if <code>true</code>, the temporary image will
- have an alpha channel (pixels can be translucent or transparent)</dd>
+<dd><code>includeAlphaChannel</code> - if <code>true</code>, the temporary image will have
+ an alpha channel (pixels can be translucent or transparent)</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>an image that can be used to render temporary results that cover
- a region that is <code>templateWidth</code> by
- <code>templateHeight</code> pixels on the template image</dd>
+ a region that is <code>templateWidth</code> by <code>templateHeight</code> pixels
+ on the template image</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if the given width or height is less
  than one</dd>
@@ -1865,15 +2143,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  ways: if the relevant game component attributes change, or if the
  requested target or resolution change. This method tests the second
  condition: during a call to <a href="#paint(ca.cgjennings.apps.arkham.sheet.RenderTarget,double)"><code>paint(ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a>, if this method returns
- <code>true</code> then the target or resolution have changed since the
- last call.
+ <code>true</code> then the target or resolution have changed since the last
+ call.
 
  <p>
  <b>Safe only when painting</b></div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the target or resolution may have changed
- since the last time the sheet was rendered</dd>
+<dd><code>true</code> if the target or resolution may have changed since
+ the last time the sheet was rendered</dd>
 </dl>
 </li>
 </ul>
@@ -1900,73 +2178,6 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>target</code> - the rendering target</dd>
-</dl>
-</li>
-</ul>
-<a id="getSyntheticBleedMargin()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getSyntheticBleedMargin</h4>
-<pre class="methodSignature">public&nbsp;double&nbsp;getSyntheticBleedMargin()</pre>
-<div class="block">Returns the size of the synthetic bleed margin produced by this sheet, in
- points.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>the size of the synthetic bleed margin, or zero</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="#synthesizeBleedMargin(java.awt.image.BufferedImage,boolean,double)"><code>synthesizeBleedMargin(java.awt.image.BufferedImage, boolean, double)</code></a></dd>
-</dl>
-</li>
-</ul>
-<a id="synthesizeBleedMargin(java.awt.image.BufferedImage,boolean,double)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>synthesizeBleedMargin</h4>
-<pre class="methodSignature">protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;synthesizeBleedMargin&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;sheetImage,
-                                              boolean&nbsp;synthesize,
-                                              double&nbsp;resolution)</pre>
-<div class="block">Generates a simulated bleed margin for components that do not provide
- one. The method is called with an already-rendered sheet image to which a
- margin should be added. If the component type does not allow a synthetic
- bleed margin, or if the margin size is zero, the original image may be
- returned. Otherwise, it should create a new image, larger than the
- original, that contains the original image in the center and the desired
- margin around the outside.
-
- <p>
- If the sheet has an explicit bleed margin, as indicated by
- <a href="#getBleedMargin()"><code>getBleedMargin()</code></a> returning a non-zero value, then that margin is
- built into the component design. The explicit margin should be respected,
- and this method should not be called.
-
- <p>
- The base class implementation will synthesize an adequate 9&nbsp;pt bleed
- margin for a wide variety of components. It operates as follows:
- <ul>
- <li> If the sheet <a href="#isTransparent()">is transparent</a>, then the
- sheet image is returned unmodified.
- <li> If, after sampling a few pixels around the outside of the image, the
- sheet appears to have a border of a single solid colour, then that border
- is extended on all sides by the margin size. If the sheet has rounded
- corners, these are painted over.
- <li> Otherwise, a margin is synthesized by mirroring the sheet image into
- the surrounding space.
- </ul></div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>sheetImage</code> - the image, previously returned from
- <a href="#paint(ca.cgjennings.apps.arkham.sheet.RenderTarget,double)"><code>paint</code></a>
- to synthesize a margin for</dd>
-<dd><code>synthesize</code> - if <code>true</code>, then the border should be
- synthesized; if <code>false</code>, subclasses may decorate the the image
- to accordingly (for example, by painting on rounded corners)</dd>
-<dd><code>resolution</code> - the resolution, in pixels per inch, of the sheet image</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>a new image with the requested margin, or</dd>
 </dl>
 </li>
 </ul>
@@ -2050,6 +2261,58 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
+<a id="drawPortraitBox(java.awt.Graphics2D,java.awt.geom.Rectangle2D,ca.cgjennings.apps.arkham.component.Portrait)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>drawPortraitBox</h4>
+<pre class="methodSignature">public static&nbsp;void&nbsp;drawPortraitBox&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt" class="externalLink">Graphics2D</a>&nbsp;g,
+                                   <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Rectangle2D.html?is-external=true" title="class or interface in java.awt.geom" class="externalLink">Rectangle2D</a>&nbsp;region,
+                                   <a href="../component/Portrait.html" title="interface in ca.cgjennings.apps.arkham.component">Portrait</a>&nbsp;portrait)</pre>
+<div class="block">A helper function that can be called from custom portrait painting code
+ to draw the portrait debug box, if enabled.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>g</code> - the sheet graphics context</dd>
+<dd><code>region</code> - the portrait region rectangle</dd>
+<dd><code>portrait</code> - the portrait instance</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>3.3</dd>
+</dl>
+</li>
+</ul>
+<a id="drawPortraitBox(java.awt.Graphics2D,java.awt.geom.Rectangle2D,java.awt.image.BufferedImage,double,double,double,double)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>drawPortraitBox</h4>
+<pre class="methodSignature">public static&nbsp;void&nbsp;drawPortraitBox&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Graphics2D.html?is-external=true" title="class or interface in java.awt" class="externalLink">Graphics2D</a>&nbsp;g,
+                                   <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Rectangle2D.html?is-external=true" title="class or interface in java.awt.geom" class="externalLink">Rectangle2D</a>&nbsp;region,
+                                   <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;portraitImage,
+                                   double&nbsp;panX,
+                                   double&nbsp;panY,
+                                   double&nbsp;scale,
+                                   double&nbsp;angle)</pre>
+<div class="block">A helper function that can be called from custom portrait painting code
+ to draw the portrait debug box, if enabled. This version can be used by
+ any portrait painting code, even if it does not use a <a href="../component/Portrait.html" title="interface in ca.cgjennings.apps.arkham.component"><code>Portrait</code></a>
+ instance.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>g</code> - the sheet graphics context</dd>
+<dd><code>region</code> - the portrait region rectangle</dd>
+<dd><code>portraitImage</code> - the image being drawn as a portrait</dd>
+<dd><code>panX</code> - the horizontal offset of the image from centre</dd>
+<dd><code>panY</code> - the vertical offset of the image from centre</dd>
+<dd><code>scale</code> - the scale factor of the image</dd>
+<dd><code>angle</code> - the rotation angle of the image, in degrees</dd>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>3.3</dd>
+</dl>
+</li>
+</ul>
 <a id="fitTitle(java.awt.Graphics2D,java.lang.String,java.awt.Rectangle,java.awt.Font,float,int)">
 <!--   -->
 </a>
@@ -2112,8 +2375,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>outlineColor</code> - the colour of the outline</dd>
 <dd><code>alignment</code> - the horizontal alignment of the text within the
  rectangle</dd>
-<dd><code>outlineUnderneath</code> - if <code>true</code>, the outline is drawn
- underneath the text, otherwise overtop of it</dd>
+<dd><code>outlineUnderneath</code> - if <code>true</code>, the outline is drawn underneath
+ the text, otherwise overtop of it</dd>
 </dl>
 </li>
 </ul>
@@ -2148,7 +2411,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>maxSize</code> - the point size to use for the text</dd>
 <dd><code>alignment</code> - the horizontal alignment of the text within the
  rectangle</dd>
-<dd><code>turns</code> - the number of turns to make, or one of the <tt>ROTATE</tt>
+<dd><code>turns</code> - the number of turns to make, or one of the <code>ROTATE</code>
  constants defined in this class</dd>
 </dl>
 </li>
@@ -2163,26 +2426,23 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                                                <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;booleanOrIntegerVariant,
                                                int&nbsp;targetWidth)</pre>
 <div class="block">Returns the symbol to be painted on cards for an expansion. If the
- expansion requested is <code>null</code>, then <code>null</code> is
- returned.
+ expansion requested is <code>null</code>, then <code>null</code> is returned.
 
  <p>
- If the variant string is <code>null</code> or indicates boolean
- <code>false</code>, then the expansion's 0th symbol is returned. If it
- indicates boolean <code>true</code>, then the expansion's 1st symbol is
- returned. Otherwise, the string is interpreted as an integer indicating
- the index of the symbol to return. If the string is invalid, the 0th
- symbol is used.
+ If the variant string is <code>null</code> or indicates boolean <code>false</code>,
+ then the expansion's 0th symbol is returned. If it indicates boolean
+ <code>true</code>, then the expansion's 1st symbol is returned. Otherwise, the
+ string is interpreted as an integer indicating the index of the symbol to
+ return. If the string is invalid, the 0th symbol is used.
 
- Several versions of the master image registered with the
- <a href="../../../../../gamedata/Expansion.html" title="class in gamedata"><code>Expansion</code></a> may be maintained. Each such version is optimized for
- drawing at a certain size (in effect, each version is best for a
- different sheet resolution). Which version is returned will be determined
- by the <code>targetWidth</code> parameter. If possible, the returned image's
- width will be between <code>targetWidth</code> and <code>2 * targetWidth</code>.
- Typically, you should request a target width equal to the width of the
- region in which the symbol is painted, multiplied by
- <a href="#getScalingFactor()"><code>getScalingFactor()</code></a>.</div>
+ Several versions of the image registered with the <a href="../../../../../gamedata/Expansion.html" title="class in gamedata"><code>Expansion</code></a> may
+ be maintained. Each such version is optimized for drawing at a certain
+ size (in effect, each version is best for a different sheet resolution).
+ Which version is returned will be determined by the <code>targetWidth</code>
+ parameter. If possible, the returned image's width will be between
+ <code>targetWidth</code> and <code>2 * targetWidth</code>. Typically, you should
+ request a target width equal to the width of the region in which the
+ symbol is painted, multiplied by <a href="#getScalingFactor()"><code>getScalingFactor()</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>expansion</code> - the expansion to obtain a symbol for</dd>

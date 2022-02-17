@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -146,8 +146,7 @@ extends <a href="../MappedURLHandler.html" title="class in ca.cgjennings.io.prot
 
  <p>
  URLs consist of these segments (where [...] indicates an optional
- segment):<br>
- <code>res: [//] [/] [path/]* file</code><br>
+ segment):<br> <code>res: [//] [/] [path/]* file</code><br>
  Where:<br>
  <dl>
  <dt>[//]<dd> is optional, but makes it easier to distinguish URLs from files

@@ -26,14 +26,14 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":9,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":9,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":9,"i32":10,"i33":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":9,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":9,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":9,"i33":10,"i34":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -351,8 +351,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isCompressionSupported()">isCompressionSupported</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if one or more compression methods are
- supported.</div>
+<div class="block">Returns <code>true</code> if one or more compression methods are supported.</div>
 </td>
 </tr>
 <tr id="i14" class="altColor">
@@ -366,8 +365,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isMetadataEnabled()">isMetadataEnabled</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if comment and resolution metadata will be
- written to output files.</div>
+<div class="block">Returns <code>true</code> if comment and resolution metadata will be written
+ to output files.</div>
 </td>
 </tr>
 <tr id="i16" class="altColor">
@@ -385,6 +384,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </td>
 </tr>
 <tr id="i18" class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isTransparencySupported()">isTransparencySupported</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Returns <code>true</code> if the file format for this writer supports
+ transparency or not.</div>
+</td>
+</tr>
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#registerImageFormat(ca.cgjennings.imageio.WritableImageFormat)">registerImageFormat</a></span>&#8203;(<a href="WritableImageFormat.html" title="interface in ca.cgjennings.imageio">WritableImageFormat</a>&nbsp;wif)</code></th>
 <td class="colLast">
@@ -392,7 +399,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <a href="SimpleImageWriter.html" title="class in ca.cgjennings.imageio"><code>SimpleImageWriter</code></a>.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setComment(java.lang.String)">setComment</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;comment)</code></th>
 <td class="colLast">
@@ -400,7 +407,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  this writer.</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setComment(java.lang.String,java.util.Locale)">setComment</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;comment,
           <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html?is-external=true" title="class or interface in java.util" class="externalLink">Locale</a>&nbsp;commentLocale)</code></th>
@@ -409,21 +416,21 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  this writer.</div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCompressionEnabled(boolean)">setCompressionEnabled</a></span>&#8203;(boolean&nbsp;enable)</code></th>
 <td class="colLast">
 <div class="block">Sets whether compression is enabled.</div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCompressionQuality(float)">setCompressionQuality</a></span>&#8203;(float&nbsp;quality)</code></th>
 <td class="colLast">
 <div class="block">Control the compression quality during image writing.</div>
 </td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCompressionQuality(java.lang.String)">setCompressionQuality</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;description)</code></th>
 <td class="colLast">
@@ -431,14 +438,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <a href="#getCompressionQualityDescriptions()"><code>getCompressionQualityDescriptions()</code></a>.</div>
 </td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCompressionType(java.lang.String)">setCompressionType</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;type)</code></th>
 <td class="colLast">
 <div class="block">Sets the compression type to use.</div>
 </td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setEncodingHint(java.lang.Object,java.lang.Object)">setEncodingHint</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;key,
                <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;value)</code></th>
@@ -446,7 +453,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Sets an internal encoding hint.</div>
 </td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setMetadataEnabled(boolean)">setMetadataEnabled</a></span>&#8203;(boolean&nbsp;enable)</code></th>
 <td class="colLast">
@@ -454,7 +461,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  files, if supported by the writer and image format.</div>
 </td>
 </tr>
-<tr id="i27" class="rowColor">
+<tr id="i28" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPixelsPerInch(float)">setPixelsPerInch</a></span>&#8203;(float&nbsp;ppi)</code></th>
 <td class="colLast">
@@ -462,7 +469,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  metadata, if possible.</div>
 </td>
 </tr>
-<tr id="i28" class="altColor">
+<tr id="i29" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPixelsPerMillimetre(float)">setPixelsPerMillimetre</a></span>&#8203;(float&nbsp;ppmm)</code></th>
 <td class="colLast">
@@ -470,26 +477,26 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  possible.</div>
 </td>
 </tr>
-<tr id="i29" class="rowColor">
+<tr id="i30" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setProgressiveScan(boolean)">setProgressiveScan</a></span>&#8203;(boolean&nbsp;useProgressiveScanIfPossible)</code></th>
 <td class="colLast">
 <div class="block">Sets whether the writer should use progressive encoding, if possible.</div>
 </td>
 </tr>
-<tr id="i30" class="altColor">
+<tr id="i31" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toString()">toString</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i31" class="rowColor">
+<tr id="i32" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#unregisterImageFormat(ca.cgjennings.imageio.WritableImageFormat)">unregisterImageFormat</a></span>&#8203;(<a href="WritableImageFormat.html" title="interface in ca.cgjennings.imageio">WritableImageFormat</a>&nbsp;wif)</code></th>
 <td class="colLast">
 <div class="block">Unregisters a previously registered image format.</div>
 </td>
 </tr>
-<tr id="i32" class="altColor">
+<tr id="i33" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#write(java.awt.Image,java.io.File)">write</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Image.html?is-external=true" title="class or interface in java.awt" class="externalLink">Image</a>&nbsp;image,
      <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;output)</code></th>
@@ -498,7 +505,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  and closing it on completion.</div>
 </td>
 </tr>
-<tr id="i33" class="rowColor">
+<tr id="i34" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#write(java.awt.Image,java.io.OutputStream)">write</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Image.html?is-external=true" title="class or interface in java.awt" class="externalLink">Image</a>&nbsp;image,
      <a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">OutputStream</a>&nbsp;out)</code></th>
@@ -690,6 +697,21 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
+<a id="isTransparencySupported()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isTransparencySupported</h4>
+<pre class="methodSignature">public&nbsp;boolean&nbsp;isTransparencySupported()</pre>
+<div class="block">Returns <code>true</code> if the file format for this writer supports
+ transparency or not.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><code>true</code> if transparency is supported</dd>
+</dl>
+</li>
+</ul>
 <a id="isCompressionSupported()">
 <!--   -->
 </a>
@@ -697,8 +719,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isCompressionSupported</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isCompressionSupported()</pre>
-<div class="block">Returns <code>true</code> if one or more compression methods are
- supported.</div>
+<div class="block">Returns <code>true</code> if one or more compression methods are supported.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if compression is supported</dd>
@@ -770,10 +791,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>setCompressionType</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setCompressionType&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;type)</pre>
-<div class="block">Sets the compression type to use. If the type is <code>null</code>, a
- default type is selected. Otherwise, the type must be one of the types
- specified by <a href="#getCompressionTypes()"><code>getCompressionTypes()</code></a>. Changing the compression
- type may alter the quality descriptions and values.</div>
+<div class="block">Sets the compression type to use. If the type is <code>null</code>, a default
+ type is selected. Otherwise, the type must be one of the types specified
+ by <a href="#getCompressionTypes()"><code>getCompressionTypes()</code></a>. Changing the compression type may
+ alter the quality descriptions and values.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>type</code> - the name of the compression type to use</dd>
@@ -788,9 +809,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getCompressionQualityDescriptions</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;getCompressionQualityDescriptions()</pre>
 <div class="block">Return an array of locale-dependent descriptions of the available
- compression quality settings. This method may return <code>null</code>,
- and must return <code>null</code> if <a href="#getCompressionValues()"><code>getCompressionValues()</code></a>
- does.</div>
+ compression quality settings. This method may return <code>null</code>, and
+ must return <code>null</code> if <a href="#getCompressionValues()"><code>getCompressionValues()</code></a> does.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>an array of description <code>String</code>s, or  null if there
@@ -932,9 +952,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isProgressiveScanConfigurable</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isProgressiveScanConfigurable()</pre>
-<div class="block">Returns <code>true</code> if the progressive scan setting can be changed.
- Some formats do not support progressive scans, while other formats
- support it inherently.</div>
+<div class="block">Returns <code>true</code> if the progressive scan setting can be changed. Some
+ formats do not support progressive scans, while other formats support it
+ inherently.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the progressive scan setting is alterable</dd>
@@ -1069,9 +1089,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isMetadataEnabled</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isMetadataEnabled()</pre>
-<div class="block">Returns <code>true</code> if comment and resolution metadata will be
- written to output files. Metadata writing may not be supported for all
- file types.</div>
+<div class="block">Returns <code>true</code> if comment and resolution metadata will be written
+ to output files. Metadata writing may not be supported for all file
+ types.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>if metadata writing is enabled</dd>

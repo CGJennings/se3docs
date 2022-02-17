@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -146,8 +146,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre>public class <span class="typeNameLabel">MonitoredInputStream</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/FilterInputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">FilterInputStream</a></pre>
 <div class="block">An input stream that can be monitored using a <a href="ProgressListener.html" title="interface in ca.cgjennings.algo"><code>ProgressListener</code></a>. This
- is similar to a <code>ProgressMonitorInputStream</code>, except that it is
- more flexible in how the progress updates are used.</div>
+ is similar to a <code>ProgressMonitorInputStream</code>, except that it is more
+ flexible in how the progress updates are used.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -232,16 +232,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/FilterInputSt
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#read()">read</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Overrides <code>FilterInputStream.read</code> to update progress after
- the read.</div>
+<div class="block">Overrides <code>FilterInputStream.read</code> to update progress after the
+ read.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#read(byte%5B%5D)">read</a></span>&#8203;(byte[]&nbsp;b)</code></th>
 <td class="colLast">
-<div class="block">Overrides <code>FilterInputStream.read</code> to update progress after
- the read.</div>
+<div class="block">Overrides <code>FilterInputStream.read</code> to update progress after the
+ read.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -250,24 +250,24 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/FilterInputSt
     int&nbsp;off,
     int&nbsp;len)</code></th>
 <td class="colLast">
-<div class="block">Overrides <code>FilterInputStream.read</code> to update progress after
- the read.</div>
+<div class="block">Overrides <code>FilterInputStream.read</code> to update progress after the
+ read.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#reset()">reset</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Overrides <code>FilterInputStream.reset</code> to reset progress listener
- as well as the stream.</div>
+<div class="block">Overrides <code>FilterInputStream.reset</code> to reset progress listener as
+ well as the stream.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>long</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#skip(long)">skip</a></span>&#8203;(long&nbsp;n)</code></th>
 <td class="colLast">
-<div class="block">Overrides <code>FilterInputStream.skip</code> to update progress after
- the skip.</div>
+<div class="block">Overrides <code>FilterInputStream.skip</code> to update progress after the
+ skip.</div>
 </td>
 </tr>
 </table>
@@ -386,8 +386,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/FilterInputSt
 <h4>read</h4>
 <pre class="methodSignature">public&nbsp;int&nbsp;read()
          throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
-<div class="block">Overrides <code>FilterInputStream.read</code> to update progress after
- the read.</div>
+<div class="block">Overrides <code>FilterInputStream.read</code> to update progress after the
+ read.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/FilterInputStream.html?is-external=true#read()" title="class or interface in java.io" class="externalLink">read</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/FilterInputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">FilterInputStream</a></code></dd>
@@ -404,8 +404,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/FilterInputSt
 <h4>read</h4>
 <pre class="methodSignature">public&nbsp;int&nbsp;read&#8203;(byte[]&nbsp;b)
          throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
-<div class="block">Overrides <code>FilterInputStream.read</code> to update progress after
- the read.</div>
+<div class="block">Overrides <code>FilterInputStream.read</code> to update progress after the
+ read.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/FilterInputStream.html?is-external=true#read(byte%5B%5D)" title="class or interface in java.io" class="externalLink">read</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/FilterInputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">FilterInputStream</a></code></dd>
@@ -424,8 +424,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/FilterInputSt
                 int&nbsp;off,
                 int&nbsp;len)
          throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
-<div class="block">Overrides <code>FilterInputStream.read</code> to update progress after
- the read.</div>
+<div class="block">Overrides <code>FilterInputStream.read</code> to update progress after the
+ read.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/FilterInputStream.html?is-external=true#read(byte%5B%5D,int,int)" title="class or interface in java.io" class="externalLink">read</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/FilterInputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">FilterInputStream</a></code></dd>
@@ -442,8 +442,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/FilterInputSt
 <h4>skip</h4>
 <pre class="methodSignature">public&nbsp;long&nbsp;skip&#8203;(long&nbsp;n)
           throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
-<div class="block">Overrides <code>FilterInputStream.skip</code> to update progress after
- the skip.</div>
+<div class="block">Overrides <code>FilterInputStream.skip</code> to update progress after the
+ skip.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/FilterInputStream.html?is-external=true#skip(long)" title="class or interface in java.io" class="externalLink">skip</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/FilterInputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">FilterInputStream</a></code></dd>
@@ -460,8 +460,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/FilterInputSt
 <h4>reset</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;reset()
            throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
-<div class="block">Overrides <code>FilterInputStream.reset</code> to reset progress listener
- as well as the stream.</div>
+<div class="block">Overrides <code>FilterInputStream.reset</code> to reset progress listener as
+ well as the stream.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/FilterInputStream.html?is-external=true#reset()" title="class or interface in java.io" class="externalLink">reset</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/FilterInputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">FilterInputStream</a></code></dd>

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -345,8 +345,7 @@ extends <a href="AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.a
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addFieldPopulationListener(ca.cgjennings.apps.arkham.StrangeEonsEditor.FieldPopulationListener)">addFieldPopulationListener</a></span>&#8203;(<a href="StrangeEonsEditor.FieldPopulationListener.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor.FieldPopulationListener</a>&nbsp;fpl)</code></th>
 <td class="colLast">
-<div class="block">Adds a new <code>FieldPopulationListener</code> to this game component
- editor.</div>
+<div class="block">Adds a new <code>FieldPopulationListener</code> to this game component editor.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -487,8 +486,7 @@ extends <a href="AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.a
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasUnsavedChanges()">hasUnsavedChanges</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the edited game component has unsaved
- changes.</div>
+<div class="block">Returns <code>true</code> if the edited game component has unsaved changes.</div>
 </td>
 </tr>
 <tr id="i20" class="altColor">
@@ -502,21 +500,21 @@ extends <a href="AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.a
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isAttached()">isAttached</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this editor is currently attached to the
- document tab strip.</div>
+<div class="block">Returns <code>true</code> if this editor is currently attached to the document
+ tab strip.</div>
 </td>
 </tr>
 <tr id="i22" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isCommandApplicable(ca.cgjennings.apps.arkham.commands.AbstractCommand)">isCommandApplicable</a></span>&#8203;(<a href="commands/AbstractCommand.html" title="class in ca.cgjennings.apps.arkham.commands">AbstractCommand</a>&nbsp;command)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the <code>command</code> can be performed by
- this commandable in its current state.</div>
+<div class="block">Returns <code>true</code> if the <code>command</code> can be performed by this
+ commandable in its current state.</div>
 </td>
 </tr>
 <tr id="i23" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#localizeComboBoxLabels(javax.swing.JComboBox,java.lang.String)">localizeComboBoxLabels</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComboBox</a>&nbsp;box,
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#localizeComboBoxLabels(javax.swing.JComboBox,java.lang.String)">localizeComboBoxLabels</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComboBox</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;box,
                       <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;prefix)</code></th>
 <td class="colLast">
 <div class="block">Iterates over the items in a combo box, replacing any whose
@@ -527,7 +525,7 @@ extends <a href="AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.a
 <tr id="i24" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#localizeComboBoxLabels(resources.Language,javax.swing.JComboBox,java.lang.String)">localizeComboBoxLabels</a></span>&#8203;(<a href="../../../../resources/Language.html" title="class in resources">Language</a>&nbsp;lang,
-                      <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComboBox</a>&nbsp;box,
+                      <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComboBox</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;box,
                       <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;prefix)</code></th>
 <td class="colLast">
 <div class="block"><code>toString()</code> value begins with the prefix string with a localized
@@ -538,7 +536,8 @@ extends <a href="AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.a
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#localizeComponentTree(javax.swing.JComponent)">localizeComponentTree</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComponent</a>&nbsp;root)</code></th>
 <td class="colLast">
-<div class="block">Recursively adjust a tree of components in this editor for the host platform.</div>
+<div class="block">Recursively adjust a tree of components in this editor for the host
+ platform.</div>
 </td>
 </tr>
 <tr id="i26" class="altColor">
@@ -836,7 +835,8 @@ extends <a href="AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.a
 <li class="blockList">
 <h4>localizeComponentTree</h4>
 <pre class="methodSignature">public static&nbsp;void&nbsp;localizeComponentTree&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComponent</a>&nbsp;root)</pre>
-<div class="block">Recursively adjust a tree of components in this editor for the host platform.</div>
+<div class="block">Recursively adjust a tree of components in this editor for the host
+ platform.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>root</code> - the root of the tree to localize</dd>
@@ -877,8 +877,8 @@ extends <a href="AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.a
  <li> if <code>newComponent</code> has an on-install event in its private
  settings, then the on-install event is called
  <li> the editor is updated to point to <code>newComponent</code> and it
- creates a new set of sheets from <code>newComponent</code> and installs
- them in the preview window
+ creates a new set of sheets from <code>newComponent</code> and installs them
+ in the preview window
  <li> the current state of <code>newComponent</code> is copied from the
  component to the editor controls
  </ol></div>
@@ -925,9 +925,9 @@ extends <a href="AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.a
 
  This implementation handles the details of determining the file to be
  written and exception handling. If <a href="AbstractStrangeEonsEditor.html#getFile()"><code>AbstractStrangeEonsEditor.getFile()</code></a> returns
- <code>null</code>, this method calls <a href="AbstractStrangeEonsEditor.html#saveAs()"><code>AbstractStrangeEonsEditor.saveAs()</code></a> to determine the
- file to save to. Otherwise, it calls <a href="AbstractStrangeEonsEditor.html#saveImpl(java.io.File)"><code>AbstractStrangeEonsEditor.saveImpl(java.io.File)</code></a> to write the file.
- To use it, override <a href="AbstractStrangeEonsEditor.html#saveImpl(java.io.File)"><code>AbstractStrangeEonsEditor.saveImpl(java.io.File)</code></a>.</div>
+ <code>null</code>, this method calls <a href="AbstractStrangeEonsEditor.html#saveAs()"><code>AbstractStrangeEonsEditor.saveAs()</code></a> to determine the file
+ to save to. Otherwise, it calls <a href="AbstractStrangeEonsEditor.html#saveImpl(java.io.File)"><code>AbstractStrangeEonsEditor.saveImpl(java.io.File)</code></a> to write the file. To
+ use it, override <a href="AbstractStrangeEonsEditor.html#saveImpl(java.io.File)"><code>AbstractStrangeEonsEditor.saveImpl(java.io.File)</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="StrangeEonsEditor.html#save()">save</a></code>&nbsp;in interface&nbsp;<code><a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor</a></code></dd>
@@ -952,12 +952,12 @@ extends <a href="AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.a
 
  This implementation handles the details of determining the file to be
  written and exception handling. It shows a save dialog and, if the user
- accepts the dialog, calls <code>setFile</code> to set the save file based
- on the user's selection. It then calls <a href="AbstractStrangeEonsEditor.html#save()"><code>AbstractStrangeEonsEditor.save()</code></a> to save the file
- to the new destination. To use it, override
- <a href="StrangeEonsEditor.html#getFileNameExtension()"><code>StrangeEonsEditor.getFileNameExtension()</code></a> and <a href="StrangeEonsEditor.html#getFileTypeDescription()"><code>StrangeEonsEditor.getFileTypeDescription()</code></a> to
- describe the file type's standard extension and type, and override
- <a href="AbstractStrangeEonsEditor.html#saveImpl(java.io.File)"><code>AbstractStrangeEonsEditor.saveImpl(java.io.File)</code></a> to write the file.</div>
+ accepts the dialog, calls <code>setFile</code> to set the save file based on
+ the user's selection. It then calls <a href="AbstractStrangeEonsEditor.html#save()"><code>AbstractStrangeEonsEditor.save()</code></a> to save the file to
+ the new destination. To use it, override <a href="StrangeEonsEditor.html#getFileNameExtension()"><code>StrangeEonsEditor.getFileNameExtension()</code></a>
+ and <a href="StrangeEonsEditor.html#getFileTypeDescription()"><code>StrangeEonsEditor.getFileTypeDescription()</code></a> to describe the file type's
+ standard extension and type, and override <a href="AbstractStrangeEonsEditor.html#saveImpl(java.io.File)"><code>AbstractStrangeEonsEditor.saveImpl(java.io.File)</code></a>
+ to write the file.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="StrangeEonsEditor.html#saveAs()">saveAs</a></code>&nbsp;in interface&nbsp;<code><a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor</a></code></dd>
@@ -1099,8 +1099,8 @@ extends <a href="AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.a
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>command</code> - the command to be performed</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if this commandable wishes to handle the
- command (even if it cannot execute the command currently)</dd>
+<dd><code>true</code> if this commandable wishes to handle the command
+ (even if it cannot execute the command currently)</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="commands/Commands.html" title="class in ca.cgjennings.apps.arkham.commands"><code>Commands</code></a></dd>
 </dl>
@@ -1322,8 +1322,8 @@ extends <a href="AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.a
 <li class="blockList">
 <h4>addFieldPopulationListener</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;addFieldPopulationListener&#8203;(<a href="StrangeEonsEditor.FieldPopulationListener.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor.FieldPopulationListener</a>&nbsp;fpl)</pre>
-<div class="block">Adds a new <code>FieldPopulationListener</code> to this game component
- editor. A field population event is fired after the editor's controls are
+<div class="block">Adds a new <code>FieldPopulationListener</code> to this game component editor.
+ A field population event is fired after the editor's controls are
  modified to match the edited component. This typically happens as part of
  setting the game component for the editor.</div>
 <dl>
@@ -1400,7 +1400,7 @@ extends <a href="AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.a
 <ul class="blockList">
 <li class="blockList">
 <h4>localizeComboBoxLabels</h4>
-<pre class="methodSignature">public static&nbsp;void&nbsp;localizeComboBoxLabels&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComboBox</a>&nbsp;box,
+<pre class="methodSignature">public static&nbsp;void&nbsp;localizeComboBoxLabels&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComboBox</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;box,
                                           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;prefix)</pre>
 <div class="block">Iterates over the items in a combo box, replacing any whose
  <code>toString()</code> value begins with the prefix string with a localized
@@ -1412,7 +1412,7 @@ extends <a href="AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.a
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>box</code> - the combo box whose labels should be localized</dd>
 <dd><code>prefix</code> - a prefix string that will identify labels that are string
-     table keys</dd>
+ table keys</dd>
 </dl>
 </li>
 </ul>
@@ -1423,7 +1423,7 @@ extends <a href="AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.a
 <li class="blockList">
 <h4>localizeComboBoxLabels</h4>
 <pre class="methodSignature">public static&nbsp;void&nbsp;localizeComboBoxLabels&#8203;(<a href="../../../../resources/Language.html" title="class in resources">Language</a>&nbsp;lang,
-                                          <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComboBox</a>&nbsp;box,
+                                          <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComboBox</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;box,
                                           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;prefix)</pre>
 <div class="block"><code>toString()</code> value begins with the prefix string with a localized
  string. The value of the string is determined by using the existing
@@ -1435,7 +1435,7 @@ extends <a href="AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.a
 <dd><code>lang</code> - the language to use, or null for the interface language</dd>
 <dd><code>box</code> - the combo box whose labels should be localized</dd>
 <dd><code>prefix</code> - a prefix string that will identify labels that are string
-     table keys</dd>
+ table keys</dd>
 </dl>
 </li>
 </ul>
@@ -1446,16 +1446,15 @@ extends <a href="AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.a
 <li class="blockList">
 <h4>hasUnsavedChanges</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;hasUnsavedChanges()</pre>
-<div class="block">Returns <code>true</code> if the edited game component has unsaved
- changes.</div>
+<div class="block">Returns <code>true</code> if the edited game component has unsaved changes.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="StrangeEonsEditor.html#hasUnsavedChanges()">hasUnsavedChanges</a></code>&nbsp;in interface&nbsp;<code><a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor</a></code></dd>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractStrangeEonsEditor.html#hasUnsavedChanges()">hasUnsavedChanges</a></code>&nbsp;in class&nbsp;<code><a href="AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.apps.arkham">AbstractStrangeEonsEditor</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the game component has been edited since the
- last time it was saved</dd>
+<dd><code>true</code> if the game component has been edited since the last
+ time it was saved</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="AbstractStrangeEonsEditor.html#setUnsavedChanges(boolean)"><code>AbstractStrangeEonsEditor.setUnsavedChanges(boolean)</code></a></dd>
 </dl>
@@ -1480,8 +1479,7 @@ extends <a href="AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.a
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractStrangeEonsEditor.html#setUnsavedChanges(boolean)">setUnsavedChanges</a></code>&nbsp;in class&nbsp;<code><a href="AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.apps.arkham">AbstractStrangeEonsEditor</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>isDirty</code> - <code>true</code> if this game component has unsaved
- changes</dd>
+<dd><code>isDirty</code> - <code>true</code> if this game component has unsaved changes</dd>
 </dl>
 </li>
 </ul>
@@ -1524,8 +1522,8 @@ extends <a href="AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.a
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractStrangeEonsEditor.html#getGameComponent()">getGameComponent</a></code>&nbsp;in class&nbsp;<code><a href="AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.apps.arkham">AbstractStrangeEonsEditor</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the edited game component, or <code>null</code> if this editor is
- not editing a game component</dd>
+<dd>the edited game component, or <code>null</code> if this editor is not
+ editing a game component</dd>
 </dl>
 </li>
 </ul>
@@ -1654,9 +1652,9 @@ extends <a href="AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.a
 <h4>isCommandApplicable</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isCommandApplicable&#8203;(<a href="commands/AbstractCommand.html" title="class in ca.cgjennings.apps.arkham.commands">AbstractCommand</a>&nbsp;command)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="AbstractStrangeEonsEditor.html#isCommandApplicable(ca.cgjennings.apps.arkham.commands.AbstractCommand)">AbstractStrangeEonsEditor</a></code></span></div>
-<div class="block">Returns <code>true</code> if the <code>command</code> can be performed by
- this commandable in its current state. If <a href="commands/Commandable.html#canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)"><code>Commandable.canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a>
- would return false for this command, then this must also return false.
+<div class="block">Returns <code>true</code> if the <code>command</code> can be performed by this
+ commandable in its current state. If <a href="commands/Commandable.html#canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)"><code>Commandable.canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a> would
+ return false for this command, then this must also return false.
 
  The base class returns the value of <a href="AbstractStrangeEonsEditor.html#canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)"><code>AbstractStrangeEonsEditor.canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a>, except
  that if the command is SAVE, it returns false if the editor does not have
@@ -1691,7 +1689,7 @@ extends <a href="AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.a
  The base class provides a framework for handling common document
  commands. To use the framework, override <a href="AbstractStrangeEonsEditor.html#canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)"><code>AbstractStrangeEonsEditor.canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a> to
  return true for the commands you wish to support. Then this method will
- call the following methods (as appropriate):      <a href="AbstractStrangeEonsEditor.html#clear()"><code>AbstractStrangeEonsEditor.clear()</code></a>, <a href="AbstractStrangeEonsEditor.html#save()"><code>AbstractStrangeEonsEditor.save()</code></a>, <a href="AbstractStrangeEonsEditor.html#saveAs()"><code>AbstractStrangeEonsEditor.saveAs()</code></a>, <a href="AbstractStrangeEonsEditor.html#export()"><code>AbstractStrangeEonsEditor.export()</code></a>,
+ call the following methods (as appropriate): null null null     <a href="AbstractStrangeEonsEditor.html#clear()"><code>AbstractStrangeEonsEditor.clear()</code></a>, <a href="AbstractStrangeEonsEditor.html#save()"><code>AbstractStrangeEonsEditor.save()</code></a>, <a href="AbstractStrangeEonsEditor.html#saveAs()"><code>AbstractStrangeEonsEditor.saveAs()</code></a>, <a href="AbstractStrangeEonsEditor.html#export()"><code>AbstractStrangeEonsEditor.export()</code></a>,
  <a href="AbstractStrangeEonsEditor.html#spinOff()"><code>AbstractStrangeEonsEditor.spinOff()</code></a>, or <a href="AbstractStrangeEonsEditor.html#print()"><code>AbstractStrangeEonsEditor.print()</code></a>. These methods handle common
  details of implementing these commands, then pass control to a matching
  implementation method which the subclass must override to perform those
@@ -1774,11 +1772,11 @@ extends <a href="AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.a
 <h4>setAttached</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setAttached&#8203;(boolean&nbsp;attach)</pre>
 <div class="block">Sets whether this editor is attached to the document tab strip. If
- <code>true</code>, the editor is attached; this is the default state for
- new editors. If <code>false</code>, the editor is detached from the tab
- strip. When detached, the editor appears in its own floating window
- separate from the main application window. The editor reattaches when the
- window is closed.</div>
+ <code>true</code>, the editor is attached; this is the default state for new
+ editors. If <code>false</code>, the editor is detached from the tab strip.
+ When detached, the editor appears in its own floating window separate
+ from the main application window. The editor reattaches when the window
+ is closed.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>attach</code> - if <code>true</code>, attaches the window to the tab strip</dd>
@@ -1792,8 +1790,8 @@ extends <a href="AbstractStrangeEonsEditor.html" title="class in ca.cgjennings.a
 <li class="blockList">
 <h4>isAttached</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isAttached()</pre>
-<div class="block">Returns <code>true</code> if this editor is currently attached to the
- document tab strip.</div>
+<div class="block">Returns <code>true</code> if this editor is currently attached to the document
+ tab strip.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the editor is attached</dd>

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -137,8 +137,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>
 implements <a href="NestingDocument.html" title="interface in ca.cgjennings.ui">NestingDocument</a></pre>
 <div class="block">An adapter for the document in the <code>JTextComponent</code> of a
- <code>JComboBox</code> that extends the <code>JComboBox</code> to
- automatically complete the field text using entries from the combo box list.</div>
+ <code>JComboBox</code> that extends the <code>JComboBox</code> to automatically
+ complete the field text using entries from the combo box list.</div>
 </li>
 </ul>
 </div>
@@ -178,8 +178,8 @@ implements <a href="NestingDocument.html" title="interface in ca.cgjennings.ui">
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(javax.swing.JComboBox)">AutocompletionDocument</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComboBox</a>&nbsp;comboBox)</code></th>
 <td class="colLast">
-<div class="block">Create a new <code>AutocompletionDocument</code> that is wrapped around
- the existing document within a combo box.</div>
+<div class="block">Create a new <code>AutocompletionDocument</code> that is wrapped around the
+ existing document within a combo box.</div>
 </td>
 </tr>
 </table>
@@ -224,8 +224,7 @@ implements <a href="NestingDocument.html" title="interface in ca.cgjennings.ui">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/text/Collator.html?is-external=true" title="class or interface in java.text" class="externalLink">Collator</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCollator()">getCollator</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Return the list order <code>Collator</code>, or <code>null</code> if none
- is set.</div>
+<div class="block">Return the list order <code>Collator</code>, or <code>null</code> if none is set.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -357,8 +356,8 @@ implements <a href="NestingDocument.html" title="interface in ca.cgjennings.ui">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCollator(java.text.Collator)">setCollator</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/text/Collator.html?is-external=true" title="class or interface in java.text" class="externalLink">Collator</a>&nbsp;collator)</code></th>
 <td class="colLast">
-<div class="block">If set to a non-<code>null</code> object, it is assumed that list
- elements are sorted according to <code>collator</code>.</div>
+<div class="block">If set to a non-<code>null</code> object, it is assumed that list elements are
+ sorted according to <code>collator</code>.</div>
 </td>
 </tr>
 </table>
@@ -392,9 +391,9 @@ implements <a href="NestingDocument.html" title="interface in ca.cgjennings.ui">
 <li class="blockList">
 <h4>AutocompletionDocument</h4>
 <pre>public&nbsp;AutocompletionDocument&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComboBox</a>&nbsp;comboBox)</pre>
-<div class="block">Create a new <code>AutocompletionDocument</code> that is wrapped around
- the existing document within a combo box. The combo box's editor must be
- a subclass of <code>JTextComponent</code>.
+<div class="block">Create a new <code>AutocompletionDocument</code> that is wrapped around the
+ existing document within a combo box. The combo box's editor must be a
+ subclass of <code>JTextComponent</code>.
  <p>
  The new document is not installed in the combo box, so autocompletion is
  not started automatically. To easily create and install an adapter when
@@ -463,8 +462,8 @@ implements <a href="NestingDocument.html" title="interface in ca.cgjennings.ui">
 <dd><code>comboBox</code> - the <code>JComboBox</code> to modify</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the newly installed document if installation was successful,
- otherwise <code>null</code> if it failed because the
- <code>JComboBox</code> is not using a <code>JTextComponent</code></dd>
+ otherwise <code>null</code> if it failed because the <code>JComboBox</code> is not
+ using a <code>JTextComponent</code></dd>
 </dl>
 </li>
 </ul>
@@ -486,8 +485,8 @@ implements <a href="NestingDocument.html" title="interface in ca.cgjennings.ui">
  sensitive</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the newly installed document if installation was successful,
- otherwise <code>null</code> if it failed because the
- <code>JComboBox</code> is not using a <code>JTextComponent</code></dd>
+ otherwise <code>null</code> if it failed because the <code>JComboBox</code> is not
+ using a <code>JTextComponent</code></dd>
 </dl>
 </li>
 </ul>
@@ -533,8 +532,7 @@ implements <a href="NestingDocument.html" title="interface in ca.cgjennings.ui">
 <li class="blockList">
 <h4>getCollator</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/text/Collator.html?is-external=true" title="class or interface in java.text" class="externalLink">Collator</a>&nbsp;getCollator()</pre>
-<div class="block">Return the list order <code>Collator</code>, or <code>null</code> if none
- is set.</div>
+<div class="block">Return the list order <code>Collator</code>, or <code>null</code> if none is set.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the <code>Collator</code> by which elements are ordered</dd>
@@ -548,9 +546,9 @@ implements <a href="NestingDocument.html" title="interface in ca.cgjennings.ui">
 <li class="blockList">
 <h4>setCollator</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setCollator&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/text/Collator.html?is-external=true" title="class or interface in java.text" class="externalLink">Collator</a>&nbsp;collator)</pre>
-<div class="block">If set to a non-<code>null</code> object, it is assumed that list
- elements are sorted according to <code>collator</code>. A faster search
- algorithm can be employed when looking for an autocomplete match.</div>
+<div class="block">If set to a non-<code>null</code> object, it is assumed that list elements are
+ sorted according to <code>collator</code>. A faster search algorithm can be
+ employed when looking for an autocomplete match.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>collator</code> - the <code>Collator</code> by which elements are ordered</dd>

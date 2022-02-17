@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -416,8 +416,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  commands.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>dir</code> - the directory; if <code>null</code>, use the working directory
- of the parent process</dd>
+<dd><code>dir</code> - the directory; if <code>null</code>, use the working directory of
+ the parent process</dd>
 </dl>
 </li>
 </ul>
@@ -516,15 +516,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public&nbsp;<a href="Shell.Result.html" title="class in ca.cgjennings.platform">Shell.Result</a>&nbsp;exec&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;commandTokens,
                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;stdin)
                   throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
-<div class="block">Executes a command. If non-<code>null</code>, the contents of
- <code>stdin</code> will be used as the input stream for the command.</div>
+<div class="block">Executes a command. If non-<code>null</code>, the contents of <code>stdin</code>
+ will be used as the input stream for the command.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>commandTokens</code> - an array of command arguments</dd>
 <dd><code>stdin</code> - the standard input stream content, or <code>null</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the outcome of the command, or <code>null</code> if a timeout is
- set and the command timed out</dd>
+<dd>the outcome of the command, or <code>null</code> if a timeout is set
+ and the command timed out</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if an I/O error occurs; typically this occurs if the
  command is not found</dd>
@@ -540,15 +540,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public&nbsp;<a href="Shell.Result.html" title="class in ca.cgjennings.platform">Shell.Result</a>&nbsp;exec&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;commandTokens,
                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;stdin)
                   throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
-<div class="block">Executes a command. If non-<code>null</code>, the contents of
- <code>stdin</code> will be used as the input stream for the command.</div>
+<div class="block">Executes a command. If non-<code>null</code>, the contents of <code>stdin</code>
+ will be used as the input stream for the command.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>commandTokens</code> - an list of command arguments</dd>
 <dd><code>stdin</code> - the standard input stream content, or <code>null</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the outcome of the command, or <code>null</code> if a timeout is
- set and the command timed out</dd>
+<dd>the outcome of the command, or <code>null</code> if a timeout is set
+ and the command timed out</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if an I/O error occurs; typically this occurs if the
  command is not found</dd>
@@ -568,8 +568,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>commandTokens</code> - an list of command arguments</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the outcome of the command, or <code>null</code> if a timeout is
- set and the command timed out</dd>
+<dd>the outcome of the command, or <code>null</code> if a timeout is set
+ and the command timed out</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if an I/O error occurs; typically this occurs if the
  command is not found</dd>
@@ -586,17 +586,17 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;stdin,
                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;password)
                   throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
-<div class="block">Executes a command as a superuser, if possible. If non-<code>null</code>,
- the contents of <code>stdin</code> will be used as the input stream for
- the command.</div>
+<div class="block">Executes a command as a superuser, if possible. If non-<code>null</code>, the
+ contents of <code>stdin</code> will be used as the input stream for the
+ command.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>commandTokens</code> - an array of command arguments</dd>
 <dd><code>stdin</code> - the standard input stream content, or <code>null</code></dd>
 <dd><code>password</code> - the superuser account password</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the outcome of the command, or <code>null</code> if a timeout is
- set and the command timed out</dd>
+<dd>the outcome of the command, or <code>null</code> if a timeout is set
+ and the command timed out</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if an I/O error occurs; typically this occurs if the
  command is not found</dd>
@@ -613,17 +613,17 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;stdin,
                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;password)
                   throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
-<div class="block">Executes a command as a superuser, if possible. If non-<code>null</code>,
- the contents of <code>stdin</code> will be used as the input stream for
- the command.</div>
+<div class="block">Executes a command as a superuser, if possible. If non-<code>null</code>, the
+ contents of <code>stdin</code> will be used as the input stream for the
+ command.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>commandTokens</code> - an array of command arguments</dd>
 <dd><code>stdin</code> - the standard input stream content, or <code>null</code></dd>
 <dd><code>password</code> - the superuser account password</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the outcome of the command, or <code>null</code> if a timeout is
- set and the command timed out</dd>
+<dd>the outcome of the command, or <code>null</code> if a timeout is set
+ and the command timed out</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if an I/O error occurs; typically this occurs if the
  command is not found</dd>
@@ -643,8 +643,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>commandTokens</code> - an array of command arguments</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the outcome of the command, or <code>null</code> if a timeout is
- set and the command timed out</dd>
+<dd>the outcome of the command, or <code>null</code> if a timeout is set
+ and the command timed out</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if an I/O error occurs; typically this occurs if the
  command is not found</dd>
@@ -667,8 +667,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>command</code> - a command string</dd>
 <dd><code>stdin</code> - the standard input stream content, or <code>null</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the outcome of the command, or <code>null</code> if a timeout is
- set and the command timed out</dd>
+<dd>the outcome of the command, or <code>null</code> if a timeout is set
+ and the command timed out</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if an I/O error occurs; typically this occurs if the
  command is not found</dd>
@@ -691,8 +691,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>command</code> - a command string</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the outcome of the command, or <code>null</code> if a timeout is
- set and the command timed out</dd>
+<dd>the outcome of the command, or <code>null</code> if a timeout is set
+ and the command timed out</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if an I/O error occurs; typically this occurs if the
  command is not found</dd>
@@ -720,8 +720,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>stdin</code> - the standard input stream content, or <code>null</code></dd>
 <dd><code>password</code> - the superuser account password</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the outcome of the command, or <code>null</code> if a timeout is
- set and the command timed out</dd>
+<dd>the outcome of the command, or <code>null</code> if a timeout is set
+ and the command timed out</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if an I/O error occurs; typically this occurs if the
  command is not found</dd>

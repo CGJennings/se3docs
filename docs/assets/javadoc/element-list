@@ -15,6 +15,7 @@ ca.cgjennings.apps.arkham.editors
 ca.cgjennings.apps.arkham.plugins
 ca.cgjennings.apps.arkham.plugins.catalog
 ca.cgjennings.apps.arkham.plugins.debugging
+ca.cgjennings.apps.arkham.plugins.engine
 ca.cgjennings.apps.arkham.plugins.typescript
 ca.cgjennings.apps.arkham.project
 ca.cgjennings.apps.arkham.sheet

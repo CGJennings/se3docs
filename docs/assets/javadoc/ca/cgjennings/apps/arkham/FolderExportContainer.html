@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -339,8 +339,8 @@ implements <a href="ExportContainer.html" title="interface in ca.cgjennings.apps
  container. The dialog is not necessarily a file dialog; for example, it
  might prompt the user to enter account credentials for an online service
  or enter the address of an FTP server. It is not required to show any
- dialog at all, and may simply return <code>true</code> if there is
- nothing for the user to decide.</div>
+ dialog at all, and may simply return <code>true</code> if there is nothing for
+ the user to decide.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="ExportContainer.html#selectLocation(java.lang.String,java.awt.Component)">selectLocation</a></code>&nbsp;in interface&nbsp;<code><a href="ExportContainer.html" title="interface in ca.cgjennings.apps.arkham">ExportContainer</a></code></dd>
@@ -350,8 +350,8 @@ implements <a href="ExportContainer.html" title="interface in ca.cgjennings.apps
 <dd><code>locationHint</code> - an optional component that may be used as a hint to
  locate any dialogs that must be created</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the export should proceed, or
- <code>false</code> if the user cancels the operation</dd>
+<dd><code>true</code> if the export should proceed, or <code>false</code> if
+ the user cancels the operation</dd>
 </dl>
 </li>
 </ul>
@@ -433,8 +433,8 @@ implements <a href="ExportContainer.html" title="interface in ca.cgjennings.apps
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="ExportContainer.html#closeContainer(boolean)">closeContainer</a></code>&nbsp;in interface&nbsp;<code><a href="ExportContainer.html" title="interface in ca.cgjennings.apps.arkham">ExportContainer</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>display</code> - if <code>true</code>, the user has requested that the
- container be "displayed"</dd>
+<dd><code>display</code> - if <code>true</code>, the user has requested that the container
+ be "displayed"</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if an I/O exception occurs</dd>
 </dl>
@@ -500,9 +500,9 @@ implements <a href="ExportContainer.html" title="interface in ca.cgjennings.apps
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isFileFormatSupported&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;extension)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="ExportContainer.html#isFileFormatSupported(java.lang.String)">ExportContainer</a></code></span></div>
 <div class="block">Returns a hint as to whether a file format is supported. This method
- returns <code>true</code> if the file type is definitely supported. It
- returns <code>false</code> if the file type is not supported, or if the
- container cannot determine whether the file type is supported.
+ returns <code>true</code> if the file type is definitely supported. It returns
+ <code>false</code> if the file type is not supported, or if the container
+ cannot determine whether the file type is supported.
 
  <p>
  A common use of this method is to determine whether a container is

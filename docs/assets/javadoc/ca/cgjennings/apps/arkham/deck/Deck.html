@@ -26,14 +26,14 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10,"i40":10,"i41":10,"i42":10,"i43":10,"i44":10,"i45":10,"i46":10,"i47":10,"i48":10,"i49":10,"i50":10,"i51":10,"i52":9,"i53":10,"i54":9,"i55":10,"i56":10,"i57":10,"i58":10,"i59":10,"i60":10,"i61":10,"i62":10,"i63":10,"i64":10,"i65":10,"i66":10,"i67":10,"i68":10,"i69":10,"i70":10,"i71":10,"i72":10,"i73":10,"i74":10,"i75":10,"i76":10,"i77":10,"i78":10,"i79":10,"i80":10,"i81":10,"i82":10,"i83":10,"i84":10,"i85":10,"i86":10,"i87":10,"i88":10,"i89":10,"i90":10,"i91":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10,"i40":10,"i41":10,"i42":10,"i43":10,"i44":10,"i45":10,"i46":10,"i47":10,"i48":10,"i49":10,"i50":10,"i51":10,"i52":10,"i53":10,"i54":9,"i55":10,"i56":9,"i57":10,"i58":10,"i59":10,"i60":10,"i61":10,"i62":10,"i63":10,"i64":10,"i65":10,"i66":10,"i67":10,"i68":10,"i69":10,"i70":10,"i71":10,"i72":10,"i73":10,"i74":10,"i75":10,"i76":10,"i77":10,"i78":10,"i79":10,"i80":10,"i81":10,"i82":10,"i83":10,"i84":10,"i85":10,"i86":10,"i87":10,"i88":10,"i89":10,"i90":10,"i91":10,"i92":10,"i93":10,"i94":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -130,12 +130,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="../component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Cloneable</a></code></dd>
+<dd><code><a href="../component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code>, <code><a href="item/BleedMarginStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">BleedMarginStyle</a></code>, <code><a href="item/Style.html" title="interface in ca.cgjennings.apps.arkham.deck.item">Style</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Cloneable</a></code></dd>
 </dl>
 <hr>
 <pre>public class <span class="typeNameLabel">Deck</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>
-implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a>, <a href="../component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Cloneable</a></pre>
+implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a>, <a href="../component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>, <a href="item/BleedMarginStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">BleedMarginStyle</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Cloneable</a></pre>
 <div class="block">A deck of game component sheets, organized into pages for printing.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -251,7 +251,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 </tr>
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">Deck</a></span>()</code></th>
-<td class="colLast">&nbsp;</td>
+<td class="colLast">
+<div class="block">Creates a new, empty deck using the default paper size.</div>
+</td>
 </tr>
 </table>
 </li>
@@ -306,10 +308,18 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#applyFinishStyleToItems()">applyFinishStyleToItems</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Applies the current deck default finish options to all compatible items
+ in the deck.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#beginCompoundEdit()">beginCompoundEdit</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#centerSelectionOver(double,double)">centerSelectionOver</a></span>&#8203;(double&nbsp;x,
                    double&nbsp;y)</code></th>
@@ -318,28 +328,28 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  document space).</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#clearAll()">clearAll</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Sets this component's content to an empty state.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#clearSelection()">clearSelection</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Unselects all currently selected page items, if any.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="Deck.html" title="class in ca.cgjennings.apps.arkham.deck">Deck</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#clone()">clone</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns a deep copy of this game component.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#convertFrom(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">convertFrom</a></span>&#8203;(<a href="../component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a>&nbsp;session)</code></th>
 <td class="colLast">
@@ -347,7 +357,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  type.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#convertTo(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">convertTo</a></span>&#8203;(<a href="../component/conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a>&nbsp;session)</code></th>
 <td class="colLast">
@@ -355,35 +365,35 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  another component type.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#copy()">copy</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Copies the current selection to the clipboard.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#coreCheck()">coreCheck</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Checks if all required libraries and extensions are installed.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code><a href="DeckEditor.html" title="class in ca.cgjennings.apps.arkham.deck">DeckEditor</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createDefaultEditor()">createDefaultEditor</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns a new deck editor for this deck.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="../sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sheet</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createDefaultSheets()">createDefaultSheets</a></span>()</code></th>
 <td class="colLast">
 <div class="block">This is not a valid operation for a <code>Deck</code>.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code><a href="../component/conversion/UpgradeConversionTrigger.html" title="class in ca.cgjennings.apps.arkham.component.conversion">UpgradeConversionTrigger</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createUpgradeConversionTrigger()">createUpgradeConversionTrigger</a></span>()</code></th>
 <td class="colLast">
@@ -391,45 +401,53 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  longer handles the component.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#cut()">cut</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Cuts the current selection, if any.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deleteSelection()">deleteSelection</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Deletes the items in the current selection.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#endCompoundEdit()">endCompoundEdit</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#flipSelection()">flipSelection</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code><a href="Page.html" title="class in ca.cgjennings.apps.arkham.deck">Page</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getActivePage()">getActivePage</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the active page.</div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i23" class="rowColor">
+<td class="colFirst"><code>double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBleedMarginWidth()">getBleedMarginWidth</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Returns the bleed margin width to use when the relevant finish option is
+ selected.</div>
+</td>
+</tr>
+<tr id="i24" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getComment()">getComment</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the design rationale comments associated with this component.</div>
 </td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code><a href="item/StyleApplicator.html" title="interface in ca.cgjennings.apps.arkham.deck.item">StyleApplicator</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDefaultStyleApplicator()">getDefaultStyleApplicator</a></span>()</code></th>
 <td class="colLast">
@@ -437,42 +455,50 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  style to newly added deck items.</div>
 </td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i26" class="altColor">
+<td class="colFirst"><code><a href="../sheet/FinishStyle.html" title="enum in ca.cgjennings.apps.arkham.sheet">FinishStyle</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFinishStyle()">getFinishStyle</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Returns the finish style set on this item, or null if the deck default
+ style should be used.</div>
+</td>
+</tr>
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFullName()">getFullName</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the "full name" of this component.</div>
 </td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i28" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getName()">getName</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the name of this component.</div>
 </td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i29" class="rowColor">
 <td class="colFirst"><code><a href="Page.html" title="class in ca.cgjennings.apps.arkham.deck">Page</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPage(int)">getPage</a></span>&#8203;(int&nbsp;index)</code></th>
 <td class="colLast">
 <div class="block">Returns the page with the specified index.</div>
 </td>
 </tr>
-<tr id="i27" class="rowColor">
+<tr id="i30" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPageCount()">getPageCount</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Return the number of pages in this deck.</div>
 </td>
 </tr>
-<tr id="i28" class="altColor">
+<tr id="i31" class="rowColor">
 <td class="colFirst"><code><a href="PaperProperties.html" title="class in ca.cgjennings.apps.arkham.deck">PaperProperties</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPaperProperties()">getPaperProperties</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the paper format for pages in this deck.</div>
 </td>
 </tr>
-<tr id="i29" class="rowColor">
+<tr id="i32" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="PaperProperties.html" title="class in ca.cgjennings.apps.arkham.deck">PaperProperties</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPaperSizes()">getPaperSizes</a></span>()</code></th>
 <td class="colLast">
@@ -480,7 +506,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  current time.</div>
 </td>
 </tr>
-<tr id="i30" class="altColor">
+<tr id="i33" class="rowColor">
 <td class="colFirst"><code><a href="PaperProperties.html" title="class in ca.cgjennings.apps.arkham.deck">PaperProperties</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPrinterPaperProperties()">getPrinterPaperProperties</a></span>()</code></th>
 <td class="colLast">
@@ -488,7 +514,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  deck.</div>
 </td>
 </tr>
-<tr id="i31" class="rowColor">
+<tr id="i34" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="PaperProperties.html" title="class in ca.cgjennings.apps.arkham.deck">PaperProperties</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPrinterPaperSizes()">getPrinterPaperSizes</a></span>()</code></th>
 <td class="colLast">
@@ -496,7 +522,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  at the current time.</div>
 </td>
 </tr>
-<tr id="i32" class="altColor">
+<tr id="i35" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPublishersMarkDistance()">getPublishersMarkDistance</a></span>()</code></th>
 <td class="colLast">
@@ -504,42 +530,42 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  marks.</div>
 </td>
 </tr>
-<tr id="i33" class="rowColor">
+<tr id="i36" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPublishersMarkLength()">getPublishersMarkLength</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the length of publisher's marks.</div>
 </td>
 </tr>
-<tr id="i34" class="altColor">
+<tr id="i37" class="rowColor">
 <td class="colFirst"><code>float</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPublishersMarkPrintWidth()">getPublishersMarkPrintWidth</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the width of publisher's marks when printed.</div>
 </td>
 </tr>
-<tr id="i35" class="rowColor">
+<tr id="i38" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPublishersMarksEnabled()">getPublishersMarksEnabled</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns whether publisher's marks are displayed for the deck.</div>
 </td>
 </tr>
-<tr id="i36" class="altColor">
+<tr id="i39" class="rowColor">
 <td class="colFirst"><code>float</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPublishersMarkWidth()">getPublishersMarkWidth</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the width of publisher's marks when displayed for editing.</div>
 </td>
 </tr>
-<tr id="i37" class="rowColor">
+<tr id="i40" class="altColor">
 <td class="colFirst"><code><a href="item/PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSelection()">getSelection</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the members of the current selection as a possibly empty array.</div>
 </td>
 </tr>
-<tr id="i38" class="altColor">
+<tr id="i41" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSelectionGroupSize(int)">getSelectionGroupSize</a></span>&#8203;(int&nbsp;group)</code></th>
 <td class="colLast">
@@ -547,7 +573,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  group.</div>
 </td>
 </tr>
-<tr id="i39" class="rowColor">
+<tr id="i42" class="altColor">
 <td class="colFirst"><code><a href="Page.html" title="class in ca.cgjennings.apps.arkham.deck">Page</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSelectionPage()">getSelectionPage</a></span>()</code></th>
 <td class="colLast">
@@ -555,19 +581,19 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  <code>null</code> if there is no selection.</div>
 </td>
 </tr>
-<tr id="i40" class="altColor">
+<tr id="i43" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Rectangle2D.Double.html?is-external=true" title="class or interface in java.awt.geom" class="externalLink">Rectangle2D.Double</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSelectionRectangle()">getSelectionRectangle</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i41" class="rowColor">
+<tr id="i44" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSelectionSize()">getSelectionSize</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the number of currently selected cards.</div>
 </td>
 </tr>
-<tr id="i42" class="altColor">
+<tr id="i45" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../resources/Settings.html" title="class in resources">Settings</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSettings()">getSettings</a></span>()</code></th>
 <td class="colLast">
@@ -575,21 +601,21 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  private settings.</div>
 </td>
 </tr>
-<tr id="i43" class="rowColor">
+<tr id="i46" class="altColor">
 <td class="colFirst"><code><a href="../sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sheet</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSheets()">getSheets</a></span>()</code></th>
 <td class="colLast">
 <div class="block">This is not a valid operation for a <code>Deck</code>.</div>
 </td>
 </tr>
-<tr id="i44" class="altColor">
+<tr id="i47" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSheetTitles()">getSheetTitles</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns an empty array, since decks do not have rendered sheets.</div>
 </td>
 </tr>
-<tr id="i45" class="rowColor">
+<tr id="i48" class="altColor">
 <td class="colFirst"><code>float</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSplitBorder()">getSplitBorder</a></span>()</code></th>
 <td class="colLast">
@@ -597,36 +623,36 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  when page splitting is enabled.</div>
 </td>
 </tr>
-<tr id="i46" class="altColor">
+<tr id="i49" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true" title="class or interface in java.awt" class="externalLink">Color</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSplitBorderColor()">getSplitBorderColor</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the colour of the border that is drawn around virtual pages.</div>
 </td>
 </tr>
-<tr id="i47" class="rowColor">
+<tr id="i50" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#groupSelection()">groupSelection</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Group the selection into a single unit.</div>
 </td>
 </tr>
-<tr id="i48" class="altColor">
+<tr id="i51" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasChanged()">hasChanged</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this component has been modified since the
- last call to <code>hasChanged()</code>.</div>
+<div class="block">Returns <code>true</code> if this component has been modified since the last
+ call to <code>hasChanged()</code>.</div>
 </td>
 </tr>
-<tr id="i49" class="rowColor">
+<tr id="i52" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasUnsavedChanges()">hasUnsavedChanges</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the value of this component's unsaved changes flag.</div>
 </td>
 </tr>
-<tr id="i50" class="altColor">
+<tr id="i53" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#invertSelection()">invertSelection</a></span>()</code></th>
 <td class="colLast">
@@ -634,52 +660,43 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  occurs.</div>
 </td>
 </tr>
-<tr id="i51" class="rowColor">
-<td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isAutoBleedMarginEnabled()">isAutoBleedMarginEnabled</a></span>()</code></th>
-<td class="colLast">
-<div class="block">Returns <code>true</code> if synthetic bleed margins are the default for
- this deck.</div>
-</td>
-</tr>
-<tr id="i52" class="altColor">
+<tr id="i54" class="altColor">
 <td class="colFirst"><code>static boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isDeckClipboardEmpty()">isDeckClipboardEmpty</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns whether the clipboard used for deck objects is empty.</div>
 </td>
 </tr>
-<tr id="i53" class="rowColor">
+<tr id="i55" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isDeckLayoutSupported()">isDeckLayoutSupported</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if components of this type can be placed in a
- deck.</div>
+<div class="block">Returns <code>true</code> if components of this type can be placed in a deck.</div>
 </td>
 </tr>
-<tr id="i54" class="altColor">
+<tr id="i56" class="altColor">
 <td class="colFirst"><code>static boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isDeckLayoutSupported(java.io.File)">isDeckLayoutSupported</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;f)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if a given file represents a game component
- that can be placed in a deck.</div>
+<div class="block">Returns <code>true</code> if a given file represents a game component that can
+ be placed in a deck.</div>
 </td>
 </tr>
-<tr id="i55" class="rowColor">
+<tr id="i57" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isPaperSplitting()">isPaperSplitting</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns whether paper splitting is enabled.</div>
 </td>
 </tr>
-<tr id="i56" class="altColor">
+<tr id="i58" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isSelected(ca.cgjennings.apps.arkham.deck.item.PageItem)">isSelected</a></span>&#8203;(<a href="item/PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a>&nbsp;item)</code></th>
 <td class="colLast">
 <div class="block">Returns <code>true</code> if the specified item is currently selected.</div>
 </td>
 </tr>
-<tr id="i57" class="rowColor">
+<tr id="i59" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#markChanged(int)">markChanged</a></span>&#8203;(int&nbsp;i)</code></th>
 <td class="colLast">
@@ -687,7 +704,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  <code>i</code>the sheet to be redrawn.</div>
 </td>
 </tr>
-<tr id="i58" class="altColor">
+<tr id="i60" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#markSaved()">markSaved</a></span>()</code></th>
 <td class="colLast">
@@ -695,129 +712,137 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  saved to clear the component's unsaved changes flag.</div>
 </td>
 </tr>
-<tr id="i59" class="rowColor">
+<tr id="i61" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#markUnsavedChanges()">markUnsavedChanges</a></span>()</code></th>
 <td class="colLast">
 <div class="block">This method sets the component's unsaved changes flag.</div>
 </td>
 </tr>
-<tr id="i60" class="altColor">
+<tr id="i62" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#moveSelectionToBack()">moveSelectionToBack</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i61" class="rowColor">
+<tr id="i63" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#moveSelectionToFront()">moveSelectionToFront</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i62" class="altColor">
+<tr id="i64" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#nudgeSelection(double,double)">nudgeSelection</a></span>&#8203;(double&nbsp;dx,
               double&nbsp;dy)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i63" class="rowColor">
+<tr id="i65" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#paste()">paste</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Pastes a previously copied selection from the clipboard.</div>
 </td>
 </tr>
-<tr id="i64" class="altColor">
+<tr id="i66" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeFromSelection(ca.cgjennings.apps.arkham.deck.item.PageItem)">removeFromSelection</a></span>&#8203;(<a href="item/PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a>&nbsp;item)</code></th>
 <td class="colLast">
 <div class="block">Removes a page item from the current selection.</div>
 </td>
 </tr>
-<tr id="i65" class="rowColor">
+<tr id="i67" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removePage(int)">removePage</a></span>&#8203;(int&nbsp;index)</code></th>
 <td class="colLast">
 <div class="block">Removes the page at the specified page index.</div>
 </td>
 </tr>
-<tr id="i66" class="altColor">
+<tr id="i68" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removePropertyChangeListener(java.beans.PropertyChangeListener)">removePropertyChangeListener</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/beans/PropertyChangeListener.html?is-external=true" title="class or interface in java.beans" class="externalLink">PropertyChangeListener</a>&nbsp;pcl)</code></th>
 <td class="colLast">
 <div class="block">Removes a <code>PropertyChangeListener</code> from the deck.</div>
 </td>
 </tr>
-<tr id="i67" class="rowColor">
+<tr id="i69" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removeSelectionListener(ca.cgjennings.apps.arkham.deck.Deck.SelectionChangeListener)">removeSelectionListener</a></span>&#8203;(<a href="Deck.SelectionChangeListener.html" title="interface in ca.cgjennings.apps.arkham.deck">Deck.SelectionChangeListener</a>&nbsp;l)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i68" class="altColor">
+<tr id="i70" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#reorderPage(int,int)">reorderPage</a></span>&#8203;(int&nbsp;oldindex,
            int&nbsp;newindex)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i69" class="rowColor">
+<tr id="i71" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#selectAll(ca.cgjennings.apps.arkham.deck.Page)">selectAll</a></span>&#8203;(<a href="Page.html" title="class in ca.cgjennings.apps.arkham.deck">Page</a>&nbsp;page)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i70" class="altColor">
+<tr id="i72" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#selectNumberedGroup(int)">selectNumberedGroup</a></span>&#8203;(int&nbsp;groupNumber)</code></th>
 <td class="colLast">
 <div class="block">Selects the specified numbered group.</div>
 </td>
 </tr>
-<tr id="i71" class="rowColor">
+<tr id="i73" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setActivePage(ca.cgjennings.apps.arkham.deck.Page)">setActivePage</a></span>&#8203;(<a href="Page.html" title="class in ca.cgjennings.apps.arkham.deck">Page</a>&nbsp;pageToActivate)</code></th>
 <td class="colLast">
 <div class="block">Changes the active page.</div>
 </td>
 </tr>
-<tr id="i72" class="altColor">
+<tr id="i74" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setAutoBleedMarginEnabled(boolean)">setAutoBleedMarginEnabled</a></span>&#8203;(boolean&nbsp;enable)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setBleedMarginWidth(double)">setBleedMarginWidth</a></span>&#8203;(double&nbsp;widthInPoints)</code></th>
 <td class="colLast">
-<div class="block">Sets whether synthetic bleed margins are enabled for components that do
- not have a built-in bleed margin.</div>
+<div class="block">Sets the bleed margin width to use when the relevant finish option is
+ selected.</div>
 </td>
 </tr>
-<tr id="i73" class="rowColor">
+<tr id="i75" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setComment(java.lang.String)">setComment</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;comment)</code></th>
 <td class="colLast">
 <div class="block">Sets the design rationale comment text associated with this deck.</div>
 </td>
 </tr>
-<tr id="i74" class="altColor">
+<tr id="i76" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setFinishStyle(ca.cgjennings.apps.arkham.sheet.FinishStyle)">setFinishStyle</a></span>&#8203;(<a href="../sheet/FinishStyle.html" title="enum in ca.cgjennings.apps.arkham.sheet">FinishStyle</a>&nbsp;style)</code></th>
+<td class="colLast">
+<div class="block">Sets the edge finish style to use for this item, or null if the deck
+ default option should be used.</div>
+</td>
+</tr>
+<tr id="i77" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setName(java.lang.String)">setName</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i75" class="rowColor">
+<tr id="i78" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPaperProperties(ca.cgjennings.apps.arkham.deck.PaperProperties)">setPaperProperties</a></span>&#8203;(<a href="PaperProperties.html" title="class in ca.cgjennings.apps.arkham.deck">PaperProperties</a>&nbsp;paper)</code></th>
 <td class="colLast">
 <div class="block">Sets the paper format for pages in this deck.</div>
 </td>
 </tr>
-<tr id="i76" class="altColor">
+<tr id="i79" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPaperSplitting(boolean)">setPaperSplitting</a></span>&#8203;(boolean&nbsp;splitPaper)</code></th>
 <td class="colLast">
 <div class="block">Sets whether paper splitting is enabled.</div>
 </td>
 </tr>
-<tr id="i77" class="rowColor">
+<tr id="i80" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPrinterPaperProperties(ca.cgjennings.apps.arkham.deck.PaperProperties)">setPrinterPaperProperties</a></span>&#8203;(<a href="PaperProperties.html" title="class in ca.cgjennings.apps.arkham.deck">PaperProperties</a>&nbsp;printerPaper)</code></th>
 <td class="colLast">
 <div class="block">Sets the printed page format for the deck.</div>
 </td>
 </tr>
-<tr id="i78" class="altColor">
+<tr id="i81" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPublishersMarkDistance(double)">setPublishersMarkDistance</a></span>&#8203;(double&nbsp;pubMarkDistance)</code></th>
 <td class="colLast">
@@ -825,35 +850,35 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  marks.</div>
 </td>
 </tr>
-<tr id="i79" class="rowColor">
+<tr id="i82" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPublishersMarkLength(double)">setPublishersMarkLength</a></span>&#8203;(double&nbsp;pubMarkLength)</code></th>
 <td class="colLast">
 <div class="block">Sets the length of publisher's marks when displayed for editing.</div>
 </td>
 </tr>
-<tr id="i80" class="altColor">
+<tr id="i83" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPublishersMarkPrintWidth(float)">setPublishersMarkPrintWidth</a></span>&#8203;(float&nbsp;pubMarkWidth)</code></th>
 <td class="colLast">
 <div class="block">Sets the width of publisher's marks when printed.</div>
 </td>
 </tr>
-<tr id="i81" class="rowColor">
+<tr id="i84" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPublishersMarksEnabled(boolean)">setPublishersMarksEnabled</a></span>&#8203;(boolean&nbsp;pubMarksEnabled)</code></th>
 <td class="colLast">
 <div class="block">Sets whether publisher's marks are displayed for the deck.</div>
 </td>
 </tr>
-<tr id="i82" class="altColor">
+<tr id="i85" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPublishersMarkWidth(float)">setPublishersMarkWidth</a></span>&#8203;(float&nbsp;pubMarkWidth)</code></th>
 <td class="colLast">
 <div class="block">Sets the width of publisher's marks when displayed for editing.</div>
 </td>
 </tr>
-<tr id="i83" class="rowColor">
+<tr id="i86" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSaveFileHint(java.io.File)">setSaveFileHint</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;f)</code></th>
 <td class="colLast">
@@ -861,21 +886,21 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  locating linked files (such as game components used in the deck).</div>
 </td>
 </tr>
-<tr id="i84" class="altColor">
+<tr id="i87" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSelection(ca.cgjennings.apps.arkham.deck.item.PageItem)">setSelection</a></span>&#8203;(<a href="item/PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a>&nbsp;item)</code></th>
 <td class="colLast">
 <div class="block">Selects a single page item, clearing any existing selection.</div>
 </td>
 </tr>
-<tr id="i85" class="rowColor">
+<tr id="i88" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSheets(ca.cgjennings.apps.arkham.sheet.Sheet%5B%5D)">setSheets</a></span>&#8203;(<a href="../sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sheet</a>[]&nbsp;sheets)</code></th>
 <td class="colLast">
 <div class="block">This is not a valid operation for a <code>Deck</code>.</div>
 </td>
 </tr>
-<tr id="i86" class="altColor">
+<tr id="i89" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSplitBorder(float)">setSplitBorder</a></span>&#8203;(float&nbsp;splitBorder)</code></th>
 <td class="colLast">
@@ -883,31 +908,31 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  for no border.</div>
 </td>
 </tr>
-<tr id="i87" class="rowColor">
+<tr id="i90" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSplitBorderColor(java.awt.Color)">setSplitBorderColor</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true" title="class or interface in java.awt" class="externalLink">Color</a>&nbsp;borderColor)</code></th>
 <td class="colLast">
 <div class="block">Sets the colour of the border that is drawn around virtual pages.</div>
 </td>
 </tr>
-<tr id="i88" class="altColor">
+<tr id="i91" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#storeSelectionInNumberedGroup(int)">storeSelectionInNumberedGroup</a></span>&#8203;(int&nbsp;group)</code></th>
 <td class="colLast">
 <div class="block">Stores the current selection in a numbered memory cell.</div>
 </td>
 </tr>
-<tr id="i89" class="rowColor">
+<tr id="i92" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#turnSelectionLeft()">turnSelectionLeft</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i90" class="altColor">
+<tr id="i93" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#turnSelectionRight()">turnSelectionRight</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i91" class="rowColor">
+<tr id="i94" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#ungroupSelection()">ungroupSelection</a></span>()</code></th>
 <td class="colLast">
@@ -921,6 +946,13 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></h3>
 <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang" class="externalLink">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang" class="externalLink">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang" class="externalLink">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang" class="externalLink">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang" class="externalLink">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang" class="externalLink">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long,int)" title="class or interface in java.lang" class="externalLink">wait</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a id="methods.inherited.from.class.ca.cgjennings.apps.arkham.component.GameComponent">
+<!--   -->
+</a>
+<h3>Methods inherited from interface&nbsp;ca.cgjennings.apps.arkham.component.<a href="../component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></h3>
+<code><a href="../component/GameComponent.html#getClassName()">getClassName</a></code></li>
 </ul>
 </li>
 </ul>
@@ -1049,6 +1081,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>Deck</h4>
 <pre>public&nbsp;Deck()</pre>
+<div class="block">Creates a new, empty deck using the default paper size.</div>
 </li>
 </ul>
 </li>
@@ -1118,8 +1151,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <div class="block">Adds a <code>PropertyChangeListener</code> to the deck. The listener is
  registered for all properties. The same listener object may be added more
  than once, and will be called as many times as it is added. If
- <code>listener</code> is null, no exception is thrown and no action is
- taken.</div>
+ <code>listener</code> is null, no exception is thrown and no action is taken.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>pcl</code> - the listener to add</dd>
@@ -1133,8 +1165,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>removePropertyChangeListener</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;removePropertyChangeListener&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/beans/PropertyChangeListener.html?is-external=true" title="class or interface in java.beans" class="externalLink">PropertyChangeListener</a>&nbsp;pcl)</pre>
-<div class="block">Removes a <code>PropertyChangeListener</code> from the deck. This removes
- a listener that was registered for all properties. If the listener was
+<div class="block">Removes a <code>PropertyChangeListener</code> from the deck. This removes a
+ listener that was registered for all properties. If the listener was
  added more than once, it will be notified one less time after being
  removed. If the listener is <code>null</code>, or was never added, no
  exception is thrown and no action is taken.</div>
@@ -1510,13 +1542,13 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  convention, you can save memory by sharing the shallow copy of the image.
 
  <p>
- <b>Debugging tip:</b> One operation that makes use of the
- <code>clone()</code> method is the <b>Spin Off</b> command. If you apply
- this command, make changes to the copied component, redraw the original
- component, and notice that changes in the copy have carried over to the
- original, then you are using a shallow copy rather than a deep copy.
- (That is, you are sharing a reference to the same mutable object rather
- than making a copy of the mutable object during the cloning.)</div>
+ <b>Debugging tip:</b> One operation that makes use of the <code>clone()</code>
+ method is the <b>Spin Off</b> command. If you apply this command, make
+ changes to the copied component, redraw the original component, and
+ notice that changes in the copy have carried over to the original, then
+ you are using a shallow copy rather than a deep copy. (That is, you are
+ sharing a reference to the same mutable object rather than making a copy
+ of the mutable object during the cloning.)</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../component/GameComponent.html#clone()">clone</a></code>&nbsp;in interface&nbsp;<code><a href="../component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></dd>
@@ -1537,8 +1569,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <div class="block">Returns whether publisher's marks are displayed for the deck.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>if <code>true</code>, publisher's marks will be generated for
- objects in the deck</dd>
+<dd>if <code>true</code>, publisher's marks will be generated for objects
+ in the deck</dd>
 </dl>
 </li>
 </ul>
@@ -1756,14 +1788,14 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>hasChanged</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;hasChanged()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../component/GameComponent.html#hasChanged()">GameComponent</a></code></span></div>
-<div class="block">Returns <code>true</code> if this component has been modified since the
- last call to <code>hasChanged()</code>.</div>
+<div class="block">Returns <code>true</code> if this component has been modified since the last
+ call to <code>hasChanged()</code>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../component/GameComponent.html#hasChanged()">hasChanged</a></code>&nbsp;in interface&nbsp;<code><a href="../component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the component has changed since this was
- last called</dd>
+<dd><code>true</code> if the component has changed since this was last
+ called</dd>
 </dl>
 </li>
 </ul>
@@ -1853,8 +1885,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../component/GameComponent.html#setSheets(ca.cgjennings.apps.arkham.sheet.Sheet%5B%5D)">setSheets</a></code>&nbsp;in interface&nbsp;<code><a href="../component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>sheets</code> - the sheets to associate with the component, or
- <code>null</code> to clear the associated sheets</dd>
+<dd><code>sheets</code> - the sheets to associate with the component, or <code>null</code>
+ to clear the associated sheets</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../component/GameComponent.html#getSheets()"><code>GameComponent.getSheets()</code></a>, 
 <a href="../component/GameComponent.html#createDefaultSheets()"><code>GameComponent.createDefaultSheets()</code></a></dd>
@@ -1919,18 +1951,18 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <pre class="methodSignature">public final&nbsp;void&nbsp;markChanged&#8203;(int&nbsp;i)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../component/GameComponent.html#markChanged(int)">GameComponent</a></code></span></div>
 <div class="block">Called to signal that changes have been made that require the
- <code>i</code>the sheet to be redrawn. This is typically not called
- directly. Instead, calling a method like "<code>setName</code>" should
- check if the name being set is actually different, and if so then call
- this method for each sheet that may have changed as a result. Plug-ins
- that customize an existing component may also call this method as needed
- to reflect new features that they have added.
+ <code>i</code>the sheet to be redrawn. This is typically not called directly.
+ Instead, calling a method like "<code>setName</code>" should check if the name
+ being set is actually different, and if so then call this method for each
+ sheet that may have changed as a result. Plug-ins that customize an
+ existing component may also call this method as needed to reflect new
+ features that they have added.
 
  <p>
  Implementations of this method will typically call the
  <a href="../sheet/Sheet.html#markChanged()"><code>Sheet.markChanged()</code></a> method of the relevant sheet (unless the
- sheet set is <code>null</code>), set a flag for use by
- <a href="../component/GameComponent.html#hasChanged()"><code>GameComponent.hasChanged()</code></a>, and then call <a href="../component/GameComponent.html#markUnsavedChanges()"><code>GameComponent.markUnsavedChanges()</code></a>.</div>
+ sheet set is <code>null</code>), set a flag for use by <a href="../component/GameComponent.html#hasChanged()"><code>GameComponent.hasChanged()</code></a>,
+ and then call <a href="../component/GameComponent.html#markUnsavedChanges()"><code>GameComponent.markUnsavedChanges()</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../component/GameComponent.html#markChanged(int)">markChanged</a></code>&nbsp;in interface&nbsp;<code><a href="../component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></dd>
@@ -2270,50 +2302,95 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <div class="block">Sets the colour of the border that is drawn around virtual pages.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>borderColor</code> - the split border colour; <code>null</code> is treated
- as black</dd>
+<dd><code>borderColor</code> - the split border colour; <code>null</code> is treated as
+ black</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#getSplitBorderColor()"><code>getSplitBorderColor()</code></a>, 
 <a href="#setPaperSplitting(boolean)"><code>setPaperSplitting(boolean)</code></a></dd>
 </dl>
 </li>
 </ul>
-<a id="setAutoBleedMarginEnabled(boolean)">
+<a id="getFinishStyle()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>setAutoBleedMarginEnabled</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;setAutoBleedMarginEnabled&#8203;(boolean&nbsp;enable)</pre>
-<div class="block">Sets whether synthetic bleed margins are enabled for components that do
- not have a built-in bleed margin. Changing this value updates the
- <a href="item/CardFace.html#setAutoBleedMarginEnabled(boolean)">associated property</a>
- in each card face in the deck.</div>
+<h4>getFinishStyle</h4>
+<pre class="methodSignature">public&nbsp;<a href="../sheet/FinishStyle.html" title="enum in ca.cgjennings.apps.arkham.sheet">FinishStyle</a>&nbsp;getFinishStyle()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="item/BleedMarginStyle.html#getFinishStyle()">BleedMarginStyle</a></code></span></div>
+<div class="block">Returns the finish style set on this item, or null if the deck default
+ style should be used.</div>
 <dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>enable</code> - the value to apply to the synthetic bleed margin property
- of card faces</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="#isAutoBleedMarginEnabled()"><code>isAutoBleedMarginEnabled()</code></a></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="item/BleedMarginStyle.html#getFinishStyle()">getFinishStyle</a></code>&nbsp;in interface&nbsp;<code><a href="item/BleedMarginStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">BleedMarginStyle</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the finish style to use</dd>
 </dl>
 </li>
 </ul>
-<a id="isAutoBleedMarginEnabled()">
+<a id="setFinishStyle(ca.cgjennings.apps.arkham.sheet.FinishStyle)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>isAutoBleedMarginEnabled</h4>
-<pre class="methodSignature">public&nbsp;boolean&nbsp;isAutoBleedMarginEnabled()</pre>
-<div class="block">Returns <code>true</code> if synthetic bleed margins are the default for
- this deck.</div>
+<h4>setFinishStyle</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setFinishStyle&#8203;(<a href="../sheet/FinishStyle.html" title="enum in ca.cgjennings.apps.arkham.sheet">FinishStyle</a>&nbsp;style)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="item/BleedMarginStyle.html#setFinishStyle(ca.cgjennings.apps.arkham.sheet.FinishStyle)">BleedMarginStyle</a></code></span></div>
+<div class="block">Sets the edge finish style to use for this item, or null if the deck
+ default option should be used.</div>
 <dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if card faces should use synthetic bleed
- margins by default</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="#setAutoBleedMarginEnabled(boolean)"><code>setAutoBleedMarginEnabled(boolean)</code></a></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="item/BleedMarginStyle.html#setFinishStyle(ca.cgjennings.apps.arkham.sheet.FinishStyle)">setFinishStyle</a></code>&nbsp;in interface&nbsp;<code><a href="item/BleedMarginStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">BleedMarginStyle</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>style</code> - the style to use</dd>
 </dl>
+</li>
+</ul>
+<a id="getBleedMarginWidth()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBleedMarginWidth</h4>
+<pre class="methodSignature">public&nbsp;double&nbsp;getBleedMarginWidth()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="item/BleedMarginStyle.html#getBleedMarginWidth()">BleedMarginStyle</a></code></span></div>
+<div class="block">Returns the bleed margin width to use when the relevant finish option is
+ selected.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="item/BleedMarginStyle.html#getBleedMarginWidth()">getBleedMarginWidth</a></code>&nbsp;in interface&nbsp;<code><a href="item/BleedMarginStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">BleedMarginStyle</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the positive width in points</dd>
+</dl>
+</li>
+</ul>
+<a id="setBleedMarginWidth(double)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setBleedMarginWidth</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setBleedMarginWidth&#8203;(double&nbsp;widthInPoints)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="item/BleedMarginStyle.html#setBleedMarginWidth(double)">BleedMarginStyle</a></code></span></div>
+<div class="block">Sets the bleed margin width to use when the relevant finish option is
+ selected.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="item/BleedMarginStyle.html#setBleedMarginWidth(double)">setBleedMarginWidth</a></code>&nbsp;in interface&nbsp;<code><a href="item/BleedMarginStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">BleedMarginStyle</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>widthInPoints</code> - the positive bleed margin width</dd>
+</dl>
+</li>
+</ul>
+<a id="applyFinishStyleToItems()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>applyFinishStyleToItems</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;applyFinishStyleToItems()</pre>
+<div class="block">Applies the current deck default finish options to all compatible items
+ in the deck.</div>
 </li>
 </ul>
 <a id="addSelectionListener(ca.cgjennings.apps.arkham.deck.Deck.SelectionChangeListener)">
@@ -2395,18 +2472,19 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <div class="block">Returns a <a href="../../../../../resources/Settings.html" title="class in resources"><code>Settings</code></a> instance that will return this component's
  private settings. A component's private settings are saved along with the
  component when it is written to a file. This can be used to override the
- default settings for component (stored in the master settings for the
- game) as a way to "hack" existing component designs. It can also be used
- by the component itself to store arbitrary information.
- <a href="../diy/DIY.html" title="class in ca.cgjennings.apps.arkham.diy"><code>DIY components</code></a> generally use the component's private settings
- to store the current user-configurable state of the component.
+ default settings for component (which are determined by the the shared
+ game settings for the game associated with the component) as a way to
+ "hack" existing component designs. It can also be used by the component
+ itself to store arbitrary information. <a href="../diy/DIY.html" title="class in ca.cgjennings.apps.arkham.diy"><code>DIY components</code></a>
+ generally use the component's private settings to store the current
+ user-configurable state of the component.
 
  <p>
  Note that setting the key with the name <a href="../../../../../gamedata/Game.html#GAME_SETTING_KEY"><code>Game.GAME_SETTING_KEY</code></a>
  ("game") will change the parent scope of the private settings to the
- <a href="../../../../../gamedata/Game.html#getMasterSettings()"><code>master settings instance</code></a> for that game
- whose code matches the new value. (The initial value of this key is
- normally set on the component's half using the game code specified in the
+ <a href="../../../../../gamedata/Game.html#getSettings()"><code>relevant game's settings</code></a> for that game whose
+ code matches the new value. (The initial value of this key is normally
+ set on the component's half using the game code specified in the
  component's class map entry.)</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -2425,16 +2503,14 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>isDeckLayoutSupported</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isDeckLayoutSupported()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../component/GameComponent.html#isDeckLayoutSupported()">GameComponent</a></code></span></div>
-<div class="block">Returns <code>true</code> if components of this type can be placed in a
- deck. Typically, only components that don't have faces return
- <code>false</code>. (Decks themselves, for example, cannot be placed
- inside other decks.)</div>
+<div class="block">Returns <code>true</code> if components of this type can be placed in a deck.
+ Typically, only components that don't have faces return <code>false</code>.
+ (Decks themselves, for example, cannot be placed inside other decks.)</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../component/GameComponent.html#isDeckLayoutSupported()">isDeckLayoutSupported</a></code>&nbsp;in interface&nbsp;<code><a href="../component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if and only if this component can be added to a
- deck</dd>
+<dd><code>true</code> if and only if this component can be added to a deck</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../component/GameComponent.html#createDefaultSheets()"><code>GameComponent.createDefaultSheets()</code></a>, 
 <a href="#isDeckLayoutSupported(java.io.File)"><code>isDeckLayoutSupported(java.io.File)</code></a></dd>
@@ -2448,16 +2524,16 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>isDeckLayoutSupported</h4>
 <pre class="methodSignature">public static&nbsp;boolean&nbsp;isDeckLayoutSupported&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;f)</pre>
-<div class="block">Returns <code>true</code> if a given file represents a game component
- that can be placed in a deck. For recent file format versions, this can
- be determined without fully opening the file by
+<div class="block">Returns <code>true</code> if a given file represents a game component that can
+ be placed in a deck. For recent file format versions, this can be
+ determined without fully opening the file by
  <a href="../component/ComponentMetadata.html#isDeckLayoutSupported()">examining its metadata</a>.
  For older files, the component must first be read in. If for any reason
  the value cannot be read from the file, <code>false</code> is returned.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>returns <code>true</code> if the game component in the specified
- file can be placed in a deck</dd>
+<dd>returns <code>true</code> if the game component in the specified file
+ can be placed in a deck</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../component/GameComponent.html#isDeckLayoutSupported()"><code>GameComponent.isDeckLayoutSupported()</code></a></dd>
 </dl>

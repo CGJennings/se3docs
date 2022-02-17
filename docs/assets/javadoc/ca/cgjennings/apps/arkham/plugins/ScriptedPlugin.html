@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -159,8 +159,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <td class="colFirst"><code><a href="ScriptMonkey.html" title="class in ca.cgjennings.apps.arkham.plugins">ScriptMonkey</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getScriptMonkey()">getScriptMonkey</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the <code>ScriptMonkey</code> for the script being run by the
- plug-in.</div>
+<div class="block">Returns the <code>ScriptMonkey</code> for the script being run by the plug-in.</div>
 </td>
 </tr>
 </table>
@@ -202,9 +201,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <h4>getScriptMonkey</h4>
 <pre class="methodSignature"><a href="ScriptMonkey.html" title="class in ca.cgjennings.apps.arkham.plugins">ScriptMonkey</a>&nbsp;getScriptMonkey()</pre>
-<div class="block">Returns the <code>ScriptMonkey</code> for the script being run by the
- plug-in. This encapsulates the script's execution context. If the plug-in
- creates contexts dynamically as it runs scripts, the plug-in may return
+<div class="block">Returns the <code>ScriptMonkey</code> for the script being run by the plug-in.
+ This encapsulates the script's execution context. If the plug-in creates
+ contexts dynamically as it runs scripts, the plug-in may return
  <code>null</code> if it is not currently executing a script.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>

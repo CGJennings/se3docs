@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -274,7 +274,7 @@ extends <a href="AbstractRenderedItem.html" title="class in ca.cgjennings.apps.a
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>protected void</code></td>
+<td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#clearCachedImages()">clearCachedImages</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Clear any cached image data held by this object.</div>
@@ -327,16 +327,16 @@ extends <a href="AbstractRenderedItem.html" title="class in ca.cgjennings.apps.a
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isFastOutlineAllowed()">isFastOutlineAllowed</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the tile can be painted as a simple outline
- when drawing a low quality preview.</div>
+<div class="block">Returns <code>true</code> if the tile can be painted as a simple outline when
+ drawing a low quality preview.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isMipMapCacheEnabledByDefault()">isMipMapCacheEnabledByDefault</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the MIP map cache should be enabled by
- default for this item type.</div>
+<div class="block">Returns <code>true</code> if the MIP map cache should be enabled by default
+ for this item type.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
@@ -366,8 +366,8 @@ extends <a href="AbstractRenderedItem.html" title="class in ca.cgjennings.apps.a
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#scaleMipMapUpAtHighZoom(ca.cgjennings.apps.arkham.sheet.RenderTarget,double)">scaleMipMapUpAtHighZoom</a></span>&#8203;(<a href="../../sheet/RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target,
                        double&nbsp;resolution)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the highest resolution MIP map image should
- be scaled up at high zoom levels.</div>
+<div class="block">Returns <code>true</code> if the highest resolution MIP map image should be
+ scaled up at high zoom levels.</div>
 </td>
 </tr>
 <tr id="i14" class="altColor">
@@ -577,13 +577,12 @@ extends <a href="AbstractRenderedItem.html" title="class in ca.cgjennings.apps.a
 <ul class="blockList">
 <li class="blockList">
 <h4>clearCachedImages</h4>
-<pre class="methodSignature">protected&nbsp;void&nbsp;clearCachedImages()</pre>
+<pre class="methodSignature">public&nbsp;void&nbsp;clearCachedImages()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="AbstractRenderedItem.html#clearCachedImages()">AbstractRenderedItem</a></code></span></div>
 <div class="block">Clear any cached image data held by this object. The base class clears
  any cached oriented results and the MIP map cache (if enabled).
- Subclasses should override this (calling
- <code>super.clearCachedImages</code>) if the <a href="AbstractRenderedItem.html#renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget,double)"><code>AbstractRenderedItem.renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a>
- implementation caches results.</div>
+ Subclasses should override this (calling <code>super.clearCachedImages</code>)
+ if the <a href="AbstractRenderedItem.html#renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget,double)"><code>AbstractRenderedItem.renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a> implementation caches results.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractRenderedItem.html#clearCachedImages()">clearCachedImages</a></code>&nbsp;in class&nbsp;<code><a href="AbstractRenderedItem.html" title="class in ca.cgjennings.apps.arkham.deck.item">AbstractRenderedItem</a></code></dd>
@@ -729,12 +728,12 @@ extends <a href="AbstractRenderedItem.html" title="class in ca.cgjennings.apps.a
 <pre class="methodSignature">protected&nbsp;boolean&nbsp;scaleMipMapUpAtHighZoom&#8203;(<a href="../../sheet/RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target,
                                           double&nbsp;resolution)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="AbstractRenderedItem.html#scaleMipMapUpAtHighZoom(ca.cgjennings.apps.arkham.sheet.RenderTarget,double)">AbstractRenderedItem</a></code></span></div>
-<div class="block">Returns <code>true</code> if the highest resolution MIP map image should
- be scaled up at high zoom levels. This method is called when the MIP map
+<div class="block">Returns <code>true</code> if the highest resolution MIP map image should be
+ scaled up at high zoom levels. This method is called when the MIP map
  cache is enabled but the current zoom level of the view requires an image
  with higher resolution than the maximum resolution used by the MIP map
- cache. If it returns <code>true</code>, then the highest resolution MIP
- map image will be scaled up to the requested resolution. If it returns
+ cache. If it returns <code>true</code>, then the highest resolution MIP map
+ image will be scaled up to the requested resolution. If it returns
  <code>false</code>, then a new rendering will be requested at the exact
  resolution needed, just as if the MIP map cache was disabled.
 
@@ -769,8 +768,8 @@ extends <a href="AbstractRenderedItem.html" title="class in ca.cgjennings.apps.a
 <li class="blockList">
 <h4>isMipMapCacheEnabledByDefault</h4>
 <pre class="methodSignature">protected&nbsp;boolean&nbsp;isMipMapCacheEnabledByDefault()</pre>
-<div class="block">Returns <code>true</code> if the MIP map cache should be enabled by
- default for this item type. Subclasses can override this to disable this
+<div class="block">Returns <code>true</code> if the MIP map cache should be enabled by default
+ for this item type. Subclasses can override this to disable this
  mechanism. (The base class returns <code>true</code>.)
 
  <p>
@@ -780,8 +779,8 @@ extends <a href="AbstractRenderedItem.html" title="class in ca.cgjennings.apps.a
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractRenderedItem.html#isMipMapCacheEnabledByDefault()">isMipMapCacheEnabledByDefault</a></code>&nbsp;in class&nbsp;<code><a href="AbstractRenderedItem.html" title="class in ca.cgjennings.apps.arkham.deck.item">AbstractRenderedItem</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the MIP map cache should automatically be
- enabled during construction or deserialization</dd>
+<dd><code>true</code> if the MIP map cache should automatically be enabled
+ during construction or deserialization</dd>
 </dl>
 </li>
 </ul>
@@ -808,8 +807,8 @@ extends <a href="AbstractRenderedItem.html" title="class in ca.cgjennings.apps.a
 <li class="blockList">
 <h4>isFastOutlineAllowed</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isFastOutlineAllowed()</pre>
-<div class="block">Returns <code>true</code> if the tile can be painted as a simple outline
- when drawing a low quality preview.</div>
+<div class="block">Returns <code>true</code> if the tile can be painted as a simple outline when
+ drawing a low quality preview.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the tile can be draw as an outline</dd>
@@ -828,8 +827,7 @@ extends <a href="AbstractRenderedItem.html" title="class in ca.cgjennings.apps.a
  to <code>true</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>allowsOutlineDrawing</code> - <code>true</code> to allow drawing as an
- outline</dd>
+<dd><code>allowsOutlineDrawing</code> - <code>true</code> to allow drawing as an outline</dd>
 </dl>
 </li>
 </ul>

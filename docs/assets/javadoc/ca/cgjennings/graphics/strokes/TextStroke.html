@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -162,9 +162,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Stroke.ht
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="TextStroke.Style.html" title="enum in ca.cgjennings.graphics.strokes">TextStroke.Style</a></span></code></th>
 <td class="colLast">
-<div class="block">The <code>Style</code> determines how the text is placed fitted to the
- path when the length of the text and the length of a path are not the
- same.</div>
+<div class="block">The <code>Style</code> determines how the text is placed fitted to the path
+ when the length of the text and the length of a path are not the same.</div>
 </td>
 </tr>
 </table>
@@ -263,16 +262,15 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Stroke.ht
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isInsideOut()">isInsideOut</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the text is drawn inside-out, that is, if
- the direction that the glyphs protrude from the path is flipped.</div>
+<div class="block">Returns <code>true</code> if the text is drawn inside-out, that is, if the
+ direction that the glyphs protrude from the path is flipped.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isLeftToRight()">isLeftToRight</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the text is treated as a left-to-right
- language.</div>
+<div class="block">Returns <code>true</code> if the text is treated as a left-to-right language.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -397,8 +395,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Stroke.ht
 <dd><code>limit</code> - log<sub>2</sub> of the maximum number of line segments that
  will be generated for any curved segment of the path</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>flatness</code> or
- <code>limit</code> is less than 0</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>flatness</code> or <code>limit</code> is
+ less than 0</dd>
 </dl>
 </li>
 </ul>
@@ -440,8 +438,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Stroke.ht
 <li class="blockList">
 <h4>isInsideOut</h4>
 <pre class="methodSignature">public final&nbsp;boolean&nbsp;isInsideOut()</pre>
-<div class="block">Returns <code>true</code> if the text is drawn inside-out, that is, if
- the direction that the glyphs protrude from the path is flipped.</div>
+<div class="block">Returns <code>true</code> if the text is drawn inside-out, that is, if the
+ direction that the glyphs protrude from the path is flipped.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the glyph direction should be flipped</dd>
@@ -500,8 +498,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Stroke.ht
 <li class="blockList">
 <h4>isLeftToRight</h4>
 <pre class="methodSignature">public final&nbsp;boolean&nbsp;isLeftToRight()</pre>
-<div class="block">Returns <code>true</code> if the text is treated as a left-to-right
- language.</div>
+<div class="block">Returns <code>true</code> if the text is treated as a left-to-right language.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the bidi order is treated as left-to-right</dd>

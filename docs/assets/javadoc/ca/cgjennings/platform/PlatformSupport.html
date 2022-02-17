@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -256,8 +256,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                   <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JButton.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JButton</a>&nbsp;designedCancel)</code></th>
 <td class="colLast">
 <div class="block">A convenience method for <code>makeAgnosticDialog( dialog, true,
- designedOK, designedCancel )</code>, which assumes that the dialog
- buttons are in "Windows order" (OK on the left, Cancel on the right).</div>
+ designedOK, designedCancel )</code>, which assumes that the dialog buttons are
+ in "Windows order" (OK on the left, Cancel on the right).</div>
 </td>
 </tr>
 </table>
@@ -311,8 +311,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>PLATFORM_IS_OTHER</h4>
 <pre>public static final&nbsp;boolean PLATFORM_IS_OTHER</pre>
-<div class="block">True if running on a non-Windows, non-maxOS operating system.
- Typically this means a Unix-like operating system such as Linux.</div>
+<div class="block">True if running on a non-Windows, non-maxOS operating system. Typically
+ this means a Unix-like operating system such as Linux.</div>
 </li>
 </ul>
 </li>
@@ -335,8 +335,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                                          <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JButton.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JButton</a>&nbsp;designedOK,
                                          <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JButton.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JButton</a>&nbsp;designedCancel)</pre>
 <div class="block">A convenience method for <code>makeAgnosticDialog( dialog, true,
- designedOK, designedCancel )</code>, which assumes that the dialog
- buttons are in "Windows order" (OK on the left, Cancel on the right).</div>
+ designedOK, designedCancel )</code>, which assumes that the dialog buttons are
+ in "Windows order" (OK on the left, Cancel on the right).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>dialog</code> - the dialog or other control to be reordered</dd>
@@ -375,8 +375,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <b>Notes:</b>
  <ol>
  <li>You must ensure that this method is only called once for a given
- <code>AgnosticDialog</code> during its lifetime, or the button order will
- be inconsistent and the action events will be called multiple times.
+ <code>AgnosticDialog</code> during its lifetime, or the button order will be
+ inconsistent and the action events will be called multiple times.
  <li>Although referred to in the general sense as the "OK" button, the
  text of this button should name the specific action it will perform.
  </ol></div>
@@ -392,8 +392,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the button that will be used as the OK button</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if either button is <code>null</code> or
- if they refer to the same object</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if either button is <code>null</code> or if
+ they refer to the same object</dd>
 </dl>
 </li>
 </ul>
@@ -456,8 +456,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  Cancel button on this platform.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if OK comes before Cancel; <code>false</code>
- if it comes after</dd>
+<dd><code>true</code> if OK comes before Cancel; <code>false</code> if it comes
+ after</dd>
 </dl>
 </li>
 </ul>
@@ -497,14 +497,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  menu accelerator key for the native platform. For example, "menu X" will
  be treated as "ctrl X" on the Windows platform, but as "meta X" (which is
  Command key + X) on Max OS X platform. Note that there is no way to
- determine from the returned <code>KeyStroke</code> instance whether the
- "menu" modifier was used or not.</div>
+ determine from the returned <code>KeyStroke</code> instance whether the "menu"
+ modifier was used or not.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>stroke</code> - a string formatted as above</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a <code>KeyStroke</code> object representing the specified key
- event</dd>
+<dd>a <code>KeyStroke</code> object representing the specified key event</dd>
 </dl>
 </li>
 </ul>

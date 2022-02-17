@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -142,11 +142,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImageOp.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImageOp</a></pre>
 <div class="block">An abstract base class for filtering images. While <code>BufferedImageOp</code>s
  are generally designed to operate on images that use any storage format or
- colour model, <code>AbstractImageFilter</code> is optimized to work with
- 32-bit ARGB image data (<code>BufferedImage.TYPE_INT_ARGB</code>). Images
- stored in other formats will typically be converted to and from ARGB data as
- necessary. This greatly simplifies the task of writing an image filter,
- though at the cost of conversion (when required).
+ colour model, <code>AbstractImageFilter</code> is optimized to work with 32-bit
+ ARGB image data (<code>BufferedImage.TYPE_INT_ARGB</code>). Images stored in other
+ formats will typically be converted to and from ARGB data as necessary. This
+ greatly simplifies the task of writing an image filter, though at the cost of
+ conversion (when required).
 
  <p>
  This base class provides default implementations for many methods of
@@ -158,13 +158,12 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Buf
 
  <p>
  <b>Performance note:</b> As a side effect of automatic conversion, image
- types other than <code>TYPE_INT_ARGB</code> and <code>TYPE_INT_RGB</code>
- will become <i>unmanaged images</i> as a result of the filtering process.
- Unmanaged images cannot be hardware accelerated, and thus are typically much
- slower to draw. The best way to maximize performance is to ensure that all
- images are in one of the optimal formats. If you are unsure about a
- particular image, use
- <a href="../ImageUtilities.html#ensureIntRGBFormat(java.awt.image.BufferedImage)"><code>ImageUtilities.ensureIntRGBFormat(java.awt.image.BufferedImage)</code></a>.</div>
+ types other than <code>TYPE_INT_ARGB</code> and <code>TYPE_INT_RGB</code> will become
+ <i>unmanaged images</i> as a result of the filtering process. Unmanaged
+ images cannot be hardware accelerated, and thus are typically much slower to
+ draw. The best way to maximize performance is to ensure that all images are
+ in one of the optimal formats. If you are unsure about a particular image,
+ use <a href="../ImageUtilities.html#ensureIntRGBFormat(java.awt.image.BufferedImage)"><code>ImageUtilities.ensureIntRGBFormat(java.awt.image.BufferedImage)</code></a>.</div>
 </li>
 </ul>
 </div>

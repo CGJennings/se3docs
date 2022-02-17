@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -307,8 +307,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.h
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getClientProperty(java.lang.String)">getClientProperty</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;propertyName)</code></th>
 <td class="colLast">
-<div class="block">Returns the value of a client property of this page item, or
- <code>null</code> if the property is not defined.</div>
+<div class="block">Returns the value of a client property of this page item, or <code>null</code>
+ if the property is not defined.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -330,8 +330,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.h
 <td class="colFirst"><code><a href="Group.html" title="interface in ca.cgjennings.apps.arkham.deck.item">Group</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getGroup()">getGroup</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the <a href="Group.html" title="interface in ca.cgjennings.apps.arkham.deck.item"><code>Group</code></a> that this item belongs to, or
- <code>null</code>.</div>
+<div class="block">Returns the <a href="Group.html" title="interface in ca.cgjennings.apps.arkham.deck.item"><code>Group</code></a> that this item belongs to, or <code>null</code>.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
@@ -429,32 +428,31 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.h
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasExteriorHandles()">hasExteriorHandles</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this item has one or more drag handles that
- may lie outside of the item's bounding box.</div>
+<div class="block">Returns <code>true</code> if this item has one or more drag handles that may
+ lie outside of the item's bounding box.</div>
 </td>
 </tr>
 <tr id="i22" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hitTest(java.awt.geom.Point2D)">hitTest</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Point2D.html?is-external=true" title="class or interface in java.awt.geom" class="externalLink">Point2D</a>&nbsp;point)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if <code>point</code> is inside the visible
- bounds of this object.</div>
+<div class="block">Returns <code>true</code> if <code>point</code> is inside the visible bounds of
+ this object.</div>
 </td>
 </tr>
 <tr id="i23" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isBleedMarginMarked()">isBleedMarginMarked</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this item should have crop marks added to
- it.</div>
+<div class="block">Returns <code>true</code> if this item should have crop marks added to it.</div>
 </td>
 </tr>
 <tr id="i24" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isHorizontal()">isHorizontal</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this is in a horizontal orientation (turned
- 90 degrees from normal).</div>
+<div class="block">Returns <code>true</code> if this is in a horizontal orientation (turned 90
+ degrees from normal).</div>
 </td>
 </tr>
 <tr id="i25" class="rowColor">
@@ -475,8 +473,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.h
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isTurned0DegreesFrom(ca.cgjennings.apps.arkham.deck.item.PageItem)">isTurned0DegreesFrom</a></span>&#8203;(<a href="PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a>&nbsp;rhs)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this item has the same orientation rotation
- as another item.</div>
+<div class="block">Returns <code>true</code> if this item has the same orientation rotation as
+ another item.</div>
 </td>
 </tr>
 <tr id="i28" class="altColor">
@@ -799,8 +797,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.h
  y2) and that <code>Math.sqrt( x2*x2 + y2*y2 ) = 1</code>.
 
  <p>
- Returns <code>null</code> if there are no extra fold marks for this
- sheet.</div>
+ Returns <code>null</code> if there are no extra fold marks for this sheet.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>an array of fold mark data in the format described above, or
@@ -901,8 +898,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.h
 <li class="blockList">
 <h4>getOutline</h4>
 <pre class="methodSignature"><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Shape.html?is-external=true" title="class or interface in java.awt" class="externalLink">Shape</a>&nbsp;getOutline()</pre>
-<div class="block">Return a <code>Shape</code> that corresponds to the outline of this item.
- In the simplest case, this can return the same result as
+<div class="block">Return a <code>Shape</code> that corresponds to the outline of this item. In
+ the simplest case, this can return the same result as
  <a href="#getRectangle()"><code>getRectangle()</code></a>. If precise geometry is available for the item,
  then this should return a more accurate bounding shape.</div>
 <dl>
@@ -1051,9 +1048,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.h
 <li class="blockList">
 <h4>isBleedMarginMarked</h4>
 <pre class="methodSignature">boolean&nbsp;isBleedMarginMarked()</pre>
-<div class="block">Returns <code>true</code> if this item should have crop marks added to
- it. The crop marks will be placed <a href="#getBleedMargin()"><code>getBleedMargin()</code></a> points from
- the ends of each edge.</div>
+<div class="block">Returns <code>true</code> if this item should have crop marks added to it. The
+ crop marks will be placed <a href="#getBleedMargin()"><code>getBleedMargin()</code></a> points from the ends
+ of each edge.</div>
 </li>
 </ul>
 <a id="getBleedMargin()">
@@ -1077,15 +1074,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.h
 <li class="blockList">
 <h4>hitTest</h4>
 <pre class="methodSignature">boolean&nbsp;hitTest&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Point2D.html?is-external=true" title="class or interface in java.awt.geom" class="externalLink">Point2D</a>&nbsp;point)</pre>
-<div class="block">Returns <code>true</code> if <code>point</code> is inside the visible
- bounds of this object.</div>
+<div class="block">Returns <code>true</code> if <code>point</code> is inside the visible bounds of
+ this object.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>point</code> - a point in document coordinates (points from the upper-left
  corner of the page)</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the point lies inside the bounds of the
- object</dd>
+<dd><code>true</code> if the point lies inside the bounds of the object</dd>
 </dl>
 </li>
 </ul>
@@ -1096,9 +1092,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.h
 <li class="blockList">
 <h4>isHorizontal</h4>
 <pre class="methodSignature">boolean&nbsp;isHorizontal()</pre>
-<div class="block">Returns <code>true</code> if this is in a horizontal orientation (turned
- 90 degrees from normal). If this is not a <a href="FlippablePageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item"><code>FlippablePageItem</code></a>, it
- must return <code>false</code>.</div>
+<div class="block">Returns <code>true</code> if this is in a horizontal orientation (turned 90
+ degrees from normal). If this is not a <a href="FlippablePageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item"><code>FlippablePageItem</code></a>, it must
+ return <code>false</code>.</div>
 </li>
 </ul>
 <a id="isVertical()">
@@ -1108,8 +1104,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.h
 <li class="blockList">
 <h4>isVertical</h4>
 <pre class="methodSignature">boolean&nbsp;isVertical()</pre>
-<div class="block">Returns <code>true</code> if card is in a vertical orientation. If this
- is not a <a href="FlippablePageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item"><code>FlippablePageItem</code></a>, it must return <code>true</code>.</div>
+<div class="block">Returns <code>true</code> if card is in a vertical orientation. If this is not
+ a <a href="FlippablePageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item"><code>FlippablePageItem</code></a>, it must return <code>true</code>.</div>
 </li>
 </ul>
 <a id="isMirrored()">
@@ -1130,8 +1126,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.h
 <li class="blockList">
 <h4>isTurned0DegreesFrom</h4>
 <pre class="methodSignature">boolean&nbsp;isTurned0DegreesFrom&#8203;(<a href="PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a>&nbsp;rhs)</pre>
-<div class="block">Returns <code>true</code> if this item has the same orientation rotation
- as another item.</div>
+<div class="block">Returns <code>true</code> if this item has the same orientation rotation as
+ another item.</div>
 </li>
 </ul>
 <a id="isTurned180DegreesFrom(ca.cgjennings.apps.arkham.deck.item.PageItem)">
@@ -1189,16 +1185,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.h
 <div class="block">Update any cached representations needed to paint this item at the
  specified settings. It is not required that this be called prior to
  calling <a href="#paint(java.awt.Graphics2D,ca.cgjennings.apps.arkham.sheet.RenderTarget,double)"><code>paint(java.awt.Graphics2D, ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a>. Rather, the intent is that if this method returns
- without throwing any exceptions (such as <code>OutOfMemoryError</code>),
- then a call to <a href="#paint(java.awt.Graphics2D,ca.cgjennings.apps.arkham.sheet.RenderTarget,double)"><code>paint(java.awt.Graphics2D, ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a> with the same settings is also
+ without throwing any exceptions (such as <code>OutOfMemoryError</code>), then
+ a call to <a href="#paint(java.awt.Graphics2D,ca.cgjennings.apps.arkham.sheet.RenderTarget,double)"><code>paint(java.awt.Graphics2D, ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a> with the same settings is also
  <i>expected</i> to succeed. Thus, this method may be called prior to
  rendering at high resolution and if it throws an
  <code>OutOfMemoryError</code>, the application can attempt to recover by
  freeing up resources before trying to paint again.
 
  <p>
- If this <code>PageItem</code> does not require rendering to a buffer,
- then this method may do nothing.</div>
+ If this <code>PageItem</code> does not require rendering to a buffer, then
+ this method may do nothing.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>target</code> - the rendering target</dd>
@@ -1338,8 +1334,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.h
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>menu</code> - the menu that will be displayed</dd>
 <dd><code>selection</code> - the selected items; this should be considered read-only</dd>
-<dd><code>isSelectionFocus</code> - if <code>true</code>, this is the last item in
- the selection</dd>
+<dd><code>isSelectionFocus</code> - if <code>true</code>, this is the last item in the
+ selection</dd>
 </dl>
 </li>
 </ul>
@@ -1350,8 +1346,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.h
 <li class="blockList">
 <h4>getGroup</h4>
 <pre class="methodSignature"><a href="Group.html" title="interface in ca.cgjennings.apps.arkham.deck.item">Group</a>&nbsp;getGroup()</pre>
-<div class="block">Returns the <a href="Group.html" title="interface in ca.cgjennings.apps.arkham.deck.item"><code>Group</code></a> that this item belongs to, or
- <code>null</code>.</div>
+<div class="block">Returns the <a href="Group.html" title="interface in ca.cgjennings.apps.arkham.deck.item"><code>Group</code></a> that this item belongs to, or <code>null</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the group the object is in, or <code>null</code> if it isn't in a
@@ -1382,11 +1377,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.h
 <li class="blockList">
 <h4>hasExteriorHandles</h4>
 <pre class="methodSignature">boolean&nbsp;hasExteriorHandles()</pre>
-<div class="block">Returns <code>true</code> if this item has one or more drag handles that
- may lie outside of the item's bounding box. The editor normally only
- tests handles that lie within the bounding box to see if the user has
- pointed at them; if this method returns <code>true</code> then the item's
- handles are always tested.</div>
+<div class="block">Returns <code>true</code> if this item has one or more drag handles that may
+ lie outside of the item's bounding box. The editor normally only tests
+ handles that lie within the bounding box to see if the user has pointed
+ at them; if this method returns <code>true</code> then the item's handles are
+ always tested.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if some handles may be outside the bounding box</dd>
@@ -1421,8 +1416,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.h
 <li class="blockList">
 <h4>getClientProperty</h4>
 <pre class="methodSignature"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getClientProperty&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;propertyName)</pre>
-<div class="block">Returns the value of a client property of this page item, or
- <code>null</code> if the property is not defined.</div>
+<div class="block">Returns the value of a client property of this page item, or <code>null</code>
+ if the property is not defined.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>propertyName</code> - the property name</dd>

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -136,9 +136,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre>public class <span class="typeNameLabel">ScriptedRunnable</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>
 implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Runnable</a></pre>
-<div class="block">A <code>Runnable</code> that can execute script code in another thread. This
- can be used to parallelize script code using <a href="../../../algo/SplitJoin.html" title="class in ca.cgjennings.algo"><code>SplitJoin</code></a>. It is also
- used by the <code>threads</code> library to support with script code.</div>
+<div class="block">A <code>Runnable</code> that can execute script code in another thread. This can
+ be used to parallelize script code using <a href="../../../algo/SplitJoin.html" title="class in ca.cgjennings.algo"><code>SplitJoin</code></a>. It is also used
+ by the <code>threads</code> library to support with script code.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -275,8 +275,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable
 <pre>public&nbsp;ScriptedRunnable&#8203;(<a href="ScriptedRunnable.Future.html" title="interface in ca.cgjennings.apps.arkham.plugins">ScriptedRunnable.Future</a>&nbsp;task)</pre>
 <div class="block">A runnable that executes the script code represented by the specified
  <code>ScriptedRunnable.Future</code> instance. From script code, a
- <code>ScriptedRunnable</code> can be instantiated by passing any function
- to this constructor. A trivial example:
+ <code>ScriptedRunnable</code> can be instantiated by passing any function to
+ this constructor. A trivial example:
  <pre>
  importClass( ca.cgjennings.apps.arkham.plugins.ScriptedRunnable );
  importClass( ca.cgjennings.apps.arkham.plugins.ScriptedRunnable.Future );
@@ -325,8 +325,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;getReturnValue()</pre>
 <div class="block">Returns the return value of the script function. If an exception was
  thrown by the function, it will be thrown when this is called. If the
- function has not completed or returned no value, returns
- <code>null</code>.</div>
+ function has not completed or returned no value, returns <code>null</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the return value of the function, or <code>null</code></dd>

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -483,9 +483,9 @@ not permitted.)</div>
 <h4>validateCoreComponents</h4>
 <pre class="methodSignature">public static&nbsp;void&nbsp;validateCoreComponents&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;descriptor)</pre>
 <div class="block">Check for the presence of core or other required plug-ins, and install
- them if required. If <code>descriptor</code> is a
- <code>CoreComponents</code> identifier, that component is checked for.
- Otherwise the value is converted to a string and parsed as follows:
+ them if required. If <code>descriptor</code> is a <code>CoreComponents</code>
+ identifier, that component is checked for. Otherwise the value is
+ converted to a string and parsed as follows:
  <ol>
  <li> The string is split into tokens by breaking at newlines; each token
  represents one required plug-in bundle.
@@ -498,11 +498,10 @@ not permitted.)</div>
  </ol></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>descriptor</code> - a <code>CoreComponent</code> or an object describing
- the component to install (see above)</dd>
+<dd><code>descriptor</code> - a <code>CoreComponent</code> or an object describing the
+ component to install (see above)</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>descriptor</code> is
- <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>descriptor</code> is <code>null</code></dd>
 <dd><code><a href="CoreComponents.MissingCoreComponentException.html" title="class in resources">CoreComponents.MissingCoreComponentException</a></code> - if any component is missing or out
  of date and the user refuses to install it, or if installation fails</dd>
 </dl>

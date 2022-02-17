@@ -26,14 +26,14 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -321,20 +321,26 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isBleedMarginEnabled()">isBleedMarginEnabled</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Returns <code>true</code> if bleed margins should be added to faces.</div>
+</td>
+</tr>
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isCancelled()">isCancelled</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns <code>true</code> if the cancellation flag has been set.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isGroupingEnabled()">isGroupingEnabled</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if front and back faces should be grouped
- together.</div>
+<div class="block">Returns <code>true</code> if front and back faces should be grouped together.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isLayoutDoubleSided()">isLayoutDoubleSided</a></span>()</code></th>
 <td class="colLast">
@@ -342,14 +348,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  printing.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#layout(ca.cgjennings.apps.arkham.deck.Deck)">layout</a></span>&#8203;(<a href="../deck/Deck.html" title="class in ca.cgjennings.apps.arkham.deck">Deck</a>&nbsp;deck)</code></th>
 <td class="colLast">
 <div class="block">Lays out a prepared deck and set of cards.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#place(ca.cgjennings.apps.arkham.deck.Deck,int,ca.cgjennings.apps.arkham.project.DeckPacker.Card,double,double)">place</a></span>&#8203;(<a href="../deck/Deck.html" title="class in ca.cgjennings.apps.arkham.deck">Deck</a>&nbsp;deck,
      int&nbsp;pageIndex,
@@ -360,7 +366,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Places a card into a deck on a given page and position.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#prepareCard(ca.cgjennings.apps.arkham.project.DeckPacker.Card)">prepareCard</a></span>&#8203;(<a href="DeckPacker.Card.html" title="class in ca.cgjennings.apps.arkham.project">DeckPacker.Card</a>&nbsp;c)</code></th>
 <td class="colLast">
@@ -368,28 +374,35 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  are known.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i17" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setBleedMarginEnabled(boolean)">setBleedMarginEnabled</a></span>&#8203;(boolean&nbsp;bleedMargin)</code></th>
+<td class="colLast">
+<div class="block">Sets whether bleed margins should be added to card faces.</div>
+</td>
+</tr>
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setGroupingEnabled(boolean)">setGroupingEnabled</a></span>&#8203;(boolean&nbsp;groupCardPairs)</code></th>
 <td class="colLast">
 <div class="block">Sets whether front and back faces should be grouped together.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setLayoutDoubleSided(boolean)">setLayoutDoubleSided</a></span>&#8203;(boolean&nbsp;doubleSided)</code></th>
 <td class="colLast">
 <div class="block">Sets whether the layout will be designed for double-sided printing.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setLayoutQuality(int)">setLayoutQuality</a></span>&#8203;(int&nbsp;quality)</code></th>
 <td class="colLast">
 <div class="block">Sets the layout algorithm quality setting.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPaper(ca.cgjennings.apps.arkham.deck.PaperProperties)">setPaper</a></span>&#8203;(<a href="../deck/PaperProperties.html" title="class in ca.cgjennings.apps.arkham.deck">PaperProperties</a>&nbsp;paper)</code></th>
 <td class="colLast">
@@ -455,9 +468,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>layoutDebug</h4>
 <pre>protected&nbsp;boolean layoutDebug</pre>
-<div class="block">Subclasses may set this to <code>true</code> during testing. If the
- subclass uses <a href="#place(ca.cgjennings.apps.arkham.deck.Deck,int,ca.cgjennings.apps.arkham.project.DeckPacker.Card,double,double)"><code>place(ca.cgjennings.apps.arkham.deck.Deck, int, ca.cgjennings.apps.arkham.project.DeckPacker.Card, double, double)</code></a> to add cards, then a sequence of images will
- be displayed showing how each card is placed.</div>
+<div class="block">Subclasses may set this to <code>true</code> during testing. If the subclass
+ uses <a href="#place(ca.cgjennings.apps.arkham.deck.Deck,int,ca.cgjennings.apps.arkham.project.DeckPacker.Card,double,double)"><code>place(ca.cgjennings.apps.arkham.deck.Deck, int, ca.cgjennings.apps.arkham.project.DeckPacker.Card, double, double)</code></a> to add cards, then a sequence of images will be
+ displayed showing how each card is placed.</div>
 </li>
 </ul>
 </li>
@@ -507,8 +520,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>gcFile</code> - the file containing the game component</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the game component file is
- <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the game component file is <code>null</code></dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#add(java.io.File,int)"><code>add(java.io.File, int)</code></a></dd>
 </dl>
@@ -537,8 +549,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>true</code> if the file has been successfully added and the
  layout will change as a result</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the game component file is
- <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the game component file is <code>null</code></dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if the number of copies is negative</dd>
 </dl>
 </li>
@@ -723,8 +734,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">protected&nbsp;void&nbsp;layout&#8203;(<a href="../deck/Deck.html" title="class in ca.cgjennings.apps.arkham.deck">Deck</a>&nbsp;deck)</pre>
 <div class="block">Lays out a prepared deck and set of cards. Subclasses may override this
  to use a different bin packing algorithm. The passed-in deck is the
- destination for the layout, and cannot be <code>null</code>. The paper
- size for the layout can be obtained by calling
+ destination for the layout, and cannot be <code>null</code>. The paper size
+ for the layout can be obtained by calling
  <code>deck.getPaperProperties()</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -784,12 +795,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getSortedCards</h4>
 <pre class="methodSignature">protected&nbsp;<a href="DeckPacker.Card.html" title="class in ca.cgjennings.apps.arkham.project">DeckPacker.Card</a>[]&nbsp;getSortedCards&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html?is-external=true" title="class or interface in java.util" class="externalLink">Comparator</a>&lt;<a href="DeckPacker.Card.html" title="class in ca.cgjennings.apps.arkham.project">DeckPacker.Card</a>&gt;&nbsp;comp)</pre>
 <div class="block">Returns an array of the cards that have been added for layout. If the
- comparator <code>comp</code> is non-<code>null</code> then it will be
- used to determine the sort order. Otherwise, a default sort order is used
- based on <code>Card</code>'s <code>Comparable</code> implementation. The
- default order is suited to the base implementation's bin packing
- algorithm. Subclasses may substitute a different comparison function
- suited for other algorithms.</div>
+ comparator <code>comp</code> is non-<code>null</code> then it will be used to
+ determine the sort order. Otherwise, a default sort order is used based
+ on <code>Card</code>'s <code>Comparable</code> implementation. The default order is
+ suited to the base implementation's bin packing algorithm. Subclasses may
+ substitute a different comparison function suited for other algorithms.</div>
 </li>
 </ul>
 <a id="isGroupingEnabled()">
@@ -799,8 +809,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isGroupingEnabled</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isGroupingEnabled()</pre>
-<div class="block">Returns <code>true</code> if front and back faces should be grouped
- together. This has no effect if double-sided layout is enabled.</div>
+<div class="block">Returns <code>true</code> if front and back faces should be grouped together.
+ This has no effect if double-sided layout is enabled.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if grouping is enabled</dd>
@@ -820,6 +830,34 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>groupCardPairs</code> - if <code>true</code>, front and back faces placed
  side-by-side will be placed into a group</dd>
+</dl>
+</li>
+</ul>
+<a id="isBleedMarginEnabled()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isBleedMarginEnabled</h4>
+<pre class="methodSignature">public&nbsp;boolean&nbsp;isBleedMarginEnabled()</pre>
+<div class="block">Returns <code>true</code> if bleed margins should be added to faces.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><code>true</code> if bleed margins are enabled</dd>
+</dl>
+</li>
+</ul>
+<a id="setBleedMarginEnabled(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setBleedMarginEnabled</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setBleedMarginEnabled&#8203;(boolean&nbsp;bleedMargin)</pre>
+<div class="block">Sets whether bleed margins should be added to card faces.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>bleedMargin</code> - </dd>
 </dl>
 </li>
 </ul>

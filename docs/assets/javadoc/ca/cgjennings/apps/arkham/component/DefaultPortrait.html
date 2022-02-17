@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -339,8 +339,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getClipping()">getClipping</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the portrait will be clipped to the clip
- region.</div>
+<div class="block">Returns <code>true</code> if the portrait will be clipped to the clip region.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
@@ -405,8 +404,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <td class="colFirst"><code><a href="DefaultPortrait.html" title="class in ca.cgjennings.apps.arkham.component">DefaultPortrait</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getParent()">getParent</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the portrait that this portrait is linked to, or
- <code>null</code>.</div>
+<div class="block">Returns the portrait that this portrait is linked to, or <code>null</code>.</div>
 </td>
 </tr>
 <tr id="i18" class="altColor">
@@ -464,8 +462,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isBackgroundFilled()">isBackgroundFilled</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if portrait areas will be filled with solid
- white before painting the portrait.</div>
+<div class="block">Returns <code>true</code> if portrait areas will be filled with solid white
+ before painting the portrait.</div>
 </td>
 </tr>
 <tr id="i26" class="altColor">
@@ -570,8 +568,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSource(java.lang.String)">setSource</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;resource)</code></th>
 <td class="colLast">
-<div class="block">Sets the image used by the portrait.The value of <code>resource</code>
- is an identifier such as a local path to an image file or a URL.</div>
+<div class="block">Sets the image used by the portrait.The value of <code>resource</code> is an
+ identifier such as a local path to an image file or a URL.</div>
 </td>
 </tr>
 <tr id="i40" class="altColor">
@@ -668,8 +666,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>gc</code> - the game component that the portrait is used with</dd>
 <dd><code>key</code> - the key used to determine the basic properties of the portrait</dd>
-<dd><code>allowRotation</code> - if <code>true</code>, rotating the portrait is
- allowed</dd>
+<dd><code>allowRotation</code> - if <code>true</code>, rotating the portrait is allowed</dd>
 </dl>
 </li>
 </ul>
@@ -762,8 +759,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>getParent</h4>
 <pre class="methodSignature">public final&nbsp;<a href="DefaultPortrait.html" title="class in ca.cgjennings.apps.arkham.component">DefaultPortrait</a>&nbsp;getParent()</pre>
-<div class="block">Returns the portrait that this portrait is linked to, or
- <code>null</code>.</div>
+<div class="block">Returns the portrait that this portrait is linked to, or <code>null</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the parent portrait, or <code>null</code> if this portrait is not
@@ -844,8 +840,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  shows this portrait</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>faces</code> is <code>null</code></dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if any value in the <code>faces</code>
- array is outside the supported range of 32 faces</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if any value in the <code>faces</code> array
+ is outside the supported range of 32 faces</dd>
 </dl>
 </li>
 </ul>
@@ -911,19 +907,18 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <pre class="methodSignature">public&nbsp;void&nbsp;installDefault()</pre>
 <div class="block">Installs the default portrait, if it is not already set. The default
  portrait is determined by looking up the base key with the suffix
- <code>-portrait-template</code> appended. The value of this key must be a
- path relative to the resources folder that identifies an image file. If
- the key is not defined, then the value
- <code>portraits/misc-portrait.jp2</code> will be used, but this should
- only be used as a placeholder during development. By default, the pan
- position will be set to (0,0) and the scale and rotation will be set as
- if for any other portrait installed by calling <a href="#setSource(java.lang.String)"><code>setSource(java.lang.String)</code></a>. The
- default panning and scale values (for the default image only) can be
- overridden by keys with the suffix <code>-portrait-panx</code>,
- <code>-portrait-pany</code>, and <code>-portrait-scale</code>. The
- default rotation (if enabled, and for both the default image and images
- set by <a href="#setSource(java.lang.String)"><code>setSource(java.lang.String)</code></a>), can be set via the key suffix
- <code>-portrait-rotation</code>. (See
+ <code>-portrait-template</code> appended. The value of this key must be a path
+ relative to the resources folder that identifies an image file. If the
+ key is not defined, then the value <code>portraits/misc-portrait.jp2</code>
+ will be used, but this should only be used as a placeholder during
+ development. By default, the pan position will be set to (0,0) and the
+ scale and rotation will be set as if for any other portrait installed by
+ calling <a href="#setSource(java.lang.String)"><code>setSource(java.lang.String)</code></a>. The default panning and scale values (for the
+ default image only) can be overridden by keys with the suffix
+ <code>-portrait-panx</code>, <code>-portrait-pany</code>, and
+ <code>-portrait-scale</code>. The default rotation (if enabled, and for both
+ the default image and images set by <a href="#setSource(java.lang.String)"><code>setSource(java.lang.String)</code></a>), can be set via
+ the key suffix <code>-portrait-rotation</code>. (See
  <a href="#computeDefaultImageRotation(java.awt.image.BufferedImage)"><code>computeDefaultImageRotation(java.awt.image.BufferedImage)</code></a>.)</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -939,20 +934,19 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>setSource</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setSource&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;resource)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="Portrait.html#setSource(java.lang.String)">Portrait</a></code></span></div>
-<div class="block">Sets the image used by the portrait.The value of <code>resource</code>
- is an identifier such as a local path to an image file or a URL. Either
- <code>null</code> or an empty string is a special identifier that
- requests a default image that depends on the component and portrait
- number.
+<div class="block">Sets the image used by the portrait.The value of <code>resource</code> is an
+ identifier such as a local path to an image file or a URL. Either
+ <code>null</code> or an empty string is a special identifier that requests a
+ default image that depends on the component and portrait number.
  <p>
  When a new portrait is set, the scale, pan, and rotation values will be
  changed to suit the new image. If you wish to keep these fixed, you must
  store these values in temporary variables before setting them image, and
  then restore them once this method returns.
  <p>
- If an image cannot be obtained from <code>resource</code> (for example,
- if the file it names does not exist or is invalid), then a special error
- image is substituted.</div>
+ If an image cannot be obtained from <code>resource</code> (for example, if the
+ file it names does not exist or is invalid), then a special error image
+ is substituted.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Portrait.html#setSource(java.lang.String)">setSource</a></code>&nbsp;in interface&nbsp;<code><a href="Portrait.html" title="interface in ca.cgjennings.apps.arkham.component">Portrait</a></code></dd>
@@ -1032,28 +1026,31 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <pre class="methodSignature">public&nbsp;void&nbsp;setSyntheticEdgeLimit&#8203;(double&nbsp;limitRatio)</pre>
 <div class="block">Sets the synthetic edge limit ratio for the portrait. When set to a
  non-zero value, the portrait image will be extended in every direction
- using mirrored copies of the original image. The amount that each edge
- is extended depends on the limit ratio. A value of 1 extends the image
- by one full image copy on each side, while values between 0 and 1 extend
- the image proportionally. For example, a value of 0.1 would extend the
- image by one tenth of an image on each side. The default edge limit is 0,
+ using mirrored copies of the original image. The amount that each edge is
+ extended depends on the limit ratio. A value of 1 extends the image by
+ one full image copy on each side, while values between 0 and 1 extend the
+ image proportionally. For example, a value of 0.1 would extend the image
+ by one tenth of an image on each side. The default edge limit is 0,
  meaning that no edges will be synthesized.
 
- <p>The effect of a non-zero limit is similar to creating a
+ <p>
+ The effect of a non-zero limit is similar to creating a
  <a href="../sheet/Sheet.html#synthesizeBleedMargin(java.awt.image.BufferedImage,boolean,double)"><code>synthetic bleed margin</code></a> on a sheet.
 
- <p>This feature may be particularly useful for designs that:
+ <p>
+ This feature may be particularly useful for designs that:
  <ol>
-   <li> include a designed (not synthetic) bleed margin;
-   <li> have a portrait area that overlaps this bleed margin; and
-   <li> want to provide a way for users to easily extend a portrait
-        into the bleed margin without sacrificing composition.
+ <li> include a designed (not synthetic) bleed margin;
+ <li> have a portrait area that overlaps this bleed margin; and
+ <li> want to provide a way for users to easily extend a portrait into the
+ bleed margin without sacrificing composition.
  </ol></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>limitRatio</code> - the new limit ratio to set</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if the limit is not between 0 and 1 inclusive</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if the limit is not between 0 and 1
+ inclusive</dd>
 </dl>
 </li>
 </ul>
@@ -1084,7 +1081,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  synthetic edges applied.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>an image, with edges extended according to the synthetic edge limit, or null</dd>
+<dd>an image, with edges extended according to the synthetic edge
+ limit, or null</dd>
 </dl>
 </li>
 </ul>
@@ -1096,9 +1094,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>getPan</h4>
 <pre class="methodSignature">public final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Point2D.html?is-external=true" title="class or interface in java.awt.geom" class="externalLink">Point2D</a>&nbsp;getPan&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Point2D.html?is-external=true" title="class or interface in java.awt.geom" class="externalLink">Point2D</a>&nbsp;dest)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="AbstractPortrait.html#getPan(java.awt.geom.Point2D)">AbstractPortrait</a></code></span></div>
-<div class="block">Returns the pan value as a <code>Point2D</code>. The pan values will be
- stored in <code>dest</code>; if <code>null</code>, a new point object
- will be allocated and returned.
+<div class="block">Returns the pan value as a <code>Point2D</code>. The pan values will be stored
+ in <code>dest</code>; if <code>null</code>, a new point object will be allocated
+ and returned.
 
  <p>
  The base class calls <a href="Portrait.html#getPanX()"><code>Portrait.getPanX()</code></a> and <a href="Portrait.html#getPanY()"><code>Portrait.getPanY()</code></a> to obtain x
@@ -1305,10 +1303,10 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>setScaleUsesMinimum</h4>
 <pre class="methodSignature">public final&nbsp;void&nbsp;setScaleUsesMinimum&#8203;(boolean&nbsp;useMinimum)</pre>
 <div class="block">Sets whether this portrait should use the minimum fit scale when
- computing a default scale value for an image. When <code>false</code>,
- the default scale value is selected so that the <a href="../../../graphics/ImageUtilities.html#idealCoveringScaleForImage(double,double,double,double)">entire portrait clip region is covered</a>, even if that means part of the
- portrait won't be visible. When <code>true</code>, the default scale
- value is selected so that the <a href="../../../graphics/ImageUtilities.html#idealCoveringScaleForImage(double,double,double,double)">entire image just fits within the clip region</a>, even if that means that
+ computing a default scale value for an image. When <code>false</code>, the
+ default scale value is selected so that the <a href="../../../graphics/ImageUtilities.html#idealCoveringScaleForImage(double,double,double,double)">entire portrait clip region is covered</a>, even if that means part of the
+ portrait won't be visible. When <code>true</code>, the default scale value is
+ selected so that the <a href="../../../graphics/ImageUtilities.html#idealCoveringScaleForImage(double,double,double,double)">entire image just fits within the clip region</a>, even if that means that
  part of the clip region will not be covered by the portrait. The default
  setting is <code>false</code> (cover the entire clip region).
 
@@ -1346,16 +1344,16 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>setClipping</h4>
 <pre class="methodSignature">public final&nbsp;void&nbsp;setClipping&#8203;(boolean&nbsp;clipping)</pre>
 <div class="block">Sets whether the portrait is clipped to the clip region. The default is
- <code>true</code>. When <code>false</code> the clip region is only used
- to determine a portrait image's default size.
+ <code>true</code>. When <code>false</code> the clip region is only used to
+ determine a portrait image's default size.
 
  <p>
  <b>Note:</b> This is normally called at most once, just after the
  portrait is first created.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>clipping</code> - if <code>true</code>, clip the portrait to the clip
- region when it is drawn with <a href="#paint(java.awt.Graphics2D,ca.cgjennings.apps.arkham.sheet.RenderTarget)"><code>paint(java.awt.Graphics2D, ca.cgjennings.apps.arkham.sheet.RenderTarget)</code></a>.</dd>
+<dd><code>clipping</code> - if <code>true</code>, clip the portrait to the clip region
+ when it is drawn with <a href="#paint(java.awt.Graphics2D,ca.cgjennings.apps.arkham.sheet.RenderTarget)"><code>paint(java.awt.Graphics2D, ca.cgjennings.apps.arkham.sheet.RenderTarget)</code></a>.</dd>
 </dl>
 </li>
 </ul>
@@ -1366,8 +1364,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>getClipping</h4>
 <pre class="methodSignature">public final&nbsp;boolean&nbsp;getClipping()</pre>
-<div class="block">Returns <code>true</code> if the portrait will be clipped to the clip
- region. See <a href="#setClipping(boolean)"><code>setClipping(boolean)</code></a> for details.</div>
+<div class="block">Returns <code>true</code> if the portrait will be clipped to the clip region.
+ See <a href="#setClipping(boolean)"><code>setClipping(boolean)</code></a> for details.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if clipping is enabled.</dd>
@@ -1383,9 +1381,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Dimension.html?is-external=true" title="class or interface in java.awt" class="externalLink">Dimension</a>&nbsp;getClipDimensions()</pre>
 <div class="block">Returns the size of the bounding rectangle of the area that the portrait
  is drawn in on the component sheet, in the coordinate system of the
- sheet's template. This may return <code>null</code> if this value is
- unknown or inapplicable, in which case some features of the portrait
- panel will not be available.</div>
+ sheet's template. This may return <code>null</code> if this value is unknown
+ or inapplicable, in which case some features of the portrait panel will
+ not be available.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Portrait.html#getClipDimensions()">getClipDimensions</a></code>&nbsp;in interface&nbsp;<code><a href="Portrait.html" title="interface in ca.cgjennings.apps.arkham.component">Portrait</a></code></dd>
@@ -1417,8 +1415,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  accurate and should not be relied on.
 
  <p>
- The base class returns <code>null</code>, indicating that the portrait
- area is unobscured.</div>
+ The base class returns <code>null</code>, indicating that the portrait area is
+ unobscured.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Portrait.html#getClipStencil()">getClipStencil</a></code>&nbsp;in interface&nbsp;<code><a href="Portrait.html" title="interface in ca.cgjennings.apps.arkham.component">Portrait</a></code></dd>
@@ -1475,8 +1473,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  portrait is first created.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>fill</code> - if <code>true</code>, the portrait background will be filled
- in when it is drawn with <a href="#paint(java.awt.Graphics2D,ca.cgjennings.apps.arkham.sheet.RenderTarget)"><code>paint(java.awt.Graphics2D, ca.cgjennings.apps.arkham.sheet.RenderTarget)</code></a>.</dd>
+<dd><code>fill</code> - if <code>true</code>, the portrait background will be filled in
+ when it is drawn with <a href="#paint(java.awt.Graphics2D,ca.cgjennings.apps.arkham.sheet.RenderTarget)"><code>paint(java.awt.Graphics2D, ca.cgjennings.apps.arkham.sheet.RenderTarget)</code></a>.</dd>
 </dl>
 </li>
 </ul>
@@ -1487,12 +1485,12 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>isBackgroundFilled</h4>
 <pre class="methodSignature">public final&nbsp;boolean&nbsp;isBackgroundFilled()</pre>
-<div class="block">Returns <code>true</code> if portrait areas will be filled with solid
- white before painting the portrait. See <a href="#setBackgroundFilled(boolean)"><code>setBackgroundFilled(boolean)</code></a> for details.</div>
+<div class="block">Returns <code>true</code> if portrait areas will be filled with solid white
+ before painting the portrait. See <a href="#setBackgroundFilled(boolean)"><code>setBackgroundFilled(boolean)</code></a> for details.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the portrait clip region is filled before
- drawing the portrait</dd>
+<dd><code>true</code> if the portrait clip region is filled before drawing
+ the portrait</dd>
 </dl>
 </li>
 </ul>
@@ -1587,9 +1585,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  The base class implementation uses the following procedure: If the
  portrait does not include the rotation feature, 0 is always returned.
  Otherwise, if a key equal to the base key with the suffix
- <code>-default-rotation</code> is defined and can be parsed as a double
- value, then that value is returned. If the key does not exist or cannot
- be parsed, 0 is returned.</div>
+ <code>-default-rotation</code> is defined and can be parsed as a double value,
+ then that value is returned. If the key does not exist or cannot be
+ parsed, 0 is returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>image</code> - the image to determine the default rotation for</dd>

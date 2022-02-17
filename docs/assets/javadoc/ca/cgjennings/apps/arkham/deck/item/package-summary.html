@@ -27,7 +27,7 @@
     }
 //-->
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -104,114 +104,119 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tbody>
 <tr class="altColor">
+<th class="colFirst" scope="row"><a href="BleedMarginStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">BleedMarginStyle</a></th>
+<td class="colLast">
+<div class="block">Implemented by page items that can include a bleed margin.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="DependentPageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">DependentPageItem</a></th>
 <td class="colLast">
 <div class="block">A page item that depends on an external file to recreate its content.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="EditablePageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">EditablePageItem</a></th>
 <td class="colLast">
 <div class="block">Implemented by cards that can be edited.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="FlippablePageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">FlippablePageItem</a></th>
 <td class="colLast">
 <div class="block">Implemented by deck cards that allow themselves to be rotated in 90 degree
  increments and mirrored.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="Group.html" title="interface in ca.cgjennings.apps.arkham.deck.item">Group</a></th>
 <td class="colLast">
-<div class="block">A grouping of <code>PageItem</code>s that are selected and unselected as a
- unit.</div>
+<div class="block">A grouping of <code>PageItem</code>s that are selected and unselected as a unit.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="LineStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">LineStyle</a></th>
 <td class="colLast">
 <div class="block">Implemented by page items that include a styled border.</div>
 </td>
 </tr>
-<tr class="rowColor">
-<th class="colFirst" scope="row"><a href="MasterOpacityStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">MasterOpacityStyle</a></th>
+<tr class="altColor">
+<th class="colFirst" scope="row"><a href="OpacityStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">OpacityStyle</a></th>
 <td class="colLast">
-<div class="block">Interface implemented by items that support a master opacity change.</div>
+<div class="block">Interface implemented by items that support a opacity change.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="OutlineStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">OutlineStyle</a></th>
 <td class="colLast">
 <div class="block">Implemented by page items that consist of a shape that can have an outline.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a></th>
 <td class="colLast">
 <div class="block">An item that can be placed in a deck.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="ShadowStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">ShadowStyle</a></th>
 <td class="colLast">
 <div class="block">Interface implemented by items that support a drop shadow.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="ShapeStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">ShapeStyle</a></th>
 <td class="colLast">
 <div class="block">Interface implemented by filled shapes.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="SizablePageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">SizablePageItem</a></th>
 <td class="colLast">
 <div class="block">Implemented by items that can be resized.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="Style.html" title="interface in ca.cgjennings.apps.arkham.deck.item">Style</a></th>
 <td class="colLast">
 <div class="block">This is a marker interface extended by all interfaces for getting or setting
  a type of style information.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="StyleApplicator.html" title="interface in ca.cgjennings.apps.arkham.deck.item">StyleApplicator</a></th>
 <td class="colLast">
 <div class="block">The minimal interface implemented by objects that can apply a <a href="Style.html" title="interface in ca.cgjennings.apps.arkham.deck.item"><code>Style</code></a>
  to other objects.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="StylePanel.html" title="interface in ca.cgjennings.apps.arkham.deck.item">StylePanel</a>&lt;S extends <a href="Style.html" title="interface in ca.cgjennings.apps.arkham.deck.item">Style</a>&gt;</th>
 <td class="colLast">
 <div class="block">A style panel is an interface component that allows the user to edit a
  <a href="Style.html" title="interface in ca.cgjennings.apps.arkham.deck.item"><code>Style</code></a>.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="StylePanel.StyleEditorCallback.html" title="interface in ca.cgjennings.apps.arkham.deck.item">StylePanel.StyleEditorCallback</a></th>
 <td class="colLast">
 <div class="block">An object of this type will be passed to the <a href="StylePanel.html" title="interface in ca.cgjennings.apps.arkham.deck.item"><code>StylePanel</code></a> after it
  is created.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="TileProvider.html" title="interface in ca.cgjennings.apps.arkham.deck.item">TileProvider</a></th>
 <td class="colLast">
 <div class="block">Interface implemented by scripted tiles in tile sets.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="TuckBox.BoxSizer.html" title="interface in ca.cgjennings.apps.arkham.deck.item">TuckBox.BoxSizer</a></th>
 <td class="colLast">
 <div class="block">A sizing tool for a particular type of component.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="UserBleedMarginStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">UserBleedMarginStyle</a></th>
 <td class="colLast">
 <div class="block">A style implemented by items that can have a custom, user-defined bleed
@@ -255,127 +260,133 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </td>
 </tr>
 <tr class="altColor">
+<th class="colFirst" scope="row"><a href="BleedMarginStylePanel.html" title="class in ca.cgjennings.apps.arkham.deck.item">BleedMarginStylePanel</a></th>
+<td class="colLast">
+<div class="block">The style panel for face edge finishing options.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="CardFace.html" title="class in ca.cgjennings.apps.arkham.deck.item">CardFace</a></th>
 <td class="colLast">
 <div class="block">A page item representing one face of a game component.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="Curve.html" title="class in ca.cgjennings.apps.arkham.deck.item">Curve</a></th>
 <td class="colLast">
 <div class="block">An page item representing a quadratic parametric curve segment.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="CustomTile.html" title="class in ca.cgjennings.apps.arkham.deck.item">CustomTile</a></th>
 <td class="colLast">
 <div class="block">Resizable, customizable tiles that can be placed in a deck.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="DragHandle.html" title="class in ca.cgjennings.apps.arkham.deck.item">DragHandle</a></th>
 <td class="colLast">
 <div class="block">A handle that can be attached to a component and that the user can drag to
  modify the item in some way.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="Line.html" title="class in ca.cgjennings.apps.arkham.deck.item">Line</a></th>
 <td class="colLast">
 <div class="block">An page item representing a straight line segment.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="LineCapSelector.html" title="class in ca.cgjennings.apps.arkham.deck.item">LineCapSelector</a></th>
 <td class="colLast">
 <div class="block">A control for selecting a line cap value.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="LineJoin.LineJoinIcon.html" title="class in ca.cgjennings.apps.arkham.deck.item">LineJoin.LineJoinIcon</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="LineJoinSelector.html" title="class in ca.cgjennings.apps.arkham.deck.item">LineJoinSelector</a></th>
 <td class="colLast">
 <div class="block">A control for selecting a line join value.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="OutlinedTile.html" title="class in ca.cgjennings.apps.arkham.deck.item">OutlinedTile</a></th>
 <td class="colLast">
 <div class="block">A tile with a static outline.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="RenderingAttributeFactory.html" title="class in ca.cgjennings.apps.arkham.deck.item">RenderingAttributeFactory</a></th>
 <td class="colLast">
 <div class="block">A factory class that creates rendering attributes that are suitable for
  particular <a href="Style.html" title="interface in ca.cgjennings.apps.arkham.deck.item"><code>Style</code></a>s.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="RotatableTile.html" title="class in ca.cgjennings.apps.arkham.deck.item">RotatableTile</a></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="SimpleGroup.html" title="class in ca.cgjennings.apps.arkham.deck.item">SimpleGroup</a></th>
 <td class="colLast">
 <div class="block">A basic implementation of the group interface for storing selection groups.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="StyleCapture.html" title="class in ca.cgjennings.apps.arkham.deck.item">StyleCapture</a></th>
 <td class="colLast">
 <div class="block">A style capture can collect a composite of the styles of one or more items,
  and can optionally apply those styles to another set of items.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="StyleCapture.Property.html" title="class in ca.cgjennings.apps.arkham.deck.item">StyleCapture.Property</a></th>
 <td class="colLast">
 <div class="block">Encapsulates a captured style property.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="StyleEditor.html" title="class in ca.cgjennings.apps.arkham.deck.item">StyleEditor</a></th>
 <td class="colLast">
 <div class="block">An editor dialog for the styles of one or more page items in a deck.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="StylePanelFactory.html" title="class in ca.cgjennings.apps.arkham.deck.item">StylePanelFactory</a></th>
 <td class="colLast">
 <div class="block">A factory for creating the panels that are used to edit page item
  <a href="Style.html" title="interface in ca.cgjennings.apps.arkham.deck.item"><code>Style</code></a>s.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="TextBox.html" title="class in ca.cgjennings.apps.arkham.deck.item">TextBox</a></th>
 <td class="colLast">
 <div class="block">A text box is a rectangular page item that displays formatted markup text.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="TextBoxEditor.html" title="class in ca.cgjennings.apps.arkham.deck.item">TextBoxEditor</a></th>
 <td class="colLast">
 <div class="block">Edits the text on text boxes in a deck.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="Tile.html" title="class in ca.cgjennings.apps.arkham.deck.item">Tile</a></th>
 <td class="colLast">
 <div class="block">The base class for tiles, which are static bitmap graphics that can be placed
  in a deck.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="TuckBox.html" title="class in ca.cgjennings.apps.arkham.deck.item">TuckBox</a></th>
 <td class="colLast">
 <div class="block">The tuck box item is used to create tuck boxes (or other fold-up boxes).</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><a href="TuckBox.SimpleDepthwiseSizer.html" title="class in ca.cgjennings.apps.arkham.deck.item">TuckBox.SimpleDepthwiseSizer</a></th>
 <td class="colLast">
 <div class="block">An implementation of <a href="TuckBox.BoxSizer.html" title="interface in ca.cgjennings.apps.arkham.deck.item"><code>TuckBox.BoxSizer</code></a> that has a fixed width and height
@@ -383,7 +394,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  contain.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><a href="TuckBox.SimpleHeightwiseSizer.html" title="class in ca.cgjennings.apps.arkham.deck.item">TuckBox.SimpleHeightwiseSizer</a></th>
 <td class="colLast">
 <div class="block">An implementation of <a href="TuckBox.BoxSizer.html" title="interface in ca.cgjennings.apps.arkham.deck.item"><code>TuckBox.BoxSizer</code></a> that has a fixed width and depth

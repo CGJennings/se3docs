@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -464,8 +464,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>listener</code> - the listener to notify when <code>file</code> changes</dd>
 <dd><code>file</code> - the file to monitor</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>listener</code> or
- <code>file</code> is <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>listener</code> or <code>file</code> is
+ <code>null</code></dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalStateException</a></code> - if this monitor has been <a href="#dispose()"><code>dispose()</code></a>d</dd>
 </dl>
 </li>
@@ -484,11 +484,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <code>updatePeriod</code> is an approximate <i>maximum</i> delay, in
  milliseconds, before a change in file state is detected. The monitor does
  not guarantee that <code>updatePeriod</code> will be honoured. If
- <code>listener</code> has already been registered to monitor
- <code>file</code>, the existing monitor will be removed and it will be
- replaced by one with the new <code>updatePeriod</code>. If the
- <code>updatePeriod</code> is 0, then the monitor is not added (it is
- removed if it already exists).</div>
+ <code>listener</code> has already been registered to monitor <code>file</code>, the
+ existing monitor will be removed and it will be replaced by one with the
+ new <code>updatePeriod</code>. If the <code>updatePeriod</code> is 0, then the
+ monitor is not added (it is removed if it already exists).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>listener</code> - the listener to notify when <code>file</code> changes</dd>
@@ -496,8 +495,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>updatePeriod</code> - the approximate maximum delay before change
  notification takes place</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>listener</code> or
- <code>file</code> is <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>listener</code> or <code>file</code> is
+ <code>null</code></dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>updatePeriod</code> is negative</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalStateException</a></code> - if this monitor has been <a href="#dispose()"><code>dispose()</code></a>d
  of</dd>

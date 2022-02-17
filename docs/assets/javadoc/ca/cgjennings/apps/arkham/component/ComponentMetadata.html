@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -172,8 +172,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.io.File)">ComponentMetadata</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;source)</code></th>
 <td class="colLast">
-<div class="block">Creates a new <code>ComponentMetadata</code> instance that reads metadata
- from the specified file, if available.</div>
+<div class="block">Creates a new <code>ComponentMetadata</code> instance that reads metadata from
+ the specified file, if available.</div>
 </td>
 </tr>
 </table>
@@ -207,8 +207,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;? extends <a href="GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getComponentClass()">getComponentClass</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the <code>Class</code> instance that the game component is an
- instance of.</div>
+<div class="block">Returns the <code>Class</code> instance that the game component is an instance
+ of.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -245,8 +245,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isDeckLayoutSupported()">isDeckLayoutSupported</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the component has metadata and can be
- included in a deck.</div>
+<div class="block">Returns <code>true</code> if the component has metadata and can be included in
+ a deck.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -288,10 +288,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>ComponentMetadata</h4>
 <pre>public&nbsp;ComponentMetadata&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;source)</pre>
-<div class="block">Creates a new <code>ComponentMetadata</code> instance that reads metadata
- from the specified file, if available. If there is an error while reading
- the metadata, the resulting object will be identical to that of a file
- that does not contain metadata.</div>
+<div class="block">Creates a new <code>ComponentMetadata</code> instance that reads metadata from
+ the specified file, if available. If there is an error while reading the
+ metadata, the resulting object will be identical to that of a file that
+ does not contain metadata.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the file to component file to read metadata from</dd>
@@ -351,8 +351,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getComponentClass</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;? extends <a href="GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>&gt;&nbsp;getComponentClass()
                                                  throws <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang" class="externalLink">ClassNotFoundException</a></pre>
-<div class="block">Returns the <code>Class</code> instance that the game component is an
- instance of. Returns <code>null</code> if the component has no metadata.</div>
+<div class="block">Returns the <code>Class</code> instance that the game component is an instance
+ of. Returns <code>null</code> if the component has no metadata.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the class representing the component</dd>
@@ -399,13 +399,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isDeckLayoutSupported</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isDeckLayoutSupported()</pre>
-<div class="block">Returns <code>true</code> if the component has metadata and can be
- included in a deck. Most components can be included in a deck, but some
- can't, including case books and other decks.</div>
+<div class="block">Returns <code>true</code> if the component has metadata and can be included in
+ a deck. Most components can be included in a deck, but some can't,
+ including case books and other decks.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if it is known for certain that the component
- can be placed in a deck</dd>
+<dd><code>true</code> if it is known for certain that the component can be
+ placed in a deck</dd>
 </dl>
 </li>
 </ul>
@@ -418,8 +418,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getDIYScriptResource()</pre>
 <div class="block">Returns the resource identifier of the script file used to create the
  component, if it is a DIY component and uses a script. Returns
- <code>null</code> if the metadata version is less than 2 or the component
- is not a script-based DIY component.</div>
+ <code>null</code> if the metadata version is less than 2 or the component is
+ not a script-based DIY component.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the name of the DIY script, or <code>null</code></dd>

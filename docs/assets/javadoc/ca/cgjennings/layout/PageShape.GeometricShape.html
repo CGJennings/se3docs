@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -141,13 +141,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre>public static class <span class="typeNameLabel">PageShape.GeometricShape</span>
 extends <a href="PageShape.html" title="class in ca.cgjennings.layout">PageShape</a></pre>
 <div class="block">A <code>PageShape</code> that takes its form from a drawing shape
- (<code>java.awt.Shape</code>). The result is similar to scan converting
- the source shape and adjusting the text margins to the first "on pixel"
- in each scan row (from the left or right edge depending on the margin).
+ (<code>java.awt.Shape</code>). The result is similar to scan converting the
+ source shape and adjusting the text margins to the first "on pixel" in
+ each scan row (from the left or right edge depending on the margin).
  Notes:
  <ol>
- <li> Creating a <code>GeometricShape</code> is fairly expensive; they
- should be reused where possible.
+ <li> Creating a <code>GeometricShape</code> is fairly expensive; they should
+ be reused where possible.
  <li> A page shape only modifies the left and right margins of a line;
  unlike a drawing shape, a line of text cannot contain any interior gaps.
  </ol></div>

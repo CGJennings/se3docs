@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -131,10 +131,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  window the script will be provided with a <i>dummy context instance</i>. A
  dummy context is mostly compatible with a true context, but its
  <a href="#getPlugin()"><code>getPlugin()</code></a> and <a href="#getInstalledPlugin()"><code>getInstalledPlugin()</code></a> methods will both return
- <code>null</code>. Also, all dummy contexts share a single setting namespace,
- so any plug-in settings that you create may vary depending on whether the
- script is running from an installed plug-in or is being tested by running it
- from a script editor.
+ <code>null</code>. Also, all dummy contexts share a single setting namespace, so
+ any plug-in settings that you create may vary depending on whether the script
+ is running from an installed plug-in or is being tested by running it from a
+ script editor.
 
  <p>
  <b>Note:</b> The scope and purpose of the plug-in context has changed
@@ -453,8 +453,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  instance of the plug-in will never be shown.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the plug-in will only be queried for
- information</dd>
+<dd><code>true</code> if the plug-in will only be queried for information</dd>
 </dl>
 </li>
 </ul>
@@ -474,8 +473,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  plug-ins.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a <code>Settings</code> instance that uses this plug-in's
- namespace</dd>
+<dd>a <code>Settings</code> instance that uses this plug-in's namespace</dd>
 </dl>
 </li>
 </ul>
@@ -488,15 +486,16 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre class="methodSignature">int&nbsp;getModifiers()</pre>
 <div class="block">Returns a bit mask representing the modifier keys that were held down
  when the plug-in was activated. This method is only useful for
- <code>ACTIVATED</code> plug-ins, and only for the context passed in when
- the plug-in's
+ <code>ACTIVATED</code> plug-ins, and only for the context passed in when the
+ plug-in's
  <a href="Plugin.html#showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext,boolean)"><code>Plugin.showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a>
  method is called. In all other cases, it will return 0.
 
  <p>
  To use the result of this method, combine the modifiers that you wish to
  test for using binary or (|) to create a mask value. Then check that the
- bitwise and (&amp;) of the return value and your mask are equal to your mask:
+ bitwise and (&amp;) of the return value and your mask are equal to your
+ mask:
  <pre>
  // check if both Shift and Ctrl and held down
  mask = PluginContext.SHIFT | PluginContext.CONTROL;

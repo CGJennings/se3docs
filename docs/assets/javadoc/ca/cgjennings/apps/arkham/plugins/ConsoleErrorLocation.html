@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -334,10 +334,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public&nbsp;int&nbsp;getEvalLineNumber()</pre>
 <div class="block">Returns the line number (starting from 1) of the error, within an
  evaluated string or 0 if the line number is unknown or was not within an
- <code>eval</code> function. When an error occurs during the evaluation of
- a string, this returns the line number within that string while
- <a href="#getLineNumber()"><code>getLineNumber()</code></a> returns the line number of the
- <code>eval()</code> call.</div>
+ <code>eval</code> function. When an error occurs during the evaluation of a
+ string, this returns the line number within that string while
+ <a href="#getLineNumber()"><code>getLineNumber()</code></a> returns the line number of the <code>eval()</code>
+ call.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the line number of the error within the evaluated code</dd>

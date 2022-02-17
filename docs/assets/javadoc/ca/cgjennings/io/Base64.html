@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -346,8 +346,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#encode(java.nio.ByteBuffer,java.nio.ByteBuffer)">encode</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio" class="externalLink">ByteBuffer</a>&nbsp;raw,
       <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio" class="externalLink">ByteBuffer</a>&nbsp;encoded)</code></th>
 <td class="colLast">
-<div class="block">Performs Base64 encoding on the <code>raw</code> ByteBuffer, writing it
- to the <code>encoded</code> ByteBuffer.</div>
+<div class="block">Performs Base64 encoding on the <code>raw</code> ByteBuffer, writing it to the
+ <code>encoded</code> ByteBuffer.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
@@ -355,8 +355,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#encode(java.nio.ByteBuffer,java.nio.CharBuffer)">encode</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio" class="externalLink">ByteBuffer</a>&nbsp;raw,
       <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/CharBuffer.html?is-external=true" title="class or interface in java.nio" class="externalLink">CharBuffer</a>&nbsp;encoded)</code></th>
 <td class="colLast">
-<div class="block">Performs Base64 encoding on the <code>raw</code> ByteBuffer, writing it
- to the <code>encoded</code> CharBuffer.</div>
+<div class="block">Performs Base64 encoding on the <code>raw</code> ByteBuffer, writing it to the
+ <code>encoded</code> CharBuffer.</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
@@ -598,10 +598,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>encode</h4>
 <pre class="methodSignature">public static&nbsp;void&nbsp;encode&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio" class="externalLink">ByteBuffer</a>&nbsp;raw,
                           <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio" class="externalLink">ByteBuffer</a>&nbsp;encoded)</pre>
-<div class="block">Performs Base64 encoding on the <code>raw</code> ByteBuffer, writing it
- to the <code>encoded</code> ByteBuffer. This is an experimental feature.
- Currently it does not pass along any options (such as
- <a href="#DO_BREAK_LINES"><code>DO_BREAK_LINES</code></a> or <a href="#GZIP"><code>GZIP</code></a>.</div>
+<div class="block">Performs Base64 encoding on the <code>raw</code> ByteBuffer, writing it to the
+ <code>encoded</code> ByteBuffer. This is an experimental feature. Currently it
+ does not pass along any options (such as <a href="#DO_BREAK_LINES"><code>DO_BREAK_LINES</code></a> or
+ <a href="#GZIP"><code>GZIP</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>raw</code> - input buffer</dd>
@@ -619,10 +619,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>encode</h4>
 <pre class="methodSignature">public static&nbsp;void&nbsp;encode&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio" class="externalLink">ByteBuffer</a>&nbsp;raw,
                           <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/CharBuffer.html?is-external=true" title="class or interface in java.nio" class="externalLink">CharBuffer</a>&nbsp;encoded)</pre>
-<div class="block">Performs Base64 encoding on the <code>raw</code> ByteBuffer, writing it
- to the <code>encoded</code> CharBuffer. This is an experimental feature.
- Currently it does not pass along any options (such as
- <a href="#DO_BREAK_LINES"><code>DO_BREAK_LINES</code></a> or <a href="#GZIP"><code>GZIP</code></a>.</div>
+<div class="block">Performs Base64 encoding on the <code>raw</code> ByteBuffer, writing it to the
+ <code>encoded</code> CharBuffer. This is an experimental feature. Currently it
+ does not pass along any options (such as <a href="#DO_BREAK_LINES"><code>DO_BREAK_LINES</code></a> or
+ <a href="#GZIP"><code>GZIP</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>raw</code> - input buffer</dd>

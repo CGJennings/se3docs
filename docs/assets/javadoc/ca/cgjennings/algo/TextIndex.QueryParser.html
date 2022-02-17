@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -144,11 +144,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  term = word | "(" query ")"
  </pre> where a word is any word to be searched for (and not containing a
  space or the reserved punctuation marks "|", "!", "(", or ")". The "|"
- symbol performs and <code>Or</code> query, sequential factors are
- combined into <code>And</code> queries, "!" applies a <code>Not</code>
- query to its argument, and parentheses may be used to group the query
- into subexpressions. Some examples:
- 
+ symbol performs and <code>Or</code> query, sequential factors are combined
+ into <code>And</code> queries, "!" applies a <code>Not</code> query to its
+ argument, and parentheses may be used to group the query into
+ subexpressions. Some examples:
+
  <table border=0>
  <caption>Examples</caption>
  <tr><th>Query        <th>Find Documents Containing</tr>

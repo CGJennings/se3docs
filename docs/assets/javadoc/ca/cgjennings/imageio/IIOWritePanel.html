@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -491,8 +491,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JPanel.ht
 <div class="block">Creates a new panel for configuring image writing options.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>fullComplexityMode</code> - if <code>true</code>, compression mode options
- will be shown</dd>
+<dd><code>fullComplexityMode</code> - if <code>true</code>, compression mode options will
+ be shown</dd>
 </dl>
 </li>
 </ul>
@@ -672,8 +672,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JPanel.ht
 <h4>configureWriter</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;configureWriter&#8203;(<a href="SimpleImageWriter.html" title="class in ca.cgjennings.imageio">SimpleImageWriter</a>&nbsp;iw)</pre>
 <div class="block">Use this panel to configure the features of an image writer. The writers
- <code>IOWriteParam</code> will replace the one currently being edited, if
- any.</div>
+ <code>IOWriteParam</code> will replace the one currently being edited, if any.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>iw</code> - the writer to configure</dd>

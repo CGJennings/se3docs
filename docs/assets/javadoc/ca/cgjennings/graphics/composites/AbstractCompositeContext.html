@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -139,12 +139,11 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Composite
 <div class="block">This abstract implementation of <code>CompositeContext</code> is designed to
  handle RGB/ARGB data. Subclasses must implement the abstract general case
  method, and may optionally override other methods to provide special case
- code for use when the <code>VALUE_ALPHA_INTERPOLATION_SPEED</code> hint is
- set and/or the source and destination both have 4 bands (ARGB). The context
- will transparently make use of multiple CPUs to increase compositing
- performance, so subclasses must ensure that their implementations of
- <code>compose</code> methods can be called concurrently from multiple
- threads.</div>
+ code for use when the <code>VALUE_ALPHA_INTERPOLATION_SPEED</code> hint is set
+ and/or the source and destination both have 4 bands (ARGB). The context will
+ transparently make use of multiple CPUs to increase compositing performance,
+ so subclasses must ensure that their implementations of <code>compose</code>
+ methods can be called concurrently from multiple threads.</div>
 </li>
 </ul>
 </div>

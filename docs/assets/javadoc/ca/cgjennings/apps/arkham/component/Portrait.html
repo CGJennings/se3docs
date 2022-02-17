@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -343,8 +343,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSource(java.lang.String)">setSource</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;resource)</code></th>
 <td class="colLast">
-<div class="block">Sets the image used by the portrait.The value of <code>resource</code>
- is an identifier such as a local path to an image file or a URL.</div>
+<div class="block">Sets the image used by the portrait.The value of <code>resource</code> is an
+ identifier such as a local path to an image file or a URL.</div>
 </td>
 </tr>
 </table>
@@ -403,26 +403,24 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <h4>setSource</h4>
 <pre class="methodSignature">void&nbsp;setSource&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;resource)</pre>
-<div class="block">Sets the image used by the portrait.The value of <code>resource</code>
- is an identifier such as a local path to an image file or a URL. Either
- <code>null</code> or an empty string is a special identifier that
- requests a default image that depends on the component and portrait
- number.
+<div class="block">Sets the image used by the portrait.The value of <code>resource</code> is an
+ identifier such as a local path to an image file or a URL. Either
+ <code>null</code> or an empty string is a special identifier that requests a
+ default image that depends on the component and portrait number.
  <p>
  When a new portrait is set, the scale, pan, and rotation values will be
  changed to suit the new image. If you wish to keep these fixed, you must
  store these values in temporary variables before setting them image, and
  then restore them once this method returns.
  <p>
- If an image cannot be obtained from <code>resource</code> (for example,
- if the file it names does not exist or is invalid), then a special error
- image is substituted.</div>
+ If an image cannot be obtained from <code>resource</code> (for example, if the
+ file it names does not exist or is invalid), then a special error image
+ is substituted.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>resource</code> - an identifier user to locate the image (a file or URL)</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>resource</code> is
- <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>resource</code> is <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -592,9 +590,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <h4>getPan</h4>
 <pre class="methodSignature"><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Point2D.html?is-external=true" title="class or interface in java.awt.geom" class="externalLink">Point2D</a>&nbsp;getPan&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Point2D.html?is-external=true" title="class or interface in java.awt.geom" class="externalLink">Point2D</a>&nbsp;dest)</pre>
-<div class="block">Returns the pan value as a <code>Point2D</code>. The pan values will be
- stored in <code>dest</code>; if <code>null</code>, a new point object
- will be allocated and returned.</div>
+<div class="block">Returns the pan value as a <code>Point2D</code>. The pan values will be stored
+ in <code>dest</code>; if <code>null</code>, a new point object will be allocated
+ and returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>dest</code> - a point object to store the pan value in</dd>

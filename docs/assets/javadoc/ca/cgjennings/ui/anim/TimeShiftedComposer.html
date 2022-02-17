@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -399,9 +399,8 @@ extends <a href="AbstractFilteredComposer.html" title="class in ca.cgjennings.ui
 <div class="block">Creates a time shift function that uses cubic spline interpolation to
  create an interpolator that maps the unshifted times in
  <code>inputTimes</code> to the elements with the same index in
- <code>outputTimes</code>. The elements of <code>inputTimes</code> must be
- monotone increasing values (sorted into increasing order and with no
- repeats).</div>
+ <code>outputTimes</code>. The elements of <code>inputTimes</code> must be monotone
+ increasing values (sorted into increasing order and with no repeats).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>inputTimes</code> - positions of key frames in unshifted time</dd>

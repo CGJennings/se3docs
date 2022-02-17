@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -316,8 +316,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>parent</code> - the container to place the node in</dd>
-<dd><code>leaf</code> - the leaf to add; if <code>null</code> ensures that a node for
- the parent exists</dd>
+<dd><code>leaf</code> - the leaf to add; if <code>null</code> ensures that a node for the
+ parent exists</dd>
 </dl>
 </li>
 </ul>
@@ -374,10 +374,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <b>Note:</b> To function correctly, the implementation must ensure that
  for any valid input container, recursively calling this method will
  eventually return the root container. For example, if the container type
- is <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink"><code>File</code></a> and this method returns
- <code>container.getParent()</code>, then any directory added to the tree
- would have to be a direct or indirect child of the file used to create
- the root.</div>
+ is <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink"><code>File</code></a> and this method returns <code>container.getParent()</code>,
+ then any directory added to the tree would have to be a direct or
+ indirect child of the file used to create the root.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>container</code> - the container to determine a parent for</dd>

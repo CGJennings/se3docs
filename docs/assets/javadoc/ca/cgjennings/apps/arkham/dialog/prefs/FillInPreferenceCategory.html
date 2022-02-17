@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -242,7 +242,7 @@ implements <a href="PreferenceCategory.html" title="interface in ca.cgjennings.a
 </td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code><a href="../../diy/SBDropDown.html" title="class in ca.cgjennings.apps.arkham.diy">SBDropDown</a></code></td>
+<td class="colFirst"><code><a href="../../diy/SBDropDown.html" title="class in ca.cgjennings.apps.arkham.diy">SBDropDown</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addDropDown(java.lang.String,java.lang.String%5B%5D,java.lang.String%5B%5D)">addDropDown</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
            <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;labels,
            <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;values)</code></th>
@@ -629,14 +629,14 @@ implements <a href="PreferenceCategory.html" title="interface in ca.cgjennings.a
 <div class="block">If the user applies the settings changes, this will be called after the
  settings are updated to check if a restart is required. The base
  implementation checks to see if any of the keys registered with
- <a href="#addResetKey(java.lang.String)"><code>addResetKey(java.lang.String)</code></a> have changed value, and returns <code>true</code> if
- they have.</div>
+ <a href="#addResetKey(java.lang.String)"><code>addResetKey(java.lang.String)</code></a> have changed value, and returns <code>true</code> if they
+ have.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="PreferenceCategory.html#isRestartRequired()">isRestartRequired</a></code>&nbsp;in interface&nbsp;<code><a href="PreferenceCategory.html" title="interface in ca.cgjennings.apps.arkham.dialog.prefs">PreferenceCategory</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the application must be restarted for
- changes to take effect</dd>
+<dd><code>true</code> if the application must be restarted for changes to
+ take effect</dd>
 </dl>
 </li>
 </ul>
@@ -650,10 +650,10 @@ implements <a href="PreferenceCategory.html" title="interface in ca.cgjennings.a
 <div class="block">This method is called when the preferences dialog is about to be
  displayed in order to initialize the controls with the current settings.
  The base class will initialize any of the standard controls that have
- been added with a non-<code>null</code> key. It also records the initial
- value of any reset keys that have been added so that they can be compared
- to their new value later on to determine if a reset is required.
- Subclasses may override this to handle loading of custom controls.</div>
+ been added with a non-<code>null</code> key. It also records the initial value
+ of any reset keys that have been added so that they can be compared to
+ their new value later on to determine if a reset is required. Subclasses
+ may override this to handle loading of custom controls.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="PreferenceCategory.html#loadSettings()">loadSettings</a></code>&nbsp;in interface&nbsp;<code><a href="PreferenceCategory.html" title="interface in ca.cgjennings.apps.arkham.dialog.prefs">PreferenceCategory</a></code></dd>
@@ -755,8 +755,8 @@ implements <a href="PreferenceCategory.html" title="interface in ca.cgjennings.a
                               <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text,
                               boolean&nbsp;invert)</pre>
 <div class="block">Adds a checkbox at the current indent level that is mapped to key. If
- invert is <code>true</code>, then the box will be checked when the
- setting is false instead of true.</div>
+ invert is <code>true</code>, then the box will be checked when the setting is
+ false instead of true.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - the setting key name</dd>
@@ -773,9 +773,9 @@ implements <a href="PreferenceCategory.html" title="interface in ca.cgjennings.a
 <ul class="blockList">
 <li class="blockList">
 <h4>addDropDown</h4>
-<pre class="methodSignature">public&nbsp;<a href="../../diy/SBDropDown.html" title="class in ca.cgjennings.apps.arkham.diy">SBDropDown</a>&nbsp;addDropDown&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
-                              <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;labels,
-                              <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;values)</pre>
+<pre class="methodSignature">public&nbsp;<a href="../../diy/SBDropDown.html" title="class in ca.cgjennings.apps.arkham.diy">SBDropDown</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;addDropDown&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
+                                      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;labels,
+                                      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;values)</pre>
 <div class="block">Adds a dropdown menu button at the current indent level that is mapped to
  key.</div>
 <dl>
@@ -929,9 +929,9 @@ implements <a href="PreferenceCategory.html" title="interface in ca.cgjennings.a
 <h4>addHelp</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;addHelp&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;helpPage,
                     <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;label)</pre>
-<div class="block">Adds a help icon that links to a help page. If the help page looks like
- a <code>http[s]</code> URL, the button will link to that page. Otherwise
- it is assumed to the base name of documentation page.</div>
+<div class="block">Adds a help icon that links to a help page. If the help page looks like a
+ <code>http[s]</code> URL, the button will link to that page. Otherwise it is
+ assumed to the base name of documentation page.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>helpPage</code> - the page to open when the icon is clicked</dd>

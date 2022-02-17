@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -494,8 +494,8 @@ implements <a href="../../../../platform/AgnosticDialog.html" title="interface i
 <div class="block">Returns the currently selected category in this preferences dialog.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the selected preference category, or <code>null</code> if no
- category is selected</dd>
+<dd>the selected preference category, or <code>null</code> if no category
+ is selected</dd>
 </dl>
 </li>
 </ul>
@@ -509,13 +509,13 @@ implements <a href="../../../../platform/AgnosticDialog.html" title="interface i
                                     <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;sectionBottom)</pre>
 <div class="block">Scroll the currently displayed category to display a particular section.
  The desired section is identified by specifying the label text of labels
- at its top and bottom. If the top label is <code>null</code>, then the
- top of the category is used. If the bottom label is <code>null</code>,
- then the bottom of the category is used. If either label cannot be found
- in the category, it is treated as <code>null</code> (although a warning
- will be logged to the console). If the section is too long to fit within
- the category view without scrolling, the dialog will scroll to the top of
- the top section.</div>
+ at its top and bottom. If the top label is <code>null</code>, then the top of
+ the category is used. If the bottom label is <code>null</code>, then the
+ bottom of the category is used. If either label cannot be found in the
+ category, it is treated as <code>null</code> (although a warning will be
+ logged to the console). If the section is too long to fit within the
+ category view without scrolling, the dialog will scroll to the top of the
+ top section.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>sectionTop</code> - label text identifying the top of the section, or

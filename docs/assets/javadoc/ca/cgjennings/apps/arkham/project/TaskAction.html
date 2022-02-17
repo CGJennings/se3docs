@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -188,16 +188,16 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
          <a href="Task.html" title="class in ca.cgjennings.apps.arkham.project">Task</a>&nbsp;task,
          <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;member)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this action can be performed on the
- specified member of a project, project or a task.</div>
+<div class="block">Returns <code>true</code> if this action can be performed on the specified
+ member of a project, project or a task.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#appliesToSelection(ca.cgjennings.apps.arkham.project.Member%5B%5D)">appliesToSelection</a></span>&#8203;(<a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>[]&nbsp;members)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this action is applicable to any of the
- specified <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project"><code>Member</code></a>s.</div>
+<div class="block">Returns <code>true</code> if this action is applicable to any of the specified
+ <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project"><code>Member</code></a>s.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -229,8 +229,8 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Icon</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getIcon()">getIcon</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns an icon for this action, or <code>null</code> if the action
- should not be associated with an icon.</div>
+<div class="block">Returns an icon for this action, or <code>null</code> if the action should not
+ be associated with an icon.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -352,8 +352,8 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
 <li class="blockList">
 <h4>getIcon</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Icon</a>&nbsp;getIcon()</pre>
-<div class="block">Returns an icon for this action, or <code>null</code> if the action
- should not be associated with an icon.</div>
+<div class="block">Returns an icon for this action, or <code>null</code> if the action should not
+ be associated with an icon.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../ui/IconProvider.html#getIcon()">getIcon</a></code>&nbsp;in interface&nbsp;<code><a href="../../../ui/IconProvider.html" title="interface in ca.cgjennings.ui">IconProvider</a></code></dd>
@@ -400,13 +400,12 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
                                 <a href="Task.html" title="class in ca.cgjennings.apps.arkham.project">Task</a>&nbsp;task,
                                 <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;member)</pre>
 <div class="block">Perform this action on a member of a project, a project or a task. If the
- project itself is the target, <code>task</code> and <code>member</code>
- will be <code>null</code>. If a task is the target, then
- <code>member</code> will be null. If an error occurs while executing the
- task, then it is the action's responsibility to inform the user. This
- method can return <code>false</code> to indicate that if the action is
- being applied to multiple members, it should stop immediately rather than
- continue to the next member.</div>
+ project itself is the target, <code>task</code> and <code>member</code> will be
+ <code>null</code>. If a task is the target, then <code>member</code> will be null.
+ If an error occurs while executing the task, then it is the action's
+ responsibility to inform the user. This method can return <code>false</code>
+ to indicate that if the action is being applied to multiple members, it
+ should stop immediately rather than continue to the next member.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>project</code> - the project that is being acted upon</dd>
@@ -426,15 +425,14 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
 <pre class="methodSignature">public abstract&nbsp;boolean&nbsp;appliesTo&#8203;(<a href="Project.html" title="class in ca.cgjennings.apps.arkham.project">Project</a>&nbsp;project,
                                   <a href="Task.html" title="class in ca.cgjennings.apps.arkham.project">Task</a>&nbsp;task,
                                   <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;member)</pre>
-<div class="block">Returns <code>true</code> if this action can be performed on the
- specified member of a project, project or a task. If the project itself
- is the target, <code>task</code> and <code>member</code> will be
- <code>null</code>. If a task is the target, then <code>member</code> will
- be null. If an error occurs while executing the task, then it is the
- action's responsibility to inform the user. This method can return
- <code>false</code> to indicate that if the action is being applied to
- multiple members, it should stop immediately rather than continue to the
- next member.</div>
+<div class="block">Returns <code>true</code> if this action can be performed on the specified
+ member of a project, project or a task. If the project itself is the
+ target, <code>task</code> and <code>member</code> will be <code>null</code>. If a task
+ is the target, then <code>member</code> will be null. If an error occurs while
+ executing the task, then it is the action's responsibility to inform the
+ user. This method can return <code>false</code> to indicate that if the action
+ is being applied to multiple members, it should stop immediately rather
+ than continue to the next member.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>project</code> - the project that is being acted upon</dd>
@@ -457,8 +455,8 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
 <div class="block">Returns the member being targeted by action regardless of whether it is a
  project, task, or task member. If your action can be applied to any type
  of member, you can call this to simplify your handling code. It returns
- the first of <code>member</code>, <code>task</code>, or
- <code>project</code> that is non-<code>null</code>.</div>
+ the first of <code>member</code>, <code>task</code>, or <code>project</code> that is
+ non-<code>null</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>project</code> - the project passed in to the action</dd>
@@ -477,19 +475,17 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
 <li class="blockList">
 <h4>appliesToSelection</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;appliesToSelection&#8203;(<a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>[]&nbsp;members)</pre>
-<div class="block">Returns <code>true</code> if this action is applicable to any of the
- specified <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project"><code>Member</code></a>s. By overriding this, you can modify whether an
- action is listed depending on which other members are selected. For
- example, you could create a command that can only be applied to a
- singleton selection by checking the length of <code>members</code> and
- returning <code>false</code> if it is not 1, and otherwise calling the
- super implementation.</div>
+<div class="block">Returns <code>true</code> if this action is applicable to any of the specified
+ <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project"><code>Member</code></a>s. By overriding this, you can modify whether an action is
+ listed depending on which other members are selected. For example, you
+ could create a command that can only be applied to a singleton selection
+ by checking the length of <code>members</code> and returning <code>false</code> if
+ it is not 1, and otherwise calling the super implementation.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>members</code> - a list of zero or more members</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> is the action can be applied to at least one
- member</dd>
+<dd><code>true</code> is the action can be applied to at least one member</dd>
 </dl>
 </li>
 </ul>
@@ -508,8 +504,8 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>members</code> - </dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if and only if the action is successfully
- applied to all of the members</dd>
+<dd><code>true</code> if and only if the action is successfully applied to
+ all of the members</dd>
 </dl>
 </li>
 </ul>

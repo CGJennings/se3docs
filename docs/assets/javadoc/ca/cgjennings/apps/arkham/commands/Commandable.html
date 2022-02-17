@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -173,8 +173,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isCommandApplicable(ca.cgjennings.apps.arkham.commands.AbstractCommand)">isCommandApplicable</a></span>&#8203;(<a href="AbstractCommand.html" title="class in ca.cgjennings.apps.arkham.commands">AbstractCommand</a>&nbsp;command)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the <code>command</code> can be performed by
- this commandable in its current state.</div>
+<div class="block">Returns <code>true</code> if the <code>command</code> can be performed by this
+ commandable in its current state.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -218,8 +218,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>command</code> - the command to be performed</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if this commandable wishes to handle the
- command (even if it cannot execute the command currently)</dd>
+<dd><code>true</code> if this commandable wishes to handle the command
+ (even if it cannot execute the command currently)</dd>
 </dl>
 </li>
 </ul>
@@ -230,9 +230,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <h4>isCommandApplicable</h4>
 <pre class="methodSignature">boolean&nbsp;isCommandApplicable&#8203;(<a href="AbstractCommand.html" title="class in ca.cgjennings.apps.arkham.commands">AbstractCommand</a>&nbsp;command)</pre>
-<div class="block">Returns <code>true</code> if the <code>command</code> can be performed by
- this commandable in its current state. If <a href="#canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)"><code>canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a>
- would return false for this command, then this must also return false.</div>
+<div class="block">Returns <code>true</code> if the <code>command</code> can be performed by this
+ commandable in its current state. If <a href="#canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)"><code>canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a> would
+ return false for this command, then this must also return false.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>command</code> - the command to be performed</dd>

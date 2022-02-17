@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -620,8 +620,8 @@ extends <a href="AbstractImageFilter.html" title="class in ca.cgjennings.graphic
  <code>false</code> if the filter will produce an inner glow.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> for an outer glow type; <code>false</code> for
- an inner glow type</dd>
+<dd><code>true</code> for an outer glow type; <code>false</code> for an inner
+ glow type</dd>
 </dl>
 </li>
 </ul>
@@ -636,8 +636,8 @@ extends <a href="AbstractImageFilter.html" title="class in ca.cgjennings.graphic
  the edge, or both.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>outerGlow</code> - <code>true</code> for an outer glow type;
- <code>false</code> for an inner glow type</dd>
+<dd><code>outerGlow</code> - <code>true</code> for an outer glow type; <code>false</code> for
+ an inner glow type</dd>
 </dl>
 </li>
 </ul>
@@ -708,12 +708,11 @@ extends <a href="AbstractImageFilter.html" title="class in ca.cgjennings.graphic
 <h4>setSourceImagePainted</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setSourceImagePainted&#8203;(boolean&nbsp;paintSource)</pre>
 <div class="block">Sets whether the original image will be included in the output. If
- <code>true</code>, the glow effect will be combined with the original
- image.</div>
+ <code>true</code>, the glow effect will be combined with the original image.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>paintSource</code> - <code>true</code> to include the image the effect
- applies to, <code>false</code> to produce the glow effect only</dd>
+<dd><code>paintSource</code> - <code>true</code> to include the image the effect applies
+ to, <code>false</code> to produce the glow effect only</dd>
 </dl>
 </li>
 </ul>

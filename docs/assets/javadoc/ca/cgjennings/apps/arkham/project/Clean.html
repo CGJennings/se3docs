@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -224,8 +224,8 @@ extends <a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.proj
          <a href="Task.html" title="class in ca.cgjennings.apps.arkham.project">Task</a>&nbsp;task,
          <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;member)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this action can be performed on the
- specified member of a project, project or a task.</div>
+<div class="block">Returns <code>true</code> if this action can be performed on the specified
+ member of a project, project or a task.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -257,8 +257,8 @@ extends <a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.proj
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#willDelete(ca.cgjennings.apps.arkham.project.Member,java.lang.String%5B%5D)">willDelete</a></span>&#8203;(<a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;m,
           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;extensions)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the clean command should delete a particular
- file or folder.</div>
+<div class="block">Returns <code>true</code> if the clean command should delete a particular file
+ or folder.</div>
 </td>
 </tr>
 </table>
@@ -385,13 +385,12 @@ extends <a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.proj
                        <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;member)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="TaskAction.html#perform(ca.cgjennings.apps.arkham.project.Project,ca.cgjennings.apps.arkham.project.Task,ca.cgjennings.apps.arkham.project.Member)">TaskAction</a></code></span></div>
 <div class="block">Perform this action on a member of a project, a project or a task. If the
- project itself is the target, <code>task</code> and <code>member</code>
- will be <code>null</code>. If a task is the target, then
- <code>member</code> will be null. If an error occurs while executing the
- task, then it is the action's responsibility to inform the user. This
- method can return <code>false</code> to indicate that if the action is
- being applied to multiple members, it should stop immediately rather than
- continue to the next member.</div>
+ project itself is the target, <code>task</code> and <code>member</code> will be
+ <code>null</code>. If a task is the target, then <code>member</code> will be null.
+ If an error occurs while executing the task, then it is the action's
+ responsibility to inform the user. This method can return <code>false</code>
+ to indicate that if the action is being applied to multiple members, it
+ should stop immediately rather than continue to the next member.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="TaskAction.html#perform(ca.cgjennings.apps.arkham.project.Project,ca.cgjennings.apps.arkham.project.Task,ca.cgjennings.apps.arkham.project.Member)">perform</a></code>&nbsp;in class&nbsp;<code><a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.project">TaskAction</a></code></dd>
@@ -414,15 +413,14 @@ extends <a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.proj
                          <a href="Task.html" title="class in ca.cgjennings.apps.arkham.project">Task</a>&nbsp;task,
                          <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;member)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="TaskAction.html#appliesTo(ca.cgjennings.apps.arkham.project.Project,ca.cgjennings.apps.arkham.project.Task,ca.cgjennings.apps.arkham.project.Member)">TaskAction</a></code></span></div>
-<div class="block">Returns <code>true</code> if this action can be performed on the
- specified member of a project, project or a task. If the project itself
- is the target, <code>task</code> and <code>member</code> will be
- <code>null</code>. If a task is the target, then <code>member</code> will
- be null. If an error occurs while executing the task, then it is the
- action's responsibility to inform the user. This method can return
- <code>false</code> to indicate that if the action is being applied to
- multiple members, it should stop immediately rather than continue to the
- next member.</div>
+<div class="block">Returns <code>true</code> if this action can be performed on the specified
+ member of a project, project or a task. If the project itself is the
+ target, <code>task</code> and <code>member</code> will be <code>null</code>. If a task
+ is the target, then <code>member</code> will be null. If an error occurs while
+ executing the task, then it is the action's responsibility to inform the
+ user. This method can return <code>false</code> to indicate that if the action
+ is being applied to multiple members, it should stop immediately rather
+ than continue to the next member.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="TaskAction.html#appliesTo(ca.cgjennings.apps.arkham.project.Project,ca.cgjennings.apps.arkham.project.Task,ca.cgjennings.apps.arkham.project.Member)">appliesTo</a></code>&nbsp;in class&nbsp;<code><a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.project">TaskAction</a></code></dd>
@@ -443,11 +441,11 @@ extends <a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.proj
 <h4>willDelete</h4>
 <pre class="methodSignature">protected&nbsp;boolean&nbsp;willDelete&#8203;(<a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;m,
                              <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;extensions)</pre>
-<div class="block">Returns <code>true</code> if the clean command should delete a particular
- file or folder. The base class implementation returns <code>true</code>
- when the member is not a folder and its extension matches one of those
- that is passed in. Subclasses can override this to create customized
- clean actions for a specific task. (If the new action uses
+<div class="block">Returns <code>true</code> if the clean command should delete a particular file
+ or folder. The base class implementation returns <code>true</code> when the
+ member is not a folder and its extension matches one of those that is
+ passed in. Subclasses can override this to create customized clean
+ actions for a specific task. (If the new action uses
  <a href="#KEY_CLEAN_EXTENSIONS"><code>KEY_CLEAN_EXTENSIONS</code></a>, then you should extend the original
  command as a <a href="SpecializedAction.html" title="class in ca.cgjennings.apps.arkham.project"><code>SpecializedAction</code></a> to avoid having both clean
  commands match a task.)</div>
@@ -457,8 +455,7 @@ extends <a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.proj
 <dd><code>extensions</code> - an array of file extensions that may be used to assist
  in decision-making</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if <code>m</code> should be deleted by a clean
- operation</dd>
+<dd><code>true</code> if <code>m</code> should be deleted by a clean operation</dd>
 </dl>
 </li>
 </ul>

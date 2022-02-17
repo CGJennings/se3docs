@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -314,16 +314,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.ht
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isBackgroundMatched()">isBackgroundMatched</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the background colour of this control is
- updated to reflect the colour under the eye dropper as it is dragged.</div>
+<div class="block">Returns <code>true</code> if the background colour of this control is updated
+ to reflect the colour under the eye dropper as it is dragged.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>static boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isCurrentlySampling()">isCurrentlySampling</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if <i>any</i> <code>EyeDropper</code> is
- currently being used to take colour samples.</div>
+<div class="block">Returns <code>true</code> if <i>any</i> <code>EyeDropper</code> is currently being
+ used to take colour samples.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -427,10 +427,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.ht
 <li class="blockList">
 <h4>EyeDropper</h4>
 <pre>public&nbsp;EyeDropper()</pre>
-<div class="block">Creates a new eye dropper. If <a href="#isSupported()"><code>isSupported()</code></a> returns
- <code>true</code> and the component is added to a window, the user will
- be able to drag the eye dropper icon from the panel around the display in
- order to select colours.</div>
+<div class="block">Creates a new eye dropper. If <a href="#isSupported()"><code>isSupported()</code></a> returns <code>true</code>
+ and the component is added to a window, the user will be able to drag the
+ eye dropper icon from the panel around the display in order to select
+ colours.</div>
 </li>
 </ul>
 </li>
@@ -450,8 +450,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.ht
 <li class="blockList">
 <h4>isCurrentlySampling</h4>
 <pre class="methodSignature">public static&nbsp;boolean&nbsp;isCurrentlySampling()</pre>
-<div class="block">Returns <code>true</code> if <i>any</i> <code>EyeDropper</code> is
- currently being used to take colour samples.</div>
+<div class="block">Returns <code>true</code> if <i>any</i> <code>EyeDropper</code> is currently being
+ used to take colour samples.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if an eye dropper instance is being dragged</dd>
@@ -471,8 +471,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.ht
  reflect the colour under the eye dropper as it is dragged.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>match</code> - if <code>true</code>, the background colour of the control
- is updated automatically</dd>
+<dd><code>match</code> - if <code>true</code>, the background colour of the control is
+ updated automatically</dd>
 </dl>
 </li>
 </ul>
@@ -483,12 +483,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.ht
 <li class="blockList">
 <h4>isBackgroundMatched</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isBackgroundMatched()</pre>
-<div class="block">Returns <code>true</code> if the background colour of this control is
- updated to reflect the colour under the eye dropper as it is dragged.</div>
+<div class="block">Returns <code>true</code> if the background colour of this control is updated
+ to reflect the colour under the eye dropper as it is dragged.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the background is set to the colour under
- the dropper</dd>
+<dd><code>true</code> if the background is set to the colour under the
+ dropper</dd>
 </dl>
 </li>
 </ul>
@@ -499,9 +499,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.ht
 <li class="blockList">
 <h4>isSupported</h4>
 <pre class="methodSignature">public static&nbsp;boolean&nbsp;isSupported()</pre>
-<div class="block">Returns <code>true</code> if the eye dropper is usable on this platform.
- If this returns <code>false</code>, the control can still be added to a
- layout but it will be disabled and invisible.</div>
+<div class="block">Returns <code>true</code> if the eye dropper is usable on this platform. If
+ this returns <code>false</code>, the control can still be added to a layout
+ but it will be disabled and invisible.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the dropper is supported on this platform</dd>

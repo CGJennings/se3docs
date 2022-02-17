@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -147,13 +147,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/AbstractA
 <div class="block">The abstract base class for main application commands in Strange Eons.
 
  <p>
- Because this class is descended from Swing <code>Action</code>s, it includes
- a property map that can be used to set its name, icon, and so forth. However,
+ Because this class is descended from Swing <code>Action</code>s, it includes a
+ property map that can be used to set its name, icon, and so forth. However,
  this class also defines several convenience methods for setting these
- properties (all of which are <code>final</code>). Some of these perform
- additional processing on the input before setting it as the value for the
- relevant property (see, for example, <a href="#setName(java.lang.String)"><code>setName(java.lang.String)</code></a>. In
- these cases you can bypass the additional processing by setting the relevant
+ properties (all of which are <code>final</code>). Some of these perform additional
+ processing on the input before setting it as the value for the relevant
+ property (see, for example, <a href="#setName(java.lang.String)"><code>setName(java.lang.String)</code></a>. In these
+ cases you can bypass the additional processing by setting the relevant
  property value directly.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
@@ -393,9 +393,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/AbstractA
 <h4>BUTTON_ID_KEY</h4>
 <pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> BUTTON_ID_KEY</pre>
 <div class="block">The key used for storing the ID string to use for this command when it is
- added to a context bar using <code>ContextBar.CommandButton</code>. If
- this is <code>null</code>, then a non-<code>null</code> ID must be
- provided when creating the button.</div>
+ added to a context bar using <code>ContextBar.CommandButton</code>. If this is
+ <code>null</code>, then a non-<code>null</code> ID must be provided when creating
+ the button.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../constant-values.html#ca.cgjennings.apps.arkham.commands.AbstractCommand.BUTTON_ID_KEY">Constant Field Values</a></dd>
@@ -642,9 +642,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/AbstractA
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>e</code> - the action event that fired the command</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>null</code> if the event's action command is
- <code>null</code>, empty, or the default value for this command;
- otherwise, the value of the action command</dd>
+<dd><code>null</code> if the event's action command is <code>null</code>,
+ empty, or the default value for this command; otherwise, the value of the
+ action command</dd>
 </dl>
 </li>
 </ul>

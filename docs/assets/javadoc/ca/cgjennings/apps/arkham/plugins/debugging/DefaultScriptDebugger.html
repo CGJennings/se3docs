@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -140,10 +140,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <p>
  <b>Protocol Summary:</b> Each command is sent as a sequence of UTF-8 text
  lines. The first line must be the magic value <tt>SEDP3</tt>. The next line
- is the command name, as given by <code>Command.name()</code>. This is
- followed by zero or more lines, where each line represents one argument. The
- server will reply with either <tt>SEDP3 OK</tt> and the reply to the command
- (if any), or else <tt>SEDP3 ERR</tt> and an error message.</div>
+ is the command name, as given by <code>Command.name()</code>. This is followed by
+ zero or more lines, where each line represents one argument. The server will
+ reply with either <tt>SEDP3 OK</tt> and the reply to the command (if any), or
+ else <tt>SEDP3 ERR</tt> and an error message.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -308,11 +308,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isClientConnected</h4>
 <pre class="methodSignature">public static&nbsp;boolean&nbsp;isClientConnected()</pre>
-<div class="block">Returns <code>true</code> if a client is connected to the debugger. Since
- the client does not maintain a continuous connection, this method cannot
- be guaranteed to be accurate. It works by tracking the last time that a
- client connected to the server, and returning <code>true</code> if the
- last connection was in the near past.</div>
+<div class="block">Returns <code>true</code> if a client is connected to the debugger. Since the
+ client does not maintain a continuous connection, this method cannot be
+ guaranteed to be accurate. It works by tracking the last time that a
+ client connected to the server, and returning <code>true</code> if the last
+ connection was in the near past.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if a client application is probably available</dd>

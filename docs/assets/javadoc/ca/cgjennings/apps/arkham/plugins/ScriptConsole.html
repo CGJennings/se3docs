@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -351,9 +351,9 @@ implements <a href="../TrackedWindow.html" title="interface in ca.cgjennings.app
 <td class="colFirst"><code><a href="ConsoleErrorLocation.html" title="class in ca.cgjennings.apps.arkham.plugins">ConsoleErrorLocation</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getErrorAtOffset(int)">getErrorAtOffset</a></span>&#8203;(int&nbsp;pos)</code></th>
 <td class="colLast">
-<div class="block">Returns a description of the error at the line at offset <code>pos</code>
- in the script console's text, or <code>null</code> if that line is not a
- stack trace line.</div>
+<div class="block">Returns a description of the error at the line at offset <code>pos</code> in
+ the script console's text, or <code>null</code> if that line is not a stack
+ trace line.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -376,8 +376,8 @@ implements <a href="../TrackedWindow.html" title="interface in ca.cgjennings.app
 <td class="colFirst"><code><a href="ScriptConsole.ConsolePrintWriter.html" title="class in ca.cgjennings.apps.arkham.plugins">ScriptConsole.ConsolePrintWriter</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getErrorWriter()">getErrorWriter</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns a <code>PrintWriter</code> that can be used to write to the
- stderr stream of the console.</div>
+<div class="block">Returns a <code>PrintWriter</code> that can be used to write to the stderr
+ stream of the console.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -404,8 +404,8 @@ implements <a href="../TrackedWindow.html" title="interface in ca.cgjennings.app
 <td class="colFirst"><code><a href="ScriptConsole.ConsolePrintWriter.html" title="class in ca.cgjennings.apps.arkham.plugins">ScriptConsole.ConsolePrintWriter</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getWriter()">getWriter</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns a <code>PrintWriter</code> that can be used to write to the
- stdout stream of the console.</div>
+<div class="block">Returns a <code>PrintWriter</code> that can be used to write to the stdout
+ stream of the console.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
@@ -574,8 +574,8 @@ implements <a href="../TrackedWindow.html" title="interface in ca.cgjennings.app
 <li class="blockList">
 <h4>getWriter</h4>
 <pre class="methodSignature">public&nbsp;<a href="ScriptConsole.ConsolePrintWriter.html" title="class in ca.cgjennings.apps.arkham.plugins">ScriptConsole.ConsolePrintWriter</a>&nbsp;getWriter()</pre>
-<div class="block">Returns a <code>PrintWriter</code> that can be used to write to the
- stdout stream of the console.</div>
+<div class="block">Returns a <code>PrintWriter</code> that can be used to write to the stdout
+ stream of the console.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a print writer for <a href="#getOutputStream()"><code>getOutputStream()</code></a></dd>
@@ -589,8 +589,8 @@ implements <a href="../TrackedWindow.html" title="interface in ca.cgjennings.app
 <li class="blockList">
 <h4>getErrorWriter</h4>
 <pre class="methodSignature">public&nbsp;<a href="ScriptConsole.ConsolePrintWriter.html" title="class in ca.cgjennings.apps.arkham.plugins">ScriptConsole.ConsolePrintWriter</a>&nbsp;getErrorWriter()</pre>
-<div class="block">Returns a <code>PrintWriter</code> that can be used to write to the
- stderr stream of the console.</div>
+<div class="block">Returns a <code>PrintWriter</code> that can be used to write to the stderr
+ stream of the console.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a print writer for <a href="#getErrorStream()"><code>getErrorStream()</code></a></dd>
@@ -665,9 +665,8 @@ implements <a href="../TrackedWindow.html" title="interface in ca.cgjennings.app
 <h4>getErrorAtPoint</h4>
 <pre class="methodSignature">public&nbsp;<a href="ConsoleErrorLocation.html" title="class in ca.cgjennings.apps.arkham.plugins">ConsoleErrorLocation</a>&nbsp;getErrorAtPoint&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Point.html?is-external=true" title="class or interface in java.awt" class="externalLink">Point</a>&nbsp;p)</pre>
 <div class="block">Returns a description of the error at the offset into the console text
- under the specified point in the console window. Returns
- <code>null</code> if the line at that point does not represent a valid
- stack trace entry.</div>
+ under the specified point in the console window. Returns <code>null</code> if
+ the line at that point does not represent a valid stack trace entry.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>p</code> - the point over the script console</dd>
@@ -686,12 +685,12 @@ implements <a href="../TrackedWindow.html" title="interface in ca.cgjennings.app
 <li class="blockList">
 <h4>getErrorAtOffset</h4>
 <pre class="methodSignature">public&nbsp;<a href="ConsoleErrorLocation.html" title="class in ca.cgjennings.apps.arkham.plugins">ConsoleErrorLocation</a>&nbsp;getErrorAtOffset&#8203;(int&nbsp;pos)</pre>
-<div class="block">Returns a description of the error at the line at offset <code>pos</code>
- in the script console's text, or <code>null</code> if that line is not a
- stack trace line. The script console does not remember which lines are
- produced from a script stack trace. Rather, it attempts to parse lines on
- demand to extract the needed information. Therefore it can be fooled by
- lines that closely mimic the format of script stack traces.
+<div class="block">Returns a description of the error at the line at offset <code>pos</code> in
+ the script console's text, or <code>null</code> if that line is not a stack
+ trace line. The script console does not remember which lines are produced
+ from a script stack trace. Rather, it attempts to parse lines on demand
+ to extract the needed information. Therefore it can be fooled by lines
+ that closely mimic the format of script stack traces.
  <p>
  If the line at the requested position cannot be parsed as a script stack
  trace, then the immediately following line will also be tried. This is a

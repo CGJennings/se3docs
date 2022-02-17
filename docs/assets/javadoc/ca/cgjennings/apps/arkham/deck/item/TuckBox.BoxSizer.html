@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -131,9 +131,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public static interface <span class="typeNameLabel">TuckBox.BoxSizer</span></pre>
 <div class="block">A sizing tool for a particular type of component. The sizer's
- <code>toString</code> method should return a human-readable description
- of the type of component(s) that this sizer produces box measurements
- for.</div>
+ <code>toString</code> method should return a human-readable description of the
+ type of component(s) that this sizer produces box measurements for.</div>
 </li>
 </ul>
 </div>
@@ -158,8 +157,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#allowSleeves()">allowSleeves</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this helper uses sleeve thickness as
- part of its sizing algorithm.</div>
+<div class="block">Returns <code>true</code> if this helper uses sleeve thickness as part of
+ its sizing algorithm.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -200,8 +199,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <div class="block">Returns the dimensions for a box of the type represented by this
  sizer that allows sufficient space to hold a number of cards equal to
  <code>cards</code>. The dimensions are returned as an array of three
- <code>double</code> values which measure the width, height, and depth
- in mm (respectively).</div>
+ <code>double</code> values which measure the width, height, and depth in
+ mm (respectively).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>cards</code> - the number of objects the box should hold</dd>
@@ -220,14 +219,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <h4>allowSleeves</h4>
 <pre class="methodSignature">boolean&nbsp;allowSleeves()</pre>
-<div class="block">Returns <code>true</code> if this helper uses sleeve thickness as
- part of its sizing algorithm. Non-card components typically don't
- have a suitable sleeve available, so sizers for such components would
- return <code>false</code>.</div>
+<div class="block">Returns <code>true</code> if this helper uses sleeve thickness as part of
+ its sizing algorithm. Non-card components typically don't have a
+ suitable sleeve available, so sizers for such components would return
+ <code>false</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if and only if the user can store this
- component type on plastic sleeves</dd>
+<dd><code>true</code> if and only if the user can store this component
+ type on plastic sleeves</dd>
 </dl>
 </li>
 </ul>

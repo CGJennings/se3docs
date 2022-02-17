@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -318,8 +318,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JPanel.ht
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isResourceTypeSupported(java.lang.Object)">isResourceTypeSupported</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;o)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this file appears to be of a type for which
- a preview can be created.</div>
+<div class="block">Returns <code>true</code> if this file appears to be of a type for which a
+ preview can be created.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -512,8 +512,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JPanel.ht
  override this to create a custom previewer for a different file type.
  Note that this is typically
  <b>not</b> run from the event dispatch thread. If constructing the image
- fails for any reason, this method must return <code>null</code> and
- should not display an error message.</div>
+ fails for any reason, this method must return <code>null</code> and should not
+ display an error message.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>f</code> - the file to compose a preview of</dd>
@@ -529,8 +529,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JPanel.ht
 <li class="blockList">
 <h4>isResourceTypeSupported</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isResourceTypeSupported&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;o)</pre>
-<div class="block">Returns <code>true</code> if this file appears to be of a type for which
- a preview can be created.</div>
+<div class="block">Returns <code>true</code> if this file appears to be of a type for which a
+ preview can be created.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>o</code> - the file to check</dd>

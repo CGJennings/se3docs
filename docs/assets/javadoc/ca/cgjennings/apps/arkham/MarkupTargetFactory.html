@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -178,8 +178,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isValidTarget(java.lang.Object,boolean)">isValidTarget</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;potentialTarget,
              boolean&nbsp;strict)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if a markup target can be created for an
- object.</div>
+<div class="block">Returns <code>true</code> if a markup target can be created for an object.</div>
 </td>
 </tr>
 </table>
@@ -214,14 +213,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>isValidTarget</h4>
 <pre class="methodSignature">public static&nbsp;boolean&nbsp;isValidTarget&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;potentialTarget,
                                     boolean&nbsp;strict)</pre>
-<div class="block">Returns <code>true</code> if a markup target can be created for an
- object. To be valid, the potential target must be non-<code>null</code>,
- and must be a supported type of interface component. If
- <code>strict</code> is <code>true</code>, then the potential target must
- also be showing, enabled, and editable. Currently supported component
- types include text fields (any subclass of <code>JTextComponent</code>)
- and code editor controls. Other types might be supported in future
- versions.
+<div class="block">Returns <code>true</code> if a markup target can be created for an object. To
+ be valid, the potential target must be non-<code>null</code>, and must be a
+ supported type of interface component. If <code>strict</code> is <code>true</code>,
+ then the potential target must also be showing, enabled, and editable.
+ Currently supported component types include text fields (any subclass of
+ <code>JTextComponent</code>) and code editor controls. Other types might be
+ supported in future versions.
 
  <p>
  Text fields are normally only accepted as valid targets when they are
@@ -230,15 +228,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  decision as to whether a component is accepted can be overridden by
  setting the client property
  <code>MarkupTarget.FORCE_MARKUP_TARGET_PROPERTY</code> to either
- <code>Boolean.TRUE</code> (accept if possible) or
- <code>Boolean.FALSE</code> (always reject). To be accepted, the component
- must still be of a supported type and (if <code>strict</code>) be
- showing, enabled, and editable.</div>
+ <code>Boolean.TRUE</code> (accept if possible) or <code>Boolean.FALSE</code>
+ (always reject). To be accepted, the component must still be of a
+ supported type and (if <code>strict</code>) be showing, enabled, and editable.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>potentialTarget</code> - the potential markup target to check</dd>
-<dd><code>strict</code> - if <code>true</code>, the target must be showing, enabled,
- and editable</dd>
+<dd><code>strict</code> - if <code>true</code>, the target must be showing, enabled, and
+ editable</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the component can be a markup target</dd>
 </dl>
@@ -257,8 +254,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>potentialTarget</code> - the potential target to create a markup target for</dd>
-<dd><code>strict</code> - if <code>true</code>, the component must be showing,
- enabled, and editable</dd>
+<dd><code>strict</code> - if <code>true</code>, the component must be showing, enabled,
+ and editable</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a markup target compatible with the provided object, or
  <code>null</code></dd>

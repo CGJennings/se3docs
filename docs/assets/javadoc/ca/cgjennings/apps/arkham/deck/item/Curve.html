@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -279,8 +279,8 @@ extends <a href="Line.html" title="class in ca.cgjennings.apps.arkham.deck.item"
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasExteriorHandles()">hasExteriorHandles</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this item has one or more drag handles that
- may lie outside of the item's bounding box.</div>
+<div class="block">Returns <code>true</code> if this item has one or more drag handles that may
+ lie outside of the item's bounding box.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -460,8 +460,8 @@ extends <a href="Line.html" title="class in ca.cgjennings.apps.arkham.deck.item"
 <h4>getOutline</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Shape.html?is-external=true" title="class or interface in java.awt" class="externalLink">Shape</a>&nbsp;getOutline()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="PageItem.html#getOutline()">PageItem</a></code></span></div>
-<div class="block">Return a <code>Shape</code> that corresponds to the outline of this item.
- In the simplest case, this can return the same result as
+<div class="block">Return a <code>Shape</code> that corresponds to the outline of this item. In
+ the simplest case, this can return the same result as
  <a href="PageItem.html#getRectangle()"><code>PageItem.getRectangle()</code></a>. If precise geometry is available for the item,
  then this should return a more accurate bounding shape.</div>
 <dl>
@@ -486,8 +486,8 @@ extends <a href="Line.html" title="class in ca.cgjennings.apps.arkham.deck.item"
  item has no handles, returns <code>null</code>.
  <p>
  Concrete subclasses should create an array of handles on demand and cache
- them in the <code>dragHandles</code> field in order to ensure that
- handles are not shared between copies of the item. Example:
+ them in the <code>dragHandles</code> field in order to ensure that handles are
+ not shared between copies of the item. Example:
  <pre>
  public DragHandle[] getDragHandles() {
      if( dragHandles == null ) {
@@ -515,11 +515,11 @@ extends <a href="Line.html" title="class in ca.cgjennings.apps.arkham.deck.item"
 <h4>hasExteriorHandles</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;hasExteriorHandles()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="PageItem.html#hasExteriorHandles()">PageItem</a></code></span></div>
-<div class="block">Returns <code>true</code> if this item has one or more drag handles that
- may lie outside of the item's bounding box. The editor normally only
- tests handles that lie within the bounding box to see if the user has
- pointed at them; if this method returns <code>true</code> then the item's
- handles are always tested.</div>
+<div class="block">Returns <code>true</code> if this item has one or more drag handles that may
+ lie outside of the item's bounding box. The editor normally only tests
+ handles that lie within the bounding box to see if the user has pointed
+ at them; if this method returns <code>true</code> then the item's handles are
+ always tested.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="PageItem.html#hasExteriorHandles()">hasExteriorHandles</a></code>&nbsp;in interface&nbsp;<code><a href="PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a></code></dd>

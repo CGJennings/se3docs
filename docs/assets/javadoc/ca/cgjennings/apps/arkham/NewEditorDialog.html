@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -437,10 +437,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JDialog.h
 <h4>selectClassInComponentList</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;selectClassInComponentList&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;mapping)</pre>
 <div class="block">Searches the component lists for the specified entry and selects the
- first instance of it, if any. Returns <code>true</code> if the class was
- found (and selected). The name must be a fully qualified class or script
- identifier, such as
- <code>ca.cgjennings.apps.arkham.component.Monster</code>.</div>
+ first instance of it, if any. Returns <code>true</code> if the class was found
+ (and selected). The name must be a fully qualified class or script
+ identifier, such as <code>ca.cgjennings.apps.arkham.component.Monster</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>mapping</code> - the name of the class or script to select</dd>

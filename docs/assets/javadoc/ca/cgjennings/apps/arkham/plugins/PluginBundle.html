@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -132,8 +132,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre>public class <span class="typeNameLabel">PluginBundle</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
 <div class="block">A plug-in bundle is a file that stores the code and resources required by a
- plug-in. The <code>PluginBundle</code> class encapsulates operations that can
- be performed on such a bundle <i>without actually linking it to the
+ plug-in. The <code>PluginBundle</code> class encapsulates operations that can be
+ performed on such a bundle <i>without actually linking it to the
  application</i>. (The distinction is important because linking a plug-in
  bundle to the application also typically locks the bundle file until the
  application terminates.)
@@ -169,10 +169,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <p>
  <b>Obsolete Formats:</b> Some alpha and beta releases of Strange Eons
  supported bundles that used other archive formats. These bundles are no
- longer supported, and attempting to create a <code>PluginBundle</code>
- instance for such files, or to determine their format, will throw an
- exception. Bundles stored in these obsolete formats would now typically be
- converted into published bundles (see below).
+ longer supported, and attempting to create a <code>PluginBundle</code> instance
+ for such files, or to determine their format, will throw an exception.
+ Bundles stored in these obsolete formats would now typically be converted
+ into published bundles (see below).
 
  <p>
  <b>Published Bundles:</b> This class does not handle bundles that have been
@@ -415,8 +415,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/zip/ZipFile.html?is-external=true" title="class or interface in java.util.zip" class="externalLink">ZipFile</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getZipFile()">getZipFile</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns a <code>ZipFile</code> that represents the archived contents of
- this bundle.</div>
+<div class="block">Returns a <code>ZipFile</code> that represents the archived contents of this
+ bundle.</div>
 </td>
 </tr>
 <tr id="i13" class="rowColor">
@@ -639,9 +639,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public&nbsp;<a href="PluginRoot.html" title="class in ca.cgjennings.apps.arkham.plugins">PluginRoot</a>&nbsp;getPluginRoot()
                          throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <div class="block">Returns a <a href="PluginRoot.html" title="class in ca.cgjennings.apps.arkham.plugins"><code>PluginRoot</code></a> for the root file in this bundle, or
- <code>null</code> if the plug-in does not have a root file. (A plug-in
- bundle with no root file is invalid unless it is a library bundle.) If
- the bundle format is not <code>FORMAT_PLAIN</code>, then it will first be
+ <code>null</code> if the plug-in does not have a root file. (A plug-in bundle
+ with no root file is invalid unless it is a library bundle.) If the
+ bundle format is not <code>FORMAT_PLAIN</code>, then it will first be
  converted into a plain bundle as if by calling
  <code>this.copy( this.getFile() )</code>.</div>
 <dl>
@@ -677,11 +677,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;getPlainFile()
                   throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <div class="block">Returns a file that contains the contents of this bundle in
- <code>FORMAT_PLAIN</code>. If the original bundle was already plain, then
- this is equivalent to calling <a href="#getFile()"><code>getFile()</code></a>. Otherwise, a temporary
- file will be created in <code>FORMAT_PLAIN</code> and returned. (Repeated
- calls will return the same file unless <a href="#dispose()"><code>dispose()</code></a> is called in
- the meantime.)</div>
+ <code>FORMAT_PLAIN</code>. If the original bundle was already plain, then this
+ is equivalent to calling <a href="#getFile()"><code>getFile()</code></a>. Otherwise, a temporary file
+ will be created in <code>FORMAT_PLAIN</code> and returned. (Repeated calls
+ will return the same file unless <a href="#dispose()"><code>dispose()</code></a> is called in the
+ meantime.)</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>an plain version of the bundle file</dd>
@@ -699,12 +699,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getZipFile</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/zip/ZipFile.html?is-external=true" title="class or interface in java.util.zip" class="externalLink">ZipFile</a>&nbsp;getZipFile()
                    throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
-<div class="block">Returns a <code>ZipFile</code> that represents the archived contents of
- this bundle.</div>
+<div class="block">Returns a <code>ZipFile</code> that represents the archived contents of this
+ bundle.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a <code>ZipFile</code> that can be used to access the plug-in
- bundle's content</dd>
+<dd>a <code>ZipFile</code> that can be used to access the plug-in bundle's
+ content</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
 </dl>
@@ -737,16 +737,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>copy</h4>
 <pre class="methodSignature">public&nbsp;<a href="PluginBundle.html" title="class in ca.cgjennings.apps.arkham.plugins">PluginBundle</a>&nbsp;copy&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;destination)
                   throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
-<div class="block">Writes a copy of the plug-in bundle to <code>destination</code>. The copy
- of the bundle will always be in <code>FORMAT_PLAIN</code>, but is
- otherwise identical to the original bundle. The newly created bundle is
- returned as a <code>PluginBundle</code>.
+<div class="block">Writes a copy of the plug-in bundle to <code>destination</code>. The copy of
+ the bundle will always be in <code>FORMAT_PLAIN</code>, but is otherwise
+ identical to the original bundle. The newly created bundle is returned as
+ a <code>PluginBundle</code>.
  <p>
  It is valid to use the file containing this bundle as the destination. In
- this case, <code>this</code> is returned if the bundle is already
- unwrapped. If the bundle is wrapped, it is unwrapped in place, replacing
- the original file. In this case, this bundle's state is updated to
- reflect the new status of the file.</div>
+ this case, <code>this</code> is returned if the bundle is already unwrapped.
+ If the bundle is wrapped, it is unwrapped in place, replacing the
+ original file. In this case, this bundle's state is updated to reflect
+ the new status of the file.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>destination</code> - the <code>File</code> to write the copy to</dd>
@@ -829,9 +829,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getType</h4>
 <pre class="methodSignature">public&nbsp;int&nbsp;getType()</pre>
 <div class="block">Returns the apparent type of this bundle file, based on the file name's
- extension. This will be one of <code>TYPE_LIBRARY</code>,
- <code>TYPE_THEME</code>, <code>TYPE_EXTENSION</code>,
- <code>TYPE_PLUGIN</code>, or <code>TYPE_UNKNOWN</code>.</div>
+ extension. This will be one of <code>TYPE_LIBRARY</code>, <code>TYPE_THEME</code>,
+ <code>TYPE_EXTENSION</code>, <code>TYPE_PLUGIN</code>, or <code>TYPE_UNKNOWN</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a type ID that matches the apparent type of this bundle</dd>
@@ -850,8 +849,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Returns the apparent type of an arbitrary bundle file, based on the file
  name's extension. The passed-in value can be any object; the object's
  string value is used. This will be one of <code>TYPE_LIBRARY</code>,
- <code>TYPE_THEME</code>, <code>TYPE_EXTENSION</code>,
- <code>TYPE_PLUGIN</code>, or <code>TYPE_UNKNOWN</code>.</div>
+ <code>TYPE_THEME</code>, <code>TYPE_EXTENSION</code>, <code>TYPE_PLUGIN</code>, or
+ <code>TYPE_UNKNOWN</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>file</code> - this object's string value will be treated as a file name
@@ -873,8 +872,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                            boolean&nbsp;smallIcon)</pre>
 <div class="block">Returns a large or small icon that can be used to represent a plug-in
  bundle in message dialogs, etc. A valid icon is returned even if file is
- <code>null</code>. However, if a valid plug-in file is named, the
- returned icon may more accurately reflect the file's contents.</div>
+ <code>null</code>. However, if a valid plug-in file is named, the returned
+ icon may more accurately reflect the file's contents.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>file</code> - this object's string value will be treated as a file name
@@ -917,12 +916,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>dispose</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;dispose()</pre>
 <div class="block">Performs cleanup when a plug-in bundle instance is no longer required. If
- a temporary copy of the bundle file was created in
- <code>FORMAT_PLAIN</code>, calling this method will delete the temporary
- file. If this method is not called, the temporary file will be deleted
- when the application terminates. It is safe to continue using this
- instance after calling <code>dispose()</code>, though potentially
- inefficient.
+ a temporary copy of the bundle file was created in <code>FORMAT_PLAIN</code>,
+ calling this method will delete the temporary file. If this method is not
+ called, the temporary file will be deleted when the application
+ terminates. It is safe to continue using this instance after calling
+ <code>dispose()</code>, though potentially inefficient.
 
  <p>
  <b>Note:</b> In no event will calling this method delete the original

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -147,9 +147,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  To create such an order, it is necessary that the dependency graph be
  acyclic. That is, you cannot have a situation where A depends on B and B also
  depends on A, directly or indirectly. For example, if A depends on B and C
- and C depends on D and D depends on A, then there is a cycle A -&gt; C -&gt; D -&gt;
- A. Attempting to sort a collection of objects that contain a cycle will throw
- an exception.</div>
+ and C depends on D and D depends on A, then there is a cycle A -&gt; C -&gt;
+ D -&gt; A. Attempting to sort a collection of objects that contain a cycle
+ will throw an exception.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -221,8 +221,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isLexicographicallySorted()">isLexicographicallySorted</a></span>()</code></th>
 <td class="colLast">
-<div class="block">If <code>true</code>, then the sort order will also be ordered according
- to a lexicographic sort.</div>
+<div class="block">If <code>true</code>, then the sort order will also be ordered according to a
+ lexicographic sort.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -310,8 +310,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  elements are present in all collections that are to be sorted.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if all required objects are to be included in
- the input to <a href="#topSort(java.util.Collection)"><code>topSort(java.util.Collection&lt;T&gt;)</code></a></dd>
+<dd><code>true</code> if all required objects are to be included in the
+ input to <a href="#topSort(java.util.Collection)"><code>topSort(java.util.Collection&lt;T&gt;)</code></a></dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#setAllPresent(boolean)"><code>setAllPresent(boolean)</code></a></dd>
 </dl>
@@ -325,27 +325,26 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>setAllPresent</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setAllPresent&#8203;(boolean&nbsp;assumesAllPresent)</pre>
 <div class="block">Sets whether this sorter will assume that all possible elements are
- included in collections that it sorts. Setting this to <code>true</code>
- makes a guarantee that when sorting a collection, for all elements E in
- the collection, if E depends on F then F is also in the collection. In
- other words, everything that is required is already included in the
- collection passed to <a href="#topSort(java.util.Collection)"><code>topSort(java.util.Collection&lt;T&gt;)</code></a>. Setting this to <code>true</code>
- may result in more efficient sorting, but if it is set to
- <code>true</code> when the condition does not hold then the sorted output
- will be incomplete.
+ included in collections that it sorts. Setting this to <code>true</code> makes
+ a guarantee that when sorting a collection, for all elements E in the
+ collection, if E depends on F then F is also in the collection. In other
+ words, everything that is required is already included in the collection
+ passed to <a href="#topSort(java.util.Collection)"><code>topSort(java.util.Collection&lt;T&gt;)</code></a>. Setting this to <code>true</code> may result in
+ more efficient sorting, but if it is set to <code>true</code> when the
+ condition does not hold then the sorted output will be incomplete.
 
  <p>
- When this is set to <code>false</code>, the sorter will detect the
- presence of required objects that were not part of the original
- collection and include them in the sorted output. Thus, the size of the
- sorted list may be larger than that of the unsorted list. A useful side
- effect of this feature is that if a single element is sorted, the result
- will be a list of all of the elements that are required (directly or
- indirectly) by that element.</div>
+ When this is set to <code>false</code>, the sorter will detect the presence of
+ required objects that were not part of the original collection and
+ include them in the sorted output. Thus, the size of the sorted list may
+ be larger than that of the unsorted list. A useful side effect of this
+ feature is that if a single element is sorted, the result will be a list
+ of all of the elements that are required (directly or indirectly) by that
+ element.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>assumesAllPresent</code> - <code>true</code> if all required objects are to
- be included in the input to <a href="#topSort(java.util.Collection)"><code>topSort(java.util.Collection&lt;T&gt;)</code></a></dd>
+<dd><code>assumesAllPresent</code> - <code>true</code> if all required objects are to be
+ included in the input to <a href="#topSort(java.util.Collection)"><code>topSort(java.util.Collection&lt;T&gt;)</code></a></dd>
 </dl>
 </li>
 </ul>
@@ -356,8 +355,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isLexicographicallySorted</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isLexicographicallySorted()</pre>
-<div class="block">If <code>true</code>, then the sort order will also be ordered according
- to a lexicographic sort.</div>
+<div class="block">If <code>true</code>, then the sort order will also be ordered according to a
+ lexicographic sort.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code></dd>
@@ -374,8 +373,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>setLexicographicallySorted</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setLexicographicallySorted&#8203;(boolean&nbsp;lexSort)</pre>
 <div class="block">Sets whether collections will also be lexicographically sorted. When set
- to <code>true</code>, then at any point in the sorted list, the element
- at that position is the one that is lexicographically least of all of the
+ to <code>true</code>, then at any point in the sorted list, the element at
+ that position is the one that is lexicographically least of all of the
  elements that could be placed there without violating the topological
  ordering. For example, a topological sort of a collection of courses
  could be further sorted lexicographically by their course number so that
@@ -416,8 +415,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  used.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>comparator</code> - the sorting comparator, or <code>null</code> for
- natural order</dd>
+<dd><code>comparator</code> - the sorting comparator, or <code>null</code> for natural
+ order</dd>
 </dl>
 </li>
 </ul>

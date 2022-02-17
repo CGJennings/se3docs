@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -274,8 +274,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createIconForSize(java.awt.image.BufferedImage,int)">createIconForSize</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;image,
                  int&nbsp;size)</code></th>
 <td class="colLast">
-<div class="block">Creates an icon from <code>image</code> that is constrained to
- <code>size</code> by <code>size</code> pixels.</div>
+<div class="block">Creates an icon from <code>image</code> that is constrained to <code>size</code> by
+ <code>size</code> pixels.</div>
 </td>
 </tr>
 <tr id="i13" class="rowColor">
@@ -636,8 +636,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>im</code> - the image to be provided in the specified format</dd>
-<dd><code>type</code> - the <code>BufferedImage.TYPE_*</code> value for the desired
- format</dd>
+<dd><code>type</code> - the <code>BufferedImage.TYPE_*</code> value for the desired format</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the original image, or a copy converted to the requested format</dd>
 </dl>
@@ -701,14 +700,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  specified image.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>toolkit</code> - the toolkit on which to define the cursor
- (<code>null</code> for default)</dd>
+<dd><code>toolkit</code> - the toolkit on which to define the cursor (<code>null</code>
+ for default)</dd>
 <dd><code>image</code> - the image to use for the cursor</dd>
 <dd><code>hotspotX</code> - the x-coordinate of the cursor's hotspot (the image
  offset where clicks occur)</dd>
 <dd><code>hotspotY</code> - the y-coordinate of the cursor's hotspot</dd>
-<dd><code>name</code> - the custom cursor name, for accessibility, or
- <code>null</code> to generate a name</dd>
+<dd><code>name</code> - the custom cursor name, for accessibility, or <code>null</code> to
+ generate a name</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a custom cursor as close to the requested form as allowed by the
  toolkit; if the toolkit does not support custom cursors, the default
@@ -724,16 +723,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>imageToBufferedImage</h4>
 <pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;imageToBufferedImage&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Image.html?is-external=true" title="class or interface in java.awt" class="externalLink">Image</a>&nbsp;image)</pre>
 <div class="block">Returns a <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink"><code>BufferedImage</code></a> that is equivalent to a specified
- <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Image.html?is-external=true" title="class or interface in java.awt" class="externalLink"><code>Image</code></a>. If the image is already a <code>BufferedImage</code>, it
- is returned unmodified. Otherwise, a new <code>BufferedImage</code> will
- be created and the contents of the image copied into it. If necessary,
- the method will wait until the image has finished downloading.</div>
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Image.html?is-external=true" title="class or interface in java.awt" class="externalLink"><code>Image</code></a>. If the image is already a <code>BufferedImage</code>, it is
+ returned unmodified. Otherwise, a new <code>BufferedImage</code> will be
+ created and the contents of the image copied into it. If necessary, the
+ method will wait until the image has finished downloading.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>image</code> - the image to convert</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the original image, converted into a <code>BufferedImage</code>
- if it is not already of that type</dd>
+<dd>the original image, converted into a <code>BufferedImage</code> if it
+ is not already of that type</dd>
 </dl>
 </li>
 </ul>
@@ -745,8 +744,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>createIconForSize</h4>
 <pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Icon</a>&nbsp;createIconForSize&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;image,
                                      int&nbsp;size)</pre>
-<div class="block">Creates an icon from <code>image</code> that is constrained to
- <code>size</code> by <code>size</code> pixels.</div>
+<div class="block">Creates an icon from <code>image</code> that is constrained to <code>size</code> by
+ <code>size</code> pixels.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>image</code> - the image to create an icon from</dd>
@@ -765,10 +764,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Icon</a>&nbsp;ensureIconHasSize&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Icon</a>&nbsp;icon,
                                      int&nbsp;size)</pre>
 <div class="block">Ensures that the supplied icon has the specified size. If the source icon
- is <code>null</code>, <code>null</code> is returned. Otherwise, if the
- icon has the correct dimensions it is returned. If not, a new icon is
- created as if by calling <a href="#createIconForSize(java.awt.image.BufferedImage,int)"><code>createIconForSize(java.awt.image.BufferedImage, int)</code></a> on an image of the
- icon.</div>
+ is <code>null</code>, <code>null</code> is returned. Otherwise, if the icon has the
+ correct dimensions it is returned. If not, a new icon is created as if by
+ calling <a href="#createIconForSize(java.awt.image.BufferedImage,int)"><code>createIconForSize(java.awt.image.BufferedImage, int)</code></a> on an image of the icon.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>icon</code> - the image to create an icon from</dd>
@@ -824,7 +822,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>src</code> - the image to convert</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a version of the image with a suitable default "disabled" effect applied</dd>
+<dd>a version of the image with a suitable default "disabled" effect
+ applied</dd>
 </dl>
 </li>
 </ul>
@@ -960,17 +959,17 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                                      boolean&nbsp;multipass,
                                      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;finalPassHint,
                                      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;intermediateHint)</pre>
-<div class="block">Resample an image. If <code>multipass</code> is <code>true</code>, then
- the method <i>may</i> split the resampling into multiple passes in order
- to increase the quality of the result. The quality of the interpolation
- is also controlled by the hint values, which must be one of the
+<div class="block">Resample an image. If <code>multipass</code> is <code>true</code>, then the method
+ <i>may</i> split the resampling into multiple passes in order to increase
+ the quality of the result. The quality of the interpolation is also
+ controlled by the hint values, which must be one of the
  <code>RenderingHints.VALUE_INTERPOLATION_*</code> values, or else
- <code>null</code>. (If a hint is <code>null</code>, a slow area-averaging
- algorithm will be used.) The hints determine the type of interpolation
- used at each stage; the final pass hint is always used exactly once
- (unless the image is already the requested size). The intermediate hint
- is used for all other passes, if any. The following table shows some
- suggested combinations of values, in order from fastest/lowest quality to
+ <code>null</code>. (If a hint is <code>null</code>, a slow area-averaging algorithm
+ will be used.) The hints determine the type of interpolation used at each
+ stage; the final pass hint is always used exactly once (unless the image
+ is already the requested size). The intermediate hint is used for all
+ other passes, if any. The following table shows some suggested
+ combinations of values, in order from fastest/lowest quality to
  slowest/highest quality:
  <table>
  <caption>Suggested resampling combinations</caption>
@@ -1218,11 +1217,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                                 int&nbsp;right)</pre>
 <div class="block">Returns an image that is identical to a source image except that it is
  padded by blank pixels around the outside. The returned image is always
- of type <code>TYPE_INT_ARGB</code>. Margins can be negative, in which
- case rows or columns are removed from the outside of the image. If the
- margins are such that the width or height becomes less than 1, a blank 1
- by 1 pixel image is returned. If the margin is 0 on all sides and the
- image type is suitable, the source image is returned.</div>
+ of type <code>TYPE_INT_ARGB</code>. Margins can be negative, in which case
+ rows or columns are removed from the outside of the image. If the margins
+ are such that the width or height becomes less than 1, a blank 1 by 1
+ pixel image is returned. If the margin is 0 on all sides and the image
+ type is suitable, the source image is returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the source image</dd>
@@ -1272,10 +1271,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the image to create a mirrored version of</dd>
-<dd><code>horiz</code> - if <code>true</code>, the image is mirrored horizontally
- (i.e., on the y axis)</dd>
-<dd><code>vert</code> - if <code>true</code>, the image is mirrored vertically (i.e.,
- on the x axis)</dd>
+<dd><code>horiz</code> - if <code>true</code>, the image is mirrored horizontally (i.e.,
+ on the y axis)</dd>
+<dd><code>vert</code> - if <code>true</code>, the image is mirrored vertically (i.e., on
+ the x axis)</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the mirrored version of the image</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -1294,10 +1293,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  the reverse order of the parameters; that is, the first parameter will be
  drawn overtop of the second, the second over the third and so forth. The
  images will be drawn directly onto the last image in the list. If this is
- <code>null</code>, a new image will be created with a width and height
- equal to the maximum width and maximum height of all of the other images.
- The last image in the last (possibly newly created if it was
- <code>null</code>) is returned from the method.</div>
+ <code>null</code>, a new image will be created with a width and height equal
+ to the maximum width and maximum height of all of the other images. The
+ last image in the last (possibly newly created if it was <code>null</code>) is
+ returned from the method.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>images</code> - a series of images to paint over each other</dd>
@@ -1342,9 +1341,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isOpaque</h4>
 <pre class="methodSignature">public static&nbsp;boolean&nbsp;isOpaque&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;bi)</pre>
-<div class="block">Returns <code>true</code> if every pixel in this image is fully opaque.
- If the image has no alpha channel, then <code>true</code> is returned
- immediately. Otherwise, the image is checked pixel-by-pixel.</div>
+<div class="block">Returns <code>true</code> if every pixel in this image is fully opaque. If the
+ image has no alpha channel, then <code>true</code> is returned immediately.
+ Otherwise, the image is checked pixel-by-pixel.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>bi</code> - the image to check</dd>

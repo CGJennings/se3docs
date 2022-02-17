@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -358,8 +358,8 @@ extends <a href="AbstractImageFilter.html" title="class in ca.cgjennings.graphic
 <dd><code>radius</code> - the radius of the blur</dd>
 <dd><code>iterations</code> - the number of times to repeat the blur</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>radius</code>or
- <code>iterations</code> is negative</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>radius</code>or <code>iterations</code>
+ is negative</dd>
 </dl>
 </li>
 </ul>
@@ -379,8 +379,8 @@ extends <a href="AbstractImageFilter.html" title="class in ca.cgjennings.graphic
 <dd><code>vertRadius</code> - the radius of the blur</dd>
 <dd><code>iterations</code> - the number of times to repeat the blur</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if either radius or
- <code>iterations</code> is negative</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if either radius or <code>iterations</code>
+ is negative</dd>
 </dl>
 </li>
 </ul>
@@ -516,11 +516,11 @@ extends <a href="AbstractImageFilter.html" title="class in ca.cgjennings.graphic
 <h4>setPremultiplied</h4>
 <pre class="methodSignature">public final&nbsp;void&nbsp;setPremultiplied&#8203;(boolean&nbsp;enable)</pre>
 <div class="block">Sets whether pixel data will be processed with a premultiplied alpha
- channel. Setting this to <code>true</code> (the default) can avoid a
- common artifact that appears when transparent pixels are a very different
- colour than surrounding translucent or opaque pixels. The artifact
- manifests as a fringe of the non-matching colour(s) around the edges of
- the non-transparent parts of the image. Although premultiplication avoids
+ channel. Setting this to <code>true</code> (the default) can avoid a common
+ artifact that appears when transparent pixels are a very different colour
+ than surrounding translucent or opaque pixels. The artifact manifests as
+ a fringe of the non-matching colour(s) around the edges of the
+ non-transparent parts of the image. Although premultiplication avoids
  this artifact, it also increases processing time and decreases colour
  accuracy.</div>
 <dl>
@@ -541,8 +541,8 @@ extends <a href="AbstractImageFilter.html" title="class in ca.cgjennings.graphic
  default).</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if pixel values will be premultiplied by their
- alpha value before processing, and unpremultiplied afterward</dd>
+<dd><code>true</code> if pixel values will be premultiplied by their alpha
+ value before processing, and unpremultiplied afterward</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#setPremultiplied(boolean)"><code>setPremultiplied(boolean)</code></a></dd>
 </dl>
@@ -557,14 +557,13 @@ extends <a href="AbstractImageFilter.html" title="class in ca.cgjennings.graphic
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;filter&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;src,
                             <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;dst)</pre>
 <div class="block">Blurs the source image and places the result in a destination image. The
- destination image may be <code>null</code>, in which case a compatible
- image is created automatically. It may also be the source image, in which
- case the original image data is replaced by the result.</div>
+ destination image may be <code>null</code>, in which case a compatible image
+ is created automatically. It may also be the source image, in which case
+ the original image data is replaced by the result.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>src</code> - the source image to blur</dd>
-<dd><code>dst</code> - the destination image to copy the result to, or
- <code>null</code></dd>
+<dd><code>dst</code> - the destination image to copy the result to, or <code>null</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the destination image</dd>
 </dl>

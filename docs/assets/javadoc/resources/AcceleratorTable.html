@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -287,7 +287,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Creates a new accelerator table that reads its content from the specified
  resource file. The table will also check for a file with the same name in
  the <code>keys</code> subfolder of the user storage folder, and load any
- definitions found there. Tables created using this constructor can null     <a href="#set(java.lang.String,javax.swing.KeyStroke)">modify the
+ definitions found there. Tables created using this constructor can null
+ null null null     <a href="#set(java.lang.String,javax.swing.KeyStroke)">modify the
  key mappings</a> and <a href="#update">save changes back again</a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -371,14 +372,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Converts a string to a single key stroke. The string may use one of two
  formats: the verbose format use by the <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/KeyStroke.html?is-external=true" title="class or interface in javax.swing" class="externalLink"><code>KeyStroke</code></a> class, or a
  compact format that requires less typing. The compact format uses the
- form <code>[modifiers*+]key</code>. Here,<code>modifiers</code>
- represents a sequence of one or more modifier keys. Each modifier is
- represented by a single letter:
+ form <code>[modifiers*+]key</code>. Here,<code>modifiers</code> represents a
+ sequence of one or more modifier keys. Each modifier is represented by a
+ single letter:
 
  <table border=0>
  <caption>Modifier letter codes</caption>
- <tr valign=top><th><code>P</code> <td>Platform-specific menu accelerator
- key (Control on most platforms; Command on OS X)
+ <tr valign=top><th><code>P</code> <td>Platform-specific menu accelerator key
+ (Control on most platforms; Command on OS X)
  <tr valign=top><th><code>M</code> <td>Meta (Command)
  <tr valign=top><th><code>C</code> <td>Control
  <tr valign=top><th><code>A</code> <td>Alt
@@ -388,20 +389,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  </table>
 
  <p>
- <b>Examples:</b><br>
- <code>HOME</code><br>
- <code>ctrl X</code><br>
- <code>ctrl alt DELETE</code><br>
- <code>C+X</code><br>
- <code>CA+DELETE</code><br>
+ <b>Examples:</b><br> <code>HOME</code><br> <code>ctrl X</code><br>
+ <code>ctrl alt DELETE</code><br> <code>C+X</code><br> <code>CA+DELETE</code><br>
  <code>C + A + Delete</code></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>description</code> - the string description of the key stroke, in one of the
- two supported formats</dd>
+<dd><code>description</code> - the string description of the key stroke, in one of
+ the two supported formats</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a <code>KeyStroke</code> for the string description, or
- <code>null</code></dd>
+<dd>a <code>KeyStroke</code> for the string description, or <code>null</code></dd>
 </dl>
 </li>
 </ul>

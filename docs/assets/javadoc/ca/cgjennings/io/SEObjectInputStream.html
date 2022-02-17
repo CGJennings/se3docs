@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -145,8 +145,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">SEObjectInputStream</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/ObjectInputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">ObjectInputStream</a></pre>
-<div class="block">An <code>ObjectInputStream</code> with additional features for Strange Eons.
- This input stream includes special support for serializing images. It also
+<div class="block">An <code>ObjectInputStream</code> with additional features for Strange Eons. This
+ input stream includes special support for serializing images. It also
  performs some transparent conversions to provide backwards compatibility with
  previous releases.</div>
 <dl>
@@ -240,8 +240,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/ObjectInputSt
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#readString()">readString</a></span>()</code></th>
 <td class="colLast">
-<div class="block">This is a convenience method that calls <code>readObject</code> and casts
- the result to <code>String</code> before returning it.</div>
+<div class="block">This is a convenience method that calls <code>readObject</code> and casts the
+ result to <code>String</code> before returning it.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -373,8 +373,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/ObjectInputSt
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;readString()
                   throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a>,
                          <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang" class="externalLink">ClassNotFoundException</a></pre>
-<div class="block">This is a convenience method that calls <code>readObject</code> and casts
- the result to <code>String</code> before returning it.</div>
+<div class="block">This is a convenience method that calls <code>readObject</code> and casts the
+ result to <code>String</code> before returning it.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a string written to the stream at the current position</dd>
@@ -399,8 +399,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/ObjectInputSt
  <a href="SEObjectOutputStream.html#writeImage(java.awt.image.BufferedImage)"><code>SEObjectOutputStream.writeImage(java.awt.image.BufferedImage)</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>an image in <code>TYPE_INT_RGB</code> or
- <code>TYPE_INT_ARGB</code> format</dd>
+<dd>an image in <code>TYPE_INT_RGB</code> or <code>TYPE_INT_ARGB</code> format</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if an I/O error occurs</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/InvalidClassException.html?is-external=true" title="class or interface in java.io" class="externalLink">InvalidClassException</a></code> - if no image is found at this point in the

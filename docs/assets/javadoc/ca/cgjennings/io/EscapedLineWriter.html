@@ -26,14 +26,14 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -195,7 +195,17 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/BufferedWrite
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.io.File,java.lang.String)">EscapedLineWriter</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;f,
+                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;charset)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.io.OutputStream)">EscapedLineWriter</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">OutputStream</a>&nbsp;out)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.io.OutputStream,java.lang.String)">EscapedLineWriter</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">OutputStream</a>&nbsp;out,
+                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;charset)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
@@ -257,6 +267,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/BufferedWrite
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeProperties(java.util.Map)">writeProperties</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;props)</code></th>
+<td class="colLast">
+<div class="block">Writes a collection of properties as key, value pairs with escaping and
+ line breaking.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeProperty(java.lang.String,java.lang.String)">writeProperty</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
              <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</code></th>
 <td class="colLast">
@@ -315,6 +333,21 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/BufferedWrite
 </dl>
 </li>
 </ul>
+<a id="&lt;init&gt;(java.io.File,java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>EscapedLineWriter</h4>
+<pre>public&nbsp;EscapedLineWriter&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;f,
+                         <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;charset)
+                  throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
 <a id="&lt;init&gt;(java.io.OutputStream)">
 <!--   -->
 </a>
@@ -322,6 +355,21 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/BufferedWrite
 <li class="blockList">
 <h4>EscapedLineWriter</h4>
 <pre>public&nbsp;EscapedLineWriter&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">OutputStream</a>&nbsp;out)
+                  throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
+</dl>
+</li>
+</ul>
+<a id="&lt;init&gt;(java.io.OutputStream,java.lang.String)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>EscapedLineWriter</h4>
+<pre>public&nbsp;EscapedLineWriter&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">OutputStream</a>&nbsp;out,
+                         <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;charset)
                   throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -382,9 +430,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/BufferedWrite
 <h4>setUnicodeEscaped</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setUnicodeEscaped&#8203;(boolean&nbsp;escape)</pre>
 <div class="block">Sets whether uxxxx escapes should be used when writing characters outside
- of the ISO-8859 encoding range. Default is <code>true</code>; can be set
- to <code>false</code> if the output file can represent all unicode
- characters directly (e.g., UTF-8).</div>
+ of the ISO-8859 encoding range. Default is <code>true</code>; can be set to
+ <code>false</code> if the output file can represent all unicode characters
+ directly (e.g., UTF-8).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>escape</code> - if <code>true</code>, Unicode escapes will be used</dd>
@@ -437,7 +485,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/BufferedWrite
 <a id="writeProperty(java.lang.String,java.lang.String)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>writeProperty</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;writeProperty&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
@@ -448,6 +496,24 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/BufferedWrite
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - the name of the key</dd>
 <dd><code>value</code> - the value of the key</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if an I/O error occurs</dd>
+</dl>
+</li>
+</ul>
+<a id="writeProperties(java.util.Map)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>writeProperties</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;writeProperties&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html?is-external=true" title="class or interface in java.util" class="externalLink">Map</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>,&#8203;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;props)
+                     throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
+<div class="block">Writes a collection of properties as key, value pairs with escaping and
+ line breaking.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>props</code> - the map of properties to write</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if an I/O error occurs</dd>
 </dl>

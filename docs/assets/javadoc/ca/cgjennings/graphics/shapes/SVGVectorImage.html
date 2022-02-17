@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -149,11 +149,11 @@ extends <a href="AbstractVectorImage.html" title="class in ca.cgjennings.graphic
  This class requires that the
  <a href="../../../../resources/CoreComponents.html#SVG_IMAGE_SUPPORT"><code>SVG_IMAGE_SUPPORT</code></a> core component be
  installed, as that plug-in contains support code necessary to render the SVG
- content. If that library is not installed, but the
- <code>SVGVectorImage</code> constructor is called from the event dispatch
- thread (EDT), then the user will be given the opportunity to immediately
- download and install the missing component. If the user chooses not to, or if
- the constructor is called from a thread other than the EDT, then a
+ content. If that library is not installed, but the <code>SVGVectorImage</code>
+ constructor is called from the event dispatch thread (EDT), then the user
+ will be given the opportunity to immediately download and install the missing
+ component. If the user chooses not to, or if the constructor is called from a
+ thread other than the EDT, then a
  <a href="../../../../resources/CoreComponents.MissingCoreComponentException.html" title="class in resources"><code>MissingCoreComponentException</code></a>
  exception will be thrown from the constructor.</div>
 <dl>
@@ -368,9 +368,9 @@ extends <a href="AbstractVectorImage.html" title="class in ca.cgjennings.graphic
 <li class="blockList">
 <h4>isSupported</h4>
 <pre class="methodSignature">public static&nbsp;boolean&nbsp;isSupported()</pre>
-<div class="block">Returns <code>true</code> if the SVG core library is installed. Note that
- it is not required to call this before attempting to create an SVG image.
- If possible, the SVG core will be loaded on demand (see the class
+<div class="block">Returns <code>true</code> if the SVG core library is installed. Note that it
+ is not required to call this before attempting to create an SVG image. If
+ possible, the SVG core will be loaded on demand (see the class
  description for details).</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>

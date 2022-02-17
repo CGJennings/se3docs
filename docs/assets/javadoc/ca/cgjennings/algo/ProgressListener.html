@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -192,15 +192,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/EventListen
 <pre class="methodSignature">boolean&nbsp;progressUpdate&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;source,
                        float&nbsp;progress)</pre>
 <div class="block">Called to indicate that an algorithm has made progress towards
- completion. If the listener returns <code>true</code>, it is a hint that
- the operation should be cancelled if possible.</div>
+ completion. If the listener returns <code>true</code>, it is a hint that the
+ operation should be cancelled if possible.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the source of the progress event</dd>
 <dd><code>progress</code> - a value between 0 (none) and 1 (algorithm complete)</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the callee wishes to hint that the algorithm
- be cancelled</dd>
+<dd><code>true</code> if the callee wishes to hint that the algorithm be
+ cancelled</dd>
 </dl>
 </li>
 </ul>

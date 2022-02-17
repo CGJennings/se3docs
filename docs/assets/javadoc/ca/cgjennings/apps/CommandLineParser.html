@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -145,29 +145,29 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 
  <p>
  Depending on the type of the field, an option takes either 0 or 1 parameters.
- If the type of the field is <code>boolean</code> or <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang" class="externalLink"><code>Boolean</code></a>, it will
- take no parameter. The value of the field will set to <code>true</code> if
- the option is found, and otherwise it will not be changed. For other types,
- the argument immediately following the option is taken to be its parameter.
- The following field types can all be filled in automatically from this
- argument: <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink"><code>String</code></a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink"><code>File</code></a>, int, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink"><code>Integer</code></a>, double, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang" class="externalLink"><code>Double</code></a>,
+ If the type of the field is <code>boolean</code> or <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html?is-external=true" title="class or interface in java.lang" class="externalLink"><code>Boolean</code></a>, it will take
+ no parameter. The value of the field will set to <code>true</code> if the option
+ is found, and otherwise it will not be changed. For other types, the argument
+ immediately following the option is taken to be its parameter. The following
+ field types can all be filled in automatically from this argument:
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink"><code>String</code></a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink"><code>File</code></a>, int, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html?is-external=true" title="class or interface in java.lang" class="externalLink"><code>Integer</code></a>, double, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true" title="class or interface in java.lang" class="externalLink"><code>Double</code></a>,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink"><code>Class</code></a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Locale.html?is-external=true" title="class or interface in java.util" class="externalLink"><code>Locale</code></a>, and <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?is-external=true" title="class or interface in java.lang" class="externalLink"><code>Enum</code></a>. Strings are copied as-is.
- Files are filled in as if by <code>new File( argument )</code>; classes as if
- by <code>Class.forName( argument )</code>. Numeric types are filled in as if
- by the appropriate <code>valueOf</code> or <code>parseInt</code> method. If a
- class is not found or there is a syntax error in the format of a numeric
- parameter, a suitable error message is printed. <code>Locales</code> are
- interpreted using the same mechanism as that used for resource bundles, e.g.,
- en_CA would refer to Canadian English. <code>Enum</code> types will be
- assigned a value by converting the parameter to upper case and invoking the
- enum's <code>valueOf</code> method on the result.
+ Files are filled in as if by <code>new File( argument )</code>; classes as if by
+ <code>Class.forName( argument )</code>. Numeric types are filled in as if by the
+ appropriate <code>valueOf</code> or <code>parseInt</code> method. If a class is not
+ found or there is a syntax error in the format of a numeric parameter, a
+ suitable error message is printed. <code>Locales</code> are interpreted using the
+ same mechanism as that used for resource bundles, e.g., en_CA would refer to
+ Canadian English. <code>Enum</code> types will be assigned a value by converting
+ the parameter to upper case and invoking the enum's <code>valueOf</code> method on
+ the result.
 
  <p>
  If the type of a field is not one of the predefined types above, then the
- type will be checked for a constructor that takes a single
- <code>String</code> argument. If one exists, then it will be used to create
- the value to be filled in the field by calling the constructor with the
- parameter string. Otherwise, an <code>AssertionError</code> will be thrown.
+ type will be checked for a constructor that takes a single <code>String</code>
+ argument. If one exists, then it will be used to create the value to be
+ filled in the field by calling the constructor with the parameter string.
+ Otherwise, an <code>AssertionError</code> will be thrown.
 
  <p>
  Any arguments that are neither an option nor a parameter for an option will
@@ -271,8 +271,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isCaseSensitive()">isCaseSensitive</a></span>()</code></th>
 <td class="colLast">
-<div class="block">If this returns <code>true</code>, then the matching of option names to
- fields will be case sensitive.</div>
+<div class="block">If this returns <code>true</code>, then the matching of option names to fields
+ will be case sensitive.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -411,11 +411,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getPlainFiles</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>[]&nbsp;getPlainFiles()</pre>
 <div class="block">Returns a copy of all of the arguments that were not used as options or
- the value of an option as <code>File</code> objects. For a typical
- command line utility, this would be the list of files on which the
- command is to operate. If the parser has not parsed a command line, or if
- an error occurred during the last parse, this will return
- <code>null</code>.</div>
+ the value of an option as <code>File</code> objects. For a typical command
+ line utility, this would be the list of files on which the command is to
+ operate. If the parser has not parsed a command line, or if an error
+ occurred during the last parse, this will return <code>null</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the unused command line arguments, or <code>null</code></dd>
@@ -433,16 +432,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getOptionName&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;argument)</pre>
 <div class="block">Returns the name of an option in a command line argument, stripped of its
  prefix; if the argument does not represent an option, returns
- <code>null</code>. The base class checks for a prefix of either "--" or
- "-". If present, it returns the remainder of the argument. Otherwise, it
+ <code>null</code>. The base class checks for a prefix of either "--" or "-".
+ If present, it returns the remainder of the argument. Otherwise, it
  returns <code>null</code>. Subclasses may override this to enforce other
  conventions.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>argument</code> - the argument which might represent an option name</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the option name represented, or <code>null</code> if the argument
- is not an option</dd>
+<dd>the option name represented, or <code>null</code> if the argument is
+ not an option</dd>
 </dl>
 </li>
 </ul>
@@ -453,8 +452,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isCaseSensitive</h4>
 <pre class="methodSignature">protected&nbsp;boolean&nbsp;isCaseSensitive()</pre>
-<div class="block">If this returns <code>true</code>, then the matching of option names to
- fields will be case sensitive. The base class returns <code>false</code>.</div>
+<div class="block">If this returns <code>true</code>, then the matching of option names to fields
+ will be case sensitive. The base class returns <code>false</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> to make option names case sensitive</dd>
@@ -469,8 +468,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>isHelpOption</h4>
 <pre class="methodSignature">protected&nbsp;boolean&nbsp;isHelpOption&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;argument)</pre>
 <div class="block">Returns <code>true</code> if and only if the supplied argument should be
- interpreted as a request for help. The base class returns
- <code>true</code> for any of: "--help", "--h", "-?", or "/?".</div>
+ interpreted as a request for help. The base class returns <code>true</code>
+ for any of: "--help", "--h", "-?", or "/?".</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>argument</code> - the argument to test</dd>
@@ -488,8 +487,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">protected&nbsp;void&nbsp;displayUsageText&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;target)</pre>
 <div class="block">Called to display usage information when help is requested. The base
  class prints a message to the output stream and exits. If a
- non-<code>null</code> usage text has been set with <a href="#setUsageText(java.lang.String)"><code>setUsageText(java.lang.String)</code></a>,
- then this will be used as the text to display. If no other usage text is
+ non-<code>null</code> usage text has been set with <a href="#setUsageText(java.lang.String)"><code>setUsageText(java.lang.String)</code></a>, then
+ this will be used as the text to display. If no other usage text is
  defined, the base class will display a default message that is generated
  from the fields in the target.</div>
 <dl>
@@ -507,13 +506,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">protected&nbsp;void&nbsp;handleParsingError&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;message)</pre>
 <div class="block">Called when there is an error with the command line syntax. The base
  class prints the supplied message, then prints a line inviting the user
- to use the <code>--help</code> option for more information, and then
- exits the application with a return code of 20 (indicating an abnormal
+ to use the <code>--help</code> option for more information, and then exits the
+ application with a return code of 20 (indicating an abnormal
  termination).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>message</code> - the message to display, or <code>null</code> for the
- default message "The command line arguments are incorrect"</dd>
+<dd><code>message</code> - the message to display, or <code>null</code> for the default
+ message "The command line arguments are incorrect"</dd>
 </dl>
 </li>
 </ul>
@@ -529,8 +528,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  public fields of <code>target</code> as appropriate.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>target</code> - the object whose fields will be filled in, or
- <code>null</code> to use this object</dd>
+<dd><code>target</code> - the object whose fields will be filled in, or <code>null</code>
+ to use this object</dd>
 <dd><code>args</code> - the command line arguments to parse</dd>
 </dl>
 </li>

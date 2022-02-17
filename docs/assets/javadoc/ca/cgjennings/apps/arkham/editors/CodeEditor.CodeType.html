@@ -26,14 +26,14 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":9,"i10":9};
+var data = {"i0":10,"i1":10,"i2":9,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":9,"i14":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -173,46 +173,50 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?i
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
+<th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#CONVERSION_MAP">CONVERSION_MAP</a></span></code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#CSS">CSS</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#HTML">HTML</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#JAVA">JAVA</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#JAVASCRIPT">JAVASCRIPT</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#PLAIN">PLAIN</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#PLAIN_UTF8">PLAIN_UTF8</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#PROPERTIES">PROPERTIES</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#SETTINGS">SETTINGS</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#SILHOUETTES">SILHOUETTES</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#TILES">TILES</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <th class="colFirst" scope="row"><code><span class="memberNameLink"><a href="#TYPESCRIPT">TYPESCRIPT</a></span></code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -245,36 +249,66 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?i
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
+<td class="colFirst"><code>static <a href="CodeEditor.CodeType.html" title="enum in ca.cgjennings.apps.arkham.editors">CodeEditor.CodeType</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#forFile(java.io.File)">forFile</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;f)</code></th>
+<td class="colLast">
+<div class="block">Return the type of this file, based on its extension, or null.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getAutomaticCharacterEscaping()">getAutomaticCharacterEscaping</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDependentFile(java.io.File)">getDependentFile</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;source)</code></th>
+<td class="colLast">
+<div class="block">If this type generates another editable file type, returns the file
+ name that the specified file would generate.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDescription()">getDescription</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDeterminativeFile(java.io.File)">getDeterminativeFile</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;source)</code></th>
+<td class="colLast">
+<div class="block">Given a file of this type, if that file's contents are controlled by
+ another file that currently exists, returns that file.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html?is-external=true" title="class or interface in java.nio.charset" class="externalLink">Charset</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEncodingCharset()">getEncodingCharset</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEncodingName()">getEncodingName</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getExtension()">getExtension</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Icon</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getIcon()">getIcon</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i11" class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isRunnable()">isRunnable</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Returns whether this code type represents runnable script code.</div>
+</td>
+</tr>
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="CodeEditor.CodeType.html" title="enum in ca.cgjennings.apps.arkham.editors">CodeEditor.CodeType</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#normalize()">normalize</a></span>()</code></th>
 <td class="colLast">
@@ -282,14 +316,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?i
  base type.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>static <a href="CodeEditor.CodeType.html" title="enum in ca.cgjennings.apps.arkham.editors">CodeEditor.CodeType</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#valueOf(java.lang.String)">valueOf</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</code></th>
 <td class="colLast">
 <div class="block">Returns the enum constant of this type with the specified name.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>static <a href="CodeEditor.CodeType.html" title="enum in ca.cgjennings.apps.arkham.editors">CodeEditor.CodeType</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#values()">values</a></span>()</code></th>
 <td class="colLast">
@@ -389,6 +423,15 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>CLASS_MAP</h4>
 <pre>public static final&nbsp;<a href="CodeEditor.CodeType.html" title="enum in ca.cgjennings.apps.arkham.editors">CodeEditor.CodeType</a> CLASS_MAP</pre>
+</li>
+</ul>
+<a id="CONVERSION_MAP">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>CONVERSION_MAP</h4>
+<pre>public static final&nbsp;<a href="CodeEditor.CodeType.html" title="enum in ca.cgjennings.apps.arkham.editors">CodeEditor.CodeType</a> CONVERSION_MAP</pre>
 </li>
 </ul>
 <a id="SILHOUETTES">
@@ -497,6 +540,16 @@ not permitted.)</div>
 </dl>
 </li>
 </ul>
+<a id="forFile(java.io.File)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>forFile</h4>
+<pre class="methodSignature">public static&nbsp;<a href="CodeEditor.CodeType.html" title="enum in ca.cgjennings.apps.arkham.editors">CodeEditor.CodeType</a>&nbsp;forFile&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;f)</pre>
+<div class="block">Return the type of this file, based on its extension, or null.</div>
+</li>
+</ul>
 <a id="getExtension()">
 <!--   -->
 </a>
@@ -567,6 +620,53 @@ not permitted.)</div>
 <li class="blockList">
 <h4>getAutomaticCharacterEscaping</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;getAutomaticCharacterEscaping()</pre>
+</li>
+</ul>
+<a id="getDependentFile(java.io.File)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDependentFile</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;getDependentFile&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;source)</pre>
+<div class="block">If this type generates another editable file type, returns the file
+ name that the specified file would generate. For example, for
+ <code>source.ts</code> this might return <code>source.js</code>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>source</code> - the file containing source code of this type</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the file that compiled code should be written to, or null if
+ this file type does not generate code</dd>
+</dl>
+</li>
+</ul>
+<a id="getDeterminativeFile(java.io.File)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDeterminativeFile</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;getDeterminativeFile&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;source)</pre>
+<div class="block">Given a file of this type, if that file's contents are controlled by
+ another file that currently exists, returns that file. For example,
+ for <code>source.js</code> this might return <code>source.ts</code>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>source</code> - the file that might be controlled by another file</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the file that controls the content of this file, or null</dd>
+</dl>
+</li>
+</ul>
+<a id="isRunnable()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isRunnable</h4>
+<pre class="methodSignature">public&nbsp;boolean&nbsp;isRunnable()</pre>
+<div class="block">Returns whether this code type represents runnable script code.</div>
 </li>
 </ul>
 <a id="normalize()">

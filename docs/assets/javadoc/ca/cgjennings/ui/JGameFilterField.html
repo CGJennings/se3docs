@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -130,7 +130,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing" class="externalLink">javax.swing.JComponent</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true" title="class or interface in javax.swing" class="externalLink">javax.swing.JComboBox</a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true" title="class or interface in javax.swing" class="externalLink">javax.swing.JComboBox</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&gt;</li>
 <li>
 <ul class="inheritance">
 <li>ca.cgjennings.ui.JGameFilterField</li>
@@ -154,7 +154,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dl>
 <hr>
 <pre>public class <span class="typeNameLabel">JGameFilterField</span>
-extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComboBox</a></pre>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComboBox</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&gt;</pre>
 <div class="block">A dropdown list that allows lists of options to be filtered by search term or
  by game.</div>
 <dl>
@@ -265,7 +265,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(javax.swing.ComboBoxModel)">JGameFilterField</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/ComboBoxModel.html?is-external=true" title="class or interface in javax.swing" class="externalLink">ComboBoxModel</a>&nbsp;aModel)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(javax.swing.ComboBoxModel)">JGameFilterField</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/ComboBoxModel.html?is-external=true" title="class or interface in javax.swing" class="externalLink">ComboBoxModel</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&gt;&nbsp;aModel)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -394,7 +394,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox
 <ul class="blockListLast">
 <li class="blockList">
 <h4>JGameFilterField</h4>
-<pre>public&nbsp;JGameFilterField&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/ComboBoxModel.html?is-external=true" title="class or interface in javax.swing" class="externalLink">ComboBoxModel</a>&nbsp;aModel)</pre>
+<pre>public&nbsp;JGameFilterField&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/ComboBoxModel.html?is-external=true" title="class or interface in javax.swing" class="externalLink">ComboBoxModel</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&gt;&nbsp;aModel)</pre>
 </li>
 </ul>
 </li>
@@ -460,8 +460,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox
 <h4>getFilterValue</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;getFilterValue()</pre>
 <div class="block">Returns the current filter value. This is either a <a href="../../../gamedata/Game.html" title="class in gamedata"><code>Game</code></a>, or a
- filtering <code>String</code>, or <code>null</code> if the filter value
- is empty.</div>
+ filtering <code>String</code>, or <code>null</code> if the filter value is empty.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a filter value based on the current selection</dd>

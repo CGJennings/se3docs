@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -146,10 +146,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/EventListen
  <p>
  Editors that use the heartbeat to synchronize preview updates will
  respond to a boolean value returned by the listener. If this method
- returns <code>true</code>, it is assumed that the listener has made
- changes to the edited content. These changes may or may not be detectable
- by the editor; the editor should thus redraw the preview from scratch at
- the next opportunity.</div>
+ returns <code>true</code>, it is assumed that the listener has made changes to
+ the edited content. These changes may or may not be detectable by the
+ editor; the editor should thus redraw the preview from scratch at the
+ next opportunity.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="AbstractStrangeEonsEditor.html#addHeartbeatListener(ca.cgjennings.apps.arkham.StrangeEonsEditor.HeartbeatListener)"><code>AbstractStrangeEonsEditor.addHeartbeatListener(ca.cgjennings.apps.arkham.StrangeEonsEditor.HeartbeatListener)</code></a>, 
@@ -209,9 +209,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/EventListen
 <pre class="methodSignature">boolean&nbsp;heartbeat&#8203;(<a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor</a>&nbsp;editor)</pre>
 <div class="block">Called to indicate that a heartbeat is taking place in the indicated
  editor. If a listener has attached to an editor for the purpose of
- modifying the edited content, it should return <code>true</code> on
- those heartbeats where a genuine modification takes place. In any
- other case, the listener should return <code>false</code>.
+ modifying the edited content, it should return <code>true</code> on those
+ heartbeats where a genuine modification takes place. In any other
+ case, the listener should return <code>false</code>.
 
  <p>
  <b>Important:</b> Editors that synchronize redrawing using the

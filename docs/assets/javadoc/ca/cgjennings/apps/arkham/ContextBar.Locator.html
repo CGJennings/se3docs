@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -191,10 +191,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  must be in screen coordinates. The context bar will be located
  relative to the returned rectangle as if that rectangle were the
  bounding rectangle of the target component. For example, if the
- <a href="ContextBar.html#BAR_BELOW_PROPERTY"><code>ContextBar.BAR_BELOW_PROPERTY</code></a> is set to <code>true</code>, then the bar
- will be placed below the bottom of the returned rectangle. If this
- method returns <code>null</code>, then the context bar will be shown
- at its normal location.</div>
+ <a href="ContextBar.html#BAR_BELOW_PROPERTY"><code>ContextBar.BAR_BELOW_PROPERTY</code></a> is set to <code>true</code>, then the bar will
+ be placed below the bottom of the returned rectangle. If this method
+ returns <code>null</code>, then the context bar will be shown at its
+ normal location.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>bar</code> - the context bar that is being positioned</dd>
@@ -203,8 +203,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd><code>target</code> - the component that the context bar is attached to</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the rectangle, in screen coordinates, that the bar will be
- positioned relative to, or <code>null</code> to use the target
- component's bounding rectangle</dd>
+ positioned relative to, or <code>null</code> to use the target component's
+ bounding rectangle</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="ContextBar.html#BAR_CUSTOM_LOCATION_PROPERTY"><code>ContextBar.BAR_CUSTOM_LOCATION_PROPERTY</code></a></dd>
 </dl>

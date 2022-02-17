@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -491,15 +491,15 @@ implements <a href="PreferenceCategory.html" title="interface in ca.cgjennings.a
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="PreferenceCategory.html#isRestartRequired()">PreferenceCategory</a></code></span></div>
 <div class="block">This method is called after <a href="PreferenceCategory.html#storeSettings()"><code>PreferenceCategory.storeSettings()</code></a> when the user
  accepts the changes in the preferences dialog. It should return
- <code>true</code> if and only if the user has changed a preference in
- such a way that the change cannot take effect until the application is
+ <code>true</code> if and only if the user has changed a preference in such a
+ way that the change cannot take effect until the application is
  restarted.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="PreferenceCategory.html#isRestartRequired()">isRestartRequired</a></code>&nbsp;in interface&nbsp;<code><a href="PreferenceCategory.html" title="interface in ca.cgjennings.apps.arkham.dialog.prefs">PreferenceCategory</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the application must be restarted for
- changes to take effect</dd>
+<dd><code>true</code> if the application must be restarted for changes to
+ take effect</dd>
 </dl>
 </li>
 </ul>

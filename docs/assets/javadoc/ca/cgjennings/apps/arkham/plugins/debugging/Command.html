@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -653,8 +653,8 @@ the order they are declared.</div>
  The first argument is an index indicating the stack frame (0 is the top).
  The second argument identifies the object to list the properties of; it
  is a chain of null-character separated symbols, starting with either
- <code>&amp;lt;scope&amp;gt;</code> or <code>&amp;lt;this&amp;gt;</code> to begin from the
- local scope or the current <code>this</code> object (respectively).</div>
+ <code>&amp;lt;scope&amp;gt;</code> or <code>&amp;lt;this&amp;gt;</code> to begin from the local
+ scope or the current <code>this</code> object (respectively).</div>
 </li>
 </ul>
 <a id="SCOPEEVAL">
@@ -787,8 +787,8 @@ not permitted.)</div>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>s</code> - the string to escape</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the content of <code>s</code>, with the characters &lt;, &gt;,
- and &amp; converted to the appropriate HTML entity values</dd>
+<dd>the content of <code>s</code>, with the characters &lt;, &gt;, and
+ &amp; converted to the appropriate HTML entity values</dd>
 </dl>
 </li>
 </ul>

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -357,8 +357,8 @@ extends <a href="Theme.html" title="class in ca.cgjennings.ui.theme">Theme</a></
 <div class="block">Gives the theme the opportunity to modify a image to reflect the
  installed theme. This version of the method is called in cases where
  there is no resource identifier available for the image. The base class
- returns <code>source</code> unmodified. If you wish to modify images for
- your theme, it is important that you make your changes to a
+ returns <code>source</code> unmodified. If you wish to modify images for your
+ theme, it is important that you make your changes to a
  <i>copy</i> of the original image to avoid corrupting the image cache.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>

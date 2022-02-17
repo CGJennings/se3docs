@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -131,13 +131,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public final class <span class="typeNameLabel">Tuning</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
-<div class="block">The <code>Tuning</code> class contains tuning hints that help the image
- processing system decide between multiple algorithms when performing certain
- operations. A default tuning profile is built in, but more accurate tuning
- values can be determined for a particular platform by calling
- <a href="#update()"><code>update()</code></a>. This should only be done when no image processing is
- currently taking place. Tuning profiles can be read to and from a file to
- avoid having to call <code>update</code> for each application run.</div>
+<div class="block">The <code>Tuning</code> class contains tuning hints that help the image processing
+ system decide between multiple algorithms when performing certain operations.
+ A default tuning profile is built in, but more accurate tuning values can be
+ determined for a particular platform by calling <a href="#update()"><code>update()</code></a>. This should
+ only be done when no image processing is currently taking place. Tuning
+ profiles can be read to and from a file to avoid having to call
+ <code>update</code> for each application run.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>

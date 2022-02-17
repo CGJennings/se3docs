@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -177,8 +177,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCredit()">getCredit</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the credits for the tile, or <code>null</code> if the tile
- doesn't specify any credits.</div>
+<div class="block">Returns the credits for the tile, or <code>null</code> if the tile doesn't
+ specify any credits.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -350,9 +350,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getName</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getName()</pre>
-<div class="block">Returns the name of the tile. If the tile name starts with
- <code>@</code> in the tile set file, this name will already be
- converted into its localized form.</div>
+<div class="block">Returns the name of the tile. If the tile name starts with <code>@</code>
+ in the tile set file, this name will already be converted into its
+ localized form.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the (possibly localized) name of the tile</dd>
@@ -453,8 +453,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getCredit</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getCredit()</pre>
-<div class="block">Returns the credits for the tile, or <code>null</code> if the tile
- doesn't specify any credits.</div>
+<div class="block">Returns the credits for the tile, or <code>null</code> if the tile doesn't
+ specify any credits.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the credits for the tile design</dd>
@@ -487,8 +487,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  default snap class, along with other properties.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the tile class, as determined by the entry's
- <code>class</code> key</dd>
+<dd>the tile class, as determined by the entry's <code>class</code>
+ key</dd>
 </dl>
 </li>
 </ul>
@@ -560,7 +560,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getPrototypeItem</h4>
 <pre class="methodSignature">public&nbsp;<a href="../ca/cgjennings/apps/arkham/deck/item/PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a>&nbsp;getPrototypeItem()</pre>
 <div class="block">Returns the prototype page item for this tile set entry. This is the
- master item that appears in the deck editor's list of components.</div>
+ main item that appears in the deck editor's list of components.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the prototype item for display in the deck editor</dd>

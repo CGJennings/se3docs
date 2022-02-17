@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -132,10 +132,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre>public final class <span class="typeNameLabel">PDFPrintSupport</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
 <div class="block">Creates simple PDF documents. PDF support is not built in; to use this class
- the <code>core-PDFOutput.selibrary</code> library must be installed. (That
- library provides a concrete implementation of the <a href="PDFPrintSupport.PDFWriter.html" title="interface in ca.cgjennings.apps.arkham.deck"><code>PDFPrintSupport.PDFWriter</code></a> interface
- defined in this class.) You can test whether PDF support is available by
- calling <a href="#isAvailable()"><code>isAvailable()</code></a>.
+ the <code>core-PDFOutput.selibrary</code> library must be installed. (That library
+ provides a concrete implementation of the <a href="PDFPrintSupport.PDFWriter.html" title="interface in ca.cgjennings.apps.arkham.deck"><code>PDFPrintSupport.PDFWriter</code></a> interface defined
+ in this class.) You can test whether PDF support is available by calling
+ <a href="#isAvailable()"><code>isAvailable()</code></a>.
 
  <p>
  For easy PDF creation, use one of the static <a href="#printToPDF(java.lang.String,java.awt.print.PageFormat,java.awt.print.Printable,java.io.File)"><code>printToPDF</code></a>
@@ -432,8 +432,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>className</code> - the fully qualified name of a class with a no-arg
- constructor that implements <a href="PDFPrintSupport.PDFWriter.html" title="interface in ca.cgjennings.apps.arkham.deck"><code>PDFPrintSupport.PDFWriter</code></a>, or <code>null</code> to
- use the default class</dd>
+ constructor that implements <a href="PDFPrintSupport.PDFWriter.html" title="interface in ca.cgjennings.apps.arkham.deck"><code>PDFPrintSupport.PDFWriter</code></a>, or <code>null</code> to use the
+ default class</dd>
 </dl>
 </li>
 </ul>

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -345,11 +345,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <h4>FORCE_MARKUP_TARGET_PROPERTY</h4>
 <pre>static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> FORCE_MARKUP_TARGET_PROPERTY</pre>
 <div class="block">If set in a component's client properties, forces whether a component is
- or is not considered to be a markup target. Set to
- <code>Boolean.TRUE</code> or <code>Boolean.FALSE</code>. Otherwise,
- markup target candidates are evaluated using heuristics. To be valid, the
- component must still be an acceptable type of control, and (in strict
- validation mode) showing, enabled, and editable.</div>
+ or is not considered to be a markup target. Set to <code>Boolean.TRUE</code>
+ or <code>Boolean.FALSE</code>. Otherwise, markup target candidates are
+ evaluated using heuristics. To be valid, the component must still be an
+ acceptable type of control, and (in strict validation mode) showing,
+ enabled, and editable.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="MarkupTargetFactory.html#isValidTarget(java.lang.Object,boolean)"><code>MarkupTargetFactory.isValidTarget(java.lang.Object, boolean)</code></a>, 
@@ -459,9 +459,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre class="methodSignature">void&nbsp;select&#8203;(int&nbsp;start,
             int&nbsp;end)</pre>
 <div class="block">Changes the selection in the markup target. Invalid selections will be
- clamped to the valid range of the document. Note that <code>start</code>
- does not need to be less than <code>end</code>; the cursor will be
- located at the <code>end</code> offset.</div>
+ clamped to the valid range of the document. Note that <code>start</code> does
+ not need to be less than <code>end</code>; the cursor will be located at the
+ <code>end</code> offset.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>start</code> - the start offset of the new selection</dd>

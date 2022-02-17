@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -130,10 +130,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponent.html?is-external=true" title="class or interface in javax.swing" class="externalLink">javax.swing.JComponent</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true" title="class or interface in javax.swing" class="externalLink">javax.swing.JComboBox</a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true" title="class or interface in javax.swing" class="externalLink">javax.swing.JComboBox</a>&lt;E&gt;</li>
 <li>
 <ul class="inheritance">
-<li><a href="JIconComboBox.html" title="class in ca.cgjennings.ui">ca.cgjennings.ui.JIconComboBox</a></li>
+<li><a href="JIconComboBox.html" title="class in ca.cgjennings.ui">ca.cgjennings.ui.JIconComboBox</a>&lt;<a href="../../../gamedata/Game.html" title="class in gamedata">Game</a>&gt;</li>
 <li>
 <ul class="inheritance">
 <li>ca.cgjennings.ui.JGameCombo</li>
@@ -158,8 +158,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/event/ActionListener.html?is-external=true" title="class or interface in java.awt.event" class="externalLink">ActionListener</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/ImageObserver.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">ImageObserver</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/ItemSelectable.html?is-external=true" title="class or interface in java.awt" class="externalLink">ItemSelectable</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/MenuContainer.html?is-external=true" title="class or interface in java.awt" class="externalLink">MenuContainer</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/EventListener.html?is-external=true" title="class or interface in java.util" class="externalLink">EventListener</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/accessibility/Accessible.html?is-external=true" title="class or interface in javax.accessibility" class="externalLink">Accessible</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/event/ListDataListener.html?is-external=true" title="class or interface in javax.swing.event" class="externalLink">ListDataListener</a></code></dd>
 </dl>
 <hr>
-<pre>public class <span class="typeNameLabel">JGameCombo</span>
-extends <a href="JIconComboBox.html" title="class in ca.cgjennings.ui">JIconComboBox</a></pre>
+<pre>public final class <span class="typeNameLabel">JGameCombo</span>
+extends <a href="JIconComboBox.html" title="class in ca.cgjennings.ui">JIconComboBox</a>&lt;<a href="../../../gamedata/Game.html" title="class in gamedata">Game</a>&gt;</pre>
 <div class="block">A combo box that allows the selection of a game. The items in the combo are
  instances of <a href="../../../gamedata/Game.html" title="class in gamedata"><code>Game</code></a>.</div>
 <dl>
@@ -311,7 +311,7 @@ extends <a href="JIconComboBox.html" title="class in ca.cgjennings.ui">JIconComb
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setModel(javax.swing.ComboBoxModel)">setModel</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/ComboBoxModel.html?is-external=true" title="class or interface in javax.swing" class="externalLink">ComboBoxModel</a>&nbsp;aModel)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setModel(javax.swing.ComboBoxModel)">setModel</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/ComboBoxModel.html?is-external=true" title="class or interface in javax.swing" class="externalLink">ComboBoxModel</a>&lt;<a href="../../../gamedata/Game.html" title="class in gamedata">Game</a>&gt;&nbsp;aModel)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -426,7 +426,7 @@ extends <a href="JIconComboBox.html" title="class in ca.cgjennings.ui">JIconComb
 <pre class="methodSignature">public&nbsp;<a href="../../../gamedata/Game.html" title="class in gamedata">Game</a>&nbsp;getItemAt&#8203;(int&nbsp;index)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true#getItemAt(int)" title="class or interface in javax.swing" class="externalLink">getItemAt</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComboBox</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true#getItemAt(int)" title="class or interface in javax.swing" class="externalLink">getItemAt</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComboBox</a>&lt;<a href="../../../gamedata/Game.html" title="class in gamedata">Game</a>&gt;</code></dd>
 </dl>
 </li>
 </ul>
@@ -439,7 +439,7 @@ extends <a href="JIconComboBox.html" title="class in ca.cgjennings.ui">JIconComb
 <pre class="methodSignature">public&nbsp;<a href="../../../gamedata/Game.html" title="class in gamedata">Game</a>&nbsp;getSelectedItem()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true#getSelectedItem()" title="class or interface in javax.swing" class="externalLink">getSelectedItem</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComboBox</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true#getSelectedItem()" title="class or interface in javax.swing" class="externalLink">getSelectedItem</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComboBox</a>&lt;<a href="../../../gamedata/Game.html" title="class in gamedata">Game</a>&gt;</code></dd>
 </dl>
 </li>
 </ul>
@@ -458,10 +458,10 @@ extends <a href="JIconComboBox.html" title="class in ca.cgjennings.ui">JIconComb
 <ul class="blockListLast">
 <li class="blockList">
 <h4>setModel</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;setModel&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/ComboBoxModel.html?is-external=true" title="class or interface in javax.swing" class="externalLink">ComboBoxModel</a>&nbsp;aModel)</pre>
+<pre class="methodSignature">public&nbsp;void&nbsp;setModel&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/ComboBoxModel.html?is-external=true" title="class or interface in javax.swing" class="externalLink">ComboBoxModel</a>&lt;<a href="../../../gamedata/Game.html" title="class in gamedata">Game</a>&gt;&nbsp;aModel)</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true#setModel(javax.swing.ComboBoxModel)" title="class or interface in javax.swing" class="externalLink">setModel</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComboBox</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true#setModel(javax.swing.ComboBoxModel)" title="class or interface in javax.swing" class="externalLink">setModel</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComboBox.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JComboBox</a>&lt;<a href="../../../gamedata/Game.html" title="class in gamedata">Game</a>&gt;</code></dd>
 </dl>
 </li>
 </ul>

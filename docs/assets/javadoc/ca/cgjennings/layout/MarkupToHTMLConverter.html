@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -136,13 +136,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">MarkupToHTMLConverter</span>
 extends <a href="MarkupRenderer.html" title="class in ca.cgjennings.layout">MarkupRenderer</a></pre>
-<div class="block">Converts markup written for a <code>MarkupRenderer</code> into simple HTML.
- It works by taking advantage of the customizability of
- <code>MarkupRenderer</code>'s tag handling to insert "invisible" tags back
- into the markup. The tags are made invisible by surrounding them with
- special, non-printing characters instead of angle brackets. After the markup
- is processed, the styled text is converted back into plain text and the
- invisible tags are converted back into regular tags.
+<div class="block">Converts markup written for a <code>MarkupRenderer</code> into simple HTML. It
+ works by taking advantage of the customizability of <code>MarkupRenderer</code>'s
+ tag handling to insert "invisible" tags back into the markup. The tags are
+ made invisible by surrounding them with special, non-printing characters
+ instead of angle brackets. After the markup is processed, the styled text is
+ converted back into plain text and the invisible tags are converted back into
+ regular tags.
  <p>
  This approach allow us to ensure that the markup is processed in exactly the
  same way as standard markup before being handed to the HTML converter.</div>

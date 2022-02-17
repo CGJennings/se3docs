@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -384,10 +384,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/ButtonGro
 <pre class="methodSignature">public&nbsp;void&nbsp;addActionListener&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/event/ActionListener.html?is-external=true" title="class or interface in java.awt.event" class="externalLink">ActionListener</a>&nbsp;l)</pre>
 <div class="block">Adds a listener for changes to the selected button. This is only
  fired if the user selects a button, not if the button is selected by
- calling <code>setSelected(true)</code>. To simulate the user clicking
- a button, call its <code>doClick()</code> method. The action event
- that is generated will have this as its source and the command string
- will be equal to the setting value of the selected button.</div>
+ calling <code>setSelected(true)</code>. To simulate the user clicking a
+ button, call its <code>doClick()</code> method. The action event that is
+ generated will have this as its source and the command string will be
+ equal to the setting value of the selected button.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>l</code> - the listener to add</dd>

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -225,8 +225,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <td class="colFirst"><code>static <a href="Expansion.html" title="class in gamedata">Expansion</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#get(java.lang.String)">get</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;id)</code></th>
 <td class="colLast">
-<div class="block">Return the expansion with the requested identifier, or <code>null</code>
- if there is no such expansion.</div>
+<div class="block">Return the expansion with the requested identifier, or <code>null</code> if
+ there is no such expansion.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -515,11 +515,11 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <dd><code>customSymbolIndex</code> - the index into the passed in array of custom
  symbols</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the requested symbol, or <code>null</code> if there is no symbol
- at that index</dd>
+<dd>the requested symbol, or <code>null</code> if there is no symbol at
+ that index</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>customSymbolIndex</code> is
- less than 0</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>customSymbolIndex</code> is less
+ than 0</dd>
 </dl>
 </li>
 </ul>
@@ -606,14 +606,13 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <li class="blockList">
 <h4>get</h4>
 <pre class="methodSignature">public static&nbsp;<a href="Expansion.html" title="class in gamedata">Expansion</a>&nbsp;get&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;id)</pre>
-<div class="block">Return the expansion with the requested identifier, or <code>null</code>
- if there is no such expansion.</div>
+<div class="block">Return the expansion with the requested identifier, or <code>null</code> if
+ there is no such expansion.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>id</code> - the identifier to look up</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the expansion registered with that identifier, or
- <code>null</code></dd>
+<dd>the expansion registered with that identifier, or <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -719,8 +718,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
                                                 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="Expansion.html" title="class in gamedata">Expansion</a>&gt;&nbsp;exps)</pre>
 <div class="block">Sets the expansion symbols associated with a game component by modifying
  the component's <a href="#EXPANSION_SETTING_KEY"><code>EXPANSION_SETTING_KEY</code></a> private setting. If the
- expansion set is <code>null</code> or empty, then the base game expansion
- will be used.</div>
+ expansion set is <code>null</code> or empty, then the base game expansion will
+ be used.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>gc</code> - the game component to modify</dd>

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -319,8 +319,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponen
 <td class="colFirst"><code><a href="JIconSelector.html" title="type parameter in JIconSelector">S</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSelectedItem()">getSelectedItem</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the selected item in the list, or <code>null</code> if there is
- no selection.</div>
+<div class="block">Returns the selected item in the list, or <code>null</code> if there is no
+ selection.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -420,8 +420,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponen
 <pre class="methodSignature">public&nbsp;void&nbsp;addItem&#8203;(<a href="JIconSelector.html" title="type parameter in JIconSelector">S</a>&nbsp;item)</pre>
 <div class="block">Adds an item to the list, obtaining an icon and tool tip text from the
  item itself. The specified item must implement the <a href="IconProvider.html" title="interface in ca.cgjennings.ui"><code>IconProvider</code></a>
- interface, or a <code>ClassCastException</code> will be thrown. The tool
- tip text will be set to the item's <code>toString()</code> value.</div>
+ interface, or a <code>ClassCastException</code> will be thrown. The tool tip
+ text will be set to the item's <code>toString()</code> value.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>item</code> - the item to add</dd>
@@ -493,8 +493,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JComponen
 <li class="blockList">
 <h4>getSelectedItem</h4>
 <pre class="methodSignature">public&nbsp;<a href="JIconSelector.html" title="type parameter in JIconSelector">S</a>&nbsp;getSelectedItem()</pre>
-<div class="block">Returns the selected item in the list, or <code>null</code> if there is
- no selection.</div>
+<div class="block">Returns the selected item in the list, or <code>null</code> if there is no
+ selection.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the selected item</dd>

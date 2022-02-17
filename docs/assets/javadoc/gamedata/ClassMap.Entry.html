@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -188,8 +188,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#equals(java.lang.Object)">equals</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;rhs)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the specified object is an entry with
- the same mapping.</div>
+<div class="block">Returns <code>true</code> if the specified object is an entry with the
+ same mapping.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -326,8 +326,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <li class="blockList">
 <h4>getIcon</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Icon</a>&nbsp;getIcon()</pre>
-<div class="block">Returns this entry's icon. This method never returns
- <code>null</code>.</div>
+<div class="block">Returns this entry's icon. This method never returns <code>null</code>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../ca/cgjennings/ui/IconProvider.html#getIcon()">getIcon</a></code>&nbsp;in interface&nbsp;<code><a href="../ca/cgjennings/ui/IconProvider.html" title="interface in ca.cgjennings.ui">IconProvider</a></code></dd>
@@ -442,8 +441,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <li class="blockList">
 <h4>equals</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;equals&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;rhs)</pre>
-<div class="block">Returns <code>true</code> if the specified object is an entry with
- the same mapping.</div>
+<div class="block">Returns <code>true</code> if the specified object is an entry with the
+ same mapping.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></code></dd>
@@ -517,8 +516,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
  than a script.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>debug</code> - if <code>true</code>, component types that use scripts
- will be created in debug mode</dd>
+<dd><code>debug</code> - if <code>true</code>, component types that use scripts will
+ be created in debug mode</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the new editor, or <code>null</code> if creation failed</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>

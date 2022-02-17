@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -144,13 +144,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <a href="#create(java.util.Locale)"><code>create(java.util.Locale)</code></a>, you do not normally create a pluralizer
  yourself. Instead, you obtain a pluralizer from the appropriate
  <a href="../../../resources/Language.html" title="class in resources"><code>Language</code></a>. For example, to pluralize text in the user interface
- language, you would call <code>Language.getInterface().getPluralizer()</code>
- to get the pluralizer for the user interface language.
+ language, you would call <code>Language.getInterface().getPluralizer()</code> to
+ get the pluralizer for the user interface language.
 
  <p>
- The most common way to set up your <code>.properties</code> file when you
- want to add a pluralizable string is to add a key for the singular form, then
- add a separate key with "-pl" on the end for the plural. For example:
+ The most common way to set up your <code>.properties</code> file when you want to
+ add a pluralizable string is to add a key for the singular form, then add a
+ separate key with "-pl" on the end for the plural. For example:
  <pre>
  elephant-count = I see %d elephant.
  elephant-count-pl = I see %d elephants.
@@ -158,17 +158,17 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 
  <p>
  For locales with more than one plural form, additional keys would be defined
- with the names <code>elephant-count-pl2</code>,
- <code>elephant-count-pl3</code>, and so on. Locales that don't have plural
- forms would simply define the singular form key.
+ with the names <code>elephant-count-pl2</code>, <code>elephant-count-pl3</code>, and so
+ on. Locales that don't have plural forms would simply define the singular
+ form key.
 
  <p>
- Using a <code>Language</code> instance that has this <code>.properties</code>
- file loaded, you could obtain a properly formatted and localized plural by
- calling code similar to the following:
+ Using a <code>Language</code> instance that has this <code>.properties</code> file
+ loaded, you could obtain a properly formatted and localized plural by calling
+ code similar to the following:
  <pre>language.getPluralizer().pluralize( numElephants, "elephant-count", numElephants );</pre>
- (The second <code>numElephants</code> argument is used to replace the
- <code>%d</code> in the plural string.)</div>
+ (The second <code>numElephants</code> argument is used to replace the <code>%d</code>
+ in the plural string.)</div>
 </li>
 </ul>
 </div>
@@ -280,8 +280,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isFallbackPluralizer()">isFallbackPluralizer</a></span>()</code></th>
 <td class="colLast">
-<div class="block">If this returns <code>true</code>, then there is no built-in pluralizer
- for this pluralizer's locale and a default pluralizer is being used that
+<div class="block">If this returns <code>true</code>, then there is no built-in pluralizer for
+ this pluralizer's locale and a default pluralizer is being used that
  follows the same rules as English.</div>
 </td>
 </tr>
@@ -407,9 +407,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <p>
  The base class includes built-in support for a number of languages. If
  none of these is suitable, then it will attempt to instantiate a class in
- this package with the name <code>IntegerPluralizer_&lt;i&gt;xx&lt;/i&gt;</code>,
- where <i>xx</i> is the language code for the locale. If this class cannot
- be found and instantiated, then a default pluralizer is returned that
+ this package with the name <code>IntegerPluralizer_&lt;i&gt;xx&lt;/i&gt;</code>, where
+ <i>xx</i> is the language code for the locale. If this class cannot be
+ found and instantiated, then a default pluralizer is returned that
  follows the same rules as English.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -426,8 +426,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getPluralForm</h4>
 <pre class="methodSignature">public&nbsp;int&nbsp;getPluralForm&#8203;(int&nbsp;number)</pre>
-<div class="block">Returns the plural form index to use for <code>number</code>. For
- example, the English pluralizer returns plural form 0 (singular) if
+<div class="block">Returns the plural form index to use for <code>number</code>. For example, the
+ English pluralizer returns plural form 0 (singular) if
  <code>number == 1</code>, and otherwise returns 1 (first plural form).
 
  <p>
@@ -451,8 +451,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getPluralForm</h4>
 <pre class="methodSignature">public&nbsp;int&nbsp;getPluralForm&#8203;(long&nbsp;number)</pre>
-<div class="block">Returns the plural form index to use for a <code>number</code>. This is
- the long-sized analogue to <a href="#getPluralForm(int)"><code>getPluralForm(int)</code></a>.</div>
+<div class="block">Returns the plural form index to use for a <code>number</code>. This is the
+ long-sized analogue to <a href="#getPluralForm(int)"><code>getPluralForm(int)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>number</code> - the number to choose a plural form for</dd>
@@ -521,10 +521,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                         <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;singularInfix,
                         <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;pluralInfix)</pre>
 <div class="block">Returns a key name based on a plural form index and base key name parts.
- The value of <code>pluralForm</code> is 0 for the singular form, 1 for
- the first plural form, 2 for the second plural form, and so on. (The
- exact meaning of the plural form index is locale-dependent.) The returned
- key name is composed by following this pattern:
+ The value of <code>pluralForm</code> is 0 for the singular form, 1 for the
+ first plural form, 2 for the second plural form, and so on. (The exact
+ meaning of the plural form index is locale-dependent.) The returned key
+ name is composed by following this pattern:
  <pre>
  basePrefix + singularInfix     + baseSuffix      (plural form 0)
  basePrefix + pluralInfix       + baseSuffix      (plural form 1)
@@ -578,17 +578,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                         <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;resourceKeyBase)</pre>
 <div class="block">Returns an appropriate plural form string based on an integer value. A
  set of keys is generated as if by calling
- <code>createKeys( resourceKeyBase, "", "", "-pl" )</code>. This means
- that the following keys will be used:<br>
- <code>&lt;i&gt;resourceKeyBase&lt;/i&gt;</code> singular form<br>
- <code>&lt;i&gt;resourceKeyBase&lt;/i&gt;-pl</code> first plural form<br>
+ <code>createKeys( resourceKeyBase, "", "", "-pl" )</code>. This means that the
+ following keys will be used:<br> <code>&lt;i&gt;resourceKeyBase&lt;/i&gt;</code> singular
+ form<br> <code>&lt;i&gt;resourceKeyBase&lt;/i&gt;-pl</code> first plural form<br>
  <code>&lt;i&gt;resourceKeyBase&lt;/i&gt;-pl2</code> second plural form<br>
  ...
 
  <p>
  Of these keys, the appropriate key will be selected based on the value of
- <code>number</code>, and then the value of this key in
- <code>language</code> returned.</div>
+ <code>number</code>, and then the value of this key in <code>language</code>
+ returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>language</code> - the language to use to look up the plural string</dd>
@@ -597,8 +596,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the appropriate plural form, or an error message</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the language or base key is
- <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the language or base key is <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -612,8 +610,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                         <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;resourceKeyBase,
                         <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>...&nbsp;formatObjects)</pre>
 <div class="block">Returns a pluralized string that has been formatted using the supplied
- objects. This is a convenience for calling <code>String.format</code> on
- the result of a call to <a href="#pluralize(int,java.lang.String)"><code>pluralize(int, java.lang.String)</code></a>.</div>
+ objects. This is a convenience for calling <code>String.format</code> on the
+ result of a call to <a href="#pluralize(int,java.lang.String)"><code>pluralize(int, java.lang.String)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>number</code> - the number to for which a plural form should be selected</dd>
@@ -638,8 +636,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                         <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;resourceKeyBase,
                         <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>...&nbsp;formatObjects)</pre>
 <div class="block">Returns a pluralized string that has been formatted using the supplied
- objects. This is a convenience for calling <code>String.format</code> on
- the result of a call to
+ objects. This is a convenience for calling <code>String.format</code> on the
+ result of a call to
  <a href="#pluralize(resources.Language,int,java.lang.String)"><code>pluralize(resources.Language, int, java.lang.String)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -651,8 +649,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a localized, pluralized, and formatted string</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the language or base key is
- <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the language or base key is <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -710,24 +707,24 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isFallbackPluralizer</h4>
 <pre class="methodSignature">public final&nbsp;boolean&nbsp;isFallbackPluralizer()</pre>
-<div class="block">If this returns <code>true</code>, then there is no built-in pluralizer
- for this pluralizer's locale and a default pluralizer is being used that
+<div class="block">If this returns <code>true</code>, then there is no built-in pluralizer for
+ this pluralizer's locale and a default pluralizer is being used that
  follows the same rules as English. When starting a translation, you can
  test if pluralizer support needs to be added by running script code
  similar to the following (where <i>ll</i> is the relevant language code):
  <pre>println( ca.cgjennings.i18n.IntegerPluralizer.create( new java.util.Locale("<i>ll</i>") ).isFallbackPluralizer() );</pre>
- If this prints <code>true</code>, then you should request that
- pluralization support be added for your language. Alternatively, if you
- are familiar with Java, you can add support yourself by writing a class
- with the name <code>IntegerPluralizer_&lt;i&gt;ll&lt;/i&gt;</code>. The class must be
- in the same package as this class, and it must subclass
- <code>IntegerPluralizer</code> and override the <a href="#getPluralForm(int)"><code>getPluralForm(int)</code></a>,
+ If this prints <code>true</code>, then you should request that pluralization
+ support be added for your language. Alternatively, if you are familiar
+ with Java, you can add support yourself by writing a class with the name
+ <code>IntegerPluralizer_&lt;i&gt;ll&lt;/i&gt;</code>. The class must be in the same
+ package as this class, and it must subclass <code>IntegerPluralizer</code> and
+ override the <a href="#getPluralForm(int)"><code>getPluralForm(int)</code></a>,
  <a href="#getPluralFormCount()"><code>getPluralFormCount()</code></a>, and <a href="#getPluralFormDescription()"><code>getPluralFormDescription()</code></a>
  methods to implement the pluralization rule for the locale.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if pluralizer support for your locale needs to
- be added</dd>
+<dd><code>true</code> if pluralizer support for your locale needs to be
+ added</dd>
 </dl>
 </li>
 </ul>

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -131,8 +131,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">TextStyle</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
-<div class="block">A combination of <code>TextAttribute</code>s that represents a particular
- style of text (a heading, for example).</div>
+<div class="block">A combination of <code>TextAttribute</code>s that represents a particular style of
+ text (a heading, for example).</div>
 </li>
 </ul>
 </div>
@@ -417,8 +417,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
           int&nbsp;beginPos,
           int&nbsp;endPos)</code></th>
 <td class="colLast">
-<div class="block">Apply this style to a range of characters in an
- <code>AttributedString</code>.</div>
+<div class="block">Apply this style to a range of characters in an <code>AttributedString</code>.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -609,7 +608,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>LIGATURES_ON</h4>
 <pre>public static final&nbsp;<a href="TextStyle.html" title="class in ca.cgjennings.layout">TextStyle</a> LIGATURES_ON</pre>
 <div class="block">A shared instance of a style that will enable optional ligature
- replacement. If this instance is modified, everyone using it is also affected.</div>
+ replacement. If this instance is modified, everyone using it is also
+ affected.</div>
 </li>
 </ul>
 <a id="LIGATURES_OFF">
@@ -620,7 +620,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>LIGATURES_OFF</h4>
 <pre>public static final&nbsp;<a href="TextStyle.html" title="class in ca.cgjennings.layout">TextStyle</a> LIGATURES_OFF</pre>
 <div class="block">A shared instance of a style that will disable optional ligature
- replacement. If this instance is modified, everyone using it is also affected.</div>
+ replacement. If this instance is modified, everyone using it is also
+ affected.</div>
 </li>
 </ul>
 <a id="JUSTIFY">
@@ -880,8 +881,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public&nbsp;void&nbsp;applyStyle&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/text/AttributedString.html?is-external=true" title="class or interface in java.text" class="externalLink">AttributedString</a>&nbsp;s,
                        int&nbsp;beginPos,
                        int&nbsp;endPos)</pre>
-<div class="block">Apply this style to a range of characters in an
- <code>AttributedString</code>.</div>
+<div class="block">Apply this style to a range of characters in an <code>AttributedString</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>s</code> - the string to the apply the attributes of the style to</dd>

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -158,9 +158,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  number of subproblems to create.
  <li>Create an array or collection or Runnables or Callables, each of which
  will complete one subproblem.
- <li>Use one of the <code>run</code> or <code>evaluate</code> methods to
- complete the subproblems (in parallel if possible). This will return when all
- of the subproblems have been completed.
+ <li>Use one of the <code>run</code> or <code>evaluate</code> methods to complete the
+ subproblems (in parallel if possible). This will return when all of the
+ subproblems have been completed.
  <li>If necessary, combine the results of the subproblems.
  </ol></div>
 <dl>
@@ -388,8 +388,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>createInstance</h4>
 <pre class="methodSignature">public static&nbsp;<a href="SplitJoin.html" title="class in ca.cgjennings.algo">SplitJoin</a>&nbsp;createInstance()</pre>
-<div class="block">Returns a new <code>SplitJoin</code> instance suited to the platform.
- This instance is guaranteed not to be shared.</div>
+<div class="block">Returns a new <code>SplitJoin</code> instance suited to the platform. This
+ instance is guaranteed not to be shared.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a new instance suitable for parallelizing CPU bound tasks</dd>
@@ -404,9 +404,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>createInstance</h4>
 <pre class="methodSignature">public static&nbsp;<a href="SplitJoin.html" title="class in ca.cgjennings.algo">SplitJoin</a>&nbsp;createInstance&#8203;(int&nbsp;nThreads)</pre>
 <div class="block">Returns a new <code>SplitJoin</code> instance that will use the specified
- number of threads. This instance is guaranteed not to be shared, and
- is guaranteed to employ up to the specified number of threads
- (depending on the number of subproblems).</div>
+ number of threads. This instance is guaranteed not to be shared, and is
+ guaranteed to employ up to the specified number of threads (depending on
+ the number of subproblems).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>nThreads</code> - the number of threads to be used</dd>
@@ -492,9 +492,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>runUnchecked</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;runUnchecked&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Runnable</a>[]&nbsp;subproblems)</pre>
-<div class="block">Submits subproblems as if by <code>run( subproblems )</code>. However, if
- one of the subproblems throws an exception, it will be thrown as an
- unchecked <code>RuntimeException</code>.</div>
+<div class="block">Submits subproblems as if by <code>run( subproblems )</code>. However, if one
+ of the subproblems throws an exception, it will be thrown as an unchecked
+ <code>RuntimeException</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>subproblems</code> - the subproblems to complete</dd>
@@ -512,9 +512,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>runUnchecked</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;runUnchecked&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Runnable</a>&gt;&nbsp;subproblems)</pre>
-<div class="block">Submits subproblems as if by <code>run( subproblems )</code>. However, if
- one of the subproblems throws an exception, it will be thrown as an
- unchecked <code>RuntimeException</code>.</div>
+<div class="block">Submits subproblems as if by <code>run( subproblems )</code>. However, if one
+ of the subproblems throws an exception, it will be thrown as an unchecked
+ <code>RuntimeException</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>subproblems</code> - the subproblems to complete</dd>
@@ -532,9 +532,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>evaluateUnchecked</h4>
 <pre class="methodSignature">public&nbsp;&lt;V&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;V&gt;&nbsp;evaluateUnchecked&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html?is-external=true" title="class or interface in java.util.concurrent" class="externalLink">Callable</a>&lt;V&gt;&gt;&nbsp;subproblems)</pre>
-<div class="block">Submits subproblems as if by <code>evaluate( subproblems )</code>.
- However, if one of the subproblems throws an exception, it will be thrown
- as an unchecked <code>RuntimeException</code>.</div>
+<div class="block">Submits subproblems as if by <code>evaluate( subproblems )</code>. However, if
+ one of the subproblems throws an exception, it will be thrown as an
+ unchecked <code>RuntimeException</code>.</div>
 <dl>
 <dt><span class="paramLabel">Type Parameters:</span></dt>
 <dd><code>V</code> - the type of the value returned by each subproblem</dd>
@@ -556,12 +556,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>execute</h4>
 <pre class="methodSignature">public abstract&nbsp;void&nbsp;execute&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Runnable</a>&nbsp;task)</pre>
-<div class="block">Runs a <code>task</code>. The task may be run in another thread, in which
- case this method <i>will not wait</i> for the task to complete. The
- purpose of this method is to reuse a thread that would normally have been
- used for split-join tasks instead of creating a new <code>Thread</code>
- yourself. If there is an idle split-join thread available, then this
- method generally has lower overhead than creating a new thread.</div>
+<div class="block">Runs a <code>task</code>. The task may be run in another thread, in which case
+ this method <i>will not wait</i> for the task to complete. The purpose of
+ this method is to reuse a thread that would normally have been used for
+ split-join tasks instead of creating a new <code>Thread</code> yourself. If
+ there is an idle split-join thread available, then this method generally
+ has lower overhead than creating a new thread.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>task</code> - the task to run in another thread</dd>
@@ -575,10 +575,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>dispose</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;dispose()</pre>
-<div class="block">Provides a hint to this instance that it will no longer be used.
- Calling this is not required, but may free up resources sooner than
- not calling it would. The effect of continuing to use this
- <code>SplitJoin</code> after disposing of it is undefined.</div>
+<div class="block">Provides a hint to this instance that it will no longer be used. Calling
+ this is not required, but may free up resources sooner than not calling
+ it would. The effect of continuing to use this <code>SplitJoin</code> after
+ disposing of it is undefined.</div>
 </li>
 </ul>
 <a id="getIdealSplitCount()">
@@ -608,13 +608,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>setHighPriorityThreadHint</h4>
 <pre class="methodSignature">public static&nbsp;void&nbsp;setHighPriorityThreadHint&#8203;(boolean&nbsp;enable)</pre>
 <div class="block">Sets a hint as to whether the creation of higher than normal priority
- threads is allowed. If <code>true</code>, then <code>SplitJoin</code>
- instances <i>may try</i> to creates threads with above average priority.
- Note that even if enabled, this is not guaranteed to have an effect.</div>
+ threads is allowed. If <code>true</code>, then <code>SplitJoin</code> instances
+ <i>may try</i> to creates threads with above average priority. Note that
+ even if enabled, this is not guaranteed to have an effect.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>enable</code> - <code>true</code> to allow higher than normal priority
- threads</dd>
+<dd><code>enable</code> - <code>true</code> to allow higher than normal priority threads</dd>
 </dl>
 </li>
 </ul>
@@ -646,14 +645,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  to <code>false</code>, future calls to <a href="#getInstance()"><code>getInstance()</code></a> or
  <a href="#createInstance()"><code>createInstance()</code></a>
  <i>that create a new instance rather than share an existing one</i>
- will return a <code>SplitJoin</code> implementation that executes
- subproblems serially in the calling thread. To guarantee that all
- <code>SplitJoin</code> instances run serially, this must value must be
- set before the first call to <a href="#getInstance()"><code>getInstance()</code></a>.</div>
+ will return a <code>SplitJoin</code> implementation that executes subproblems
+ serially in the calling thread. To guarantee that all <code>SplitJoin</code>
+ instances run serially, this must value must be set before the first call
+ to <a href="#getInstance()"><code>getInstance()</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>enable</code> - allow parallel problem solving if <code>true</code>,
- disable if <code>false</code> (default is <code>true</code>)</dd>
+<dd><code>enable</code> - allow parallel problem solving if <code>true</code>, disable if
+ <code>false</code> (default is <code>true</code>)</dd>
 </dl>
 </li>
 </ul>

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -136,6 +136,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  perform the conversion of a <a href="../GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component"><code>GameComponent</code></a> into another component
  type. The class has several methods to help with the conversion process. Most
  return the instance itself, so that they can be chained easily.</div>
+<dl>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>3.3</dd>
+</dl>
 </li>
 </ul>
 </div>
@@ -303,8 +307,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code><a href="ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSettings(java.lang.String...)">setSettings</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>...&nbsp;keyValuePairs)</code></th>
 <td class="colLast">
-<div class="block">Sets one or more settings on the new component, based on the given
- (key, value) pairs.</div>
+<div class="block">Sets one or more settings on the new component, based on the given (key,
+ value) pairs.</div>
 </td>
 </tr>
 </table>
@@ -487,8 +491,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this conversion session</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if the array of key name pairs has an odd
-     length</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if the array of key name pairs has an
+ odd length</dd>
 </dl>
 </li>
 </ul>
@@ -499,8 +503,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>setSettings</h4>
 <pre class="methodSignature">public&nbsp;<a href="ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a>&nbsp;setSettings&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>...&nbsp;keyValuePairs)</pre>
-<div class="block">Sets one or more settings on the new component, based on the given
- (key, value) pairs.</div>
+<div class="block">Sets one or more settings on the new component, based on the given (key,
+ value) pairs.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>keyValuePairs</code> - </dd>
@@ -508,7 +512,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd>this conversion session</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if the array of setting pairs has an odd
-     length</dd>
+ length</dd>
 </dl>
 </li>
 </ul>

@@ -26,14 +26,14 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":6,"i8":10,"i9":9,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":6,"i6":9,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -252,28 +252,12 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#convertFrom(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">convertFrom</a></span>&#8203;(<a href="conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a>&nbsp;session)</code></th>
-<td class="colLast">
-<div class="block">Called on a component that is being converted into another component
- type.</div>
-</td>
-</tr>
-<tr id="i5" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#convertTo(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">convertTo</a></span>&#8203;(<a href="conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a>&nbsp;session)</code></th>
-<td class="colLast">
-<div class="block">Called on the replacement component when converting a component to
- another component type.</div>
-</td>
-</tr>
-<tr id="i6" class="altColor">
-<td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#coreCheck()">coreCheck</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Checks if all required libraries and extensions are installed.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>abstract <a href="../sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sheet</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createDefaultSheets()">createDefaultSheets</a></span>()</code></th>
 <td class="colLast">
@@ -282,15 +266,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  <a href="GameComponent.html#setSheets(ca.cgjennings.apps.arkham.sheet.Sheet%5B%5D)"><code>GameComponent.setSheets(ca.cgjennings.apps.arkham.sheet.Sheet[])</code></a>.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
-<td class="colFirst"><code><a href="conversion/UpgradeConversionTrigger.html" title="class in ca.cgjennings.apps.arkham.component.conversion">UpgradeConversionTrigger</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createUpgradeConversionTrigger()">createUpgradeConversionTrigger</a></span>()</code></th>
-<td class="colLast">
-<div class="block">Returns the <a href="conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion"><code>ConversionSession</code></a> created when the component type no
- longer handles the component.</div>
-</td>
-</tr>
-<tr id="i9" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#filterComponentText(java.lang.String)">filterComponentText</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;source)</code></th>
 <td class="colLast">
@@ -299,14 +275,14 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  all coding removed and newlines converted to spaces.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getComment()">getComment</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the design rationale comments associated with this component.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDefaultPortrait(java.lang.String)">getDefaultPortrait</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;portraitKey)</code></th>
 <td class="colLast">
@@ -314,21 +290,21 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  return the appropriate portrait image.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFullName()">getFullName</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the "full name" of this component.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getName()">getName</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the name of this component.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../resources/Settings.html" title="class in resources">Settings</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSettings()">getSettings</a></span>()</code></th>
 <td class="colLast">
@@ -336,7 +312,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  private settings.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="../sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sheet</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSheets()">getSheets</a></span>()</code></th>
 <td class="colLast">
@@ -344,37 +320,36 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  <code>null</code> if no sheets are attached.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSheetTitles()">getSheetTitles</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns human-readable names for the sheets used by this component.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasChanged()">hasChanged</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this component has been modified since the
- last call to <code>hasChanged()</code>.</div>
+<div class="block">Returns <code>true</code> if this component has been modified since the last
+ call to <code>hasChanged()</code>.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#hasUnsavedChanges()">hasUnsavedChanges</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the value of this component's unsaved changes flag.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isDeckLayoutSupported()">isDeckLayoutSupported</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if components of this type can be placed in a
- deck.</div>
+<div class="block">Returns <code>true</code> if components of this type can be placed in a deck.</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#markChanged()">markChanged</a></span>()</code></th>
 <td class="colLast">
@@ -382,7 +357,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  sheets as having changed.</div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#markChanged(int)">markChanged</a></span>&#8203;(int&nbsp;i)</code></th>
 <td class="colLast">
@@ -390,7 +365,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  <code>i</code>the sheet to be redrawn.</div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#markSaved()">markSaved</a></span>()</code></th>
 <td class="colLast">
@@ -398,35 +373,35 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  saved to clear the component's unsaved changes flag.</div>
 </td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#markUnsavedChanges()">markUnsavedChanges</a></span>()</code></th>
 <td class="colLast">
 <div class="block">This method sets the component's unsaved changes flag.</div>
 </td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#read(java.io.ObjectInputStream)">read</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/ObjectInputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">ObjectInputStream</a>&nbsp;in)</code></th>
 <td class="colLast">
 <div class="block">Provides default code to read this object's values from a subclass.</div>
 </td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setComment(java.lang.String)">setComment</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;comment)</code></th>
 <td class="colLast">
 <div class="block">Sets the design rationale comment associated with this component.</div>
 </td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setName(java.lang.String)">setName</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</code></th>
 <td class="colLast">
 <div class="block">Sets the name of the component.</div>
 </td>
 </tr>
-<tr id="i27" class="rowColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setNameImpl(java.lang.String)">setNameImpl</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</code></th>
 <td class="colLast">
@@ -434,14 +409,14 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  the component as having unsaved changes.</div>
 </td>
 </tr>
-<tr id="i28" class="altColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSheets(ca.cgjennings.apps.arkham.sheet.Sheet%5B%5D)">setSheets</a></span>&#8203;(<a href="../sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sheet</a>[]&nbsp;sheets)</code></th>
 <td class="colLast">
 <div class="block">Sets the sheets that are attached to this component to draw its faces.</div>
 </td>
 </tr>
-<tr id="i29" class="rowColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#write(java.io.ObjectOutputStream)">write</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/ObjectOutputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">ObjectOutputStream</a>&nbsp;out)</code></th>
 <td class="colLast">
@@ -461,7 +436,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;ca.cgjennings.apps.arkham.component.<a href="GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></h3>
-<code><a href="GameComponent.html#createDefaultEditor()">createDefaultEditor</a></code></li>
+<code><a href="GameComponent.html#convertFrom(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">convertFrom</a>, <a href="GameComponent.html#convertTo(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">convertTo</a>, <a href="GameComponent.html#createDefaultEditor()">createDefaultEditor</a>, <a href="GameComponent.html#createUpgradeConversionTrigger()">createUpgradeConversionTrigger</a>, <a href="GameComponent.html#getClassName()">getClassName</a></code></li>
 </ul>
 </li>
 </ul>
@@ -623,13 +598,13 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  convention, you can save memory by sharing the shallow copy of the image.
 
  <p>
- <b>Debugging tip:</b> One operation that makes use of the
- <code>clone()</code> method is the <b>Spin Off</b> command. If you apply
- this command, make changes to the copied component, redraw the original
- component, and notice that changes in the copy have carried over to the
- original, then you are using a shallow copy rather than a deep copy.
- (That is, you are sharing a reference to the same mutable object rather
- than making a copy of the mutable object during the cloning.)</div>
+ <b>Debugging tip:</b> One operation that makes use of the <code>clone()</code>
+ method is the <b>Spin Off</b> command. If you apply this command, make
+ changes to the copied component, redraw the original component, and
+ notice that changes in the copy have carried over to the original, then
+ you are using a shallow copy rather than a deep copy. (That is, you are
+ sharing a reference to the same mutable object rather than making a copy
+ of the mutable object during the cloning.)</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="GameComponent.html#clone()">clone</a></code>&nbsp;in interface&nbsp;<code><a href="GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></dd>
@@ -736,8 +711,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="GameComponent.html#setSheets(ca.cgjennings.apps.arkham.sheet.Sheet%5B%5D)">setSheets</a></code>&nbsp;in interface&nbsp;<code><a href="GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>sheets</code> - the sheets to associate with the component, or
- <code>null</code> to clear the associated sheets</dd>
+<dd><code>sheets</code> - the sheets to associate with the component, or <code>null</code>
+ to clear the associated sheets</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="GameComponent.html#getSheets()"><code>GameComponent.getSheets()</code></a>, 
 <a href="GameComponent.html#createDefaultSheets()"><code>GameComponent.createDefaultSheets()</code></a></dd>
@@ -753,8 +728,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <pre class="methodSignature">public&nbsp;<a href="../sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sheet</a>[]&nbsp;getSheets()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="GameComponent.html#getSheets()">GameComponent</a></code></span></div>
 <div class="block">Returns the sheets attached to this component to draw its faces, or
- <code>null</code> if no sheets are attached. The returned array is owned
- by the game component and must not be modified.</div>
+ <code>null</code> if no sheets are attached. The returned array is owned by
+ the game component and must not be modified.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="GameComponent.html#getSheets()">getSheets</a></code>&nbsp;in interface&nbsp;<code><a href="GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></dd>
@@ -795,8 +770,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;getSheetTitles()</pre>
 <div class="block">Returns human-readable names for the sheets used by this component. A
  typical result would be something like
- <code>["Front Face", "Back Face"]</code>, localized for the user
- interface language.
+ <code>["Front Face", "Back Face"]</code>, localized for the user interface
+ language.
 
  <p>
  Implementations should assume that the titles are for the same kinds and
@@ -835,18 +810,18 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <pre class="methodSignature">public&nbsp;void&nbsp;markChanged&#8203;(int&nbsp;i)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="GameComponent.html#markChanged(int)">GameComponent</a></code></span></div>
 <div class="block">Called to signal that changes have been made that require the
- <code>i</code>the sheet to be redrawn. This is typically not called
- directly. Instead, calling a method like "<code>setName</code>" should
- check if the name being set is actually different, and if so then call
- this method for each sheet that may have changed as a result. Plug-ins
- that customize an existing component may also call this method as needed
- to reflect new features that they have added.
+ <code>i</code>the sheet to be redrawn. This is typically not called directly.
+ Instead, calling a method like "<code>setName</code>" should check if the name
+ being set is actually different, and if so then call this method for each
+ sheet that may have changed as a result. Plug-ins that customize an
+ existing component may also call this method as needed to reflect new
+ features that they have added.
 
  <p>
  Implementations of this method will typically call the
  <a href="../sheet/Sheet.html#markChanged()"><code>Sheet.markChanged()</code></a> method of the relevant sheet (unless the
- sheet set is <code>null</code>), set a flag for use by
- <a href="GameComponent.html#hasChanged()"><code>GameComponent.hasChanged()</code></a>, and then call <a href="GameComponent.html#markUnsavedChanges()"><code>GameComponent.markUnsavedChanges()</code></a>.</div>
+ sheet set is <code>null</code>), set a flag for use by <a href="GameComponent.html#hasChanged()"><code>GameComponent.hasChanged()</code></a>,
+ and then call <a href="GameComponent.html#markUnsavedChanges()"><code>GameComponent.markUnsavedChanges()</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="GameComponent.html#markChanged(int)">markChanged</a></code>&nbsp;in interface&nbsp;<code><a href="GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></dd>
@@ -875,14 +850,14 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>hasChanged</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;hasChanged()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="GameComponent.html#hasChanged()">GameComponent</a></code></span></div>
-<div class="block">Returns <code>true</code> if this component has been modified since the
- last call to <code>hasChanged()</code>.</div>
+<div class="block">Returns <code>true</code> if this component has been modified since the last
+ call to <code>hasChanged()</code>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="GameComponent.html#hasChanged()">hasChanged</a></code>&nbsp;in interface&nbsp;<code><a href="GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the component has changed since this was
- last called</dd>
+<dd><code>true</code> if the component has changed since this was last
+ called</dd>
 </dl>
 </li>
 </ul>
@@ -946,18 +921,19 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <div class="block">Returns a <a href="../../../../../resources/Settings.html" title="class in resources"><code>Settings</code></a> instance that will return this component's
  private settings. A component's private settings are saved along with the
  component when it is written to a file. This can be used to override the
- default settings for component (stored in the master settings for the
- game) as a way to "hack" existing component designs. It can also be used
- by the component itself to store arbitrary information.
- <a href="../diy/DIY.html" title="class in ca.cgjennings.apps.arkham.diy"><code>DIY components</code></a> generally use the component's private settings
- to store the current user-configurable state of the component.
+ default settings for component (which are determined by the the shared
+ game settings for the game associated with the component) as a way to
+ "hack" existing component designs. It can also be used by the component
+ itself to store arbitrary information. <a href="../diy/DIY.html" title="class in ca.cgjennings.apps.arkham.diy"><code>DIY components</code></a>
+ generally use the component's private settings to store the current
+ user-configurable state of the component.
 
  <p>
  Note that setting the key with the name <a href="../../../../../gamedata/Game.html#GAME_SETTING_KEY"><code>Game.GAME_SETTING_KEY</code></a>
  ("game") will change the parent scope of the private settings to the
- <a href="../../../../../gamedata/Game.html#getMasterSettings()"><code>master settings instance</code></a> for that game
- whose code matches the new value. (The initial value of this key is
- normally set on the component's half using the game code specified in the
+ <a href="../../../../../gamedata/Game.html#getSettings()"><code>relevant game's settings</code></a> for that game whose
+ code matches the new value. (The initial value of this key is normally
+ set on the component's half using the game code specified in the
  component's class map entry.)</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -976,16 +952,14 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>isDeckLayoutSupported</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isDeckLayoutSupported()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="GameComponent.html#isDeckLayoutSupported()">GameComponent</a></code></span></div>
-<div class="block">Returns <code>true</code> if components of this type can be placed in a
- deck. Typically, only components that don't have faces return
- <code>false</code>. (Decks themselves, for example, cannot be placed
- inside other decks.)</div>
+<div class="block">Returns <code>true</code> if components of this type can be placed in a deck.
+ Typically, only components that don't have faces return <code>false</code>.
+ (Decks themselves, for example, cannot be placed inside other decks.)</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="GameComponent.html#isDeckLayoutSupported()">isDeckLayoutSupported</a></code>&nbsp;in interface&nbsp;<code><a href="GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if and only if this component can be added to a
- deck</dd>
+<dd><code>true</code> if and only if this component can be added to a deck</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="GameComponent.html#createDefaultSheets()"><code>GameComponent.createDefaultSheets()</code></a>, 
 <a href="../deck/Deck.html#isDeckLayoutSupported(java.io.File)"><code>Deck.isDeckLayoutSupported(java.io.File)</code></a></dd>
@@ -1081,8 +1055,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  historical reasons, nothing is written by this class's default
  serialization mechanism. Subclasses therefore have to read and set the
  name, comment, and settings instances themselves. This method can be
- called from a subclass <code>writeObject</code> method to do this on
- behalf of the subclass.</div>
+ called from a subclass <code>writeObject</code> method to do this on behalf of
+ the subclass.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>out</code> - the stream to write to</dd>
@@ -1094,7 +1068,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <a id="read(java.io.ObjectInputStream)">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>read</h4>
 <pre class="methodSignature">protected final&nbsp;void&nbsp;read&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/ObjectInputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">ObjectInputStream</a>&nbsp;in)
@@ -1104,75 +1078,14 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  historical reasons, nothing is written by this class's default
  serialization mechanism. Subclasses therefore have to read and write the
  name, comment, and settings instances themselves. This method can be
- called from a subclass <code>readObject</code> method to restore
- serialized data written with <a href="#write(java.io.ObjectOutputStream)"><code>write(java.io.ObjectOutputStream)</code></a>.</div>
+ called from a subclass <code>readObject</code> method to restore serialized
+ data written with <a href="#write(java.io.ObjectOutputStream)"><code>write(java.io.ObjectOutputStream)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>in</code> - the stream to read from</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if an I/O exception occurs</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang" class="externalLink">ClassNotFoundException</a></code></dd>
-</dl>
-</li>
-</ul>
-<a id="createUpgradeConversionTrigger()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>createUpgradeConversionTrigger</h4>
-<pre class="methodSignature">public&nbsp;<a href="conversion/UpgradeConversionTrigger.html" title="class in ca.cgjennings.apps.arkham.component.conversion">UpgradeConversionTrigger</a>&nbsp;createUpgradeConversionTrigger()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="GameComponent.html#createUpgradeConversionTrigger()">GameComponent</a></code></span></div>
-<div class="block">Returns the <a href="conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion"><code>ConversionSession</code></a> created when the component type no
- longer handles the component. This method is called after a component is
- read from file. Should return <code>null</code> when no conversion is needed.</div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="GameComponent.html#createUpgradeConversionTrigger()">createUpgradeConversionTrigger</a></code>&nbsp;in interface&nbsp;<code><a href="GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>a conversion context if the upgrade requires a conversion</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion"><code>ConversionSession</code></a></dd>
-</dl>
-</li>
-</ul>
-<a id="convertFrom(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>convertFrom</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;convertFrom&#8203;(<a href="conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a>&nbsp;session)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="GameComponent.html#convertFrom(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">GameComponent</a></code></span></div>
-<div class="block">Called on a component that is being converted into another component
- type. Based on the conversion strategy, the old component may modify the
- new component directly, or modify the conversion context, or do nothing.
- This method is called before calling
- <code>#convertTo(GameComponent, ConversionContext)</code> on the target, and
- before any automatic conversion steps.</div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="GameComponent.html#convertFrom(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">convertFrom</a></code>&nbsp;in interface&nbsp;<code><a href="GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></dd>
-</dl>
-</li>
-</ul>
-<a id="convertTo(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>convertTo</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;convertTo&#8203;(<a href="conversion/ConversionSession.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ConversionSession</a>&nbsp;session)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="GameComponent.html#convertTo(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">GameComponent</a></code></span></div>
-<div class="block">Called on the replacement component when converting a component to
- another component type. Based on the conversion strategy, the new
- component may modify itself directly, or modify the conversion context,
- or do nothing. This method is called after calling
- <code>#convertFrom(GameComponent, ConversionContext)</code> on the source, but
- before any automatic conversion steps.</div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="GameComponent.html#convertTo(ca.cgjennings.apps.arkham.component.conversion.ConversionSession)">convertTo</a></code>&nbsp;in interface&nbsp;<code><a href="GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></dd>
 </dl>
 </li>
 </ul>

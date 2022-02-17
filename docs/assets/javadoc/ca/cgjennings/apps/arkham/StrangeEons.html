@@ -26,14 +26,14 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":9,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":9,"i11":9,"i12":9,"i13":9,"i14":10,"i15":10,"i16":9,"i17":10,"i18":10,"i19":10,"i20":9,"i21":10,"i22":10,"i23":9,"i24":9,"i25":9,"i26":9,"i27":9,"i28":9,"i29":9,"i30":9,"i31":9,"i32":10,"i33":10,"i34":9,"i35":10,"i36":9,"i37":9,"i38":10,"i39":10,"i40":10,"i41":10,"i42":9,"i43":9,"i44":10,"i45":10,"i46":9,"i47":10};
+var data = {"i0":10,"i1":10,"i2":9,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":9,"i12":9,"i13":9,"i14":9,"i15":10,"i16":10,"i17":9,"i18":10,"i19":10,"i20":10,"i21":9,"i22":10,"i23":10,"i24":9,"i25":9,"i26":9,"i27":9,"i28":9,"i29":9,"i30":9,"i31":9,"i32":9,"i33":10,"i34":10,"i35":9,"i36":10,"i37":9,"i38":9,"i39":10,"i40":10,"i41":10,"i42":10,"i43":9,"i44":9,"i45":10,"i46":10,"i47":9,"i48":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -245,8 +245,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
               int&nbsp;modifiers,
               boolean&nbsp;show)</code></th>
 <td class="colLast">
-<div class="block">Shows or hides an <code>ACTIVATED</code> plug-in that is currently
- loaded.</div>
+<div class="block">Shows or hides an <code>ACTIVATED</code> plug-in that is currently loaded.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -289,6 +288,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </td>
 </tr>
 <tr id="i7" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addStartupTask(java.lang.Runnable)">addStartupTask</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Runnable</a>&nbsp;task)</code></th>
+<td class="colLast">
+<div class="block">Registers a task to be performed when Strange Eons is has started up and
+ is ready to use.</div>
+</td>
+</tr>
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createEditor(java.lang.String)">createEditor</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;classMapKey)</code></th>
 <td class="colLast">
@@ -296,7 +303,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  class map.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#deleteOnStartup(java.io.File,boolean)">deleteOnStartup</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;toDelete,
                boolean&nbsp;delete)</code></th>
@@ -305,7 +312,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  the application is next started.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#fileBugReport(java.lang.String,java.lang.Throwable)">fileBugReport</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;description,
              <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Throwable</a>&nbsp;ex)</code></th>
@@ -313,38 +320,38 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Initiates a bug report that can be submitted by the user.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>static <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getActiveEditor()">getActiveEditor</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the active editor, or <code>null</code> if no editor is active.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>static <a href="component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getActiveGameComponent()">getActiveGameComponent</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the game component edited by the active editor, or
- <code>null</code> if there either is no active editor, or if the active
- editor is not a game component editor.</div>
-</td>
-</tr>
-<tr id="i12" class="altColor">
-<td class="colFirst"><code>static <a href="StrangeEons.html" title="class in ca.cgjennings.apps.arkham">StrangeEons</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getApplication()">getApplication</a></span>()</code></th>
-<td class="colLast">
-<div class="block">Returns the single instance of <code>StrangeEons</code> once the
- application has been initialized.</div>
+<div class="block">Returns the game component edited by the active editor, or <code>null</code>
+ if there either is no active editor, or if the active editor is not a
+ game component editor.</div>
 </td>
 </tr>
 <tr id="i13" class="rowColor">
+<td class="colFirst"><code>static <a href="StrangeEons.html" title="class in ca.cgjennings.apps.arkham">StrangeEons</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getApplication()">getApplication</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Returns the single instance of <code>StrangeEons</code> once the application
+ has been initialized.</div>
+</td>
+</tr>
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>static int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBuildNumber()">getBuildNumber</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the build number of this version of the application.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code><a href="CommandLineArguments.html" title="class in ca.cgjennings.apps.arkham">CommandLineArguments</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCommandLineArguments()">getCommandLineArguments</a></span>()</code></th>
 <td class="colLast">
@@ -352,22 +359,22 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  from the command line when the application was started.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="MarkupTarget.html" title="interface in ca.cgjennings.apps.arkham">MarkupTarget</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCurrentMarkupTarget()">getCurrentMarkupTarget</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the current application-wide markup target, or <code>null</code>
- if there is no currently valid target.</div>
+<div class="block">Returns the current application-wide markup target, or <code>null</code> if
+ there is no currently valid target.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getEditionNumber()">getEditionNumber</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the edition number of this version of the application.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code><a href="plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLoadedPlugin(java.lang.String)">getLoadedPlugin</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;pluginIdentifier)</code></th>
 <td class="colLast">
@@ -378,7 +385,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  this method returns <code>null</code>.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code><a href="plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLoadedPluginByName(java.lang.String)">getLoadedPluginByName</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</code></th>
 <td class="colLast">
@@ -386,64 +393,63 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  no matching plug-in, returns <code>null</code>.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code><a href="plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLoadedPlugins()">getLoadedPlugins</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns a (possibly empty) array of the currently loaded plug-ins.</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLogEntries()">getLogEntries</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the current contents of the application log.</div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code><a href="MarkupTarget.html" title="interface in ca.cgjennings.apps.arkham">MarkupTarget</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getMarkupTarget()">getMarkupTarget</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the most recently valid markup target.</div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code><a href="NamedObjectDatabase.html" title="interface in ca.cgjennings.apps.arkham">NamedObjectDatabase</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getNamedObjects()">getNamedObjects</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the global named object database for the application.</div>
 </td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code>static <a href="project/Project.html" title="class in ca.cgjennings.apps.arkham.project">Project</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOpenProject()">getOpenProject</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the current open project, or <code>null</code> if no project is
- open.</div>
+<div class="block">Returns the current open project, or <code>null</code> if no project is open.</div>
 </td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>static <a href="ExportContainer.html" title="interface in ca.cgjennings.apps.arkham">ExportContainer</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getRegisteredExportContainers()">getRegisteredExportContainers</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns an array of the registered export containers.</div>
 </td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code>static <a href="StrangeEons.ReleaseType.html" title="enum in ca.cgjennings.apps.arkham">StrangeEons.ReleaseType</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getReleaseType()">getReleaseType</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the type of this release of the application.</div>
 </td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Window.html?is-external=true" title="class or interface in java.awt" class="externalLink">Window</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSafeStartupParentWindow()">getSafeStartupParentWindow</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns a window that can be used as a parent window for dialog boxes.</div>
 </td>
 </tr>
-<tr id="i27" class="rowColor">
+<tr id="i28" class="altColor">
 <td class="colFirst"><code>static <a href="ScriptRunnerState.html" title="interface in ca.cgjennings.apps.arkham">ScriptRunnerState</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getScriptRunner()">getScriptRunner</a></span>()</code></th>
 <td class="colLast">
@@ -452,7 +458,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  behaviour.</div>
 </td>
 </tr>
-<tr id="i28" class="altColor">
+<tr id="i29" class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUrlForDocPage(java.lang.String)">getUrlForDocPage</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;baseDocFileName)</code></th>
 <td class="colLast">
@@ -460,7 +466,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  file name.</div>
 </td>
 </tr>
-<tr id="i29" class="rowColor">
+<tr id="i30" class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUserStorageFile(java.lang.String)">getUserStorageFile</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;child)</code></th>
 <td class="colLast">
@@ -468,21 +474,21 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  might use this to create a folder for storing cached data.</div>
 </td>
 </tr>
-<tr id="i30" class="altColor">
+<tr id="i31" class="rowColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getVersionString()">getVersionString</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns a string that describes this release of Strange Eons.</div>
 </td>
 </tr>
-<tr id="i31" class="rowColor">
+<tr id="i32" class="altColor">
 <td class="colFirst"><code>static <a href="StrangeEonsAppWindow.html" title="class in ca.cgjennings.apps.arkham">StrangeEonsAppWindow</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getWindow()">getWindow</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the main application window.</div>
 </td>
 </tr>
-<tr id="i32" class="altColor">
+<tr id="i33" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#insertMarkup(java.lang.String)">insertMarkup</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;markup)</code></th>
 <td class="colLast">
@@ -490,7 +496,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  target.</div>
 </td>
 </tr>
-<tr id="i33" class="rowColor">
+<tr id="i34" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#insertMarkupTags(java.lang.String,java.lang.String)">insertMarkupTags</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;prefix,
                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;suffix)</code></th>
@@ -499,14 +505,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  suffix.</div>
 </td>
 </tr>
-<tr id="i34" class="altColor">
+<tr id="i35" class="rowColor">
 <td class="colFirst"><code>static boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isNonInteractive()">isNonInteractive</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns whether the app is running in non-interactive mode.</div>
 </td>
 </tr>
-<tr id="i35" class="rowColor">
+<tr id="i36" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#loadPlugins()">loadPlugins</a></span>()</code></th>
 <td class="colLast">
@@ -514,7 +520,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <a href="plugins/Plugin.html#INJECTED"><code>INJECTED</code></a> types.</div>
 </td>
 </tr>
-<tr id="i36" class="altColor">
+<tr id="i37" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#main(java.lang.String%5B%5D)">main</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]&nbsp;args)</code></th>
 <td class="colLast">
@@ -522,21 +528,21 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  passing control of the process to the application.</div>
 </td>
 </tr>
-<tr id="i37" class="rowColor">
+<tr id="i38" class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#registerExportContainer(ca.cgjennings.apps.arkham.ExportContainer)">registerExportContainer</a></span>&#8203;(<a href="ExportContainer.html" title="interface in ca.cgjennings.apps.arkham">ExportContainer</a>&nbsp;ec)</code></th>
 <td class="colLast">
 <div class="block">Register a new export container capable of exporting file collections.</div>
 </td>
 </tr>
-<tr id="i38" class="altColor">
+<tr id="i39" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removePluginLoadingListener(ca.cgjennings.apps.arkham.StrangeEons.PluginLoadingListener)">removePluginLoadingListener</a></span>&#8203;(<a href="StrangeEons.PluginLoadingListener.html" title="interface in ca.cgjennings.apps.arkham">StrangeEons.PluginLoadingListener</a>&nbsp;listener)</code></th>
 <td class="colLast">
 <div class="block">Removes a previously added listener for plug-in load events.</div>
 </td>
 </tr>
-<tr id="i39" class="rowColor">
+<tr id="i40" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removePropertyChangeListener(java.beans.PropertyChangeListener)">removePropertyChangeListener</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/beans/PropertyChangeListener.html?is-external=true" title="class or interface in java.beans" class="externalLink">PropertyChangeListener</a>&nbsp;li)</code></th>
 <td class="colLast">
@@ -544,7 +550,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  events.</div>
 </td>
 </tr>
-<tr id="i40" class="altColor">
+<tr id="i41" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removePropertyChangeListener(java.lang.String,java.beans.PropertyChangeListener)">removePropertyChangeListener</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;property,
                             <a href="https://docs.oracle.com/javase/8/docs/api/java/beans/PropertyChangeListener.html?is-external=true" title="class or interface in java.beans" class="externalLink">PropertyChangeListener</a>&nbsp;li)</code></th>
@@ -553,7 +559,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  to change.</div>
 </td>
 </tr>
-<tr id="i41" class="rowColor">
+<tr id="i42" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#requestNewMarkupTarget(java.lang.Object)">requestNewMarkupTarget</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;potentialTarget)</code></th>
 <td class="colLast">
@@ -561,7 +567,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <a href="MarkupTarget.html" title="interface in ca.cgjennings.apps.arkham"><code>MarkupTarget</code></a> be set to a specific object.</div>
 </td>
 </tr>
-<tr id="i42" class="altColor">
+<tr id="i43" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setWaitCursor(boolean)">setWaitCursor</a></span>&#8203;(boolean&nbsp;appIsBusy)</code></th>
 <td class="colLast">
@@ -569,7 +575,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  main application window.</div>
 </td>
 </tr>
-<tr id="i43" class="rowColor">
+<tr id="i44" class="altColor">
 <td class="colFirst"><code>static boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#testJavaVersion(int...)">testJavaVersion</a></span>&#8203;(int...&nbsp;versionTokens)</code></th>
 <td class="colLast">
@@ -577,7 +583,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  greater than the version specified.</div>
 </td>
 </tr>
-<tr id="i44" class="altColor">
+<tr id="i45" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toString()">toString</a></span>()</code></th>
 <td class="colLast">
@@ -586,7 +592,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  release, build &lt;i&gt;number&lt;/i&gt;]</code>.</div>
 </td>
 </tr>
-<tr id="i45" class="rowColor">
+<tr id="i46" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#unloadPlugins()">unloadPlugins</a></span>()</code></th>
 <td class="colLast">
@@ -594,19 +600,19 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <a href="plugins/Plugin.html#INJECTED"><code>INJECTED</code></a> plug-ins to be unloaded.</div>
 </td>
 </tr>
-<tr id="i46" class="altColor">
+<tr id="i47" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#unregisterExportContainer(ca.cgjennings.apps.arkham.ExportContainer)">unregisterExportContainer</a></span>&#8203;(<a href="ExportContainer.html" title="interface in ca.cgjennings.apps.arkham">ExportContainer</a>&nbsp;ec)</code></th>
 <td class="colLast">
 <div class="block">Unregister a registered export container type.</div>
 </td>
 </tr>
-<tr id="i47" class="rowColor">
+<tr id="i48" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#willDeleteOnStartup(java.io.File)">willDeleteOnStartup</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;toCheck)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if a file has been marked for deletion on the
- next application start by passing it to
+<div class="block">Returns <code>true</code> if a file has been marked for deletion on the next
+ application start by passing it to
  <a href="#deleteOnStartup(java.io.File,boolean)"><code>deleteOnStartup(java.io.File, boolean)</code></a>.</div>
 </td>
 </tr>
@@ -652,8 +658,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>RECOMMENDED_MEMORY_IN_MB</h4>
 <pre>public static final&nbsp;int RECOMMENDED_MEMORY_IN_MB</pre>
 <div class="block">The recommended <b>minimum</b> value for the maximum memory setting
- (<code>-Xmx</code>) for the virtual machine, in megabytes. Higher values
- are better if your system can support it.</div>
+ (<code>-Xmx</code>) for the virtual machine, in megabytes. Higher values are
+ better if your system can support it.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../constant-values.html#ca.cgjennings.apps.arkham.StrangeEons.RECOMMENDED_MEMORY_IN_MB">Constant Field Values</a></dd>
@@ -750,8 +756,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Returns the type of this release of the application.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the kind of release, such as <code>ALPHA</code> or
- <code>BETA</code>.</dd>
+<dd>the kind of release, such as <code>ALPHA</code> or <code>BETA</code>.</dd>
 </dl>
 </li>
 </ul>
@@ -785,11 +790,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getApplication</h4>
 <pre class="methodSignature">public static&nbsp;<a href="StrangeEons.html" title="class in ca.cgjennings.apps.arkham">StrangeEons</a>&nbsp;getApplication()</pre>
-<div class="block">Returns the single instance of <code>StrangeEons</code> once the
- application has been initialized. (The application becomes initialized
- after libraries and themes have been loaded, but just before extension
- plug-ins are loaded.) If the application is not yet initialized, this
- method returns <code>null</code>.</div>
+<div class="block">Returns the single instance of <code>StrangeEons</code> once the application
+ has been initialized. (The application becomes initialized after
+ libraries and themes have been loaded, but just before extension plug-ins
+ are loaded.) If the application is not yet initialized, this method
+ returns <code>null</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the application instance</dd>
@@ -804,9 +809,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getWindow</h4>
 <pre class="methodSignature">public static&nbsp;<a href="StrangeEonsAppWindow.html" title="class in ca.cgjennings.apps.arkham">StrangeEonsAppWindow</a>&nbsp;getWindow()</pre>
 <div class="block">Returns the main application window. If called while the application is
- starting, the window might not yet exist, in which case <code>null</code>
- is returned. (The window is guaranteed to exists before extension
- plug-ins begin to load.)</div>
+ starting, the window might not yet exist, in which case <code>null</code> is
+ returned. (The window is guaranteed to exists before extension plug-ins
+ begin to load.)</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the main application window</dd>
@@ -820,10 +825,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getActiveEditor</h4>
 <pre class="methodSignature">public static&nbsp;<a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor</a>&nbsp;getActiveEditor()</pre>
-<div class="block">Returns the active editor, or <code>null</code> if no editor is active.
- This is a convenience method that returns <code>null</code> if the
- application window has not been created yet, or else forwards the call to
- the application window.</div>
+<div class="block">Returns the active editor, or <code>null</code> if no editor is active. This
+ is a convenience method that returns <code>null</code> if the application
+ window has not been created yet, or else forwards the call to the
+ application window.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the active editor, or <code>null</code></dd>
@@ -837,9 +842,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getActiveGameComponent</h4>
 <pre class="methodSignature">public static&nbsp;<a href="component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>&nbsp;getActiveGameComponent()</pre>
-<div class="block">Returns the game component edited by the active editor, or
- <code>null</code> if there either is no active editor, or if the active
- editor is not a game component editor.</div>
+<div class="block">Returns the game component edited by the active editor, or <code>null</code>
+ if there either is no active editor, or if the active editor is not a
+ game component editor.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the actively edited component, or <code>null</code></dd>
@@ -872,8 +877,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>classMapKey</code> - a key for an editor specified in a
  <a href="../../../../gamedata/ClassMap.html#add(java.lang.String)">loaded class map file</a></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>an editor for the given key, or <code>null</code> if no new
- editor is created</dd>
+<dd>an editor for the given key, or <code>null</code> if no new editor is
+ created</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if the class map key is not a valid key
  from an entry that was added this session</dd>
@@ -914,11 +919,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getOpenProject</h4>
 <pre class="methodSignature">public static&nbsp;<a href="project/Project.html" title="class in ca.cgjennings.apps.arkham.project">Project</a>&nbsp;getOpenProject()</pre>
-<div class="block">Returns the current open project, or <code>null</code> if no project is
- open. (At most one project can be open at any given time.) This is a
- convenience method that returns <code>null</code> if the application
- window has not been created yet, or else forwards the call to the
- application window.</div>
+<div class="block">Returns the current open project, or <code>null</code> if no project is open.
+ (At most one project can be open at any given time.) This is a
+ convenience method that returns <code>null</code> if the application window
+ has not been created yet, or else forwards the call to the application
+ window.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the current open project, or <code>null</code></dd>
@@ -935,15 +940,17 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>isNonInteractive</h4>
 <pre class="methodSignature">public static&nbsp;boolean&nbsp;isNonInteractive()</pre>
 <div class="block">Returns whether the app is running in non-interactive mode. When running
- in non-interactive mode, windows are not shown automatically
- (including the splash screen). Non-interactive mode is normally used
- to perform some automated task, such as running a script.
+ in non-interactive mode, windows are not shown automatically (including
+ the splash screen). Non-interactive mode is normally used to perform some
+ automated task, such as running a script.
 
- <p>Making the main app window visible will immediately end non-interactive
+ <p>
+ Making the main app window visible will immediately end non-interactive
  mode if enabled.
 
- <p>Note that performing an action that assumes or relies on the app
- window may throw an exception when running in non-interactive mode.</div>
+ <p>
+ Note that performing an action that assumes or relies on the app window
+ may throw an exception when running in non-interactive mode.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>true if running in non-interactive mode</dd>
@@ -966,8 +973,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  automatically showing the app window.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the run script mode helper responsible for running the
-     command line script file, or null</dd>
+<dd>the run script mode helper responsible for running the command
+ line script file, or null</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="CommandLineArguments.html#run"><code>CommandLineArguments.run</code></a></dd>
 </dl>
@@ -988,7 +995,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  currently <a href="plugins/InstalledPlugin.html#setEnabled(boolean)">enabled</a> will
  be
  <a href="plugins/Plugin.html#initializePlugin(ca.cgjennings.apps.arkham.plugins.PluginContext)">started</a>.
- This method has no effect on null null null null null null     <a href="plugins/BundleInstaller.html#loadLibraryBundles()">libraries</a>,
+ This method has no effect on null null null null null null null null null
+ null null     <a href="plugins/BundleInstaller.html#loadLibraryBundles()">libraries</a>,
  <a href="plugins/BundleInstaller.html#loadThemeBundles()">themes</a>, or
  <a href="plugins/BundleInstaller.html#loadExtensionBundles(ca.cgjennings.algo.ProgressListener)">extension plug-ins</a>.</div>
 <dl>
@@ -1068,11 +1076,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>pluginIdentifier</code> - </dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the <code>Plugin</code> instance for the class, or
- <code>null</code></dd>
+<dd>the <code>Plugin</code> instance for the class, or <code>null</code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>pluginClass</code> is
- <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>pluginClass</code> is <code>null</code></dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="plugins/BundleInstaller.html#getInstalledPlugins()"><code>BundleInstaller.getInstalledPlugins()</code></a>, 
 <a href="plugins/BundleInstaller.html#getBundleFileForUUID(java.util.UUID)"><code>BundleInstaller.getBundleFileForUUID(java.util.UUID)</code></a>, 
@@ -1088,10 +1094,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>getLoadedPluginByName</h4>
 <pre class="methodSignature">public&nbsp;<a href="plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a>&nbsp;getLoadedPluginByName&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</pre>
 <div class="block">Finds a loaded <a href="plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>Plugin</code></a> with the specified name.If there is
- no matching plug-in, returns <code>null</code>. Plug-ins are not required
- to have unique names: if more than one plug-in matches, this method
- returns one of them at random. Moreover, some plug-ins are localized and
- will have a different name depending on the current
+ no matching plug-in, returns <code>null</code>. Plug-ins are not required to
+ have unique names: if more than one plug-in matches, this method returns
+ one of them at random. Moreover, some plug-ins are localized and will
+ have a different name depending on the current
  <a href="../../../../resources/Language.html#getInterface()">interface language</a>. To guarantee a
  specific plug-in class, either use
  <a href="#getLoadedPlugin(java.lang.String)"><code>getLoadedPlugin(java.lang.String)</code></a> or find the plug-in by its
@@ -1100,11 +1106,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - the plug-in name presented to the user</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the <code>Plugin</code> instance for the class, or
- <code>null</code></dd>
+<dd>the <code>Plugin</code> instance for the class, or <code>null</code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>pluginClass</code> is
- <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>pluginClass</code> is <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -1135,29 +1139,28 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public&nbsp;void&nbsp;activatePlugin&#8203;(<a href="plugins/Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a>&nbsp;plugin,
                            int&nbsp;modifiers,
                            boolean&nbsp;show)</pre>
-<div class="block">Shows or hides an <code>ACTIVATED</code> plug-in that is currently
- loaded. A <a href="plugins/PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>PluginContext</code></a> will be created for the plug-in and used
- to activate it as if the user had selected it from the <b>Toolbox</b>
+<div class="block">Shows or hides an <code>ACTIVATED</code> plug-in that is currently loaded. A
+ <a href="plugins/PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>PluginContext</code></a> will be created for the plug-in and used to
+ activate it as if the user had selected it from the <b>Toolbox</b>
  menu. The value of <code>modifiers</code> is a logical or of modifier key
  codes (see
  <a href="plugins/PluginContext.html#getModifiers()"><code>PluginContext.getModifiers()</code></a>)
  that will be marked as pressed. To activate the plug-in without
  indicating any special modifier keys, pass 0. If <code>show</code> is
- <code>true</code>, then the plug-in will be asked to show itself,
- otherwise to hide itself. The exact behaviours implied by the terms
- "show" and "hide" depend on the plug-in, but generally a show request
- executes the plug-in behaviour or makes the plug-in's dialog visible,
- while a hide request stops the behaviour or makes the dialog invisible.
- Many plug-ins are implemented as modal dialogs and therefore do not have
- a hide behaviour, as they stop the main application until the plug-in
- window is closed.
+ <code>true</code>, then the plug-in will be asked to show itself, otherwise to
+ hide itself. The exact behaviours implied by the terms "show" and "hide"
+ depend on the plug-in, but generally a show request executes the plug-in
+ behaviour or makes the plug-in's dialog visible, while a hide request
+ stops the behaviour or makes the dialog invisible. Many plug-ins are
+ implemented as modal dialogs and therefore do not have a hide behaviour,
+ as they stop the main application until the plug-in window is closed.
 
  <p>
  <b>Note:</b> The general contract for plug-in behaviour states that a
- plug-in will only be shown if its <code>isPluginShowing</code> method
- returns <code>false</code>, and vice-versa. Although most plug-ins do not
- rely on this guarantee, you should not violate it unless the plug-in's
- documentation explicitly permits it.</div>
+ plug-in will only be shown if its <code>isPluginShowing</code> method returns
+ <code>false</code>, and vice-versa. Although most plug-ins do not rely on this
+ guarantee, you should not violate it unless the plug-in's documentation
+ explicitly permits it.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>plugin</code> - the plug-in to be activated</dd>
@@ -1197,12 +1200,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Returns a file that can be used to store user data.For example, a plug-in
  might use this to create a folder for storing cached data. All of the
  files returned by this method will be located in a special
- system-dependent storage folder. If <code>child</code> is
- <code>null</code>, then the storage folder itself will be returned.
- Otherwise, <code>child</code> is taken to be a relative path, and the
- returned file will combine the storage folder with this relative
- location. For example, on a UNIX system, calling this method with child
- "test.txt" might return <code>~/.StrangeEons3/test.txt</code>.
+ system-dependent storage folder. If <code>child</code> is <code>null</code>, then
+ the storage folder itself will be returned. Otherwise, <code>child</code> is
+ taken to be a relative path, and the returned file will combine the
+ storage folder with this relative location. For example, on a UNIX
+ system, calling this method with child "test.txt" might return
+ <code>~/.StrangeEons3/test.txt</code>.
 
  <p>
  To locate a subfolder in user storage, specify a relative path using '/'
@@ -1254,8 +1257,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>willDeleteOnStartup</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;willDeleteOnStartup&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;toCheck)</pre>
-<div class="block">Returns <code>true</code> if a file has been marked for deletion on the
- next application start by passing it to
+<div class="block">Returns <code>true</code> if a file has been marked for deletion on the next
+ application start by passing it to
  <a href="#deleteOnStartup(java.io.File,boolean)"><code>deleteOnStartup(java.io.File, boolean)</code></a>. Note that it is not
  guaranteed that the file will actually be deleted, only that it is marked
  and that an attempt to delete it will be made.</div>
@@ -1285,17 +1288,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <p>
  Exit tasks are performed calling the <code>run()</code> method of the
  <code>task</code> object. A description of each task will be logged at
- <code>Level.INFO</code> by calling the task's <code>toString()</code>
- method just before it runs. If a task throws an exception, it will be
- logged but it will not prevent other exit tasks from running.
+ <code>Level.INFO</code> by calling the task's <code>toString()</code> method just
+ before it runs. If a task throws an exception, it will be logged but it
+ will not prevent other exit tasks from running.
 
  <p>
  Tasks are not guaranteed to run in a particular order; they may run from
  any thread and may even run concurrently. In general, do not expect to be
  able to open a window or perform other actions on the event dispatch
- thread; to do so safely you would need to use <code>invokeLater</code>
- and the application will probably exit before such code will get a chance
- to run.
+ thread; to do so safely you would need to use <code>invokeLater</code> and the
+ application will probably exit before such code will get a chance to run.
 
  <p>
  Tasks are not guaranteed to run if the application is terminated
@@ -1307,6 +1309,33 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </dl>
 </li>
 </ul>
+<a id="addStartupTask(java.lang.Runnable)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addStartupTask</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;addStartupTask&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Runnable</a>&nbsp;task)</pre>
+<div class="block">Registers a task to be performed when Strange Eons is has started up and
+ is ready to use. If called after Strange Eons has already finished
+ starting, the task will run immediately.
+
+ <p>
+ Startup tasks are performed calling the <code>run()</code> method of the
+ <code>task</code> object. A description of each task will be logged at
+ <code>Level.INFO</code> by calling the task's <code>toString()</code> method just
+ before it runs. If a task throws an exception, it will be logged but it
+ will not prevent other tasks from running.
+
+ <p>
+ Unlike exit tasks, startup tasks run on the event dispatch thread in the
+ order that they were registered.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>task</code> - code to be called once the app has started</dd>
+</dl>
+</li>
+</ul>
 <a id="getMarkupTarget()">
 <!--   -->
 </a>
@@ -1314,15 +1343,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getMarkupTarget</h4>
 <pre class="methodSignature">public&nbsp;<a href="MarkupTarget.html" title="interface in ca.cgjennings.apps.arkham">MarkupTarget</a>&nbsp;getMarkupTarget()</pre>
-<div class="block">Returns the most recently valid markup target. Returns <code>null</code>
- if there has either never been a valid target, or if the most recently
- valid target is no currently valid (for example, if it has been disabled
- since it became the current target). When responding to user action, this
- is normally the markup target that you want since intervening user action
- is likely to change the current target. For example, if the user selects
- a menu item to activate your code, the act of opening the menu would
- clear the current target, causing <a href="#getCurrentMarkupTarget()"><code>getCurrentMarkupTarget()</code></a> to
- return <code>null</code>.</div>
+<div class="block">Returns the most recently valid markup target. Returns <code>null</code> if
+ there has either never been a valid target, or if the most recently valid
+ target is no currently valid (for example, if it has been disabled since
+ it became the current target). When responding to user action, this is
+ normally the markup target that you want since intervening user action is
+ likely to change the current target. For example, if the user selects a
+ menu item to activate your code, the act of opening the menu would clear
+ the current target, causing <a href="#getCurrentMarkupTarget()"><code>getCurrentMarkupTarget()</code></a> to return
+ <code>null</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the most recent valid markup target, or <code>null</code></dd>
@@ -1338,8 +1367,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getCurrentMarkupTarget</h4>
 <pre class="methodSignature">public&nbsp;<a href="MarkupTarget.html" title="interface in ca.cgjennings.apps.arkham">MarkupTarget</a>&nbsp;getCurrentMarkupTarget()</pre>
-<div class="block">Returns the current application-wide markup target, or <code>null</code>
- if there is no currently valid target.</div>
+<div class="block">Returns the current application-wide markup target, or <code>null</code> if
+ there is no currently valid target.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the current markup target, or <code>null</code></dd>
@@ -1358,17 +1387,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public&nbsp;boolean&nbsp;requestNewMarkupTarget&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;potentialTarget)</pre>
 <div class="block">Explicitly requests that the current application-wide
  <a href="MarkupTarget.html" title="interface in ca.cgjennings.apps.arkham"><code>MarkupTarget</code></a> be set to a specific object. If the request
- succeeds, <code>true</code> is returned. In order to succeed, the new
- target must either be <code>null</code> (to clear the current target) or
- a (strictly) valid markup target. If the current target changes, a
- property change event will be fired for
- <code>MARKUP_TARGET_PROPERTY</code>.</div>
+ succeeds, <code>true</code> is returned. In order to succeed, the new target
+ must either be <code>null</code> (to clear the current target) or a (strictly)
+ valid markup target. If the current target changes, a property change
+ event will be fired for <code>MARKUP_TARGET_PROPERTY</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>potentialTarget</code> - the object which may become the new target</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the requested object is the markup target
- when this method returns</dd>
+<dd><code>true</code> if the requested object is the markup target when
+ this method returns</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="MarkupTargetFactory.html#isValidTarget(java.lang.Object,boolean)"><code>MarkupTargetFactory.isValidTarget(java.lang.Object, boolean)</code></a></dd>
 </dl>
@@ -1430,8 +1458,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  scripts later on. For example, a plug-in that adds new game component
  types could register a named object in its extension plug-in that defines
  a library of functions used by the individual DIY scripts. This can be
- more efficient than calling <code>useLibrary</code> in every component
- script because the library code only needs to be compiled once.
+ more efficient than calling <code>useLibrary</code> in every component script
+ because the library code only needs to be compiled once.
  <li> Sharing information between scripts, or between different runs of
  the same script. For example, one script could store information about a
  game that is used by other scripts later on. The scripts that use this
@@ -1530,8 +1558,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  This method can be called from outside of the event dispatch thread.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>appIsBusy</code> - <code>true</code> to set the wait cursor,
- <code>false</code> to unset it</dd>
+<dd><code>appIsBusy</code> - <code>true</code> to set the wait cursor, <code>false</code> to
+ unset it</dd>
 </dl>
 </li>
 </ul>
@@ -1561,8 +1589,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  During startup, this method will return the splash window. Once the
  application window is visible, that will be returned instead. In the
  event that this method is called before the splash window appears, this
- method will return <code>null</code>; however it is not normally possible
- for plug-in code to execute before the splash window is available.
+ method will return <code>null</code>; however it is not normally possible for
+ plug-in code to execute before the splash window is available.
 
  <p>
  Note that plug-ins should not routinely open dialog boxes during

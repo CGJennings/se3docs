@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -500,8 +500,8 @@ extends <a href="TaskGroup.html" title="class in ca.cgjennings.apps.arkham.proje
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net" class="externalLink">URL</a>&nbsp;getURL()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="Member.html#getURL()">Member</a></code></span></div>
 <div class="block">Returns a <tt>project:</tt> URL that can be used to access this member
- whenever this project is the main open project. Returns <code>null</code>
- if the file has been deleted.</div>
+ whenever this project is the main open project. Returns <code>null</code> if
+ the file has been deleted.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Member.html#getURL()">getURL</a></code>&nbsp;in class&nbsp;<code><a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a></code></dd>
@@ -518,9 +518,8 @@ extends <a href="TaskGroup.html" title="class in ca.cgjennings.apps.arkham.proje
 <h4>findMember</h4>
 <pre class="methodSignature">public&nbsp;<a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;findMember&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net" class="externalLink">URL</a>&nbsp;url)</pre>
 <div class="block">Returns the <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project"><code>Member</code></a> instance pointed to by a URL. The URL protocol
- must either be <code>file:</code> or <code>project:</code>. If the file
- specified by the URL is not part of the project, <code>null</code> is
- returned.</div>
+ must either be <code>file:</code> or <code>project:</code>. If the file specified
+ by the URL is not part of the project, <code>null</code> is returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>url</code> - the URL to locate a project member for</dd>
@@ -539,8 +538,7 @@ extends <a href="TaskGroup.html" title="class in ca.cgjennings.apps.arkham.proje
 <h4>findMember</h4>
 <pre class="methodSignature">public&nbsp;<a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;findMember&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;file)</pre>
 <div class="block">Returns the <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project"><code>Member</code></a> instance that represents a file in a project.
- If the file is not part of the project, then <code>null</code> is
- returned.</div>
+ If the file is not part of the project, then <code>null</code> is returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>file</code> - the file to locate in the project's member tree</dd>
@@ -599,9 +597,9 @@ extends <a href="TaskGroup.html" title="class in ca.cgjennings.apps.arkham.proje
                                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;projectName)
                           throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <div class="block">Creates a new project folder with the specified project name. The project
- will be created as a subfolder of <code>projectFolder</code>. The
- returned file can be used to create a <code>Project</code> instance for
- the new project using the <a href="#%3Cinit%3E(java.io.File)"><code>Project(java.io.File)</code></a> constructor.</div>
+ will be created as a subfolder of <code>projectFolder</code>. The returned
+ file can be used to create a <code>Project</code> instance for the new project
+ using the <a href="#%3Cinit%3E(java.io.File)"><code>Project(java.io.File)</code></a> constructor.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>projectFolder</code> - the folder to create the project in</dd>
@@ -653,10 +651,10 @@ extends <a href="TaskGroup.html" title="class in ca.cgjennings.apps.arkham.proje
                throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <div class="block">Writes the contents of this project to a package project ("crate") file.
  A packaged project is essentially a ZIP archive that uses the file
- extension <code>.seproject</code>. When a packaged project is opened in
- the application, it will unpack the file to a temporary folder and open
- that folder as a project. When the project is closed, it will then copy
- the modified package back to the original package file. If a project was
+ extension <code>.seproject</code>. When a packaged project is opened in the
+ application, it will unpack the file to a temporary folder and open that
+ folder as a project. When the project is closed, it will then copy the
+ modified package back to the original package file. If a project was
  opened from a package file, then <a href="#getPackageFile()"><code>getPackageFile()</code></a> will return a
  non-<code>null</code> value.</div>
 <dl>

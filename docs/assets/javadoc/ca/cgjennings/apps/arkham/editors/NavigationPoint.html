@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -380,8 +380,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#equals(java.lang.Object)">equals</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;rhs)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if two navigation points are considered equal,
- based on their string description.</div>
+<div class="block">Returns <code>true</code> if two navigation points are considered equal, based
+ on their string description.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -774,8 +774,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
  offset from the start of the file</dd>
 <dd><code>scope</code> - a value that indicates a nesting depth relative to other
  navigation points in a collection of navigation points; default is 0</dd>
-<dd><code>icon</code> - an icon for the navigation point type (may be
- <code>null</code>)</dd>
+<dd><code>icon</code> - an icon for the navigation point type (may be <code>null</code>)</dd>
 </dl>
 </li>
 </ul>
@@ -885,9 +884,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <li class="blockList">
 <h4>equals</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;equals&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;rhs)</pre>
-<div class="block">Returns <code>true</code> if two navigation points are considered equal,
- based on their string description. Line numbers are NOT be considered
- when determining equality. This is intentional.</div>
+<div class="block">Returns <code>true</code> if two navigation points are considered equal, based
+ on their string description. Line numbers are NOT be considered when
+ determining equality. This is intentional.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></code></dd>

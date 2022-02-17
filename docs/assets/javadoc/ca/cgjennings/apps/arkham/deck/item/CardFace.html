@@ -26,14 +26,14 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -145,12 +145,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="DependentPageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">DependentPageItem</a></code>, <code><a href="EditablePageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">EditablePageItem</a></code>, <code><a href="FlippablePageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">FlippablePageItem</a></code>, <code><a href="PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Cloneable</a></code></dd>
+<dd><code><a href="BleedMarginStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">BleedMarginStyle</a></code>, <code><a href="DependentPageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">DependentPageItem</a></code>, <code><a href="EditablePageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">EditablePageItem</a></code>, <code><a href="FlippablePageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">FlippablePageItem</a></code>, <code><a href="PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a></code>, <code><a href="Style.html" title="interface in ca.cgjennings.apps.arkham.deck.item">Style</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Cloneable</a></code></dd>
 </dl>
 <hr>
 <pre>public class <span class="typeNameLabel">CardFace</span>
 extends <a href="AbstractRenderedItem.html" title="class in ca.cgjennings.apps.arkham.deck.item">AbstractRenderedItem</a>
-implements <a href="DependentPageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">DependentPageItem</a>, <a href="EditablePageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">EditablePageItem</a></pre>
+implements <a href="DependentPageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">DependentPageItem</a>, <a href="EditablePageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">EditablePageItem</a>, <a href="BleedMarginStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">BleedMarginStyle</a></pre>
 <div class="block">A page item representing one face of a game component.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -305,6 +305,22 @@ implements <a href="DependentPageItem.html" title="interface in ca.cgjennings.ap
 </td>
 </tr>
 <tr id="i3" class="rowColor">
+<td class="colFirst"><code>double</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBleedMarginWidth()">getBleedMarginWidth</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Returns the bleed margin width to use when the relevant finish option is
+ selected.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="../../sheet/FinishStyle.html" title="enum in ca.cgjennings.apps.arkham.sheet">FinishStyle</a></code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFinishStyle()">getFinishStyle</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Returns the finish style set on this item, or null if the deck default
+ style should be used.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>double[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFoldMarks()">getFoldMarks</a></span>()</code></th>
 <td class="colLast">
@@ -312,73 +328,64 @@ implements <a href="DependentPageItem.html" title="interface in ca.cgjennings.ap
  marks for this item.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getName()">getName</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Return the user-friendly short name of this item.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPath()">getPath</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the path to the external data source.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sheet</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSheet()">getSheet</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i9" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getSheetIndex()">getSheetIndex</a></span>()</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code>protected double</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUprightHeight()">getUprightHeight</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Return the height of this item in its standard, upright orientation.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>protected double</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUprightWidth()">getUprightWidth</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Return the width of this item in its standard, upright orientation.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
-<td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isAutoBleedMarginEnabled()">isAutoBleedMarginEnabled</a></span>()</code></th>
-<td class="colLast">
-<div class="block">Returns <code>true</code> if the automatic bleed margin feature is
- enabled.</div>
-</td>
-</tr>
-<tr id="i11" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isBleedMarginMarked()">isBleedMarginMarked</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this item should have crop marks added to
- it.</div>
+<div class="block">Returns <code>true</code> if this item should have crop marks added to it.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#readImpl(java.io.ObjectInputStream)">readImpl</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/ObjectInputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">ObjectInputStream</a>&nbsp;in)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#refresh()">refresh</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Clears cached representation of the card face.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#refresh(ca.cgjennings.apps.arkham.component.GameComponent)">refresh</a></span>&#8203;(<a href="../../component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>&nbsp;component)</code></th>
 <td class="colLast">
@@ -386,7 +393,7 @@ implements <a href="DependentPageItem.html" title="interface in ca.cgjennings.ap
  the same deck.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget,double)">renderImage</a></span>&#8203;(<a href="../../sheet/RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target,
            double&nbsp;resolution)</code></th>
@@ -394,31 +401,39 @@ implements <a href="DependentPageItem.html" title="interface in ca.cgjennings.ap
 <div class="block">Render an image based on the target and resolution hints.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#scaleMipMapUpAtHighZoom(ca.cgjennings.apps.arkham.sheet.RenderTarget,double)">scaleMipMapUpAtHighZoom</a></span>&#8203;(<a href="../../sheet/RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target,
                        double&nbsp;resolution)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the highest resolution MIP map image should
- be scaled up at high zoom levels.</div>
-</td>
-</tr>
-<tr id="i17" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setAutoBleedMarginEnabled(boolean)">setAutoBleedMarginEnabled</a></span>&#8203;(boolean&nbsp;enable)</code></th>
-<td class="colLast">
-<div class="block">Sets whether the face will generate an automatic nine point bleed margin,
- if supported by the card face.</div>
+<div class="block">Returns <code>true</code> if the highest resolution MIP map image should be
+ scaled up at high zoom levels.</div>
 </td>
 </tr>
 <tr id="i18" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setBleedMarginWidth(double)">setBleedMarginWidth</a></span>&#8203;(double&nbsp;widthInPoints)</code></th>
+<td class="colLast">
+<div class="block">Sets the bleed margin width to use when the relevant finish option is
+ selected.</div>
+</td>
+</tr>
+<tr id="i19" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setFinishStyle(ca.cgjennings.apps.arkham.sheet.FinishStyle)">setFinishStyle</a></span>&#8203;(<a href="../../sheet/FinishStyle.html" title="enum in ca.cgjennings.apps.arkham.sheet">FinishStyle</a>&nbsp;style)</code></th>
+<td class="colLast">
+<div class="block">Sets the edge finish style to use for this item, or null if the deck
+ default option should be used.</div>
+</td>
+</tr>
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setPath(java.lang.String)">setPath</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;path)</code></th>
 <td class="colLast">
 <div class="block">Set the path the external data source.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#writeImpl(java.io.ObjectOutputStream)">writeImpl</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/ObjectOutputStream.html?is-external=true" title="class or interface in java.io" class="externalLink">ObjectOutputStream</a>&nbsp;out)</code></th>
 <td class="colLast">&nbsp;</td>
@@ -530,8 +545,8 @@ implements <a href="DependentPageItem.html" title="interface in ca.cgjennings.ap
 <pre>public&nbsp;CardFace&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
                 <a href="../../sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet">Sheet</a>&nbsp;face,
                 int&nbsp;index)</pre>
-<div class="block">Create a <code>CardFace</code> that can be used on a temporary deck.
- Temporary decks cannot be saved but can be printed.</div>
+<div class="block">Create a <code>CardFace</code> that can be used on a temporary deck. Temporary
+ decks cannot be saved but can be printed.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - the name to use for the face</dd>
@@ -550,38 +565,75 @@ implements <a href="DependentPageItem.html" title="interface in ca.cgjennings.ap
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="setAutoBleedMarginEnabled(boolean)">
+<a id="getFinishStyle()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>setAutoBleedMarginEnabled</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;setAutoBleedMarginEnabled&#8203;(boolean&nbsp;enable)</pre>
-<div class="block">Sets whether the face will generate an automatic nine point bleed margin,
- if supported by the card face.</div>
+<h4>getFinishStyle</h4>
+<pre class="methodSignature">public&nbsp;<a href="../../sheet/FinishStyle.html" title="enum in ca.cgjennings.apps.arkham.sheet">FinishStyle</a>&nbsp;getFinishStyle()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="BleedMarginStyle.html#getFinishStyle()">BleedMarginStyle</a></code></span></div>
+<div class="block">Returns the finish style set on this item, or null if the deck default
+ style should be used.</div>
 <dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>enable</code> - whether automatic bleed margin should be enabled, where
- supported</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="#isAutoBleedMarginEnabled()"><code>isAutoBleedMarginEnabled()</code></a></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="BleedMarginStyle.html#getFinishStyle()">getFinishStyle</a></code>&nbsp;in interface&nbsp;<code><a href="BleedMarginStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">BleedMarginStyle</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the finish style to use</dd>
 </dl>
 </li>
 </ul>
-<a id="isAutoBleedMarginEnabled()">
+<a id="setFinishStyle(ca.cgjennings.apps.arkham.sheet.FinishStyle)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>isAutoBleedMarginEnabled</h4>
-<pre class="methodSignature">public&nbsp;boolean&nbsp;isAutoBleedMarginEnabled()</pre>
-<div class="block">Returns <code>true</code> if the automatic bleed margin feature is
- enabled.</div>
+<h4>setFinishStyle</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setFinishStyle&#8203;(<a href="../../sheet/FinishStyle.html" title="enum in ca.cgjennings.apps.arkham.sheet">FinishStyle</a>&nbsp;style)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="BleedMarginStyle.html#setFinishStyle(ca.cgjennings.apps.arkham.sheet.FinishStyle)">BleedMarginStyle</a></code></span></div>
+<div class="block">Sets the edge finish style to use for this item, or null if the deck
+ default option should be used.</div>
 <dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="BleedMarginStyle.html#setFinishStyle(ca.cgjennings.apps.arkham.sheet.FinishStyle)">setFinishStyle</a></code>&nbsp;in interface&nbsp;<code><a href="BleedMarginStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">BleedMarginStyle</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>style</code> - the style to use</dd>
+</dl>
+</li>
+</ul>
+<a id="getBleedMarginWidth()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBleedMarginWidth</h4>
+<pre class="methodSignature">public&nbsp;double&nbsp;getBleedMarginWidth()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="BleedMarginStyle.html#getBleedMarginWidth()">BleedMarginStyle</a></code></span></div>
+<div class="block">Returns the bleed margin width to use when the relevant finish option is
+ selected.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="BleedMarginStyle.html#getBleedMarginWidth()">getBleedMarginWidth</a></code>&nbsp;in interface&nbsp;<code><a href="BleedMarginStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">BleedMarginStyle</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if an automatic bleed margin is enabled</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="#setAutoBleedMarginEnabled(boolean)"><code>setAutoBleedMarginEnabled(boolean)</code></a></dd>
+<dd>the positive width in points</dd>
+</dl>
+</li>
+</ul>
+<a id="setBleedMarginWidth(double)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setBleedMarginWidth</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setBleedMarginWidth&#8203;(double&nbsp;widthInPoints)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="BleedMarginStyle.html#setBleedMarginWidth(double)">BleedMarginStyle</a></code></span></div>
+<div class="block">Sets the bleed margin width to use when the relevant finish option is
+ selected.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="BleedMarginStyle.html#setBleedMarginWidth(double)">setBleedMarginWidth</a></code>&nbsp;in interface&nbsp;<code><a href="BleedMarginStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">BleedMarginStyle</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>widthInPoints</code> - the positive bleed margin width</dd>
 </dl>
 </li>
 </ul>
@@ -611,8 +663,7 @@ implements <a href="DependentPageItem.html" title="interface in ca.cgjennings.ap
  y2) and that <code>Math.sqrt( x2*x2 + y2*y2 ) = 1</code>.
 
  <p>
- Returns <code>null</code> if there are no extra fold marks for this
- sheet.</div>
+ Returns <code>null</code> if there are no extra fold marks for this sheet.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="PageItem.html#getFoldMarks()">getFoldMarks</a></code>&nbsp;in interface&nbsp;<code><a href="PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a></code></dd>
@@ -632,9 +683,9 @@ implements <a href="DependentPageItem.html" title="interface in ca.cgjennings.ap
 <h4>isBleedMarginMarked</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isBleedMarginMarked()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="PageItem.html#isBleedMarginMarked()">PageItem</a></code></span></div>
-<div class="block">Returns <code>true</code> if this item should have crop marks added to
- it. The crop marks will be placed <a href="PageItem.html#getBleedMargin()"><code>PageItem.getBleedMargin()</code></a> points from
- the ends of each edge.</div>
+<div class="block">Returns <code>true</code> if this item should have crop marks added to it. The
+ crop marks will be placed <a href="PageItem.html#getBleedMargin()"><code>PageItem.getBleedMargin()</code></a> points from the ends
+ of each edge.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="PageItem.html#isBleedMarginMarked()">isBleedMarginMarked</a></code>&nbsp;in interface&nbsp;<code><a href="PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a></code></dd>
@@ -801,11 +852,11 @@ implements <a href="DependentPageItem.html" title="interface in ca.cgjennings.ap
 <li class="blockList">
 <h4>refresh</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;refresh()</pre>
-<div class="block">Clears cached representation of the card face. The next time it is
- drawn, the sheet will be asked to redraw it from the component instance
- linked with the sheet. This is not suitable if the linked component
- needs to change (for example, if the file that the component is stored
- in is overwritten with a new component). In this case, see
+<div class="block">Clears cached representation of the card face. The next time it is drawn,
+ the sheet will be asked to redraw it from the component instance linked
+ with the sheet. This is not suitable if the linked component needs to
+ change (for example, if the file that the component is stored in is
+ overwritten with a new component). In this case, see
  <a href="#refresh(ca.cgjennings.apps.arkham.component.GameComponent)"><code>refresh(ca.cgjennings.apps.arkham.component.GameComponent)</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -868,8 +919,8 @@ implements <a href="DependentPageItem.html" title="interface in ca.cgjennings.ap
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>menu</code> - the menu that will be displayed</dd>
 <dd><code>selection</code> - the selected items; this should be considered read-only</dd>
-<dd><code>isSelectionFocus</code> - if <code>true</code>, this is the last item in
- the selection</dd>
+<dd><code>isSelectionFocus</code> - if <code>true</code>, this is the last item in the
+ selection</dd>
 </dl>
 </li>
 </ul>
@@ -882,12 +933,12 @@ implements <a href="DependentPageItem.html" title="interface in ca.cgjennings.ap
 <pre class="methodSignature">protected&nbsp;boolean&nbsp;scaleMipMapUpAtHighZoom&#8203;(<a href="../../sheet/RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target,
                                           double&nbsp;resolution)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="AbstractRenderedItem.html#scaleMipMapUpAtHighZoom(ca.cgjennings.apps.arkham.sheet.RenderTarget,double)">AbstractRenderedItem</a></code></span></div>
-<div class="block">Returns <code>true</code> if the highest resolution MIP map image should
- be scaled up at high zoom levels. This method is called when the MIP map
+<div class="block">Returns <code>true</code> if the highest resolution MIP map image should be
+ scaled up at high zoom levels. This method is called when the MIP map
  cache is enabled but the current zoom level of the view requires an image
  with higher resolution than the maximum resolution used by the MIP map
- cache. If it returns <code>true</code>, then the highest resolution MIP
- map image will be scaled up to the requested resolution. If it returns
+ cache. If it returns <code>true</code>, then the highest resolution MIP map
+ image will be scaled up to the requested resolution. If it returns
  <code>false</code>, then a new rendering will be requested at the exact
  resolution needed, just as if the MIP map cache was disabled.
 

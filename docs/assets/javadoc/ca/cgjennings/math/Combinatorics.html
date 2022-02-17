@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -157,8 +157,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#combinations(int,int)">combinations</a></span>&#8203;(int&nbsp;n,
             int&nbsp;r)</code></th>
 <td class="colLast">
-<div class="block">Return C(<i>n</i>, <i>r</i>), the number of sets of size <code>r</code>
- that can be created from a set of <code>n</code> objects.</div>
+<div class="block">Return C(<i>n</i>, <i>r</i>), the number of sets of size <code>r</code> that
+ can be created from a set of <code>n</code> objects.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -167,9 +167,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                       int&nbsp;trials,
                       double&nbsp;pSuccess)</code></th>
 <td class="colLast">
-<div class="block">Returns the probability that out of <code>trials</code> attempts, a test
- that has a <code>pSuccess</code> probability of succeeding on each
- attempt will succeed <i>at most</i> <code>successes</code> times.</div>
+<div class="block">Returns the probability that out of <code>trials</code> attempts, a test that
+ has a <code>pSuccess</code> probability of succeeding on each attempt will
+ succeed <i>at most</i> <code>successes</code> times.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -184,8 +184,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#permutations(int,int)">permutations</a></span>&#8203;(int&nbsp;n,
             int&nbsp;r)</code></th>
 <td class="colLast">
-<div class="block">Return P(<i>n</i>, <i>r</i>), the number of lists of size <code>r</code>
- that can be created from a set of <code>n</code> objects.</div>
+<div class="block">Return P(<i>n</i>, <i>r</i>), the number of lists of size <code>r</code> that
+ can be created from a set of <code>n</code> objects.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -194,9 +194,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                int&nbsp;trials,
                double&nbsp;pSuccess)</code></th>
 <td class="colLast">
-<div class="block">Returns the probability that out of <code>trials</code> attempts, a test
- that has a <code>pSuccess</code> probability of succeeding on each
- attempt will succeed <i>exactly</i> <code>successes</code> times.</div>
+<div class="block">Returns the probability that out of <code>trials</code> attempts, a test that
+ has a <code>pSuccess</code> probability of succeeding on each attempt will
+ succeed <i>exactly</i> <code>successes</code> times.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -205,9 +205,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                            int&nbsp;trials,
                            double&nbsp;pSuccess)</code></th>
 <td class="colLast">
-<div class="block">Returns the probability that out of <code>trials</code> attempts, a test
- that has a <code>pSuccess</code> probability of succeeding on each
- attempt will succeed <i>at least</i> <code>successes</code> times.</div>
+<div class="block">Returns the probability that out of <code>trials</code> attempts, a test that
+ has a <code>pSuccess</code> probability of succeeding on each attempt will
+ succeed <i>at least</i> <code>successes</code> times.</div>
 </td>
 </tr>
 </table>
@@ -250,8 +250,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the factorial of <code>n</code>, that is, <code>n</code>!</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ArrayIndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang" class="externalLink">ArrayIndexOutOfBoundsException</a></code> - if <code>n</code> &lt; 0 or
- <code>n</code> &gt; MAXIMUM_LONG_FACTORIAL</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ArrayIndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang" class="externalLink">ArrayIndexOutOfBoundsException</a></code> - if <code>n</code> &lt; 0 or <code>n</code>
+ &gt; MAXIMUM_LONG_FACTORIAL</dd>
 </dl>
 </li>
 </ul>
@@ -263,13 +263,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>permutations</h4>
 <pre class="methodSignature">public static final&nbsp;long&nbsp;permutations&#8203;(int&nbsp;n,
                                       int&nbsp;r)</pre>
-<div class="block">Return P(<i>n</i>, <i>r</i>), the number of lists of size <code>r</code>
- that can be created from a set of <code>n</code> objects. Since this
- method counts the number of unique <i>lists</i>, the order in which the
- elements are selected is important. For example, the selection (1,2,3)
- and the selection (3,1,2) are both counted by this method. In order to
- fit within a <code>long</code>, the value of <code>n</code> must not be
- greater than <code>MAXIMUM_LONG_FACTORIAL</code>.
+<div class="block">Return P(<i>n</i>, <i>r</i>), the number of lists of size <code>r</code> that
+ can be created from a set of <code>n</code> objects. Since this method counts
+ the number of unique <i>lists</i>, the order in which the elements are
+ selected is important. For example, the selection (1,2,3) and the
+ selection (3,1,2) are both counted by this method. In order to fit within
+ a <code>long</code>, the value of <code>n</code> must not be greater than
+ <code>MAXIMUM_LONG_FACTORIAL</code>.
  <p>
  <b>Example:</b> The set {1,2,3} contains 3 elements. If we construct
  every possible list of length 2 that is composed of elements from that
@@ -285,9 +285,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the number of unique lists that can be created</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ArrayIndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang" class="externalLink">ArrayIndexOutOfBoundsException</a></code> - if <code>n</code> &lt; 0,
- <code>n</code> &gt; MAXIMUM_LONG_FACTORIAL, <code>r</code> &lt; 0, or
- <code>r</code> &gt; <code>n</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ArrayIndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang" class="externalLink">ArrayIndexOutOfBoundsException</a></code> - if <code>n</code> &lt; 0, <code>n</code>
+ &gt; MAXIMUM_LONG_FACTORIAL, <code>r</code> &lt; 0, or <code>r</code> &gt;
+ <code>n</code></dd>
 </dl>
 </li>
 </ul>
@@ -299,14 +299,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>combinations</h4>
 <pre class="methodSignature">public static final&nbsp;long&nbsp;combinations&#8203;(int&nbsp;n,
                                       int&nbsp;r)</pre>
-<div class="block">Return C(<i>n</i>, <i>r</i>), the number of sets of size <code>r</code>
- that can be created from a set of <code>n</code> objects. Since this
- method counts the number of unique <i>sets</i>, the order in which the
- elements are selected is not important. For example, the selection
- (1,2,3) and the selection (3,1,2) would only be counted once by this
- method. In order to fit within a <code>long</code>, the value of
- <code>n</code> must not be greater than
- <code>MAXIMUM_LONG_FACTORIAL</code>.
+<div class="block">Return C(<i>n</i>, <i>r</i>), the number of sets of size <code>r</code> that
+ can be created from a set of <code>n</code> objects. Since this method counts
+ the number of unique <i>sets</i>, the order in which the elements are
+ selected is not important. For example, the selection (1,2,3) and the
+ selection (3,1,2) would only be counted once by this method. In order to
+ fit within a <code>long</code>, the value of <code>n</code> must not be greater
+ than <code>MAXIMUM_LONG_FACTORIAL</code>.
  <p>
  <b>Example:</b> The set {1,2,3} contains 3 elements. If we construct
  every possible set of length 2 that is composed of elements from that
@@ -322,9 +321,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the number of unique lists that can be created</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ArrayIndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang" class="externalLink">ArrayIndexOutOfBoundsException</a></code> - if <code>n</code> &lt; 0,
- <code>n</code> &gt; MAXIMUM_LONG_FACTORIAL, <code>r</code> &lt; 0, or
- <code>r</code> &gt; <code>n</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ArrayIndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang" class="externalLink">ArrayIndexOutOfBoundsException</a></code> - if <code>n</code> &lt; 0, <code>n</code>
+ &gt; MAXIMUM_LONG_FACTORIAL, <code>r</code> &lt; 0, or <code>r</code> &gt;
+ <code>n</code></dd>
 </dl>
 </li>
 </ul>
@@ -337,12 +336,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public static final&nbsp;double&nbsp;probabilityMass&#8203;(int&nbsp;successes,
                                            int&nbsp;trials,
                                            double&nbsp;pSuccess)</pre>
-<div class="block">Returns the probability that out of <code>trials</code> attempts, a test
- that has a <code>pSuccess</code> probability of succeeding on each
- attempt will succeed <i>exactly</i> <code>successes</code> times. For
- example, the probability of rolling 10 dice and having exactly 2 of those
- dice land on 6 is <code>probabilityMass( 2, 10, 1/6d )</code> (about
- 0.29).</div>
+<div class="block">Returns the probability that out of <code>trials</code> attempts, a test that
+ has a <code>pSuccess</code> probability of succeeding on each attempt will
+ succeed <i>exactly</i> <code>successes</code> times. For example, the
+ probability of rolling 10 dice and having exactly 2 of those dice land on
+ 6 is <code>probabilityMass( 2, 10, 1/6d )</code> (about 0.29).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>successes</code> - the exact number of successes required</dd>
@@ -352,11 +350,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd>the probability that exactly <code>successes</code> trials will
  succeed</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>pSuccess</code> is not in the
- range (0,1)</dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ArrayIndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang" class="externalLink">ArrayIndexOutOfBoundsException</a></code> - if <code>n</code> &lt; 0,
- <code>n</code> &gt; MAXIMUM_LONG_FACTORIAL, <code>r</code> &lt; 0, or
- <code>r</code> &gt; <code>n</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>pSuccess</code> is not in the range
+ (0,1)</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ArrayIndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang" class="externalLink">ArrayIndexOutOfBoundsException</a></code> - if <code>n</code> &lt; 0, <code>n</code>
+ &gt; MAXIMUM_LONG_FACTORIAL, <code>r</code> &lt; 0, or <code>r</code> &gt;
+ <code>n</code></dd>
 </dl>
 </li>
 </ul>
@@ -369,12 +367,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public static final&nbsp;double&nbsp;cumulativeDistribution&#8203;(int&nbsp;successes,
                                                   int&nbsp;trials,
                                                   double&nbsp;pSuccess)</pre>
-<div class="block">Returns the probability that out of <code>trials</code> attempts, a test
- that has a <code>pSuccess</code> probability of succeeding on each
- attempt will succeed <i>at most</i> <code>successes</code> times. For
- example, the probability of rolling 10 dice and having at most 2 of those
- dice land on 6 is <code>cumulativeDistribution( 2, 10, 1/6d )</code>
- (about 0.78).</div>
+<div class="block">Returns the probability that out of <code>trials</code> attempts, a test that
+ has a <code>pSuccess</code> probability of succeeding on each attempt will
+ succeed <i>at most</i> <code>successes</code> times. For example, the
+ probability of rolling 10 dice and having at most 2 of those dice land on
+ 6 is <code>cumulativeDistribution( 2, 10, 1/6d )</code> (about 0.78).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>successes</code> - the maximum number of successes allowed</dd>
@@ -384,11 +381,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd>the probability that at most <code>successes</code> trials will
  succeed</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>pSuccess</code> is not in the
- range (0,1)</dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ArrayIndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang" class="externalLink">ArrayIndexOutOfBoundsException</a></code> - if <code>n</code> &lt; 0,
- <code>n</code> &gt; MAXIMUM_LONG_FACTORIAL, <code>r</code> &lt; 0, or
- <code>r</code> &gt; <code>n</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>pSuccess</code> is not in the range
+ (0,1)</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ArrayIndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang" class="externalLink">ArrayIndexOutOfBoundsException</a></code> - if <code>n</code> &lt; 0, <code>n</code>
+ &gt; MAXIMUM_LONG_FACTORIAL, <code>r</code> &lt; 0, or <code>r</code> &gt;
+ <code>n</code></dd>
 </dl>
 </li>
 </ul>
@@ -401,12 +398,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public static final&nbsp;double&nbsp;upperCumulativeDistribution&#8203;(int&nbsp;successes,
                                                        int&nbsp;trials,
                                                        double&nbsp;pSuccess)</pre>
-<div class="block">Returns the probability that out of <code>trials</code> attempts, a test
- that has a <code>pSuccess</code> probability of succeeding on each
- attempt will succeed <i>at least</i> <code>successes</code> times. For
- example, the probability of rolling 10 dice and having at least 2 of
- those dice land on 6 is
- <code>upperCumulativeDistribution( 2, 10, 1/6d )</code> (about 0.52).
+<div class="block">Returns the probability that out of <code>trials</code> attempts, a test that
+ has a <code>pSuccess</code> probability of succeeding on each attempt will
+ succeed <i>at least</i> <code>successes</code> times. For example, the
+ probability of rolling 10 dice and having at least 2 of those dice land
+ on 6 is <code>upperCumulativeDistribution( 2, 10, 1/6d )</code> (about 0.52).
  <p>
  Mathematically, this value can be computed as:<br>
  <code>upperCumulativeDistribution(s,t,p) = probabilityMass(s,t,p) + 1-cumulativeDistribution(s,t,p)</code>
@@ -422,11 +418,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd>the probability that at least <code>successes</code> trials will
  succeed</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>pSuccess</code> is not in the
- range (0,1)</dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ArrayIndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang" class="externalLink">ArrayIndexOutOfBoundsException</a></code> - if <code>n</code> &lt; 0,
- <code>n</code> &gt; MAXIMUM_LONG_FACTORIAL, <code>r</code> &lt; 0, or
- <code>r</code> &gt; <code>n</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>pSuccess</code> is not in the range
+ (0,1)</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ArrayIndexOutOfBoundsException.html?is-external=true" title="class or interface in java.lang" class="externalLink">ArrayIndexOutOfBoundsException</a></code> - if <code>n</code> &lt; 0, <code>n</code>
+ &gt; MAXIMUM_LONG_FACTORIAL, <code>r</code> &lt; 0, or <code>r</code> &gt;
+ <code>n</code></dd>
 </dl>
 </li>
 </ul>

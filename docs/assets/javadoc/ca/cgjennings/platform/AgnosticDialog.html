@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -131,11 +131,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public interface <span class="typeNameLabel">AgnosticDialog</span></pre>
 <div class="block">This interface is used by <a href="PlatformSupport.html" title="class in ca.cgjennings.platform"><code>PlatformSupport</code></a> to handle OK and Cancel
- button <code>ActionEvent</code>s for swappable dialogs. An
- <code>AgnosticDialog</code> can have the content and functionality of its
- "OK" and "Cancel" buttons switched so that it looks correct on platforms that
- order them differently. The term "dialog" is meant in a general sense. No
- particular implementing class is assumed.
+ button <code>ActionEvent</code>s for swappable dialogs. An <code>AgnosticDialog</code>
+ can have the content and functionality of its "OK" and "Cancel" buttons
+ switched so that it looks correct on platforms that order them differently.
+ The term "dialog" is meant in a general sense. No particular implementing
+ class is assumed.
  <p>
  This interface allows the designer to write the appropriate code for handling
  "OK" (commit) and "Cancel" actions independently of the physical button they
@@ -153,8 +153,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  Almost all existing dialogs can be converted to be agnostic with a minimum of
  effort. The following steps are usually all that is required:
  <ol>
- <li> Add an <code>implements AgnosticDialog</code> to the root container
- class for the dialog (usually a <code>JDialog</code> subclass).
+ <li> Add an <code>implements AgnosticDialog</code> to the root container class for
+ the dialog (usually a <code>JDialog</code> subclass).
  <li> Add empty implementations for <code>handleOKAction</code> and
  <code>handleCancelAction</code>.
  <li> Move the existing <code>ActionEvent</code> listener code for the OK and
@@ -162,8 +162,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
  <li> Delete the original listeners and listener registration code (if using a
  GUI designer, delete the event bindings in the designer).
  <li> Add a call to
- <code>PlatformSupport.makeAgnosticDialog( this, okBtn, cancelBtn )</code> (or
- one of its variants) after the components are initialized but before they are
+ <code>PlatformSupport.makeAgnosticDialog( this, okBtn, cancelBtn )</code> (or one
+ of its variants) after the components are initialized but before they are
  shown. This will usually be in the constructor.
  </ol>
  <p>

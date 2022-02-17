@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -208,8 +208,8 @@ implements <a href="../ca/cgjennings/ui/IconProvider.html" title="interface in c
           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;portraitResource,
           double&nbsp;bleedMargin)</code></th>
 <td class="colLast">
-<div class="block">Creates a new silhouette with unique key <code>key</code>, that will
- obtain a stencil image from <code>stencilResource</code> and use
+<div class="block">Creates a new silhouette with unique key <code>key</code>, that will obtain a
+ stencil image from <code>stencilResource</code> and use
  <code>portraitResource</code> as its default portrait.</div>
 </td>
 </tr>
@@ -243,16 +243,16 @@ implements <a href="../ca/cgjennings/ui/IconProvider.html" title="interface in c
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#equals(java.lang.Object)">equals</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;obj)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this silhouette and <code>obj</code> have
- the same key.</div>
+<div class="block">Returns <code>true</code> if this silhouette and <code>obj</code> have the same
+ key.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>static <a href="Silhouette.html" title="class in gamedata">Silhouette</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#get(java.lang.String)">get</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key)</code></th>
 <td class="colLast">
-<div class="block">Returns the Silhouette with the specified key, or <code>null</code> if
- there is none.</div>
+<div class="block">Returns the Silhouette with the specified key, or <code>null</code> if there
+ is none.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -402,8 +402,8 @@ implements <a href="../ca/cgjennings/ui/IconProvider.html" title="interface in c
                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;stencilResource,
                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;portraitResource,
                   double&nbsp;bleedMargin)</pre>
-<div class="block">Creates a new silhouette with unique key <code>key</code>, that will
- obtain a stencil image from <code>stencilResource</code> and use
+<div class="block">Creates a new silhouette with unique key <code>key</code>, that will obtain a
+ stencil image from <code>stencilResource</code> and use
  <code>portraitResource</code> as its default portrait.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -559,16 +559,15 @@ implements <a href="../ca/cgjennings/ui/IconProvider.html" title="interface in c
 <li class="blockList">
 <h4>equals</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;equals&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;obj)</pre>
-<div class="block">Returns <code>true</code> if this silhouette and <code>obj</code> have
- the same key.</div>
+<div class="block">Returns <code>true</code> if this silhouette and <code>obj</code> have the same
+ key.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>obj</code> - the object to test</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if <code>obj</code> is a silhouette with the
- same key</dd>
+<dd><code>true</code> if <code>obj</code> is a silhouette with the same key</dd>
 </dl>
 </li>
 </ul>
@@ -592,8 +591,8 @@ implements <a href="../ca/cgjennings/ui/IconProvider.html" title="interface in c
 <li class="blockList">
 <h4>get</h4>
 <pre class="methodSignature">public static&nbsp;<a href="Silhouette.html" title="class in gamedata">Silhouette</a>&nbsp;get&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key)</pre>
-<div class="block">Returns the Silhouette with the specified key, or <code>null</code> if
- there is none.</div>
+<div class="block">Returns the Silhouette with the specified key, or <code>null</code> if there
+ is none.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - the key to search for</dd>

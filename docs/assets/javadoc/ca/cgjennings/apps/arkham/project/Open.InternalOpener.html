@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -127,8 +127,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public static interface <span class="typeNameLabel">Open.InternalOpener</span></pre>
 <div class="block">If you wish to add special handling for opening a file type, you may
- register an <code>InternalOpener</code> for it. The opener will be used
- to open files that it applies to if the open rule for the file is either
+ register an <code>InternalOpener</code> for it. The opener will be used to
+ open files that it applies to if the open rule for the file is either
  <a href="Open.OpenRule.html#INTERNAL_OPEN"><code>Open.OpenRule.INTERNAL_OPEN</code></a> or <a href="Open.OpenRule.html#INTERNAL_EDIT"><code>Open.OpenRule.INTERNAL_EDIT</code></a>.</div>
 </li>
 </ul>
@@ -196,8 +196,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>f</code> - the file to check</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the opener can open the file,
- <code>false</code> otherwise</dd>
+<dd><code>true</code> if the opener can open the file, <code>false</code>
+ otherwise</dd>
 </dl>
 </li>
 </ul>

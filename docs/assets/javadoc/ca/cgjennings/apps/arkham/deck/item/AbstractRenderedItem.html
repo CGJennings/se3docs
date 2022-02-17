@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -286,7 +286,7 @@ extends <a href="AbstractFlippableItem.html" title="class in ca.cgjennings.apps.
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>protected void</code></td>
+<td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#clearCachedImages()">clearCachedImages</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Clear any cached image data held by this object.</div>
@@ -355,16 +355,16 @@ extends <a href="AbstractFlippableItem.html" title="class in ca.cgjennings.apps.
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isMipMapCacheEnabled()">isMipMapCacheEnabled</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the MIP map mechanism is currently enabled
- on this item.</div>
+<div class="block">Returns <code>true</code> if the MIP map mechanism is currently enabled on
+ this item.</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isMipMapCacheEnabledByDefault()">isMipMapCacheEnabledByDefault</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the MIP map cache should be enabled by
- default for this item type.</div>
+<div class="block">Returns <code>true</code> if the MIP map cache should be enabled by default
+ for this item type.</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
@@ -403,8 +403,8 @@ extends <a href="AbstractFlippableItem.html" title="class in ca.cgjennings.apps.
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#scaleMipMapUpAtHighZoom(ca.cgjennings.apps.arkham.sheet.RenderTarget,double)">scaleMipMapUpAtHighZoom</a></span>&#8203;(<a href="../../sheet/RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target,
                        double&nbsp;resolution)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the highest resolution MIP map image should
- be scaled up at high zoom levels.</div>
+<div class="block">Returns <code>true</code> if the highest resolution MIP map image should be
+ scaled up at high zoom levels.</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
@@ -542,16 +542,16 @@ extends <a href="AbstractFlippableItem.html" title="class in ca.cgjennings.apps.
 <div class="block">Update any cached representations needed to paint this item at the
  specified settings. It is not required that this be called prior to
  calling <a href="PageItem.html#paint(java.awt.Graphics2D,ca.cgjennings.apps.arkham.sheet.RenderTarget,double)"><code>PageItem.paint(java.awt.Graphics2D, ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a>. Rather, the intent is that if this method returns
- without throwing any exceptions (such as <code>OutOfMemoryError</code>),
- then a call to <a href="PageItem.html#paint(java.awt.Graphics2D,ca.cgjennings.apps.arkham.sheet.RenderTarget,double)"><code>PageItem.paint(java.awt.Graphics2D, ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a> with the same settings is also
+ without throwing any exceptions (such as <code>OutOfMemoryError</code>), then
+ a call to <a href="PageItem.html#paint(java.awt.Graphics2D,ca.cgjennings.apps.arkham.sheet.RenderTarget,double)"><code>PageItem.paint(java.awt.Graphics2D, ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a> with the same settings is also
  <i>expected</i> to succeed. Thus, this method may be called prior to
  rendering at high resolution and if it throws an
  <code>OutOfMemoryError</code>, the application can attempt to recover by
  freeing up resources before trying to paint again.
 
  <p>
- If this <code>PageItem</code> does not require rendering to a buffer,
- then this method may do nothing.</div>
+ If this <code>PageItem</code> does not require rendering to a buffer, then
+ this method may do nothing.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="PageItem.html#prepareToPaint(ca.cgjennings.apps.arkham.sheet.RenderTarget,double)">prepareToPaint</a></code>&nbsp;in interface&nbsp;<code><a href="PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a></code></dd>
@@ -721,12 +721,11 @@ extends <a href="AbstractFlippableItem.html" title="class in ca.cgjennings.apps.
 <ul class="blockList">
 <li class="blockList">
 <h4>clearCachedImages</h4>
-<pre class="methodSignature">protected&nbsp;void&nbsp;clearCachedImages()</pre>
+<pre class="methodSignature">public&nbsp;void&nbsp;clearCachedImages()</pre>
 <div class="block">Clear any cached image data held by this object. The base class clears
  any cached oriented results and the MIP map cache (if enabled).
- Subclasses should override this (calling
- <code>super.clearCachedImages</code>) if the <a href="#renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget,double)"><code>renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a>
- implementation caches results.</div>
+ Subclasses should override this (calling <code>super.clearCachedImages</code>)
+ if the <a href="#renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget,double)"><code>renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a> implementation caches results.</div>
 </li>
 </ul>
 <a id="createOrientedImage(java.awt.image.BufferedImage,int)">
@@ -795,12 +794,11 @@ extends <a href="AbstractFlippableItem.html" title="class in ca.cgjennings.apps.
  rendered item will transparently create and use MIP mapped versions of
  the bitmap to improve painting speed and target. Subclasses may call this
  method to disable the MIP map mechanism. To do so, you must call
- <code>setMipMapCacheEnabled( false )</code> in <b>both</b> the
- constructor and <a href="#readImpl(java.io.ObjectInputStream)"><code>readImpl(java.io.ObjectInputStream)</code></a>.</div>
+ <code>setMipMapCacheEnabled( false )</code> in <b>both</b> the constructor and
+ <a href="#readImpl(java.io.ObjectInputStream)"><code>readImpl(java.io.ObjectInputStream)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>enable</code> - if <code>true</code>, the MIP map painting mechanism is
- enabled</dd>
+<dd><code>enable</code> - if <code>true</code>, the MIP map painting mechanism is enabled</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -815,8 +813,8 @@ extends <a href="AbstractFlippableItem.html" title="class in ca.cgjennings.apps.
 <li class="blockList">
 <h4>isMipMapCacheEnabled</h4>
 <pre class="methodSignature">protected final&nbsp;boolean&nbsp;isMipMapCacheEnabled()</pre>
-<div class="block">Returns <code>true</code> if the MIP map mechanism is currently enabled
- on this item.</div>
+<div class="block">Returns <code>true</code> if the MIP map mechanism is currently enabled on
+ this item.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if MIP mapping is enabled</dd>
@@ -834,13 +832,13 @@ extends <a href="AbstractFlippableItem.html" title="class in ca.cgjennings.apps.
 <li class="blockList">
 <h4>isMipMapCacheEnabledByDefault</h4>
 <pre class="methodSignature">protected&nbsp;boolean&nbsp;isMipMapCacheEnabledByDefault()</pre>
-<div class="block">Returns <code>true</code> if the MIP map cache should be enabled by
- default for this item type. Subclasses can override this to disable this
+<div class="block">Returns <code>true</code> if the MIP map cache should be enabled by default
+ for this item type. Subclasses can override this to disable this
  mechanism. (The base class returns <code>true</code>.)</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the MIP map cache should automatically be
- enabled during construction or deserialization</dd>
+<dd><code>true</code> if the MIP map cache should automatically be enabled
+ during construction or deserialization</dd>
 </dl>
 </li>
 </ul>
@@ -852,12 +850,12 @@ extends <a href="AbstractFlippableItem.html" title="class in ca.cgjennings.apps.
 <h4>scaleMipMapUpAtHighZoom</h4>
 <pre class="methodSignature">protected&nbsp;boolean&nbsp;scaleMipMapUpAtHighZoom&#8203;(<a href="../../sheet/RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;target,
                                           double&nbsp;resolution)</pre>
-<div class="block">Returns <code>true</code> if the highest resolution MIP map image should
- be scaled up at high zoom levels. This method is called when the MIP map
+<div class="block">Returns <code>true</code> if the highest resolution MIP map image should be
+ scaled up at high zoom levels. This method is called when the MIP map
  cache is enabled but the current zoom level of the view requires an image
  with higher resolution than the maximum resolution used by the MIP map
- cache. If it returns <code>true</code>, then the highest resolution MIP
- map image will be scaled up to the requested resolution. If it returns
+ cache. If it returns <code>true</code>, then the highest resolution MIP map
+ image will be scaled up to the requested resolution. If it returns
  <code>false</code>, then a new rendering will be requested at the exact
  resolution needed, just as if the MIP map cache was disabled.
 

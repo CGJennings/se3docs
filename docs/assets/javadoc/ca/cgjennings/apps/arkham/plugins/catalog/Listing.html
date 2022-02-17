@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -354,8 +354,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#checksumMatches(java.io.File)">checksumMatches</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;f)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the checksum in this listing matches the
- checksum of a file.</div>
+<div class="block">Returns <code>true</code> if the checksum in this listing matches the checksum
+ of a file.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -383,8 +383,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <td class="colFirst"><code><a href="CatalogID.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog">CatalogID</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCatalogID()">getCatalogID</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the catalog ID for this listing, or <code>null</code> if none is
- set.</div>
+<div class="block">Returns the catalog ID for this listing, or <code>null</code> if none is set.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -436,16 +435,16 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isIdenticalTo(ca.cgjennings.apps.arkham.plugins.catalog.Listing)">isIdenticalTo</a></span>&#8203;(<a href="Listing.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog">Listing</a>&nbsp;other)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if and only if the listing has exactly the same
- keys and values as the specified listing.</div>
+<div class="block">Returns <code>true</code> if and only if the listing has exactly the same keys
+ and values as the specified listing.</div>
 </td>
 </tr>
 <tr id="i14" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isNew()">isNew</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this plug-in appears to be "new", that is,
- added recently and not seen by the user before.</div>
+<div class="block">Returns <code>true</code> if this plug-in appears to be "new", that is, added
+ recently and not seen by the user before.</div>
 </td>
 </tr>
 <tr id="i15" class="rowColor">
@@ -840,8 +839,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
  key_lang
  key
  </pre> The first key that is defined will be returned, or else
- <code>null</code> will be returned if the none of these keys are defined.
- For example, on a French system in Canada, when looking up the key
+ <code>null</code> will be returned if the none of these keys are defined. For
+ example, on a French system in Canada, when looking up the key
  <tt>homepage</tt>, the following keys are searched (in order):
  <tt>homepage_fr_CA</tt>,
  <tt>homepage_fr</tt>, <tt>homepage</tt>.</div>
@@ -862,8 +861,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <h4>set</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;set&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</pre>
-<div class="block">Sets the value of the given key. If the value is set to
- <code>null</code>, the key will be removed.</div>
+<div class="block">Sets the value of the given key. If the value is set to <code>null</code>, the
+ key will be removed.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - the name of the key to modify</dd>
@@ -880,8 +879,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <li class="blockList">
 <h4>getCatalogID</h4>
 <pre class="methodSignature">public&nbsp;<a href="CatalogID.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog">CatalogID</a>&nbsp;getCatalogID()</pre>
-<div class="block">Returns the catalog ID for this listing, or <code>null</code> if none is
- set.</div>
+<div class="block">Returns the catalog ID for this listing, or <code>null</code> if none is set.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the catalog ID, or <code>null</code></dd>
@@ -910,8 +908,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <h4>getChecksum</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getChecksum()</pre>
 <div class="block">Returns the download file checksum string for this listing, or
- <code>null</code> if none is present. The checksum string can be used to
- check that the file downloaded correctly.</div>
+ <code>null</code> if none is present. The checksum string can be used to check
+ that the file downloaded correctly.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the checksum string or <code>null</code></dd>
@@ -945,11 +943,11 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <h4>checksumMatches</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;checksumMatches&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;f)
                         throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
-<div class="block">Returns <code>true</code> if the checksum in this listing matches the
- checksum of a file. If this listing has no checksum, returns
- <code>true</code> without computing the file's checksum. Note that
- checksums should be computed against the actual file that is downloaded
- (typically a published bundle), not against any other forms.</div>
+<div class="block">Returns <code>true</code> if the checksum in this listing matches the checksum
+ of a file. If this listing has no checksum, returns <code>true</code> without
+ computing the file's checksum. Note that checksums should be computed
+ against the actual file that is downloaded (typically a published
+ bundle), not against any other forms.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>f</code> - the file to compare to this listing's checksum</dd>
@@ -980,8 +978,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <li class="blockList">
 <h4>isIdenticalTo</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isIdenticalTo&#8203;(<a href="Listing.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog">Listing</a>&nbsp;other)</pre>
-<div class="block">Returns <code>true</code> if and only if the listing has exactly the same
- keys and values as the specified listing. (This method is not named
+<div class="block">Returns <code>true</code> if and only if the listing has exactly the same keys
+ and values as the specified listing. (This method is not named
  <code>equals</code> to avoid confusion with
  <a href="#compareTo(ca.cgjennings.apps.arkham.plugins.catalog.Listing)"><code>compareTo</code></a>,
  which simply compares the names of the listings for sorting purposes.)</div>
@@ -1074,10 +1072,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <li class="blockList">
 <h4>isHidden</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isHidden()</pre>
-<div class="block">Returns <code>true</code> if the listing is hidden. A listing is hidden
- if its <code>hidden</code> property is set to <code>yes</code>, or if it
- is set to <code>depends</code> and the plug-in is either not installed or
- is up to date.</div>
+<div class="block">Returns <code>true</code> if the listing is hidden. A listing is hidden if its
+ <code>hidden</code> property is set to <code>yes</code>, or if it is set to
+ <code>depends</code> and the plug-in is either not installed or is up to date.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the listing should be hidden in the catalog</dd>
@@ -1091,14 +1088,14 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <li class="blockList">
 <h4>isNew</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isNew()</pre>
-<div class="block">Returns <code>true</code> if this plug-in appears to be "new", that is,
- added recently and not seen by the user before. A listing is considered
- new if its timestamp is more recent than the timestamp of the newest
- bundle that was observed when the application was last run.</div>
+<div class="block">Returns <code>true</code> if this plug-in appears to be "new", that is, added
+ recently and not seen by the user before. A listing is considered new if
+ its timestamp is more recent than the timestamp of the newest bundle that
+ was observed when the application was last run.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if this listing is considered "new";
- <code>false</code> otherwise</dd>
+<dd><code>true</code> if this listing is considered "new"; <code>false</code>
+ otherwise</dd>
 </dl>
 </li>
 </ul>

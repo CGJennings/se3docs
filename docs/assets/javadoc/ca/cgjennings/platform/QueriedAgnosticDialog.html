@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -194,17 +194,17 @@ extends <a href="AgnosticDialog.html" title="interface in ca.cgjennings.platform
 <div class="block">Called to swap the buttons of this agnostic dialog. When this interface
  is used, <a href="PlatformSupport.html#makeAgnosticDialog(ca.cgjennings.platform.AgnosticDialog,javax.swing.JButton,javax.swing.JButton)"><code>PlatformSupport.makeAgnosticDialog(ca.cgjennings.platform.AgnosticDialog, javax.swing.JButton, javax.swing.JButton)</code></a> will not swap any of
  the properties of the buttons itself. Instead, it will call this method
- to allow this to perform the swap itself. <code>PlatformSupport</code>
- will still register listeners for <a href="AgnosticDialog.html#handleOKAction(java.awt.event.ActionEvent)"><code>AgnosticDialog.handleOKAction(java.awt.event.ActionEvent)</code></a>
- and <a href="AgnosticDialog.html#handleCancelAction(java.awt.event.ActionEvent)"><code>AgnosticDialog.handleCancelAction(java.awt.event.ActionEvent)</code></a>.
+ to allow this to perform the swap itself. <code>PlatformSupport</code> will
+ still register listeners for <a href="AgnosticDialog.html#handleOKAction(java.awt.event.ActionEvent)"><code>AgnosticDialog.handleOKAction(java.awt.event.ActionEvent)</code></a> and
+ <a href="AgnosticDialog.html#handleCancelAction(java.awt.event.ActionEvent)"><code>AgnosticDialog.handleCancelAction(java.awt.event.ActionEvent)</code></a>.
  <p>
  This method will always be called, even if the buttons are not being
  swapped from their reported order. This allows the implementer to simply
  place all initialization code for the buttons in this method, if desired.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>swapped</code> - <code>true</code> if the buttons should be swapped based
- on the order reported to <code>PlatformSupport</code></dd>
+<dd><code>swapped</code> - <code>true</code> if the buttons should be swapped based on the
+ order reported to <code>PlatformSupport</code></dd>
 <dd><code>newOKButton</code> - the button that should be made the "OK" button</dd>
 <dd><code>newCancelButton</code> - the button that should be made the "Cancel" button</dd>
 </dl>

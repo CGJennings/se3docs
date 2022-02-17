@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -157,8 +157,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JPanel.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JPanel</a></pre>
 <div class="block">A standard plug-in wizard page that allows the user to choose a kind of
  plug-in to create. This allows the user to select from the basic plug-in
- types (<code>ACTIVATED</code>, <code>INJECTED</code>, or <code>EXTENSION</code>),
- and, optionally, a theme or library.</div>
+ types (<code>ACTIVATED</code>, <code>INJECTED</code>, or <code>EXTENSION</code>), and,
+ optionally, a theme or library.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -266,8 +266,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JPanel.ht
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.EnumSet,ca.cgjennings.ui.wizard.WizardModel)">ContentTypePage</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html?is-external=true" title="class or interface in java.util" class="externalLink">EnumSet</a>&lt;<a href="ContentType.html" title="enum in resources.projects.pluginwizard">ContentType</a>&gt;&nbsp;allowedTypes,
                <a href="../../../ca/cgjennings/ui/wizard/WizardModel.html" title="interface in ca.cgjennings.ui.wizard">WizardModel</a>&nbsp;model)</code></th>
 <td class="colLast">
-<div class="block">Creates new plug-in type selection page that allows selection from
- the specified types.</div>
+<div class="block">Creates new plug-in type selection page that allows selection from the
+ specified types.</div>
 </td>
 </tr>
 </table>
@@ -362,8 +362,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JPanel.ht
 <h4>ContentTypePage</h4>
 <pre>public&nbsp;ContentTypePage&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/EnumSet.html?is-external=true" title="class or interface in java.util" class="externalLink">EnumSet</a>&lt;<a href="ContentType.html" title="enum in resources.projects.pluginwizard">ContentType</a>&gt;&nbsp;allowedTypes,
                        <a href="../../../ca/cgjennings/ui/wizard/WizardModel.html" title="interface in ca.cgjennings.ui.wizard">WizardModel</a>&nbsp;model)</pre>
-<div class="block">Creates new plug-in type selection page that allows selection from
- the specified types.</div>
+<div class="block">Creates new plug-in type selection page that allows selection from the
+ specified types.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>allowedTypes</code> - a set describing the plug-in types to allow</dd>
@@ -386,10 +386,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JPanel.ht
  types and may optionally include themes and libraries.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>allowThemes</code> - if <code>true</code>, then the user will be allowed
-     to select a theme plug-in (.setheme file type).</dd>
-<dd><code>allowLibraries</code> - if <code>true</code>, then the user will be allowed
-     to select a library plug-in type (.selibrary file type).</dd>
+<dd><code>allowThemes</code> - if <code>true</code>, then the user will be allowed to
+ select a theme plug-in (.setheme file type).</dd>
+<dd><code>allowLibraries</code> - if <code>true</code>, then the user will be allowed to
+ select a library plug-in type (.selibrary file type).</dd>
 <dd><code>model</code> - the model that the page will be placed in</dd>
 </dl>
 </li>

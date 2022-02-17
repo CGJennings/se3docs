@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -147,10 +147,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 extends <a href="AbstractCommand.html" title="class in ca.cgjennings.apps.arkham.commands">AbstractCommand</a></pre>
 <div class="block">An abstract base class for commands that toggle a state when selected. Note
  that whether a toggle command is selected or not is determined by the value
- of the action's <code>SELECTED_KEY</code> key. It is up to the subclass to
- set this key to an appropriate initial value. (The <a href="#isSelected()"><code>isSelected()</code></a>
- method is simply a convenience that reads the value of this key and casts the
- result to a boolean value.)</div>
+ of the action's <code>SELECTED_KEY</code> key. It is up to the subclass to set
+ this key to an appropriate initial value. (The <a href="#isSelected()"><code>isSelected()</code></a> method
+ is simply a convenience that reads the value of this key and casts the result
+ to a boolean value.)</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -249,8 +249,8 @@ extends <a href="AbstractCommand.html" title="class in ca.cgjennings.apps.arkham
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isSelected()">isSelected</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the command is selected, that is, if the
- toggle state is currently enabled.</div>
+<div class="block">Returns <code>true</code> if the command is selected, that is, if the toggle
+ state is currently enabled.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -383,8 +383,8 @@ extends <a href="AbstractCommand.html" title="class in ca.cgjennings.apps.arkham
 <li class="blockList">
 <h4>isSelected</h4>
 <pre class="methodSignature">public final&nbsp;boolean&nbsp;isSelected()</pre>
-<div class="block">Returns <code>true</code> if the command is selected, that is, if the
- toggle state is currently enabled.</div>
+<div class="block">Returns <code>true</code> if the command is selected, that is, if the toggle
+ state is currently enabled.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the command is selected</dd>

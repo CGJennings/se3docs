@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -131,9 +131,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public interface <span class="typeNameLabel">NestingDocument</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/text/Document.html?is-external=true" title="class or interface in javax.swing.text" class="externalLink">Document</a></pre>
-<div class="block">This interface should be implemented by <code>Document</code>s that wrap
- around other documents to modify their basic functionality. (Such wrapping
- can be used to simulate the effects of multiple inheritence.) The interface
+<div class="block">This interface should be implemented by <code>Document</code>s that wrap around
+ other documents to modify their basic functionality. (Such wrapping can be
+ used to simulate the effects of multiple inheritence.) The interface
  specifies a <code>getDocument</code> method that allows nesting-aware code to
  access the document(s) being wrapped.</div>
 </li>

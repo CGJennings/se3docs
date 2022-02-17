@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -243,16 +243,16 @@ implements <a href="ContextBar.Button.html" title="interface in ca.cgjennings.ap
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isEnabledInCurrentContext(ca.cgjennings.apps.arkham.ContextBar.Context)">isEnabledInCurrentContext</a></span>&#8203;(<a href="ContextBar.Context.html" title="class in ca.cgjennings.apps.arkham">ContextBar.Context</a>&nbsp;context)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the button should be enabled in the
- current context.</div>
+<div class="block">Returns <code>true</code> if the button should be enabled in the current
+ context.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isVisibleInCurrentContext(ca.cgjennings.apps.arkham.ContextBar.Context)">isVisibleInCurrentContext</a></span>&#8203;(<a href="ContextBar.Context.html" title="class in ca.cgjennings.apps.arkham">ContextBar.Context</a>&nbsp;context)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the button should be visible in the
- current context.</div>
+<div class="block">Returns <code>true</code> if the button should be visible in the current
+ context.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
@@ -318,15 +318,15 @@ implements <a href="ContextBar.Button.html" title="interface in ca.cgjennings.ap
 <li class="blockList">
 <h4>CommandButton</h4>
 <pre>public&nbsp;CommandButton&#8203;(<a href="commands/AbstractCommand.html" title="class in ca.cgjennings.apps.arkham.commands">AbstractCommand</a>&nbsp;command)</pre>
-<div class="block">Creates a new <code>CommandButton</code> for the specified command.
- The button's unique ID will be determined by reading the command's
+<div class="block">Creates a new <code>CommandButton</code> for the specified command. The
+ button's unique ID will be determined by reading the command's
  <a href="commands/AbstractCommand.html#BUTTON_ID_KEY"><code>AbstractCommand.BUTTON_ID_KEY</code></a> key.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>command</code> - the command to generate a button for</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the command is <code>null</code> or
- the command does not define a button ID value</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the command is <code>null</code> or the
+ command does not define a button ID value</dd>
 </dl>
 </li>
 </ul>
@@ -338,8 +338,8 @@ implements <a href="ContextBar.Button.html" title="interface in ca.cgjennings.ap
 <h4>CommandButton</h4>
 <pre>public&nbsp;CommandButton&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;id,
                      <a href="commands/AbstractCommand.html" title="class in ca.cgjennings.apps.arkham.commands">AbstractCommand</a>&nbsp;command)</pre>
-<div class="block">Creates a new <code>CommandButton</code> for the specified command.
- The command will use the specified ID.</div>
+<div class="block">Creates a new <code>CommandButton</code> for the specified command. The
+ command will use the specified ID.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>command</code> - the command to generate a button for</dd>
@@ -474,16 +474,16 @@ implements <a href="ContextBar.Button.html" title="interface in ca.cgjennings.ap
 <h4>isEnabledInCurrentContext</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isEnabledInCurrentContext&#8203;(<a href="ContextBar.Context.html" title="class in ca.cgjennings.apps.arkham">ContextBar.Context</a>&nbsp;context)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="ContextBar.Button.html#isEnabledInCurrentContext(ca.cgjennings.apps.arkham.ContextBar.Context)">ContextBar.Button</a></code></span></div>
-<div class="block">Returns <code>true</code> if the button should be enabled in the
- current context.</div>
+<div class="block">Returns <code>true</code> if the button should be enabled in the current
+ context.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="ContextBar.Button.html#isEnabledInCurrentContext(ca.cgjennings.apps.arkham.ContextBar.Context)">isEnabledInCurrentContext</a></code>&nbsp;in interface&nbsp;<code><a href="ContextBar.Button.html" title="interface in ca.cgjennings.apps.arkham">ContextBar.Button</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>context</code> - information about the current context</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the button should be enabled (ignored if
- not visible)</dd>
+<dd><code>true</code> if the button should be enabled (ignored if not
+ visible)</dd>
 </dl>
 </li>
 </ul>
@@ -495,14 +495,14 @@ implements <a href="ContextBar.Button.html" title="interface in ca.cgjennings.ap
 <h4>isVisibleInCurrentContext</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isVisibleInCurrentContext&#8203;(<a href="ContextBar.Context.html" title="class in ca.cgjennings.apps.arkham">ContextBar.Context</a>&nbsp;context)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="ContextBar.Button.html#isVisibleInCurrentContext(ca.cgjennings.apps.arkham.ContextBar.Context)">ContextBar.Button</a></code></span></div>
-<div class="block">Returns <code>true</code> if the button should be visible in the
- current context. A button should be invisible if it can never be
- enabled in the current context, and disabled if it is not currently
- usable due to a temporary restriction. For example, any text field
- can be copied from if there is an active selection, so a copy button
- should always be visible but should be enabled only if there is a
- selection. On the other hand, a command that only works for script
- code should be visible only when editing a script.</div>
+<div class="block">Returns <code>true</code> if the button should be visible in the current
+ context. A button should be invisible if it can never be enabled in
+ the current context, and disabled if it is not currently usable due
+ to a temporary restriction. For example, any text field can be copied
+ from if there is an active selection, so a copy button should always
+ be visible but should be enabled only if there is a selection. On the
+ other hand, a command that only works for script code should be
+ visible only when editing a script.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="ContextBar.Button.html#isVisibleInCurrentContext(ca.cgjennings.apps.arkham.ContextBar.Context)">isVisibleInCurrentContext</a></code>&nbsp;in interface&nbsp;<code><a href="ContextBar.Button.html" title="interface in ca.cgjennings.apps.arkham">ContextBar.Button</a></code></dd>

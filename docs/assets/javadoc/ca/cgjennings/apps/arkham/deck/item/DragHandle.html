@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -387,9 +387,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>hitTest</h4>
 <pre class="methodSignature">public abstract&nbsp;boolean&nbsp;hitTest&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Point2D.html?is-external=true" title="class or interface in java.awt.geom" class="externalLink">Point2D</a>&nbsp;p)</pre>
-<div class="block">Returns <code>true</code> if a point is over this handle. When this
- method returns <code>true</code>, dragging the mouse would begin a drag
- operation.</div>
+<div class="block">Returns <code>true</code> if a point is over this handle. When this method
+ returns <code>true</code>, dragging the mouse would begin a drag operation.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>p</code> - the point to test</dd>

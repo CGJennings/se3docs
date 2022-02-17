@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -135,10 +135,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  from the crypto API. In the the event that the algorithm is unavailable or
  throws an exception while computing the checksum, the caller will be shielded
  from this failure while the checksum would normally be computed. However,
- when the checksum is requested after such an algorithm failure,
- <code>null</code> will be returned, and if a failed checksum is compared to a
- known checksum using <a href="#matches(java.lang.String)"><code>matches(java.lang.String)</code></a>, it will always return
- <code>true</code>.
+ when the checksum is requested after such an algorithm failure, <code>null</code>
+ will be returned, and if a failed checksum is compared to a known checksum
+ using <a href="#matches(java.lang.String)"><code>matches(java.lang.String)</code></a>, it will always return <code>true</code>.
 
  <p>
  <b>Security Warning:</b> Note that this class is only intended to be used to
@@ -217,8 +216,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#matches(java.lang.String)">matches</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;checksumString)</code></th>
 <td class="colLast">
-<div class="block">Completes the checksum and returns <code>true</code> if this checksum
- matches a previously produced checksum string.</div>
+<div class="block">Completes the checksum and returns <code>true</code> if this checksum matches
+ a previously produced checksum string.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -397,18 +396,18 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>matches</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;matches&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;checksumString)</pre>
-<div class="block">Completes the checksum and returns <code>true</code> if this checksum
- matches a previously produced checksum string. If there has been any
- internal failure of the checksum algorithm, or if the comparison string
- is <code>null</code>, this method will return <code>true</code>.</div>
+<div class="block">Completes the checksum and returns <code>true</code> if this checksum matches
+ a previously produced checksum string. If there has been any internal
+ failure of the checksum algorithm, or if the comparison string is
+ <code>null</code>, this method will return <code>true</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>checksumString</code> - the checksum string to compare to</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>false</code> if and only if the comparison string is not
- <code>null</code>, this check has non-<code>null</code> checksum bytes,
- and this checksum's checksum string is equal to the comparison string
- except for differences in letter case</dd>
+ <code>null</code>, this check has non-<code>null</code> checksum bytes, and this
+ checksum's checksum string is equal to the comparison string except for
+ differences in letter case</dd>
 </dl>
 </li>
 </ul>

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -222,10 +222,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <h4>refresh</h4>
 <pre class="methodSignature">boolean&nbsp;refresh()</pre>
 <div class="block">Indicates to the item that it should recreate its content because the
- external file has changed. This method should return <code>true</code> if
- the item is updated successfully, or <code>false</code> if the item could
- not be updated, typically because the new item is incompatible with the
- old one.</div>
+ external file has changed. This method should return <code>true</code> if the
+ item is updated successfully, or <code>false</code> if the item could not be
+ updated, typically because the new item is incompatible with the old one.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the item was replaced</dd>

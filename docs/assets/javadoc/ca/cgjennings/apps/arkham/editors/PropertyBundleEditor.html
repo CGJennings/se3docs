@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -357,8 +357,8 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isAttached()">isAttached</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this editor is currently attached to the
- document tab strip.</div>
+<div class="block">Returns <code>true</code> if this editor is currently attached to the document
+ tab strip.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -604,8 +604,8 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>command</code> - the command to be performed</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if this commandable wishes to handle the
- command (even if it cannot execute the command currently)</dd>
+<dd><code>true</code> if this commandable wishes to handle the command
+ (even if it cannot execute the command currently)</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../commands/Commands.html" title="class in ca.cgjennings.apps.arkham.commands"><code>Commands</code></a></dd>
 </dl>
@@ -626,7 +626,7 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
  The base class provides a framework for handling common document
  commands. To use the framework, override <a href="../AbstractStrangeEonsEditor.html#canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)"><code>AbstractStrangeEonsEditor.canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a> to
  return true for the commands you wish to support. Then this method will
- call the following methods (as appropriate):      <a href="../AbstractStrangeEonsEditor.html#clear()"><code>AbstractStrangeEonsEditor.clear()</code></a>, <a href="../AbstractStrangeEonsEditor.html#save()"><code>AbstractStrangeEonsEditor.save()</code></a>, <a href="../AbstractStrangeEonsEditor.html#saveAs()"><code>AbstractStrangeEonsEditor.saveAs()</code></a>, <a href="../AbstractStrangeEonsEditor.html#export()"><code>AbstractStrangeEonsEditor.export()</code></a>,
+ call the following methods (as appropriate): null null null     <a href="../AbstractStrangeEonsEditor.html#clear()"><code>AbstractStrangeEonsEditor.clear()</code></a>, <a href="../AbstractStrangeEonsEditor.html#save()"><code>AbstractStrangeEonsEditor.save()</code></a>, <a href="../AbstractStrangeEonsEditor.html#saveAs()"><code>AbstractStrangeEonsEditor.saveAs()</code></a>, <a href="../AbstractStrangeEonsEditor.html#export()"><code>AbstractStrangeEonsEditor.export()</code></a>,
  <a href="../AbstractStrangeEonsEditor.html#spinOff()"><code>AbstractStrangeEonsEditor.spinOff()</code></a>, or <a href="../AbstractStrangeEonsEditor.html#print()"><code>AbstractStrangeEonsEditor.print()</code></a>. These methods handle common
  details of implementing these commands, then pass control to a matching
  implementation method which the subclass must override to perform those
@@ -709,11 +709,11 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
 <h4>setAttached</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setAttached&#8203;(boolean&nbsp;attach)</pre>
 <div class="block">Sets whether this editor is attached to the document tab strip. If
- <code>true</code>, the editor is attached; this is the default state for
- new editors. If <code>false</code>, the editor is detached from the tab
- strip. When detached, the editor appears in its own floating window
- separate from the main application window. The editor reattaches when the
- window is closed.</div>
+ <code>true</code>, the editor is attached; this is the default state for new
+ editors. If <code>false</code>, the editor is detached from the tab strip.
+ When detached, the editor appears in its own floating window separate
+ from the main application window. The editor reattaches when the window
+ is closed.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>attach</code> - if <code>true</code>, attaches the window to the tab strip</dd>
@@ -727,8 +727,8 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
 <li class="blockList">
 <h4>isAttached</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isAttached()</pre>
-<div class="block">Returns <code>true</code> if this editor is currently attached to the
- document tab strip.</div>
+<div class="block">Returns <code>true</code> if this editor is currently attached to the document
+ tab strip.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the editor is attached</dd>

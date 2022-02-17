@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -211,7 +211,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>reset</h4>
 <pre class="methodSignature">public static&nbsp;void&nbsp;reset()</pre>
-<div class="block">For testing and experimentation. Resets all hints to their default values.</div>
+<div class="block">For testing and experimentation. Resets all hints to their default
+ values.</div>
 </li>
 </ul>
 <a id="set(java.lang.Object,java.lang.Object,ca.cgjennings.apps.arkham.sheet.RenderTarget)">
@@ -223,13 +224,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public static&nbsp;void&nbsp;set&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;key,
                        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;value,
                        <a href="RenderTarget.html" title="enum in ca.cgjennings.apps.arkham.sheet">RenderTarget</a>&nbsp;renderTarget)</pre>
-<div class="block">For testing and experimentation.
- Changes a hint for all render targets or the specified target.</div>
+<div class="block">For testing and experimentation. Changes a hint for all render targets or
+ the specified target.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - the <code>RenderingHint</code> key</dd>
 <dd><code>value</code> - the <code>RenderingHint</code> key's desired value</dd>
-<dd><code>renderTarget</code> - the render target value to affect, or null to change all targets</dd>
+<dd><code>renderTarget</code> - the render target value to affect, or null to change
+ all targets</dd>
 </dl>
 </li>
 </ul>
@@ -241,12 +243,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>set</h4>
 <pre class="methodSignature">public static&nbsp;void&nbsp;set&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
                        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</pre>
-<div class="block">For testing and experimentation.
- Changes a hint for all render targets or the specified target.
- Uses reflection to specify keys and values from strings, which do not have to
- include the KEY_ or VALUE_ prefix.
+<div class="block">For testing and experimentation. Changes a hint for all render targets or
+ the specified target. Uses reflection to specify keys and values from
+ strings, which do not have to include the KEY_ or VALUE_ prefix.
 
- <p>Example script use:
+ <p>
+ Example script use:
 
  <pre>
  arkham.sheet.StandardHints.reset();
@@ -261,8 +263,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  </pre></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>key</code> - a string name matching a rendering hint key, <code>KEY_</code> prefix optional</dd>
-<dd><code>value</code> - a string name matching a rendering hint key, <code>VALUE_</code> prefix optional</dd>
+<dd><code>key</code> - a string name matching a rendering hint key, <code>KEY_</code>
+ prefix optional</dd>
+<dd><code>value</code> - a string name matching a rendering hint key, <code>VALUE_</code>
+ prefix optional</dd>
 </dl>
 </li>
 </ul>

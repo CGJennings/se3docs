@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -131,9 +131,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">LinearHistory&lt;P&gt;</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
-<div class="block">A <code>LinearHistory</code> captures a sequence of user actions and allows
- them to be replayed, as with the forward/back operations in a browsing
- interface.</div>
+<div class="block">A <code>LinearHistory</code> captures a sequence of user actions and allows them
+ to be replayed, as with the forward/back operations in a browsing interface.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -306,8 +305,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public&nbsp;void&nbsp;go&#8203;(<a href="LinearHistory.html" title="type parameter in LinearHistory">P</a>&nbsp;position)</pre>
 <div class="block">Go directly to a new position (without using forward or back) and display
  the position. Any positions after the current position in the history are
- deleted, and the new <code>position</code> becomes the end of the
- history.</div>
+ deleted, and the new <code>position</code> becomes the end of the history.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>position</code> - </dd>

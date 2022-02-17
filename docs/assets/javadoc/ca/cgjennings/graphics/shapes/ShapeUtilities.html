@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -330,8 +330,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  curve</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if shape is <code>null</code></dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>flatness</code> or
- <code>limit</code> is less than 0</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>flatness</code> or <code>limit</code> is
+ less than 0</dd>
 </dl>
 </li>
 </ul>
@@ -356,8 +356,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  curve</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if shape is <code>null</code></dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>flatness</code> or
- <code>limit</code> is less than 0</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>flatness</code> or <code>limit</code> is
+ less than 0</dd>
 </dl>
 </li>
 </ul>
@@ -385,8 +385,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  curve</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if shape is <code>null</code></dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>flatness</code> or
- <code>limit</code> is less than 0</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>flatness</code> or <code>limit</code> is
+ less than 0</dd>
 </dl>
 </li>
 </ul>
@@ -462,8 +462,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Returns a <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Shape.html?is-external=true" title="class or interface in java.awt" class="externalLink"><code>Shape</code></a> that is the exclusive or of the two shape
  parameters: areas in one shape or the other will be included in the
  returned shape, excluding areas that are present in both. This is
- equivalent to <code>union(lhs,subtract(lhs,rhs))</code>. Neither of
- original shapes will be modified.</div>
+ equivalent to <code>union(lhs,subtract(lhs,rhs))</code>. Neither of original
+ shapes will be modified.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>lhs</code> - the primary shape</dd>

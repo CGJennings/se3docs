@@ -26,14 +26,14 @@
     catch(err) {
     }
 //-->
-var data = {"i0":9,"i1":9,"i2":9,"i3":9};
+var data = {"i0":9,"i1":9,"i2":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -212,20 +212,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>static <a href="../ca/cgjennings/io/EscapedLineReader.html" title="class in ca.cgjennings.io">EscapedLineReader</a></code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createReader(java.lang.String)">createReader</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;resource)</code></th>
-<td class="colLast">
-<div class="block">Creates a suitable reader for a tile set resource.</div>
-</td>
-</tr>
-<tr id="i2" class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="TileSet.Entry.html" title="class in gamedata">TileSet.Entry</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTileSetEntries()">getTileSetEntries</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns all entries from all added tile sets as an immutable set.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getTileSets()">getTileSets</a></span>()</code></th>
 <td class="colLast">
@@ -291,7 +284,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <a id="getTileSetEntries()">
 <!--   -->
 </a>
-<ul class="blockList">
+<ul class="blockListLast">
 <li class="blockList">
 <h4>getTileSetEntries</h4>
 <pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="TileSet.Entry.html" title="class in gamedata">TileSet.Entry</a>&gt;&nbsp;getTileSetEntries()</pre>
@@ -299,22 +292,6 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the set of added tile set entries</dd>
-</dl>
-</li>
-</ul>
-<a id="createReader(java.lang.String)">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>createReader</h4>
-<pre class="methodSignature">public static&nbsp;<a href="../ca/cgjennings/io/EscapedLineReader.html" title="class in ca.cgjennings.io">EscapedLineReader</a>&nbsp;createReader&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;resource)</pre>
-<div class="block">Creates a suitable reader for a tile set resource.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>resource</code> - the resource location of the tile set</dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>a line reader that handles</dd>
 </dl>
 </li>
 </ul>

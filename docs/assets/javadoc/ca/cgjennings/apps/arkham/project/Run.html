@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -195,8 +195,8 @@ extends <a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.proj
          <a href="Task.html" title="class in ca.cgjennings.apps.arkham.project">Task</a>&nbsp;task,
          <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;member)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this action can be performed on the
- specified member of a project, project or a task.</div>
+<div class="block">Returns <code>true</code> if this action can be performed on the specified
+ member of a project, project or a task.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -281,8 +281,8 @@ extends <a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.proj
 <div class="block">Creates a new run or debug action, depending on the specified parameter.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>debugAction</code> - if <code>true</code>, creates a debug action rather
- than a plain run action</dd>
+<dd><code>debugAction</code> - if <code>true</code>, creates a debug action rather than a
+ plain run action</dd>
 </dl>
 </li>
 </ul>
@@ -361,15 +361,14 @@ extends <a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.proj
                          <a href="Task.html" title="class in ca.cgjennings.apps.arkham.project">Task</a>&nbsp;task,
                          <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;member)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="TaskAction.html#appliesTo(ca.cgjennings.apps.arkham.project.Project,ca.cgjennings.apps.arkham.project.Task,ca.cgjennings.apps.arkham.project.Member)">TaskAction</a></code></span></div>
-<div class="block">Returns <code>true</code> if this action can be performed on the
- specified member of a project, project or a task. If the project itself
- is the target, <code>task</code> and <code>member</code> will be
- <code>null</code>. If a task is the target, then <code>member</code> will
- be null. If an error occurs while executing the task, then it is the
- action's responsibility to inform the user. This method can return
- <code>false</code> to indicate that if the action is being applied to
- multiple members, it should stop immediately rather than continue to the
- next member.</div>
+<div class="block">Returns <code>true</code> if this action can be performed on the specified
+ member of a project, project or a task. If the project itself is the
+ target, <code>task</code> and <code>member</code> will be <code>null</code>. If a task
+ is the target, then <code>member</code> will be null. If an error occurs while
+ executing the task, then it is the action's responsibility to inform the
+ user. This method can return <code>false</code> to indicate that if the action
+ is being applied to multiple members, it should stop immediately rather
+ than continue to the next member.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="TaskAction.html#appliesTo(ca.cgjennings.apps.arkham.project.Project,ca.cgjennings.apps.arkham.project.Task,ca.cgjennings.apps.arkham.project.Member)">appliesTo</a></code>&nbsp;in class&nbsp;<code><a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.project">TaskAction</a></code></dd>
@@ -393,13 +392,12 @@ extends <a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.proj
                        <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;member)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="TaskAction.html#perform(ca.cgjennings.apps.arkham.project.Project,ca.cgjennings.apps.arkham.project.Task,ca.cgjennings.apps.arkham.project.Member)">TaskAction</a></code></span></div>
 <div class="block">Perform this action on a member of a project, a project or a task. If the
- project itself is the target, <code>task</code> and <code>member</code>
- will be <code>null</code>. If a task is the target, then
- <code>member</code> will be null. If an error occurs while executing the
- task, then it is the action's responsibility to inform the user. This
- method can return <code>false</code> to indicate that if the action is
- being applied to multiple members, it should stop immediately rather than
- continue to the next member.</div>
+ project itself is the target, <code>task</code> and <code>member</code> will be
+ <code>null</code>. If a task is the target, then <code>member</code> will be null.
+ If an error occurs while executing the task, then it is the action's
+ responsibility to inform the user. This method can return <code>false</code>
+ to indicate that if the action is being applied to multiple members, it
+ should stop immediately rather than continue to the next member.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="TaskAction.html#perform(ca.cgjennings.apps.arkham.project.Project,ca.cgjennings.apps.arkham.project.Task,ca.cgjennings.apps.arkham.project.Member)">perform</a></code>&nbsp;in class&nbsp;<code><a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.project">TaskAction</a></code></dd>
@@ -422,11 +420,11 @@ extends <a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.proj
                        <a href="Project.html" title="class in ca.cgjennings.apps.arkham.project">Project</a>&nbsp;project,
                        <a href="Task.html" title="class in ca.cgjennings.apps.arkham.project">Task</a>&nbsp;task,
                        <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;member)</pre>
-<div class="block">Run a script file as if using this action. The variables
- <code>project</code>, <code>task</code>, and <code>member</code> are
- passed to the script but may be <code>null</code> if the script does not
- rely on them. If the script is currently being edited by the application,
- any unsaved changes will be saved before running.</div>
+<div class="block">Run a script file as if using this action. The variables <code>project</code>,
+ <code>task</code>, and <code>member</code> are passed to the script but may be
+ <code>null</code> if the script does not rely on them. If the script is
+ currently being edited by the application, any unsaved changes will be
+ saved before running.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>f</code> - the script file to run</dd>

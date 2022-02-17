@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -146,8 +146,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 
  <p>
  It is guaranteed that every cached object that has no other references to it
- will be cleared before an <code>OutOfMemory</code> error is thrown. The cache
- can also be <a href="#clear()">cleared on demand</a>, and individual objects
+ will be cleared before an <code>OutOfMemory</code> error is thrown. The cache can
+ also be <a href="#clear()">cleared on demand</a>, and individual objects
  <a href="#remove(I)">removed</a>.
 
  <p>
@@ -356,8 +356,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <p>
  If the requested resource does not exist, the result depends on the
  subclass implementation. Some subclasses may return a default resource to
- stand in for the requested resource. Others may return <code>null</code>
- or throw an exception.</div>
+ stand in for the requested resource. Others may return <code>null</code> or
+ throw an exception.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>identifier</code> - the identifier of the resource to obtain</dd>
@@ -448,8 +448,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  The base class will return the original identifier without changes.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>identifier</code> - the non-<code>null</code>identifier to convert to
- canonical form</dd>
+<dd><code>identifier</code> - the non-<code>null</code>identifier to convert to canonical
+ form</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the canonical form of the identifier</dd>
 </dl>
@@ -468,10 +468,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Returns <code>true</code> if this resource should be cached.
 
  <p>
- The base class returns <code>true</code>. Subclasses can override this if
- they wish to decide whether individual objects should be cached. For
- example, a subclass might only allow caching of objects if the identifier
- refers to a read-only storage facility.</div>
+ The base class returns <code>true</code>. Subclasses can override this if they
+ wish to decide whether individual objects should be cached. For example,
+ a subclass might only allow caching of objects if the identifier refers
+ to a read-only storage facility.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>canonicalIdentifier</code> - the identifier of the resource object</dd>
@@ -536,8 +536,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  support tools.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>allowClearing</code> - if <code>false</code>, then the returned metrics
- instance cannot be used to clear the cache</dd>
+<dd><code>allowClearing</code> - if <code>false</code>, then the returned metrics instance
+ cannot be used to clear the cache</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a new cache metrics instance that reflects the state of this
  cache</dd>

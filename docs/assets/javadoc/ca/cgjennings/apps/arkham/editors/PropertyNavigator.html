@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -132,6 +132,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt>All Implemented Interfaces:</dt>
 <dd><code><a href="Navigator.html" title="interface in ca.cgjennings.apps.arkham.editors">Navigator</a></code></dd>
 </dl>
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><code><a href="ResourceFileNavigator.html" title="class in ca.cgjennings.apps.arkham.editors">ResourceFileNavigator</a></code></dd>
+</dl>
 <hr>
 <pre>public class <span class="typeNameLabel">PropertyNavigator</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>
@@ -162,6 +166,10 @@ implements <a href="Navigator.html" title="interface in ca.cgjennings.apps.arkha
 </tr>
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">PropertyNavigator</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(boolean)">PropertyNavigator</a></span>&#8203;(boolean&nbsp;ignoreColons)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -231,10 +239,19 @@ implements <a href="Navigator.html" title="interface in ca.cgjennings.apps.arkha
 <a id="&lt;init&gt;()">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>PropertyNavigator</h4>
 <pre>public&nbsp;PropertyNavigator()</pre>
+</li>
+</ul>
+<a id="&lt;init&gt;(boolean)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>PropertyNavigator</h4>
+<pre>public&nbsp;PropertyNavigator&#8203;(boolean&nbsp;ignoreColons)</pre>
 </li>
 </ul>
 </li>

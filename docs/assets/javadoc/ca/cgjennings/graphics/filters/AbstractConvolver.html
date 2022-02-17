@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -165,15 +165,15 @@ extends <a href="AbstractImagewiseFilter.html" title="class in ca.cgjennings.gra
 
  <p>
  <a href="#isAlphaPremultiplied()"><code>isAlphaPremultiplied()</code></a> determines whether the alpha channel is
- premultiplied. The default is <code>true</code>. Subclasses may choose to
- override this if they are calling the
+ premultiplied. The default is <code>true</code>. Subclasses may choose to override
+ this if they are calling the
  <a href="#filter(int%5B%5D,int%5B%5D,int,int)">integer array</a> filtering method
  with pixel data that is already premultiplied.
 
  <p>
  <a href="#isAlphaFiltered()"><code>isAlphaFiltered()</code></a> determines whether the alpha channel is retained
- after filtering. The default is <code>true</code>. If <code>false</code>, the
- alpha channel will be completely opaque after filtering.
+ after filtering. The default is <code>true</code>. If <code>false</code>, the alpha
+ channel will be completely opaque after filtering.
 
  <p>
  <b>In-place filtering:</b> Unless otherwise noted, filters based on this
@@ -273,9 +273,9 @@ extends <a href="AbstractImagewiseFilter.html" title="class in ca.cgjennings.gra
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isAlphaPremultiplied()">isAlphaPremultiplied</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if images with an alpha channel will
- automatically be converted to a premultiplied format during the
- convolution, and converted back afterward.</div>
+<div class="block">Returns <code>true</code> if images with an alpha channel will automatically
+ be converted to a premultiplied format during the convolution, and
+ converted back afterward.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -365,9 +365,9 @@ extends <a href="AbstractImagewiseFilter.html" title="class in ca.cgjennings.gra
 <li class="blockList">
 <h4>isAlphaPremultiplied</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isAlphaPremultiplied()</pre>
-<div class="block">Returns <code>true</code> if images with an alpha channel will
- automatically be converted to a premultiplied format during the
- convolution, and converted back afterward.</div>
+<div class="block">Returns <code>true</code> if images with an alpha channel will automatically
+ be converted to a premultiplied format during the convolution, and
+ converted back afterward.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if images are premultiplied automatically</dd>
@@ -381,9 +381,9 @@ extends <a href="AbstractImagewiseFilter.html" title="class in ca.cgjennings.gra
 <li class="blockList">
 <h4>isAlphaFiltered</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isAlphaFiltered()</pre>
-<div class="block">Returns <code>true</code> if the alpha channel is filtered. If this
- returns <code>false</code>, the alpha channel is set to 255. For more
- complex channel value manipulation, see <a href="ChannelSwapFilter.html" title="class in ca.cgjennings.graphics.filters"><code>ChannelSwapFilter</code></a>.</div>
+<div class="block">Returns <code>true</code> if the alpha channel is filtered. If this returns
+ <code>false</code>, the alpha channel is set to 255. For more complex channel
+ value manipulation, see <a href="ChannelSwapFilter.html" title="class in ca.cgjennings.graphics.filters"><code>ChannelSwapFilter</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the alpha channel is processed by the filter</dd>

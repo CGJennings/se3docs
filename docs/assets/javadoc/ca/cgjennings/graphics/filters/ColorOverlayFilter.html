@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -394,9 +394,9 @@ extends <a href="AbstractPixelwiseFilter.html" title="class in ca.cgjennings.gra
 <li class="blockList">
 <h4>getColor</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true" title="class or interface in java.awt" class="externalLink">Color</a>&nbsp;getColor()</pre>
-<div class="block">Returns the colour to overlay as a <code>Color</code> object. If the
- colour was set from a colour object, this is not guaranteed to be the
- same instance.</div>
+<div class="block">Returns the colour to overlay as a <code>Color</code> object. If the colour
+ was set from a colour object, this is not guaranteed to be the same
+ instance.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the colour value to be applied</dd>
@@ -412,8 +412,8 @@ extends <a href="AbstractPixelwiseFilter.html" title="class in ca.cgjennings.gra
 <pre class="methodSignature">public&nbsp;void&nbsp;setAlphaInverted&#8203;(boolean&nbsp;invert)</pre>
 <div class="block">Sets whether the alpha channel will be inverted. The default is
  <code>false</code>, so that the overlay is applied to the interior of the
- shape(s) defined by the alpha channel. If set to <code>true</code>, the
- effect is to apply the overlay to the exterior of that shape.</div>
+ shape(s) defined by the alpha channel. If set to <code>true</code>, the effect
+ is to apply the overlay to the exterior of that shape.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>invert</code> - if      <code>true</code>, alpha values are inverted</dd>

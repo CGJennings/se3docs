@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -157,16 +157,15 @@ implements <a href="../../math/Fn.html" title="interface in ca.cgjennings.math">
  <p>
  Subclasses must implement <a href="#f(double)"><code>f(double)</code></a> to compute the specific function to be
  applied to the channels, and must call <a href="#functionChanged()"><code>functionChanged()</code></a> whenever
- the filter settings change in a way that affects the output of
- <code>f</code>.
+ the filter settings change in a way that affects the output of <code>f</code>.
 
  <p>
- The transfer function <code>f</code> is passed values between 0 and 1
- inclusive, representing the brightness of the red, green, or blue channels
- for a given sample (pixel). The transfer function then returns new values
- representing how the input value should change as a result of applying the
- filter. As a simple example, the following transfer function would brighten
- images by 10 percent:
+ The transfer function <code>f</code> is passed values between 0 and 1 inclusive,
+ representing the brightness of the red, green, or blue channels for a given
+ sample (pixel). The transfer function then returns new values representing
+ how the input value should change as a result of applying the filter. As a
+ simple example, the following transfer function would brighten images by 10
+ percent:
  <pre>
  public float f( float x ) {
      return x * 1.10f;

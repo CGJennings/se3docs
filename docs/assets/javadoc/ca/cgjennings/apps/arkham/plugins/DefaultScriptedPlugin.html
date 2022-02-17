@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -182,8 +182,8 @@ implements <a href="Plugin.html" title="interface in ca.cgjennings.apps.arkham.p
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String)">DefaultScriptedPlugin</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;scriptId)</code></th>
 <td class="colLast">
 <div class="block">Creates a new scripted plug-in for the script identified by
- <code>scriptId</code>, which is a script identifier in the format
- specified for plug-in root files, namely a resource path for script file,
+ <code>scriptId</code>, which is a script identifier in the format specified
+ for plug-in root files, namely a resource path for script file,
  optionally starting with the prefix <tt>script:</tt>.</div>
 </td>
 </tr>
@@ -305,8 +305,8 @@ implements <a href="Plugin.html" title="interface in ca.cgjennings.apps.arkham.p
 <td class="colLast">
 <div class="block">
  <b>Scripted Plug-in Notes:</b> The default implementation returns the
- result of calling the script's <code>isUsable()</code> function, if any,
- and otherwise returns <code>true</code>.</div>
+ result of calling the script's <code>isUsable()</code> function, if any, and
+ otherwise returns <code>true</code>.</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
@@ -314,8 +314,8 @@ implements <a href="Plugin.html" title="interface in ca.cgjennings.apps.arkham.p
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext,boolean)">showPlugin</a></span>&#8203;(<a href="PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins">PluginContext</a>&nbsp;context,
           boolean&nbsp;show)</code></th>
 <td class="colLast">
-<div class="block"><b>Scripted Plug-in Notes:</b> If called with <code>show == true</code>,
- calls the script's <code>run()</code> function, if any.</div>
+<div class="block"><b>Scripted Plug-in Notes:</b> If called with <code>show == true</code>, calls
+ the script's <code>run()</code> function, if any.</div>
 </td>
 </tr>
 <tr id="i13" class="rowColor">
@@ -358,8 +358,8 @@ implements <a href="Plugin.html" title="interface in ca.cgjennings.apps.arkham.p
 <h4>DefaultScriptedPlugin</h4>
 <pre>public&nbsp;DefaultScriptedPlugin&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;scriptId)</pre>
 <div class="block">Creates a new scripted plug-in for the script identified by
- <code>scriptId</code>, which is a script identifier in the format
- specified for plug-in root files, namely a resource path for script file,
+ <code>scriptId</code>, which is a script identifier in the format specified
+ for plug-in root files, namely a resource path for script file,
  optionally starting with the prefix <tt>script:</tt>. (The script file
  name presented to the script monkey and script debugger will never have
  this prefix.)</div>
@@ -389,21 +389,21 @@ implements <a href="Plugin.html" title="interface in ca.cgjennings.apps.arkham.p
 <div class="block"><b>Scripted Plug-in Notes:</b> The script will be evaluated (so any code
  with global scope will be run). Then, if the script defines an
  <code>initialize()</code> function, it will be called, and if it returns
- <code>false</code>, then this method will return <code>false</code>.
- Otherwise, the plug-in's name, description, type, and version will be
- obtained and cached by calling the functions <code>getName()</code>,
+ <code>false</code>, then this method will return <code>false</code>. Otherwise, the
+ plug-in's name, description, type, and version will be obtained and
+ cached by calling the functions <code>getName()</code>,
  <code>getDescription()</code>, <code>getPluginType()</code>, and
  <code>getVersion()</code>, respectively.
  <p>
  This method will be called once for each registered plug-in before any
  other methods are called. It allows the plug-in to perform any required
  initialization prior to the plug-in being shown. If initialization
- succeeds, it should return <code>true</code>. Otherwise, the plug-in will
- not be made available to the user. If this method returns
- <code>false</code>, a warning is logged but no other action is taken.
- This allows the plug-in the opportunity to display its own error message.
- If this method throws an exception, a dialog is displayed that will
- include the message text of the exception (if any).
+ succeeds, it should return <code>true</code>. Otherwise, the plug-in will not
+ be made available to the user. If this method returns <code>false</code>, a
+ warning is logged but no other action is taken. This allows the plug-in
+ the opportunity to display its own error message. If this method throws
+ an exception, a dialog is displayed that will include the message text of
+ the exception (if any).
  <p>
  Sometimes a plug-in is instantiated only in order to determine its name,
  description, version, and type. In such cases, the plug-in's
@@ -426,8 +426,8 @@ implements <a href="Plugin.html" title="interface in ca.cgjennings.apps.arkham.p
 <dd><code>context</code> - a <a href="PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>PluginContext</code></a> instance that can be accessed
  during initialization</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the plug-in was initialized;
- <code>false</code> if initialization failed</dd>
+<dd><code>true</code> if the plug-in was initialized; <code>false</code> if
+ initialization failed</dd>
 </dl>
 </li>
 </ul>
@@ -452,11 +452,11 @@ implements <a href="Plugin.html" title="interface in ca.cgjennings.apps.arkham.p
  terminates abnormally.
  <li>This method will never be called more than once for a given
  <i>instance</i> of a plug-in. (More than one instance of an
- <code>ACTIVATED</code> or <code>INJECTED</code> plug-in may be created
- during a session.)
+ <code>ACTIVATED</code> or <code>INJECTED</code> plug-in may be created during a
+ session.)
  <li>For <code>ACTIVATED</code> plug-ins that are currently showing,
- <a href="Plugin.html#showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext,boolean)"><code>Plugin.showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a> will be called with <code>false</code> (in order to
- hide the plug-in) before this method is called.
+ <a href="Plugin.html#showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext,boolean)"><code>Plugin.showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a> will be called with <code>false</code> (in order to hide
+ the plug-in) before this method is called.
  </ol></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -476,11 +476,11 @@ implements <a href="Plugin.html" title="interface in ca.cgjennings.apps.arkham.p
  <p>
  Returns the name that should be shown to the user for this plug-in,
  ideally in the UI locale. This should be a short name that describes the
- plug-in's purpose in three words or less. If this is an
- <code>ACTIVATED</code> plug-in, the returned value should ideally be a
- verb phrase that describes the effect of activating the plug-in, such as
- "Select All Lines". It should not include extraneous information, such as
- the author's name; this kind of information can be included in the
+ plug-in's purpose in three words or less. If this is an <code>ACTIVATED</code>
+ plug-in, the returned value should ideally be a verb phrase that
+ describes the effect of activating the plug-in, such as "Select All
+ Lines". It should not include extraneous information, such as the
+ author's name; this kind of information can be included in the
  description string or, ideally, in the plug-in's catalogue description.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -542,18 +542,18 @@ implements <a href="Plugin.html" title="interface in ca.cgjennings.apps.arkham.p
 <h4>showPlugin</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;showPlugin&#8203;(<a href="PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins">PluginContext</a>&nbsp;context,
                        boolean&nbsp;show)</pre>
-<div class="block"><b>Scripted Plug-in Notes:</b> If called with <code>show == true</code>,
- calls the script's <code>run()</code> function, if any. If called with
- <code>show == false</code>, calls the script's <code>hide()</code>
- function, if any.
+<div class="block"><b>Scripted Plug-in Notes:</b> If called with <code>show == true</code>, calls
+ the script's <code>run()</code> function, if any. If called with
+ <code>show == false</code>, calls the script's <code>hide()</code> function, if
+ any.
  <p>
  Show (activate) or hide (deactivate) the plug-in. This method is most
  often called when the user activates the plug-in's menu item.
  <p>
- Typically, the value of <code>show</code> will be the opposite of the
- value currently returned by <a href="Plugin.html#isPluginShowing()"><code>Plugin.isPluginShowing()</code></a>. If the plug-in uses
- a modeless dialog box, then <code>isPluginShowing</code> should thus
- return <code>true</code> when the dialog is showing.
+ Typically, the value of <code>show</code> will be the opposite of the value
+ currently returned by <a href="Plugin.html#isPluginShowing()"><code>Plugin.isPluginShowing()</code></a>. If the plug-in uses a
+ modeless dialog box, then <code>isPluginShowing</code> should thus return
+ <code>true</code> when the dialog is showing.
  <p>
  If a modal dialog is shown, or if an operation that blocks the calling
  thread is performed, then it will not be possible for the user to
@@ -561,9 +561,9 @@ implements <a href="Plugin.html" title="interface in ca.cgjennings.apps.arkham.p
  <code>isPluginShowing</code> can be implemented to simply return
  <code>false</code>.
  <p>
- <b>Notes:</b> This method is never called for <code>EXTENSION</code>
- plug-ins. It is only called once, after initialization, for
- <code>INJECTED</code> plug-ins.</div>
+ <b>Notes:</b> This method is never called for <code>EXTENSION</code> plug-ins.
+ It is only called once, after initialization, for <code>INJECTED</code>
+ plug-ins.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Plugin.html#showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext,boolean)">showPlugin</a></code>&nbsp;in interface&nbsp;<code><a href="Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a></code></dd>
@@ -584,11 +584,10 @@ implements <a href="Plugin.html" title="interface in ca.cgjennings.apps.arkham.p
 <h4>isPluginShowing</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isPluginShowing()</pre>
 <div class="block"><b>Scripted Plug-in Notes:</b> Returns the value of calling the script's
- <code>isShowing()</code> function, if any. Otherwise, returns
- <code>false</code>.
+ <code>isShowing()</code> function, if any. Otherwise, returns <code>false</code>.
  <p>
- Returns <code>true</code> if this plug-in's interface is currently
- showing, or, if it has no interface, if it is currently running.
+ Returns <code>true</code> if this plug-in's interface is currently showing,
+ or, if it has no interface, if it is currently running.
  <p>
  If the plug-in blocks the event thread when shown (for example, if it
  displays a modal dialog), then this method can simply return
@@ -689,8 +688,7 @@ implements <a href="Plugin.html" title="interface in ca.cgjennings.apps.arkham.p
  an image file with the same name (and in the same folder) as the plug-in
  script, but with a <tt>.png</tt> or <tt>.jp2</tt> extension instead of a
  <tt>.js</tt> extension. If no image file is found with one of these
- names, or if the image file cannot be read, <code>null</code> is
- returned.
+ names, or if the image file cannot be read, <code>null</code> is returned.
  <p>
  Returns an image that may be used to represent the plug-in on a menu or
  toolbar. Strange Eons may resize the image to fit available space, and
@@ -713,13 +711,13 @@ implements <a href="Plugin.html" title="interface in ca.cgjennings.apps.arkham.p
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isPluginUsable()</pre>
 <div class="block"><p>
  <b>Scripted Plug-in Notes:</b> The default implementation returns the
- result of calling the script's <code>isUsable()</code> function, if any,
- and otherwise returns <code>true</code>.
+ result of calling the script's <code>isUsable()</code> function, if any, and
+ otherwise returns <code>true</code>.
  <p>
- Returns <code>true</code> if it is currently valid to activate this
- plug-in by calling <a href="Plugin.html#showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext,boolean)"><code>Plugin.showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a>. For example, a plug-in that only
- works on components from a certain game might return <code>false</code>
- if the currently edited component is not from that game.
+ Returns <code>true</code> if it is currently valid to activate this plug-in by
+ calling <a href="Plugin.html#showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext,boolean)"><code>Plugin.showPlugin(ca.cgjennings.apps.arkham.plugins.PluginContext, boolean)</code></a>. For example, a plug-in that only works on
+ components from a certain game might return <code>false</code> if the
+ currently edited component is not from that game.
 
  <p>
  <b>Note:</b> Plug-ins must still check for any conditions that are
@@ -734,8 +732,8 @@ implements <a href="Plugin.html" title="interface in ca.cgjennings.apps.arkham.p
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Plugin.html#isPluginUsable()">isPluginUsable</a></code>&nbsp;in interface&nbsp;<code><a href="Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the plug-in can be successfully and
- meaningfully activated</dd>
+<dd><code>true</code> if the plug-in can be successfully and meaningfully
+ activated</dd>
 </dl>
 </li>
 </ul>
@@ -754,8 +752,8 @@ implements <a href="Plugin.html" title="interface in ca.cgjennings.apps.arkham.p
  Return a string that describes the key stroke that is the preferred
  default accelerator key for this plug-in. In most cases, you should
  return <code>null</code> for no default accelerator. The user can always
- assign an accelerator key of their choice to an <code>ACTIVATED</code>
- plug-in through the plug-in manager dialog.
+ assign an accelerator key of their choice to an <code>ACTIVATED</code> plug-in
+ through the plug-in manager dialog.
  <p>
  The format of the string is similar to that used by
  <code>javax.swing.KeyStroke</code>, but the special modifier
@@ -766,8 +764,8 @@ implements <a href="Plugin.html" title="interface in ca.cgjennings.apps.arkham.p
  another command.)
 
  <p>
- <b>Note:</b> An accelerator key is only meaningful for
- <code>ACTIVATED</code> plug-ins.</div>
+ <b>Note:</b> An accelerator key is only meaningful for <code>ACTIVATED</code>
+ plug-ins.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Plugin.html#getDefaultAcceleratorKey()">getDefaultAcceleratorKey</a></code>&nbsp;in interface&nbsp;<code><a href="Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a></code></dd>

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -150,12 +150,12 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="EditablePageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">EditablePageItem</a></code>, <code><a href="FlippablePageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">FlippablePageItem</a></code>, <code><a href="MasterOpacityStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">MasterOpacityStyle</a></code>, <code><a href="OutlineStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">OutlineStyle</a></code>, <code><a href="PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a></code>, <code><a href="SizablePageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">SizablePageItem</a></code>, <code><a href="Style.html" title="interface in ca.cgjennings.apps.arkham.deck.item">Style</a></code>, <code><a href="UserBleedMarginStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">UserBleedMarginStyle</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Cloneable</a></code></dd>
+<dd><code><a href="EditablePageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">EditablePageItem</a></code>, <code><a href="FlippablePageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">FlippablePageItem</a></code>, <code><a href="OpacityStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">OpacityStyle</a></code>, <code><a href="OutlineStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">OutlineStyle</a></code>, <code><a href="PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a></code>, <code><a href="SizablePageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">SizablePageItem</a></code>, <code><a href="Style.html" title="interface in ca.cgjennings.apps.arkham.deck.item">Style</a></code>, <code><a href="UserBleedMarginStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">UserBleedMarginStyle</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Cloneable</a></code></dd>
 </dl>
 <hr>
 <pre>public class <span class="typeNameLabel">CustomTile</span>
 extends <a href="Tile.html" title="class in ca.cgjennings.apps.arkham.deck.item">Tile</a>
-implements <a href="EditablePageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">EditablePageItem</a>, <a href="SizablePageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">SizablePageItem</a>, <a href="UserBleedMarginStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">UserBleedMarginStyle</a>, <a href="OutlineStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">OutlineStyle</a>, <a href="MasterOpacityStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">MasterOpacityStyle</a></pre>
+implements <a href="EditablePageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">EditablePageItem</a>, <a href="SizablePageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">SizablePageItem</a>, <a href="UserBleedMarginStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">UserBleedMarginStyle</a>, <a href="OutlineStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">OutlineStyle</a>, <a href="OpacityStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">OpacityStyle</a></pre>
 <div class="block">Resizable, customizable tiles that can be placed in a deck.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -286,7 +286,7 @@ implements <a href="EditablePageItem.html" title="interface in ca.cgjennings.app
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>protected void</code></td>
+<td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#clearCachedImages()">clearCachedImages</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Clear any cached image data held by this object.</div>
@@ -367,8 +367,7 @@ implements <a href="EditablePageItem.html" title="interface in ca.cgjennings.app
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isBleedMarginMarked()">isBleedMarginMarked</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this item should have crop marks added to
- it.</div>
+<div class="block">Returns <code>true</code> if this item should have crop marks added to it.</div>
 </td>
 </tr>
 <tr id="i13" class="rowColor">
@@ -651,8 +650,8 @@ implements <a href="EditablePageItem.html" title="interface in ca.cgjennings.app
  item has no handles, returns <code>null</code>.
  <p>
  Concrete subclasses should create an array of handles on demand and cache
- them in the <code>dragHandles</code> field in order to ensure that
- handles are not shared between copies of the item. Example:
+ them in the <code>dragHandles</code> field in order to ensure that handles are
+ not shared between copies of the item. Example:
  <pre>
  public DragHandle[] getDragHandles() {
      if( dragHandles == null ) {
@@ -697,9 +696,9 @@ implements <a href="EditablePageItem.html" title="interface in ca.cgjennings.app
 <h4>isBleedMarginMarked</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isBleedMarginMarked()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="PageItem.html#isBleedMarginMarked()">PageItem</a></code></span></div>
-<div class="block">Returns <code>true</code> if this item should have crop marks added to
- it. The crop marks will be placed <a href="PageItem.html#getBleedMargin()"><code>PageItem.getBleedMargin()</code></a> points from
- the ends of each edge.</div>
+<div class="block">Returns <code>true</code> if this item should have crop marks added to it. The
+ crop marks will be placed <a href="PageItem.html#getBleedMargin()"><code>PageItem.getBleedMargin()</code></a> points from the ends
+ of each edge.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="PageItem.html#isBleedMarginMarked()">isBleedMarginMarked</a></code>&nbsp;in interface&nbsp;<code><a href="PageItem.html" title="interface in ca.cgjennings.apps.arkham.deck.item">PageItem</a></code></dd>
@@ -781,7 +780,7 @@ implements <a href="EditablePageItem.html" title="interface in ca.cgjennings.app
 <div class="block">Returns the opacity (alpha) for the tile.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="MasterOpacityStyle.html#getOpacity()">getOpacity</a></code>&nbsp;in interface&nbsp;<code><a href="MasterOpacityStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">MasterOpacityStyle</a></code></dd>
+<dd><code><a href="OpacityStyle.html#getOpacity()">getOpacity</a></code>&nbsp;in interface&nbsp;<code><a href="OpacityStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">OpacityStyle</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the opacity</dd>
 </dl>
@@ -797,7 +796,7 @@ implements <a href="EditablePageItem.html" title="interface in ca.cgjennings.app
 <div class="block">Set the opacity (alpha) of the tile.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="MasterOpacityStyle.html#setOpacity(float)">setOpacity</a></code>&nbsp;in interface&nbsp;<code><a href="MasterOpacityStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">MasterOpacityStyle</a></code></dd>
+<dd><code><a href="OpacityStyle.html#setOpacity(float)">setOpacity</a></code>&nbsp;in interface&nbsp;<code><a href="OpacityStyle.html" title="interface in ca.cgjennings.apps.arkham.deck.item">OpacityStyle</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>opacity</code> - the opacity to set</dd>
 </dl>
@@ -1045,13 +1044,12 @@ implements <a href="EditablePageItem.html" title="interface in ca.cgjennings.app
 <ul class="blockList">
 <li class="blockList">
 <h4>clearCachedImages</h4>
-<pre class="methodSignature">protected&nbsp;void&nbsp;clearCachedImages()</pre>
+<pre class="methodSignature">public&nbsp;void&nbsp;clearCachedImages()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="AbstractRenderedItem.html#clearCachedImages()">AbstractRenderedItem</a></code></span></div>
 <div class="block">Clear any cached image data held by this object. The base class clears
  any cached oriented results and the MIP map cache (if enabled).
- Subclasses should override this (calling
- <code>super.clearCachedImages</code>) if the <a href="AbstractRenderedItem.html#renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget,double)"><code>AbstractRenderedItem.renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a>
- implementation caches results.</div>
+ Subclasses should override this (calling <code>super.clearCachedImages</code>)
+ if the <a href="AbstractRenderedItem.html#renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget,double)"><code>AbstractRenderedItem.renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a> implementation caches results.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="Tile.html#clearCachedImages()">clearCachedImages</a></code>&nbsp;in class&nbsp;<code><a href="Tile.html" title="class in ca.cgjennings.apps.arkham.deck.item">Tile</a></code></dd>

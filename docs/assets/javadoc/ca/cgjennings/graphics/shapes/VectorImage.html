@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -299,12 +299,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
            double&nbsp;height,
            boolean&nbsp;fitToSize)</pre>
 <div class="block">Paints the image at the specified location and size in the user
- coordinates of the provided graphics context. If the
- <code>fitToSize</code> parameter is <code>true</code>, then the aspect
- ratio of the vector image will be maintained. If the aspect ratio of the
- vector image does not match the specified width and height, then the
- vector image will be scaled to just fit within the specified size, and
- centered over the drawing area.</div>
+ coordinates of the provided graphics context. If the <code>fitToSize</code>
+ parameter is <code>true</code>, then the aspect ratio of the vector image will
+ be maintained. If the aspect ratio of the vector image does not match the
+ specified width and height, then the vector image will be scaled to just
+ fit within the specified size, and centered over the drawing area.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>g</code> - the graphics context to render into</dd>
@@ -312,8 +311,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dd><code>y</code> - the y-coordinate to render at</dd>
 <dd><code>width</code> - the width to paint the image at</dd>
 <dd><code>height</code> - the height to paint the image at</dd>
-<dd><code>fitToSize</code> - if <code>true</code>, the aspect ratio of the vector
- image will be maintained</dd>
+<dd><code>fitToSize</code> - if <code>true</code>, the aspect ratio of the vector image
+ will be maintained</dd>
 </dl>
 </li>
 </ul>
@@ -327,8 +326,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
            <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Rectangle2D.html?is-external=true" title="class or interface in java.awt.geom" class="externalLink">Rectangle2D</a>&nbsp;paintRectangle,
            boolean&nbsp;fitToSize)</pre>
 <div class="block">Paints the image to cover the specified rectangle in the user coordinates
- of the provided graphics context. If the <code>fitToSize</code> parameter
- is <code>true</code>, then the aspect ratio of the vector image will be
+ of the provided graphics context. If the <code>fitToSize</code> parameter is
+ <code>true</code>, then the aspect ratio of the vector image will be
  maintained. If the aspect ratio of the vector image does not match the
  specified width and height, then the vector image will be scaled to just
  fit within the specified size, and centered over the drawing area.</div>
@@ -336,8 +335,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>g</code> - the graphics context to render into</dd>
 <dd><code>paintRectangle</code> - the rectangle that the image should cover</dd>
-<dd><code>fitToSize</code> - if <code>true</code>, the aspect ratio of the vector
- image will be maintained</dd>
+<dd><code>fitToSize</code> - if <code>true</code>, the aspect ratio of the vector image
+ will be maintained</dd>
 </dl>
 </li>
 </ul>
@@ -368,17 +367,17 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
                                 int&nbsp;height,
                                 boolean&nbsp;fitToSize)</pre>
 <div class="block">Creates a raster image from the vector image with the specified width and
- height (in pixels). If the <code>fitToSize</code> parameter is
- <code>true</code>, then the aspect ratio of the vector image will be
- maintained. If the aspect ratio of the vector image does not match the
- specified width and height, then the vector image will be scaled to just
- fit within the specified size, and centered over the drawing area.</div>
+ height (in pixels). If the <code>fitToSize</code> parameter is <code>true</code>,
+ then the aspect ratio of the vector image will be maintained. If the
+ aspect ratio of the vector image does not match the specified width and
+ height, then the vector image will be scaled to just fit within the
+ specified size, and centered over the drawing area.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>width</code> - the image width, in pixels</dd>
 <dd><code>height</code> - the image height, in pixels</dd>
-<dd><code>fitToSize</code> - if <code>true</code>, the aspect ratio of the vector
- image will be maintained</dd>
+<dd><code>fitToSize</code> - if <code>true</code>, the aspect ratio of the vector image
+ will be maintained</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a rendering of the vector image at the specified size</dd>
 </dl>

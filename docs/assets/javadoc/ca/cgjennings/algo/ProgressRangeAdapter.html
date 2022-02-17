@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -226,8 +226,8 @@ implements <a href="ProgressListener.html" title="interface in ca.cgjennings.alg
                             float&nbsp;rangeHigh,
                             <a href="ProgressListener.html" title="interface in ca.cgjennings.algo">ProgressListener</a>&nbsp;adaptee)</pre>
 <div class="block">Creates a new range adapter. The input progress range of 0..1 will be
- mapped to the range <code>rangeLow</code>..<code>rangeHigh</code> before
- passing the progress message on to the adaptee.</div>
+ mapped to the range <code>rangeLow</code>..<code>rangeHigh</code> before passing
+ the progress message on to the adaptee.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>rangeLow</code> - the progress value to report when the input progress is 0</dd>
@@ -262,8 +262,8 @@ implements <a href="ProgressListener.html" title="interface in ca.cgjennings.alg
                               float&nbsp;progress)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="ProgressListener.html#progressUpdate(java.lang.Object,float)">ProgressListener</a></code></span></div>
 <div class="block">Called to indicate that an algorithm has made progress towards
- completion. If the listener returns <code>true</code>, it is a hint that
- the operation should be cancelled if possible.</div>
+ completion. If the listener returns <code>true</code>, it is a hint that the
+ operation should be cancelled if possible.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="ProgressListener.html#progressUpdate(java.lang.Object,float)">progressUpdate</a></code>&nbsp;in interface&nbsp;<code><a href="ProgressListener.html" title="interface in ca.cgjennings.algo">ProgressListener</a></code></dd>
@@ -271,8 +271,8 @@ implements <a href="ProgressListener.html" title="interface in ca.cgjennings.alg
 <dd><code>source</code> - the source of the progress event</dd>
 <dd><code>progress</code> - a value between 0 (none) and 1 (algorithm complete)</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the callee wishes to hint that the algorithm
- be cancelled</dd>
+<dd><code>true</code> if the callee wishes to hint that the algorithm be
+ cancelled</dd>
 </dl>
 </li>
 </ul>

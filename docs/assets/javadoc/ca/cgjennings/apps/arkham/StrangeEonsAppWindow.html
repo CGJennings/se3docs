@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -507,16 +507,16 @@ implements <a href="commands/Commandable.html" title="interface in ca.cgjennings
 <td class="colFirst"><code>abstract <a href="project/Project.html" title="class in ca.cgjennings.apps.arkham.project">Project</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOpenProject()">getOpenProject</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the current open <a href="project/Project.html" title="class in ca.cgjennings.apps.arkham.project"><code>Project</code></a>, or <code>null</code> if no
- project is open.</div>
+<div class="block">Returns the current open <a href="project/Project.html" title="class in ca.cgjennings.apps.arkham.project"><code>Project</code></a>, or <code>null</code> if no project
+ is open.</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
 <td class="colFirst"><code>abstract <a href="project/ProjectView.html" title="class in ca.cgjennings.apps.arkham.project">ProjectView</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getOpenProjectView()">getOpenProjectView</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the view of the open project, or <code>null</code> if no project
- is open.</div>
+<div class="block">Returns the view of the open project, or <code>null</code> if no project is
+ open.</div>
 </td>
 </tr>
 <tr id="i18" class="altColor">
@@ -972,11 +972,11 @@ implements <a href="commands/Commandable.html" title="interface in ca.cgjennings
 <pre class="methodSignature">public abstract&nbsp;void&nbsp;setWaitCursor()</pre>
 <div class="block">Sets a wait cursor on the application frame. This method nests, so if a
  wait cursor is set multiple times, the normal interaction cursor will not
- be restored until <code>setDefaultCursor()</code> is called a number of
- times equal to the number of times this method was called. This method
- should be paired with <code>setDefaultCursor()</code> using a
- <code>try ... finally</code> block to ensure that the cursor is properly
- restored even if an exception is thrown.:
+ be restored until <code>setDefaultCursor()</code> is called a number of times
+ equal to the number of times this method was called. This method should
+ be paired with <code>setDefaultCursor()</code> using a <code>try ... finally</code>
+ block to ensure that the cursor is properly restored even if an exception
+ is thrown.:
  <pre>
  app.setWaitCursor();
  try {
@@ -1039,9 +1039,9 @@ implements <a href="commands/Commandable.html" title="interface in ca.cgjennings
  files with unsaved changes. This method will only return if the user
  cancels the exit action.
  <p>
- If <code>restart</code> is <code>true</code>, then an attempt is made to
- relaunch the application after exiting. This may be useful, for example,
- when a plug-in update is pending.</div>
+ If <code>restart</code> is <code>true</code>, then an attempt is made to relaunch
+ the application after exiting. This may be useful, for example, when a
+ plug-in update is pending.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>restart</code> - restart after exit</dd>
@@ -1062,8 +1062,8 @@ implements <a href="commands/Commandable.html" title="interface in ca.cgjennings
  whether or not to restart.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>message</code> - the reason for the restart; if <code>null</code>, a
- default message is displayed</dd>
+<dd><code>message</code> - the reason for the restart; if <code>null</code>, a default
+ message is displayed</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.1a8</dd>
 </dl>
@@ -1076,8 +1076,8 @@ implements <a href="commands/Commandable.html" title="interface in ca.cgjennings
 <li class="blockList">
 <h4>getOpenProjectView</h4>
 <pre class="methodSignature">public abstract&nbsp;<a href="project/ProjectView.html" title="class in ca.cgjennings.apps.arkham.project">ProjectView</a>&nbsp;getOpenProjectView()</pre>
-<div class="block">Returns the view of the open project, or <code>null</code> if no project
- is open.</div>
+<div class="block">Returns the view of the open project, or <code>null</code> if no project is
+ open.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the open project's view, or <code>null</code></dd>
@@ -1115,8 +1115,8 @@ implements <a href="commands/Commandable.html" title="interface in ca.cgjennings
                                         int&nbsp;index)</pre>
 <div class="block">Adds a custom component to the top of the application window. The
  component is added at a specific position with respect to the existing
- components. If <code>index</code> is -1, <code>comp</code> will be added
- to the end of the custom component bar. This is equivalent to
+ components. If <code>index</code> is -1, <code>comp</code> will be added to the end
+ of the custom component bar. This is equivalent to
  <code>addCustomComponent( comp )</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -1162,8 +1162,8 @@ implements <a href="commands/Commandable.html" title="interface in ca.cgjennings
 <dd><code>comp</code> - the component to remove</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>comp</code> is <code>null</code></dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>comp</code> has not been added
- as a custom component</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>comp</code> has not been added as a
+ custom component</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.00a13</dd>
 </dl>
@@ -1306,8 +1306,8 @@ implements <a href="commands/Commandable.html" title="interface in ca.cgjennings
 <li class="blockList">
 <h4>getOpenProject</h4>
 <pre class="methodSignature">public abstract&nbsp;<a href="project/Project.html" title="class in ca.cgjennings.apps.arkham.project">Project</a>&nbsp;getOpenProject()</pre>
-<div class="block">Returns the current open <a href="project/Project.html" title="class in ca.cgjennings.apps.arkham.project"><code>Project</code></a>, or <code>null</code> if no
- project is open.</div>
+<div class="block">Returns the current open <a href="project/Project.html" title="class in ca.cgjennings.apps.arkham.project"><code>Project</code></a>, or <code>null</code> if no project
+ is open.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the project currently open in the application window</dd>
@@ -1323,11 +1323,10 @@ implements <a href="commands/Commandable.html" title="interface in ca.cgjennings
 <li class="blockList">
 <h4>setOpenProject</h4>
 <pre class="methodSignature">public abstract&nbsp;boolean&nbsp;setOpenProject&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;projectFolderOrCrateFile)</pre>
-<div class="block">Opens the project contained in the folder <code>projectFolder</code>. If
- the project can be opened and there is already a project open in the
- editor, the current project is closed automatically before opening the
- new project. If the project cannot be opened, an error message is
- displayed.</div>
+<div class="block">Opens the project contained in the folder <code>projectFolder</code>. If the
+ project can be opened and there is already a project open in the editor,
+ the current project is closed automatically before opening the new
+ project. If the project cannot be opened, an error message is displayed.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>projectFolderOrCrateFile</code> - the base folder of a project or an

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -141,10 +141,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <p>
  New clip players are constructed by providing a reference to the audio file
  that contains the clip to play. This is either a <code>File</code> or a
- <code>URL</code>. The constructor also specifies whether a clip should be
- looped. An unlooped clip will play once each time <a href="#play()"><code>play()</code></a> is called.
- A looped clip will continue to play, repeating as necessary, until it is
- explicitly stopped.</div>
+ <code>URL</code>. The constructor also specifies whether a clip should be looped.
+ An unlooped clip will play once each time <a href="#play()"><code>play()</code></a> is called. A looped
+ clip will continue to play, repeating as necessary, until it is explicitly
+ stopped.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.1</dd>
@@ -211,8 +211,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isClipValid()">isClipValid</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the clip was loaded successfully and the
- system is able to play it.</div>
+<div class="block">Returns <code>true</code> if the clip was loaded successfully and the system
+ is able to play it.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -261,8 +261,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>ClipPlayer</h4>
 <pre>public&nbsp;ClipPlayer&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;audioClip,
                   boolean&nbsp;looped)</pre>
-<div class="block">Create a <code>ClipPlayer</code> for an audio clip stored in a file. If
- the clip cannot be read from the file, the player will do nothing when
+<div class="block">Create a <code>ClipPlayer</code> for an audio clip stored in a file. If the
+ clip cannot be read from the file, the player will do nothing when
  <a href="#play()"><code>play()</code></a> is called and <a href="#isClipValid()"><code>isClipValid()</code></a> will return
  <code>false</code>.</div>
 <dl>
@@ -280,9 +280,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>ClipPlayer</h4>
 <pre>public&nbsp;ClipPlayer&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net" class="externalLink">URL</a>&nbsp;audioClip,
                   boolean&nbsp;looped)</pre>
-<div class="block">Create a <code>ClipPlayer</code> for a an audio clip stored at a URL. If
- the clip cannot be read, the player will do nothing when <a href="#play()"><code>play()</code></a>
- is called and <a href="#isClipValid()"><code>isClipValid()</code></a> will return <code>false</code>.</div>
+<div class="block">Create a <code>ClipPlayer</code> for a an audio clip stored at a URL. If the
+ clip cannot be read, the player will do nothing when <a href="#play()"><code>play()</code></a> is
+ called and <a href="#isClipValid()"><code>isClipValid()</code></a> will return <code>false</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>audioClip</code> - the location of the clip to load</dd>
@@ -341,8 +341,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isClipValid</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isClipValid()</pre>
-<div class="block">Returns <code>true</code> if the clip was loaded successfully and the
- system is able to play it.</div>
+<div class="block">Returns <code>true</code> if the clip was loaded successfully and the system
+ is able to play it.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if playing the clip will produce audio</dd>

@@ -26,14 +26,14 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":9,"i6":9,"i7":10,"i8":9,"i9":9,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10,"i40":10,"i41":10,"i42":10,"i43":10,"i44":9,"i45":10,"i46":10,"i47":10,"i48":10,"i49":10,"i50":10,"i51":10,"i52":9,"i53":10,"i54":10,"i55":10,"i56":9,"i57":10,"i58":9,"i59":9,"i60":9,"i61":10,"i62":10,"i63":10,"i64":10,"i65":10,"i66":10,"i67":10,"i68":10,"i69":10,"i70":10,"i71":10,"i72":10,"i73":10,"i74":10,"i75":10,"i76":10,"i77":10,"i78":10,"i79":10,"i80":9,"i81":9,"i82":9,"i83":10,"i84":9};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":9,"i6":9,"i7":10,"i8":9,"i9":9,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10,"i40":10,"i41":10,"i42":10,"i43":10,"i44":9,"i45":10,"i46":10,"i47":10,"i48":10,"i49":10,"i50":10,"i51":10,"i52":9,"i53":10,"i54":10,"i55":10,"i56":9,"i57":10,"i58":10,"i59":9,"i60":9,"i61":9,"i62":10,"i63":10,"i64":10,"i65":10,"i66":10,"i67":10,"i68":10,"i69":10,"i70":10,"i71":10,"i72":10,"i73":10,"i74":10,"i75":10,"i76":10,"i77":10,"i78":10,"i79":10,"i80":10,"i81":9,"i82":9,"i83":9,"i84":10,"i85":9};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -132,10 +132,6 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt>All Implemented Interfaces:</dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Iterable</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;</code></dd>
 </dl>
-<dl>
-<dt>Direct Known Subclasses:</dt>
-<dd><code><a href="../gamedata/Game.MasterSettings.html" title="class in gamedata">Game.MasterSettings</a></code></dd>
-</dl>
 <hr>
 <pre>public class <span class="typeNameLabel">Settings</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>
@@ -172,15 +168,15 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  (in the sense of programming language theory) within the scope defined by its
  parent. The most common place where plug-in developers encounter such scopes
  is with the private settings instances found in <a href="../ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component"><code>GameComponent</code></a>s. These
- are always children of the <a href="../gamedata/Game.html#getMasterSettings()"><code>master settings</code></a> for
- the game that the component belongs to, which in turn is a child of the
+ are always children of the <a href="../gamedata/Game.html#getSettings()"><code>game settings</code></a> for the
+ game that the component belongs to, which in turn is a child of the
  <a href="#getShared()"><code>shared global settings instance</code></a>. Thus, plug-in developers
  can store the default values for settings used by the game component in the
- game's master settings instance. This avoids unnecessary duplication and
- makes it easier to change those defaults in future versions of the plug-in.
- It also allows the end user to "hack" the layout of a component by modifying
- the component's private settings to override values normally defined in the
- game's master settings, such as image templates and text regions.
+ game's settings instance. This avoids unnecessary duplication and makes it
+ easier to change those defaults in future versions of the plug-in. It also
+ allows the end user to "hack" the layout of a component by modifying the
+ component's private settings to override values normally defined in the
+ game's settings, such as image templates and text regions.
 
  <p>
  Most settings instances have a chain of parents that ultimately leads back to
@@ -234,16 +230,16 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="Settings.Region.html" title="class in resources">Settings.Region</a></span></code></th>
 <td class="colLast">
-<div class="block">A specialized <code>Rectangle</code> that is more easily converted to or
- from a setting value.</div>
+<div class="block">A specialized <code>Rectangle</code> that is more easily converted to or from
+ a setting value.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static class&nbsp;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="Settings.Region2D.html" title="class in resources">Settings.Region2D</a></span></code></th>
 <td class="colLast">
-<div class="block">A specialized <code>Rectangle2D</code> that is more easily converted to
- or from a setting value.</div>
+<div class="block">A specialized <code>Rectangle2D</code> that is more easily converted to or
+ from a setting value.</div>
 </td>
 </tr>
 </table>
@@ -292,8 +288,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">Settings</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Creates a new, empty <code>Settings</code> scope whose parent is the
- shared global scope.</div>
+<div class="block">Creates a new, empty <code>Settings</code> scope whose parent is the shared
+ global scope.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -346,8 +342,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#addSettingsFrom(resources.Settings)">addSettingsFrom</a></span>&#8203;(<a href="Settings.html" title="class in resources">Settings</a>&nbsp;sourceSettings)</code></th>
 <td class="colLast">
-<div class="block">Adds entries from another <code>Settings</code> instance to this
- instance.</div>
+<div class="block">Adds entries from another <code>Settings</code> instance to this instance.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -393,8 +388,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#forProperties(java.lang.String,java.util.Properties)">forProperties</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
              <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html?is-external=true" title="class or interface in java.util" class="externalLink">Properties</a>&nbsp;toWrap)</code></th>
 <td class="colLast">
-<div class="block">Returns a view of an existing <code>java.util.Properties</code> object as
- a <code>Settings</code> object.</div>
+<div class="block">Returns a view of an existing <code>java.util.Properties</code> object as a
+ <code>Settings</code> object.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
@@ -600,8 +595,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <td class="colFirst"><code><a href="Settings.html" title="class in resources">Settings</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getParent()">getParent</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the parent scope of this <code>Settings</code>, or
- <code>null</code> if this is the shared scope.</div>
+<div class="block">Returns the parent scope of this <code>Settings</code>, or <code>null</code> if
+ this is the shared scope.</div>
 </td>
 </tr>
 <tr id="i36" class="altColor">
@@ -679,8 +674,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <td class="colFirst"><code>static <a href="Settings.html" title="class in resources">Settings</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getShared()">getShared</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the <code>Settings</code> instance that represents the shared
- global scope.</div>
+<div class="block">Returns the <code>Settings</code> instance that represents the shared global
+ scope.</div>
 </td>
 </tr>
 <tr id="i45" class="rowColor">
@@ -715,8 +710,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <td class="colLast">
 <div class="block">Returns a text-fitting method constant from the value of the specified
  key;
- <i>the key name will have <code>-text-fitting</code> appended if
- necessary.</div>
+ <i>the key name will have <code>-text-fitting</code> appended if necessary.</div>
 </td>
 </tr>
 <tr id="i49" class="rowColor">
@@ -784,20 +778,25 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 </td>
 </tr>
 <tr id="i57" class="rowColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isSerializedParent()">isSerializedParent</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i58" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html?is-external=true" title="class or interface in java.util" class="externalLink">Iterator</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#iterator()">iterator</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns an iterator over the keys in this settings instance.</div>
 </td>
 </tr>
-<tr id="i58" class="altColor">
+<tr id="i59" class="rowColor">
 <td class="colFirst"><code>static double</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#number(java.lang.String)">number</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</code></th>
 <td class="colLast">
 <div class="block">Parses a string into a <code>double</code> value.</div>
 </td>
 </tr>
-<tr id="i59" class="rowColor">
+<tr id="i60" class="altColor">
 <td class="colFirst"><code>static <a href="Settings.Region.html" title="class in resources">Settings.Region</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#region(java.lang.String)">region</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</code></th>
 <td class="colLast">
@@ -805,7 +804,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  integers in the specified value.</div>
 </td>
 </tr>
-<tr id="i60" class="altColor">
+<tr id="i61" class="rowColor">
 <td class="colFirst"><code>static <a href="Settings.Region2D.html" title="class in resources">Settings.Region2D</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#region2D(java.lang.String)">region2D</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</code></th>
 <td class="colLast">
@@ -813,29 +812,28 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  numbers in the specified value.</div>
 </td>
 </tr>
-<tr id="i61" class="rowColor">
+<tr id="i62" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#registerFontFamily(java.lang.String)">registerFontFamily</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key)</code></th>
 <td class="colLast">
 <div class="block">Registers a font family using the value of a setting key.</div>
 </td>
 </tr>
-<tr id="i62" class="altColor">
+<tr id="i63" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#removePropertyChangeListener(java.beans.PropertyChangeListener)">removePropertyChangeListener</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/beans/PropertyChangeListener.html?is-external=true" title="class or interface in java.beans" class="externalLink">PropertyChangeListener</a>&nbsp;listener)</code></th>
 <td class="colLast">
-<div class="block">Removes a listener that was previously added to this
- <code>Settings</code>.</div>
+<div class="block">Removes a listener that was previously added to this <code>Settings</code>.</div>
 </td>
 </tr>
-<tr id="i63" class="rowColor">
+<tr id="i64" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#reset(java.lang.String)">reset</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key)</code></th>
 <td class="colLast">
 <div class="block">Removes the specified key from this scope.</div>
 </td>
 </tr>
-<tr id="i64" class="altColor">
+<tr id="i65" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#set(java.lang.String,java.lang.String)">set</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
    <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</code></th>
@@ -843,7 +841,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <div class="block">Sets the value of a key at this scope.</div>
 </td>
 </tr>
-<tr id="i65" class="rowColor">
+<tr id="i66" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setBoolean(java.lang.String,boolean)">setBoolean</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
           boolean&nbsp;value)</code></th>
@@ -851,27 +849,25 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <div class="block">Sets the value of a key with a <code>boolean</code> value.</div>
 </td>
 </tr>
-<tr id="i66" class="altColor">
+<tr id="i67" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setColor(java.lang.String,java.awt.Color)">setColor</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
         <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true" title="class or interface in java.awt" class="externalLink">Color</a>&nbsp;colour)</code></th>
 <td class="colLast">
 <div class="block">Sets the value of the specified key to a suitable value for the specified
- colour; <i>the key name will have <code>-colour</code> appended if
- necessary.</div>
+ colour; <i>the key name will have <code>-colour</code> appended if necessary.</div>
 </td>
 </tr>
-<tr id="i67" class="rowColor">
+<tr id="i68" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setColour(java.lang.String,java.awt.Color)">setColour</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
          <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true" title="class or interface in java.awt" class="externalLink">Color</a>&nbsp;colour)</code></th>
 <td class="colLast">
 <div class="block">Sets the value of the specified key to a suitable value for the specified
- colour; <i>the key name will have <code>-colour</code> appended if
- necessary.</div>
+ colour; <i>the key name will have <code>-colour</code> appended if necessary.</div>
 </td>
 </tr>
-<tr id="i68" class="altColor">
+<tr id="i69" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setDouble(java.lang.String,double)">setDouble</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
          double&nbsp;value)</code></th>
@@ -880,7 +876,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  <a href="#getDouble(java.lang.String)"><code>getDouble(java.lang.String)</code></a>.</div>
 </td>
 </tr>
-<tr id="i69" class="rowColor">
+<tr id="i70" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setFloat(java.lang.String,float)">setFloat</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
         float&nbsp;value)</code></th>
@@ -889,7 +885,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  <a href="#getFloat(java.lang.String)"><code>getFloat(java.lang.String)</code></a>.</div>
 </td>
 </tr>
-<tr id="i70" class="altColor">
+<tr id="i71" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setInt(java.lang.String,int)">setInt</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
       int&nbsp;value)</code></th>
@@ -898,7 +894,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  <a href="#getInt(java.lang.String)"><code>getInt(java.lang.String)</code></a>.</div>
 </td>
 </tr>
-<tr id="i71" class="rowColor">
+<tr id="i72" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRegion(java.lang.String,resources.Settings.Region)">setRegion</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
          <a href="Settings.Region.html" title="class in resources">Settings.Region</a>&nbsp;region)</code></th>
@@ -907,7 +903,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  <i>the key name will have <code>-region</code> appended if necessary.</div>
 </td>
 </tr>
-<tr id="i72" class="altColor">
+<tr id="i73" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setRegion2D(java.lang.String,resources.Settings.Region2D)">setRegion2D</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
            <a href="Settings.Region2D.html" title="class in resources">Settings.Region2D</a>&nbsp;region)</code></th>
@@ -916,14 +912,14 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  <i>the key name will have <code>-region</code> appended if necessary.</div>
 </td>
 </tr>
-<tr id="i73" class="rowColor">
+<tr id="i74" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSettings(java.lang.String...)">setSettings</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>...&nbsp;keyValuePairs)</code></th>
 <td class="colLast">
 <div class="block">Sets multiple key, value pairs with a single method call.</div>
 </td>
 </tr>
-<tr id="i74" class="altColor">
+<tr id="i75" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setText(java.lang.String,java.lang.String)">setText</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</code></th>
@@ -931,7 +927,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <div class="block">Sets the value of a text key.</div>
 </td>
 </tr>
-<tr id="i75" class="rowColor">
+<tr id="i76" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTint(java.lang.String,float%5B%5D)">setTint</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
        float[]&nbsp;tintConfiguration)</code></th>
@@ -941,7 +937,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  <i>the key name will have <code>-tint</code> appended if necessary.</div>
 </td>
 </tr>
-<tr id="i76" class="altColor">
+<tr id="i77" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setTint(java.lang.String,float,float,float)">setTint</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
        float&nbsp;hFactor,
@@ -953,23 +949,23 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  <i>the key name will have <code>-tint</code> appended if necessary.</div>
 </td>
 </tr>
-<tr id="i77" class="rowColor">
+<tr id="i78" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setYesNo(java.lang.String,boolean)">setYesNo</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
         boolean&nbsp;value)</code></th>
 <td class="colLast">
-<div class="block">Sets the value of a key with a <code>boolean</code> value suitable for
- reading with <a href="#getYesNo(java.lang.String)"><code>getYesNo(java.lang.String)</code></a>.</div>
+<div class="block">Sets the value of a key with a <code>boolean</code> value suitable for reading
+ with <a href="#getYesNo(java.lang.String)"><code>getYesNo(java.lang.String)</code></a>.</div>
 </td>
 </tr>
-<tr id="i78" class="altColor">
+<tr id="i79" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#size()">size</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the number of keys that are defined at this scope.</div>
 </td>
 </tr>
-<tr id="i79" class="rowColor">
+<tr id="i80" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#storeWindowSettings(java.lang.String,java.awt.Window)">storeWindowSettings</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;prefix,
                    <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Window.html?is-external=true" title="class or interface in java.awt" class="externalLink">Window</a>&nbsp;window)</code></th>
@@ -978,7 +974,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  of settings.</div>
 </td>
 </tr>
-<tr id="i80" class="altColor">
+<tr id="i81" class="rowColor">
 <td class="colFirst"><code>static int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#textAlignment(java.lang.String)">textAlignment</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</code></th>
 <td class="colLast">
@@ -986,7 +982,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  <a href="../ca/cgjennings/layout/MarkupRenderer.html" title="class in ca.cgjennings.layout"><code>MarkupRenderer</code></a>.</div>
 </td>
 </tr>
-<tr id="i81" class="rowColor">
+<tr id="i82" class="altColor">
 <td class="colFirst"><code>static <a href="../ca/cgjennings/layout/TextStyle.html" title="class in ca.cgjennings.layout">TextStyle</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#textStyle(java.lang.String,ca.cgjennings.layout.TextStyle)">textStyle</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value,
          <a href="../ca/cgjennings/layout/TextStyle.html" title="class in ca.cgjennings.layout">TextStyle</a>&nbsp;base)</code></th>
@@ -995,26 +991,26 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  specified value.</div>
 </td>
 </tr>
-<tr id="i82" class="altColor">
+<tr id="i83" class="rowColor">
 <td class="colFirst"><code>static float[]</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#tint(java.lang.String)">tint</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</code></th>
 <td class="colLast">
 <div class="block">Returns a tint configuration parsed from a string value.</div>
 </td>
 </tr>
-<tr id="i83" class="rowColor">
+<tr id="i84" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#toString()">toString</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns a string that describes this settings instance.</div>
 </td>
 </tr>
-<tr id="i84" class="altColor">
+<tr id="i85" class="rowColor">
 <td class="colFirst"><code>static boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#yesNo(java.lang.String)">yesNo</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</code></th>
 <td class="colLast">
-<div class="block">Returns a <code>boolean</code> value for an arbitrary string using the
- same rules as those used by <a href="#getYesNo(java.lang.String)"><code>getYesNo(java.lang.String)</code></a>.</div>
+<div class="block">Returns a <code>boolean</code> value for an arbitrary string using the same
+ rules as those used by <a href="#getYesNo(java.lang.String)"><code>getYesNo(java.lang.String)</code></a>.</div>
 </td>
 </tr>
 </table>
@@ -1080,8 +1076,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>Settings</h4>
 <pre>public&nbsp;Settings()</pre>
-<div class="block">Creates a new, empty <code>Settings</code> scope whose parent is the
- shared global scope.</div>
+<div class="block">Creates a new, empty <code>Settings</code> scope whose parent is the shared
+ global scope.</div>
 </li>
 </ul>
 <a id="&lt;init&gt;(resources.Settings)">
@@ -1091,9 +1087,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>Settings</h4>
 <pre>public&nbsp;Settings&#8203;(<a href="Settings.html" title="class in resources">Settings</a>&nbsp;parent)</pre>
-<div class="block">Create a new settings scope within the scope of <code>parent</code>.
- Passing <code>null</code> or <code>Settings.getShared()</code> for the
- parent will use the shared global scope.</div>
+<div class="block">Create a new settings scope within the scope of <code>parent</code>. Passing
+ <code>null</code> or <code>Settings.getShared()</code> for the parent will use the
+ shared global scope.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>parent</code> - the parent scope that will be used to look up keys not
@@ -1120,8 +1116,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>getShared</h4>
 <pre class="methodSignature">public static&nbsp;<a href="Settings.html" title="class in resources">Settings</a>&nbsp;getShared()</pre>
-<div class="block">Returns the <code>Settings</code> instance that represents the shared
- global scope.
+<div class="block">Returns the <code>Settings</code> instance that represents the shared global
+ scope.
 
  <p>
  Currently, attempting to set or reset a setting key in the shared scope
@@ -1140,9 +1136,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>getUser</h4>
 <pre class="methodSignature">public static&nbsp;<a href="Settings.html" title="class in resources">Settings</a>&nbsp;getUser()</pre>
-<div class="block">Returns the <code>Settings</code> instance that represents user settings.
- User settings are used to store data that must persist between program
- runs, such as the recent file list and preference choices.
+<div class="block">Returns the <code>Settings</code> instance that represents user settings. User
+ settings are used to store data that must persist between program runs,
+ such as the recent file list and preference choices.
 
  <p>
  Because user settings take precedence over the standard Strange Eons
@@ -1176,17 +1172,15 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>forProperties</h4>
 <pre class="methodSignature">public static&nbsp;<a href="Settings.html" title="class in resources">Settings</a>&nbsp;forProperties&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name,
                                      <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Properties.html?is-external=true" title="class or interface in java.util" class="externalLink">Properties</a>&nbsp;toWrap)</pre>
-<div class="block">Returns a view of an existing <code>java.util.Properties</code> object as
- a <code>Settings</code> object. The <code>Settings</code> object is fully
- backed by the <code>Properties</code> object: changes to one will affect
- the other.</div>
+<div class="block">Returns a view of an existing <code>java.util.Properties</code> object as a
+ <code>Settings</code> object. The <code>Settings</code> object is fully backed by
+ the <code>Properties</code> object: changes to one will affect the other.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>toWrap</code> - the <code>Properties</code> to be treated as
- <code>Settings</code></dd>
+<dd><code>toWrap</code> - the <code>Properties</code> to be treated as <code>Settings</code></dd>
 <dd><code>name</code> - a name that will be used to help distinguish the
- <code>Settings</code> instance when its <a href="#toString()"><code>toString()</code></a> method is
- called; may be <code>null</code></dd>
+ <code>Settings</code> instance when its <a href="#toString()"><code>toString()</code></a> method is called;
+ may be <code>null</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a view of the properties as settings</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
@@ -1202,8 +1196,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>createNamespace</h4>
 <pre class="methodSignature">public final&nbsp;<a href="Settings.html" title="class in resources">Settings</a>&nbsp;createNamespace&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;namespace)</pre>
 <div class="block">Returns a view of these settings within a namespace. All keys accessed
- through the returned <code>Settings</code> will add the namespace prefix
- to their keys. Namespace names always end in a colon (:), a character not
+ through the returned <code>Settings</code> will add the namespace prefix to
+ their keys. Namespace names always end in a colon (:), a character not
  normally used in key names. If the supplied name does not end in a colon,
  a colon will be added to the name automatically. For example, if the
  namespace "alpha" is created, and the returned settings instance is asked
@@ -1219,11 +1213,10 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>namespace</code> - the space to restrict key names to</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a view of this <code>Settings</code> instance that is confined to
- the specified namespace</dd>
+<dd>a view of this <code>Settings</code> instance that is confined to the
+ specified namespace</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the specified namespace is
- <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the specified namespace is <code>null</code></dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.1 alpha 1</dd>
 </dl>
@@ -1236,8 +1229,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>getParent</h4>
 <pre class="methodSignature">public&nbsp;<a href="Settings.html" title="class in resources">Settings</a>&nbsp;getParent()</pre>
-<div class="block">Returns the parent scope of this <code>Settings</code>, or
- <code>null</code> if this is the shared scope.</div>
+<div class="block">Returns the parent scope of this <code>Settings</code>, or <code>null</code> if
+ this is the shared scope.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the parent scope that will be used to look up keys not defined in
@@ -1387,8 +1380,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  <p>
  <b>Note:</b> While this method is useful in some situations, in most
  cases it is preferable to use <a href="Language.html#getResourceChain(java.lang.String,java.lang.String)"><code>Language.getResourceChain(java.lang.String, java.lang.String)</code></a> to load
- an appropriate sequence of <code>.settings</code> files and merge them
- using <a href="#addSettingsFrom(java.lang.String)"><code>addSettingsFrom(java.lang.String)</code></a>.</div>
+ an appropriate sequence of <code>.settings</code> files and merge them using
+ <a href="#addSettingsFrom(java.lang.String)"><code>addSettingsFrom(java.lang.String)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - the key to fetch the value of</dd>
@@ -1499,8 +1492,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  characters may be inserted using standard Java-style
  <tt>\<!-- -->uXXXX</tt> escape sequences, and must be used for characters
  outside of the ISO8859-15 character set. Note that if you edit the file
- in the built-in code editor,
- the editor will convert such characters to escape sequences automatically.</div>
+ in the built-in code editor, the editor will convert such characters to
+ escape sequences automatically.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>resource</code> - a file relative to the resources folder</dd>
@@ -1533,10 +1526,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>addSettingsFrom</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;addSettingsFrom&#8203;(<a href="Settings.html" title="class in resources">Settings</a>&nbsp;sourceSettings)</pre>
-<div class="block">Adds entries from another <code>Settings</code> instance to this
- instance. If a key is defined in both instances, the current value in
- this instance will be replaced. Keys from the source's parent, if any,
- are not copied.</div>
+<div class="block">Adds entries from another <code>Settings</code> instance to this instance. If
+ a key is defined in both instances, the current value in this instance
+ will be replaced. Keys from the source's parent, if any, are not copied.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>sourceSettings</code> - the settings instance to copy from</dd>
@@ -1554,8 +1546,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  <a href="#get(java.lang.String)"><code>get(java.lang.String)</code></a>, with the following exceptions:
  <ol>
  <li> the key name will have <code>-text</code> appended if necessary
- <li> if the key is not defined, instead of returning <code>null</code>
- the method will return <code>[MISSING: &lt;i&gt;key name&lt;/i&gt;]</code>
+ <li> if the key is not defined, instead of returning <code>null</code> the
+ method will return <code>[MISSING: &lt;i&gt;key name&lt;/i&gt;]</code>
  </ol>
  This is useful when the contents of a key will be displayed directly on a
  game component, as a missing or reset key will be immediately obvious to
@@ -1565,8 +1557,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <dd><code>key</code> - the name of a text key, with or without the <code>-text</code>
  suffix</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the value of the key, with the <code>-text</code> suffix, or a
- special undefined string if the key does not exist</dd>
+<dd>the value of the key, with the <code>-text</code> suffix, or a special
+ undefined string if the key does not exist</dd>
 </dl>
 </li>
 </ul>
@@ -1595,15 +1587,14 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>getYesNo</h4>
 <pre class="methodSignature">public final&nbsp;boolean&nbsp;getYesNo&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key)</pre>
-<div class="block">Returns a boolean value based on the value of <code>key</code>. Any of
- "yes", "true", or "1" are mapped to <code>true</code>, and all other
- values are mapped to <code>false</code> (including <code>null</code>).</div>
+<div class="block">Returns a boolean value based on the value of <code>key</code>. Any of "yes",
+ "true", or "1" are mapped to <code>true</code>, and all other values are
+ mapped to <code>false</code> (including <code>null</code>).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - the name of the setting key</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the value of the setting is "yes", "true",
- or "1"</dd>
+<dd><code>true</code> if the value of the setting is "yes", "true", or "1"</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#setYesNo(java.lang.String,boolean)"><code>setYesNo(java.lang.String, boolean)</code></a></dd>
 </dl>
@@ -1617,16 +1608,15 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>getYesNo</h4>
 <pre class="methodSignature">public final&nbsp;boolean&nbsp;getYesNo&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
                               boolean&nbsp;defaultValue)</pre>
-<div class="block">Returns a boolean value based on the value of <code>key</code>. Any of
- "yes", "true", or "1" are mapped to <code>true</code>, and all other
- values are mapped to <code>false</code>.</div>
+<div class="block">Returns a boolean value based on the value of <code>key</code>. Any of "yes",
+ "true", or "1" are mapped to <code>true</code>, and all other values are
+ mapped to <code>false</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - the name of the setting key</dd>
 <dd><code>defaultValue</code> - the default value to return if the key is not defined</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the value of the setting is "yes", "true",
- or "1"</dd>
+<dd><code>true</code> if the value of the setting is "yes", "true", or "1"</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#setYesNo(java.lang.String,boolean)"><code>setYesNo(java.lang.String, boolean)</code></a></dd>
 </dl>
@@ -1640,8 +1630,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>setYesNo</h4>
 <pre class="methodSignature">public final&nbsp;void&nbsp;setYesNo&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
                            boolean&nbsp;value)</pre>
-<div class="block">Sets the value of a key with a <code>boolean</code> value suitable for
- reading with <a href="#getYesNo(java.lang.String)"><code>getYesNo(java.lang.String)</code></a>.</div>
+<div class="block">Sets the value of a key with a <code>boolean</code> value suitable for reading
+ with <a href="#getYesNo(java.lang.String)"><code>getYesNo(java.lang.String)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - the name of the key to set</dd>
@@ -1664,8 +1654,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - the name of the setting key</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the value of the setting is "yes", "true",
- or "1"</dd>
+<dd><code>true</code> if the value of the setting is "yes", "true", or "1"</dd>
 </dl>
 </li>
 </ul>
@@ -1684,8 +1673,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <dd><code>key</code> - the name of the setting key</dd>
 <dd><code>defaultValue</code> - the default value to return if the key is not defined</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the value of the setting is "yes", "true",
- or "1"</dd>
+<dd><code>true</code> if the value of the setting is "yes", "true", or "1"</dd>
 </dl>
 </li>
 </ul>
@@ -1697,8 +1685,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <h4>setBoolean</h4>
 <pre class="methodSignature">public final&nbsp;void&nbsp;setBoolean&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
                              boolean&nbsp;value)</pre>
-<div class="block">Sets the value of a key with a <code>boolean</code> value. This is a
- cover for <a href="#setYesNo(java.lang.String,boolean)"><code>setYesNo(java.lang.String, boolean)</code></a>.</div>
+<div class="block">Sets the value of a key with a <code>boolean</code> value. This is a cover for
+ <a href="#setYesNo(java.lang.String,boolean)"><code>setYesNo(java.lang.String, boolean)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - the name of the key to set</dd>
@@ -1715,11 +1703,10 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>yesNo</h4>
 <pre class="methodSignature">public static&nbsp;boolean&nbsp;yesNo&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</pre>
-<div class="block">Returns a <code>boolean</code> value for an arbitrary string using the
- same rules as those used by <a href="#getYesNo(java.lang.String)"><code>getYesNo(java.lang.String)</code></a>. Namely:
- any of "yes", "true", or "1" are mapped to <code>true</code>, and all
- other values are mapped to <code>false</code> (including
- <code>null</code>).</div>
+<div class="block">Returns a <code>boolean</code> value for an arbitrary string using the same
+ rules as those used by <a href="#getYesNo(java.lang.String)"><code>getYesNo(java.lang.String)</code></a>. Namely: any
+ of "yes", "true", or "1" are mapped to <code>true</code>, and all other values
+ are mapped to <code>false</code> (including <code>null</code>).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>value</code> - the value to parse</dd>
@@ -1948,8 +1935,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>number</h4>
 <pre class="methodSignature">public static&nbsp;double&nbsp;number&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;value)</pre>
-<div class="block">Parses a string into a <code>double</code> value. The value is parsed as
- if by <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true#parseDouble(java.lang.String)" title="class or interface in java.lang" class="externalLink"><code>Double.parseDouble(java.lang.String)</code></a>, except that surrounding whitespace is
+<div class="block">Parses a string into a <code>double</code> value. The value is parsed as if by
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html?is-external=true#parseDouble(java.lang.String)" title="class or interface in java.lang" class="externalLink"><code>Double.parseDouble(java.lang.String)</code></a>, except that surrounding whitespace is
  ignored.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -1975,8 +1962,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  <a href="#colour(java.lang.String)"><code>colour(java.lang.String)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>key</code> - the the name of a key, with or without the
- <code>-colour</code> suffix</dd>
+<dd><code>key</code> - the the name of a key, with or without the <code>-colour</code>
+ suffix</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a colour created by interpreting the value of the key</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -2000,8 +1987,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  If the value is invalid or not defined, the default value is returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>key</code> - the the name of a key, with or without the
- <code>-colour</code> suffix</dd>
+<dd><code>key</code> - the the name of a key, with or without the <code>-colour</code>
+ suffix</dd>
 <dd><code>defaultValue</code> - the default value for the key</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a colour created by interpreting the value of the key</dd>
@@ -2021,12 +2008,12 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <div class="block">Returns the value of the specified key as a <a href="Settings.Colour.html" title="class in resources"><code>Settings.Colour</code></a>;
  <i>the key name will have <code>-colour</code> appended if necessary.
  </i>
- If the value is invalid or not defined, a <code>Colour</code> is created
- for the ARGB value represented by <code>defaultValue</code> and returned.</div>
+ If the value is invalid or not defined, a <code>Colour</code> is created for
+ the ARGB value represented by <code>defaultValue</code> and returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>key</code> - the the name of a key, with or without the
- <code>-colour</code> suffix</dd>
+<dd><code>key</code> - the the name of a key, with or without the <code>-colour</code>
+ suffix</dd>
 <dd><code>defaultValue</code> - the default value for the key</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a colour created by interpreting the value of the key</dd>
@@ -2044,12 +2031,11 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <pre class="methodSignature">public final&nbsp;void&nbsp;setColour&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
                             <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true" title="class or interface in java.awt" class="externalLink">Color</a>&nbsp;colour)</pre>
 <div class="block">Sets the value of the specified key to a suitable value for the specified
- colour; <i>the key name will have <code>-colour</code> appended if
- necessary. </i></div>
+ colour; <i>the key name will have <code>-colour</code> appended if necessary.
+ </i></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>key</code> - the name of the key to set, with or without
- <code>-colour</code></dd>
+<dd><code>key</code> - the name of the key to set, with or without <code>-colour</code></dd>
 <dd><code>colour</code> - the colour value to write as a setting</dd>
 </dl>
 </li>
@@ -2067,8 +2053,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  This is a cover for <a href="#getColour(java.lang.String)"><code>getColour(java.lang.String)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>key</code> - the the name of a key, with or without the
- <code>-colour</code> suffix</dd>
+<dd><code>key</code> - the the name of a key, with or without the <code>-colour</code>
+ suffix</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a colour created by interpreting the value of the key</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -2090,8 +2076,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  This is a cover for <a href="#getColour(java.lang.String,java.awt.Color)"><code>getColour(java.lang.String, java.awt.Color)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>key</code> - the the name of a key, with or without the
- <code>-colour</code> suffix</dd>
+<dd><code>key</code> - the the name of a key, with or without the <code>-colour</code>
+ suffix</dd>
 <dd><code>defaultValue</code> - the default value for the key</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a colour created by interpreting the value of the key</dd>
@@ -2112,8 +2098,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  This is a cover for <a href="#getColour(java.lang.String,int)"><code>getColour(java.lang.String, int)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>key</code> - the the name of a key, with or without the
- <code>-colour</code> suffix</dd>
+<dd><code>key</code> - the the name of a key, with or without the <code>-colour</code>
+ suffix</dd>
 <dd><code>defaultValue</code> - the default value for the key</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a colour created by interpreting the value of the key</dd>
@@ -2129,13 +2115,12 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <pre class="methodSignature">public final&nbsp;void&nbsp;setColor&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key,
                            <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true" title="class or interface in java.awt" class="externalLink">Color</a>&nbsp;colour)</pre>
 <div class="block">Sets the value of the specified key to a suitable value for the specified
- colour; <i>the key name will have <code>-colour</code> appended if
- necessary. </i>
+ colour; <i>the key name will have <code>-colour</code> appended if necessary.
+ </i>
  This is a cover for <a href="#setColour(java.lang.String,java.awt.Color)"><code>setColour(java.lang.String, java.awt.Color)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>key</code> - the name of the key to set, with or without
- <code>-colour</code></dd>
+<dd><code>key</code> - the name of the key to set, with or without <code>-colour</code></dd>
 <dd><code>colour</code> - the colour value to write as a setting</dd>
 </dl>
 </li>
@@ -2278,8 +2263,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  that it is a valid tint configuration (namely, that is has length three).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>key</code> - the key to look up, with or without the <code>-tint</code>
- suffix</dd>
+<dd><code>key</code> - the key to look up, with or without the <code>-tint</code> suffix</dd>
 <dd><code>defaultValue</code> - the default value for the key</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the tint configuration extracted from the key, or the default</dd>
@@ -2304,8 +2288,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  specified array.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>key</code> - the key to modify, with or without the <code>-tint</code>
- suffix</dd>
+<dd><code>key</code> - the key to modify, with or without the <code>-tint</code> suffix</dd>
 <dd><code>tintConfiguration</code> - an array of at least three float values
  containing the tint configuration as the first three elements</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -2329,8 +2312,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  <i>the key name will have <code>-tint</code> appended if necessary. </i></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>key</code> - the key to modify, with or without the <code>-tint</code>
- suffix</dd>
+<dd><code>key</code> - the key to modify, with or without the <code>-tint</code> suffix</dd>
 <dd><code>hFactor</code> - the hue adjustment factor for the tint configuration</dd>
 <dd><code>sFactor</code> - the saturation adjustment factor for the tint
  configuration</dd>
@@ -2401,18 +2383,17 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  <code>d(&lt;i&gt;parent&lt;/i&gt;, &lt;i&gt;dx&lt;/i&gt;, &lt;i&gt;dy&lt;/i&gt;, &lt;i&gt;dw&lt;/i&gt;,
  &lt;i&gt;dh&lt;/i&gt;)</code><br>
  This form allows you to specify one region in terms of another region.
- For example, if a region key has the value
- <code>d(other,5,-10,0,0)</code>, then the value of the region would be
- determined by looking up the value of the region with the key name
- "other-region", and then shifting it to the right by 5 units and up by 10
- units.</div>
+ For example, if a region key has the value <code>d(other,5,-10,0,0)</code>,
+ then the value of the region would be determined by looking up the value
+ of the region with the key name "other-region", and then shifting it to
+ the right by 5 units and up by 10 units.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>key</code> - the the name of a key, with or without the
- <code>-region</code> suffix</dd>
+<dd><code>key</code> - the the name of a key, with or without the <code>-region</code>
+ suffix</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the region described by the value of the key, or
- <code>null</code> if the key is not defined</dd>
+<dd>the region described by the value of the key, or <code>null</code> if
+ the key is not defined</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="Settings.ParseError.html" title="class in resources">Settings.ParseError</a></code> - if the value does not have the correct syntax, or if
  any region referenced by the value is missing</dd>
@@ -2437,8 +2418,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  If the value is not defined or is invalid, the default value is returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>key</code> - the the name of a key, with or without the
- <code>-region</code> suffix</dd>
+<dd><code>key</code> - the the name of a key, with or without the <code>-region</code>
+ suffix</dd>
 <dd><code>defaultValue</code> - the region to region if the key value is missing or
  invalid</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -2459,8 +2440,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  </i></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>key</code> - the key to modify, with or without the <code>-region</code>
- suffix</dd>
+<dd><code>key</code> - the key to modify, with or without the <code>-region</code> suffix</dd>
 <dd><code>region</code> - the region to write as a setting value</dd>
 </dl>
 </li>
@@ -2501,11 +2481,11 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  <a href="#getRegion(java.lang.String)"><code>getRegion(java.lang.String)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>key</code> - the the name of a key, with or without the
- <code>-region</code> suffix</dd>
+<dd><code>key</code> - the the name of a key, with or without the <code>-region</code>
+ suffix</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the region described by the value of the key, or
- <code>null</code> if the key is undefined</dd>
+<dd>the region described by the value of the key, or <code>null</code> if
+ the key is undefined</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="Settings.ParseError.html" title="class in resources">Settings.ParseError</a></code> - if the value does not have the correct syntax, or if
  any region referenced by the value is missing</dd>
@@ -2531,8 +2511,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  If the value is not defined or is invalid, the default value is returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>key</code> - the the name of a key, with or without the
- <code>-region</code> suffix</dd>
+<dd><code>key</code> - the the name of a key, with or without the <code>-region</code>
+ suffix</dd>
 <dd><code>defaultValue</code> - the region to region if the key value is missing or
  invalid</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -2553,8 +2533,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  </i></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>key</code> - the key to modify, with or without the <code>-region</code>
- suffix</dd>
+<dd><code>key</code> - the key to modify, with or without the <code>-region</code> suffix</dd>
 <dd><code>region</code> - the region to write as a setting value</dd>
 </dl>
 </li>
@@ -2721,8 +2700,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  <a href="#textAlignment(java.lang.String)"><code>textAlignment(java.lang.String)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>key</code> - the the name of a key, with or without the
- <code>-alignment</code> suffix</dd>
+<dd><code>key</code> - the the name of a key, with or without the <code>-alignment</code>
+ suffix</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a binary or of alignment flags</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -2750,8 +2729,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  <a href="#textAlignment(java.lang.String)"><code>textAlignment(java.lang.String)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>key</code> - the the name of a key, with or without the
- <code>-alignment</code> suffix</dd>
+<dd><code>key</code> - the the name of a key, with or without the <code>-alignment</code>
+ suffix</dd>
 <dd><code>renderer</code> - the markup renderer which will be modified</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="Settings.ParseError.html" title="class in resources">Settings.ParseError</a></code> - if the value is invalid</dd>
@@ -2775,8 +2754,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  <dt><code>left</code> <dd>sets the horizontal alignment to left-aligned
 
  <dt><code>right</code> <dd>sets the horizontal alignment to right-aligned
- <dt><code>center</code> <dd>sets the horizontal alignment to
- center-aligned
+ <dt><code>center</code> <dd>sets the horizontal alignment to center-aligned
  <dt><code>centre</code> <dd>synonym for <code>center</code>
  <dt><code>top</code> <dd>sets the vertical alignment to top-aligned
 
@@ -2792,9 +2770,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  The tokens are divided into three categories: horizontal alignment,
  vertical alignment, and justification. If more than one token in the same
  category appears in the list, the rightmost value takes precedence. For
- example, the value <code>right, top, left</code> would result in left-
- and top-aligned text. If any category is left unspecified, the default
- value for the category is used.</div>
+ example, the value <code>right, top, left</code> would result in left- and
+ top-aligned text. If any category is left unspecified, the default value
+ for the category is used.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>value</code> - the text alignment value to parse</dd>
@@ -2821,8 +2799,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - the the name of a key, with or without the <code>-style</code>
  suffix</dd>
-<dd><code>base</code> - a baseline style to modify, or <code>null</code> to create a
- new style</dd>
+<dd><code>base</code> - a baseline style to modify, or <code>null</code> to create a new
+ style</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the text style described by the value of the key</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -2853,17 +2831,15 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextAttribute.html?is-external=true#UNDERLINE" title="class or interface in java.awt.font" class="externalLink"><code>TextAttribute.UNDERLINE</code></a>, and the key name "numeric shaping"
  matches <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/font/TextAttribute.html?is-external=true#NUMERIC_SHAPING" title="class or interface in java.awt.font" class="externalLink"><code>TextAttribute.NUMERIC_SHAPING</code></a>. By default, a value must
  be the name of one of the predefined values found in
- <code>TextAttribute</code>; these names are also case insensitive and
- allow the use of spaces for underscores. For example, the following style
- setting would enable underlined text:<br>
- <code>underline: underline on</code>
+ <code>TextAttribute</code>; these names are also case insensitive and allow
+ the use of spaces for underscores. For example, the following style
+ setting would enable underlined text:<br> <code>underline: underline on</code>
 
  <p>
  Some attribute keys require values that are not predefined. For example,
- the <code>FAMILY</code> key requires a string that names the desired
- font. The parser lets you describe strings, colours, integers and
- floating point numbers literally. Other values can be set using script
- expressions.
+ the <code>FAMILY</code> key requires a string that names the desired font. The
+ parser lets you describe strings, colours, integers and floating point
+ numbers literally. Other values can be set using script expressions.
 
  <p>
  <b>Examples and Additional Information</b><br>
@@ -2872,8 +2848,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  text attribute constant, you can leave off the prefix for the key type.
  In this example, the parser infers that <code>oblique</code> means
  <code>POSTURE_OBLIQUE</code> from the fact that the key is
- <code>POSTURE</code>:<br>
- <code>family: 'Helvetica'; posture: oblique</code>
+ <code>POSTURE</code>:<br> <code>family: 'Helvetica'; posture: oblique</code>
 
  <p>
  Integers and floating point values are written as an optional sign
@@ -2894,8 +2869,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>value</code> - the style specification to parse; see above for format</dd>
-<dd><code>base</code> - a baseline style to modify, or <code>null</code> to create a
- new style</dd>
+<dd><code>base</code> - a baseline style to modify, or <code>null</code> to create a new
+ style</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the modified baseline style, or a new style if the baseline style
  was <code>null</code></dd>
@@ -2915,8 +2890,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <pre class="methodSignature">public&nbsp;int&nbsp;getTextFittingMethod&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key)</pre>
 <div class="block">Returns a text-fitting method constant from the value of the specified
  key;
- <i>the key name will have <code>-text-fitting</code> appended if
- necessary. </i>
+ <i>the key name will have <code>-text-fitting</code> appended if necessary.
+ </i>
  The value is mapped to a text-fitting constant as follows:
  <pre>
  "none"    MarkupRenderer.FIT_NONE
@@ -2972,11 +2947,11 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  (<a href="../gamedata/Expansion.html#VARIANT_SETTING_KEY"><code>Expansion.VARIANT_SETTING_KEY</code></a>) and a non-<code>null</code>
  <a href="../ca/cgjennings/apps/arkham/sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet"><code>Sheet</code></a> instance is provided, then a default value will be
  determined by looking up the value of the key
- <code>sheetWithDefaultValue.getExpansionSymbolKey() + "-invert"</code>.
- This is for backwards compatibility with components from previous
- versions. To set a default variant for a component, it is recommended
- that you set the value of the <code>Expansion.VARIANT_SETTING_KEY</code>
- key with the desired default variant when the component is first created.</div>
+ <code>sheetWithDefaultValue.getExpansionSymbolKey() + "-invert"</code>. This
+ is for backwards compatibility with components from previous versions. To
+ set a default variant for a component, it is recommended that you set the
+ value of the <code>Expansion.VARIANT_SETTING_KEY</code> key with the desired
+ default variant when the component is first created.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>sheetWithDefaultValue</code> - optional sheet to use to determine a default
@@ -2998,8 +2973,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <pre class="methodSignature">public final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net" class="externalLink">URL</a>&nbsp;getResourceURL&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key)</pre>
 <div class="block">Returns the <a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net" class="externalLink"><code>URL</code></a> of a resource from the value of the specified
  key. The value of the key will be looked up using
- <a href="#get(java.lang.String)"><code>get(java.lang.String)</code></a>, and if the value is non-<code>null</code>
- then it will be converted into a URL as if by
+ <a href="#get(java.lang.String)"><code>get(java.lang.String)</code></a>, and if the value is non-<code>null</code> then
+ it will be converted into a URL as if by
  <a href="ResourceKit.html#composeResourceURL(java.lang.String)"><code>ResourceKit.composeResourceURL(java.lang.String)</code></a> using the value of the key. If the
  key is not defined, a <a href="Settings.ParseError.html" title="class in resources"><code>Settings.ParseError</code></a> will be thrown.</div>
 <dl>
@@ -3060,8 +3035,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  resources/xyzzy/sample-02-image.png
  </pre> If the value of the key <code>sample-images</code> is
  <code>xyzzy/sample-00-image.png</code>, then calling
- <code>getNumberedImageResource( "sample-images", 2 )</code> would return
- the <code>sample-02-image.png</code> resource as an image.</div>
+ <code>getNumberedImageResource( "sample-images", 2 )</code> would return the
+ <code>sample-02-image.png</code> resource as an image.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - the key that contains the base name of the image resource</dd>
@@ -3084,8 +3059,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <div class="block">Return an icon for the resource identified by the value of the specified
  key. The value of the key is treated as a resource identifier and loaded
  as if by <a href="ResourceKit.html#getIcon(java.lang.String)"><code>ResourceKit.getIcon(java.lang.String)</code></a>. If the value of
- the key is <code>null</code>, a placeholder "missing image" icon is
- returned.</div>
+ the key is <code>null</code>, a placeholder "missing image" icon is returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - a key whose value points to an image file</dd>
@@ -3130,9 +3104,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <pre class="methodSignature">public final&nbsp;void&nbsp;storeWindowSettings&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;prefix,
                                       <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Window.html?is-external=true" title="class or interface in java.awt" class="externalLink">Window</a>&nbsp;window)</pre>
 <div class="block">Saves the position of a window for later recall by writing it as a group
- of settings. The <code>prefix</code> is a unique prefix for that window.
- To restore the position later, call <a href="#applyWindowSettings(java.lang.String,java.awt.Window)"><code>applyWindowSettings(java.lang.String, java.awt.Window)</code></a> using
- the same prefix. Usually used with <a href="#getUser()">user settings</a>.</div>
+ of settings. The <code>prefix</code> is a unique prefix for that window. To
+ restore the position later, call <a href="#applyWindowSettings(java.lang.String,java.awt.Window)"><code>applyWindowSettings(java.lang.String, java.awt.Window)</code></a> using the
+ same prefix. Usually used with <a href="#getUser()">user settings</a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>prefix</code> - a unique name for the window</dd>
@@ -3155,8 +3129,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <dd><code>prefix</code> - the unique prefix chosen for this window when it was stored</dd>
 <dd><code>window</code> - the window to be restored</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if there were settings to restore; otherwise
- you should use a default placement algorithm to place the window</dd>
+<dd><code>true</code> if there were settings to restore; otherwise you
+ should use a default placement algorithm to place the window</dd>
 </dl>
 </li>
 </ul>
@@ -3199,18 +3173,26 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <a id="removePropertyChangeListener(java.beans.PropertyChangeListener)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>removePropertyChangeListener</h4>
 <pre class="methodSignature">public final&nbsp;void&nbsp;removePropertyChangeListener&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/beans/PropertyChangeListener.html?is-external=true" title="class or interface in java.beans" class="externalLink">PropertyChangeListener</a>&nbsp;listener)</pre>
-<div class="block">Removes a listener that was previously added to this
- <code>Settings</code>.</div>
+<div class="block">Removes a listener that was previously added to this <code>Settings</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>listener</code> - the listener to remove</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.1</dd>
 </dl>
+</li>
+</ul>
+<a id="isSerializedParent()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>isSerializedParent</h4>
+<pre class="methodSignature">protected&nbsp;boolean&nbsp;isSerializedParent()</pre>
 </li>
 </ul>
 </li>

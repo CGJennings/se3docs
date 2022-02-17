@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -597,8 +597,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTree.htm
 <li class="blockList">
 <h4>setSelectedFolder</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;setSelectedFolder&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;f)</pre>
-<div class="block">Sets the currently selected folder. If the parameter is
- <code>null</code>, a default folder is used.</div>
+<div class="block">Sets the currently selected folder. If the parameter is <code>null</code>, a
+ default folder is used.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>f</code> - a file representing the folder to select</dd>
@@ -616,9 +616,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JTree.htm
 <li class="blockList">
 <h4>getTreePathForFolder</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/tree/TreePath.html?is-external=true" title="class or interface in javax.swing.tree" class="externalLink">TreePath</a>&nbsp;getTreePathForFolder&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;f)</pre>
-<div class="block">Returns a tree path for the specified file, or <code>null</code>. If
- there are multiple tree paths that are equivalent to the specified file,
- there is no guarantee as to which is selected.</div>
+<div class="block">Returns a tree path for the specified file, or <code>null</code>. If there are
+ multiple tree paths that are equivalent to the specified file, there is
+ no guarantee as to which is selected.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>f</code> - the file to locate in the tree</dd>

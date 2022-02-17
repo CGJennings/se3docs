@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -145,9 +145,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">MergeSettings</span>
 extends <a href="TaskActionTree.html" title="class in ca.cgjennings.apps.arkham.project">TaskActionTree</a></pre>
-<div class="block">A task action that loads settings from a settings file into the shared or a
- game's master settings. Useful when developing plug-ins that require certain
- settings to be available, such as DIY component scripts.</div>
+<div class="block">A task action that loads settings from a settings file into the shared
+ settings or a game's settings. Useful when developing plug-ins that require
+ certain settings to be available, such as DIY component scripts.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -203,8 +203,8 @@ extends <a href="TaskActionTree.html" title="class in ca.cgjennings.apps.arkham.
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#appliesToSelection(ca.cgjennings.apps.arkham.project.Member%5B%5D)">appliesToSelection</a></span>&#8203;(<a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>[]&nbsp;members)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this action is applicable to any of the
- specified <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project"><code>Member</code></a>s.</div>
+<div class="block">Returns <code>true</code> if this action is applicable to any of the specified
+ <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project"><code>Member</code></a>s.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -383,21 +383,19 @@ extends <a href="TaskActionTree.html" title="class in ca.cgjennings.apps.arkham.
 <h4>appliesToSelection</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;appliesToSelection&#8203;(<a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>[]&nbsp;members)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="TaskAction.html#appliesToSelection(ca.cgjennings.apps.arkham.project.Member%5B%5D)">TaskAction</a></code></span></div>
-<div class="block">Returns <code>true</code> if this action is applicable to any of the
- specified <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project"><code>Member</code></a>s. By overriding this, you can modify whether an
- action is listed depending on which other members are selected. For
- example, you could create a command that can only be applied to a
- singleton selection by checking the length of <code>members</code> and
- returning <code>false</code> if it is not 1, and otherwise calling the
- super implementation.</div>
+<div class="block">Returns <code>true</code> if this action is applicable to any of the specified
+ <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project"><code>Member</code></a>s. By overriding this, you can modify whether an action is
+ listed depending on which other members are selected. For example, you
+ could create a command that can only be applied to a singleton selection
+ by checking the length of <code>members</code> and returning <code>false</code> if
+ it is not 1, and otherwise calling the super implementation.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="TaskActionTree.html#appliesToSelection(ca.cgjennings.apps.arkham.project.Member%5B%5D)">appliesToSelection</a></code>&nbsp;in class&nbsp;<code><a href="TaskActionTree.html" title="class in ca.cgjennings.apps.arkham.project">TaskActionTree</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>members</code> - a list of zero or more members</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> is the action can be applied to at least one
- member</dd>
+<dd><code>true</code> is the action can be applied to at least one member</dd>
 </dl>
 </li>
 </ul>

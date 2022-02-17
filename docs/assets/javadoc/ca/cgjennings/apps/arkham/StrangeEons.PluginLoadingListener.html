@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -281,8 +281,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/EventListen
 <div class="block">Called after the application loads, reloads, or unloads plug-ins. The
  value of <code>eventType</code> describes the type of load event:<br>
  <code>PLUGIN_LOAD_EVENT</code>: plug-ins have been loaded (or
- reloaded)<br>
- <code>PLUGIN_UNLOAD_EVENT</code>: plug-ins have been unloaded</div>
+ reloaded)<br> <code>PLUGIN_UNLOAD_EVENT</code>: plug-ins have been
+ unloaded</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>eventType</code> - the type of load event</dd>

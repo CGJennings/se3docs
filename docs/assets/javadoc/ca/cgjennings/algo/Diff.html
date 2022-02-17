@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -131,8 +131,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dl>
 <dt><span class="paramLabel">Type Parameters:</span></dt>
 <dd><code>E</code> - the type of the elements that may be inserted, deleted, or
- changed; for example, in a text file each element might be a
- <code>String</code> representing a single line</dd>
+ changed; for example, in a text file each element might be a <code>String</code>
+ representing a single line</dd>
 </dl>
 <hr>
 <pre>public class <span class="typeNameLabel">Diff&lt;E&gt;</span>
@@ -175,8 +175,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E()">Diff</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Create a new <code>Diff</code> instance that uses a default listener that
- is useful for diagnostic purposes.</div>
+<div class="block">Create a new <code>Diff</code> instance that uses a default listener that is
+ useful for diagnostic purposes.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -253,8 +253,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>Diff</h4>
 <pre>public&nbsp;Diff()</pre>
-<div class="block">Create a new <code>Diff</code> instance that uses a default listener that
- is useful for diagnostic purposes. For each element in the combined
+<div class="block">Create a new <code>Diff</code> instance that uses a default listener that is
+ useful for diagnostic purposes. For each element in the combined
  collection, this listener prints to the output stream one of the
  following followed by the string value of the element in question:
  <dl>
@@ -340,8 +340,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>originalIndex</code> - the index of <code>a</code> in the original sequence</dd>
 <dd><code>changedIndex</code> - the index of <code>b</code> in the changed sequence</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the objects should be considered equal for
- the purposes of the diff operation</dd>
+<dd><code>true</code> if the objects should be considered equal for the
+ purposes of the diff operation</dd>
 </dl>
 </li>
 </ul>

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -211,8 +211,8 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#equals(java.lang.Object)">equals</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;obj)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if and only if the specified object is a
- project member for the same file as this project member.</div>
+<div class="block">Returns <code>true</code> if and only if the specified object is a project
+ member for the same file as this project member.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -314,9 +314,9 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
 <td class="colFirst"><code><a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getParent()">getParent</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the member that is this member's parent, or <code>null</code> if
- this is the member representing the <a href="Project.html" title="class in ca.cgjennings.apps.arkham.project"><code>Project</code></a> (or if it was
- explicitly created with a <code>null</code> parent).</div>
+<div class="block">Returns the member that is this member's parent, or <code>null</code> if this
+ is the member representing the <a href="Project.html" title="class in ca.cgjennings.apps.arkham.project"><code>Project</code></a> (or if it was explicitly
+ created with a <code>null</code> parent).</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
@@ -502,9 +502,9 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
 <li class="blockList">
 <h4>getParent</h4>
 <pre class="methodSignature">public final&nbsp;<a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;getParent()</pre>
-<div class="block">Returns the member that is this member's parent, or <code>null</code> if
- this is the member representing the <a href="Project.html" title="class in ca.cgjennings.apps.arkham.project"><code>Project</code></a> (or if it was
- explicitly created with a <code>null</code> parent).</div>
+<div class="block">Returns the member that is this member's parent, or <code>null</code> if this
+ is the member representing the <a href="Project.html" title="class in ca.cgjennings.apps.arkham.project"><code>Project</code></a> (or if it was explicitly
+ created with a <code>null</code> parent).</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>this member's parent, or <code>null</code></dd>
@@ -524,8 +524,8 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
 
  <p>
  In the event that the member is not actually in a project, returns
- <code>null</code> (this is only possible when a member is explicitly
- created with a <code>null</code> parent).</div>
+ <code>null</code> (this is only possible when a member is explicitly created
+ with a <code>null</code> parent).</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the task that owns this member</dd>
@@ -543,8 +543,8 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
 
  <p>
  In the event that the member is not actually in a project, returns
- <code>null</code> (this is only possible when a member is explicitly
- created with a <code>null</code> parent).</div>
+ <code>null</code> (this is only possible when a member is explicitly created
+ with a <code>null</code> parent).</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the project that owns this member</dd>
@@ -578,8 +578,8 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
 <h4>getURL</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net" class="externalLink">URL</a>&nbsp;getURL()</pre>
 <div class="block">Returns a <tt>project:</tt> URL that can be used to access this member
- whenever this project is the main open project. Returns <code>null</code>
- if the file has been deleted.</div>
+ whenever this project is the main open project. Returns <code>null</code> if
+ the file has been deleted.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a project URL for the file.</dd>
@@ -671,12 +671,12 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
 <li class="blockList">
 <h4>isFolder</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isFolder()</pre>
-<div class="block">Returns <code>true</code> if this member is a folder rather than a file.
- (All <a href="Task.html" title="class in ca.cgjennings.apps.arkham.project"><code>Task</code></a>s and <a href="Project.html" title="class in ca.cgjennings.apps.arkham.project"><code>Project</code></a>s are also folders.)</div>
+<div class="block">Returns <code>true</code> if this member is a folder rather than a file. (All
+ <a href="Task.html" title="class in ca.cgjennings.apps.arkham.project"><code>Task</code></a>s and <a href="Project.html" title="class in ca.cgjennings.apps.arkham.project"><code>Project</code></a>s are also folders.)</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if this member represents a folder rather than
- a regular file</dd>
+<dd><code>true</code> if this member represents a folder rather than a
+ regular file</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#hasChildren()"><code>hasChildren()</code></a></dd>
 </dl>
@@ -692,8 +692,8 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
 <div class="block">Returns <code>true</code> if this member has children.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the member has any children;
- <code>false</code> otherwise</dd>
+<dd><code>true</code> if the member has any children; <code>false</code>
+ otherwise</dd>
 </dl>
 </li>
 </ul>
@@ -780,8 +780,7 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>file</code> - the child to find</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the child that represents the specified file, or
- <code>null</code></dd>
+<dd>the child that represents the specified file, or <code>null</code></dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#findChild(java.lang.String)"><code>findChild(java.lang.String)</code></a></dd>
 </dl>
@@ -794,14 +793,14 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
 <li class="blockList">
 <h4>findChild</h4>
 <pre class="methodSignature">public&nbsp;<a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;findChild&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</pre>
-<div class="block">Finds a child of this member by name. Returns <code>null</code> if there
- is no such child. If the specified name contains one or more slashes
- ('/'), then the find operation will be repeated recursively for each path
- segment. For example, <code>findChild( "nested/folder/file.png" )</code>
- is equivalent to calling
+<div class="block">Finds a child of this member by name. Returns <code>null</code> if there is no
+ such child. If the specified name contains one or more slashes ('/'),
+ then the find operation will be repeated recursively for each path
+ segment. For example, <code>findChild( "nested/folder/file.png" )</code> is
+ equivalent to calling
  <code>findChild( "nested" ).findChild( "folder" ).findChild( "file.png" )</code>,
- except that if any of the calls returns <code>null</code>, the process
- stops immediately and the method returns <code>null</code>.</div>
+ except that if any of the calls returns <code>null</code>, the process stops
+ immediately and the method returns <code>null</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - the member name to search for</dd>
@@ -864,11 +863,10 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
                 throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <div class="block">Deletes the file associated with this member. <i>If this member is a
  folder, then any children it may have will also be deleted.</i>
- Calling this method is preferable to calling
- <code>getFile().delete()</code> because this method correctly handles
- additional details and special cases that the <code>File</code> method is
- unaware of, such as updating any editors displaying the file and
- informing
+ Calling this method is preferable to calling <code>getFile().delete()</code>
+ because this method correctly handles additional details and special
+ cases that the <code>File</code> method is unaware of, such as updating any
+ editors displaying the file and informing
  <a href="Rename.RenameListener.html" title="interface in ca.cgjennings.apps.arkham.project"><code>RenameListener</code></a>s.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -889,11 +887,11 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
  system. Any file name that matches one of the specified patterns will be
  ignored. It will not be returned as one of the children of its parent
  member and it will not appear in project views. Each pattern in the array
- is a string (empty or <code>null</code> strings in the array will be
- ignored). The patterns can either specify an exact name to match or they
- can include wildcards: the * wildcard matches 0 or more characters, while
- the ? wildcard matches any one character. For example, the pattern
- "*.gif" would exclude all files ending in ".gif". File patterns are case
+ is a string (empty or <code>null</code> strings in the array will be ignored).
+ The patterns can either specify an exact name to match or they can
+ include wildcards: the * wildcard matches 0 or more characters, while the
+ ? wildcard matches any one character. For example, the pattern "*.gif"
+ would exclude all files ending in ".gif". File patterns are case
  insensitive: in the previous example, a file named "SAMPLE.GIF" would
  also be excluded.
 
@@ -916,9 +914,9 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
  excluded files for plug-in authors. The main exception is that if you are
  copying project files from one place to another, you should leave out
  excluded files but copy hidden files. To do this, you could get a list of
- files from the parent member using
- <code>member.getFile().listFiles()</code>, then skip any files for which
- <a href="#isFileExcluded(java.io.File)"><code>isFileExcluded(java.io.File)</code></a> returns <code>true</code>.</div>
+ files from the parent member using <code>member.getFile().listFiles()</code>,
+ then skip any files for which <a href="#isFileExcluded(java.io.File)"><code>isFileExcluded(java.io.File)</code></a>
+ returns <code>true</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>patterns</code> - an array of pattern strings</dd>
@@ -991,8 +989,8 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
 <li class="blockList">
 <h4>equals</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;equals&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;obj)</pre>
-<div class="block">Returns <code>true</code> if and only if the specified object is a
- project member for the same file as this project member.</div>
+<div class="block">Returns <code>true</code> if and only if the specified object is a project
+ member for the same file as this project member.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></code></dd>
@@ -1069,8 +1067,8 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
  dispatch thread, you can safely update the project from that thread by
  calling this method. However, it is not safe in general to work with
  project members from outside of the EDT. Instead, keep a reference to the
- member that requires updating, and work only with <code>File</code>
- objects within the other thread (except for calling this method).</div>
+ member that requires updating, and work only with <code>File</code> objects
+ within the other thread (except for calling this method).</div>
 </li>
 </ul>
 <a id="isAncestorOf(ca.cgjennings.apps.arkham.project.Member)">
@@ -1085,8 +1083,8 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>child</code> - the member to test</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if and only if <code>child</code> is a direct
- or indirect child of this member</dd>
+<dd><code>true</code> if and only if <code>child</code> is a direct or indirect
+ child of this member</dd>
 </dl>
 </li>
 </ul>

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -131,12 +131,11 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public final class <span class="typeNameLabel">DarkModeDetector</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
-<div class="block">A "dark mode" detector for common platforms. Modern desktops
- often support selecting a dark theme that inverts the typical
- dark-text-on-light-background form. This class can detect
- whether such a style is active on a number of common platforms.
- If it cannot definitively establish that dark mode is active,
- it will report that it is <strong>not</strong> active.</div>
+<div class="block">A "dark mode" detector for common platforms. Modern desktops often support
+ selecting a dark theme that inverts the typical dark-text-on-light-background
+ form. This class can detect whether such a style is active on a number of
+ common platforms. If it cannot definitively establish that dark mode is
+ active, it will report that it is <strong>not</strong> active.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.2</dd>
@@ -229,8 +228,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>DarkModeDetector</h4>
 <pre>public&nbsp;DarkModeDetector()</pre>
-<div class="block">Creates a new detector instance. The value of <a href="#isDetected()"><code>isDetected()</code></a>
- is not accurate until <a href="#detect()"><code>detect()</code></a> has been called.</div>
+<div class="block">Creates a new detector instance. The value of <a href="#isDetected()"><code>isDetected()</code></a> is
+ not accurate until <a href="#detect()"><code>detect()</code></a> has been called.</div>
 </li>
 </ul>
 </li>
@@ -253,8 +252,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Detects whether dark mode is active.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>true if dark mode was detected, false if dark mode could not
-   be detected</dd>
+<dd>true if dark mode was detected, false if dark mode could not be
+ detected</dd>
 </dl>
 </li>
 </ul>
@@ -265,12 +264,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isDetected</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isDetected()</pre>
-<div class="block">Returns the result of the most recent detection. If no detection has
- been performed, returns false.</div>
+<div class="block">Returns the result of the most recent detection. If no detection has been
+ performed, returns false.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>true if dark mode was detected after the most recent call to
-   <a href="#detect()"><code>detect()</code></a>.</dd>
+ <a href="#detect()"><code>detect()</code></a>.</dd>
 </dl>
 </li>
 </ul>

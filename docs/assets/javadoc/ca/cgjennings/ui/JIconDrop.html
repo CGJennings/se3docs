@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -325,8 +325,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.ht
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFile()">getFile</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the file that was the source of the current image, or
- <code>null</code> if no image is set or if the image did not come from a
- file.</div>
+ <code>null</code> if no image is set or if the image did not come from a file.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -563,8 +562,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.ht
 <h4>getFile</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;getFile()</pre>
 <div class="block">Returns the file that was the source of the current image, or
- <code>null</code> if no image is set or if the image did not come from a
- file.</div>
+ <code>null</code> if no image is set or if the image did not come from a file.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the file that the current image came from, or <code>null</code></dd>
@@ -608,10 +606,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JLabel.ht
 <h4>setImage</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setImage&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;image)</pre>
 <div class="block">Sets the selected image, or clears the selection if the image is
- <code>null</code>. Setting the image directly will also set the current
- file to <code>null</code>. If <code>image</code> is not in an integer RGB
- format, the component will create a copy of the image in such a format,
- using the converted image in place of the original.</div>
+ <code>null</code>. Setting the image directly will also set the current file
+ to <code>null</code>. If <code>image</code> is not in an integer RGB format, the
+ component will create a copy of the image in such a format, using the
+ converted image in place of the original.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>image</code> - the image to select</dd>

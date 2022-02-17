@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -365,9 +365,9 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#confirmLossOfUnsavedChanges()">confirmLossOfUnsavedChanges</a></span>()</code></th>
 <td class="colLast">
-<div class="block">If <a href="#hasUnsavedChanges()"><code>hasUnsavedChanges()</code></a> returns  <code>true</code>, this will
- display a dialog box asking the user to confirm whether it is acceptable
- to lose unsaved changes.</div>
+<div class="block">If <a href="#hasUnsavedChanges()"><code>hasUnsavedChanges()</code></a> returns <code>true</code>, this will display a
+ dialog box asking the user to confirm whether it is acceptable to lose
+ unsaved changes.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -420,9 +420,9 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFile()">getFile</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the file used to save this component, or <code>null</code> if it
- is a new, unsaved file or the editor is not associated with any
- particular file.</div>
+<div class="block">Returns the file used to save this component, or <code>null</code> if it is a
+ new, unsaved file or the editor is not associated with any particular
+ file.</div>
 </td>
 </tr>
 <tr id="i15" class="rowColor">
@@ -436,8 +436,8 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
 <td class="colFirst"><code><a href="component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getGameComponent()">getGameComponent</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the edited game component, or <code>null</code> if this editor is
- not editing a game component.</div>
+<div class="block">Returns the edited game component, or <code>null</code> if this editor is not
+ editing a game component.</div>
 </td>
 </tr>
 <tr id="i17" class="rowColor">
@@ -474,16 +474,16 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isAttached()">isAttached</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this editor is currently attached to the
- document tab strip.</div>
+<div class="block">Returns <code>true</code> if this editor is currently attached to the document
+ tab strip.</div>
 </td>
 </tr>
 <tr id="i22" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isCommandApplicable(ca.cgjennings.apps.arkham.commands.AbstractCommand)">isCommandApplicable</a></span>&#8203;(<a href="commands/AbstractCommand.html" title="class in ca.cgjennings.apps.arkham.commands">AbstractCommand</a>&nbsp;command)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the <code>command</code> can be performed by
- this commandable in its current state.</div>
+<div class="block">Returns <code>true</code> if the <code>command</code> can be performed by this
+ commandable in its current state.</div>
 </td>
 </tr>
 <tr id="i23" class="rowColor">
@@ -634,8 +634,7 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#stopTimedUpdates()">stopTimedUpdates</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Stops updating the preview pane when the game component
- is modified.</div>
+<div class="block">Stops updating the preview pane when the game component is modified.</div>
 </td>
 </tr>
 <tr id="i44" class="altColor">
@@ -777,8 +776,8 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
 <dd><code><a href="StrangeEonsEditor.html#close()">close</a></code>&nbsp;in interface&nbsp;<code><a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>returns <code>true</code> if the editor was actually closed, or
- <code>false</code> if the user cancelled the attempt or closing was
- otherwise prevented</dd>
+ <code>false</code> if the user cancelled the attempt or closing was otherwise
+ prevented</dd>
 </dl>
 </li>
 </ul>
@@ -817,8 +816,8 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
 <h4>getTitle</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getTitle()</pre>
 <div class="block">Returns the title used to describe this editor. The returned value is
- never <code>null</code>; if a <code>null</code> title is set with
- <a href="#setTitle(java.lang.String)"><code>setTitle(java.lang.String)</code></a> then this method returns an empty string.
+ never <code>null</code>; if a <code>null</code> title is set with <a href="#setTitle(java.lang.String)"><code>setTitle(java.lang.String)</code></a>
+ then this method returns an empty string.
 
  <p>
  If no title has been explicitly set, then a default title will be
@@ -830,8 +829,7 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="StrangeEonsEditor.html#getTitle()">getTitle</a></code>&nbsp;in interface&nbsp;<code><a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the current title, which is guaranteed not to be
- <code>null</code></dd>
+<dd>the current title, which is guaranteed not to be <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -863,14 +861,14 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
 <div class="block">Returns the tool tip text displayed for the editor's tab. If no tool tip
  has been explicitly set, a default tool tip will be returned. The default
  tool tip will get the name of the file, if <a href="#getFile()"><code>getFile()</code></a> returns a
- non-<code>null</code> value, or else the localized interface text with
- key <code>ae-unsaved</code> ("Untitled").</div>
+ non-<code>null</code> value, or else the localized interface text with key
+ <code>ae-unsaved</code> ("Untitled").</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="StrangeEonsEditor.html#getToolTipText()">getToolTipText</a></code>&nbsp;in interface&nbsp;<code><a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the tool tip text to display, or <code>null</code> to clear the
- tool tip</dd>
+<dd>the tool tip text to display, or <code>null</code> to clear the tool
+ tip</dd>
 </dl>
 </li>
 </ul>
@@ -902,8 +900,8 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
 <li class="blockList">
 <h4>getGameComponent</h4>
 <pre class="methodSignature">public&nbsp;<a href="component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>&nbsp;getGameComponent()</pre>
-<div class="block">Returns the edited game component, or <code>null</code> if this editor is
- not editing a game component.
+<div class="block">Returns the edited game component, or <code>null</code> if this editor is not
+ editing a game component.
  <p>
  The <code>AbstractStrangeEonsEditor</code> implementation always returns
  <code>null</code>.</div>
@@ -940,8 +938,8 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>command</code> - the command to be performed</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if this commandable wishes to handle the
- command (even if it cannot execute the command currently)</dd>
+<dd><code>true</code> if this commandable wishes to handle the command
+ (even if it cannot execute the command currently)</dd>
 </dl>
 </li>
 </ul>
@@ -952,9 +950,9 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
 <li class="blockList">
 <h4>isCommandApplicable</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isCommandApplicable&#8203;(<a href="commands/AbstractCommand.html" title="class in ca.cgjennings.apps.arkham.commands">AbstractCommand</a>&nbsp;command)</pre>
-<div class="block">Returns <code>true</code> if the <code>command</code> can be performed by
- this commandable in its current state. If <a href="commands/Commandable.html#canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)"><code>Commandable.canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a>
- would return false for this command, then this must also return false.
+<div class="block">Returns <code>true</code> if the <code>command</code> can be performed by this
+ commandable in its current state. If <a href="commands/Commandable.html#canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)"><code>Commandable.canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a> would
+ return false for this command, then this must also return false.
 
  The base class returns the value of <a href="#canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)"><code>canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a>, except
  that if the command is SAVE, it returns false if the editor does not have
@@ -986,7 +984,7 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
  The base class provides a framework for handling common document
  commands. To use the framework, override <a href="#canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)"><code>canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a> to
  return true for the commands you wish to support. Then this method will
- call the following methods (as appropriate):      <a href="#clear()"><code>clear()</code></a>, <a href="#save()"><code>save()</code></a>, <a href="#saveAs()"><code>saveAs()</code></a>, <a href="#export()"><code>export()</code></a>,
+ call the following methods (as appropriate): null null null     <a href="#clear()"><code>clear()</code></a>, <a href="#save()"><code>save()</code></a>, <a href="#saveAs()"><code>saveAs()</code></a>, <a href="#export()"><code>export()</code></a>,
  <a href="#spinOff()"><code>spinOff()</code></a>, or <a href="#print()"><code>print()</code></a>. These methods handle common
  details of implementing these commands, then pass control to a matching
  implementation method which the subclass must override to perform those
@@ -1014,20 +1012,19 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
 <li class="blockList">
 <h4>confirmLossOfUnsavedChanges</h4>
 <pre class="methodSignature">protected&nbsp;boolean&nbsp;confirmLossOfUnsavedChanges()</pre>
-<div class="block">If <a href="#hasUnsavedChanges()"><code>hasUnsavedChanges()</code></a> returns  <code>true</code>, this will
- display a dialog box asking the user to confirm whether it is acceptable
- to lose unsaved changes. The method returns <code>true</code> if the user
- wants to continue (and lose the unsaved changes), otherwise
- <code>false</code>. If <code>hasUnsavedChanges()</code> returns
- <code>false</code>, then this method will return <code>true</code>
- without showing a dialog.
+<div class="block">If <a href="#hasUnsavedChanges()"><code>hasUnsavedChanges()</code></a> returns <code>true</code>, this will display a
+ dialog box asking the user to confirm whether it is acceptable to lose
+ unsaved changes. The method returns <code>true</code> if the user wants to
+ continue (and lose the unsaved changes), otherwise <code>false</code>. If
+ <code>hasUnsavedChanges()</code> returns <code>false</code>, then this method will
+ return <code>true</code> without showing a dialog.
 
  <p>
  <b>Note:</b> If the application is running in bundle test mode, then the
- method will return <code>true</code> without showing a dialog box. (This
- makes testing faster since the tester can experiment with the tested
- plug-in without having to click on confirm buttons when the test finishes
- and the test application instance is closed.)</div>
+ method will return <code>true</code> without showing a dialog box. (This makes
+ testing faster since the tester can experiment with the tested plug-in
+ without having to click on confirm buttons when the test finishes and the
+ test application instance is closed.)</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the operation can proceed</dd>
@@ -1063,9 +1060,9 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
 <h4>getFile</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;getFile()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="StrangeEonsEditor.html#getFile()">StrangeEonsEditor</a></code></span></div>
-<div class="block">Returns the file used to save this component, or <code>null</code> if it
- is a new, unsaved file or the editor is not associated with any
- particular file.</div>
+<div class="block">Returns the file used to save this component, or <code>null</code> if it is a
+ new, unsaved file or the editor is not associated with any particular
+ file.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="StrangeEonsEditor.html#getFile()">getFile</a></code>&nbsp;in interface&nbsp;<code><a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor</a></code></dd>
@@ -1089,8 +1086,8 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="StrangeEonsEditor.html#hasUnsavedChanges()">hasUnsavedChanges</a></code>&nbsp;in interface&nbsp;<code><a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if changes would be lost if the document was
- closed without saving</dd>
+<dd><code>true</code> if changes would be lost if the document was closed
+ without saving</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#setUnsavedChanges(boolean)"><code>setUnsavedChanges(boolean)</code></a></dd>
 </dl>
@@ -1109,8 +1106,8 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
  file is saved successfully.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>isDirty</code> - if <code>true</code>, tells the application that this
- editor has unsaved changes</dd>
+<dd><code>isDirty</code> - if <code>true</code>, tells the application that this editor
+ has unsaved changes</dd>
 </dl>
 </li>
 </ul>
@@ -1131,9 +1128,9 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
 
  This implementation handles the details of determining the file to be
  written and exception handling. If <a href="#getFile()"><code>getFile()</code></a> returns
- <code>null</code>, this method calls <a href="#saveAs()"><code>saveAs()</code></a> to determine the
- file to save to. Otherwise, it calls <a href="#saveImpl(java.io.File)"><code>saveImpl(java.io.File)</code></a> to write the file.
- To use it, override <a href="#saveImpl(java.io.File)"><code>saveImpl(java.io.File)</code></a>.</div>
+ <code>null</code>, this method calls <a href="#saveAs()"><code>saveAs()</code></a> to determine the file
+ to save to. Otherwise, it calls <a href="#saveImpl(java.io.File)"><code>saveImpl(java.io.File)</code></a> to write the file. To
+ use it, override <a href="#saveImpl(java.io.File)"><code>saveImpl(java.io.File)</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="StrangeEonsEditor.html#save()">save</a></code>&nbsp;in interface&nbsp;<code><a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor</a></code></dd>
@@ -1155,12 +1152,12 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
 
  This implementation handles the details of determining the file to be
  written and exception handling. It shows a save dialog and, if the user
- accepts the dialog, calls <code>setFile</code> to set the save file based
- on the user's selection. It then calls <a href="#save()"><code>save()</code></a> to save the file
- to the new destination. To use it, override
- <a href="StrangeEonsEditor.html#getFileNameExtension()"><code>StrangeEonsEditor.getFileNameExtension()</code></a> and <a href="StrangeEonsEditor.html#getFileTypeDescription()"><code>StrangeEonsEditor.getFileTypeDescription()</code></a> to
- describe the file type's standard extension and type, and override
- <a href="#saveImpl(java.io.File)"><code>saveImpl(java.io.File)</code></a> to write the file.</div>
+ accepts the dialog, calls <code>setFile</code> to set the save file based on
+ the user's selection. It then calls <a href="#save()"><code>save()</code></a> to save the file to
+ the new destination. To use it, override <a href="StrangeEonsEditor.html#getFileNameExtension()"><code>StrangeEonsEditor.getFileNameExtension()</code></a>
+ and <a href="StrangeEonsEditor.html#getFileTypeDescription()"><code>StrangeEonsEditor.getFileTypeDescription()</code></a> to describe the file type's
+ standard extension and type, and override <a href="#saveImpl(java.io.File)"><code>saveImpl(java.io.File)</code></a>
+ to write the file.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="StrangeEonsEditor.html#saveAs()">saveAs</a></code>&nbsp;in interface&nbsp;<code><a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor</a></code></dd>
@@ -1199,8 +1196,8 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
  permission.
 
  This implementation allows the user to cancel the clear operation if
- there are unsaved changes, and then calls <code>clearImpl</code> to
- handle the details of clearing the edited content. To use it, override
+ there are unsaved changes, and then calls <code>clearImpl</code> to handle the
+ details of clearing the edited content. To use it, override
  <a href="#clearImpl()"><code>clearImpl()</code></a> to perform the clear operation.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -1256,14 +1253,13 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
  edited component. If this operation is not supported by this editor, an
  <code>UnsupportedOperationException</code> is thrown.
 
- This implementation creates a default <code>PrinterJob</code> and then
- passes it to <a href="#printImpl(java.awt.print.PrinterJob)"><code>printImpl(java.awt.print.PrinterJob)</code></a>. It also
- performs exception handling, including the
- <code>PrinterAbortException</code> that is thrown if the user cancels a
- print. To implement printing, override <code>printImpl</code> to print
- the content using the provided job. Note that this method does not
- display a print dialog; you can do this from <code>printImpl</code> using
- <code>job.printDialog()</code>.</div>
+ This implementation creates a default <code>PrinterJob</code> and then passes
+ it to <a href="#printImpl(java.awt.print.PrinterJob)"><code>printImpl(java.awt.print.PrinterJob)</code></a>. It also performs
+ exception handling, including the <code>PrinterAbortException</code> that is
+ thrown if the user cancels a print. To implement printing, override
+ <code>printImpl</code> to print the content using the provided job. Note that
+ this method does not display a print dialog; you can do this from
+ <code>printImpl</code> using <code>job.printDialog()</code>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="StrangeEonsEditor.html#print()">print</a></code>&nbsp;in interface&nbsp;<code><a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor</a></code></dd>
@@ -1377,8 +1373,8 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
 <h4>createTimer</h4>
 <pre class="methodSignature">protected&nbsp;void&nbsp;createTimer()</pre>
 <div class="block">Creates a heartbeat timer that ticks at the default rate. The default
- rate is determined from the setting key <code>update-rate</code>, and can
- be changed in the <a href="dialog/prefs/Preferences.html" title="class in ca.cgjennings.apps.arkham.dialog.prefs"><code>Preferences</code></a> dialog.</div>
+ rate is determined from the setting key <code>update-rate</code>, and can be
+ changed in the <a href="dialog/prefs/Preferences.html" title="class in ca.cgjennings.apps.arkham.dialog.prefs"><code>Preferences</code></a> dialog.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#createTimer(int)"><code>createTimer(int)</code></a></dd>
@@ -1409,8 +1405,7 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
 <li class="blockList">
 <h4>stopTimedUpdates</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;stopTimedUpdates()</pre>
-<div class="block">Stops updating the preview pane when the game component
- is modified.</div>
+<div class="block">Stops updating the preview pane when the game component is modified.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#resumeTimedUpdates()"><code>resumeTimedUpdates()</code></a></dd>
@@ -1456,8 +1451,8 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
  registered listeners are correctly notified.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if any registered listener returns
- <code>true</code> to indicate content changes</dd>
+<dd><code>true</code> if any registered listener returns <code>true</code> to
+ indicate content changes</dd>
 </dl>
 </li>
 </ul>
@@ -1607,11 +1602,11 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
 <h4>setAttached</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setAttached&#8203;(boolean&nbsp;attach)</pre>
 <div class="block">Sets whether this editor is attached to the document tab strip. If
- <code>true</code>, the editor is attached; this is the default state for
- new editors. If <code>false</code>, the editor is detached from the tab
- strip. When detached, the editor appears in its own floating window
- separate from the main application window. The editor reattaches when the
- window is closed.</div>
+ <code>true</code>, the editor is attached; this is the default state for new
+ editors. If <code>false</code>, the editor is detached from the tab strip.
+ When detached, the editor appears in its own floating window separate
+ from the main application window. The editor reattaches when the window
+ is closed.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>attach</code> - if <code>true</code>, attaches the window to the tab strip</dd>
@@ -1625,8 +1620,8 @@ implements <a href="StrangeEonsEditor.html" title="interface in ca.cgjennings.ap
 <li class="blockList">
 <h4>isAttached</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isAttached()</pre>
-<div class="block">Returns <code>true</code> if this editor is currently attached to the
- document tab strip.</div>
+<div class="block">Returns <code>true</code> if this editor is currently attached to the document
+ tab strip.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the editor is attached</dd>

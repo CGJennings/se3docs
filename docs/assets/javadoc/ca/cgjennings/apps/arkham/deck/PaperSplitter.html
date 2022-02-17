@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -467,8 +467,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Returns the total number of physical pages needed to print a document.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the number of pages required to print
- <code>virtualPageCount</code> virtual pages</dd>
+<dd>the number of pages required to print <code>virtualPageCount</code>
+ virtual pages</dd>
 </dl>
 </li>
 </ul>
@@ -496,8 +496,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Returns the index of the last physical page that was printed using a
  Printable instance created with
  <a href="#createPrintable(java.awt.print.Printable)"><code>createPrintable(java.awt.print.Printable)</code></a>. This is provided
- mainly for debugging from within the virtual printable's
- <code>print</code> method.</div>
+ mainly for debugging from within the virtual printable's <code>print</code>
+ method.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the physical page last printed by a printable created from this

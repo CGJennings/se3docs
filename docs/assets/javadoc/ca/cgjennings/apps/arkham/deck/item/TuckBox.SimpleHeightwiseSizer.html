@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -210,8 +210,8 @@ implements <a href="TuckBox.BoxSizer.html" title="interface in ca.cgjennings.app
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#allowSleeves()">allowSleeves</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this helper uses sleeve thickness as
- part of its sizing algorithm.</div>
+<div class="block">Returns <code>true</code> if this helper uses sleeve thickness as part of
+ its sizing algorithm.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -271,8 +271,8 @@ implements <a href="TuckBox.BoxSizer.html" title="interface in ca.cgjennings.app
  thick items like tokens.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>name</code> - the name to be returned by the sizer's
- <code>name()</code> method</dd>
+<dd><code>name</code> - the name to be returned by the sizer's <code>name()</code>
+ method</dd>
 <dd><code>width</code> - the width of boxes created by this sizer, in mm</dd>
 <dd><code>depth</code> - the depth of boxes created by this sizer, in mm</dd>
 <dd><code>heightPadding</code> - a padding value added to the height of every
@@ -281,11 +281,9 @@ implements <a href="TuckBox.BoxSizer.html" title="interface in ca.cgjennings.app
 <dd><code>minCards</code> - a minimum depth for the box, expressed as a card
  count</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>name</code> is
- <code>null</code></dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if any dimension or
- <code>minCards</code> is less than or equal to 0, or if
- <code>heightPadding</code> is negative</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>name</code> is <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if any dimension or <code>minCards</code>
+ is less than or equal to 0, or if <code>heightPadding</code> is negative</dd>
 </dl>
 </li>
 </ul>
@@ -304,14 +302,13 @@ implements <a href="TuckBox.BoxSizer.html" title="interface in ca.cgjennings.app
                              boolean&nbsp;allowSleeves)</pre>
 <div class="block">Create a <a href="TuckBox.BoxSizer.html" title="interface in ca.cgjennings.apps.arkham.deck.item"><code>TuckBox.BoxSizer</code></a> that creates boxes of the given width and
  depth. The height of the box will be determined using the formula
- <code>heightPadding + heightPerCard * numberOfCards</code>, but will
- not be less than
- <code>heightPadding + heightPerCard * minCards</code>. All
+ <code>heightPadding + heightPerCard * numberOfCards</code>, but will not
+ be less than <code>heightPadding + heightPerCard * minCards</code>. All
  measurements are in millimetres.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>name</code> - the name to be returned by the sizer's
- <code>name()</code> method</dd>
+<dd><code>name</code> - the name to be returned by the sizer's <code>name()</code>
+ method</dd>
 <dd><code>width</code> - the width of boxes created by this sizer, in mm</dd>
 <dd><code>depth</code> - the height of boxes created by this sizer, in mm</dd>
 <dd><code>heightPadding</code> - a padding value added to the height of every
@@ -322,11 +319,9 @@ implements <a href="TuckBox.BoxSizer.html" title="interface in ca.cgjennings.app
 <dd><code>allowSleeves</code> - <code>true</code> if the user can select a sleeve
  thickness when using this sizer</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>name</code> is
- <code>null</code></dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if any dimension or
- <code>minCards</code> is less than or equal to 0, or if
- <code>heightPadding</code> is negative</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>name</code> is <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if any dimension or <code>minCards</code>
+ is less than or equal to 0, or if <code>heightPadding</code> is negative</dd>
 </dl>
 </li>
 </ul>
@@ -365,8 +360,8 @@ implements <a href="TuckBox.BoxSizer.html" title="interface in ca.cgjennings.app
 <div class="block">Returns the dimensions for a box of the type represented by this
  sizer that allows sufficient space to hold a number of cards equal to
  <code>cards</code>. The dimensions are returned as an array of three
- <code>double</code> values which measure the width, height, and depth
- in mm (respectively).</div>
+ <code>double</code> values which measure the width, height, and depth in
+ mm (respectively).</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="TuckBox.BoxSizer.html#size(int,double)">size</a></code>&nbsp;in interface&nbsp;<code><a href="TuckBox.BoxSizer.html" title="interface in ca.cgjennings.apps.arkham.deck.item">TuckBox.BoxSizer</a></code></dd>
@@ -388,16 +383,16 @@ implements <a href="TuckBox.BoxSizer.html" title="interface in ca.cgjennings.app
 <h4>allowSleeves</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;allowSleeves()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="TuckBox.BoxSizer.html#allowSleeves()">TuckBox.BoxSizer</a></code></span></div>
-<div class="block">Returns <code>true</code> if this helper uses sleeve thickness as
- part of its sizing algorithm. Non-card components typically don't
- have a suitable sleeve available, so sizers for such components would
- return <code>false</code>.</div>
+<div class="block">Returns <code>true</code> if this helper uses sleeve thickness as part of
+ its sizing algorithm. Non-card components typically don't have a
+ suitable sleeve available, so sizers for such components would return
+ <code>false</code>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="TuckBox.BoxSizer.html#allowSleeves()">allowSleeves</a></code>&nbsp;in interface&nbsp;<code><a href="TuckBox.BoxSizer.html" title="interface in ca.cgjennings.apps.arkham.deck.item">TuckBox.BoxSizer</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if and only if the user can store this
- component type on plastic sleeves</dd>
+<dd><code>true</code> if and only if the user can store this component
+ type on plastic sleeves</dd>
 </dl>
 </li>
 </ul>

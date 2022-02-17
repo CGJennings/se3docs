@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -242,8 +242,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>static <a href="TableGenerator.html" title="interface in ca.cgjennings.apps.arkham.plugins.debugging">TableGenerator</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getGenerator(java.lang.String)">getGenerator</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</code></th>
 <td class="colLast">
-<div class="block">Returns the generator with the given <code>name</code>, or
- <code>null</code> if there is no such generator.</div>
+<div class="block">Returns the generator with the given <code>name</code>, or <code>null</code> if
+ there is no such generator.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -436,14 +436,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getGenerator</h4>
 <pre class="methodSignature">public static&nbsp;<a href="TableGenerator.html" title="interface in ca.cgjennings.apps.arkham.plugins.debugging">TableGenerator</a>&nbsp;getGenerator&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</pre>
-<div class="block">Returns the generator with the given <code>name</code>, or
- <code>null</code> if there is no such generator.</div>
+<div class="block">Returns the generator with the given <code>name</code>, or <code>null</code> if
+ there is no such generator.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - the name of the generator to find</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the generator registered under <code>name</code>, or
- <code>null</code></dd>
+<dd>the generator registered under <code>name</code>, or <code>null</code></dd>
 </dl>
 </li>
 </ul>

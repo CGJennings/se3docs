@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -131,9 +131,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public class <span class="typeNameLabel">LineWrapper</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
-<div class="block">A <code>LineWrapper</code> breaks long strings into multiple lines. It is
- intended for use with fixed-width code-like text rather than natural language
- text, although it can be used with any string.</div>
+<div class="block">A <code>LineWrapper</code> breaks long strings into multiple lines. It is intended
+ for use with fixed-width code-like text rather than natural language text,
+ although it can be used with any string.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -296,14 +296,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Creates a new line wrapper with the specified wrapper behaviour.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>breakText</code> - the text to insert when breaking a line; if
- <code>null</code> then a newline character (\n) is used</dd>
+<dd><code>breakText</code> - the text to insert when breaking a line; if <code>null</code>
+ then a newline character (\n) is used</dd>
 <dd><code>firstWrap</code> - the optimal length for the first line</dd>
 <dd><code>afterWrap</code> - the optimal length for lines after the first</dd>
 <dd><code>tolerance</code> - the amount by which the remaining text must exceed the
  optimal length before a break is inserted (this allows you to avoid
- breaking a line when only <code>tolerance</code> or fewer characters
- would appear on the following line)</dd>
+ breaking a line when only <code>tolerance</code> or fewer characters would
+ appear on the following line)</dd>
 </dl>
 </li>
 </ul>

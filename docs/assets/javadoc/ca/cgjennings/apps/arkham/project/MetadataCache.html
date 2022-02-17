@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -274,14 +274,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>get</h4>
 <pre class="methodSignature">public&nbsp;<a href="MetadataCache.html" title="type parameter in MetadataCache">T</a>&nbsp;get&#8203;(<a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;member)</pre>
 <div class="block">Returns the cached object for the member, if available and still valid.
- Otherwise, returns <code>null</code>, in which case the cache object
- should be regenerated and added with <a href="#put(ca.cgjennings.apps.arkham.project.Member,T)"><code>put(ca.cgjennings.apps.arkham.project.Member, T)</code></a>.</div>
+ Otherwise, returns <code>null</code>, in which case the cache object should be
+ regenerated and added with <a href="#put(ca.cgjennings.apps.arkham.project.Member,T)"><code>put(ca.cgjennings.apps.arkham.project.Member, T)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>member</code> - the member to get a cached object for</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the cached object, or <code>null</code> if the cached object is
- out of date or not in the cache</dd>
+<dd>the cached object, or <code>null</code> if the cached object is out of
+ date or not in the cache</dd>
 </dl>
 </li>
 </ul>

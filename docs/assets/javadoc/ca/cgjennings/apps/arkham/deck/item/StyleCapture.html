@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -479,8 +479,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <h4>getCapturedStyles</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Set.html?is-external=true" title="class or interface in java.util" class="externalLink">Set</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang" class="externalLink">Class</a>&lt;? extends <a href="Style.html" title="interface in ca.cgjennings.apps.arkham.deck.item">Style</a>&gt;&gt;&nbsp;getCapturedStyles()</pre>
 <div class="block">Returns a set of the style classes that have been captured. For example,
- to test if the set contains a master opacity, you could use the following
- code:
+ to test if the set contains a opacity, you could use the following code:
  <pre>
  getCapturedStyles().contains( OpacityStyle.class );
  </pre></div>
@@ -539,8 +538,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - the property name, which must be non-<code>null</code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the value of the property, or <code>null</code> if it has not
- been captured</dd>
+<dd>the value of the property, or <code>null</code> if it has not been
+ captured</dd>
 </dl>
 </li>
 </ul>
@@ -559,8 +558,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
  style defaults.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>style</code> - the <code>Style</code> interface that the property belongs
- to</dd>
+<dd><code>style</code> - the <code>Style</code> interface that the property belongs to</dd>
 <dd><code>name</code> - the name of the property</dd>
 <dd><code>value</code> - the property's new value (the type of this object must be
  appropriate for the an object with the correct type for the property that
@@ -669,8 +667,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable
  information.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if non-empty captures have previously been
- copied.</dd>
+<dd><code>true</code> if non-empty captures have previously been copied.</dd>
 </dl>
 </li>
 </ul>

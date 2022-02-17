@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -145,9 +145,9 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre>public static class <span class="typeNameLabel">Settings.Colour</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true" title="class or interface in java.awt" class="externalLink">Color</a></pre>
 <div class="block">A <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true" title="class or interface in java.awt" class="externalLink"><code>Color</code></a> subclass that is specialized to convert more easily to
- and from setting values. This class is identical to <code>Color</code>
- except that it provides an additional constructor that takes a setting
- value, and its <code>toString()</code> method returns a setting value.</div>
+ and from setting values. This class is identical to <code>Color</code> except
+ that it provides an additional constructor that takes a setting value,
+ and its <code>toString()</code> method returns a setting value.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.1</dd>
@@ -271,9 +271,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?i
       float[]&nbsp;components,
       float&nbsp;alpha)</code></th>
 <td class="colLast">
-<div class="block">Creates a colour in the specified <code>ColorSpace</code> with the
- colour components specified in the <code>float</code> array and the
- specified alpha.</div>
+<div class="block">Creates a colour in the specified <code>ColorSpace</code> with the colour
+ components specified in the <code>float</code> array and the specified
+ alpha.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -365,11 +365,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?i
 <pre>public&nbsp;Colour&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/color/ColorSpace.html?is-external=true" title="class or interface in java.awt.color" class="externalLink">ColorSpace</a>&nbsp;cspace,
               float[]&nbsp;components,
               float&nbsp;alpha)</pre>
-<div class="block">Creates a colour in the specified <code>ColorSpace</code> with the
- colour components specified in the <code>float</code> array and the
- specified alpha. The number of components is determined by the type
- of the <code>ColorSpace</code>. For example, RGB requires 3
- components, but CMYK requires 4 components.</div>
+<div class="block">Creates a colour in the specified <code>ColorSpace</code> with the colour
+ components specified in the <code>float</code> array and the specified
+ alpha. The number of components is determined by the type of the
+ <code>ColorSpace</code>. For example, RGB requires 3 components, but CMYK
+ requires 4 components.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>cspace</code> - the <code>ColorSpace</code> to be used to interpret the
@@ -379,8 +379,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?i
 <dd><code>alpha</code> - alpha value</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if any of the values in the
- <code>components</code> array or <code>alpha</code> is outside of the
- range 0.0 to 1.0</dd>
+ <code>components</code> array or <code>alpha</code> is outside of the range 0.0
+ to 1.0</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true#getComponents(float%5B%5D)" title="class or interface in java.awt" class="externalLink"><code>Color.getComponents(float[])</code></a>, 
 <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true#getColorComponents(float%5B%5D)" title="class or interface in java.awt" class="externalLink"><code>Color.getColorComponents(float[])</code></a></dd>
@@ -408,9 +408,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?i
 <dd><code>b</code> - the blue component</dd>
 <dd><code>a</code> - the alpha component</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>r</code>, <code>g</code>
- <code>b</code> or <code>a</code> are outside of the range 0.0 to 1.0,
- inclusive</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>r</code>, <code>g</code> <code>b</code> or
+ <code>a</code> are outside of the range 0.0 to 1.0, inclusive</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true#getRed()" title="class or interface in java.awt" class="externalLink"><code>Color.getRed()</code></a>, 
 <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true#getGreen()" title="class or interface in java.awt" class="externalLink"><code>Color.getGreen()</code></a>, 
@@ -439,8 +438,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?i
 <dd><code>g</code> - the green component</dd>
 <dd><code>b</code> - the blue component</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>r</code>, <code>g</code> or
- <code>b</code> are outside of the range 0.0 to 1.0, inclusive</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>r</code>, <code>g</code> or <code>b</code>
+ are outside of the range 0.0 to 1.0, inclusive</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true#getRed()" title="class or interface in java.awt" class="externalLink"><code>Color.getRed()</code></a>, 
 <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true#getGreen()" title="class or interface in java.awt" class="externalLink"><code>Color.getGreen()</code></a>, 
@@ -460,8 +459,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?i
 <div class="block">Creates an sRGB colour with the specified combined ARGB value
  consisting of the alpha component in bits 24-31, the red component in
  bits 16-23, the green component in bits 8-15, and the blue component
- in bits 0-7. If the <code>hasAlpha</code> argument is
- <code>false</code>, alpha is defaulted to 255.</div>
+ in bits 0-7. If the <code>hasAlpha</code> argument is <code>false</code>, alpha
+ is defaulted to 255.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>argb</code> - the combined ARGB components</dd>
@@ -520,9 +519,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?i
 <dd><code>b</code> - the blue component</dd>
 <dd><code>a</code> - the alpha component</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>r</code>, <code>g</code>,
- <code>b</code> or <code>a</code> are outside of the range 0 to 255,
- inclusive</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>r</code>, <code>g</code>, <code>b</code>
+ or <code>a</code> are outside of the range 0 to 255, inclusive</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true#getRed()" title="class or interface in java.awt" class="externalLink"><code>Color.getRed()</code></a>, 
 <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true#getGreen()" title="class or interface in java.awt" class="externalLink"><code>Color.getGreen()</code></a>, 
@@ -549,9 +547,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?i
 <dd><code>g</code> - the green component</dd>
 <dd><code>b</code> - the blue component</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>r</code>, <code>g</code>,
- <code>b</code> or <code>a</code> are outside of the range 0 to 255,
- inclusive</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if <code>r</code>, <code>g</code>, <code>b</code>
+ or <code>a</code> are outside of the range 0 to 255, inclusive</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true#getRed()" title="class or interface in java.awt" class="externalLink"><code>Color.getRed()</code></a>, 
 <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?is-external=true#getGreen()" title="class or interface in java.awt" class="externalLink"><code>Color.getGreen()</code></a>, 
@@ -568,8 +565,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?i
 <li class="blockList">
 <h4>Colour</h4>
 <pre>public&nbsp;Colour&#8203;(double&nbsp;argb)</pre>
-<div class="block">Creates a colour from a JavaScript <code>Number</code> object. This
- is equivalent to <code>Colour(int rgb)</code> for script code.</div>
+<div class="block">Creates a colour from a JavaScript <code>Number</code> object. This is
+ equivalent to <code>Colour(int rgb)</code> for script code.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>argb</code> - the combined RGB components</dd>
@@ -584,8 +581,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Color.html?i
 <h4>Colour</h4>
 <pre>public&nbsp;Colour&#8203;(double&nbsp;argb,
               boolean&nbsp;hasAlpha)</pre>
-<div class="block">Creates a colour from a JavaScript <code>Number</code> object. This
- is equivalent to <code>Colour(int argb, boolean translucent)</code> for script code.</div>
+<div class="block">Creates a colour from a JavaScript <code>Number</code> object. This is
+ equivalent to <code>Colour(int argb, boolean translucent)</code> for
+ script code.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>argb</code> - the combined RGB components</dd>

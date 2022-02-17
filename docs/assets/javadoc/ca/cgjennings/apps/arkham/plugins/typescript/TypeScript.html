@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -131,10 +131,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public final class <span class="typeNameLabel">TypeScript</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
-<div class="block">The primary method of accessing TypeScript language services.
- This class allows you to hand off service requests to be performed in
- the background. A callback that you provide will be called with
- the result once it is available.</div>
+<div class="block">The primary method of accessing TypeScript language services. This class
+ allows you to hand off service requests to be performed in the background. A
+ callback that you provide will be called with the result once it is
+ available.</div>
 </li>
 </ul>
 </div>
@@ -174,8 +174,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#transpile(java.lang.String,java.util.function.Consumer)">transpile</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;source,
          <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;callback)</code></th>
 <td class="colLast">
-<div class="block">Transpiles the specified source code from TypeScript to JavaScript,
- using default options.</div>
+<div class="block">Transpiles the specified source code from TypeScript to JavaScript, using
+ default options.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -216,8 +216,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>warmUp</h4>
 <pre class="methodSignature">public static&nbsp;void&nbsp;warmUp()</pre>
-<div class="block">Suggests to the service that it should prepare to be used soon.
- If the service is already running, this method returns immediately.</div>
+<div class="block">Suggests to the service that it should prepare to be used soon. If the
+ service is already running, this method returns immediately.</div>
 </li>
 </ul>
 <a id="getVersion(java.util.function.Consumer)">
@@ -230,8 +230,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Gets a string describing which version of TypeScript is being used.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>callback</code> - will be called with a non-null version string,
-    such as "4.2.0-dev"</dd>
+<dd><code>callback</code> - will be called with a non-null version string, such as
+ "4.2.0-dev"</dd>
 </dl>
 </li>
 </ul>
@@ -243,8 +243,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>transpile</h4>
 <pre class="methodSignature">public static&nbsp;void&nbsp;transpile&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;source,
                              <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function" class="externalLink">Consumer</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;callback)</pre>
-<div class="block">Transpiles the specified source code from TypeScript to JavaScript,
- using default options.</div>
+<div class="block">Transpiles the specified source code from TypeScript to JavaScript, using
+ default options.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>source</code> - the non-null code to compile</dd>
@@ -259,9 +259,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>restart</h4>
 <pre class="methodSignature">public static&nbsp;void&nbsp;restart()</pre>
-<div class="block">Restarts the service provider. This can be called during development
- to pick up changes to the service implementation without restarting
- the app.</div>
+<div class="block">Restarts the service provider. This can be called during development to
+ pick up changes to the service implementation without restarting the app.</div>
 </li>
 </ul>
 </li>

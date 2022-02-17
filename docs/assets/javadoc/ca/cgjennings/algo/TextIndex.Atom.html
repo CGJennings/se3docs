@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -291,8 +291,7 @@ extends <a href="TextIndex.Query.html" title="class in ca.cgjennings.algo">TextI
 <h4>executeInverse</h4>
 <pre class="methodSignature">public&nbsp;<a href="TextIndex.Result.html" title="interface in ca.cgjennings.algo">TextIndex.Result</a>&nbsp;executeInverse&#8203;(<a href="TextIndex.html" title="class in ca.cgjennings.algo">TextIndex</a>&nbsp;ti)</pre>
 <div class="block">Returns the inverse of the set of documents containing the search
- term. This is equivalent to
- <code>new Not( this ).execute( ti )</code>.</div>
+ term. This is equivalent to <code>new Not( this ).execute( ti )</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>ti</code> - the text index to match against</dd>

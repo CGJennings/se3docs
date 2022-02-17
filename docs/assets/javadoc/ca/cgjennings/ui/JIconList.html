@@ -26,14 +26,14 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+var data = {"i0":9,"i1":10,"i2":10};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -307,20 +307,28 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JList.htm
 </a>
 <h3>Method Summary</h3>
 <table class="memberSummary">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colSecond" scope="col">Method</th>
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code>static &lt;E&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/ListCellRenderer.html?is-external=true" title="class or interface in javax.swing" class="externalLink">ListCellRenderer</a>&lt;E&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#createRenderer()">createRenderer</a></span>()</code></th>
+<td class="colLast">
+<div class="block">Creates an <a href="JIconList.IconRenderer.html" title="class in ca.cgjennings.ui"><code>JIconList.IconRenderer</code></a> cast to a renderer for the specified
+ type.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Icon</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDefaultIcon()">getDefaultIcon</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Returns the current default icon for this list.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setDefaultIcon(javax.swing.Icon)">setDefaultIcon</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Icon</a>&nbsp;defaultIcon)</code></th>
 <td class="colLast">
@@ -437,16 +445,36 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JList.htm
 <a id="setDefaultIcon(javax.swing.Icon)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>setDefaultIcon</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setDefaultIcon&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Icon</a>&nbsp;defaultIcon)</pre>
 <div class="block">Change the default icon to use for items that do not provide their own.
- The initial value is <code>null</code>, meaning that these items will not
- show an icon.</div>
+ The initial value is <code>null</code>, meaning that these items will not show
+ an icon.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>defaultIcon</code> - the default icon to set</dd>
+</dl>
+</li>
+</ul>
+<a id="createRenderer()">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>createRenderer</h4>
+<pre class="methodSignature">public static&nbsp;&lt;E&gt;&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/ListCellRenderer.html?is-external=true" title="class or interface in javax.swing" class="externalLink">ListCellRenderer</a>&lt;E&gt;&nbsp;createRenderer()</pre>
+<div class="block">Creates an <a href="JIconList.IconRenderer.html" title="class in ca.cgjennings.ui"><code>JIconList.IconRenderer</code></a> cast to a renderer for the specified
+ type. The type may or may not be an <a href="IconProvider.html" title="interface in ca.cgjennings.ui"><code>IconProvider</code></a>; if the actual
+ values seen by the renderer are icon providers, their icons are used as
+ icons for the list items.</div>
+<dl>
+<dt><span class="paramLabel">Type Parameters:</span></dt>
+<dd><code>E</code> - the desired item type</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a list cell renderer for the specified type that renders icons
+ for icon provider items</dd>
 </dl>
 </li>
 </ul>

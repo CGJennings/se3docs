@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -281,8 +281,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isZeroAlphaIgnored()">isZeroAlphaIgnored</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if pixels with an alpha of zero will not be
- included in the histogram.</div>
+<div class="block">Returns <code>true</code> if pixels with an alpha of zero will not be included
+ in the histogram.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
@@ -442,8 +442,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isZeroAlphaIgnored</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isZeroAlphaIgnored()</pre>
-<div class="block">Returns <code>true</code> if pixels with an alpha of zero will not be
- included in the histogram.</div>
+<div class="block">Returns <code>true</code> if pixels with an alpha of zero will not be included
+ in the histogram.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if transparent pixels are ignored</dd>
@@ -510,8 +510,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>measure</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;measure&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/BufferedImage.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">BufferedImage</a>&nbsp;image)</pre>
 <div class="block">Measures the samples in an image and incorporates them into the histogram
- statistics. All channels indicated by the <code>channelMask</code> will
- be averaged together to determine the histogram bucket.</div>
+ statistics. All channels indicated by the <code>channelMask</code> will be
+ averaged together to determine the histogram bucket.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>image</code> - the image to analyze</dd>
@@ -527,8 +527,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public&nbsp;void&nbsp;measure&#8203;(int[]&nbsp;image)</pre>
 <div class="block">Measures the samples in an array of pixel data and incorporates them into
  the histogram statistics. All channels indicated by the
- <code>channelMask</code> will be averaged together to determine the
- histogram bucket.</div>
+ <code>channelMask</code> will be averaged together to determine the histogram
+ bucket.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>image</code> - the image to analyze</dd>

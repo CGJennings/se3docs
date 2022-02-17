@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -148,8 +148,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public static class <span class="typeNameLabel">New.NewAction</span>
 extends <a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.project">TaskAction</a></pre>
-<div class="block">A useful class for adding actions to <code>New</code>. It is not
- required: you can use any <a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.project"><code>TaskAction</code></a>.</div>
+<div class="block">A useful class for adding actions to <code>New</code>. It is not required: you
+ can use any <a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.project"><code>TaskAction</code></a>.</div>
 </li>
 </ul>
 </div>
@@ -225,17 +225,16 @@ extends <a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.proj
          <a href="Task.html" title="class in ca.cgjennings.apps.arkham.project">Task</a>&nbsp;task,
          <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;member)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the target is any kind of folder
- (including a project or task) and the task type restrictions (if any)
- are met.</div>
+<div class="block">Returns <code>true</code> if the target is any kind of folder (including a
+ project or task) and the task type restrictions (if any) are met.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#appliesToSelection(ca.cgjennings.apps.arkham.project.Member%5B%5D)">appliesToSelection</a></span>&#8203;(<a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>[]&nbsp;members)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this action is applicable to any of the
- specified <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project"><code>Member</code></a>s.</div>
+<div class="block">Returns <code>true</code> if this action is applicable to any of the specified
+ <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project"><code>Member</code></a>s.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -263,8 +262,8 @@ extends <a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.proj
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Icon</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getIcon()">getIcon</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns an icon for this action, or <code>null</code> if the action
- should not be associated with an icon.</div>
+<div class="block">Returns an icon for this action, or <code>null</code> if the action should not
+ be associated with an icon.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -434,8 +433,8 @@ extends <a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.proj
 <h4>getIcon</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Icon</a>&nbsp;getIcon()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="TaskAction.html#getIcon()">TaskAction</a></code></span></div>
-<div class="block">Returns an icon for this action, or <code>null</code> if the action
- should not be associated with an icon.</div>
+<div class="block">Returns an icon for this action, or <code>null</code> if the action should not
+ be associated with an icon.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../ui/IconProvider.html#getIcon()">getIcon</a></code>&nbsp;in interface&nbsp;<code><a href="../../../ui/IconProvider.html" title="interface in ca.cgjennings.ui">IconProvider</a></code></dd>
@@ -476,13 +475,12 @@ extends <a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.proj
                        <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;member)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="TaskAction.html#perform(ca.cgjennings.apps.arkham.project.Project,ca.cgjennings.apps.arkham.project.Task,ca.cgjennings.apps.arkham.project.Member)">TaskAction</a></code></span></div>
 <div class="block">Perform this action on a member of a project, a project or a task. If the
- project itself is the target, <code>task</code> and <code>member</code>
- will be <code>null</code>. If a task is the target, then
- <code>member</code> will be null. If an error occurs while executing the
- task, then it is the action's responsibility to inform the user. This
- method can return <code>false</code> to indicate that if the action is
- being applied to multiple members, it should stop immediately rather than
- continue to the next member.</div>
+ project itself is the target, <code>task</code> and <code>member</code> will be
+ <code>null</code>. If a task is the target, then <code>member</code> will be null.
+ If an error occurs while executing the task, then it is the action's
+ responsibility to inform the user. This method can return <code>false</code>
+ to indicate that if the action is being applied to multiple members, it
+ should stop immediately rather than continue to the next member.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="TaskAction.html#perform(ca.cgjennings.apps.arkham.project.Project,ca.cgjennings.apps.arkham.project.Task,ca.cgjennings.apps.arkham.project.Member)">perform</a></code>&nbsp;in class&nbsp;<code><a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.project">TaskAction</a></code></dd>
@@ -560,19 +558,17 @@ extends <a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.proj
 <pre class="methodSignature">public&nbsp;boolean&nbsp;appliesTo&#8203;(<a href="Project.html" title="class in ca.cgjennings.apps.arkham.project">Project</a>&nbsp;project,
                          <a href="Task.html" title="class in ca.cgjennings.apps.arkham.project">Task</a>&nbsp;task,
                          <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>&nbsp;member)</pre>
-<div class="block">Returns <code>true</code> if the target is any kind of folder
- (including a project or task) and the task type restrictions (if any)
- are met.
+<div class="block">Returns <code>true</code> if the target is any kind of folder (including a
+ project or task) and the task type restrictions (if any) are met.
 
- Returns <code>true</code> if this action can be performed on the
- specified member of a project, project or a task. If the project itself
- is the target, <code>task</code> and <code>member</code> will be
- <code>null</code>. If a task is the target, then <code>member</code> will
- be null. If an error occurs while executing the task, then it is the
- action's responsibility to inform the user. This method can return
- <code>false</code> to indicate that if the action is being applied to
- multiple members, it should stop immediately rather than continue to the
- next member.</div>
+ Returns <code>true</code> if this action can be performed on the specified
+ member of a project, project or a task. If the project itself is the
+ target, <code>task</code> and <code>member</code> will be <code>null</code>. If a task
+ is the target, then <code>member</code> will be null. If an error occurs while
+ executing the task, then it is the action's responsibility to inform the
+ user. This method can return <code>false</code> to indicate that if the action
+ is being applied to multiple members, it should stop immediately rather
+ than continue to the next member.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="TaskAction.html#appliesTo(ca.cgjennings.apps.arkham.project.Project,ca.cgjennings.apps.arkham.project.Task,ca.cgjennings.apps.arkham.project.Member)">appliesTo</a></code>&nbsp;in class&nbsp;<code><a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.project">TaskAction</a></code></dd>
@@ -593,21 +589,19 @@ extends <a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.proj
 <h4>appliesToSelection</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;appliesToSelection&#8203;(<a href="Member.html" title="class in ca.cgjennings.apps.arkham.project">Member</a>[]&nbsp;members)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="TaskAction.html#appliesToSelection(ca.cgjennings.apps.arkham.project.Member%5B%5D)">TaskAction</a></code></span></div>
-<div class="block">Returns <code>true</code> if this action is applicable to any of the
- specified <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project"><code>Member</code></a>s. By overriding this, you can modify whether an
- action is listed depending on which other members are selected. For
- example, you could create a command that can only be applied to a
- singleton selection by checking the length of <code>members</code> and
- returning <code>false</code> if it is not 1, and otherwise calling the
- super implementation.</div>
+<div class="block">Returns <code>true</code> if this action is applicable to any of the specified
+ <a href="Member.html" title="class in ca.cgjennings.apps.arkham.project"><code>Member</code></a>s. By overriding this, you can modify whether an action is
+ listed depending on which other members are selected. For example, you
+ could create a command that can only be applied to a singleton selection
+ by checking the length of <code>members</code> and returning <code>false</code> if
+ it is not 1, and otherwise calling the super implementation.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="TaskAction.html#appliesToSelection(ca.cgjennings.apps.arkham.project.Member%5B%5D)">appliesToSelection</a></code>&nbsp;in class&nbsp;<code><a href="TaskAction.html" title="class in ca.cgjennings.apps.arkham.project">TaskAction</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>members</code> - a list of zero or more members</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> is the action can be applied to at least one
- member</dd>
+<dd><code>true</code> is the action can be applied to at least one member</dd>
 </dl>
 </li>
 </ul>

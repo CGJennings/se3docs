@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -114,17 +114,17 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <main role="main">
 <div class="header">
 <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html">ca.cgjennings.ui</a></div>
-<h2 title="Class FilteredListModel" class="title">Class FilteredListModel</h2>
+<h2 title="Class FilteredListModel" class="title">Class FilteredListModel&lt;E&gt;</h2>
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/AbstractListModel.html?is-external=true" title="class or interface in javax.swing" class="externalLink">javax.swing.AbstractListModel</a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/AbstractListModel.html?is-external=true" title="class or interface in javax.swing" class="externalLink">javax.swing.AbstractListModel</a>&lt;E&gt;</li>
 <li>
 <ul class="inheritance">
-<li>ca.cgjennings.ui.FilteredListModel</li>
+<li>ca.cgjennings.ui.FilteredListModel&lt;E&gt;</li>
 </ul>
 </li>
 </ul>
@@ -135,16 +135,15 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/ListModel.html?is-external=true" title="class or interface in javax.swing" class="externalLink">ListModel</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/ListModel.html?is-external=true" title="class or interface in javax.swing" class="externalLink">ListModel</a>&lt;E&gt;</code></dd>
 </dl>
 <hr>
-<pre>public class <span class="typeNameLabel">FilteredListModel</span>
-extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/AbstractListModel.html?is-external=true" title="class or interface in javax.swing" class="externalLink">AbstractListModel</a></pre>
-<div class="block">A model for <code>JList</code>s that supports filtering. The
- <code>ListModel</code> methods <code>getElementAt</code> and
- <code>getSize</code> return values appropriate for the applied filter. It is
- recommended that you get and set the selection using values rather than
- indices.</div>
+<pre>public class <span class="typeNameLabel">FilteredListModel&lt;E&gt;</span>
+extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/AbstractListModel.html?is-external=true" title="class or interface in javax.swing" class="externalLink">AbstractListModel</a>&lt;E&gt;</pre>
+<div class="block">A model for <code>JList</code>s that supports filtering. The <code>ListModel</code>
+ methods <code>getElementAt</code> and <code>getSize</code> return values appropriate
+ for the applied filter. It is recommended that you get and set the selection
+ using values rather than indices.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -240,11 +239,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/AbstractL
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.Object%5B%5D)">FilteredListModel</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>[]&nbsp;items)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(E%5B%5D)">FilteredListModel</a></span>&#8203;(<a href="FilteredListModel.html" title="type parameter in FilteredListModel">E</a>[]&nbsp;items)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr class="altColor">
-<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.Collection)">FilteredListModel</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&gt;&nbsp;items)</code></th>
+<th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.Collection)">FilteredListModel</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;? extends <a href="FilteredListModel.html" title="type parameter in FilteredListModel">E</a>&gt;&nbsp;items)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 </table>
@@ -267,13 +266,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/AbstractL
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#add(int,java.lang.Object)">add</a></span>&#8203;(int&nbsp;index,
-   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;item)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#add(int,E)">add</a></span>&#8203;(int&nbsp;index,
+   <a href="FilteredListModel.html" title="type parameter in FilteredListModel">E</a>&nbsp;item)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#add(java.lang.Object)">add</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;item)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#add(E)">add</a></span>&#8203;(<a href="FilteredListModel.html" title="type parameter in FilteredListModel">E</a>&nbsp;item)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
@@ -294,7 +293,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/AbstractL
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i5" class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></code></td>
+<td class="colFirst"><code><a href="FilteredListModel.html" title="type parameter in FilteredListModel">E</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getElementAt(int)">getElementAt</a></span>&#8203;(int&nbsp;index)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
@@ -321,8 +320,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/AbstractL
 <td class="colFirst"><code>int</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getUnfilteredIndex(java.lang.Object)">getUnfilteredIndex</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;o)</code></th>
 <td class="colLast">
-<div class="block">Returns the index of the first object equal to <code>o</code>, ignoring
- the current filter.</div>
+<div class="block">Returns the index of the first object equal to <code>o</code>, ignoring the
+ current filter.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
@@ -401,11 +400,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/AbstractL
 </ul>
 <a id="&lt;init&gt;(java.lang.Object[])">
 <!--   -->
+</a><a id="&lt;init&gt;(E[])">
+<!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>FilteredListModel</h4>
-<pre>public&nbsp;FilteredListModel&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>[]&nbsp;items)</pre>
+<pre>public&nbsp;FilteredListModel&#8203;(<a href="FilteredListModel.html" title="type parameter in FilteredListModel">E</a>[]&nbsp;items)</pre>
 </li>
 </ul>
 <a id="&lt;init&gt;(java.util.Collection)">
@@ -414,7 +415,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/AbstractL
 <ul class="blockListLast">
 <li class="blockList">
 <h4>FilteredListModel</h4>
-<pre>public&nbsp;FilteredListModel&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;? extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&gt;&nbsp;items)</pre>
+<pre>public&nbsp;FilteredListModel&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util" class="externalLink">Collection</a>&lt;? extends <a href="FilteredListModel.html" title="type parameter in FilteredListModel">E</a>&gt;&nbsp;items)</pre>
 </li>
 </ul>
 </li>
@@ -429,21 +430,25 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/AbstractL
 <h3>Method Detail</h3>
 <a id="add(java.lang.Object)">
 <!--   -->
+</a><a id="add(E)">
+<!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>add</h4>
-<pre class="methodSignature">public&nbsp;void&nbsp;add&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;item)</pre>
+<pre class="methodSignature">public&nbsp;void&nbsp;add&#8203;(<a href="FilteredListModel.html" title="type parameter in FilteredListModel">E</a>&nbsp;item)</pre>
 </li>
 </ul>
 <a id="add(int,java.lang.Object)">
+<!--   -->
+</a><a id="add(int,E)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>add</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;add&#8203;(int&nbsp;index,
-                <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;item)</pre>
+                <a href="FilteredListModel.html" title="type parameter in FilteredListModel">E</a>&nbsp;item)</pre>
 </li>
 </ul>
 <a id="getItem(int)">
@@ -493,9 +498,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/AbstractL
 <li class="blockList">
 <h4>getUnfilteredIndex</h4>
 <pre class="methodSignature">public&nbsp;int&nbsp;getUnfilteredIndex&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;o)</pre>
-<div class="block">Returns the index of the first object equal to <code>o</code>, ignoring
- the current filter. This is useful when the list is an index into a list
- of objects and the indexed object must be retrieved.</div>
+<div class="block">Returns the index of the first object equal to <code>o</code>, ignoring the
+ current filter. This is useful when the list is an index into a list of
+ objects and the indexed object must be retrieved.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>o</code> - the object to find the index of</dd>
@@ -548,7 +553,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/AbstractL
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>field</code> - the field to link this model to</dd>
 <dd><code>list</code> - the list whose items are filtered</dd>
-<dd><code>restoreSelection</code> - if true, any selection is restore after updating the list</dd>
+<dd><code>restoreSelection</code> - if true, any selection is restore after updating
+ the list</dd>
 <dd><code>T</code> - the item type of the target list</dd>
 </dl>
 </li>
@@ -559,7 +565,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/AbstractL
 <ul class="blockList">
 <li class="blockList">
 <h4>getElementAt</h4>
-<pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;getElementAt&#8203;(int&nbsp;index)</pre>
+<pre class="methodSignature">public&nbsp;<a href="FilteredListModel.html" title="type parameter in FilteredListModel">E</a>&nbsp;getElementAt&#8203;(int&nbsp;index)</pre>
 </li>
 </ul>
 <a id="getSize()">

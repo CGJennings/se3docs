@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -122,13 +122,15 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li class="blockList">
 <dl>
 <dt>All Known Implementing Classes:</dt>
-<dd><code><a href="AbstractConversionTrigger.html" title="class in ca.cgjennings.apps.arkham.component.conversion">AbstractConversionTrigger</a></code>, <code><a href="UpgradeConversionTrigger.html" title="class in ca.cgjennings.apps.arkham.component.conversion">UpgradeConversionTrigger</a></code></dd>
+<dd><code><a href="AbstractConversionTrigger.html" title="class in ca.cgjennings.apps.arkham.component.conversion">AbstractConversionTrigger</a></code>, <code><a href="ManualConversionTrigger.html" title="class in ca.cgjennings.apps.arkham.component.conversion">ManualConversionTrigger</a></code>, <code><a href="UpgradeConversionTrigger.html" title="class in ca.cgjennings.apps.arkham.component.conversion">UpgradeConversionTrigger</a></code></dd>
 </dl>
 <hr>
 <pre>public interface <span class="typeNameLabel">ConversionTrigger</span></pre>
 <div class="block">A <code>ConversionTrigger</code> object must be provided when initiating
  conversion of a <a href="../GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component"><code>GameComponent</code></a>.</div>
 <dl>
+<dt><span class="simpleTagLabel">Since:</span></dt>
+<dd>3.3</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><code>ConversionSession#convertGameComponent(ConversionTrigger,
  ca.cgjennings.apps.arkham.component.GameComponent)</code></dd>
@@ -288,16 +290,16 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>cause</code> - A non-null string describing the reason for the conversion.</dd>
 <dd><code>targetClassName</code> - The non-null name of the class map class of the
-     new component.</dd>
+ new component.</dd>
 <dd><code>extensionName</code> - An optional description of the extension required by
-    the target component.</dd>
+ the target component.</dd>
 <dd><code>extensionId</code> - An optional UUID or CatalogID string of the extension
-     required by the target component.</dd>
+ required by the target component.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>A basic conversion trigger for the specified cause. The returned
-     trigger is guaranteed <em>not</em> to be an instance of
-     <a href="AbstractConversionTrigger.html" title="class in ca.cgjennings.apps.arkham.component.conversion"><code>AbstractConversionTrigger</code></a> (and by extension,
-     <a href="UpgradeConversionTrigger.html" title="class in ca.cgjennings.apps.arkham.component.conversion"><code>UpgradeConversionTrigger</code></a>).</dd>
+ trigger is guaranteed <em>not</em> to be an instance of
+ <a href="AbstractConversionTrigger.html" title="class in ca.cgjennings.apps.arkham.component.conversion"><code>AbstractConversionTrigger</code></a> (and by extension,
+ <a href="UpgradeConversionTrigger.html" title="class in ca.cgjennings.apps.arkham.component.conversion"><code>UpgradeConversionTrigger</code></a>).</dd>
 </dl>
 </li>
 </ul>

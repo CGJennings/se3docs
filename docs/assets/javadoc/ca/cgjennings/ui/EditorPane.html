@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -294,9 +294,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JEditorPa
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String,java.lang.String)">EditorPane</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;type,
           <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text)</code></th>
 <td class="colLast">
-<div class="block">Creates an <code>EditorPane</code> that has been initialized to the given
- text by calling the <code>setContentType</code> and <code>setText</code>
- methods.</div>
+<div class="block">Creates an <code>EditorPane</code> that has been initialized to the given text
+ by calling the <code>setContentType</code> and <code>setText</code> methods.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -416,8 +415,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JEditorPa
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>initialPage</code> - the URL</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if the URL is <code>null</code> or cannot be
- accessed</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if the URL is <code>null</code> or cannot be accessed</dd>
 </dl>
 </li>
 </ul>
@@ -435,8 +433,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JEditorPa
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>url</code> - the URL</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if the URL is <code>null</code> or cannot be
- accessed</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if the URL is <code>null</code> or cannot be accessed</dd>
 </dl>
 </li>
 </ul>
@@ -448,9 +445,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JEditorPa
 <h4>EditorPane</h4>
 <pre>public&nbsp;EditorPane&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;type,
                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text)</pre>
-<div class="block">Creates an <code>EditorPane</code> that has been initialized to the given
- text by calling the <code>setContentType</code> and <code>setText</code>
- methods.</div>
+<div class="block">Creates an <code>EditorPane</code> that has been initialized to the given text
+ by calling the <code>setContentType</code> and <code>setText</code> methods.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>type</code> - mime type of the given text</dd>

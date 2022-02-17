@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -141,15 +141,14 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>
 implements <a href="Portrait.html" title="interface in ca.cgjennings.apps.arkham.component">Portrait</a></pre>
 <div class="block">An abstract base class for <a href="Portrait.html" title="interface in ca.cgjennings.apps.arkham.component"><code>Portrait</code></a> implementations. This base class
- implements the <code>Point2D</code>-based pan methods in terms of
- <code>setPanX</code>, <code>setPanY</code>, <code>getPanX</code>, and
- <code>getPanY</code>. It also returns a default set of portrait features
- supporting source-changing, panning, and scaling, but not rotation.
- Accordingly, it provides dummy implementations of the rotation getter/setter
- methods that enforce an immutable angle of 0 degrees. It provides a no-op
- implementation of <a href="Portrait.html#installDefault()"><code>Portrait.installDefault()</code></a>. It implements
- <a href="#getClipStencil()"><code>getClipStencil()</code></a> to return <code>null</code>, but it provides some
- static helper methods for subclasses that wish to provide
+ implements the <code>Point2D</code>-based pan methods in terms of <code>setPanX</code>,
+ <code>setPanY</code>, <code>getPanX</code>, and <code>getPanY</code>. It also returns a
+ default set of portrait features supporting source-changing, panning, and
+ scaling, but not rotation. Accordingly, it provides dummy implementations of
+ the rotation getter/setter methods that enforce an immutable angle of 0
+ degrees. It provides a no-op implementation of <a href="Portrait.html#installDefault()"><code>Portrait.installDefault()</code></a>. It
+ implements <a href="#getClipStencil()"><code>getClipStencil()</code></a> to return <code>null</code>, but it provides
+ some static helper methods for subclasses that wish to provide
  non-<code>null</code> stencils.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
@@ -377,9 +376,9 @@ implements <a href="Portrait.html" title="interface in ca.cgjennings.apps.arkham
 <li class="blockList">
 <h4>getPan</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Point2D.html?is-external=true" title="class or interface in java.awt.geom" class="externalLink">Point2D</a>&nbsp;getPan&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/geom/Point2D.html?is-external=true" title="class or interface in java.awt.geom" class="externalLink">Point2D</a>&nbsp;dest)</pre>
-<div class="block">Returns the pan value as a <code>Point2D</code>. The pan values will be
- stored in <code>dest</code>; if <code>null</code>, a new point object
- will be allocated and returned.
+<div class="block">Returns the pan value as a <code>Point2D</code>. The pan values will be stored
+ in <code>dest</code>; if <code>null</code>, a new point object will be allocated
+ and returned.
 
  <p>
  The base class calls <a href="Portrait.html#getPanX()"><code>Portrait.getPanX()</code></a> and <a href="Portrait.html#getPanY()"><code>Portrait.getPanY()</code></a> to obtain x
@@ -477,8 +476,8 @@ implements <a href="Portrait.html" title="interface in ca.cgjennings.apps.arkham
  accurate and should not be relied on.
 
  <p>
- The base class returns <code>null</code>, indicating that the portrait
- area is unobscured.</div>
+ The base class returns <code>null</code>, indicating that the portrait area is
+ unobscured.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="Portrait.html#getClipStencil()">getClipStencil</a></code>&nbsp;in interface&nbsp;<code><a href="Portrait.html" title="interface in ca.cgjennings.apps.arkham.component">Portrait</a></code></dd>
@@ -510,11 +509,10 @@ implements <a href="Portrait.html" title="interface in ca.cgjennings.apps.arkham
  <p>
  If the resulting image would have no transparent or translucent pixels
  (that is, if every pixel would have an alpha value of 255), then this
- method returns <code>null</code>. This is consistent with how
- <code>null</code> is interpreted when it is returned from
- <a href="#getClipStencil()"><code>getClipStencil()</code></a>, because if the subimage is completely opaque
- then the portrait is presumably being drawn over the template rather than
- under it.</div>
+ method returns <code>null</code>. This is consistent with how <code>null</code> is
+ interpreted when it is returned from <a href="#getClipStencil()"><code>getClipStencil()</code></a>, because
+ if the subimage is completely opaque then the portrait is presumably
+ being drawn over the template rather than under it.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>template</code> - the sheet's template image</dd>
@@ -522,8 +520,8 @@ implements <a href="Portrait.html" title="interface in ca.cgjennings.apps.arkham
  template image</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the subimage of the template covered by the portrait rectangle,
- or <code>null</code> if the template image is <code>null</code> or
- completely opaque</dd>
+ or <code>null</code> if the template image is <code>null</code> or completely
+ opaque</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the portrait region is <code>null</code></dd>
 </dl>
@@ -551,8 +549,8 @@ implements <a href="Portrait.html" title="interface in ca.cgjennings.apps.arkham
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the subimage of the template image referenced by
  <code>templateKey</code> covered by the portrait rectangle described by
- <code>portraitRegionKey</code>, or <code>null</code> if the resulting
- image would be completely opaque</dd>
+ <code>portraitRegionKey</code>, or <code>null</code> if the resulting image would
+ be completely opaque</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#createStencil(java.awt.image.BufferedImage,java.awt.Rectangle)"><code>createStencil(java.awt.image.BufferedImage, java.awt.Rectangle)</code></a></dd>
 </dl>

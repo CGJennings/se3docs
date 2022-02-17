@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -291,13 +291,13 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <pre class="methodSignature">boolean&nbsp;isRestartRequired()</pre>
 <div class="block">This method is called after <a href="#storeSettings()"><code>storeSettings()</code></a> when the user
  accepts the changes in the preferences dialog. It should return
- <code>true</code> if and only if the user has changed a preference in
- such a way that the change cannot take effect until the application is
+ <code>true</code> if and only if the user has changed a preference in such a
+ way that the change cannot take effect until the application is
  restarted.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the application must be restarted for
- changes to take effect</dd>
+<dd><code>true</code> if the application must be restarted for changes to
+ take effect</dd>
 </dl>
 </li>
 </ul>

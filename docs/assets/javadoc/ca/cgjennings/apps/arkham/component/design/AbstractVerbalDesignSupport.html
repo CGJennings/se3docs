@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -362,8 +362,8 @@ implements <a href="DesignSupport.html" title="interface in ca.cgjennings.apps.a
  type in such a way that the resulting component may be unfair. Strange
  Eons does not use this value itself, but there are preference settings
  that allow users to request that their components should be marked if
- this returns <code>false</code>. (It is up to the plug-in author to
- implement this in the component's <a href="../../sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet"><code>Sheet</code></a>s.</div>
+ this returns <code>false</code>. (It is up to the plug-in author to implement
+ this in the component's <a href="../../sheet/Sheet.html" title="class in ca.cgjennings.apps.arkham.sheet"><code>Sheet</code></a>s.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="DesignSupport.html#isDesignValid()">isDesignValid</a></code>&nbsp;in interface&nbsp;<code><a href="DesignSupport.html" title="interface in ca.cgjennings.apps.arkham.component.design">DesignSupport</a>&lt;<a href="AbstractVerbalDesignSupport.html" title="type parameter in AbstractVerbalDesignSupport">G</a> extends <a href="../GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component">GameComponent</a>&gt;</code></dd>
@@ -392,8 +392,8 @@ implements <a href="DesignSupport.html" title="interface in ca.cgjennings.apps.a
 <dd><code>b</code> - a string builder that must be used to build the verbal design
  report</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the design is considered valid,
- <code>false</code> otherwise</dd>
+<dd><code>true</code> if the design is considered valid, <code>false</code>
+ otherwise</dd>
 </dl>
 </li>
 </ul>

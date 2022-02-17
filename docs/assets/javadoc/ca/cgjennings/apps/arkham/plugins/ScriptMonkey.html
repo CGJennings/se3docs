@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -131,8 +131,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public final class <span class="typeNameLabel">ScriptMonkey</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></pre>
-<div class="block">A <code>ScriptMonkey</code> manages the execution of a script from Strange
- Eons.</div>
+<div class="block">A <code>ScriptMonkey</code> manages the execution of a script from Strange Eons.</div>
 </li>
 </ul>
 </div>
@@ -221,8 +220,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#VAR_FILE">VAR_FILE</a></span></code></th>
 <td class="colLast">
-<div class="block">The reserved variable name for the source file name
- (<code>sourcefile</code>).</div>
+<div class="block">The reserved variable name for the source file name (<code>sourcefile</code>).</div>
 </td>
 </tr>
 </table>
@@ -245,8 +243,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String)">ScriptMonkey</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;scriptFileName)</code></th>
 <td class="colLast">
-<div class="block">Creates a new <code>ScriptMonkey</code> that can be used to execute
- script code.</div>
+<div class="block">Creates a new <code>ScriptMonkey</code> that can be used to execute script
+ code.</div>
 </td>
 </tr>
 </table>
@@ -582,8 +580,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>VAR_FILE</h4>
 <pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> VAR_FILE</pre>
-<div class="block">The reserved variable name for the source file name
- (<code>sourcefile</code>).</div>
+<div class="block">The reserved variable name for the source file name (<code>sourcefile</code>).</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../constant-values.html#ca.cgjennings.apps.arkham.plugins.ScriptMonkey.VAR_FILE">Constant Field Values</a></dd>
@@ -617,8 +614,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>ScriptMonkey</h4>
 <pre>public&nbsp;ScriptMonkey&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;scriptFileName)</pre>
-<div class="block">Creates a new <code>ScriptMonkey</code> that can be used to execute
- script code.</div>
+<div class="block">Creates a new <code>ScriptMonkey</code> that can be used to execute script
+ code.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>scriptFileName</code> - the identifier to associate with the code that will
@@ -651,8 +648,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  is running, this will normally be the same name as the other, true,
  identifier. But when running a script "on demand", as from the project
  <b>Run</b> command or the <b>Quickscript</b> window, then the
- <code>ScriptMonkey</code> will typically be constructed using the file
- name "Quickscript", because many scripts check for this and change their
+ <code>ScriptMonkey</code> will typically be constructed using the file name
+ "Quickscript", because many scripts check for this and change their
  behaviour accordingly. (For example, the source code for a plug-in might
  run a test of the plug-in functionality.) However, in this case the
  script will also report the identifier "Quickscript" in error messages,
@@ -782,10 +779,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;call&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;method,
                    <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>...&nbsp;args)</pre>
 <div class="block">Call a script function. If the function does not exist, an error message
- is displayed and a <code>NoSuchMethodException</code> exception is
- returned. If a script error occurs, the error is printed on the console
- and returned. Otherwise, the return value of the function (or
- <code>null</code>) is returned.</div>
+ is displayed and a <code>NoSuchMethodException</code> exception is returned.
+ If a script error occurs, the error is printed on the console and
+ returned. Otherwise, the return value of the function (or <code>null</code>)
+ is returned.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>method</code> - the name of a script function</dd>
@@ -825,8 +822,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Binds the specified <a href="PluginContext.html" title="interface in ca.cgjennings.apps.arkham.plugins"><code>PluginContext</code></a> to the global scope.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>pluginContext</code> - the plug-in context to bind (may be
- <code>null</code>)</dd>
+<dd><code>pluginContext</code> - the plug-in context to bind (may be <code>null</code>)</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="PluginContextFactory.html" title="class in ca.cgjennings.apps.arkham.plugins"><code>PluginContextFactory</code></a></dd>
 </dl>
@@ -862,8 +858,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>resource</code> - the resource file containing the script</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if a breakpoint should be set at the start of
- the script</dd>
+<dd><code>true</code> if a breakpoint should be set at the start of the
+ script</dd>
 </dl>
 </li>
 </ul>
@@ -875,11 +871,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>runResourceCreationScript</h4>
 <pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;runResourceCreationScript&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;resource)</pre>
 <div class="block">Runs a resource creation script stored in a resource file. The script is
- evaluated and then its <code>createResource()</code> method is invoked.
- The result of that function is then returned. If there is an error
- loading or running the script, a <code>null</code> value is returned. If
- the script is missing, an error message is shown. If there is an error in
- the script, it is displayed in the output console.</div>
+ evaluated and then its <code>createResource()</code> method is invoked. The
+ result of that function is then returned. If there is an error loading or
+ running the script, a <code>null</code> value is returned. If the script is
+ missing, an error message is shown. If there is an error in the script,
+ it is displayed in the output console.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>resource</code> - the resource file containing the script</dd>
@@ -944,9 +940,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>setUiLangProvider</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setUiLangProvider&#8203;(<a href="../../../../../resources/Language.html" title="class in resources">Language</a>&nbsp;language)</pre>
 <div class="block">Sets the <a href="../../../../../resources/Language.html" title="class in resources"><code>Language</code></a> object that is used to look up interface
- strings with <tt>@<i>string_key</i></tt> syntax. Passing
- <code>null</code> will reset the language to
- <code>Language.getInterface()</code>.</div>
+ strings with <tt>@<i>string_key</i></tt> syntax. Passing <code>null</code>
+ will reset the language to <code>Language.getInterface()</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>language</code> - the UI language whose strings will be visible in the
@@ -977,8 +972,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>setGameLangProvider</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setGameLangProvider&#8203;(<a href="../../../../../resources/Language.html" title="class in resources">Language</a>&nbsp;language)</pre>
 <div class="block">Sets the <a href="../../../../../resources/Language.html" title="class in resources"><code>Language</code></a> object that is used to look up game strings
- with <tt>#<i>string_key</i></tt> syntax. Passing <code>null</code> will
- reset the language to <code>Language.getGame()</code>.</div>
+ with <tt>#<i>string_key</i></tt> syntax. Passing <code>null</code> will reset
+ the language to <code>Language.getGame()</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>language</code> - the game language whose strings will be visible in the
@@ -1061,8 +1056,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>isLibraryNameAURL</h4>
 <pre class="methodSignature">public static&nbsp;boolean&nbsp;isLibraryNameAURL&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;s)</pre>
 <div class="block">Returns <code>true</code> if a library identifier is actually a URL. For
- example, it would return <code>false</code> for "imageutils", but
- <code>true</code> for "res://my/library.js".</div>
+ example, it would return <code>false</code> for "imageutils", but <code>true</code>
+ for "res://my/library.js".</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>s</code> - the identifier to check</dd>

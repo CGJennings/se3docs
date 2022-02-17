@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -148,10 +148,10 @@ extends <a href="InstalledBundleObject.html" title="class in ca.cgjennings.apps.
  plug-ins that it contains. It is not the plug-in itself, but it creates and
  manages instances of the plug-in on demand. This is an abstract base class
  for the two basic types of plug-in in Strange Eons: extensions and "regular"
- plug-ins (which encompasses both the <code>INJECTED</code> and
- <code>ACTIVATED</code> plug-in types). These two types are similar except
- that extensions can only be started once (during startup), while regular
- plug-ins are stopped and started on demand.</div>
+ plug-ins (which encompasses both the <code>INJECTED</code> and <code>ACTIVATED</code>
+ plug-in types). These two types are similar except that extensions can only
+ be started once (during startup), while regular plug-ins are stopped and
+ started on demand.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -269,9 +269,9 @@ extends <a href="InstalledBundleObject.html" title="class in ca.cgjennings.apps.
 <td class="colFirst"><code>protected boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isReloadable()">isReloadable</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this plug-in is a reloadable type, or false
- if it is only run once (and thus should be run at the same time as the
- plug-in info is collected).</div>
+<div class="block">Returns <code>true</code> if this plug-in is a reloadable type, or false if it
+ is only run once (and thus should be run at the same time as the plug-in
+ info is collected).</div>
 </td>
 </tr>
 <tr id="i13" class="rowColor">
@@ -390,8 +390,8 @@ extends <a href="InstalledBundleObject.html" title="class in ca.cgjennings.apps.
 <h4>getPlugin</h4>
 <pre class="methodSignature">public&nbsp;<a href="Plugin.html" title="interface in ca.cgjennings.apps.arkham.plugins">Plugin</a>&nbsp;getPlugin()</pre>
 <div class="block">Returns the plug-in instance managed by this InstalledPlugin, or
- <code>null</code> if no instance currently exists. To create an instance,
- call <a href="#startPlugin()"><code>startPlugin()</code></a>.</div>
+ <code>null</code> if no instance currently exists. To create an instance, call
+ <a href="#startPlugin()"><code>startPlugin()</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the current plug-in instance, or <code>null</code></dd>
@@ -561,8 +561,8 @@ extends <a href="InstalledBundleObject.html" title="class in ca.cgjennings.apps.
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>obj</code> - object to compare with</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>true if <code>obj</code> is an installed plug-in with the same
- plug-in class</dd>
+<dd>true if <code>obj</code> is an installed plug-in with the same plug-in
+ class</dd>
 </dl>
 </li>
 </ul>
@@ -590,13 +590,13 @@ extends <a href="InstalledBundleObject.html" title="class in ca.cgjennings.apps.
 <li class="blockList">
 <h4>isReloadable</h4>
 <pre class="methodSignature">protected&nbsp;boolean&nbsp;isReloadable()</pre>
-<div class="block">Returns <code>true</code> if this plug-in is a reloadable type, or false
- if it is only run once (and thus should be run at the same time as the
- plug-in info is collected).</div>
+<div class="block">Returns <code>true</code> if this plug-in is a reloadable type, or false if it
+ is only run once (and thus should be run at the same time as the plug-in
+ info is collected).</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>false</code> if the plug-in is an extension,
- <code>true</code> otherwise</dd>
+<dd><code>false</code> if the plug-in is an extension, <code>true</code>
+ otherwise</dd>
 </dl>
 </li>
 </ul>

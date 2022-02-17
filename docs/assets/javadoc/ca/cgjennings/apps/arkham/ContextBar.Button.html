@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -183,16 +183,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/event/Action
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isEnabledInCurrentContext(ca.cgjennings.apps.arkham.ContextBar.Context)">isEnabledInCurrentContext</a></span>&#8203;(<a href="ContextBar.Context.html" title="class in ca.cgjennings.apps.arkham">ContextBar.Context</a>&nbsp;context)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the button should be enabled in the
- current context.</div>
+<div class="block">Returns <code>true</code> if the button should be enabled in the current
+ context.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isVisibleInCurrentContext(ca.cgjennings.apps.arkham.ContextBar.Context)">isVisibleInCurrentContext</a></span>&#8203;(<a href="ContextBar.Context.html" title="class in ca.cgjennings.apps.arkham">ContextBar.Context</a>&nbsp;context)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the button should be visible in the
- current context.</div>
+<div class="block">Returns <code>true</code> if the button should be visible in the current
+ context.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -322,14 +322,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/event/Action
 <li class="blockList">
 <h4>isEnabledInCurrentContext</h4>
 <pre class="methodSignature">boolean&nbsp;isEnabledInCurrentContext&#8203;(<a href="ContextBar.Context.html" title="class in ca.cgjennings.apps.arkham">ContextBar.Context</a>&nbsp;context)</pre>
-<div class="block">Returns <code>true</code> if the button should be enabled in the
- current context.</div>
+<div class="block">Returns <code>true</code> if the button should be enabled in the current
+ context.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>context</code> - information about the current context</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the button should be enabled (ignored if
- not visible)</dd>
+<dd><code>true</code> if the button should be enabled (ignored if not
+ visible)</dd>
 </dl>
 </li>
 </ul>
@@ -340,14 +340,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/event/Action
 <li class="blockList">
 <h4>isVisibleInCurrentContext</h4>
 <pre class="methodSignature">boolean&nbsp;isVisibleInCurrentContext&#8203;(<a href="ContextBar.Context.html" title="class in ca.cgjennings.apps.arkham">ContextBar.Context</a>&nbsp;context)</pre>
-<div class="block">Returns <code>true</code> if the button should be visible in the
- current context. A button should be invisible if it can never be
- enabled in the current context, and disabled if it is not currently
- usable due to a temporary restriction. For example, any text field
- can be copied from if there is an active selection, so a copy button
- should always be visible but should be enabled only if there is a
- selection. On the other hand, a command that only works for script
- code should be visible only when editing a script.</div>
+<div class="block">Returns <code>true</code> if the button should be visible in the current
+ context. A button should be invisible if it can never be enabled in
+ the current context, and disabled if it is not currently usable due
+ to a temporary restriction. For example, any text field can be copied
+ from if there is an active selection, so a copy button should always
+ be visible but should be enabled only if there is a selection. On the
+ other hand, a command that only works for script code should be
+ visible only when editing a script.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>context</code> - information about the current context</dd>

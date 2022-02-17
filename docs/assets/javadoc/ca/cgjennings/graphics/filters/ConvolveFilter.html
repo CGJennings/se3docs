@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -155,8 +155,8 @@ extends <a href="AbstractConvolver.html" title="class in ca.cgjennings.graphics.
  <ol>
  <li> This class offers more complex options for handling image edges.
  <li> This class makes use of the acceleration framework provided by the
- <a href="AbstractImageFilter.html" title="class in ca.cgjennings.graphics.filters"><code>AbstractImageFilter</code></a> framework. Note that <code>ConvolveOp</code> may
- also provide acceleration; typically this is GPU-based acceleration for small
+ <a href="AbstractImageFilter.html" title="class in ca.cgjennings.graphics.filters"><code>AbstractImageFilter</code></a> framework. Note that <code>ConvolveOp</code> may also
+ provide acceleration; typically this is GPU-based acceleration for small
  kernel sizes. (Which implementation is faster will depend on a number of
  platform-specific factors.)
  </ol>
@@ -445,9 +445,9 @@ extends <a href="AbstractConvolver.html" title="class in ca.cgjennings.graphics.
  <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/Kernel.html?is-external=true" title="class or interface in java.awt.image" class="externalLink"><code>Kernel</code></a> with the specified width, height, and matrix values.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>normalize</code> - if <code>true</code>, the matrix will be normalized so
- that its elements sum to 1; this prevents the overall image brightness
- from changing</dd>
+<dd><code>normalize</code> - if <code>true</code>, the matrix will be normalized so that
+ its elements sum to 1; this prevents the overall image brightness from
+ changing</dd>
 <dd><code>width</code> - the width of the kernel</dd>
 <dd><code>height</code> - the height of the kernel</dd>
 <dd><code>kernelData</code> - an array of kernel values, in
@@ -474,8 +474,7 @@ extends <a href="AbstractConvolver.html" title="class in ca.cgjennings.graphics.
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>edgeHandling</code> - the edge handling mode</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the edge handling mode is
- <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the edge handling mode is <code>null</code></dd>
 </dl>
 </li>
 </ul>

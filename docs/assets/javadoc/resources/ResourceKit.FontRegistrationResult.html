@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -167,8 +167,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html?is-external=true" title="class or interface in java.awt" class="externalLink">Font</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getFont()">getFont</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns a <code>Font</code> instance for the font that was created
- from the resource.</div>
+<div class="block">Returns a <code>Font</code> instance for the font that was created from
+ the resource.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -214,11 +214,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getFont</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html?is-external=true" title="class or interface in java.awt" class="externalLink">Font</a>&nbsp;getFont()</pre>
-<div class="block">Returns a <code>Font</code> instance for the font that was created
- from the resource. The font will have a size of 1 point; a different
- size can be created by calling the font's <code>deriveFont</code>
- method or, if registration was successful, by creating a new
- <code>Font</code> with this font's family name.</div>
+<div class="block">Returns a <code>Font</code> instance for the font that was created from
+ the resource. The font will have a size of 1 point; a different size
+ can be created by calling the font's <code>deriveFont</code> method or, if
+ registration was successful, by creating a new <code>Font</code> with this
+ font's family name.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a font created from the stream</dd>
@@ -248,16 +248,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isRegistrationSuccessful</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isRegistrationSuccessful()</pre>
-<div class="block">Returns <code>true</code> if the font was registered. Note that if
- the font was not registered, it is usually because there is already a
+<div class="block">Returns <code>true</code> if the font was registered. Note that if the
+ font was not registered, it is usually because there is already a
  font with the same name installed on the user's system. Therefore,
  you will probably get <i>some version</i> of the font by using the
  font's family name. (If there is a problem loading the font, this
  will result in an exception when registration is attempted.)</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the font was registered;
- <code>false</code> otherwise</dd>
+<dd><code>true</code> if the font was registered; <code>false</code>
+ otherwise</dd>
 </dl>
 </li>
 </ul>

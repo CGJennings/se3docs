@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -154,8 +154,8 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <hr>
 <pre>public static class <span class="typeNameLabel">Settings.Region</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Rectangle.html?is-external=true" title="class or interface in java.awt" class="externalLink">Rectangle</a></pre>
-<div class="block">A specialized <code>Rectangle</code> that is more easily converted to or
- from a setting value.</div>
+<div class="block">A specialized <code>Rectangle</code> that is more easily converted to or from
+ a setting value.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../serialized-form.html#resources.Settings.Region">Serialized Form</a></dd>
@@ -399,8 +399,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Rectangle.ht
  <code>Point</code>, and whose width and height are both zero.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>p</code> - a <code>Point</code> that is the top left corner of the
- region</dd>
+<dd><code>p</code> - a <code>Point</code> that is the top left corner of the region</dd>
 </dl>
 </li>
 </ul>
@@ -417,10 +416,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Rectangle.ht
  the <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Dimension.html?is-external=true" title="class or interface in java.awt" class="externalLink"><code>Dimension</code></a> argument.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>p</code> - a <code>Point</code> that is the upper-left corner of the
- region</dd>
-<dd><code>d</code> - a <code>Dimension</code>, representing the width and height
- of the region</dd>
+<dd><code>p</code> - a <code>Point</code> that is the upper-left corner of the region</dd>
+<dd><code>d</code> - a <code>Dimension</code>, representing the width and height of
+ the region</dd>
 </dl>
 </li>
 </ul>

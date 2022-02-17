@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -644,8 +644,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  update check is overdue.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the time since the last check is greater
- than the update check frequency set by the user</dd>
+<dd><code>true</code> if the time since the last check is greater than the
+ update check frequency set by the user</dd>
 </dl>
 </li>
 </ul>
@@ -686,9 +686,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public static&nbsp;boolean&nbsp;isApplicationUpdateAvailable()</pre>
 <div class="block">Returns <code>true</code> if it can determine with certainty that an
  application update is available. If no update is available, or if any
- error occurs, it will return <code>false</code>. This call bypasses the
- usual update infrastructure; for example, it does not reset the time
- until the next update check.</div>
+ error occurs, it will return <code>false</code>. This call bypasses the usual
+ update infrastructure; for example, it does not reset the time until the
+ next update check.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if an application update is available</dd>
@@ -707,9 +707,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  The value of <code>updateAction</code> must be one of:
  <code>ACTION_TELL_USER</code>, <code>ACTION_OPEN_CATALOG</code>,
  <code>ACTION_INSTALL_IMMEDIATELY</code>. If <code>allCatalogs</code> is
- <code>true</code>, then all catalogs in the user's catalog URL history
- will be checked. Otherwise, only the default catalog is checked. Returns
- a bitwise combination of <code>true</code> if any updates were found, or
+ <code>true</code>, then all catalogs in the user's catalog URL history will be
+ checked. Otherwise, only the default catalog is checked. Returns a
+ bitwise combination of <code>true</code> if any updates were found, or
  <code>false</code> otherwise.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -719,8 +719,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if any updates were found</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if the <code>updateAction</code> is not
- valid</dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if the <code>updateAction</code> is not valid</dd>
 </dl>
 </li>
 </ul>

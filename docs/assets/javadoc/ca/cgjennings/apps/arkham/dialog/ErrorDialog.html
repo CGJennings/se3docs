@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -403,10 +403,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JDialog.h
 <h4>displayError</h4>
 <pre class="methodSignature">public static&nbsp;void&nbsp;displayError&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;message,
                                 <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Throwable</a>&nbsp;t)</pre>
-<div class="block">Displays an error message. If a non-<code>null</code> exception is
- passed, the error message will include additional details about the error
- taken from the exception, including the localized message (if any), and
- the class name of the exception.</div>
+<div class="block">Displays an error message. If a non-<code>null</code> exception is passed, the
+ error message will include additional details about the error taken from
+ the exception, including the localized message (if any), and the class
+ name of the exception.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>message</code> - the message to display to the user describing the nature
@@ -451,9 +451,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JDialog.h
  application from continuing. This method is not for general use; it is
  normally only called during startup when a critical error occurs that
  Strange Eons cannot recover from. The displayed error dialog will include
- a stack trace for the provided <code>cause</code>, and include an option
- to fill out a bug report. If the <code>cause</code> is null, then a stack
- trace will be generated for the point at which the method was called.</div>
+ a stack trace for the provided <code>cause</code>, and include an option to
+ fill out a bug report. If the <code>cause</code> is null, then a stack trace
+ will be generated for the point at which the method was called.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>message</code> - the message to display</dd>

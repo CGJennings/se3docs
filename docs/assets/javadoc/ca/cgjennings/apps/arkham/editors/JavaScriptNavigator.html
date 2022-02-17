@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -121,10 +121,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../plugins/AbstractUtilityParser.html" title="class in ca.cgjennings.apps.arkham.plugins">ca.cgjennings.apps.arkham.plugins.AbstractUtilityParser</a></li>
+<li><a href="../plugins/engine/AbstractUtilityParser.html" title="class in ca.cgjennings.apps.arkham.plugins.engine">ca.cgjennings.apps.arkham.plugins.engine.AbstractUtilityParser</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../plugins/SyntaxChecker.html" title="class in ca.cgjennings.apps.arkham.plugins">ca.cgjennings.apps.arkham.plugins.SyntaxChecker</a></li>
+<li><a href="../plugins/engine/SyntaxChecker.html" title="class in ca.cgjennings.apps.arkham.plugins.engine">ca.cgjennings.apps.arkham.plugins.engine.SyntaxChecker</a></li>
 <li>
 <ul class="inheritance">
 <li>ca.cgjennings.apps.arkham.editors.JavaScriptNavigator</li>
@@ -144,7 +144,7 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </dl>
 <hr>
 <pre>public class <span class="typeNameLabel">JavaScriptNavigator</span>
-extends <a href="../plugins/SyntaxChecker.html" title="class in ca.cgjennings.apps.arkham.plugins">SyntaxChecker</a>
+extends <a href="../plugins/engine/SyntaxChecker.html" title="class in ca.cgjennings.apps.arkham.plugins.engine">SyntaxChecker</a>
 implements <a href="Navigator.html" title="interface in ca.cgjennings.apps.arkham.editors">Navigator</a></pre>
 <div class="block">A <a href="Navigator.html" title="interface in ca.cgjennings.apps.arkham.editors"><code>Navigator</code></a> for JavaScript source files.</div>
 </li>
@@ -161,11 +161,11 @@ implements <a href="Navigator.html" title="interface in ca.cgjennings.apps.arkha
 </a>
 <h3>Nested Class Summary</h3>
 <ul class="blockList">
-<li class="blockList"><a id="nested.classes.inherited.from.class.ca.cgjennings.apps.arkham.plugins.SyntaxChecker">
+<li class="blockList"><a id="nested.classes.inherited.from.class.ca.cgjennings.apps.arkham.plugins.engine.SyntaxChecker">
 <!--   -->
 </a>
-<h3>Nested classes/interfaces inherited from class&nbsp;ca.cgjennings.apps.arkham.plugins.<a href="../plugins/SyntaxChecker.html" title="class in ca.cgjennings.apps.arkham.plugins">SyntaxChecker</a></h3>
-<code><a href="../plugins/SyntaxChecker.Highlighter.html" title="class in ca.cgjennings.apps.arkham.plugins">SyntaxChecker.Highlighter</a>, <a href="../plugins/SyntaxChecker.SyntaxError.html" title="class in ca.cgjennings.apps.arkham.plugins">SyntaxChecker.SyntaxError</a></code></li>
+<h3>Nested classes/interfaces inherited from class&nbsp;ca.cgjennings.apps.arkham.plugins.engine.<a href="../plugins/engine/SyntaxChecker.html" title="class in ca.cgjennings.apps.arkham.plugins.engine">SyntaxChecker</a></h3>
+<code><a href="../plugins/engine/SyntaxChecker.Highlighter.html" title="class in ca.cgjennings.apps.arkham.plugins.engine">SyntaxChecker.Highlighter</a>, <a href="../plugins/engine/SyntaxChecker.SyntaxError.html" title="class in ca.cgjennings.apps.arkham.plugins.engine">SyntaxChecker.SyntaxError</a></code></li>
 </ul>
 </li>
 </ul>
@@ -224,7 +224,7 @@ implements <a href="Navigator.html" title="interface in ca.cgjennings.apps.arkha
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#processTree(ca.cgjennings.script.mozilla.javascript.ast.AstRoot)">processTree</a></span>&#8203;(ca.cgjennings.script.mozilla.javascript.ast.AstRoot&nbsp;node)</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#processTree(org.mozilla.javascript.ast.AstRoot)">processTree</a></span>&#8203;(org.mozilla.javascript.ast.AstRoot&nbsp;node)</code></th>
 <td class="colLast">
 <div class="block">This is called after each script is parsed to allow the utility access to
  the resulting abstract syntax tree.</div>
@@ -239,18 +239,18 @@ implements <a href="Navigator.html" title="interface in ca.cgjennings.apps.arkha
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a id="methods.inherited.from.class.ca.cgjennings.apps.arkham.plugins.SyntaxChecker">
+<li class="blockList"><a id="methods.inherited.from.class.ca.cgjennings.apps.arkham.plugins.engine.SyntaxChecker">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;ca.cgjennings.apps.arkham.plugins.<a href="../plugins/SyntaxChecker.html" title="class in ca.cgjennings.apps.arkham.plugins">SyntaxChecker</a></h3>
-<code><a href="../plugins/SyntaxChecker.html#acceptError(java.lang.String,boolean,int,int)">acceptError</a>, <a href="../plugins/SyntaxChecker.html#getErrors()">getErrors</a>, <a href="../plugins/SyntaxChecker.html#parse(java.lang.String)">parse</a></code></li>
+<h3>Methods inherited from class&nbsp;ca.cgjennings.apps.arkham.plugins.engine.<a href="../plugins/engine/SyntaxChecker.html" title="class in ca.cgjennings.apps.arkham.plugins.engine">SyntaxChecker</a></h3>
+<code><a href="../plugins/engine/SyntaxChecker.html#acceptError(java.lang.String,boolean,int,int)">acceptError</a>, <a href="../plugins/engine/SyntaxChecker.html#getErrors()">getErrors</a>, <a href="../plugins/engine/SyntaxChecker.html#parse(java.lang.String)">parse</a></code></li>
 </ul>
 <ul class="blockList">
-<li class="blockList"><a id="methods.inherited.from.class.ca.cgjennings.apps.arkham.plugins.AbstractUtilityParser">
+<li class="blockList"><a id="methods.inherited.from.class.ca.cgjennings.apps.arkham.plugins.engine.AbstractUtilityParser">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;ca.cgjennings.apps.arkham.plugins.<a href="../plugins/AbstractUtilityParser.html" title="class in ca.cgjennings.apps.arkham.plugins">AbstractUtilityParser</a></h3>
-<code><a href="../plugins/AbstractUtilityParser.html#setErrorReporter(ca.cgjennings.script.mozilla.javascript.ErrorReporter)">setErrorReporter</a></code></li>
+<h3>Methods inherited from class&nbsp;ca.cgjennings.apps.arkham.plugins.engine.<a href="../plugins/engine/AbstractUtilityParser.html" title="class in ca.cgjennings.apps.arkham.plugins.engine">AbstractUtilityParser</a></h3>
+<code><a href="../plugins/engine/AbstractUtilityParser.html#setErrorReporter(org.mozilla.javascript.ErrorReporter)">setErrorReporter</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a id="methods.inherited.from.class.java.lang.Object">
@@ -355,21 +355,21 @@ implements <a href="Navigator.html" title="interface in ca.cgjennings.apps.arkha
 </dl>
 </li>
 </ul>
-<a id="processTree(ca.cgjennings.script.mozilla.javascript.ast.AstRoot)">
+<a id="processTree(org.mozilla.javascript.ast.AstRoot)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>processTree</h4>
-<pre class="methodSignature">protected&nbsp;void&nbsp;processTree&#8203;(ca.cgjennings.script.mozilla.javascript.ast.AstRoot&nbsp;node)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../plugins/AbstractUtilityParser.html#processTree(ca.cgjennings.script.mozilla.javascript.ast.AstRoot)">AbstractUtilityParser</a></code></span></div>
+<pre class="methodSignature">protected&nbsp;void&nbsp;processTree&#8203;(org.mozilla.javascript.ast.AstRoot&nbsp;node)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../plugins/engine/AbstractUtilityParser.html#processTree(org.mozilla.javascript.ast.AstRoot)">AbstractUtilityParser</a></code></span></div>
 <div class="block">This is called after each script is parsed to allow the utility access to
  the resulting abstract syntax tree. In the event of a serious parser
  error that prevents the tree from being generated, the root node will be
  <code>null</code>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="../plugins/SyntaxChecker.html#processTree(ca.cgjennings.script.mozilla.javascript.ast.AstRoot)">processTree</a></code>&nbsp;in class&nbsp;<code><a href="../plugins/SyntaxChecker.html" title="class in ca.cgjennings.apps.arkham.plugins">SyntaxChecker</a></code></dd>
+<dd><code><a href="../plugins/engine/SyntaxChecker.html#processTree(org.mozilla.javascript.ast.AstRoot)">processTree</a></code>&nbsp;in class&nbsp;<code><a href="../plugins/engine/SyntaxChecker.html" title="class in ca.cgjennings.apps.arkham.plugins.engine">SyntaxChecker</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>node</code> - the root of the parse tree</dd>
 </dl>

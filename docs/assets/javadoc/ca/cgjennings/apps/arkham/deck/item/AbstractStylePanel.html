@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -155,6 +155,10 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 <dl>
 <dt>All Implemented Interfaces:</dt>
 <dd><code><a href="StylePanel.html" title="interface in ca.cgjennings.apps.arkham.deck.item">StylePanel</a>&lt;S&gt;</code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/image/ImageObserver.html?is-external=true" title="class or interface in java.awt.image" class="externalLink">ImageObserver</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/awt/MenuContainer.html?is-external=true" title="class or interface in java.awt" class="externalLink">MenuContainer</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io" class="externalLink">Serializable</a></code>, <code><a href="https://docs.oracle.com/javase/8/docs/api/javax/accessibility/Accessible.html?is-external=true" title="class or interface in javax.accessibility" class="externalLink">Accessible</a></code></dd>
+</dl>
+<dl>
+<dt>Direct Known Subclasses:</dt>
+<dd><code><a href="BleedMarginStylePanel.html" title="class in ca.cgjennings.apps.arkham.deck.item">BleedMarginStylePanel</a></code></dd>
 </dl>
 <hr>
 <pre>public abstract class <span class="typeNameLabel">AbstractStylePanel&lt;S extends <a href="Style.html" title="interface in ca.cgjennings.apps.arkham.deck.item">Style</a>&gt;</span>
@@ -479,10 +483,10 @@ implements <a href="StylePanel.html" title="interface in ca.cgjennings.apps.arkh
  This implementation assumes that the panel implements the <a href="Style.html" title="interface in ca.cgjennings.apps.arkham.deck.item"><code>Style</code></a>
  subclass that it edits. (So, if this extends
  <code>AbstractStylePanel&amp;lt;MyStyle&amp;gt;</code> then it also implements
- <code>MyStyle</code>.) It populates the specified capture by simply
- capturing this panel instance (so the panel's getter methods for the
- style will be called to obtain the panel state). If this panel does not
- implement the style interface, an exception will be thrown at runtime.</div>
+ <code>MyStyle</code>.) It populates the specified capture by simply capturing
+ this panel instance (so the panel's getter methods for the style will be
+ called to obtain the panel state). If this panel does not implement the
+ style interface, an exception will be thrown at runtime.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="StylePanel.html#populateCaptureFromPanel(ca.cgjennings.apps.arkham.deck.item.StyleCapture)">populateCaptureFromPanel</a></code>&nbsp;in interface&nbsp;<code><a href="StylePanel.html" title="interface in ca.cgjennings.apps.arkham.deck.item">StylePanel</a>&lt;<a href="AbstractStylePanel.html" title="type parameter in AbstractStylePanel">S</a> extends <a href="Style.html" title="interface in ca.cgjennings.apps.arkham.deck.item">Style</a>&gt;</code></dd>
@@ -504,10 +508,10 @@ implements <a href="StylePanel.html" title="interface in ca.cgjennings.apps.arkh
  This implementation assumes that the panel implements the <a href="Style.html" title="interface in ca.cgjennings.apps.arkham.deck.item"><code>Style</code></a>
  subclass that it edits. (So, if this extends
  <code>AbstractStylePanel&lt;MyStyle&gt;</code> then it also implements
- <code>MyStyle</code>.) It populates the panel by simply applying the
- capture to the panel (so the panel's setter methods for the style will be
- invoked accordingly). If this panel does not implement the style
- interface, an exception will be thrown at runtime.</div>
+ <code>MyStyle</code>.) It populates the panel by simply applying the capture
+ to the panel (so the panel's setter methods for the style will be invoked
+ accordingly). If this panel does not implement the style interface, an
+ exception will be thrown at runtime.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="StylePanel.html#populatePanelFromCapture(ca.cgjennings.apps.arkham.deck.item.StyleCapture)">populatePanelFromCapture</a></code>&nbsp;in interface&nbsp;<code><a href="StylePanel.html" title="interface in ca.cgjennings.apps.arkham.deck.item">StylePanel</a>&lt;<a href="AbstractStylePanel.html" title="type parameter in AbstractStylePanel">S</a> extends <a href="Style.html" title="interface in ca.cgjennings.apps.arkham.deck.item">Style</a>&gt;</code></dd>

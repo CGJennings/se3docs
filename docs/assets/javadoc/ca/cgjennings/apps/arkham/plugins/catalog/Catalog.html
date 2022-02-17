@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -319,8 +319,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getInstallFlag(int)">getInstallFlag</a></span>&#8203;(int&nbsp;n)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the listing at the indicated index is
- flagged for installation.</div>
+<div class="block">Returns <code>true</code> if the listing at the indicated index is flagged for
+ installation.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -359,8 +359,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isRestartRequiredAfterInstall()">isRestartRequiredAfterInstall</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if a restart (of the application) would be
- required after the currently selected plug-ins are installed.</div>
+<div class="block">Returns <code>true</code> if a restart (of the application) would be required
+ after the currently selected plug-ins are installed.</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
@@ -453,9 +453,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>Catalog</h4>
 <pre>public&nbsp;Catalog()</pre>
-<div class="block">Creates a new, empty catalog with a <code>null</code> base URL. This can
- be useful as a temporary placeholder in a UI while downloading a catalog,
- or it can be used by subclasses.</div>
+<div class="block">Creates a new, empty catalog with a <code>null</code> base URL. This can be
+ useful as a temporary placeholder in a UI while downloading a catalog, or
+ it can be used by subclasses.</div>
 </li>
 </ul>
 <a id="&lt;init&gt;(java.net.URL,java.util.Collection)">
@@ -502,13 +502,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                <a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/JProgressBar.html?is-external=true" title="class or interface in javax.swing" class="externalLink">JProgressBar</a>&nbsp;feedback)
         throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <div class="block">Loads a catalog from a base URL. The URL of the catalog will be the base
- URL with "catalog.txt" appended. If <code>feedback</code> if
- non-<code>null</code>, then it will be updated with progress information.</div>
+ URL with "catalog.txt" appended. If <code>feedback</code> if non-<code>null</code>,
+ then it will be updated with progress information.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>base</code> - the URL to load the catalog from</dd>
-<dd><code>allowCache</code> - if <code>true</code>, and if the URL identifies the
- default catalog URL, then a cached version of the catalog may be returned</dd>
+<dd><code>allowCache</code> - if <code>true</code>, and if the URL identifies the default
+ catalog URL, then a cached version of the catalog may be returned</dd>
 <dd><code>feedback</code> - an optional progress bar to send feedback to while
  reading</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -538,8 +538,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  catalog, returns <code>null</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the locally cached copy of the primary catalog, or
- <code>null</code></dd>
+<dd>the locally cached copy of the primary catalog, or <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -666,8 +665,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getInstallFlag</h4>
 <pre class="methodSignature">public final&nbsp;boolean&nbsp;getInstallFlag&#8203;(int&nbsp;n)</pre>
-<div class="block">Returns <code>true</code> if the listing at the indicated index is
- flagged for installation.</div>
+<div class="block">Returns <code>true</code> if the listing at the indicated index is flagged for
+ installation.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>n</code> - the index of the listing to test</dd>
@@ -726,8 +725,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  returns, all installation flags in this catalog will be cleared.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if a restart (of the application) is required
- to complete installation</dd>
+<dd><code>true</code> if a restart (of the application) is required to
+ complete installation</dd>
 </dl>
 </li>
 </ul>
@@ -738,14 +737,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isRestartRequiredAfterInstall</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isRestartRequiredAfterInstall()</pre>
-<div class="block">Returns <code>true</code> if a restart (of the application) would be
- required after the currently selected plug-ins are installed. The answer
- is based on the types of plug-ins flagged for installation, and the types
- of any plug-ins they require.
+<div class="block">Returns <code>true</code> if a restart (of the application) would be required
+ after the currently selected plug-ins are installed. The answer is based
+ on the types of plug-ins flagged for installation, and the types of any
+ plug-ins they require.
  <p>
- If this method returns <code>false</code>, a restart may still be
- required if one of the plug-in bundles could not be written and an
- autoupdate file was generated.</div>
+ If this method returns <code>false</code>, a restart may still be required if
+ one of the plug-in bundles could not be written and an autoupdate file
+ was generated.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if a restart should not be required</dd>
@@ -816,8 +815,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>uuid</code> - the UUID of the listing to remove</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if an entry was removed, <code>false</code> if
- no entry matches the UUID</dd>
+<dd><code>true</code> if an entry was removed, <code>false</code> if no entry
+ matches the UUID</dd>
 </dl>
 </li>
 </ul>

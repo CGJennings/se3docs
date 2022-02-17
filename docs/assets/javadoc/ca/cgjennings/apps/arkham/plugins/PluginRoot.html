@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -139,8 +139,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <div class="block">Represents the information stored in a plug-in bundle's root file. This
  includes the bundle's <a href="catalog/CatalogID.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog"><code>CatalogID</code></a>, the plug-in objects contained in the
  bundle, the bundle's startup priority, and other properties. If the bundle is
- not stored in a plain format, creating a <code>PluginRoot</code> for the
- bundle will convert it in place.</div>
+ not stored in a plain format, creating a <code>PluginRoot</code> for the bundle
+ will convert it in place.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>2.1</dd>
@@ -184,8 +184,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#CLIENT_KEY_CATALOG_NAME">CLIENT_KEY_CATALOG_NAME</a></span></code></th>
 <td class="colLast">
-<div class="block">The plug-in name that will be shown in the catalogue if a
- catalogue listing is extracted from this root file.</div>
+<div class="block">The plug-in name that will be shown in the catalogue if a catalogue
+ listing is extracted from this root file.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -386,32 +386,32 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#equals(java.lang.Object)">equals</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;obj)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if and only if the specified object is a root
- file with the same <a href="#toString()">string representation</a>.</div>
+<div class="block">Returns <code>true</code> if and only if the specified object is a root file
+ with the same <a href="#toString()">string representation</a>.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code><a href="PluginBundle.html" title="class in ca.cgjennings.apps.arkham.plugins">PluginBundle</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBundle()">getBundle</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the plug-in bundle that this root belongs to, or
- <code>null</code> if this root object was not created from a bundle.</div>
+<div class="block">Returns the plug-in bundle that this root belongs to, or <code>null</code> if
+ this root object was not created from a bundle.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="catalog/CatalogID.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog">CatalogID</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCatalogID()">getCatalogID</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the catalog ID for this root file, or <code>null</code> if none
- is defined.</div>
+<div class="block">Returns the catalog ID for this root file, or <code>null</code> if none is
+ defined.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getClientProperty(java.lang.String)">getClientProperty</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key)</code></th>
 <td class="colLast">
-<div class="block">Returns the value of a client property, or <code>null</code> if the
- property is not defined.</div>
+<div class="block">Returns the value of a client property, or <code>null</code> if the property
+ is not defined.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -448,8 +448,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getLocalizedClientProperty(java.lang.String)">getLocalizedClientProperty</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key)</code></th>
 <td class="colLast">
-<div class="block">Returns the value of a client property, or <code>null</code> if the
- property is not defined.</div>
+<div class="block">Returns the value of a client property, or <code>null</code> if the property
+ is not defined.</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
@@ -858,8 +858,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <li class="blockList">
 <h4>CLIENT_KEY_CATALOG_NAME</h4>
 <pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> CLIENT_KEY_CATALOG_NAME</pre>
-<div class="block">The plug-in name that will be shown in the catalogue if a
- catalogue listing is extracted from this root file.</div>
+<div class="block">The plug-in name that will be shown in the catalogue if a catalogue
+ listing is extracted from this root file.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../constant-values.html#ca.cgjennings.apps.arkham.plugins.PluginRoot.CLIENT_KEY_CATALOG_NAME">Constant Field Values</a></dd>
@@ -1027,8 +1027,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <li class="blockList">
 <h4>getBundle</h4>
 <pre class="methodSignature">public&nbsp;<a href="PluginBundle.html" title="class in ca.cgjennings.apps.arkham.plugins">PluginBundle</a>&nbsp;getBundle()</pre>
-<div class="block">Returns the plug-in bundle that this root belongs to, or
- <code>null</code> if this root object was not created from a bundle.</div>
+<div class="block">Returns the plug-in bundle that this root belongs to, or <code>null</code> if
+ this root object was not created from a bundle.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the bundle associated with this root</dd>
@@ -1068,8 +1068,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
  <code>IllegalArgumentException</code> to be thrown.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>comments</code> - the comment text to set, or <code>null</code> to clear
- the comment block</dd>
+<dd><code>comments</code> - the comment text to set, or <code>null</code> to clear the
+ comment block</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#getComments()"><code>getComments()</code></a></dd>
 </dl>
@@ -1125,8 +1125,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <li class="blockList">
 <h4>getCatalogID</h4>
 <pre class="methodSignature">public&nbsp;<a href="catalog/CatalogID.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog">CatalogID</a>&nbsp;getCatalogID()</pre>
-<div class="block">Returns the catalog ID for this root file, or <code>null</code> if none
- is defined.</div>
+<div class="block">Returns the catalog ID for this root file, or <code>null</code> if none is
+ defined.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the ID for the bundle that this root file is (or will be) for</dd>
@@ -1175,8 +1175,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <pre class="methodSignature">public&nbsp;void&nbsp;setInstallerIdentifier&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;install)</pre>
 <div class="block">Sets the identifier of the <a href="InstallationActions.html" title="interface in ca.cgjennings.apps.arkham.plugins">installer
  class or script</a> to run during installation or uninstallation of the
- associated plug-in bundle. Setting this to <code>null</code> will clear
- the current installer, if any.</div>
+ associated plug-in bundle. Setting this to <code>null</code> will clear the
+ current installer, if any.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>install</code> - the installation script identifier</dd>
@@ -1277,8 +1277,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <li class="blockList">
 <h4>getClientProperty</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getClientProperty&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key)</pre>
-<div class="block">Returns the value of a client property, or <code>null</code> if the
- property is not defined.</div>
+<div class="block">Returns the value of a client property, or <code>null</code> if the property
+ is not defined.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>key</code> - the name of the client property</dd>
@@ -1294,8 +1294,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <li class="blockList">
 <h4>getLocalizedClientProperty</h4>
 <pre class="methodSignature">public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getLocalizedClientProperty&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;key)</pre>
-<div class="block">Returns the value of a client property, or <code>null</code> if the
- property is not defined. The property will be localized for the
+<div class="block">Returns the value of a client property, or <code>null</code> if the property
+ is not defined. The property will be localized for the
  <a href="../../../../../resources/Language.html#getInterface()">user interface language</a>, if
  possible.</div>
 <dl>
@@ -1437,16 +1437,16 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Comparab
 <li class="blockList">
 <h4>equals</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;equals&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;obj)</pre>
-<div class="block">Returns <code>true</code> if and only if the specified object is a root
- file with the same <a href="#toString()">string representation</a>.</div>
+<div class="block">Returns <code>true</code> if and only if the specified object is a root file
+ with the same <a href="#toString()">string representation</a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>obj</code> - the object to compare this object to</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the object represents a root file with the
- same properties</dd>
+<dd><code>true</code> if the object represents a root file with the same
+ properties</dd>
 </dl>
 </li>
 </ul>

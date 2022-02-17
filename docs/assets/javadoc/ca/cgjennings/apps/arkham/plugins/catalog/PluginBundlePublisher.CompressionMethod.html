@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -437,8 +437,8 @@ not permitted.)</div>
 <pre class="methodSignature">public static&nbsp;<a href="PluginBundlePublisher.CompressionMethod.html" title="enum in ca.cgjennings.apps.arkham.plugins.catalog">PluginBundlePublisher.CompressionMethod</a>&nbsp;forExtension&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;name)</pre>
 <div class="block">Returns the compression method associated with the extension part of
  a file name in a string. For example, given
- "OmicronPlugin.seplugin.pbz", returns <code>BZIP2</code>. If no
- extension is recognized, returns <code>null</code>.</div>
+ "OmicronPlugin.seplugin.pbz", returns <code>BZIP2</code>. If no extension
+ is recognized, returns <code>null</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>name</code> - the file name to examine</dd>

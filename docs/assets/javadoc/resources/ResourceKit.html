@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -142,11 +142,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <ol>
  <li>The first part is the least used and most technical:<br>
  If the first character is a slash (/), then the identifier is absolute;
- otherwise the rest of the name is relative to <code>/resources</code>.
- (Resources are normally stored in the <code>resources</code> folder of the
- file system; however, sometimes it is useful to access a resource that is in
- the classpath of the application or a plug-in bundle. This can be done using
- an absolute identifier.)
+ otherwise the rest of the name is relative to <code>/resources</code>. (Resources
+ are normally stored in the <code>resources</code> folder of the file system;
+ however, sometimes it is useful to access a resource that is in the classpath
+ of the application or a plug-in bundle. This can be done using an absolute
+ identifier.)
  <li>The second part consists of zero or more folder names separated by
  slashes.
  <li>The third part, the only part which must be present, is the file
@@ -157,8 +157,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 
  In order to locate the actual resource file for a resource name, call
  <a href="#composeResourceURL(java.lang.String)"><code>composeResourceURL(java.lang.String)</code></a> with the identifier. This will return a URL that
- can be used to access the resource, or <code>null</code> if the resource
- cannot be found.
+ can be used to access the resource, or <code>null</code> if the resource cannot be
+ found.
 
  <p>
  Alternatively, you can create a URL object for a resource using the special
@@ -168,9 +168,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  <p>
  Note that the URLs produced with these two different methods are <b>not</b>
  the same. A <code>res:</code> URL is a URL for the virtual file system, while
- <code>composeResourceURL</code> returns a URL for the actual location of the
- file. In fact, when you try to access a <code>res:</code> URL's data using a
- method like <code>openStream</code>, the protocol handler will itself call
+ <code>composeResourceURL</code> returns a URL for the actual location of the file.
+ In fact, when you try to access a <code>res:</code> URL's data using a method like
+ <code>openStream</code>, the protocol handler will itself call
  <code>composeResourceURL</code> to find the file in question.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
@@ -257,9 +257,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html?is-external=true" title="class or interface in java.awt" class="externalLink">Font</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#enableKerningAndLigatures(java.awt.Font)">enableKerningAndLigatures</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html?is-external=true" title="class or interface in java.awt" class="externalLink">Font</a>&nbsp;font)</code></th>
 <td class="colLast">
-<div class="block">Returns a font instance that is equivalent to <code>font</code> but which
- will default to using kerning and ligatures (if available for the font
- and if supported by the particular rendering method).</div>
+<div class="block">Returns a font instance that is equivalent to <code>font</code> but which will
+ default to using kerning and ligatures (if available for the font and if
+ supported by the particular rendering method).</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -284,9 +284,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html?is-external=true" title="class or interface in java.awt" class="externalLink">Font</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBodyFont()">getBodyFont</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns a <code>Font</code> instance for the <i>standard body font</i>:
- this is the default Times-like serif font that is the default font for
- markup on game components.</div>
+<div class="block">Returns a <code>Font</code> instance for the <i>standard body font</i>: this
+ is the default Times-like serif font that is the default font for markup
+ on game components.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
@@ -436,16 +436,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>static boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isFamilyRegistered(java.lang.String)">isFamilyRegistered</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;familyName)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if one or more fonts with the specified family
- name have been registered through <a href="#registerFont(java.lang.String)"><code>registerFont(java.lang.String)</code></a>.</div>
+<div class="block">Returns <code>true</code> if one or more fonts with the specified family name
+ have been registered through <a href="#registerFont(java.lang.String)"><code>registerFont(java.lang.String)</code></a>.</div>
 </td>
 </tr>
 <tr id="i27" class="rowColor">
 <td class="colFirst"><code>static boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isResourceStatic(java.net.URL)">isResourceStatic</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net" class="externalLink">URL</a>&nbsp;composedResourceURL)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if a resource file is not expected to change
- during the lifetime of the application.</div>
+<div class="block">Returns <code>true</code> if a resource file is not expected to change during
+ the lifetime of the application.</div>
 </td>
 </tr>
 <tr id="i28" class="altColor">
@@ -674,16 +674,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  is found):
  <ol>
  <li>If the resource path is actually an absolute URL then it is converted
- to a URL object and returned, except that if it is a <code>res://</code>
- URL the procedure continues as if the <code>res://</code> prefix was not
- present. Absolute URLs are indicated by the presence of a colon (:) in
- the identifier.
+ to a URL object and returned, except that if it is a <code>res://</code> URL
+ the procedure continues as if the <code>res://</code> prefix was not present.
+ Absolute URLs are indicated by the presence of a colon (:) in the
+ identifier.
  <li>The contents of the user resource folder, if any.
  <li>The <code>resources</code> folders of the main application and all
  installed plug-in bundles, in the order of installation.
- <li>The <code>resources</code> folder (if any) of all task folders in the
- open project. Note that this URL is typically only valid while the
- project is open.
+ <li>The <code>resources</code> folder (if any) of all task folders in the open
+ project. Note that this URL is typically only valid while the project is
+ open.
  </ol>
 
  <p>
@@ -729,8 +729,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  The precise effect of this method may change from version to version, but
  the following three conditions are guaranteed:
  <ol>
- <li>If the identifier is <code>null</code>, it will be returned
- unchanged.
+ <li>If the identifier is <code>null</code>, it will be returned unchanged.
  <li>If the identifier is a virtual resource path rather than an absolute
  URL, it will be returned unchanged and the method will return very
  quickly.
@@ -754,19 +753,19 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isResourceStatic</h4>
 <pre class="methodSignature">public static&nbsp;boolean&nbsp;isResourceStatic&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/net/URL.html?is-external=true" title="class or interface in java.net" class="externalLink">URL</a>&nbsp;composedResourceURL)</pre>
-<div class="block">Returns <code>true</code> if a resource file is not expected to change
- during the lifetime of the application. This can be used as a hint to
- caching mechanisms that the resource is safe to cache. For example,
- resources that come from an installed plug-in bundle can be cached
- because the bundle contents cannot change while the application is still
- running, while resources that come from a project must be handled more
- carefully because the user might modify them at any time.</div>
+<div class="block">Returns <code>true</code> if a resource file is not expected to change during
+ the lifetime of the application. This can be used as a hint to caching
+ mechanisms that the resource is safe to cache. For example, resources
+ that come from an installed plug-in bundle can be cached because the
+ bundle contents cannot change while the application is still running,
+ while resources that come from a project must be handled more carefully
+ because the user might modify them at any time.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>composedResourceURL</code> - the URL of the resource in question</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the resource cannot change while the
- application is running</dd>
+<dd><code>true</code> if the resource cannot change while the application
+ is running</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
 </dl>
@@ -790,8 +789,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/FileNotFoundException.html?is-external=true" title="class or interface in java.io" class="externalLink">FileNotFoundException</a></code> - if the resource does not exist</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code> - if an I/O error occurs while opening the stream</dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the specified resource is
- <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the specified resource is <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -821,8 +819,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd>an icon consisting of the requested image or a theme-dependent
  substitute</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>iconResource</code> is
- <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if <code>iconResource</code> is <code>null</code></dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../ca/cgjennings/ui/theme/Theme.html#applyThemeToImage(java.lang.String)"><code>Theme.applyThemeToImage(java.lang.String)</code></a></dd>
 </dl>
@@ -856,8 +853,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Given the path to a resource file containing an image, returns the image.
  If it exists and the file is valid, the returned image will use either
  the <tt>INT_RGB</tt> or <tt>INT_ARGB</tt> formats. (Or, if the setting
- <tt>premultiply-image-alpha</tt> is <code>true</code>, then a
- premultiplied equivalent.)
+ <tt>premultiply-image-alpha</tt> is <code>true</code>, then a premultiplied
+ equivalent.)
 
  <p>
  The resource file must either be an image encoded in one of the supported
@@ -881,8 +878,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd>the image stored at the named resource, or a substitute missing
  image symbol</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the resource identifier is
- <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the resource identifier is <code>null</code></dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if the resource identifier is empty</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#isResourceStatic(java.net.URL)"><code>isResourceStatic(java.net.URL)</code></a></dd>
@@ -906,8 +902,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>an image for the resource path</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the resource identifier is
- <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the resource identifier is <code>null</code></dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if the resource identifier is empty</dd>
 </dl>
 </li>
@@ -928,9 +923,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  concurrently if the system has multiple processors (CPUs or cores).
 
  <p>
- The supplied output array may be <code>null</code>, in which case a new
- array will be created. If a non-<code>null</code> output array is given,
- it must be at least as long as the number of names provided.</div>
+ The supplied output array may be <code>null</code>, in which case a new array
+ will be created. If a non-<code>null</code> output array is given, it must be
+ at least as long as the number of names provided.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>inputResources</code> - image resources to load</dd>
@@ -938,8 +933,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the output array that holds the images</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if any resource identifier is
- <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if any resource identifier is <code>null</code></dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if any resource identifier is empty</dd>
 </dl>
 </li>
@@ -979,8 +973,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>image</code> - the image to prepare</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>an image in the correct format; either the original or a
- converted one, or <code>null</code> if <code>image</code> was
- <code>null</code></dd>
+ converted one, or <code>null</code> if <code>image</code> was <code>null</code></dd>
 </dl>
 </li>
 </ul>
@@ -1057,9 +1050,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getBodyFont</h4>
 <pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html?is-external=true" title="class or interface in java.awt" class="externalLink">Font</a>&nbsp;getBodyFont()</pre>
-<div class="block">Returns a <code>Font</code> instance for the <i>standard body font</i>:
- this is the default Times-like serif font that is the default font for
- markup on game components. It is normally accessed by its family name via
+<div class="block">Returns a <code>Font</code> instance for the <i>standard body font</i>: this
+ is the default Times-like serif font that is the default font for markup
+ on game components. It is normally accessed by its family name via
  <a href="#getBodyFamily()"><code>getBodyFamily()</code></a> rather than by <code>Font</code>. Please see the
  documentation for that method for further details.</div>
 <dl>
@@ -1235,14 +1228,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isFamilyRegistered</h4>
 <pre class="methodSignature">public static&nbsp;boolean&nbsp;isFamilyRegistered&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;familyName)</pre>
-<div class="block">Returns <code>true</code> if one or more fonts with the specified family
- name have been registered through <a href="#registerFont(java.lang.String)"><code>registerFont(java.lang.String)</code></a>.</div>
+<div class="block">Returns <code>true</code> if one or more fonts with the specified family name
+ have been registered through <a href="#registerFont(java.lang.String)"><code>registerFont(java.lang.String)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>familyName</code> - the family name of the font to check</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if at least one font with that family name has
- been registered successfully</dd>
+<dd><code>true</code> if at least one font with that family name has been
+ registered successfully</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the family name is <code>null</code></dd>
 </dl>
@@ -1255,18 +1248,18 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>enableKerningAndLigatures</h4>
 <pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html?is-external=true" title="class or interface in java.awt" class="externalLink">Font</a>&nbsp;enableKerningAndLigatures&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/Font.html?is-external=true" title="class or interface in java.awt" class="externalLink">Font</a>&nbsp;font)</pre>
-<div class="block">Returns a font instance that is equivalent to <code>font</code> but which
- will default to using kerning and ligatures (if available for the font
- and if supported by the particular rendering method). Note that this
- method is not needed for markup text drawn on components, as the markup
- system already provides its own support for kerning and ligatures, and it
- looks up fonts by family name rather than <code>Font</code> instance.</div>
+<div class="block">Returns a font instance that is equivalent to <code>font</code> but which will
+ default to using kerning and ligatures (if available for the font and if
+ supported by the particular rendering method). Note that this method is
+ not needed for markup text drawn on components, as the markup system
+ already provides its own support for kerning and ligatures, and it looks
+ up fonts by family name rather than <code>Font</code> instance.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>font</code> - the font to modify</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a font instance that is equivalent to <code>font</code> but will
- use kerning and ligatures when possible</dd>
+<dd>a font instance that is equivalent to <code>font</code> but will use
+ kerning and ligatures when possible</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the font is <code>null</code></dd>
 </dl>
@@ -1349,8 +1342,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Displays a file dialog for opening a single game component.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>parent</code> - a parent component for the dialog; may be <code>null</code>
- in which case the main application window is used</dd>
+<dd><code>parent</code> - a parent component for the dialog; may be <code>null</code> in
+ which case the main application window is used</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the selected file, or <code>null</code> if no file was selected</dd>
 </dl>
@@ -1366,8 +1359,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Displays a file dialog for opening multiple game components.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>parent</code> - a parent component for the dialog; may be <code>null</code>
- in which case the main application window is used</dd>
+<dd><code>parent</code> - a parent component for the dialog; may be <code>null</code> in
+ which case the main application window is used</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the selected files (empty if no file was selected)</dd>
 </dl>
@@ -1386,8 +1379,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  the existing file.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>parent</code> - a parent component for the dialog; may be <code>null</code>
- in which case the main application window is used</dd>
+<dd><code>parent</code> - a parent component for the dialog; may be <code>null</code> in
+ which case the main application window is used</dd>
 <dd><code>baseName</code> - an optional suggested file name</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the selected file, or <code>null</code> if no file was selected</dd>
@@ -1404,8 +1397,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Displays a file dialog for opening a single image file.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>parent</code> - a parent component for the dialog; may be <code>null</code>
- in which case the main application window is used</dd>
+<dd><code>parent</code> - a parent component for the dialog; may be <code>null</code> in
+ which case the main application window is used</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the selected file, or <code>null</code> if no file was selected</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
@@ -1425,8 +1418,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  (such as SVG).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>parent</code> - a parent component for the dialog; may be <code>null</code>
- in which case the main application window is used</dd>
+<dd><code>parent</code> - a parent component for the dialog; may be <code>null</code> in
+ which case the main application window is used</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the selected file, or <code>null</code> if no file was selected</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
@@ -1447,8 +1440,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  the existing file.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>parent</code> - a parent component for the dialog; may be <code>null</code>
- in which case the main application window is used</dd>
+<dd><code>parent</code> - a parent component for the dialog; may be <code>null</code> in
+ which case the main application window is used</dd>
 <dd><code>baseName</code> - an optional suggested file name</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the selected file, or <code>null</code> if no file was selected</dd>
@@ -1469,8 +1462,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  the user must confirm whether they wish to replace the existing file.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>parent</code> - a parent component for the dialog; may be <code>null</code>
- in which case the main application window is used</dd>
+<dd><code>parent</code> - a parent component for the dialog; may be <code>null</code> in
+ which case the main application window is used</dd>
 <dd><code>base</code> - the base location or file</dd>
 <dd><code>fileTypeDescription</code> - a description of the file type</dd>
 <dd><code>fileNameExtensions</code> - typical file extensions for this file type</dd>
@@ -1492,8 +1485,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Displays a file dialog for opening a file.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>parent</code> - a parent component for the dialog; may be <code>null</code>
- in which case the main application window is used</dd>
+<dd><code>parent</code> - a parent component for the dialog; may be <code>null</code> in
+ which case the main application window is used</dd>
 <dd><code>base</code> - the base location or file</dd>
 <dd><code>fileType</code> - a description of the file type</dd>
 <dd><code>fileExtensions</code> - typical file extensions for this file type</dd>
@@ -1516,8 +1509,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  the user must confirm whether they wish to replace the existing file.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>parent</code> - a parent component for the dialog; may be <code>null</code>
- in which case the main application window is used</dd>
+<dd><code>parent</code> - a parent component for the dialog; may be <code>null</code> in
+ which case the main application window is used</dd>
 <dd><code>basename</code> - the base location or file</dd>
 <dd><code>fileType</code> - a description of the file type</dd>
 <dd><code>fileExtension</code> - typical file extension for this file type</dd>
@@ -1536,8 +1529,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Displays a file dialog for opening a script file.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>parent</code> - a parent component for the dialog; may be <code>null</code>
- in which case the main application window is used</dd>
+<dd><code>parent</code> - a parent component for the dialog; may be <code>null</code> in
+ which case the main application window is used</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the selected file, or <code>null</code> if no file was selected</dd>
 </dl>
@@ -1553,8 +1546,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Displays a file dialog for opening a plug-in bundle file.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>parent</code> - a parent component for the dialog; may be <code>null</code>
- in which case the main application window is used</dd>
+<dd><code>parent</code> - a parent component for the dialog; may be <code>null</code> in
+ which case the main application window is used</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the selected file, or <code>null</code> if no file was selected</dd>
 </dl>
@@ -1570,8 +1563,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Displays a file dialog for opening a project folder.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>parent</code> - a parent component for the dialog; may be <code>null</code>
- in which case the main application window is used</dd>
+<dd><code>parent</code> - a parent component for the dialog; may be <code>null</code> in
+ which case the main application window is used</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the selected file, or <code>null</code> if no file was selected</dd>
 </dl>
@@ -1603,8 +1596,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>job</code> - the printer job to be used for printing</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the user confirms that printing should
- proceed</dd>
+<dd><code>true</code> if the user confirms that printing should proceed</dd>
 </dl>
 </li>
 </ul>
@@ -1717,8 +1709,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                                                      boolean&nbsp;reportError)</pre>
 <div class="block">Reads a <a href="../ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component"><code>GameComponent</code></a> from a file. If an error occurs while
  reading or creating the component, and <code>reportError</code> is
- <code>true</code>, then an error message will be displayed to the user as
- if the component was opened using the <b>File|Open</b>
+ <code>true</code>, then an error message will be displayed to the user as if
+ the component was opened using the <b>File|Open</b>
  command. In any case, if the component cannot be created then
  <code>null</code> will be returned.</div>
 <dl>
@@ -1744,8 +1736,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                                                        boolean&nbsp;reportError)</pre>
 <div class="block">Reads a <a href="../ca/cgjennings/apps/arkham/component/GameComponent.html" title="interface in ca.cgjennings.apps.arkham.component"><code>GameComponent</code></a> from an input stream. If an error occurs
  while reading or creating the component, and <code>reportError</code> is
- <code>true</code>, then an error message will be displayed to the user as
- if the component was opened using the <b>File|Open</b>
+ <code>true</code>, then an error message will be displayed to the user as if
+ the component was opened using the <b>File|Open</b>
  command. In any case, if the component cannot be created then
  <code>null</code> will be returned.</div>
 <dl>
@@ -1754,8 +1746,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dd><code>sourceDescription</code> - a description of the source of the input stream
  (such as a file or URL); this is displayed as part of an error message,
  if any</dd>
-<dd><code>reportError</code> - if <code>true</code>, any errors will be reported to
- the user with suitable error messages; otherwise, errors will simply be
+<dd><code>reportError</code> - if <code>true</code>, any errors will be reported to the
+ user with suitable error messages; otherwise, errors will simply be
  logged</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a game component deserialized from the input stream, or

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -269,58 +269,72 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#xDisableAnimation">xDisableAnimation</a></span></code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#xDisableAcceleration">xDisableAcceleration</a></span></code></th>
 <td class="colLast">
 <div class="block">Non-standard debugging and performance option.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#xDisableAnimation">xDisableAnimation</a></span></code></th>
+<td class="colLast">
+<div class="block">Non-standard debugging and performance option.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#xDisableBackgroundInit">xDisableBackgroundInit</a></span></code></th>
 <td class="colLast">
 <div class="block">Non-standard debugging option.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#xDisableFileRestore">xDisableFileRestore</a></span></code></th>
 <td class="colLast">
 <div class="block">Non-standard debugging option.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#xDisableFilterThreads">xDisableFilterThreads</a></span></code></th>
 <td class="colLast">
 <div class="block">Non-standard debugging option.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#xDisableJreCheck">xDisableJreCheck</a></span></code></th>
 <td class="colLast">
 <div class="block">Non-standard development option.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#xDisablePluginLoading">xDisablePluginLoading</a></span></code></th>
 <td class="colLast">
 <div class="block">Non-standard debugging and development option.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#xDisableProjectRestore">xDisableProjectRestore</a></span></code></th>
 <td class="colLast">
 <div class="block">Non-standard debugging option.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#xDisableSystemMenu">xDisableSystemMenu</a></span></code></th>
 <td class="colLast">
 <div class="block">Non-standard debugging option.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#xEnableWindowsAcceleration">xEnableWindowsAcceleration</a></span></code></th>
+<td class="colLast">
+<div class="block">Non-standard debugging and performance option.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -506,21 +520,24 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <li class="blockList">
 <h4>xAAText</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> xAAText</pre>
-<div class="block">Non-standard quality-tuning option. <p>
- This option forces the method used to antialias (AA) text.
- Java attempts to read system-wide AA settings, but this often fails on
- Linux. So by default Strange Eons uses the default settings on
- Windows and macOS but will enforce LCD antialiasing otherwise.
- Setting this option forces a different method:
+<div class="block">Non-standard quality-tuning option.
+ <p>
+ This option forces the method used to antialias (AA) text. Java attempts
+ to read system-wide AA settings, but this often fails on Linux. So by
+ default Strange Eons uses the default settings on Windows and macOS but
+ will enforce LCD antialiasing otherwise. Setting this option forces a
+ different method:
 
  <dl>
-   <dt>auto</dt> <dd>use the value found in system settings</dd>
-   <dt>off</dt>  <dd>disable antialiasing</dd>
-   <dt>on</dt>   <dd>greyscale antialiasing for all fonts</dd>
-   <dt>gasp</dt> <dd>greyscale antialiasing based on the font's GASP table</dd>
-   <dt>lcd</dt>  <dd>subpixel antialiasing for the most common LCD layout (same as lcd_hrgb)</dd>
-   <dt>lcd_hbgr, lcd_vrgb, lcd_vbgr</dt>
-                 <dd>subpixel antialiasing for other LCD layouts</dd>
+ <dt>auto</dt> <dd>use the value found in system settings</dd>
+ <dt>off</dt>  <dd>disable antialiasing</dd>
+ <dt>on</dt>   <dd>greyscale antialiasing for all fonts</dd>
+ <dt>gasp</dt> <dd>greyscale antialiasing based on the font's GASP
+ table</dd>
+ <dt>lcd</dt>  <dd>subpixel antialiasing for the most common LCD layout
+ (same as lcd_hrgb)</dd>
+ <dt>lcd_hbgr, lcd_vrgb, lcd_vbgr</dt>
+ <dd>subpixel antialiasing for other LCD layouts</dd>
  </dl></div>
 </li>
 </ul>
@@ -531,11 +548,12 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <li class="blockList">
 <h4>xDisableJreCheck</h4>
 <pre>public&nbsp;boolean xDisableJreCheck</pre>
-<div class="block">Non-standard development option. <p>
+<div class="block">Non-standard development option.
+ <p>
  This option prevents Strange Eons from checking the JRE version at
- startup. Normally, Strange Eons checks which version of
- Java it is running against and will refuse to start unless it is
- a known compatible version.</div>
+ startup. Normally, Strange Eons checks which version of Java it is
+ running against and will refuse to start unless it is a known compatible
+ version.</div>
 </li>
 </ul>
 <a id="xDebugException">
@@ -545,7 +563,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <li class="blockList">
 <h4>xDebugException</h4>
 <pre>public&nbsp;boolean xDebugException</pre>
-<div class="block">Non-standard development option. <p>
+<div class="block">Non-standard development option.
+ <p>
  This option causes an exception to be thrown during startup. It is used
  to test how <a href="dialog/ErrorDialog.html" title="class in ca.cgjennings.apps.arkham.dialog"><code>ErrorDialog</code></a> handles uncaught startup exceptions.</div>
 </li>
@@ -557,7 +576,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <li class="blockList">
 <h4>xDisableProjectRestore</h4>
 <pre>public&nbsp;boolean xDisableProjectRestore</pre>
-<div class="block">Non-standard debugging option. <p>
+<div class="block">Non-standard debugging option.
+ <p>
  This option prevents Strange Eons from attempting to re-open the project
  that was open the last time the application exited. This may be useful if
  this is preventing the application from starting normally. This option is
@@ -571,7 +591,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <li class="blockList">
 <h4>xDisableFileRestore</h4>
 <pre>public&nbsp;boolean xDisableFileRestore</pre>
-<div class="block">Non-standard debugging option. <p>
+<div class="block">Non-standard debugging option.
+ <p>
  This option prevents Strange Eons from attempting to re-open the same
  files that were in use the last time the application exited. This may be
  useful if this is preventing the application from starting normally. This
@@ -585,7 +606,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <li class="blockList">
 <h4>xDisableAnimation</h4>
 <pre>public&nbsp;boolean xDisableAnimation</pre>
-<div class="block">Non-standard debugging and performance option. <p>
+<div class="block">Non-standard debugging and performance option.
+ <p>
  This option disables animation effects that may not be played correctly
  on some platforms.</div>
 </li>
@@ -597,7 +619,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <li class="blockList">
 <h4>xDisableBackgroundInit</h4>
 <pre>public&nbsp;boolean xDisableBackgroundInit</pre>
-<div class="block">Non-standard debugging option. <p>
+<div class="block">Non-standard debugging option.
+ <p>
  If this option is set, certain initialization steps that are normally
  performed in a separate thread to decrease startup time will instead be
  performed in the main startup thread. Try setting this option if you
@@ -611,10 +634,11 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <li class="blockList">
 <h4>xDisableFilterThreads</h4>
 <pre>public&nbsp;boolean xDisableFilterThreads</pre>
-<div class="block">Non-standard debugging option. <p>
+<div class="block">Non-standard debugging option.
+ <p>
  Disables the use of threads to accelerate image filters in the package
- <code>ca.cgjennings.graphics.filters</code> and use of multiple threads
- by <a href="../../algo/SplitJoin.html" title="class in ca.cgjennings.algo"><code>SplitJoin</code></a>.</div>
+ <code>ca.cgjennings.graphics.filters</code> and use of multiple threads by
+ <a href="../../algo/SplitJoin.html" title="class in ca.cgjennings.algo"><code>SplitJoin</code></a>.</div>
 </li>
 </ul>
 <a id="xDisablePluginLoading">
@@ -624,7 +648,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <li class="blockList">
 <h4>xDisablePluginLoading</h4>
 <pre>public&nbsp;boolean xDisablePluginLoading</pre>
-<div class="block">Non-standard debugging and development option. <p>
+<div class="block">Non-standard debugging and development option.
+ <p>
  Prevents plug-ins from being loaded. This can be used to facilitate
  building an <em>application class-data sharing archive</em>.</div>
 </li>
@@ -636,9 +661,41 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <li class="blockList">
 <h4>xDisableSystemMenu</h4>
 <pre>public&nbsp;boolean xDisableSystemMenu</pre>
-<div class="block">Non-standard debugging option. <p>
+<div class="block">Non-standard debugging option.
+ <p>
  This option disables use of the system menu bar on OS X. It has no effect
  on other platforms.</div>
+</li>
+</ul>
+<a id="xDisableAcceleration">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>xDisableAcceleration</h4>
+<pre>public&nbsp;boolean xDisableAcceleration</pre>
+<div class="block">Non-standard debugging and performance option.
+ 
+ <p>
+ Setting this option will disable optional hardware acceleration
+ regardless of platform. This option supersedes all other
+ acceleration-related options.</div>
+</li>
+</ul>
+<a id="xEnableWindowsAcceleration">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>xEnableWindowsAcceleration</h4>
+<pre>public&nbsp;boolean xEnableWindowsAcceleration</pre>
+<div class="block">Non-standard debugging and performance option.
+ 
+ <p>
+ Since many video card drivers do not fully support hardware acceleration,
+ it is disabled by default on Windows.
+ Setting this option will enable it, which means enabling 
+ Direct3D acceleration unless the <a href="#xOpenGL"><code>xOpenGL</code></a> option is also set.</div>
 </li>
 </ul>
 <a id="xOpenGL">
@@ -648,11 +705,21 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <li class="blockList">
 <h4>xOpenGL</h4>
 <pre>public&nbsp;boolean xOpenGL</pre>
-<div class="block">Non-standard debugging and performance option. <p>
+<div class="block">Non-standard debugging and performance option.
+ <p>
  This option attempts to enable the OpenGL rendering pipeline for graphics
  instead of using the default pipeline. It may result in improved
  performance on some systems, although it may also result in rendering
- issues if driver support is poor.</div>
+ issues if driver support is poor.
+ 
+ <p>
+ On Windows, the <code>xWinAccel#xEnableWindowsAcceleration</code> option must also be set. Adding this
+ switch will request OpenGL instead of Direct3D acceleration.
+ 
+ <p>
+ On Linux, the default is to try to use xrender-based acceleration.
+ Adding this switch will attempt to use OpenGL instead. Either option
+ can fail, in which case software rendering is used.</div>
 </li>
 </ul>
 <a id="xRestartLock">
@@ -662,7 +729,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <li class="blockList">
 <h4>xRestartLock</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a> xRestartLock</pre>
-<div class="block">Internal use option. <p>
+<div class="block">Internal use option.
+ <p>
  This option is not meant to be set by the user. It is supplied
  automatically when the application is attempting to restart itself. The
  supplied file is a temporary file locked by the application instance that
@@ -678,7 +746,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneabl
 <li class="blockList">
 <h4>console</h4>
 <pre>public&nbsp;boolean console</pre>
-<div class="block">Internal use options. <p>
+<div class="block">Internal use options.
+ <p>
  Allows some Windows launcher applications to enable "console mode"
  without the option being rejected.</div>
 </li>

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -148,14 +148,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  the variable is undefined.
  <p>
  <b>{?<i>condition</i>} ... {/?<i>condition</i>}</b><br>
- If the condition is set to <code>true</code>, then the text between the start
- and end symbols will be included in the document. Otherwise, it will be left
- out. Throws an exception if the condition has not been set.
+ If the condition is set to <code>true</code>, then the text between the start and
+ end symbols will be included in the document. Otherwise, it will be left out.
+ Throws an exception if the condition has not been set.
  <p>
  <b>{!<i>condition</i>} ... {/!<i>condition</i>}</b><br>
- If the condition is set to <code>false</code>, then the text between the
- start and end symbols will be included in the document. Otherwise, it will be
- left out. Throws an exception if the condition has not been set.</div>
+ If the condition is set to <code>false</code>, then the text between the start and
+ end symbols will be included in the document. Otherwise, it will be left out.
+ Throws an exception if the condition has not been set.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>
@@ -599,8 +599,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>message</code> - the error message to provide</dd>
-<dd><code>remainder</code> - the remaining unprocessed text (may be
- <code>null</code>)</dd>
+<dd><code>remainder</code> - the remaining unprocessed text (may be <code>null</code>)</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code></dd>
 </dl>

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -143,8 +143,8 @@ implements <a href="WizardModel.html" title="interface in ca.cgjennings.ui.wizar
 <div class="block">An abstract base class for wizard models. This base class provides all the
  functionality required by a wizard model except for
  <a href="WizardModel.html#getPageOrder()"><code>WizardModel.getPageOrder()</code></a>. Because the implementations of the other
- methods must call <code>getPageOrder()</code>, subclasses that do not
- represent the page order internally as an array should consider caching the
+ methods must call <code>getPageOrder()</code>, subclasses that do not represent
+ the page order internally as an array should consider caching the
  <code>getPageOrder()</code> for performance reasons.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
@@ -258,8 +258,7 @@ implements <a href="WizardModel.html" title="interface in ca.cgjennings.ui.wizar
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#canFinish()">canFinish</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the wizard can be finished in its current
- state.</div>
+<div class="block">Returns <code>true</code> if the wizard can be finished in its current state.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -575,9 +574,8 @@ implements <a href="WizardModel.html" title="interface in ca.cgjennings.ui.wizar
 <h4>canFinish</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;canFinish()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="WizardModel.html#canFinish()">WizardModel</a></code></span></div>
-<div class="block">Returns <code>true</code> if the wizard can be finished in its current
- state. This method must always return <code>false</code> when progress is
- blocked.</div>
+<div class="block">Returns <code>true</code> if the wizard can be finished in its current state.
+ This method must always return <code>false</code> when progress is blocked.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="WizardModel.html#canFinish()">canFinish</a></code>&nbsp;in interface&nbsp;<code><a href="WizardModel.html" title="interface in ca.cgjennings.ui.wizard">WizardModel</a></code></dd>
@@ -865,16 +863,16 @@ implements <a href="WizardModel.html" title="interface in ca.cgjennings.ui.wizar
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="WizardModel.html#setProgressBlocked(boolean)">WizardModel</a></code></span></div>
 <div class="block">Sets whether or not progress is blocked. When progress is blocked,
  <a href="WizardModel.html#canGoForward()"><code>WizardModel.canGoForward()</code></a> and <a href="WizardModel.html#canFinish()"><code>WizardModel.canFinish()</code></a> must always return
- <code>false</code>. The progress blocking state can be cleared by calling
- this method with false, and is cleared automatically if the page changes.
+ <code>false</code>. The progress blocking state can be cleared by calling this
+ method with false, and is cleared automatically if the page changes.
  Blocking provides a mechanism for individual pages to prevent progress if
  they are missing required information.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="WizardModel.html#setProgressBlocked(boolean)">setProgressBlocked</a></code>&nbsp;in interface&nbsp;<code><a href="WizardModel.html" title="interface in ca.cgjennings.ui.wizard">WizardModel</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>block</code> - if <code>true</code>, prevents the user from going to the
- next page or finishing the dialog.</dd>
+<dd><code>block</code> - if <code>true</code>, prevents the user from going to the next
+ page or finishing the dialog.</dd>
 </dl>
 </li>
 </ul>

@@ -26,14 +26,14 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":9,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":9,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10,"i40":10,"i41":10,"i42":9,"i43":10,"i44":10,"i45":10,"i46":10,"i47":10};
+var data = {"i0":10,"i1":9,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":9,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10,"i40":10,"i41":10,"i42":10,"i43":9,"i44":10,"i45":10,"i46":10,"i47":10,"i48":10,"i49":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -512,8 +512,8 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
 <td class="colFirst"><code><a href="Navigator.html" title="interface in ca.cgjennings.apps.arkham.editors">Navigator</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getNavigator()">getNavigator</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the current navigator for this editor, or <code>null</code> if
- none is set.</div>
+<div class="block">Returns the current navigator for this editor, or <code>null</code> if none is
+ set.</div>
 </td>
 </tr>
 <tr id="i20" class="altColor">
@@ -542,35 +542,40 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isAttached()">isAttached</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this editor is currently attached to the
- document tab strip.</div>
+<div class="block">Returns <code>true</code> if this editor is currently attached to the document
+ tab strip.</div>
 </td>
 </tr>
 <tr id="i24" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isCharacterEscapingEnabled()">isCharacterEscapingEnabled</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if character escaping is enabled on read and
- write of the document.</div>
+<div class="block">Returns <code>true</code> if character escaping is enabled on read and write
+ of the document.</div>
 </td>
 </tr>
 <tr id="i25" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isCommandApplicable(ca.cgjennings.apps.arkham.commands.AbstractCommand)">isCommandApplicable</a></span>&#8203;(<a href="../commands/AbstractCommand.html" title="class in ca.cgjennings.apps.arkham.commands">AbstractCommand</a>&nbsp;command)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the <code>command</code> can be performed by
- this commandable in its current state.</div>
+<div class="block">Returns <code>true</code> if the <code>command</code> can be performed by this
+ commandable in its current state.</div>
 </td>
 </tr>
 <tr id="i26" class="altColor">
 <td class="colFirst"><code>static boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isNavigatorVisible()">isNavigatorVisible</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if code editors will display a source navigator
- when one has been set.</div>
+<div class="block">Returns <code>true</code> if code editors will display a source navigator when
+ one has been set.</div>
 </td>
 </tr>
 <tr id="i27" class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isReadOnly()">isReadOnly</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i28" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#onHeartbeat()">onHeartbeat</a></span>()</code></th>
 <td class="colLast">
@@ -578,14 +583,14 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
  processing.</div>
 </td>
 </tr>
-<tr id="i28" class="altColor">
+<tr id="i29" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#performCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)">performCommand</a></span>&#8203;(<a href="../commands/AbstractCommand.html" title="class in ca.cgjennings.apps.arkham.commands">AbstractCommand</a>&nbsp;command)</code></th>
 <td class="colLast">
 <div class="block">Performs the command.</div>
 </td>
 </tr>
-<tr id="i29" class="rowColor">
+<tr id="i30" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#printImpl(java.awt.print.PrinterJob)">printImpl</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/awt/print/PrinterJob.html?is-external=true" title="class or interface in java.awt.print" class="externalLink">PrinterJob</a>&nbsp;job)</code></th>
 <td class="colLast">
@@ -593,35 +598,35 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
  a supported command.</div>
 </td>
 </tr>
-<tr id="i30" class="altColor">
+<tr id="i31" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#refresh()">refresh</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Reload the file, replacing the edited text.</div>
 </td>
 </tr>
-<tr id="i31" class="rowColor">
+<tr id="i32" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#refreshNavigator()">refreshNavigator</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Updates the navigation panel to reflect the current state of the text.</div>
 </td>
 </tr>
-<tr id="i32" class="altColor">
+<tr id="i33" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#run(boolean)">run</a></span>&#8203;(boolean&nbsp;debugIfAvailable)</code></th>
 <td class="colLast">
 <div class="block">Run the current script.</div>
 </td>
 </tr>
-<tr id="i33" class="rowColor">
+<tr id="i34" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#saveImpl(java.io.File)">saveImpl</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;f)</code></th>
 <td class="colLast">
 <div class="block">Saves the editor content to the specified file.</div>
 </td>
 </tr>
-<tr id="i34" class="altColor">
+<tr id="i35" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#select(int,int)">select</a></span>&#8203;(int&nbsp;startOffset,
       int&nbsp;endOffset)</code></th>
@@ -629,21 +634,21 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
 <div class="block">Selects from the start offset to the end offset.</div>
 </td>
 </tr>
-<tr id="i35" class="rowColor">
+<tr id="i36" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#selectAll()">selectAll</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Selects the entire document.</div>
 </td>
 </tr>
-<tr id="i36" class="altColor">
+<tr id="i37" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setAttached(boolean)">setAttached</a></span>&#8203;(boolean&nbsp;attach)</code></th>
 <td class="colLast">
 <div class="block">Sets whether this editor is attached to the document tab strip.</div>
 </td>
 </tr>
-<tr id="i37" class="rowColor">
+<tr id="i38" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setCharacterEscapingEnabled(boolean)">setCharacterEscapingEnabled</a></span>&#8203;(boolean&nbsp;characterEscaping)</code></th>
 <td class="colLast">
@@ -651,26 +656,26 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
  document.</div>
 </td>
 </tr>
-<tr id="i38" class="altColor">
+<tr id="i39" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setFile(java.io.File)">setFile</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;f)</code></th>
 <td class="colLast">
 <div class="block">Sets the preferred file to use when saving the edited component.</div>
 </td>
 </tr>
-<tr id="i39" class="rowColor">
+<tr id="i40" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setFileDropListener(ca.cgjennings.ui.dnd.FileDrop.Listener)">setFileDropListener</a></span>&#8203;(<a href="../../../ui/dnd/FileDrop.Listener.html" title="interface in ca.cgjennings.ui.dnd">FileDrop.Listener</a>&nbsp;fdl)</code></th>
 <td class="colLast">&nbsp;</td>
 </tr>
-<tr id="i40" class="altColor">
+<tr id="i41" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setFrameIcon(javax.swing.Icon)">setFrameIcon</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/javax/swing/Icon.html?is-external=true" title="class or interface in javax.swing" class="externalLink">Icon</a>&nbsp;icon)</code></th>
 <td class="colLast">
 <div class="block">Sets the preferred icon to use for this editor window.</div>
 </td>
 </tr>
-<tr id="i41" class="rowColor">
+<tr id="i42" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setNavigator(ca.cgjennings.apps.arkham.editors.Navigator)">setNavigator</a></span>&#8203;(<a href="Navigator.html" title="interface in ca.cgjennings.apps.arkham.editors">Navigator</a>&nbsp;nav)</code></th>
 <td class="colLast">
@@ -678,35 +683,40 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
  this editor.</div>
 </td>
 </tr>
-<tr id="i42" class="altColor">
+<tr id="i43" class="rowColor">
 <td class="colFirst"><code>static void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setNavigatorVisible(boolean)">setNavigatorVisible</a></span>&#8203;(boolean&nbsp;navIsVisible)</code></th>
 <td class="colLast">
 <div class="block">Sets whether source navigators are hidden.</div>
 </td>
 </tr>
-<tr id="i43" class="rowColor">
+<tr id="i44" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setReadOnly(boolean)">setReadOnly</a></span>&#8203;(boolean&nbsp;readOnly)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i45" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setSelectedText(java.lang.String)">setSelectedText</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text)</code></th>
 <td class="colLast">
 <div class="block">Replaces the selection with the specified text.</div>
 </td>
 </tr>
-<tr id="i44" class="altColor">
+<tr id="i46" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setText(java.lang.String)">setText</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;text)</code></th>
 <td class="colLast">
 <div class="block">Sets the document text.</div>
 </td>
 </tr>
-<tr id="i45" class="rowColor">
+<tr id="i47" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sortSelectedLines()">sortSelectedLines</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Displays a dialog that allows the user to sort the selected lines.</div>
 </td>
 </tr>
-<tr id="i46" class="altColor">
+<tr id="i48" class="altColor">
 <td class="colFirst"><code>protected <a href="../StrangeEonsEditor.html" title="interface in ca.cgjennings.apps.arkham">StrangeEonsEditor</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#spinOffImpl()">spinOffImpl</a></span>()</code></th>
 <td class="colLast">
@@ -714,7 +724,7 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
  is a supported command.</div>
 </td>
 </tr>
-<tr id="i47" class="rowColor">
+<tr id="i49" class="rowColor">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#unescape(java.lang.String)">unescape</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;line)</code></th>
 <td class="colLast">
@@ -944,6 +954,24 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a id="setReadOnly(boolean)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setReadOnly</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setReadOnly&#8203;(boolean&nbsp;readOnly)</pre>
+</li>
+</ul>
+<a id="isReadOnly()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>isReadOnly</h4>
+<pre class="methodSignature">public&nbsp;boolean&nbsp;isReadOnly()</pre>
+</li>
+</ul>
 <a id="checkFileForBOM(java.io.File)">
 <!--   -->
 </a>
@@ -953,14 +981,13 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
 <pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/nio/charset/Charset.html?is-external=true" title="class or interface in java.nio.charset" class="externalLink">Charset</a>&nbsp;checkFileForBOM&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html?is-external=true" title="class or interface in java.io" class="externalLink">File</a>&nbsp;f)
                                throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></pre>
 <div class="block">Detects a UTF-8/UTF-16/UTF-32 BOM sequence at the start of a text file.
- If one exists, returns the <code>Charset</code> indicated by the
- sequence. Otherwise, returns <code>null</code>.</div>
+ If one exists, returns the <code>Charset</code> indicated by the sequence.
+ Otherwise, returns <code>null</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>f</code> - the file to check</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the encoding represented by the byte order mark, or
- <code>null</code></dd>
+<dd>the encoding represented by the byte order mark, or <code>null</code></dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io" class="externalLink">IOException</a></code></dd>
 </dl>
@@ -1036,8 +1063,8 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>command</code> - the command to be performed</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if this commandable wishes to handle the
- command (even if it cannot execute the command currently)</dd>
+<dd><code>true</code> if this commandable wishes to handle the command
+ (even if it cannot execute the command currently)</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../commands/Commands.html" title="class in ca.cgjennings.apps.arkham.commands"><code>Commands</code></a></dd>
 </dl>
@@ -1051,9 +1078,9 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
 <h4>isCommandApplicable</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isCommandApplicable&#8203;(<a href="../commands/AbstractCommand.html" title="class in ca.cgjennings.apps.arkham.commands">AbstractCommand</a>&nbsp;command)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../AbstractStrangeEonsEditor.html#isCommandApplicable(ca.cgjennings.apps.arkham.commands.AbstractCommand)">AbstractStrangeEonsEditor</a></code></span></div>
-<div class="block">Returns <code>true</code> if the <code>command</code> can be performed by
- this commandable in its current state. If <a href="../commands/Commandable.html#canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)"><code>Commandable.canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a>
- would return false for this command, then this must also return false.
+<div class="block">Returns <code>true</code> if the <code>command</code> can be performed by this
+ commandable in its current state. If <a href="../commands/Commandable.html#canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)"><code>Commandable.canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a> would
+ return false for this command, then this must also return false.
 
  The base class returns the value of <a href="../AbstractStrangeEonsEditor.html#canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)"><code>AbstractStrangeEonsEditor.canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a>, except
  that if the command is SAVE, it returns false if the editor does not have
@@ -1088,7 +1115,7 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
  The base class provides a framework for handling common document
  commands. To use the framework, override <a href="../AbstractStrangeEonsEditor.html#canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)"><code>AbstractStrangeEonsEditor.canPerformCommand(ca.cgjennings.apps.arkham.commands.AbstractCommand)</code></a> to
  return true for the commands you wish to support. Then this method will
- call the following methods (as appropriate):      <a href="../AbstractStrangeEonsEditor.html#clear()"><code>AbstractStrangeEonsEditor.clear()</code></a>, <a href="../AbstractStrangeEonsEditor.html#save()"><code>AbstractStrangeEonsEditor.save()</code></a>, <a href="../AbstractStrangeEonsEditor.html#saveAs()"><code>AbstractStrangeEonsEditor.saveAs()</code></a>, <a href="../AbstractStrangeEonsEditor.html#export()"><code>AbstractStrangeEonsEditor.export()</code></a>,
+ call the following methods (as appropriate): null null null     <a href="../AbstractStrangeEonsEditor.html#clear()"><code>AbstractStrangeEonsEditor.clear()</code></a>, <a href="../AbstractStrangeEonsEditor.html#save()"><code>AbstractStrangeEonsEditor.save()</code></a>, <a href="../AbstractStrangeEonsEditor.html#saveAs()"><code>AbstractStrangeEonsEditor.saveAs()</code></a>, <a href="../AbstractStrangeEonsEditor.html#export()"><code>AbstractStrangeEonsEditor.export()</code></a>,
  <a href="../AbstractStrangeEonsEditor.html#spinOff()"><code>AbstractStrangeEonsEditor.spinOff()</code></a>, or <a href="../AbstractStrangeEonsEditor.html#print()"><code>AbstractStrangeEonsEditor.print()</code></a>. These methods handle common
  details of implementing these commands, then pass control to a matching
  implementation method which the subclass must override to perform those
@@ -1266,8 +1293,8 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
  permission.
 
  This implementation allows the user to cancel the clear operation if
- there are unsaved changes, and then calls <code>clearImpl</code> to
- handle the details of clearing the edited content. To use it, override
+ there are unsaved changes, and then calls <code>clearImpl</code> to handle the
+ details of clearing the edited content. To use it, override
  <a href="../AbstractStrangeEonsEditor.html#clearImpl()"><code>AbstractStrangeEonsEditor.clearImpl()</code></a> to perform the clear operation.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
@@ -1315,8 +1342,8 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
 <div class="block">Subclasses should override this to export the edited content if EXPORT is
  a supported command. The value of <code>type</code> is the index of the
  element in <a href="../AbstractSupportEditor.html#getExportExtensions()"><code>AbstractSupportEditor.getExportExtensions()</code></a> for the file type that was
- selected by the user. The value of <code>file</code> is the destination
- file to write content to.</div>
+ selected by the user. The value of <code>file</code> is the destination file
+ to write content to.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../AbstractSupportEditor.html#exportImpl(int,java.io.File)">exportImpl</a></code>&nbsp;in class&nbsp;<code><a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.apps.arkham">AbstractSupportEditor</a></code></dd>
@@ -1382,8 +1409,7 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
 <pre class="methodSignature">protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;escape&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;line)</pre>
 <div class="block">Called before each line is written to a file to allow the editor to
  convert the text content. The default implementation checks if
- <a href="#isCharacterEscapingEnabled()"><code>isCharacterEscapingEnabled()</code></a> returns <code>true</code>, and if
- so, <a href="../../../io/EscapedTextCodec.html#escapeUnicode(java.lang.CharSequence)">it applies Unicode escapes to the line</a>.</div>
+ <a href="#isCharacterEscapingEnabled()"><code>isCharacterEscapingEnabled()</code></a> returns <code>true</code>, and if so, <a href="../../../io/EscapedTextCodec.html#escapeUnicode(java.lang.CharSequence)">it applies Unicode escapes to the line</a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>line</code> - the line to process</dd>
@@ -1401,8 +1427,7 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
 <pre class="methodSignature">protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;unescape&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;line)</pre>
 <div class="block">Called as each line is read to allow the editor to convert the text
  content. The default implementation checks if
- <a href="#isCharacterEscapingEnabled()"><code>isCharacterEscapingEnabled()</code></a> returns <code>true</code>, and if
- so, <a href="../../../io/EscapedTextCodec.html#unescapeUnicode(java.lang.CharSequence)">it removes Unicode escapes from the line</a>.</div>
+ <a href="#isCharacterEscapingEnabled()"><code>isCharacterEscapingEnabled()</code></a> returns <code>true</code>, and if so, <a href="../../../io/EscapedTextCodec.html#unescapeUnicode(java.lang.CharSequence)">it removes Unicode escapes from the line</a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>line</code> - the line to process</dd>
@@ -1418,12 +1443,11 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
 <li class="blockList">
 <h4>isCharacterEscapingEnabled</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isCharacterEscapingEnabled()</pre>
-<div class="block">Returns <code>true</code> if character escaping is enabled on read and
- write of the document. When enabled, the default behaviour of
- <a href="#escape(java.lang.String)"><code>escape(java.lang.String)</code></a> and
- <a href="#unescape(java.lang.String)"><code>unescape(java.lang.String)</code></a> is to automatically convert
- Java-style Unicode escapeUnicode sequences in the file into their
- character equivalents when displayed in the editor.</div>
+<div class="block">Returns <code>true</code> if character escaping is enabled on read and write
+ of the document. When enabled, the default behaviour of <a href="#escape(java.lang.String)"><code>escape(java.lang.String)</code></a>
+ and <a href="#unescape(java.lang.String)"><code>unescape(java.lang.String)</code></a> is to automatically convert Java-style Unicode
+ escapeUnicode sequences in the file into their character equivalents when
+ displayed in the editor.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if automatic character escaping is enabled</dd>
@@ -1443,8 +1467,8 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
  document.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>characterEscaping</code> - if <code>true</code>, automatic character
- escaping is enabled</dd>
+<dd><code>characterEscaping</code> - if <code>true</code>, automatic character escaping is
+ enabled</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="#isCharacterEscapingEnabled()"><code>isCharacterEscapingEnabled()</code></a>, 
 <a href="#escape(java.lang.String)"><code>escape(java.lang.String)</code></a>, 
@@ -1501,8 +1525,8 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
 <li class="blockList">
 <h4>getNavigator</h4>
 <pre class="methodSignature">public final&nbsp;<a href="Navigator.html" title="interface in ca.cgjennings.apps.arkham.editors">Navigator</a>&nbsp;getNavigator()</pre>
-<div class="block">Returns the current navigator for this editor, or <code>null</code> if
- none is set.</div>
+<div class="block">Returns the current navigator for this editor, or <code>null</code> if none is
+ set.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the current navigator</dd>
@@ -1541,8 +1565,8 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
 <li class="blockList">
 <h4>isNavigatorVisible</h4>
 <pre class="methodSignature">public static&nbsp;boolean&nbsp;isNavigatorVisible()</pre>
-<div class="block">Returns <code>true</code> if code editors will display a source navigator
- when one has been set. This setting applies to all code editors.</div>
+<div class="block">Returns <code>true</code> if code editors will display a source navigator when
+ one has been set. This setting applies to all code editors.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if navigators are visible</dd>
@@ -1749,11 +1773,11 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
 <h4>setAttached</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setAttached&#8203;(boolean&nbsp;attach)</pre>
 <div class="block">Sets whether this editor is attached to the document tab strip. If
- <code>true</code>, the editor is attached; this is the default state for
- new editors. If <code>false</code>, the editor is detached from the tab
- strip. When detached, the editor appears in its own floating window
- separate from the main application window. The editor reattaches when the
- window is closed.</div>
+ <code>true</code>, the editor is attached; this is the default state for new
+ editors. If <code>false</code>, the editor is detached from the tab strip.
+ When detached, the editor appears in its own floating window separate
+ from the main application window. The editor reattaches when the window
+ is closed.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>attach</code> - if <code>true</code>, attaches the window to the tab strip</dd>
@@ -1767,8 +1791,8 @@ extends <a href="../AbstractSupportEditor.html" title="class in ca.cgjennings.ap
 <li class="blockList">
 <h4>isAttached</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isAttached()</pre>
-<div class="block">Returns <code>true</code> if this editor is currently attached to the
- document tab strip.</div>
+<div class="block">Returns <code>true</code> if this editor is currently attached to the document
+ tab strip.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the editor is attached</dd>

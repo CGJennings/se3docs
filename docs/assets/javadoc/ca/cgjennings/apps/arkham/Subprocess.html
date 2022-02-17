@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -136,7 +136,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  the application. The output and error streams of the subprocess are connected
  to the script console.
 
- <p>While <code>Subprocess</code> can be used to run any shell command, it has
+ <p>
+ While <code>Subprocess</code> can be used to run any shell command, it has
  <a href="#launch(java.lang.String...)">special support</a> for starting Java apps, and in
  particular for starting Java apps included with this app, such as the script
  debugger client.</div>
@@ -166,15 +167,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <tr class="altColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.lang.String...)">Subprocess</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>...&nbsp;command)</code></th>
 <td class="colLast">
-<div class="block">Creates a new Subprocess that will execute the
- specified command.</div>
+<div class="block">Creates a new Subprocess that will execute the specified command.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a href="#%3Cinit%3E(java.util.List)">Subprocess</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;command)</code></th>
 <td class="colLast">
-<div class="block">Creates a new Subprocess that will execute the
- specified command.</div>
+<div class="block">Creates a new Subprocess that will execute the specified command.</div>
 </td>
 </tr>
 </table>
@@ -228,16 +227,16 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isExitCodeShown()">isExitCodeShown</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if the exit code will be written to the console
- when the process ends.</div>
+<div class="block">Returns <code>true</code> if the exit code will be written to the console when
+ the process ends.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isRunning()">isRunning</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this subprocess has been started and it is
- still running.</div>
+<div class="block">Returns <code>true</code> if this subprocess has been started and it is still
+ running.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -251,8 +250,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isStreamIORedirected()">isStreamIORedirected</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this subprocess will redirect the standard
- I/O streams to the script console.</div>
+<div class="block">Returns <code>true</code> if this subprocess will redirect the standard I/O
+ streams to the script console.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
@@ -291,8 +290,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setStreamIORedirected(boolean)">setStreamIORedirected</a></span>&#8203;(boolean&nbsp;redirect)</code></th>
 <td class="colLast">
-<div class="block">Sets whether the subprocess will redirect the standard
- I/O streams to the script console.</div>
+<div class="block">Sets whether the subprocess will redirect the standard I/O streams to the
+ script console.</div>
 </td>
 </tr>
 <tr id="i13" class="rowColor">
@@ -354,8 +353,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>Subprocess</h4>
 <pre>public&nbsp;Subprocess&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>...&nbsp;command)</pre>
-<div class="block">Creates a new Subprocess that will execute the
- specified command.</div>
+<div class="block">Creates a new Subprocess that will execute the specified command.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>command</code> - an array of command tokens to execute</dd>
@@ -374,8 +372,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>Subprocess</h4>
 <pre>public&nbsp;Subprocess&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;command)</pre>
-<div class="block">Creates a new Subprocess that will execute the
- specified command.</div>
+<div class="block">Creates a new Subprocess that will execute the specified command.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>command</code> - an list of command tokens to execute</dd>
@@ -406,22 +403,22 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public static&nbsp;<a href="Subprocess.html" title="class in ca.cgjennings.apps.arkham">Subprocess</a>&nbsp;launch&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>...&nbsp;appClassNameAndArguments)</pre>
 <div class="block">Returns a new Subprocess that will launch an app that is part of this
  app's main library or JAR file. For example, <code>launch("debugger")</code>
- would launch the debugger client by starting a new runtime with the
- same classpath as this app and passing it the <code>debugger</code> class.
+ would launch the debugger client by starting a new runtime with the same
+ classpath as this app and passing it the <code>debugger</code> class.
 
- <p>If necessary, additional or replacement JVM arguments may be
- specified <em>before</em> the class name (which is otherwise the
- first argument).</div>
+ <p>
+ If necessary, additional or replacement JVM arguments may be specified
+ <em>before</em> the class name (which is otherwise the first argument).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>appClassNameAndArguments</code> - the name of the app, followed by any
-   additional command line arguments to pass to the app</dd>
+ additional command line arguments to pass to the app</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the new Subprocess controlling the launched app</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if argument list is null or empty</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalStateException</a></code> - if the application window has not been
-   created yet</dd>
+ created yet</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.2</dd>
 </dl>
@@ -436,22 +433,22 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public static&nbsp;<a href="Subprocess.html" title="class in ca.cgjennings.apps.arkham">Subprocess</a>&nbsp;launch&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&gt;&nbsp;appClassNameAndArguments)</pre>
 <div class="block">Returns a new Subprocess that will launch an app that is part of this
  app's main library or JAR file. For example, <code>launch("debugger")</code>
- would launch the debugger client by starting a new runtime with the
- same classpath as this app and passing it the <code>debugger</code> class.
+ would launch the debugger client by starting a new runtime with the same
+ classpath as this app and passing it the <code>debugger</code> class.
 
- <p>If necessary, additional or replacement JVM arguments may be
- specified <em>before</em> the class name (which is otherwise the
- first argument).</div>
+ <p>
+ If necessary, additional or replacement JVM arguments may be specified
+ <em>before</em> the class name (which is otherwise the first argument).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>appClassNameAndArguments</code> - the name of the app, followed by any
-   additional command line arguments to pass to the app</dd>
+ additional command line arguments to pass to the app</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the new Subprocess controlling the launched app</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if argument list is null or empty</dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalStateException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalStateException</a></code> - if the application window has not been
-   created yet</dd>
+ created yet</dd>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.2</dd>
 </dl>
@@ -466,8 +463,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isStarted()</pre>
 <div class="block">Returns <code>true</code> if this subprocess has been started. Once a
  subprocess has started, its configuration cannot be modified. Once the
- subprocess starts, this method will always return <code>true</code> even
- after the subprocess ends.</div>
+ subprocess starts, this method will always return <code>true</code> even after
+ the subprocess ends.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the process has started</dd>
@@ -483,8 +480,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isRunning</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isRunning()</pre>
-<div class="block">Returns <code>true</code> if this subprocess has been started and it is
- still running.</div>
+<div class="block">Returns <code>true</code> if this subprocess has been started and it is still
+ running.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the process has started but not finished</dd>
@@ -500,8 +497,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>setSurvivor</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setSurvivor&#8203;(boolean&nbsp;survivor)</pre>
-<div class="block">Sets whether the subprocess will be a survivor. If <code>true</code>,
- then the process will not be destroyed when the application terminates.</div>
+<div class="block">Sets whether the subprocess will be a survivor. If <code>true</code>, then the
+ process will not be destroyed when the application terminates.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>survivor</code> - <code>true</code> if the subprocess will survive the
@@ -533,8 +530,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>setStreamIORedirected</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;setStreamIORedirected&#8203;(boolean&nbsp;redirect)</pre>
-<div class="block">Sets whether the subprocess will redirect the standard
- I/O streams to the script console. The default is to redirect streams.</div>
+<div class="block">Sets whether the subprocess will redirect the standard I/O streams to the
+ script console. The default is to redirect streams.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>redirect</code> - <code>true</code> if the streams will be redirected</dd>
@@ -552,8 +549,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isStreamIORedirected</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isStreamIORedirected()</pre>
-<div class="block">Returns <code>true</code> if this subprocess will redirect the standard
- I/O streams to the script console.</div>
+<div class="block">Returns <code>true</code> if this subprocess will redirect the standard I/O
+ streams to the script console.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the streams will be redirected</dd>
@@ -584,8 +581,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isExitCodeShown</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isExitCodeShown()</pre>
-<div class="block">Returns <code>true</code> if the exit code will be written to the console
- when the process ends.</div>
+<div class="block">Returns <code>true</code> if the exit code will be written to the console when
+ the process ends.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd><code>true</code> if the exit code is printed</dd>
@@ -604,8 +601,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  when the subprocess terminates.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>label</code> - label text to include on the button; if <code>null</code>
- the command name will be used</dd>
+<dd><code>label</code> - label text to include on the button; if <code>null</code> the
+ command name will be used</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a control that can be used to stop the subprocess</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
@@ -680,7 +677,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Returns the application's class path.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a list of one or more paths separated by the platform path separator</dd>
+<dd>a list of one or more paths separated by the platform path
+ separator</dd>
 </dl>
 </li>
 </ul>
@@ -691,19 +689,21 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>getJavaRuntimeExecutable</h4>
 <pre class="methodSignature">public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a>&nbsp;getJavaRuntimeExecutable()</pre>
-<div class="block">Returns a command that can be used to launch a Java runtime.
- Where possible, this will be the full path to the specific Java runtime
- used to start this app. The path is normally detected correctly
- automatically, but if for some reason detection fails, the user setting
+<div class="block">Returns a command that can be used to launch a Java runtime. Where
+ possible, this will be the full path to the specific Java runtime used to
+ start this app. The path is normally detected correctly automatically,
+ but if for some reason detection fails, the user setting
  <code>invoke-java-cmd</code> can be set to a suitable path.
 
- <p>For example, on a Windows device on which the app itself was launched
+ <p>
+ For example, on a Windows device on which the app itself was launched
  with a version of AdoptOpenJDK 8, this might return:
 
  <pre>C:\Program Files\AdoptOpenJDK\jdk-8.0.292.10-openj9\jre\bin\java.exe</pre></div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>path to an executable that is expected to launch a separate JVM process</dd>
+<dd>path to an executable that is expected to launch a separate JVM
+ process</dd>
 </dl>
 </li>
 </ul>

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -212,9 +212,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#equals(java.lang.Object)">equals</a></span>&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;obj)</code></th>
 <td class="colLast">
-<div class="block">Returns <code>true</code> if this ID and <code>rhs</code> are equal,
- meaning that <code>rhs</code> is also an ID, and its UUID and date match
- exactly.</div>
+<div class="block">Returns <code>true</code> if this ID and <code>rhs</code> are equal, meaning that
+ <code>rhs</code> is also an ID, and its UUID and date match exactly.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -264,9 +263,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#isOlderThan(ca.cgjennings.apps.arkham.plugins.catalog.CatalogID)">isOlderThan</a></span>&#8203;(<a href="CatalogID.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog">CatalogID</a>&nbsp;rhs)</code></th>
 <td class="colLast">
-<div class="block">Compares this ID to another ID and returns <code>true</code> if and only
- if they have the same UUID and the date of <code>rhs</code> is newer than
- the date of this ID.</div>
+<div class="block">Compares this ID to another ID and returns <code>true</code> if and only if
+ they have the same UUID and the date of <code>rhs</code> is newer than the
+ date of this ID.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
@@ -280,8 +279,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>boolean</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#sameUUID(ca.cgjennings.apps.arkham.plugins.catalog.CatalogID)">sameUUID</a></span>&#8203;(<a href="CatalogID.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog">CatalogID</a>&nbsp;rhs)</code></th>
 <td class="colLast">
-<div class="block">Compares the UUID of this ID with another ID returns <code>true</code> if
- and only if they are the same.</div>
+<div class="block">Compares the UUID of this ID with another ID returns <code>true</code> if and
+ only if they are the same.</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
@@ -463,8 +462,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>sameUUID</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;sameUUID&#8203;(<a href="CatalogID.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog">CatalogID</a>&nbsp;rhs)</pre>
-<div class="block">Compares the UUID of this ID with another ID returns <code>true</code> if
- and only if they are the same.</div>
+<div class="block">Compares the UUID of this ID with another ID returns <code>true</code> if and
+ only if they are the same.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>rhs</code> - the ID to compare UUIDs with</dd>
@@ -480,17 +479,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>equals</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;equals&#8203;(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a>&nbsp;obj)</pre>
-<div class="block">Returns <code>true</code> if this ID and <code>rhs</code> are equal,
- meaning that <code>rhs</code> is also an ID, and its UUID and date match
- exactly.</div>
+<div class="block">Returns <code>true</code> if this ID and <code>rhs</code> are equal, meaning that
+ <code>rhs</code> is also an ID, and its UUID and date match exactly.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang" class="externalLink">equals</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang" class="externalLink">Object</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>obj</code> - the object to test for equality</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> is and only if the this is equal to
- <code>rhs</code></dd>
+<dd><code>true</code> is and only if the this is equal to <code>rhs</code></dd>
 </dl>
 </li>
 </ul>
@@ -514,15 +511,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>isOlderThan</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isOlderThan&#8203;(<a href="CatalogID.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog">CatalogID</a>&nbsp;rhs)</pre>
-<div class="block">Compares this ID to another ID and returns <code>true</code> if and only
- if they have the same UUID and the date of <code>rhs</code> is newer than
- the date of this ID.</div>
+<div class="block">Compares this ID to another ID and returns <code>true</code> if and only if
+ they have the same UUID and the date of <code>rhs</code> is newer than the
+ date of this ID.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>rhs</code> - the ID to compare this ID to</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if both IDs have the same UUID and this ID is
- older than the <code>rhs</code> ID</dd>
+<dd><code>true</code> if both IDs have the same UUID and this ID is older
+ than the <code>rhs</code> ID</dd>
 </dl>
 </li>
 </ul>
@@ -534,8 +531,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>compareDates</h4>
 <pre class="methodSignature">public&nbsp;int&nbsp;compareDates&#8203;(<a href="CatalogID.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog">CatalogID</a>&nbsp;rhs)</pre>
 <div class="block">Compares the date of this ID with another ID, without considering whether
- the UUIDs match. Returns a negative value if <code>rhs</code> is newer,
- zero if they are the same, or a positive value if this ID is newer.</div>
+ the UUIDs match. Returns a negative value if <code>rhs</code> is newer, zero
+ if they are the same, or a positive value if this ID is newer.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>rhs</code> - the ID to compare this ID to</dd>
@@ -635,20 +632,20 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  more arguments with the following form:
  <pre>[--touch]  [--xfile] [--tfile] [n...] [existing ID...]</pre> Where:
  <dl>
- <dt><code>--touch</code></dt><dd>generate and print the date part of an
- ID with current timestamp</dd>
- <dt><code>--xfile</code></dt><dd>will extract and print the ID from
- plug-in bundle 'file'</dd>
+ <dt><code>--touch</code></dt><dd>generate and print the date part of an ID
+ with current timestamp</dd>
+ <dt><code>--xfile</code></dt><dd>will extract and print the ID from plug-in
+ bundle 'file'</dd>
  <dt><code>--tfile</code></dt><dd>will generate or touch the ID in plug-in
  bundle 'file'</dd>
- <dt><code>n</code></dt><dd>a series of one or more integers will generate
- a group of that many IDs</dd>
- <dt><code>existing ID</code></dt><dd>using an existing ID will touch the
- ID (make the date current)</dd>
+ <dt><code>n</code></dt><dd>a series of one or more integers will generate a
+ group of that many IDs</dd>
+ <dt><code>existing ID</code></dt><dd>using an existing ID will touch the ID
+ (make the date current)</dd>
  </dl>
  Generated IDs and timestamps are printed to the output stream, unless
- using the <code>--t</code> option (in which case the root file of the
- bundle itself is modified).</div>
+ using the <code>--t</code> option (in which case the root file of the bundle
+ itself is modified).</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>args</code> - the command line arguments for the tool</dd>

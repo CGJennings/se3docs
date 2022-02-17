@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -161,14 +161,14 @@ extends <a href="TemplateProcessor.html" title="class in ca.cgjennings.text">Tem
  Throws an exception if the variable is undefined.
  <p>
  <b>{?<i>condition</i>} ... {/?<i>condition</i>}</b><br>
- If the condition is set to <code>true</code>, then the text between the start
- and end symbols will be included in the document. Otherwise, it will be left
- out. Throws an exception if the condition has not been set.
+ If the condition is set to <code>true</code>, then the text between the start and
+ end symbols will be included in the document. Otherwise, it will be left out.
+ Throws an exception if the condition has not been set.
  <p>
  <b>{!<i>condition</i>} ... {/!<i>condition</i>}</b><br>
- If the condition is set to <code>false</code>, then the text between the
- start and end symbols will be included in the document. Otherwise, it will be
- left out. Throws an exception if the condition has not been set.</div>
+ If the condition is set to <code>false</code>, then the text between the start and
+ end symbols will be included in the document. Otherwise, it will be left out.
+ Throws an exception if the condition has not been set.</div>
 <dl>
 <dt><span class="simpleTagLabel">Since:</span></dt>
 <dd>3.0</dd>

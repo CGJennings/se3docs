@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -394,8 +394,8 @@ extends <a href="AbstractTintingFilter.html" title="class in ca.cgjennings.graph
 <h4>isIdentity</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isIdentity()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="TintingFilter.html#isIdentity()">TintingFilter</a></code></span></div>
-<div class="block">Returns <code>true</code> if applying this filter would have no effect.
- This can be used as an optimization hint.</div>
+<div class="block">Returns <code>true</code> if applying this filter would have no effect. This
+ can be used as an optimization hint.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="TintingFilter.html#isIdentity()">isIdentity</a></code>&nbsp;in interface&nbsp;<code><a href="TintingFilter.html" title="interface in ca.cgjennings.graphics.filters">TintingFilter</a></code></dd>

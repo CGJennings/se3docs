@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -156,14 +156,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
  the string.
  <li> The locale description consists of the text after the first
  underscore and up to the first period (.), if any. If there is no
- underscore, then the locale description is <code>null</code>. if there is
- no period, then the description continues to the end of the string. If
- there is no underscore in the file name, then the locale description is
+ underscore, then the locale description is <code>null</code>. if there is no
+ period, then the description continues to the end of the string. If there
+ is no underscore in the file name, then the locale description is
  <code>null</code>. Moreover, the locale is checked to determine if it is
  valid, as described below. If the locale is not valid, then the locale
- description will be <code>null</code> and the part that would have been
- the locale description, including the initial underscore, will be
- included in the base name as if there were no underscore in the name.
+ description will be <code>null</code> and the part that would have been the
+ locale description, including the initial underscore, will be included in
+ the base name as if there were no underscore in the name.
  </ol></div>
 </li>
 </ul>
@@ -335,12 +335,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>localeDescription</h4>
 <pre>public final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang" class="externalLink">String</a> localeDescription</pre>
 <div class="block">The locale description that was parsed out of the file name, or
- <code>null</code> if there was no locale description. A
- <code>null</code> locale description indicates that the file is
- either not part of a family of localized files, or that it represents
- the default translation. If it is the default translation and other
- translations are available, other files in the same folder should
- have the same base name and extension.</div>
+ <code>null</code> if there was no locale description. A <code>null</code>
+ locale description indicates that the file is either not part of a
+ family of localized files, or that it represents the default
+ translation. If it is the default translation and other translations
+ are available, other files in the same folder should have the same
+ base name and extension.</div>
 </li>
 </ul>
 <a id="extension">
@@ -469,14 +469,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre class="methodSignature">public&nbsp;<a href="Language.LocalizedFileName.html" title="class in resources">Language.LocalizedFileName</a>&nbsp;getParent()</pre>
 <div class="block">Returns the localized file name for the parent locale, or
  <code>null</code> if this file represents a default translation. For
- example, the parent of <code>file_en_CA.ext</code> is
- <code>file_en.ext</code>; The parent of <code>file_en.ext</code> is
- <code>file.ext</code>, and the parent of that file is
- <code>null</code>.</div>
+ example, the parent of <code>file_en_CA.ext</code> is <code>file_en.ext</code>;
+ The parent of <code>file_en.ext</code> is <code>file.ext</code>, and the parent
+ of that file is <code>null</code>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>the next fallback translation for the file, or
- <code>null</code></dd>
+<dd>the next fallback translation for the file, or <code>null</code></dd>
 </dl>
 </li>
 </ul>

@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -205,16 +205,16 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
 <td class="colFirst"><code><a href="PluginBundle.html" title="class in ca.cgjennings.apps.arkham.plugins">PluginBundle</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getBundle()">getBundle</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the bundle that this was loaded from, or <code>null</code> if
- this represents a built-in plug-in.</div>
+<div class="block">Returns the bundle that this was loaded from, or <code>null</code> if this
+ represents a built-in plug-in.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="catalog/CatalogID.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog">CatalogID</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getCatalogID()">getCatalogID</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the <a href="catalog/CatalogID.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog"><code>CatalogID</code></a> for the source bundle, or <code>null</code>
- if the bundle's root file does not specify an id (or there is no bundle).</div>
+<div class="block">Returns the <a href="catalog/CatalogID.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog"><code>CatalogID</code></a> for the source bundle, or <code>null</code> if
+ the bundle's root file does not specify an id (or there is no bundle).</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -242,8 +242,8 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
 <td class="colFirst"><code><a href="PluginRoot.html" title="class in ca.cgjennings.apps.arkham.plugins">PluginRoot</a></code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getPluginRoot()">getPluginRoot</a></span>()</code></th>
 <td class="colLast">
-<div class="block">Returns the bundle's root file, or <code>null</code> if it does not have
- a root file.</div>
+<div class="block">Returns the bundle's root file, or <code>null</code> if it does not have a
+ root file.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -350,8 +350,8 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
 <li class="blockList">
 <h4>getBundle</h4>
 <pre class="methodSignature">public&nbsp;<a href="PluginBundle.html" title="class in ca.cgjennings.apps.arkham.plugins">PluginBundle</a>&nbsp;getBundle()</pre>
-<div class="block">Returns the bundle that this was loaded from, or <code>null</code> if
- this represents a built-in plug-in.</div>
+<div class="block">Returns the bundle that this was loaded from, or <code>null</code> if this
+ represents a built-in plug-in.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the source bundle, or <code>null</code></dd>
@@ -365,8 +365,8 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
 <li class="blockList">
 <h4>getPluginRoot</h4>
 <pre class="methodSignature">public&nbsp;<a href="PluginRoot.html" title="class in ca.cgjennings.apps.arkham.plugins">PluginRoot</a>&nbsp;getPluginRoot()</pre>
-<div class="block">Returns the bundle's root file, or <code>null</code> if it does not have
- a root file.</div>
+<div class="block">Returns the bundle's root file, or <code>null</code> if it does not have a
+ root file.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the root file of the source bundle, or <code>null</code></dd>
@@ -380,8 +380,8 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
 <li class="blockList">
 <h4>getCatalogID</h4>
 <pre class="methodSignature">public&nbsp;<a href="catalog/CatalogID.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog">CatalogID</a>&nbsp;getCatalogID()</pre>
-<div class="block">Returns the <a href="catalog/CatalogID.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog"><code>CatalogID</code></a> for the source bundle, or <code>null</code>
- if the bundle's root file does not specify an id (or there is no bundle).</div>
+<div class="block">Returns the <a href="catalog/CatalogID.html" title="class in ca.cgjennings.apps.arkham.plugins.catalog"><code>CatalogID</code></a> for the source bundle, or <code>null</code> if
+ the bundle's root file does not specify an id (or there is no bundle).</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the bundle's ID, or <code>null</code></dd>
@@ -478,8 +478,8 @@ implements <a href="../../../ui/IconProvider.html" title="interface in ca.cgjenn
 <li class="blockList">
 <h4>isUpdatePending</h4>
 <pre class="methodSignature">public&nbsp;boolean&nbsp;isUpdatePending()</pre>
-<div class="block">Returns <code>true</code> if there is an update pending for this plug-in.
- A pending update is an updated version of the plug-in that will be
+<div class="block">Returns <code>true</code> if there is an update pending for this plug-in. A
+ pending update is an updated version of the plug-in that will be
  installed automatically the next time the application starts.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>

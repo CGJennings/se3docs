@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -429,8 +429,7 @@ extends <a href="AbstractImageFilter.html" title="class in ca.cgjennings.graphic
 <dd><code>width</code> - the pen width, in pixels</dd>
 <dd><code>position</code> - the side of the edge to stroke</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the colour or position is
- <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the colour or position is <code>null</code></dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if the width is less than 1</dd>
 </dl>
 </li>
@@ -452,8 +451,7 @@ extends <a href="AbstractImageFilter.html" title="class in ca.cgjennings.graphic
 <dd><code>width</code> - the pen width, in pixels</dd>
 <dd><code>position</code> - the side of the edge to stroke</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the colour or position is
- <code>null</code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/NullPointerException.html?is-external=true" title="class or interface in java.lang" class="externalLink">NullPointerException</a></code> - if the colour or position is <code>null</code></dd>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang" class="externalLink">IllegalArgumentException</a></code> - if the width is less than 1</dd>
 </dl>
 </li>
@@ -593,8 +591,8 @@ extends <a href="AbstractImageFilter.html" title="class in ca.cgjennings.graphic
 <div class="block">Sets whether the pen shape is rounded.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>roundedPen</code> - <code>true</code> if the pen is rounded;
- <code>false</code> if the pen is squared</dd>
+<dd><code>roundedPen</code> - <code>true</code> if the pen is rounded; <code>false</code> if
+ the pen is squared</dd>
 </dl>
 </li>
 </ul>
@@ -608,8 +606,8 @@ extends <a href="AbstractImageFilter.html" title="class in ca.cgjennings.graphic
 <div class="block">Returns whether the pen shape is rounded.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>true</code> if the pen is rounded; <code>false</code> if
- the pen is squared</dd>
+<dd><code>true</code> if the pen is rounded; <code>false</code> if the pen is
+ squared</dd>
 </dl>
 </li>
 </ul>

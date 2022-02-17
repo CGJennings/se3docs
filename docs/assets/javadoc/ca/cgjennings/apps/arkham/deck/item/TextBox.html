@@ -33,7 +33,7 @@ var rowColor = "rowColor";
 var tableTab = "tableTab";
 var activeTableTab = "activeTableTab";
 var pathtoroot = "../../../../../../";
-var useModuleDirectories = true;
+var useModuleDirectories = false;
 loadScripts(document, 'script');</script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -276,7 +276,7 @@ implements <a href="SizablePageItem.html" title="interface in ca.cgjennings.apps
 <td class="colLast">&nbsp;</td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code>protected void</code></td>
+<td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#clearCachedImages()">clearCachedImages</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Clear any cached image data held by this object.</div>
@@ -705,8 +705,8 @@ implements <a href="SizablePageItem.html" title="interface in ca.cgjennings.apps
  item has no handles, returns <code>null</code>.
  <p>
  Concrete subclasses should create an array of handles on demand and cache
- them in the <code>dragHandles</code> field in order to ensure that
- handles are not shared between copies of the item. Example:
+ them in the <code>dragHandles</code> field in order to ensure that handles are
+ not shared between copies of the item. Example:
  <pre>
  public DragHandle[] getDragHandles() {
      if( dragHandles == null ) {
@@ -812,13 +812,12 @@ implements <a href="SizablePageItem.html" title="interface in ca.cgjennings.apps
 <ul class="blockList">
 <li class="blockList">
 <h4>clearCachedImages</h4>
-<pre class="methodSignature">protected&nbsp;void&nbsp;clearCachedImages()</pre>
+<pre class="methodSignature">public&nbsp;void&nbsp;clearCachedImages()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="AbstractRenderedItem.html#clearCachedImages()">AbstractRenderedItem</a></code></span></div>
 <div class="block">Clear any cached image data held by this object. The base class clears
  any cached oriented results and the MIP map cache (if enabled).
- Subclasses should override this (calling
- <code>super.clearCachedImages</code>) if the <a href="AbstractRenderedItem.html#renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget,double)"><code>AbstractRenderedItem.renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a>
- implementation caches results.</div>
+ Subclasses should override this (calling <code>super.clearCachedImages</code>)
+ if the <a href="AbstractRenderedItem.html#renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget,double)"><code>AbstractRenderedItem.renderImage(ca.cgjennings.apps.arkham.sheet.RenderTarget, double)</code></a> implementation caches results.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="AbstractRenderedItem.html#clearCachedImages()">clearCachedImages</a></code>&nbsp;in class&nbsp;<code><a href="AbstractRenderedItem.html" title="class in ca.cgjennings.apps.arkham.deck.item">AbstractRenderedItem</a></code></dd>
@@ -1141,8 +1140,8 @@ implements <a href="SizablePageItem.html" title="interface in ca.cgjennings.apps
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>menu</code> - the menu that will be displayed</dd>
 <dd><code>selection</code> - the selected items; this should be considered read-only</dd>
-<dd><code>isSelectionFocus</code> - if <code>true</code>, this is the last item in
- the selection</dd>
+<dd><code>isSelectionFocus</code> - if <code>true</code>, this is the last item in the
+ selection</dd>
 </dl>
 </li>
 </ul>
