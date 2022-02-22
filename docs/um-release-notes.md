@@ -19,7 +19,19 @@ The primary difference in this version is that it makes the jump from requiring 
   - updated syntax colour themes
   - a more modern default font for markup and code editing (Windows and Mac)
 
+#### Theme improvements
+
+- Themes can now optionally include a small screenshot to give the user an idea of what the theme will look like without loading it.
+- The built-in themes have new icons to help signal which themes are related, and related themes form groups that will be listed together in the preferences menu.
+- The built-in themes have been updated, in some cases substantially.
+- The work-in-progress Yuggoth theme has been removed, but some of its elements were merged into the revised Dagon theme.
+- The Dagon theme is now a proper “dark mode” variation of Hydra.
+
 ### For plug-in developers
+
+#### Themed colour palettes
+
+The class `ca.cgjennings.ui.theme.Palette` provides access to a shared palette with a selection of standard named colours. These colours are chosen to work together and can be customized by the theme. This allows you to use colour in UI elements safely, without getting clashing or hard-to-read results when the user’s theme is different from your own.
 
 #### High DPI support
 
@@ -64,6 +76,10 @@ All icons returned from `getIcon` also implement the `ThemedIcon` interface. Amo
 ##### Cursors
 
 Custom cursors (mouse pointers) can be created with `ResourceKit.createCustomCursor`, which will leverage multiresolution bitmap images if available.
+
+##### Miscellaneous
+
+The desktop scaling factor can be obtained with `ResourceKit.estimateDesktopScalingFactor()`. For example, if a scaling factor of 200% is applied, this returns `2.0`.
 
 #### Other changes
 

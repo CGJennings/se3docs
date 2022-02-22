@@ -2,7 +2,13 @@
 
 ## Catalogue download issues
 
-Most problems related to downloading the [plug-in catalogue](um-plugins-catalogue.md) or plug-ins the catalogue are due to temporary network issues. If you have persistent problems while downloading a particular plug-in, [report it here](https://cgjennings.ca/contact.html). Problems with the plug-in itself are best reported to the plug-in author directly.
+Most problems related to downloading the [plug-in catalogue](um-plugins-catalogue.md) or plug-ins the catalogue are due to **temporary network issues**. Try again a little later. If you have persistent problems accessing the catalog or downloading a particular plug-in, [you can report it here](https://cgjennings.ca/contact.html).
+
+> If you have a problem with a specific plug-in *after* installing it, or would like to request a new feature, you can try contacting the plug-in author directly. Open the plug-in manager and choose the plug-in in question to see if they have provided contact information.
+
+### Checking for SSL issues
+
+By default, Strange Eons tries to use an encrypted connection to download the catalog. You can try using an unencrypted connection to see if the encryption process is part of the problem. Just edit the address at the top of the catalog dialog to start with `http://` instead of `https://`.
 
 ### Proxy settings
 
@@ -29,9 +35,13 @@ Text appears smoother when drawn with a technique called [*anti-aliasing*](https
 
 ## Other graphics issues
 
-Some Windows devices have weird graphics glitches when running Strange Eons, such as bits of the interface not being drawn or being drawn in the wrong place. If this happens to you, try these steps:
+> Driver issues were particularly common on Windows. As of version 3.3, hardware acceleration is disabled by default on Windows devices. You can try selectively enabling it to see if you encounter drawing glitches on your device. If not, leave it enabled to enjoy improved performance.
+>
+> Version 3.3 adds new command line options to make it easier to modify acceleration settings. These options must be used instead of the instructions below.
 
-1. Update your graphics driver to the latest version. Once installed and the the computer reboots, try starting Strange Eons again.
+Some devices have weird graphics glitches when running Strange Eons, such as bits of the interface not being drawn or being drawn in the wrong place. If this happens to you, try these steps:
+
+1. Update your graphics driver to the latest version. Once installed (and the the computer restarts, if necessary), try starting Strange Eons again.
 2. If your computer has two graphics chipsets (one power saving and one high performance), try using Strange Eons with each in turn. Usually the high performance graphics option works best.
 3. Right click on the shortcut icon that you use to start Strange Eons and choose **Properties**. Look for the field labelled **Target**. In this field you will find something like `"C:\Program Files\Strange Eons\bin\strangeeons.exe"`. Edit this by adding a space, then the following (all *after* the `.exe"`):
    `-J-Dsun.java2d.d3d=false`
