@@ -12,78 +12,47 @@
 
 The primary difference in this version is that it makes the jump from requiring Java 8 to Java 11. However, most users should not notice this difference since the installer packages for Strange Eons include their own private Java environment.
 
-- High DPI monitor support. This means proper support for “retina” displays or setups that use desktop scaling. Note that the *underlying* support at both the Java and operating system level is not always perfect. For example, you may encounter weird issues when moving windows between two displays with different scaling factors.
+- High DPI display support. This means proper support for “Retina” displays or setups that use desktop scaling. Note that the *underlying* support at both the Java and operating system level is not always perfect. For example, you may encounter weird issues when moving windows between two displays with different scaling factors.
+- As part of implementing high DPI support, nearly every graphic used by Strange Eons was updated or replaced. If you notice an image that appears to be missing or incorrect, please report it as a bug using the **Help/Report a Bug** menu item.
+- Markdown document support. Projects support markdown (`.md`) files, which are a common, easy-to-use way to create styled documents from plain text. Double-click a markdown file to view it, or right click and choose **Open** to edit.
 - Improvements to the text/source code editing experience, including:
   - search and replace highlights all matches
   - highlight occurrences of identifier under caret
   - updated syntax colour themes
   - a more modern default font for markup and code editing (Windows and Mac)
+  - code completion for certain languages, including TypeScript and HTML
 
 #### Theme improvements
 
 - Themes can now optionally include a small screenshot to give the user an idea of what the theme will look like without loading it.
 - The built-in themes have new icons to help signal which themes are related, and related themes form groups that will be listed together in the preferences menu.
 - The built-in themes have been updated, in some cases substantially.
-- The work-in-progress Yuggoth theme has been removed, but some of its elements were merged into the revised Dagon theme.
-- The Dagon theme is now a proper “dark mode” variation of Hydra.
+- The Dagon theme is now a proper “dark mode” variation of Hydra. The work-in-progress Yuggoth theme has been removed, but some of its elements were merged into the revised Dagon theme.
+
+### Bug fixes
+
+- attempting to resize a navigation panel could trigger an infinite loop if other open editors had a navigation panel that was disabled
+- the default verbal design support view could have a bad background colour in some themes
+- fixed project view row height varying with theme, which could clip icons
+- printing a text file in a dark theme could print text in a bad colour
 
 ### For plug-in developers
+
+#### Miscellaneous changes
+
+- Plug-in installation notes can be written in Markdown instead of HTML.
+- Themes can now instantiate their own L&F instead of returning a class name.
+- The `DarkMagicFilter` can be useful for displaying an image designed for a light background on a dark background, or vice-versa.
+
+#### High DPI support
+
+Several new classes have been added to facilitate high DPI display support, and methods such as `ResourceKit.getIcon(resUrl)` have been updated to return DPI-aware results. Many are also potentially useful for drawing game components. [See this page for more information.](dm-high-dpi.md)
 
 #### Themed colour palettes
 
 The class `ca.cgjennings.ui.theme.Palette` provides access to a shared palette with a selection of standard named colours. These colours are chosen to work together and can be customized by the theme. This allows you to use colour in UI elements safely, without getting clashing or hard-to-read results when the user’s theme is different from your own.
 
-#### High DPI support
 
-A high DPI display is a display which uses a scaling factor when rendering the desktop. The typical cases are a Mac with a “retina” display, or a Windows device with desktop scaling set to more than 100%. For example, a 4K UHD monitor has a resolution of 3840 × 2160 pixels. Using such a monitor without scaling would be difficult because typical text and icons would be tiny. If a two-times desktop scaling factor is applied, then the icons and text will be the same *physical* size as they would be at standard HD resolution (1920 × 1080 pixels), but with greater clarity and detail since the same content is drawn with four times as may pixels.
-
-While fonts and vector images can be scaled up easily without losing quality, this is not true of bitmap images such as PNGs or JPEGs. However, Strange Eons provides a number of tools to help you address this.
-
-> While *desktop* scaling is only relevant when drawing user interface elements and not game component faces (`Sheet`s), you can also use multi-resolution images when drawing sheets to get higher quality results when the sheet is rendered at a resolution greater than that of the template image.
-
-##### Plug-in icons
-
-By default, Strange Eons creates icons for your plug-in by looking for a PNG or JP2 image in the same folder and with the same file name as the plug-in script or class. For example, if you place `MyPlugin.png` together with `MyPlugin.js` in the same folder, the image is used automatically. This continues to work, and you can also add other resolutions using `@Nx` tags as described below.
-
-> If you overrode the default mechanism, be aware that the “representative image” methods have been deprecated.
-
-##### Game and expansion icons
-
-The `Game.register` method has signatures that accept a resource URL string or icon that can be used instead of providing a `BufferedImage` directly. Methods that accept a `BufferedImage` have been deprecated.
-
-##### Other icons
-
-Icons obtained via `ResourceKit.getIcon(resUrl)` have high DPI support built in. If your icon resource is a bitmap image, it can use `@Nx` tags as described below. (You can also create such icons yourself directly with the `ThemedImageIcon` class.)
-
-If you have a custom font containing symbols, you can create icons from those symbols using `ThemedGlyphIcon`. For example: `new ca.cgjennings.ui.theme.ThemedGlyphIcon(symbolFont, codePointOfSymbol, foregroundColor, backgroundColor)`.
-
-If you want an icon to represent a `Color` or `Paint`, use `PaintSampleIcon`.
-
-You can build up complex icons via layering with `ThemedCompoundIcon`.
-
-All of these “themed” icon classes implement a common `ThemedIcon` interface that includes the ability to derive alternate versions of the icon at arbitrary sizes.
-
-##### Multi-resolution image support
-
-In order to support high-DPI displays properly, user interface images must either be resolution independent (vector images) or supply one or more variants at different resolutions. Strange Eons supports multi-resolution bitmap images with a new class, `MultiResolutionImageResource`. This class uses a strategy similar to that of macOS: in addition to a standard resolution image, you can add variants by adding a tag like `@2x` to the file name. For example, if you have an image like `myplugin/images/dinosaur.png`, then if you also include an image named `myplugin/images/dinosaur@2x.png`, it will be used automatically when a higher-resolution version is required. (This image should be exactly twice the original image’s width and height.) Multiple versions can be provided for different scenarios. The following standard tags are recognized: `@1.25x`, `@1.5x`, `@1.75x`, `@2x`, `@2.25x`, `@2.5x`, `@3x`, `@3.5x`, `@4x`, `@8x`, `@16x`. Not all of these sizes need to be provided.
-
-##### Multi-resolution icons
-
-Icons obtained via `ResourceKit.getIcon(resUrl)` will already include high DPI support. Resources that point to bitmap images will support the same multi-resolution tag system described above.
-
-All icons returned from `getIcon` also implement the `ThemedIcon` interface. Among other features, this lets you derive different icon sizes from a single multi-resolution source.
-
-##### Cursors
-
-Custom cursors (mouse pointers) can be created with `ResourceKit.createCustomCursor`, which will leverage multiresolution bitmap images if available.
-
-##### Miscellaneous
-
-The desktop scaling factor can be obtained with `ResourceKit.estimateDesktopScalingFactor()`. For example, if a scaling factor of 200% is applied, this returns `2.0`.
-
-#### Other changes
-
-- Themes can now instantiate their own L&F instead of returning a class name.
 
 ## 3.3 (upcoming version)
 

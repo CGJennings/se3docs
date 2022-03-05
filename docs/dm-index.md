@@ -57,5 +57,6 @@
    13. [Use and define application commands](dm-app-commands.md)
    14. [Register an export container](dm-export-container.md)
    15. [Make the spelling checker ignore game terminology](dm-spelling-exclusions.md)
-7. **Appendix**
-   8. 	[TypeScript support](dm-typescript.md)
+7. **Appendices**
+   1. 	[TypeScript support](dm-typescript.md)
+   2. 	[High DPI displays and desktop scaling](dm-high-dpi.md)
