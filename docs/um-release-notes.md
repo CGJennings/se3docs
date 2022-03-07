@@ -53,9 +53,11 @@ Several new classes have been added to facilitate high DPI display support, and 
 
 The class `ca.cgjennings.ui.theme.Palette` provides a shared palette with a selection of standard named colours. These colours are chosen to work together and can be customized by the theme. This allows you to use colour in UI elements safely, without getting clashing or hard-to-read results when the user’s theme is different from your own. Example use: `Palette.get.dark.opaque.pink`.
 
-## 3.3 (upcoming version)
+## 3.3 (build 4241)
 
+<!--
 **This version is currently available as a release candidate from GitHub. Alternatively, developers can preview this version by [checking out the `main` branch](https://github.com/CGJennings/strange-eons/tree/main).**
+-->
 
 Thanks to Henrik Rostedt for contributions to this update! [Contribute your own features and bug fixes on GitHub.](https://github.com/CGJennings/strange-eons)
 
@@ -92,7 +94,7 @@ Previously, the default was to use OpenGL-based acceleration. Starting in this v
 - Sheets with rounded corners can set a corner radius, either through `setCornerRadius(radiusInPoints)` or by adding a `-corner-radius` template key. Strange Eons can then trim off these corners when requested by the user.
 - `ResourceParser` constructor can take a user-specified character set encoding.
 - The `arkham.TextEncoding` class provides a single place to get the correct text encoding for standard file formats.
-- Game components have a new method, `getClassName()`, to get their class map class name (e.g., `diy:adj/squirrel/tree.diy`).
+- Game components have a new method, `getClassName()`, to get their class map class name (e.g., `diy:adj/squirrel/tree.js`).
 - `StrangeEons.addStartupTask(Runnable)` added to complement `addExitTask`.
 
 #### Script engine update
