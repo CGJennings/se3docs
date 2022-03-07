@@ -1,6 +1,6 @@
 # Release notes
 
-## 3.4 (future version)
+## 3.4 (upcoming version)
 
 > ⚠️ The following changes are *planned* for inclusion in a **future update**. This list is *informational only*: nothing here is final until the update is actually published. Some items may be deferred or abandoned, and other items may be added at any time. In particular, changes to the APIs and script engine have the potential to introduce compatibility issues with plug-ins which might lead to those features being delayed, changed, or withdrawn.
 >
