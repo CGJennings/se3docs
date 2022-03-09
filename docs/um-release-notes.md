@@ -6,7 +6,11 @@
 >
 > **Special note:** Because version 3.4 involves *major architectural changes*, it is more likely than usual that the information below will change substantially before release.
 
-***Developers can preview this version by [checking out the `java-9+` branch](https://github.com/CGJennings/strange-eons/tree/java-9+).***
+***Developers can preview this version by [checking out the `main` branch](https://github.com/CGJennings/strange-eons/tree/main).***
+
+<!--
+**This version is currently available as a release candidate from GitHub. Alternatively, developers can preview this version by [checking out the `main` branch](https://github.com/CGJennings/strange-eons/tree/main).**
+-->
 
 ### Features, enhancements, and changes
 
@@ -40,6 +44,7 @@ The primary difference in this version is that it makes the jump from requiring 
 
 #### Miscellaneous changes
 
+- Logging messages from scripts (as in `Eons.log.warning(“uh-oh”)`) now include which script and line the message was logged from.
 - Plug-in installation notes can be written in Markdown instead of HTML.
 - Themes can now instantiate their own L&F instead of returning a class name.
 - The `DarkMagicFilter` can be useful for displaying an image designed for a light background on a dark background, or vice-versa.
@@ -54,10 +59,6 @@ Several new classes have been added to facilitate high DPI display support, and 
 The class `ca.cgjennings.ui.theme.Palette` provides a shared palette with a selection of standard named colours. These colours are chosen to work together and can be customized by the theme. This allows you to use colour in UI elements safely, without getting clashing or hard-to-read results when the user’s theme is different from your own. Example use: `Palette.get.dark.opaque.pink`.
 
 ## 3.3 (build 4241)
-
-<!--
-**This version is currently available as a release candidate from GitHub. Alternatively, developers can preview this version by [checking out the `main` branch](https://github.com/CGJennings/strange-eons/tree/main).**
--->
 
 Thanks to Henrik Rostedt for contributions to this update! [Contribute your own features and bug fixes on GitHub.](https://github.com/CGJennings/strange-eons)
 
