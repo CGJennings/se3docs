@@ -40,7 +40,7 @@ When the user requests a bleed margin that is larger than the designed bleed mar
 Some components, including most card decks, are meant to have *rounded corners*, like those shown in the bleed margin example image above. Strange Eons will show faces with proper round corners when **View/Edge Finish/Rounded Corners** is selected. Round corners are added to a face by setting a corner radius, measured in points. You can set this value in one of the following ways:
 
 1. Add a `-corner-radius` setting key with the same base key name as the face’s template image. Set the value of the key to the desired radius.
-2. If creating a DIY (scripted) component, call the DIY object’s ``setCornerRadius(radiusInPoints)` method. This will set the initial corner radius for all sheets, overriding the setting key.
+2. If creating a DIY (scripted) component, call the DIY object’s `setCornerRadius(radiusInPoints)` method. This will set the initial corner radius for all sheets, overriding the setting key.
 3. Call the `setCornerRadius(radiusInPoints)` method of the relevant sheet(s) once they are created. This can be used to set the radius on any sheet, but it is temporary and will not be saved with the component.
 
 > The *Developer tools plug-in* includes a tool, **Cut Corners**, that lets you experiment interactively with the corner radius feature.
