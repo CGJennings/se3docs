@@ -25,6 +25,7 @@ The primary difference in this version is that it makes the jump from requiring 
   - updated syntax colour themes
   - a more modern default font for markup and code editing (Windows and Mac)
   - code completion for certain languages, including TypeScript and HTML
+- Reading text styles from setting values is now much faster, significantly reducing the time it takes to open certain component types.
 
 #### Theme improvements
 
@@ -39,11 +40,14 @@ The primary difference in this version is that it makes the jump from requiring 
 - the default verbal design support view could have a bad background colour in some themes
 - fixed project view row height varying with theme, which could clip icons
 - printing a text file in a dark theme could print text in a bad colour
+- fixed a resource leak when using Make Deck in a project
+- fixed an issue that caused https access to the [online help pages](https://se3docs.cgjennings.ca/index.html) to stop working.
 
 ### For plug-in developers
 
 #### Miscellaneous changes
 
+- The script debugger provides much more useful descriptions of watch expression values.
 - Logging messages from scripts (as in `Eons.log.warning(“uh-oh”)`) now include which script and line the message was logged from.
 - Plug-in installation notes can be written in Markdown instead of HTML.
 - Themes can now instantiate their own L&F instead of returning a class name.
@@ -67,7 +71,7 @@ Thanks to Henrik Rostedt for contributions to this update! [Contribute your own 
 **Note:** If you have unusual graphics issues, you can disable all acceleration with the command line flag `-xDisableAcceleration`.
 
 **Windows: hardware acceleration is now disabled by default**  
-Many graphics card drivers do not fully support the Direct3D-based acceleration that was previously used by default. The typical result is that parts of windows were repainted in the wrong places, making the application all but unusable. To avoid this confusing experience for new users, acceleration is now disabled by default. This may noticeably slow down the app on your device, particularly if you do not have a powerful CPU. You can opt into acceleration by adding the `-xEnableWindowsAcceleration` command line switch.
+Many graphics card drivers do not fully support the Direct3D-based acceleration that was previously used by default. The typical result is that parts of windows were repainted in the wrong places, making the application all but unusable. To avoid this confusing experience for new users, acceleration is now disabled by default. This may noticeably slow down the app on your device, particularly if you do not have a powerful CPU. You can opt in to acceleration by adding the `-xEnableWindowsAcceleration` command line switch.
 
 **Linux: XRender acceleration is now enabled by default, when supported**  
 Previously, the default was to use OpenGL-based acceleration. In this version, XRender-based acceleration will be used instead if available. If this causes problems, you can revert to OpenGL acceleration by adding the command line switch `-xOpenGL`.
