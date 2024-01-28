@@ -36,12 +36,13 @@ The primary difference in this version is that it makes the jump from requiring 
 
 ### Bug fixes
 
-- attempting to resize a navigation panel could trigger an infinite loop if other open editors had a navigation panel that was disabled
-- the default verbal design support view could have a bad background colour in some themes
-- fixed project view row height varying with theme, which could clip icons
-- printing a text file in a dark theme could print text in a bad colour
-- fixed a resource leak when using Make Deck in a project
-- fixed an issue that caused https access to the [online help pages](https://se3docs.cgjennings.ca/index.html) to stop working.
+- Attempting to resize a navigation panel could trigger an infinite loop if other open editors had a navigation panel that was disabled.
+- **View/Source Navigator** stopped working correctly.
+- The default verbal design support view could have a bad background colour in some themes.
+- Fixed project view row height varying with theme, which could clip icons.
+- Printing a text file in a dark theme could print text in a bad colour.
+- Fixed a resource leak when using Make Deck in a project.
+- Fixed an issue that caused https access to the [online help pages](https://se3docs.cgjennings.ca/index.html) to stop working.
 
 ### For plug-in developers
 
