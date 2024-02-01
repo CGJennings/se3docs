@@ -16,8 +16,8 @@
 
 The primary difference in this version is that it makes the jump from requiring Java 8 to Java 11. However, most users should not notice this difference since the installer packages for Strange Eons include their own private Java environment.
 
-- High DPI display support. This means proper support for “Retina” displays and setups that use desktop scaling. Note that the *underlying* support at both the Java and operating system level is not always perfect. For example, you may encounter weird issues when moving windows between two displays with different scaling factors.
-- As part of implementing high DPI support, nearly every graphic used by Strange Eons was updated or replaced. If you notice an image that appears to be missing or incorrect, please report it as a bug using the **Help/Report a Bug** menu item.
+- High DPI display support. This means proper support for “Retina” displays and setups that use desktop scaling. Note that the *underlying* support at both the Java and operating system level is not always perfect. For example, you may encounter weird issues when moving windows between displays with different scaling factors.
+- As part of implementing high DPI support, nearly every graphic used by Strange Eons was updated or replaced. If you notice an image that appears to be missing or incorrect, please report it as a bug by [opening an issue](https://github.com/CGJennings/strange-eons/issues), using the **Help/Report a Bug** menu item, or submitting a pull request. 
 - Markdown document support. Projects support markdown (`.md`) files, which are a common, easy-to-use way to create styled documents from plain text. Double-click a markdown file to view it, or right click and choose **Open** to edit.
 - Improvements to the text/source code editing experience, including:
   - search and replace highlights all matches
@@ -45,6 +45,10 @@ The primary difference in this version is that it makes the jump from requiring 
 - Fixed an issue that caused https access to the [online help pages](https://se3docs.cgjennings.ca/index.html) to stop working.
 
 ### For plug-in developers
+
+#### Build system change
+
+If you are building Strange Eons from source, the build system has changed from Ant to [Maven](https://maven.apache.org/). If you are using an IDE to build the project, there is probably little or nothing to configure. Most current Java IDEs support Maven out of the box. You will need a “launch configuration” for the project; the repository includes configurations for NetBeans and VS Code. For other IDEs, you need to set the VM (or JVM) arguments passed to Java when running the project, specifically the Java agent, or it will fail to launch. At time of writing, the included configurations use: `-Xmx4g -Xms1g -Xss1m -javaagent:lib/local/jar-loader/1.0/jar-loader-1.0.jar`. The current configuration can be found in `.vscode/launch.json` under `vmArgs`.
 
 #### Miscellaneous changes
 
