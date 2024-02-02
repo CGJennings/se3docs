@@ -1,6 +1,7 @@
 ---
-layout: forward
-target: https://se3docs.cgjennings.ca/test-dest/
+layout: redirected
+sitemap: false
+redirect_to: /test-dest/
 ---
 
 # Original content
