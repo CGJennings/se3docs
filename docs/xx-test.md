@@ -1,4 +1,6 @@
 ---
 layout: forward
-target: /test-dest/index.md
+target: https://se3docs.cgjennings.ca/test-dest/
 ---
+
+# Original content
