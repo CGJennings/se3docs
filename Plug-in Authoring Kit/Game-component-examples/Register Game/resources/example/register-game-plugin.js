@@ -40,17 +40,17 @@ const template = new JavaAdapter(
     AbstractExpansionSymbolTemplate, {
         // In our example game, there is only one variant of each expansion symbol,
         // which is described as "Golden".
-        getVariantCount: function getSymbolCount() {
+        getVariantCount() {
             return 1;
         },
         // Returns the "Golden" name for the symbol style.
-        getVariantName: function getSymbolName(n) {
+        getVariantName(n) {
             this.checkIndex(n);
             return 'Golden';
         },
         // Returns a standard icon that features a characteristic colour (#e1b733)
         // from the "Golden" symbol design.
-        getVariantIcon: function getVariantIcon(n) {
+        getVariantIcon(n) {
             this.checkIndex(n);
             // the icon is only created if actually requested
             if (this.icon == null) {
@@ -60,17 +60,17 @@ const template = new JavaAdapter(
         },
         icon: null,
         // returns the sample symbol
-        getDefaultSymbol: function getDefaultSymbol(n) {
+        getDefaultSymbol(n) {
             this.checkIndex(n);
             return image('template-sample-symbol');
         },
         // this game draws expansion symbols itself; see register-game-diy.js
-        isCustomDrawn: function isCustomDrawn() {
+        isCustomDrawn() {
             return true;
         },
         // since there is only one symbol variant, this function rejects
         // all indices other than 0
-        checkIndex: function checkIndex(n) {
+        checkIndex(n) {
             if (n != 0) throw new Error('invalid symbol index: ' + n);
         }
     }

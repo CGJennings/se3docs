@@ -47,7 +47,7 @@ function run() {
         // Creates a new object that implements the ViewTab interface, which
         // we can then register
         let tab = new ViewTab {
-            createViewForProject: function createViewForProject(projectView, project) {
+            createViewForProject(projectView, project) {
                 try {
                     let view = new swing.JLabel('Example View');
                     view.opaque = true;
@@ -59,10 +59,10 @@ function run() {
                     throw ex;
                 }
             },
-            getLabel: function getLabel() {
+            getLabel() {
                 return 'Example';
             },
-            getViewTabName: function getViewTabName() {
+            getViewTabName() {
                 return 'dummy-example';
             }
         };

@@ -51,7 +51,7 @@ function createAction() {
     // we need to create an object that overrides a concrete class
     // (rather than implementing a method).
     let kd3Action = {
-        appliesToSelection: function appliesToSelection(members) {
+        appliesToSelection(members) {
             // unlike the built-in task action, KDiff3 can operate on
             // 2 *or* 3 files, and it also works on folders
             if (members.length < 2 || members.length > 3) return false;
@@ -66,7 +66,7 @@ function createAction() {
             }
             return true;
         },
-        performOnSelection: function performOnSelection(members) {
+        performOnSelection(members) {
             if (this.appliesToSelection(members)) {
                 try {
                     kdiff3(members);

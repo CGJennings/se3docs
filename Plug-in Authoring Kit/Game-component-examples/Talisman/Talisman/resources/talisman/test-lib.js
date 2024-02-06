@@ -15,7 +15,7 @@ importClass(gamedata.Game);
 let settings;
 let talismanGame = Game.get('TAL');
 if (talismanGame != null) {
-    settings = talismanGame.masterSettings;
+    settings = talismanGame.settings;
 } else {
     settings = Settings.shared;
 }

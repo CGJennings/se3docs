@@ -125,7 +125,7 @@ function isEnabled() {
 function installEditorListener() {
     if (editorListener != null) uninstallEditorListener();
     editorListener = new StrangeEonsEditor.EditorListener {
-        editorSelected: function editorSelected(ed) {
+        editorSelected(ed) {
             // check is syncing enabled and there is a new editor
             if (ed == null || !isEnabled()) return;
             // check if the editor has a file
@@ -167,7 +167,7 @@ function installProjectListener() {
     // when attached to a project view, listens for selection changes and
     // selects the matching editor, if any
     selListener = new SelectionListener {
-        projectSelectionChanged: function projectSelectionChanged(viewEvent) {
+        projectSelectionChanged(viewEvent) {
             if (!isEnabled()) return;
 
             let m = viewEvent.selection;
@@ -189,10 +189,10 @@ function installProjectListener() {
     // when the project changes, detach selListener from the old one
     // and attach it to the new one
     projListener = new ProjectEventListener {
-        projectOpened: function projectOpened(proj) {
+        projectOpened(proj) {
             reattachSelectionListener();
         },
-        projectClosing: function projectClosing(proj) {
+        projectClosing(proj) {
             reattachSelectionListener();
         }
     };

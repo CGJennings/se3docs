@@ -74,11 +74,11 @@ function createOpener() {
     // create and return the opener implementation
     return new Open.InternalOpener() {
         // the opener can open files with the 'zip' extension
-        appliesTo: function appliesTo(file) {
+        appliesTo(file) {
             return ProjectUtilities.matchExtension(file, 'zip');
         },
         // this is what the opener will do to open a file when it applies
-        open: function open(file) {
+        open(file) {
             try {
                 if (!confirm.yesno('Unpack ' + file.name + ' here?', 'Zip Archive')) {
                     return;
@@ -142,13 +142,13 @@ function createAction() {
     // we are overriding a method in a concrete class, not implementing
     // an interface.	
     let zipAction = {
-        getLabel: function getLabel() {
+        getLabel() {
             return 'Compress';
         },
-        getActionName: function getActionName() {
+        getActionName() {
             return 'zipcompress';
         },
-        appliesToSelection: function appliesToSelection(members) {
+        appliesToSelection(members) {
             // Don't show the command if exactly 1 zip file is selected
             if (members.length == 1 && !members[0].isFolder() && ProjectUtils.matchExtension(members[0], 'zip')) {
                 return false;
@@ -157,11 +157,11 @@ function createAction() {
             // individual files.
             return this.super$appliesToSelection(members);
         },
-        appliesTo: function appliesTo(project, task, member) {
+        appliesTo(project, task, member) {
             // Don't show command if only the project is selected
             return task != null || member != null;
         },
-        performOnSelection: function performOnSelection(members) {
+        performOnSelection(members) {
             members = ProjectUtilities.merge(members);
             if (members.length == 0) return;
 
@@ -203,7 +203,7 @@ function createAction() {
                 [parent.findChild(zipFile)]
             );
         },
-        perform: function perform(project, task, member) {
+        perform(project, task, member) {
             // We override performOnSelection, which by default will call this
             // with individual members. We put a dummy implementation here
             // just in case someone wants to use our action and calls this
@@ -221,16 +221,16 @@ function createAction() {
 function createMetadataSource() {
     let zipIcon = ImageUtils.getIcon('cgj/zip-tools.png');
     let zipMetadata = {
-        appliesTo: function appliesTo(member) {
+        appliesTo(member) {
             return ProjectUtilities.matchExtension(member, 'zip');
         },
-        getIcon: function getIcon(member) {
+        getIcon(member) {
             return zipIcon;
         },
-        getDescription: function getDescription(member) {
+        getDescription(member) {
             return 'Zip archive';
         },
-        fillInMetadataImpl: function fillInMetadataImpl(member, consumer) {
+        fillInMetadataImpl(member, consumer) {
             // This bit of voodoo is how you access a superclass method
             // from script code that implements a Java class.
             // In this case, it fills in the basic metadata common to all

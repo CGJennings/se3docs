@@ -23,21 +23,21 @@ importClass(arkham.ContextBar);
 let button = {
     // A unique identifier for the button; used to store the
     // user's preferred context bar configuration.
-    getID: function getID() {
+    getID() {
         return 'CAT_BUTTON';
     },
 
     // The name of the button as presented to the user.
-    getName: function getName() {
-        return 'Critter';
+    getName() {
+        return 'Sleepy Kitty';
     },
 
     // The icon shown on the context bar.
-    getIcon: function getIcon() {
+    getIcon() {
         return this.catIcon;
     },
 
-    // Note: this cannot be called "icon" or an odd thing happens:
+    // Note: this *cannot* be called "icon" or an odd thing happens:
     // after we turn this into a Java object, this.getIcon() and
     // this.icon will mean the same thing, so if we call this property
     // icon, the getIcon() function will effectively call itself
@@ -59,17 +59,17 @@ let button = {
     // The implementation for this example simply checks that the context
     // bar is attached to a multi-line markup target in a game component editor
     // (so that it can insert lines of text if the button is activated).
-    isVisibleInCurrentContext: function isVisibleInCurrentContext(context) {
+    isVisibleInCurrentContext(context) {
         return context.isMultipleLineTextEditor() && context.gameComponent != null;
     },
 
-    isEnabledInCurrentContext: function isEnabledInCurrentContext(context) {
+    isEnabledInCurrentContext(context) {
         // always enabled as long as it is visible
         return true;
     },
 
     // Called when the button is activated.
-    actionPerformed: function actionPerformed(actionEvent) {
+    actionPerformed(actionEvent) {
         try {
             let mt = Eons.markupTarget;
             mt.selectNone();

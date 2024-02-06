@@ -152,7 +152,7 @@ function paintFront(g, diy, sheet) {
         // article is a Java string; hence it has a length() method,
         // not a length property.
         // TIP: if you want to be sure that a string is a JS string,
-        // just concatenate it with an empty string: s = "" + s;
+        // you can use String(s) or concatenation ("" + s)
         if (article.length() > 0) {
             // Compose the home name as (e.g.) "T" + "he" + " " + "Location"
             home = article.substring(0, 1).toUpperCase() + article.substring(1) +
