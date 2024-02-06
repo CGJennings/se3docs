@@ -1,0 +1,6 @@
+id = CATALOGUEID{79feef69-588d-4902-8fa8-9a7a263af846:2024-1-6-8-50-37-573}
+
+name = Multiple Portraits
+description = Demonstrates the custom portrait option of DIY components.
+
+res://example/multi-portrait-plugin.js

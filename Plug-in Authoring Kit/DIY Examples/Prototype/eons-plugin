@@ -1,9 +1,0 @@
-id = CATALOGUEID{849378e0-6149-46ce-b1e1-9451b9a895e3:2013-8-21-11-7-35-960}
-
-catalog-name = Prototyping Kit
-catalog-credit = Christopher G. Jennings
-catalog-description = Simple card layouts for early, rapid game prototyping and \
-    playtest iteration.
-catalog-tags = component
-
-res://proto/plugin.js
