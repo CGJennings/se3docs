@@ -31,7 +31,7 @@ var Painter = {
     insensitivity: 3,
     strength: 4,
 
-    paint: function paint(image) {
+    paint(image) {
         image = this.edgeExtend(image);
         var painted = this.colourAndLighting(image);
         if (this.applyPaintEffect) {
@@ -43,7 +43,7 @@ var Painter = {
         return painted;
     },
 
-    colourAndLighting: function colourAndLighting(im) {
+    colourAndLighting(im) {
         // Note that 'im' is the original image. We must take care
         // not to overwrite the image data when applying filters.
         // (See lines marked '*', below.)
@@ -59,7 +59,7 @@ var Painter = {
         return im;
     },
 
-    edgeExtend: function edgeExtend(im) {
+    edgeExtend(im) {
         if (this.topExtend == 0 && this.rightExtend == 0 && this.bottomExtend == 0 && this.leftExtend == 0) {
             return im;
         }
@@ -96,7 +96,7 @@ var Painter = {
         return exim;
     },
 
-    paintEffect: function paintEffect(im) {
+    paintEffect(im) {
         this.oilFilt.setLevels(this.levels);
         this.oilFilt.setSmearRadius(this.radius);
         im = this.oilFilt.filter(im, null);
@@ -105,7 +105,7 @@ var Painter = {
         return im;
     },
 
-    sketchEffect: function sketchEffect(im, original) {
+    sketchEffect(im, original) {
         // for sketch lines, we perform edge detection on the
         // source image, then convert the edges into greyscale,
         // and convert that to a black image with those greyscale

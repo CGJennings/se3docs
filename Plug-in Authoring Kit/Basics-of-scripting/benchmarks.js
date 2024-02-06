@@ -1,23 +1,23 @@
 /*
- * benchmarks.js - version 4
+ * benchmarks.js - version 5
  *
  * The script runs a series of timed tests and prints the
- * results, to give you a sense of the performance of the
+ * results to give you a sense of the performance of the
  * script engine. As a side effect it also demonstrates
  * various features of the language and script engine, so
- * it may be useful for programmers who are familiar with
- * other languages to get a quick overview of JavaScript.
+ * it's helpful for programmers who are familiar with
+ * another language to get a quick overview of the flavour
+ * of JavaScript used in Strange Eons.
  *
- * Note: depending on your system, these tests may take
- * from several seconds to several minutes to complete.
+ * Note: depending on your system, these tests will take
+ * several seconds to complete.
  */
 
 importClass(java.lang.System);
 
 /**
- * time( func )
- * Calls the function <tt>func</tt> with no arguments,
- * and returns the (approximate) number of nanoseconds
+ * Calls the function `func` with no arguments
+ * and returns the approximate number of nanoseconds
  * that the function took to execute.
  */
 function time(func) {
@@ -75,7 +75,7 @@ const TESTS = [
     function interface_implementor() {
         for (let r = 0; r < 100; ++r) {
             let listener = new java.awt.event.ActionListener() {
-                actionPerformed: function() {
+                actionPerformed() {
                     1 + 1;
                 }
             };
@@ -85,11 +85,11 @@ const TESTS = [
         }
     },
 
-    // instantiate a JavaScript object with method 100 times and call each instance 1000 times
+    // instantiate a JavaScript object with a method 100 times and call each instance 1000 times
     function function_caller() {
         for (let r = 0; r < 100; ++r) {
             let listener = new Object() {
-                actionPerformed: function() {
+                actionPerformed() {
                     1 + 1;
                 }
             };
@@ -316,9 +316,8 @@ const TESTS = [
 ]; // END OF THE ARRAY OF TEST FUNCTIONS
 
 /**
- * runTests()
- * Repeatedly times each function in tests,
- * printing the name of each test and its best time.
+ * Repeatedly times each function in `TESTS`,
+ * printing the name of each and its best time.
  */
 function runTests() {
     const REPS = 5;

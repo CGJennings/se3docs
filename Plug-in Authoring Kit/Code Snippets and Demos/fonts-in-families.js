@@ -12,25 +12,20 @@
 
 const fontMap = {};
 const allFonts = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment()
-    .getAllFonts();
-
-for (let i = 0; i < allFonts.length; ++i) {
-    // Notice that we explicitly convert all of the Java strings
-    // to JavaScript strings; if we didn't, then JSON.stringify
-    // would not work as intended.
-    let f = allFonts[i];
-    let family = String(f.getFamily());
-    let mapping = fontMap[family];
-    if (!mapping) {
-        mapping = {
-            names: [],
-            logicalNames: []
-        };
-        fontMap[family] = mapping;
-    }
-    mapping.names.push(String(f.getFontName()));
-    mapping.logicalNames.push(String(f.getName()));
-}
+    .getAllFonts().forEach((font) => {
+        let family = String(font.getFamily());
+        let mapping = fontMap[family];
+        if (!mapping) {
+            mapping = {
+                names: [],
+                logicalNames: []
+            };
+            fontMap[family] = mapping;
+        }
+        mapping.names.push(String(font.getFontName()));
+        mapping.logicalNames.push(String(font.getName()));        
+    });
+delete fontMap.Dialog;
 
 //
 // Now fontMap["familyName"] returns an object like this:

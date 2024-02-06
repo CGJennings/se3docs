@@ -27,7 +27,7 @@ let okBtn = new JButton('OK');
 let yellowSign = ImageUtils.get('project:pak-assets/yellow-sign.png', true);
 
 okBtn.addActionListener(
-    function actionPerformed() {
+    function actionPerformed(event) {
         println('\nHey there, ' + nameField.text + '.');
         println('Tell me, have you seen the yellow sign?');
         Console.printImage(yellowSign);

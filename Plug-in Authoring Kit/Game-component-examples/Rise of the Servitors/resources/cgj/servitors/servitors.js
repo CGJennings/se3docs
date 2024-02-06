@@ -22,7 +22,7 @@ function initialize() {
     const AH = Game.get("AH");
     if (AH == null) return false;
 
-    AH.masterSettings.addSettingsFrom("cgj/servitors/card-layout.settings");
+    AH.settings.addSettingsFrom("cgj/servitors/card-layout.settings");
     ClassMap.add("cgj/servitors/rots.classmap");
     return true;
 }

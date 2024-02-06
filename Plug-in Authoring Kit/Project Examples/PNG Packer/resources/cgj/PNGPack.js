@@ -45,13 +45,13 @@ function createAction() {
     // we are overriding a method in a concrete class, not implementing
     // an interface.	
     let pngAction = {
-        getLabel: function getLabel() {
+        getLabel() {
             return 'Pack PNG Images';
         },
-        getActionName: function getActionName() {
+        getActionName() {
             return 'pngpack';
         },
-        appliesTo: function appliesTo(project, task, member) {
+        appliesTo(project, task, member) {
             member = ProjectUtilities.simplify(project, task, member);
             if (member.isFolder()) {
                 let kids = member.getChildren();
@@ -63,7 +63,7 @@ function createAction() {
             }
             return false;
         },
-        perform: function perform(project, task, member) {
+        perform(project, task, member) {
             member = ProjectUtilities.simplify(project, task, member);
             Eons.setWaitCursor(true);
             try {
@@ -74,7 +74,7 @@ function createAction() {
                 Eons.setWaitCursor(false);
             }
         },
-        performImpl: function performImpl(member) {
+        performImpl(member) {
             let packed = 0;
             let skipped = 0;
             let inSize = 0;

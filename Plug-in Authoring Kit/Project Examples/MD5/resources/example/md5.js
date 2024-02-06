@@ -43,19 +43,19 @@ function createAction() {
     // we are overriding a method in a concrete class, not implementing
     // an interface.	
     let md5Action = {
-        getLabel: function getLabel() {
+        getLabel() {
             return 'Print MD5 Checksum';
         },
-        getActionName: function getActionName() {
+        getActionName() {
             return 'md5';
         },
-        appliesTo: function appliesTo(project, task, member) {
+        appliesTo(project, task, member) {
             // Only files can have a checksum, not folders:
             // since projects and tasks are both kinds of folder, member
             // must be non-null and not a folder.
             return member != null && !member.isFolder();
         },
-        perform: function perform(project, task, member) {
+        perform(project, task, member) {
             let md5 = arkham.plugins.catalog.MD5Checksum.forFile(member.file);
             printf('%s: %s\n', member.name, md5.checksumString);
         }

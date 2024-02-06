@@ -45,19 +45,19 @@ function createInterface(diy, editor) {
         analysis: '',
         changed: true,
         valid: true,
-        getGameComponent: function getGameComponent() {
+        getGameComponent() {
             return diy;
         },
-        markChanged: function markChanged() {
+        markChanged() {
             this.changed = true;
         },
-        isDesignValid: function isDesignValid() {
+        isDesignValid() {
             if (this.changed) {
                 this.updateAnalysis();
             }
             return this.valid;
         },
-        createSupportView: function createSupportView() {
+        createSupportView() {
             // we can return any component we like,
             // in this case we'll just return a simple label
             let view = label();
@@ -66,7 +66,7 @@ function createInterface(diy, editor) {
             view.background = new Color(0xfaffc4);
             return view;
         },
-        updateSupportView: function updateSupportView(view) {
+        updateSupportView(view) {
             // if the "analysis" is out of date, update it
             if (this.changed) {
                 this.updateAnalysis();
@@ -76,7 +76,7 @@ function createInterface(diy, editor) {
             // set its text to our analysis string
             view.text = this.analysis;
         },
-        updateAnalysis: function updateAnalysis() {
+        updateAnalysis() {
             // reset the changed flag so we don't do another analysis
             // until the component changes
             this.changed = false;

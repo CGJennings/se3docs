@@ -20,7 +20,7 @@ let talismanGame = Game.get('TAL');
 
 if (game != null) {
     // add the keys needed to activate high resolution mode
-    talismanGame.masterSettings.addSettingsFrom('talisman/hd.settings');
+    talismanGame.settings.addSettingsFrom('talisman/hd.settings');
 } else {
     Eons.log.warning('Talisman HD cannot find Talisman');
 }

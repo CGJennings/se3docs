@@ -98,36 +98,36 @@ function createExportContainer() {
         session: null,
 
         // returns the text used to describe the container to the user
-        toString: function toString() {
+        toString() {
             return 'FTP server';
         },
 
         // returns a unique internal identifier for the container type
-        getIdentifier: function getIdentifier() {
+        getIdentifier() {
             return CONTAINER_ID;
         },
 
         // returns true if the container has extra options that can be
         // configured in a separate dialog
-        isConfigurable: function isConfigurable() {
+        isConfigurable() {
             return false;
         },
 
         // if the container was configurable, this would be called to
         // display the configuration dialog
-        configure: function configure() {
+        configure() {
             throw new UnsupportedOperationException();
         },
 
         // a sanity check: checks if a session is active; if not throws an error
-        checkOpen: function checkOpen() {
+        checkOpen() {
             if (this.session == null) {
                 throw new IllegalStateException('no session is active');
             }
         },
 
         // a sanity check: checks if a session is active; if so throws an error
-        checkClosed: function checkClosed() {
+        checkClosed() {
             if (this.session != null) {
                 throw new IllegalStateException('a previous session is still active');
             }
@@ -136,7 +136,7 @@ function createExportContainer() {
         // this is called when the user is about to begin exporting files;
         // we show a dialog that fills in the session property with the
         // information we need to connect to the FTP server
-        selectLocation: function selectLocation(baseName, componentHint) {
+        selectLocation(baseName, componentHint) {
             this.checkClosed();
             this.session = showSessionDialog();
             // we need to return a boolean indicating whether to continue;
@@ -147,20 +147,20 @@ function createExportContainer() {
 
         // for container types that use the local file system, this can be
         // used to set the destination programmatically
-        setLocation: function setLocation(file) {
+        setLocation(file) {
             throw new UnsupportedOperationException();
         },
 
         // called at the start of an export; for this container there is
         // nothing to do since the destination (the FTP server) already exists
-        createContainer: function createContainer() {
+        createContainer() {
             this.checkOpen();
         },
 
         // called when a new file is about to exported as part of the export
         // operation; it must return an java.io.OutputStream, which the exported
         // file will be written to
-        addEntry: function addEntry(fileName) {
+        addEntry(fileName) {
             this.checkOpen();
             let url = this.createURL(fileName);
             return url.openConnection().outputStream;
@@ -170,7 +170,7 @@ function createExportContainer() {
         // gone smoothly; if display is true, the user has requested that
         // the exported files be "displayed" (what this does is up to the
         // container type)
-        closeContainer: function closeContainer(display) {
+        closeContainer(display) {
             this.checkOpen();
             this.session = null;
         },
@@ -179,7 +179,7 @@ function createExportContainer() {
         // during export; ideally we would delete any files that we created
         // on the server, but we can't do that using FTP URLs, we'd need a more
         // advanced FTP API
-        destroyContainer: function destroyContainer() {
+        destroyContainer() {
             this.checkOpen();
             this.session = null;
         },
@@ -188,13 +188,13 @@ function createExportContainer() {
         // certain type are fully supported by the container; we can
         // write any kind of file to the FTP server, so this simply
         // returns true
-        isFileFormatSupported: function isFileFormatSupported(ext) {
+        isFileFormatSupported(ext) {
             return true;
         },
 
         // creates a URL that can be used to upload a file using the
         // current FTP session parameters
-        createURL: function createURL(fileName) {
+        createURL(fileName) {
             let s = this.session;
             let url = 'ftp://';
             // add login credentials for non-anonymous access
