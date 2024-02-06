@@ -1,0 +1,5 @@
+id = CATALOGUEID{621c8770-bc78-4ab6-915b-c3b17da5facc:2024-1-6-8-50-38-35}
+
+priority = GAME
+
+res://example/register-game-plugin.js

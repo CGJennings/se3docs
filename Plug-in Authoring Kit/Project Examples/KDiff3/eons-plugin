@@ -16,7 +16,7 @@
 # For details see the "Plug-in Root File" Wiki page .
 #
 
-id = CATALOGUEID{ec2e6daf-6368-4392-bd4a-12bae95516fe:2013-8-20-9-5-44-313}
+id = CATALOGUEID{ec2e6daf-6368-4392-bd4a-12bae95516fe:2024-1-6-8-50-39-428}
 
 catalog-name = KDiff3 Integration
 catalog-description = Uses <i>KDiff3</i> to compare text files (and folders) in \
