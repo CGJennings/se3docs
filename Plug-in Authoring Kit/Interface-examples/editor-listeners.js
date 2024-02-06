@@ -11,7 +11,7 @@ importClass(arkham.StrangeEonsEditor);
 
 // This is a listener that is called when a new editor is added.
 let editorAdded = new StrangeEonsAppWindow.EditorAddedListener() {
-    editorAdded: function editorAdded(editor) {
+    editorAdded(editor) {
         println('editor added: ' + editor);
         if (!targetEditor) {
             println('[adding editor-specific listener to this editor]');
@@ -26,19 +26,19 @@ let editorAdded = new StrangeEonsAppWindow.EditorAddedListener() {
 // editor because we register it with the application,
 // not a particular editor.
 let allEditors = new StrangeEonsEditor.EditorListener() {
-    editorSelected: function editorSelected(editor) {
+    editorSelected(editor) {
         println('editor selected: ' + editor);
     },
-    editorDeselected: function editorDeselected(editor) {
+    editorDeselected(editor) {
         println('editor deselected: ' + editor);
     },
-    editorClosing: function editorClosing(editor) {
+    editorClosing(editor) {
         println('editor closing: ' + editor);
     },
-    editorDetached: function editorDetached(editor) {
+    editorDetached(editor) {
         println('editor detached: ' + editor);
     },
-    editorAttached: function editorAttached(editor) {
+    editorAttached(editor) {
         println('editor attached: ' + editor);
     }
 };
@@ -48,19 +48,19 @@ let allEditors = new StrangeEonsEditor.EditorListener() {
 // one editor because we register it on that editor, not
 // the entire application.
 let specificEditor = new StrangeEonsEditor.EditorListener() {
-    editorSelected: function editorSelected(editor) {
+    editorSelected(editor) {
         println('specific editor selected: ' + editor);
     },
-    editorDeselected: function editorDeselected(editor) {
+    editorDeselected(editor) {
         println('specific editor deselected: ' + editor);
     },
-    editorClosing: function editorClosing(editor) {
+    editorClosing(editor) {
         println('specific editor closing: ' + editor);
     },
-    editorDetached: function editorDetached(editor) {
+    editorDetached(editor) {
         println('specific editor detached: ' + editor);
     },
-    editorAttached: function editorAttached(editor) {
+    editorAttached(editor) {
         println('specific editor attached: ' + editor);
     }
 };

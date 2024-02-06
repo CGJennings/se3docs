@@ -54,7 +54,7 @@ let myPrefs = new JavaAdapter(
     // After the class/interface list, you provide a script object with the
     // functions (methods) that you want to override from the superclass:
     {
-        loadSettings: function() {
+        loadSettings() {
             // This weird syntax lets us call the superclass, in this case
             // so that it will load settings for the *managed* controls.
             this.super$loadSettings();
@@ -65,7 +65,7 @@ let myPrefs = new JavaAdapter(
             printf("Loaded the secret setting '%s'.\n", msss);
             myControl.text = msss;
         },
-        storeSettings: function() {
+        storeSettings() {
             // Again, we want to let the superclass do its thing:
             this.super$storeSettings();
 

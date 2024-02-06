@@ -41,7 +41,7 @@ function initialize() {
 
         // now that the game is registered, we can add the
         // default settings to use for new cards
-        Game.get('TAL').masterSettings.addSettingsFrom('talisman/base.settings');
+        Game.get('TAL').settings.addSettingsFrom('talisman/base.settings');
 
         ClassMap.add('talisman/base.classmap');
 
@@ -131,15 +131,15 @@ function createExpansionSymbolTemplate() {
             // Returns the number of visual variants: this is the number
             // of different design variants required for each symbol in
             // order to paint it on any card
-            getVariantCount: function getVariantCount() {
+            getVariantCount() {
                 return 3;
             },
-            getVariantName: function getVariantName(n) {
+            getVariantName(n) {
                 this.checkIndex(n);
                 return @('tal-exp-vis-' + n.toInt());
             },
             // Returns a standard icon representing the variant's visual style
-            getVariantIcon: function getVariantIcon(n) {
+            getVariantIcon(n) {
                 this.checkIndex(n);
                 if (this.icons == null) {
                     const SU = SymbolVariantUtilities;
@@ -155,19 +155,19 @@ function createExpansionSymbolTemplate() {
 
             // two logical variants: part of an expansion, or requires an expansion
 
-            getLogicalVariantCount: function getLogicalVariantCount() {
+            getLogicalVariantCount() {
                 return 3;
             },
-            getLogicalVariantName: function getLogicalVariantName(n) {
+            getLogicalVariantName(n) {
                 this.checkLogicalIndex(n);
                 return @('tal-exp-log-' + n.toInt());
             },
-            getLogicalVariantIcon: function getLogicalVariantIcon(n) {
+            getLogicalVariantIcon(n) {
                 this.checkLogicalIndex(n);
                 return null;
             },
             // returns the sample symbol
-            getDefaultSymbol: function getDefaultSymbol(n) {
+            getDefaultSymbol(n) {
                 this.checkIndex(n);
                 let bi = ImageUtils.get('talisman/expansions/dungeon.jp2');
                 if (n > 0) {
@@ -176,26 +176,26 @@ function createExpansionSymbolTemplate() {
                 return bi;
             },
             // this game draws expansion symbols itself
-            isCustomDrawn: function isCustomDrawn() {
+            isCustomDrawn() {
                 return true;
             },
             // since there is only one symbol variant, this function rejects
             // all indices other than 0
-            checkIndex: function checkIndex(n) {
+            checkIndex(n) {
                 if (n < 0 || n >= this.getVariantCount()) throw new Error('invalid design variant index: ' + n);
             },
             // since there is only one symbol variant, this function rejects
             // all indices other than 0
-            checkLogicalIndex: function checkLogicalIndex(n) {
+            checkLogicalIndex(n) {
                 if (n < 0 || n >= this.getLogicalVariantCount()) throw new Error('invalid logical variant index: ' + n);
             },
             // override the base class to return true since we can generate symbol variants
-            canGenerateVariantsAutomatically: function canGenerateVariantsAutomatically() {
+            canGenerateVariantsAutomatically() {
                 return true;
             },
             // generates an expansion symbol from a user-supplied sample image;
             // this uses SymbolVariantUtilities 
-            generateVariant: function generateVariant(bi, variant) {
+            generateVariant(bi, variant) {
                 this.checkIndex(variant);
 
                 const SU = SymbolVariantUtilities;

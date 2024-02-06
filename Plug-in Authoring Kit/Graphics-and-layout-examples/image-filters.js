@@ -332,8 +332,8 @@ function filterChanged(actionEvent) {
     }
 }
 filterChanged.focusListener = new java.awt.event.FocusListener {
-    focusGained: function focusGained(focusEvent) {},
-    focusLost: function focusLost(focusEvent) {
+    focusGained(focusEvent) {},
+    focusLost(focusEvent) {
         updateFilter();
         updateImage(curFilter);
     }

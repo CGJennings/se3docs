@@ -50,19 +50,19 @@ function createAction() {
     // we are overriding a method in a concrete class, not implementing
     // an interface.
     let psdAction = {
-        getLabel: function getLabel() {
+        getLabel() {
             return 'Extract Layers';
         },
-        getActionName: function getActionName() {
+        getActionName() {
             return 'psd-extractor';
         },
-        getIcon: function getIcon() {
+        getIcon() {
             return ICON;
         },
-        appliesTo: function appliesTo(project, task, member) {
+        appliesTo(project, task, member) {
             return !member.isFolder() && ProjectUtilities.matchExtension(member, PSD);
         },
-        perform: function perform(project, task, member) {
+        perform(project, task, member) {
             try {
                 let psd = new PSDImageReader(member.file);
                 let parent = member.file.parent;

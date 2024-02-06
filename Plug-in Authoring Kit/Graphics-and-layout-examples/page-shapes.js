@@ -47,10 +47,10 @@ function makeHexShape(region, insetFactor, topOnly) {
     let iMax = region.width * insetFactor;
 
     let shape = {
-        lerp: function lerp(y) {
+        lerp(y) {
             return 1 - (y - ry0) / (ry1 - ry0);
         },
-        insetAt: function insetAt(y) {
+        insetAt(y) {
             if (y <= ry1) {
                 return this.lerp(y) * iMax;
             } else if (y <= ry2) {
@@ -59,18 +59,18 @@ function makeHexShape(region, insetFactor, topOnly) {
                 return 0;
             }
         },
-        getInset: function getInset(y1, y2) {
+        getInset(y1, y2) {
             return Math.max(this.insetAt(y1), this.insetAt(y2));
         },
         // the getLeftInset, getRightInset, and debugDraw functions
         // form our implementation of the PageShape class
-        getLeftInset: function getLeftInset(y1, y2) {
+        getLeftInset(y1, y2) {
             return this.getInset(y1, y2);
         },
-        getRightInset: function getRightInset(y1, y2) {
+        getRightInset(y1, y2) {
             return this.getInset(y1, y2);
         },
-        debugDraw: function debugDraw(g, r) {
+        debugDraw(g, r) {
             let li = new java.awt.geom.Line2D.Double(
                 region.x + region.width * insetFactor,
                 region.y,
@@ -216,10 +216,10 @@ function createShape() {
             let s1 = shape,
                 s2 = shapes[i2];
             let interpolator = {
-                getLeftInset: function getLeftInset(y1, y2) {
+                getLeftInset(y1, y2) {
                     return (s1.getLeftInset(y1, y2) + s2.getLeftInset(y1, y2)) / 2;
                 },
-                getRightInset: function getRightInset(y1, y2) {
+                getRightInset(y1, y2) {
                     return (s1.getRightInset(y1, y2) + s2.getRightInset(y1, y2)) / 2;
                 }
             };

@@ -34,7 +34,7 @@ bridge-im-content = #proto-content
 bridge-im-content-region = 20,315,298,190
 bridge-im-content-style = family: 'Unkempt'; size: 12
 bridge-im-content-alignment = left, top
-bridge-im-portrait-template = icons/application/256.png
+bridge-im-portrait-template = icons/application/app@16x.png
 bridge-im-portrait-clip-region = 20,100,298,190
 # creates an 1 pixel invisible overlay so the portrait is
 # drawn overtop of the card template instead of under
@@ -52,7 +52,7 @@ poker-im-content = #proto-content
 poker-im-content-region = 20,315,335,190
 poker-im-content-style = family: 'Unkempt'; size: 12
 poker-im-content-alignment = left, top
-poker-im-portrait-template = icons/application/256.png
+poker-im-portrait-template = icons/application/app@16x.png
 poker-im-portrait-clip-region = 20,100,298,190
 poker-im-portrait-overlay = icons/1x1.png
 poker-im-portrait-overlay-region = 0,0,1,1

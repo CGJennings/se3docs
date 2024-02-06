@@ -691,7 +691,7 @@ let BlendDemo = {
     DEST_SIZE: 256,
 
     // updates the source and blend image to match the current selection
-    changeBlendImages: function changeBlendImages(actionEvent) {
+    changeBlendImages(actionEvent) {
         // Note: we can't use this.imageCombo.selectedIndex because the
         //       conversion to an ActionListener object changes the
         //       value of 'this' from BlendDemo to the proxy object.
@@ -721,7 +721,7 @@ let BlendDemo = {
     },
 
     // updates the destination control using the currently selected blend mode
-    changeBlendMode: function changeBlendMode(actionEvent) {
+    changeBlendMode(actionEvent) {
         let thiz = BlendDemo; // (See above)
         let sel = thiz.modeCombo.selectedItem;
         if (sel == null) return;
@@ -744,7 +744,7 @@ let BlendDemo = {
     },
 
     // create a source image for blending using a colour gradient
-    createBlendSource: function createBlendSource(x1, y1, x2, y2, size, col) {
+    createBlendSource(x1, y1, x2, y2, size, col) {
         let im = ImageUtils.create(size, size, true);
         let scale = size-1;
         let paint = new java.awt.GradientPaint(
@@ -763,7 +763,7 @@ let BlendDemo = {
     },
 
     // create a source image for blending using an image resource
-    createBlendImage: function createBlendImage(name, size) {
+    createBlendImage(name, size) {
         let dest = ImageUtils.create(size, size, false);
         let im = ImageUtils.get(name, true);
 
@@ -783,7 +783,7 @@ let BlendDemo = {
 
 
     // creates a control to display a source, blend, or destination image
-    blendBox: function blendBox(size) {
+    blendBox(size) {
         let bb = new swing.JLabel();
         bb.setPreferredSize(new java.awt.Dimension(size + 2, size + 2));
         bb.border = swing.BorderFactory.createLineBorder(Color.GRAY, 1);
@@ -792,7 +792,7 @@ let BlendDemo = {
 
     // creates a panel of controls that can be used to interactively
     // experiment with blending modes
-    createUIPanel: function createUIPanel() {
+    createUIPanel() {
         let blendPanel = new TypeGrid();
         blendPanel.setTitle('Blend Mode Compositing Demo');
 
@@ -834,7 +834,7 @@ let BlendDemo = {
 let PorterDuffDemo = new Object() {
     SIZE: 256,
 
-    createUIPanel: function createUIPanel() {
+    createUIPanel() {
         function makeImage(size, circle, c1, c2) {
             size *= 2 / 3;
             let src = ImageUtils.create(size, size, true);
@@ -942,7 +942,7 @@ let PorterDuffDemo = new Object() {
 let StrokeDemo = new Object() {
     SIZE: 256,
 
-    createUIPanel: function createUIPanel() {
+    createUIPanel() {
         let strokePanel = new TypeGrid();
         strokePanel.setTitle('Stroke Demo');
         let thiz = this;
@@ -1019,7 +1019,7 @@ let starBox = new swing.JComponent() {
     pen: new java.awt.BasicStroke(1),
     arms: 46,
 
-    setStroke: function setStroke(s) {
+    setStroke(s) {
         // Note: if we had named this 'stroke'
         // instead of pen, JavaScript would have gotten
         // confused because we are subclassing a Java class
@@ -1029,7 +1029,7 @@ let starBox = new swing.JComponent() {
         this.repaint();
     },
 
-    paintComponent: function paintComponent(g) {
+    paintComponent(g) {
         g.setRenderingHint(
             java.awt.RenderingHints.KEY_ANTIALIASING,
             java.awt.RenderingHints.VALUE_ANTIALIAS_ON
@@ -1079,7 +1079,7 @@ let starBox = new swing.JComponent() {
         g.drawOval(cx + r3 / 2.5 - 8, cy - r3 / 2.5, 16, 12);
     },
 
-    createPaint: function createPaint(outerColor, innerColor, radius, cx, cy, fx, fy) {
+    createPaint(outerColor, innerColor, radius, cx, cy, fx, fy) {
         let center = new java.awt.geom.Point2D.Float(cx, cy);
         if (fx === undefined) fx = cx;
         if (fy === undefined) fy = cx;
