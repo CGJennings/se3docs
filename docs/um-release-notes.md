@@ -43,8 +43,21 @@ The primary difference in this version is that it makes the jump from requiring 
 - Printing a text file in a dark theme could print text in a bad colour.
 - Fixed a resource leak when using Make Deck in a project.
 - Fixed an issue that caused https access to the [online help pages](https://se3docs.cgjennings.ca/index.html) to stop working.
+- When using new themes, `addCustomComponent` component were not immediately visible.
 
 ### For plug-in developers
+
+#### An updated and reorganized *Plug-in Authoring Kit*
+
+This [project folder full of examples and resources for new plug-in developers](https://github.com/CGJennings/se3docs/tree/main/Plug-in%20Authoring%20Kit) has been significantly revamped:
+
+- every high-level folder includes its own `README.md` with more information;
+- examples have been reorganized into categories by use case;
+- new examples are being added;
+- examples that used a full plug-in structure just to create a component editor for a “fake” component have been refactored into standalone scripts and moved to a different location than the “real” plug-in examples;
+- code is being updated to use newer language features and APIs;
+- the graphics templates have been updated;
+- more examples to ease new developers into the 
 
 #### Build system change
 
@@ -58,6 +71,7 @@ If you are building Strange Eons from source, the build system has changed from 
 - Themes can now instantiate their own L&F instead of returning a class name.
 - The `DarkMagicFilter` can be useful for displaying an image designed for a light background on a dark background, or vice-versa.
 - The `PixelArtUpscalingFilter` is useful for scaling up small, high frequency images such as icons.
+- Added `Console.scrollToTop()` and `Console.scrollToBottom()`.
 
 #### High DPI support
 

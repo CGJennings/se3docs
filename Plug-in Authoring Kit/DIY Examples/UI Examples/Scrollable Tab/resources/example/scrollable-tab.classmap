@@ -1,3 +1,0 @@
-# register the demo card in the examples category
-@cat-example
-  Scrollable Tab = diy:example/scrollable-tab-diy.js

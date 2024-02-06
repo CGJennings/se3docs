@@ -1,8 +1,0 @@
-id = CATALOGUEID{6d7fa14a-dfe5-4ca3-8c98-2668500aefd9:2013-8-20-9-5-43-954}
-
-catalog-name = Talisman HD
-catalog-description = Talisman components will use high definition card graphics \
-    when printing and exporting.
-catalog-game = TAL4R
-
-res://talisman/hd-plugin.js

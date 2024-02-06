@@ -5,7 +5,7 @@
  * font family name to the names of the fonts in
  * that family. It will include both system fonts
  * and registered fonts. This may be useful when
- * diagnosing why font or font variant is not
+ * diagnosing why a font or font variant is not
  * behaving as expected, or to check definitively
  * how a font is being registered.
  */
