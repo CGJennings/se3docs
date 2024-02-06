@@ -1,10 +1,8 @@
 # WARNING: If this file is deleted, Strange Eons will no longer
 # see this as a project/task folder!
 first-row = 0
-selected-members = :Interface-examples/basic-preferences.js
-open-folders = :Code Snippets and \
-    Demos:Graphics-and-layout-examples:Interface-examples:Minimal Examples:Project \
-    Examples:Tool Examples
+selected-members = 
+open-folders = 
 notes = 
 res-id = example
 minver = 3726
