@@ -26,6 +26,7 @@ The primary difference in this version is that it makes the jump from requiring 
   - a more modern default font for markup and code editing (Windows and Mac)
   - code completion for certain languages, including TypeScript and HTML
 - Reading text styles from setting values is now much faster, significantly reducing the time it takes to open certain component types.
+- **File/Close All** (or right click editor tab and choose **Close All**) to close all open editors.
 
 #### Theme improvements
 
@@ -44,6 +45,8 @@ The primary difference in this version is that it makes the jump from requiring 
 - Fixed a resource leak when using Make Deck in a project.
 - Fixed an issue that caused https access to the [online help pages](https://se3docs.cgjennings.ca/index.html) to stop working.
 - When using new themes, `addCustomComponent` component were not immediately visible.
+- **Discard Selected** in the the open file dialog shown on application exit could close the wrong editor.
+- Renaming an open file in the project view would caused it to be marked as having unsaved changes.
 
 ### For plug-in developers
 
