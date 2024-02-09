@@ -35,13 +35,13 @@ UIUtils.findComponentByName = (function() {
         if (parent.name === name)
             return parent;
         for (let i = 0; i < parent.componentCount; ++i) {
-            var res = _findComponentByName(parent.getComponent(i), name);
+            let res = _findComponentByName(parent.getComponent(i), name);
             if (res != null)
                 return res;
         }
         if (parent instanceof swing.JMenu) {
             for (let i = 0; i < parent.itemCount; ++i) {
-                var item = parent.getItem(i);
+                let item = parent.getItem(i);
                 if (item == null)
                     continue;
                 res = _findComponentByName(item, name);
@@ -84,7 +84,7 @@ UIUtils.printTree = (function() {
         for (let i = 0; i < level; ++i)
             buff.append("  ");
         buff.append(parent.name == null ? "<?>" : parent.name);
-        var klass = parent.getClass().canonicalName;
+        let klass = parent.getClass().canonicalName;
         if (klass == null)
             klass = parent.getClass().name;
         if (klass.startsWith("javax.swing."))
@@ -95,7 +95,7 @@ UIUtils.printTree = (function() {
         }
         if (parent instanceof swing.JMenu) {
             for (let i = 0; i < parent.itemCount; ++i) {
-                var item = parent.getItem(i);
+                let item = parent.getItem(i);
                 if (item == null)
                     continue;
                 _printTree(buff, item, level + 1);
@@ -109,7 +109,7 @@ UIUtils.printTree = (function() {
         if (!(parent instanceof java.awt.Component))
             throw new Error("parent is not a Component");
         // it is much faster to buffer up long outputs and only call print() once
-        var buff = new java.lang.StringBuilder();
+        let buff = new java.lang.StringBuilder();
         _printTree(buff, parent, 0);
         print(buff.toString());
     };
@@ -221,7 +221,7 @@ AOP.addAfter = function addAfter(object, functionName, afterFunction) {
     if (innerFunc === undefined)
         throw new Error("no function with this name in object: " + functionName);
     let outerFunc = function after_function() {
-        var retVal = innerFunc.apply(this, arguments);
+        let retVal = innerFunc.apply(this, arguments);
         return afterFunction(retVal, arguments, innerFunc, this, functionName);
     };
     outerFunc._innerFunction = innerFunc;

@@ -2,6 +2,12 @@
  * region-hacker.js
  * An example plug-in that allows you to modify the regions
  * on a component and write your changes to its private settings.
+ * You could use it, for example, to make the text box on one
+ * specific card "just a bit bigger" to squeeze in more text.
+ * To use it, install the plug-in, open a component, then
+ * choose this plug-in from the Toolbox menu. Or, right click
+ * and run this script in the project view while a game component
+ * tab is selected.
  */
 
 useLibrary('uilayout');
@@ -200,10 +206,17 @@ function run() {
     function updatePickerImage() {
         if (getEditor() != editor) return;
         let sheet = editor.selectedSheet;
+        let bleedWas = sheet.userBleedMargin;
+        if (bleedWas !== 0) {
+            sheet.userBleedMargin = 0;
+        }
         let image = sheet.paint(
             arkham.sheet.RenderTarget.PREVIEW,
             sheet.templateResolution
         );
+        if (bleedWas !== 0) {
+            sheet.userBleedMargin = bleedWas;
+        }        
         picker.image = image;
     }
 

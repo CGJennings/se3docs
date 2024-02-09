@@ -28,7 +28,7 @@ Portraits.getProvider = function getProvider(gc) {
  * can have a new image set.
  */
 Portraits.listSettablePortraits = function listSettablePortraits(gc) {
-    var settable = [];
+    let settable = [];
     gc = Portraits.getProvider(gc);
     if (gc != null) {
         for (let i = 0; i < gc.portraitCount; ++i) {
@@ -66,13 +66,13 @@ Portraits.setPortrait = function setPortrait(editor, index, image, keepLayout) {
 
     waitCursor(true);
     try {
-        var port = gc.getPortrait(index);
-        var dx = port.panX;
-        var dy = port.panY;
-        var scale = port.scale;
-        var theta = port.rotation;
+        let port = gc.getPortrait(index);
+        let dx = port.panX;
+        let dy = port.panY;
+        let scale = port.scale;
+        let theta = port.rotation;
 
-        var temp = File.createTempFile('pickman', '.png');
+        let temp = File.createTempFile('pickman', '.png');
         ImageUtils.write(image, temp, ImageUtils.FORMAT_PNG);
         gc.getPortrait(index).setSource(temp.absolutePath);
 
