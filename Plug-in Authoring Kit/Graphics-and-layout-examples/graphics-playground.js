@@ -12,7 +12,7 @@ useLibrary('ui');
 useLibrary('markup');
 useLibrary('imageutils');
 
-var paint;
+let paint;
 let errorBox;
 
 function create(diy) {

@@ -12,7 +12,7 @@ importPackage(ca.cgjennings.graphics.filters);
  * Applies painting effects to the specified image, returning the painted
  * version.
  */
-var Painter = {
+let Painter = {
     topExtend: 0,
     bottomExtend: 0,
     leftExtend: 0,
@@ -33,7 +33,7 @@ var Painter = {
 
     paint(image) {
         image = this.edgeExtend(image);
-        var painted = this.colourAndLighting(image);
+        let painted = this.colourAndLighting(image);
         if (this.applyPaintEffect) {
             painted = this.paintEffect(painted);
         }
@@ -110,7 +110,7 @@ var Painter = {
         // source image, then convert the edges into greyscale,
         // and convert that to a black image with those greyscale
         // values as the alpha channel
-        var sketchTemp = this.greyFilt.filter(original, null);
+        let sketchTemp = this.greyFilt.filter(original, null);
         if (this.insensitivity > 0) {
             this.sensitivityFilt.radius = this.insensitivity;
             sketchTemp = this.sensitivityFilt.filter(sketchTemp, null);
@@ -119,12 +119,12 @@ var Painter = {
         sketchTemp = this.outlineFilt.filter(sketchTemp, ImageUtils.create(im.width, im.height, true));
         this.imageStats.analyze(sketchTemp);
 
-        var minA = this.imageStats.alphaMin / 255;
-        var avgA = this.imageStats.alphaMean / 255;
-        var maxA = this.imageStats.alphaMax / 255;
+        let minA = this.imageStats.alphaMin / 255;
+        let avgA = this.imageStats.alphaMean / 255;
+        let maxA = this.imageStats.alphaMax / 255;
 
-        var newMax = 0.5 + this.strength * 0.10;
-        var newAvg = avgA / maxA * newMax;
+        let newMax = 0.5 + this.strength * 0.10;
+        let newAvg = avgA / maxA * newMax;
         newAvg += newAvg * this.strength / 4;
         newAvg = Math.min(newMax, newAvg);
 
@@ -137,7 +137,7 @@ var Painter = {
 
 
         // draw outline over painted image
-        var g = null;
+        let g = null;
         try {
             g = im.createGraphics();
             g.drawImage(sketchTemp, 0, 0, null);
