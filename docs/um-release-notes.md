@@ -47,6 +47,9 @@ The primary difference in this version is that it makes the jump from requiring 
 - When using new themes, `addCustomComponent` component were not immediately visible.
 - **Discard Selected** in the the open file dialog shown on application exit could close the wrong editor.
 - Renaming an open file in the project view would caused it to be marked as having unsaved changes.
+- Identifiers containing `$` were incorrectly marked as invalid during syntax highlighting.
+- A open project file’s name could be truncated in the project view when then file was open and modified.
+- Possible `NullPointerException` when reading an integer setting value stored with a radix point.
 
 ### For plug-in developers
 

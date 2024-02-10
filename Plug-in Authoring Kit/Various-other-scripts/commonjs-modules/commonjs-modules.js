@@ -29,8 +29,8 @@
  */
 
 // import the functions we want to use from the area and volume modules:
-const { square, circle, regularPolygon } = require("./modules/area.js");
-const { cube } = require("./modules/volume.js");
+const { square, circle, regularPolygon } = require("./modules/area");
+const { cube } = require("./modules/volume");
 
 const len = Number(prompt("Enter a length:"));
 printf("A square with sides of length %.0f has area %.0f\n", len, square(len));

@@ -32,9 +32,9 @@ do {
         }
 
         if (attempt == 1) {
-            message += 'What\'s your second guess?';
+            message += `What's your second guess?`;
         } else if (attempt < MAX_ATTEMPTS - 1) {
-            message += 'You have ' + (MAX_ATTEMPTS - attempt) + ' more guesses.';
+            message += `You have ${MAX_ATTEMPTS - attempt} more guesses.`;
         } else {
             message += 'Last guess!';
         }
@@ -43,7 +43,7 @@ do {
     if (guess == number) {
         message = 'You got it!';
     } else {
-        message = 'Close! I was thinking of ' + number + '.';
+        message = `Close! I was thinking of ${number}.`;
     }
 
 } while (guess != null && confirm.yesno(message + ' Play again?'));

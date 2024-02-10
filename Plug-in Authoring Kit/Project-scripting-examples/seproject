@@ -1,0 +1,4 @@
+# WARNING: If this file is deleted, Strange Eons will no longer
+# see this as a project/task folder!
+icon = icons/project/mt19.png
+type = TASK
