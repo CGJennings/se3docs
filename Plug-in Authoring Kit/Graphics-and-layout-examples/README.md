@@ -5,6 +5,23 @@ and effects that can be used when painting card faces.
 Right click an example and choose **Run**, or double-click
 to open example to see how an effect is achieved.
 
+## `cloud-fonts.js`
+Cloud fonts let you access thousands of free fonts on demand.
+See how to iterate over available Cloud Fonts, request a specific
+font family by name, register the font family, or get Font objects.
+
+## `graphics-playground.js`
+Experiment with card face painting code and see the results instantly
+on a sample card.
+
+## `image-filters.js`
+Play with different graphics filters available in the Strange Eons API.
+
+## `page-shapes.js`
+Learn to use page shapes, which let you flow text within the confines
+of a shape. Pages shapes let you fit text around other content or
+implement artistic effects.
+
 ## `painting-techniques.js`
 See and experiment with various techniques you can use when
 painting game components:
