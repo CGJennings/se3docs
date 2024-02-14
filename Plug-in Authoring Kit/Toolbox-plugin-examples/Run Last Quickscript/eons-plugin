@@ -1,0 +1,7 @@
+#
+# Run Last Quickscript Root File
+#
+
+id = CATALOGUEID{99d6ac20-04bc-4d3c-9dea-cb5af63dc29b:2024-1-13-1-26-28-621}
+
+res://example/RunLastQuickscript.js
