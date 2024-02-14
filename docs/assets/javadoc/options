@@ -1,0 +1,26 @@
+-classpath
+'C:/Users/chris/.m2/repository/com/formdev/flatlaf/3.3/flatlaf-3.3.jar;C:/Users/chris/.m2/repository/com/fifesoft/rsyntaxtextarea/3.3.4/rsyntaxtextarea-3.3.4.jar;C:/Users/chris/.m2/repository/com/fifesoft/autocomplete/3.3.1/autocomplete-3.3.1.jar;C:/Users/chris/.m2/repository/com/fifesoft/languagesupport/3.3.0/languagesupport-3.3.0.jar;C:/Users/chris/.m2/repository/org/commonmark/commonmark/0.21.0/commonmark-0.21.0.jar;C:/Users/chris/.m2/repository/org/commonmark/commonmark-ext-gfm-tables/0.21.0/commonmark-ext-gfm-tables-0.21.0.jar;C:/Users/chris/.m2/repository/org/commonmark/commonmark-ext-gfm-strikethrough/0.21.0/commonmark-ext-gfm-strikethrough-0.21.0.jar;C:/Users/chris/.m2/repository/org/commonmark/commonmark-ext-image-attributes/0.21.0/commonmark-ext-image-attributes-0.21.0.jar;C:/Users/chris/.m2/repository/com/miglayout/miglayout-swing/11.3/miglayout-swing-11.3.jar;C:/Users/chris/.m2/repository/com/miglayout/miglayout-core/11.3/miglayout-core-11.3.jar;C:/Users/chris/.m2/repository/local/jar-loader/1.0/jar-loader-1.0.jar;C:/Users/chris/.m2/repository/local/j2k/1.0/j2k-1.0.jar;C:/Users/chris/.m2/repository/local/layout-river/1.0/layout-river-1.0.jar;C:/Users/chris/.m2/repository/local/spelling/1.0/spelling-1.0.jar;C:/Users/chris/.m2/repository/local/strange-rhino/1.0/strange-rhino-1.0.jar;C:/Users/chris/.m2/repository/local/typescript-services/1.0/typescript-services-1.0.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'11'
+-sourcepath
+'D:/projects/strange-eons/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'D:/projects/strange-eons/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'strange-eons 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' 'D:/projects/strange-eons/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'strange-eons 1.0-SNAPSHOT API'

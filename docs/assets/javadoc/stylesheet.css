@@ -2,6 +2,8 @@
  * Javadoc style sheet
  */
 
+@import url('resources/fonts/dejavu.css');
+
 /*
  * Styles for individual HTML elements.
  *
@@ -9,10 +11,10 @@
  * HTML element throughout the page.
  */
 
- body {
+body {
     background-color:#ffffff;
-    color:#24292e;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    color:#353833;
+    font-family:'DejaVu Sans', Arial, Helvetica, sans-serif;
     font-size:14px;
     margin:0;
     padding:0;
@@ -36,7 +38,7 @@ a[href]:hover, a[href]:focus {
     color:#bb7a2a;
 }
 a[name] {
-    color:#24292e;
+    color:#353833;
 }
 a[name]:before, a[name]:target, a[id]:before, a[id]:target {
     content:"";
@@ -46,7 +48,7 @@ a[name]:before, a[name]:target, a[id]:before, a[id]:target {
     margin-top:-129px;
 }
 pre {
-    font-family:monospace;
+    font-family:'DejaVu Sans Mono', monospace;
     font-size:14px;
 }
 h1 {
@@ -72,19 +74,19 @@ ul {
     list-style-type:disc;
 }
 code, tt {
-    font-family:monospace;
+    font-family:'DejaVu Sans Mono', monospace;
     font-size:14px;
     padding-top:4px;
     margin-top:8px;
     line-height:1.4em;
 }
 dt code {
-    font-family:monospace;
+    font-family:'DejaVu Sans Mono', monospace;
     font-size:14px;
     padding-top:4px;
 }
 table tr td dt code {
-    font-family:monospace;
+    font-family:'DejaVu Sans Mono', monospace;
     font-size:14px;
     vertical-align:top;
     padding-top:4px;
@@ -135,7 +137,7 @@ sup {
  * Styles for navigation bar.
  */
 .bar {
-    background-color:#300c35;
+    background-color:#4D7A97;
     color:#FFFFFF;
     padding:.8em .5em .4em .8em;
     height:auto;/*height:1.8em;*/
@@ -152,7 +154,7 @@ sup {
     background-color:#ffffff;
 }
 .topNav {
-    background-color:#300c35;
+    background-color:#4D7A97;
     color:#FFFFFF;
     float:left;
     padding:0;
@@ -165,7 +167,7 @@ sup {
 }
 .bottomNav {
     margin-top:10px;
-    background-color:#300c35;
+    background-color:#4D7A97;
     color:#FFFFFF;
     float:left;
     padding:0;
@@ -230,10 +232,9 @@ ul.subNavList li {
     text-transform:uppercase;
 }
 .navBarCell1Rev {
-    background-color:#d1c4e9;
+    background-color:#F8981D;
     color:#253441;
     margin: auto 5px;
-    border-radius: 2px;
 }
 .skipNav {
     position:absolute;
@@ -342,7 +343,7 @@ ul.blockList li.blockList h2 {
 .contentContainer .description dl dd, .contentContainer .details dl dd, .serializedFormContainer dl dd {
     margin:5px 0 10px 0px;
     font-size:14px;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-family:'DejaVu Serif', Georgia, "Times New Roman", Times, serif;
 }
 .serializedFormContainer dl.nameValue dt {
     margin-left:1px;
@@ -442,27 +443,27 @@ table tr td dl, table tr td dl dt, table tr td dl dd {
     margin:0px;
     white-space:pre;
 }
+.constantsSummary caption a:link, .constantsSummary caption a:visited,
+.useSummary caption a:link, .useSummary caption a:visited {
+    color:#1f389c;
+}
 .overviewSummary caption a:link, .memberSummary caption a:link, .typeSummary caption a:link,
-.constantsSummary caption a:link, .deprecatedSummary caption a:link,
+.deprecatedSummary caption a:link,
 .requiresSummary caption a:link, .packagesSummary caption a:link, .providesSummary caption a:link,
 .usesSummary caption a:link,
 .overviewSummary caption a:hover, .memberSummary caption a:hover, .typeSummary caption a:hover,
-.constantsSummary caption a:hover, .deprecatedSummary caption a:hover,
+.useSummary caption a:hover, .constantsSummary caption a:hover, .deprecatedSummary caption a:hover,
 .requiresSummary caption a:hover, .packagesSummary caption a:hover, .providesSummary caption a:hover,
 .usesSummary caption a:hover,
 .overviewSummary caption a:active, .memberSummary caption a:active, .typeSummary caption a:active,
-.constantsSummary caption a:active, .deprecatedSummary caption a:active,
+.useSummary caption a:active, .constantsSummary caption a:active, .deprecatedSummary caption a:active,
 .requiresSummary caption a:active, .packagesSummary caption a:active, .providesSummary caption a:active,
 .usesSummary caption a:active,
 .overviewSummary caption a:visited, .memberSummary caption a:visited, .typeSummary caption a:visited,
-.constantsSummary caption a:visited, .deprecatedSummary caption a:visited,
+.deprecatedSummary caption a:visited,
 .requiresSummary caption a:visited, .packagesSummary caption a:visited, .providesSummary caption a:visited,
 .usesSummary caption a:visited {
     color:#FFFFFF;
-}
-.useSummary caption a:link, .useSummary caption a:hover, .useSummary caption a:active,
-.useSummary caption a:visited {
-    color:#1f389c;
 }
 .overviewSummary caption span, .memberSummary caption span, .typeSummary caption span,
 .useSummary caption span, .constantsSummary caption span, .deprecatedSummary caption span,
@@ -475,7 +476,7 @@ table tr td dl, table tr td dl dt, table tr td dl dd {
     padding-bottom:7px;
     display:inline-block;
     float:left;
-    background-color:#d1c4e9;
+    background-color:#F8981D;
     border: none;
     height:16px;
 }
@@ -488,7 +489,7 @@ table tr td dl, table tr td dl dt, table tr td dl dd {
     margin-right:3px;
     display:inline-block;
     float:left;
-    background-color:#d1c4e9;
+    background-color:#F8981D;
     height:16px;
 }
 .memberSummary caption span.tableTab span, .packagesSummary caption span.tableTab span,
@@ -500,7 +501,7 @@ table tr td dl, table tr td dl dt, table tr td dl dd {
     margin-right:3px;
     display:inline-block;
     float:left;
-    background-color:#300c35;
+    background-color:#4D7A97;
     height:16px;
 }
 .memberSummary caption span.tableTab, .memberSummary caption span.activeTableTab,
@@ -521,7 +522,7 @@ table tr td dl, table tr td dl dt, table tr td dl dd {
     width:5px;
     position:relative;
     float:left;
-    background-color:#d1c4e9;
+    background-color:#F8981D;
 }
 .memberSummary .activeTableTab .tabEnd, .packagesSummary .activeTableTab .tabEnd,
 .overviewSummary .activeTableTab .tabEnd, .typeSummary .activeTableTab .tabEnd {
@@ -530,7 +531,7 @@ table tr td dl, table tr td dl dt, table tr td dl dd {
     margin-right:3px;
     position:relative; 
     float:left;
-    background-color:#d1c4e9;
+    background-color:#F8981D;
 }
 .memberSummary .tableTab .tabEnd, .packagesSummary .tableTab .tabEnd,
 .overviewSummary .tableTab .tabEnd, .typeSummary .tableTab .tabEnd {
@@ -538,7 +539,7 @@ table tr td dl, table tr td dl dt, table tr td dl dd {
     width:5px;
     margin-right:3px;
     position:relative;
-    background-color:#300c35;
+    background-color:#4D7A97;
     float:left;
 }
 .rowColor th, .altColor th {
@@ -629,7 +630,7 @@ ul.blockList ul.blockList ul.blockList li.blockList h3 {
 }
 div.block {
     font-size:14px;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-family:'DejaVu Serif', Georgia, "Times New Roman", Times, serif;
 }
 td.colLast div {
     padding-top:0px;
@@ -665,7 +666,7 @@ h1.hidden {
 }
 .deprecationBlock {
     font-size:14px;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-family:'DejaVu Serif', Georgia, "Times New Roman", Times, serif;
     border-style:solid;
     border-width:thin;
     border-radius:10px;
@@ -749,7 +750,7 @@ main, nav, header, footer, section {
     font-weight:bold;
     font-size:15px;
     padding:7px 0 7px 3px;
-    background-color:#300c35;
+    background-color:#4D7A97;
     color:#FFFFFF;
 }
 .resultItem {
@@ -766,6 +767,7 @@ main, nav, header, footer, section {
 ul.ui-autocomplete {
     position:fixed;
     z-index:999999;
+    background-color: #FFFFFF;
 }
 ul.ui-autocomplete  li {
     float:left;
@@ -775,6 +777,9 @@ ul.ui-autocomplete  li {
 .resultHighlight {
     font-weight:bold;
 }
+.ui-autocomplete .result-item {
+    font-size: inherit;
+}
 #search {
     background-image:url('resources/glass.png');
     background-size:13px;
@@ -783,8 +788,6 @@ ul.ui-autocomplete  li {
     padding-left:20px;
     position:relative;
     right:-18px;
-    border:2px #fff solid;
-    border-radius: 2px;
 }
 #reset {
     background-color: rgb(255,255,255);
