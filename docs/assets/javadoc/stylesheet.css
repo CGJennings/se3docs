@@ -2,19 +2,21 @@
  * Javadoc style sheet
  */
 
-@import url('resources/fonts/dejavu.css');
-
 /*
  * Styles for individual HTML elements.
  *
  * These are styles that are specific to individual HTML elements. Changing them affects the style of a particular
  * HTML element throughout the page.
  */
-
+ :root {
+    --body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --monospace: Menlo, Monaco, "Cascadia Code", "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+    --header-bg: #300c35;
+}
 body {
     background-color:#ffffff;
     color:#353833;
-    font-family:'DejaVu Sans', Arial, Helvetica, sans-serif;
+    font-family: var(--body);
     font-size:14px;
     margin:0;
     padding:0;
@@ -48,7 +50,7 @@ a[name]:before, a[name]:target, a[id]:before, a[id]:target {
     margin-top:-129px;
 }
 pre {
-    font-family:'DejaVu Sans Mono', monospace;
+    font-family: var(--monospace);
     font-size:14px;
 }
 h1 {
@@ -74,19 +76,19 @@ ul {
     list-style-type:disc;
 }
 code, tt {
-    font-family:'DejaVu Sans Mono', monospace;
+    font-family: var(--monospace);
     font-size:14px;
     padding-top:4px;
     margin-top:8px;
     line-height:1.4em;
 }
 dt code {
-    font-family:'DejaVu Sans Mono', monospace;
+    font-family: var(--monospace);
     font-size:14px;
     padding-top:4px;
 }
 table tr td dt code {
-    font-family:'DejaVu Sans Mono', monospace;
+    font-family: var(--monospace);
     font-size:14px;
     vertical-align:top;
     padding-top:4px;
@@ -137,7 +139,7 @@ sup {
  * Styles for navigation bar.
  */
 .bar {
-    background-color:#4D7A97;
+    background-color:var(--header-bg);
     color:#FFFFFF;
     padding:.8em .5em .4em .8em;
     height:auto;/*height:1.8em;*/
@@ -154,20 +156,21 @@ sup {
     background-color:#ffffff;
 }
 .topNav {
-    background-color:#4D7A97;
+    background-color:var(--header-bg);
     color:#FFFFFF;
     float:left;
     padding:0;
     width:100%;
     clear:right;
     height:2.8em;
-    padding-top:10px;
+    padding-top:16px;
+    padding-bottom:10px;
     overflow:hidden;
     font-size:12px; 
 }
 .bottomNav {
     margin-top:10px;
-    background-color:#4D7A97;
+    background-color:var(--header-bg);
     color:#FFFFFF;
     float:left;
     padding:0;
@@ -195,6 +198,9 @@ ul.navList, ul.subNavList {
     float:left;
     margin:0 25px 0 0;
     padding:0;
+}
+.subNav > .navList {
+    padding-top: 6px;
 }
 ul.navList li{
     list-style:none;
@@ -232,7 +238,7 @@ ul.subNavList li {
     text-transform:uppercase;
 }
 .navBarCell1Rev {
-    background-color:#F8981D;
+    background-color:#f8d31d;
     color:#253441;
     margin: auto 5px;
 }
@@ -343,7 +349,6 @@ ul.blockList li.blockList h2 {
 .contentContainer .description dl dd, .contentContainer .details dl dd, .serializedFormContainer dl dd {
     margin:5px 0 10px 0px;
     font-size:14px;
-    font-family:'DejaVu Serif', Georgia, "Times New Roman", Times, serif;
 }
 .serializedFormContainer dl.nameValue dt {
     margin-left:1px;
@@ -476,7 +481,7 @@ table tr td dl, table tr td dl dt, table tr td dl dd {
     padding-bottom:7px;
     display:inline-block;
     float:left;
-    background-color:#F8981D;
+    background-color:#dee3e9;
     border: none;
     height:16px;
 }
@@ -489,7 +494,7 @@ table tr td dl, table tr td dl dt, table tr td dl dd {
     margin-right:3px;
     display:inline-block;
     float:left;
-    background-color:#F8981D;
+    background-color:#dee3e9;
     height:16px;
 }
 .memberSummary caption span.tableTab span, .packagesSummary caption span.tableTab span,
@@ -501,7 +506,7 @@ table tr td dl, table tr td dl dt, table tr td dl dd {
     margin-right:3px;
     display:inline-block;
     float:left;
-    background-color:#4D7A97;
+    background-color:var(--header-bg);
     height:16px;
 }
 .memberSummary caption span.tableTab, .memberSummary caption span.activeTableTab,
@@ -522,7 +527,7 @@ table tr td dl, table tr td dl dt, table tr td dl dd {
     width:5px;
     position:relative;
     float:left;
-    background-color:#F8981D;
+    background-color:#dee3e9;
 }
 .memberSummary .activeTableTab .tabEnd, .packagesSummary .activeTableTab .tabEnd,
 .overviewSummary .activeTableTab .tabEnd, .typeSummary .activeTableTab .tabEnd {
@@ -531,7 +536,7 @@ table tr td dl, table tr td dl dt, table tr td dl dd {
     margin-right:3px;
     position:relative; 
     float:left;
-    background-color:#F8981D;
+    background-color:#dee3e9;
 }
 .memberSummary .tableTab .tabEnd, .packagesSummary .tableTab .tabEnd,
 .overviewSummary .tableTab .tabEnd, .typeSummary .tableTab .tabEnd {
@@ -539,7 +544,7 @@ table tr td dl, table tr td dl dt, table tr td dl dd {
     width:5px;
     margin-right:3px;
     position:relative;
-    background-color:#4D7A97;
+    background-color:var(--header-bg);
     float:left;
 }
 .rowColor th, .altColor th {
@@ -630,7 +635,6 @@ ul.blockList ul.blockList ul.blockList li.blockList h3 {
 }
 div.block {
     font-size:14px;
-    font-family:'DejaVu Serif', Georgia, "Times New Roman", Times, serif;
 }
 td.colLast div {
     padding-top:0px;
@@ -666,7 +670,6 @@ h1.hidden {
 }
 .deprecationBlock {
     font-size:14px;
-    font-family:'DejaVu Serif', Georgia, "Times New Roman", Times, serif;
     border-style:solid;
     border-width:thin;
     border-radius:10px;
@@ -750,7 +753,7 @@ main, nav, header, footer, section {
     font-weight:bold;
     font-size:15px;
     padding:7px 0 7px 3px;
-    background-color:#4D7A97;
+    background-color:var(--header-bg);
     color:#FFFFFF;
 }
 .resultItem {
@@ -781,17 +784,21 @@ ul.ui-autocomplete  li {
     font-size: inherit;
 }
 #search {
-    background-image:url('resources/glass.png');
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Emagnify%3C/title%3E%3Cpath d='M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z' /%3E%3C/svg%3E");
     background-size:13px;
     background-repeat:no-repeat;
-    background-position:2px 3px;
-    padding-left:20px;
+    background-position:2px 6px;
     position:relative;
     right:-18px;
+    width: 25em;
+    border-color: #fff;
+    border-radius: 4px;
+    padding: 2px 2px 2px 20px;
+    font-family: var(--body);    
 }
 #reset {
     background-color: rgb(255,255,255);
-    background-image:url('resources/x.png');
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ctitle%3Ewindow-close%3C/title%3E%3Cpath d='M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z' /%3E%3C/svg%3E");
     background-position:center;
     background-repeat:no-repeat;
     background-size:12px;
@@ -815,7 +822,7 @@ ul.ui-autocomplete  li {
     font-size:12px;
 }
 .searchTagResult:before, .searchTagResult:target {
-    color:red;
+    color:rgb(107, 0, 0);
 }
 .moduleGraph span {
     display:none;
