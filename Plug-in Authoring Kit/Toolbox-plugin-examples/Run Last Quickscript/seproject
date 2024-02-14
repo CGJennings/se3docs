@@ -1,0 +1,5 @@
+# WARNING: If this file is deleted, Strange Eons will no longer
+# see this as a project/task folder!
+clean-ext = class
+bundle-file = RunLastQuickscript.seplugin
+type = PLUGIN
