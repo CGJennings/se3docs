@@ -241,6 +241,7 @@ ul.subNavList li {
     background-color:#f8d31d;
     color:#253441;
     margin: auto 5px;
+    border-radius: 4px;
 }
 .skipNav {
     position:absolute;
@@ -484,6 +485,8 @@ table tr td dl, table tr td dl dt, table tr td dl dd {
     background-color:#dee3e9;
     border: none;
     height:16px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 }
 .memberSummary caption span.activeTableTab span, .packagesSummary caption span.activeTableTab span,
 .overviewSummary caption span.activeTableTab span, .typeSummary caption span.activeTableTab span {
@@ -496,6 +499,8 @@ table tr td dl, table tr td dl dt, table tr td dl dd {
     float:left;
     background-color:#dee3e9;
     height:16px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;    
 }
 .memberSummary caption span.tableTab span, .packagesSummary caption span.tableTab span,
 .overviewSummary caption span.tableTab span, .typeSummary caption span.tableTab span {
@@ -508,6 +513,8 @@ table tr td dl, table tr td dl dt, table tr td dl dd {
     float:left;
     background-color:var(--header-bg);
     height:16px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;    
 }
 .memberSummary caption span.tableTab, .memberSummary caption span.activeTableTab,
 .packagesSummary caption span.tableTab, .packagesSummary caption span.activeTableTab,
@@ -791,10 +798,11 @@ ul.ui-autocomplete  li {
     position:relative;
     right:-18px;
     width: 25em;
-    border-color: #fff;
+    border: #fff 2px solid;
     border-radius: 4px;
     padding: 2px 2px 2px 20px;
-    font-family: var(--body);    
+    font-family: var(--body);
+    outline-color: #039be5;
 }
 #reset {
     background-color: rgb(255,255,255);

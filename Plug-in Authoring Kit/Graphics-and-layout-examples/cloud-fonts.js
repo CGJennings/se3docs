@@ -47,11 +47,13 @@ println(`${totalFonts} fonts in ${families.length} families`);
 
 println();
 println("Registering the font family Fira Sans");
+println(`"Fira Sans" is registered: ${ResourceKit.isFamilyRegistered("Fira Sans")}`);
 let firaSans = cfc.getFamily("Fira Sans");
 let registrationResults = firaSans.register();
 for (let i=0; i< registrationResults.length; ++i) {
     println(`    ${registrationResults[i]}`);
 }
+println(`"Fira Sans" is registered: ${ResourceKit.isFamilyRegistered("Fira Sans")}`);
 
 // If registration was successful, you can now use this font by its
 // family name in plug-ins or markup tags. For example, create any
@@ -64,8 +66,9 @@ for (let i=0; i< registrationResults.length; ++i) {
 // the font is available whenever the plug-in is installed. Alternatively,
 // download 
 
-// Besides the registering the font, you can also obtain a Java Font,
-// either for each font individually or all at once.
-let fontObj = firaSans.fonts[0];
-println();
-println(fontObj);
+// Besides the registering the font, you can also obtain an (AWT) Font
+// instance, either for each font individually or all at once.
+
+let sample = new javax.swing.JLabel("Fira Sans!");
+sample.font = firaSans.fonts[0].deriveFont(24);
+Console.printComponent(sample);
