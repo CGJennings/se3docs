@@ -4,7 +4,7 @@
 
 A conversion map file is used to register new kinds of component conversions.  Component conversions automate the process of converting one type of component to another. When the currently edited component has applicable conversions, they will be listed under the [**Edit/Convert to**](um-gc-convert.md) menu item.
 
-To *register the contents of a conversion map file with Strange Eons*, call [`gamedata.ClassMap.add(path)`](assets/javadoc/gamedata/ClassMap.html#add) using the resource path of the class map file. This can only be done in extension plug-ins.
+To *register the contents of a conversion map file with Strange Eons*, call [`gamedata.ConversionMap.add(path)`](assets/javadoc/gamedata/ClassMap.html#add) using the resource path of the class map file. This can only be done in extension plug-ins.
 
 > Game components can also be converted automatically when they are loaded as part of a version upgrade process. This is [initiated by the component's class or script directly](dm-compatibility.html#transitioning-to-a-new-component-class) and does not involve a conversion map, but the rest of the conversion process is similar.
 
@@ -12,7 +12,7 @@ To *register the contents of a conversion map file with Strange Eons*, call [`ga
 
 The format of class map files is similar to that used for [class maps](dm-res-classmap.md). They can be edited with the [code editor](dm-code-editor.md). Lines starting with `#` are comments that are ignored by Strange Eons.
 
-Other lines either define the start of a *group* or *define a conversion*. Conversion entries include a `=` to separate the conversion's description from its parameters. Groups do not include a `=`.
+Other lines either define the start of a *group* or *define a conversion*. Conversion entries include an `=` to separate the conversion's description from its parameters. Groups do not include a `=`.
 
 > By convention, conversions are indented while groups are not, and a blank line is added between groups. This makes it easy to see which group a conversion belongs to.
 
@@ -100,5 +100,7 @@ As stated earlier, an extension plug-in can register a conversion map with `game
 4. If the new component defines a function named `onConvertTo`, it is called with the new component and the session object.
 
 5. Once both versions of the component have had a chance to influence the conversion process, some automatic conversion steps are performed. This consists of copying the component's name, design rationale comments, any expansion symbols set on the component (using the built-in [expansion symbol system](dm-register-game.html)), and the component's portrait images. The automatic conversion steps can be disabled, if required, from `onConvertFrom` or `onConvertTo`.
+
+   > For compiled rather than scripted components, override the `public void convertFrom(ConversionSession session)`/`public void convertFrom(ConversionSession session)` methods, as appropriate.
 
 6. Finally, the now modified target component will be opened in a new editor tab.
