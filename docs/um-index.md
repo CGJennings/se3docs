@@ -9,12 +9,6 @@
    4. [Installation on **Linux**](um-install-linux.md)
    5. [Installation on **Chromebooks**](um-install-chromebook.md)
    6. [Installation on **other platforms**](um-install-other.md)
-   7. [Transferring settings from another computer](um-install-user-folder.md)
-   8. [Upgrading from Strange Eons 1 or 2](um-install-upgrading.md)
-   9. [Choosing language settings](um-install-languages.md)
-   10. [Troubleshooting](um-install-troubleshooting.md)
-   11. [Portable installations](um-install-portable.md)
-   12. [Command line options](um-install-command-line-options.md)
 2. **Plug-ins**
    1. [Plug-in essentials](um-plugins-intro.md)
    2. [Downloading and installing plug-ins](um-plugins-catalogue.md)
@@ -65,11 +59,16 @@
    6. [Generic tasks](um-proj-generic-task.md)
    7. [Searching projects](um-proj-search.md)
    8. [Automation scripts](um-proj-automation.md)
-   9. [Making cards from a CSV data file](um-proj-csv-factory.md)
+   9. [Making cards from a speadsheet (CSV data)](um-proj-csv-factory.md)
    10. [Bulk exporting to image files](um-bulk-export.md)
    11. [Supported project file types](um-proj-file-types.md)
-7. **Running in non-interactive mode**
-   1. [Running a script from the command line](um-run-script.md)
+7. **Troubleshooting and advanced configuration options**
+   1. [Transferring settings from another computer](um-install-user-folder.md)
+   2. [Upgrading from Strange Eons 1 or 2](um-install-upgrading.md)
+   3. [Choosing language settings](um-install-languages.md)
+   4. [Troubleshooting](um-install-troubleshooting.md)
+   5. [Portable installations](um-install-portable.md)
+   6. [Command line options](um-install-command-line-options.md)
+   7. [Running a script from the command line](um-run-script.md)
 8. **Appendix**
    1. [Release notes](um-release-notes.md)
-   2. [Java 9+ compatibility](um-java-compatibility.md)

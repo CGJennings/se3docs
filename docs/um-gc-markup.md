@@ -207,11 +207,23 @@ Variable tags are replaced by values from other parts of the component. Which va
 
 ## Gender-adaptive tags
 
+> **Note:** These tags are intended mainly to simplify writing generalized rules for languages with gendered nouns (as in *il y a **une** chaise*/*il y a **un** vase*.) They are not meant to limit designer freedom with respect to gender and they are a completely optional feature. If your design requires, for example, plural pronouns, neuter pronouns, or even a completely new pronoun, don’t let your needs be restricted by what the tags provide!
+
 Some components allow you to specify a gender and then use tags to adapt text automatically to the selected gender. These have the form `<m/f>` where `m` is the masculine text and `f` is the feminine:
 
 `<He/She> became the High Priest<-/ess> of Set.`
 
-Notice that `-` is used to indicate no text. This prevents confusion with closing tags.
+This is rendered as either:
+
+`She became the High Priestess of Set.`
+
+or:
+
+`He became the High Priest of Set.`
+
+depending on what gender the component is set to. (Notice that `-` is used to indicate no text. This prevents confusion with closing tags.)
+
+> **Tip:** In English, if you are describing the player rather than a character, I recommend using **they/their**, as in *the active player draws one card and adds it to their hand*. This is inclusive without the need for awkward constructions, and it is consistent with hundreds of years of English usage. If it feels wrong because it was hammered into your head that *they* is plural, well, maybe it will help to realize that you’ve “misused” the second person plural pronoun *you* your entire life (*thee* is the singular).
 
 ## Advanced tags
 
@@ -235,6 +247,6 @@ Runs a script, calling its `main()` function. If it returns a non-null value, th
 
 `<eval expression>`
 
-Evaluates the expression that is passed to and uses the result to replace the `<eval>` tag as if it were a macro. Example: `<eval "Math.pow(2,10).toFixed(0);">`
+Evaluates `expression` and uses the result to replace the `<eval>` tag as if it were a macro. Example: `<eval "Math.pow(2,10).toFixed(0);">`
 
 Use caution: tags that run script code can significantly slow down redrawing. If the script contains bugs it could even cause the app to freeze.  They are intended mainly for components that need to make complex use of the markup system and will be redrawn infrequently.
