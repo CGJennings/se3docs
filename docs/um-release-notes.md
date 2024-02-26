@@ -6,50 +6,78 @@
 >
 > **Special note:** Because version 3.4 involves *major architectural changes*, it is more likely than usual that the information below will change substantially before release.
 
-***Developers can preview this version by [checking out the `main` branch](https://github.com/CGJennings/strange-eons/tree/main).***
+<!-- ***Developers can preview this version by [checking out the `main` branch](https://github.com/CGJennings/strange-eons/tree/main).*** -->
 
-<!--
-**This version is currently available as a release candidate from GitHub. Alternatively, developers can preview this version by [checking out the `main` branch](https://github.com/CGJennings/strange-eons/tree/main).**
--->
+***Unsigned previews are now [available for download](https://strangeeons.cgjennings.ca/download.html). Alternatively, developers can work with the latest updates by [checking out the `main` branch](https://github.com/CGJennings/strange-eons/tree/main).***
 
 ### Features, enhancements, and changes
 
-The primary difference in this version is that it makes the jump from requiring Java 8 to Java 11. However, most users should not notice this difference since the installer packages for Strange Eons include their own private Java environment.
+> **Move to Java 11:**  
+> Strange Eons now requires Java 11. Most users should not notice since the installer packages for Strange Eons include their own private Java environment.
 
-- High DPI display support. This means proper support for “Retina” displays and setups that use desktop scaling. Note that the *underlying* support at both the Java and operating system level is not always perfect. For example, you may encounter weird issues when moving windows between displays with different scaling factors.
-- As part of implementing high DPI support, nearly every graphic used by Strange Eons was updated or replaced. If you notice an image that appears to be missing or incorrect, please report it as a bug by [opening an issue](https://github.com/CGJennings/strange-eons/issues), using the **Help/Report a Bug** menu item, or submitting a pull request. 
-- Markdown document support. Projects support markdown (`.md`) files, which are a common, easy-to-use way to create styled documents from plain text. Double-click a markdown file to view it, or right click and choose **Open** to edit.
-- Improvements to the text/source code editing experience, including:
-  - search and replace highlights all matches
-  - highlight occurrences of identifier under caret
-  - updated syntax colour themes
-  - a more modern default font for markup and code editing (Windows and Mac)
-  - code completion for certain languages, including TypeScript and HTML
-- Reading text styles from setting values is now much faster, significantly reducing the time it takes to open certain component types.
-- **File/Close All** (or right click editor tab and choose **Close All**) to close all open editors.
+#### New generic card types
 
-#### Theme improvements
+Previously, Strange Eons included generic components for tokens and decks (and thus boards), but nothing for creating cards. This meant that new users couldn’t play around with it without installing at least one extension. This version adds over a dozen “generic” card types in sizes commonly offered by card printing services. Each type offers the same features: title and body text, a portrait, and the ability to customize design elements like the card’s background graphics. They strike a balance between simplicity and flexibility, and are perfect for quickly creating basic designs without having to create a plug-in.
 
-- Themes can now optionally include a small screenshot to give the user an idea of what the theme will look like without loading it.
-- The built-in themes have new icons to help signal which themes are related, and related themes form groups that will be listed together in the preferences menu.
+#### Cloud fonts
+
+[Cloud fonts](um-cloud-fonts.md) let both users and [plug-in developers](dm-cloud-fonts.md) download fonts on demand. Cloud fonts can be used in Strange Eons without finding the relevant files yourself or installing them in your operating system. End users can **Reserve** cloud fonts in the **Preferences** dialog. Reserved fonts are kept up to date and registered automatically during startup. That means you can use them anywhere you can name a type family.
+
+#### High DPI display support
+
+This means proper support for “Retina” displays and setups that use desktop scaling. Note that the *underlying* support at both the Java and operating system level is not always perfect. For example, you may encounter weird issues when moving windows between displays with different scaling factors.
+
+Part of adding high DPI support was replacing or updating nearly every graphic used by Strange Eons. If you notice an image that appears to be missing or incorrect, please report it as a bug by [opening an issue](https://github.com/CGJennings/strange-eons/issues), using the **Help/Report a Bug** menu item, or submitting a pull request.
+
+#### Markdown document support
+
+Projects support markdown (`.md`) files for documentation. Markdown is a simple and intuitive way to format text using plain symbols, such as asterisks, dashes, and brackets. Double-click a markdown file to view it, or right click and choose **Open** to edit.
+
+#### Text/source editing
+
+The previous “in house” text/code file editor has been replaced with a new implementation based on `RSyntaxTextArea`. The new system has better support for high DPI displays, and enables new functionality such as highlighting search and replace matches and occurrences of the identifier under the caret. Work is still ongoing, with additional new features planned. In a few areas, the new editor has not yet reached feature parity.
+
+Other code editing improvements include updated syntax colour themes and a more modern default font for markup and code editing (Windows and Mac).
+
+<!--  code completion for certain languages, including TypeScript and HTML -->
+
+#### Themes
+
+- Theme preferences now include a small screenshot to preview themes without installing them. Hover the pointer for a larger image.
+
+- The icons for the built-in themes have been updated to better signal which themes are related, and related themes are  be listed together in the preferences menu.
 - The built-in themes have been updated, in some cases substantially.
 - The Dagon theme is now a proper “dark mode” variation of Hydra. The work-in-progress Yuggoth theme has been removed, but some of its elements were merged into the revised Dagon theme.
 
+#### It’s the little things…
+
+- Reading text styles from setting values is now much faster, significantly reducing the time it takes to open certain component types.
+
+- **File/Close All** (or right click editor tab and choose **Close All**) to close all open editors.
+
 ### Bug fixes
 
+- Attempting to open a portrait containing certain characters, including `[],=+` would fail, resulting in a broken image. Also affects certain other UI elements that accept a file path/file name, but portraits are the most prominent example.
+- Editors for new DIY components could initially mark the component as having unsaved changes.
 - Attempting to resize a navigation panel could trigger an infinite loop if other open editors had a navigation panel that was disabled.
 - **View/Source Navigator** stopped working correctly.
+- When `DefaultPortrait` drew a portrait with clipping, it would replace rather than extend any existing clip.
 - The default verbal design support view could have a bad background colour in some themes.
-- Fixed project view row height varying with theme, which could clip icons.
+- Project view row height varying with theme, which could clip icons.
 - Printing a text file in a dark theme could print text in a bad colour.
-- Fixed a resource leak when using Make Deck in a project.
-- Fixed an issue that caused https access to the [online help pages](https://se3docs.cgjennings.ca/index.html) to stop working.
-- When using new themes, `addCustomComponent` component were not immediately visible.
+- Resource leak when using Make Deck in a project.
+- `https` access to the [online help pages](https://se3docs.cgjennings.ca/index.html) stopped working.
+- When using new themes, `addCustomComponent` components were not immediately visible.
 - **Discard Selected** in the the open file dialog shown on application exit could close the wrong editor.
-- Renaming an open file in the project view would caused it to be marked as having unsaved changes.
-- Identifiers containing `$` were incorrectly marked as invalid during syntax highlighting.
-- A open project file’s name could be truncated in the project view when then file was open and modified.
+- Renaming an open file in the project view would cause it to be marked as having unsaved changes.
+- Binary (`0b01010`) and `BigInt` literals, as well as identifiers containing `$` were incorrectly marked as invalid during syntax highlighting.
+- A open project file’s name could be truncated in the project view when the file was open and modified.
 - Possible `NullPointerException` when reading an integer setting value stored with a radix point.
+- “Spinning off” a DIY component could end up sharing portraits between the two instances.
+- An empty project URL `project://` would throw an IOOB exception.
+- `ThemedSingleImageIcon` could enter an infinite loop trying to upscale an icon.
+- `DefaultPortrait.paint` did not honour a clip region set by the calling code.
+- The no-arg `ClassMap` constructor could not be invoked.
 
 ### For plug-in developers
 
@@ -60,10 +88,10 @@ This [project folder full of examples and resources for new plug-in developers](
 - every high-level folder includes its own `README.md` with more information;
 - examples have been reorganized into categories by use case;
 - new examples are being added;
-- examples that used a full plug-in structure just to create a component editor for a “fake” component have been refactored into standalone scripts and moved to a different location than the “real” plug-in examples;
-- code is being updated to use newer language features and APIs;
+- examples that used a full plug-in structure just to create a component editor for a “fake” component have been refactored into standalone scripts and moved to a different location from the “real” plug-in examples;
+- code is updated to use newer language features and APIs;
 - the graphics templates have been updated;
-- more examples to ease new developers into the 
+- more examples to ease new developers into the idiosyncrasies of the scripting dialect, or scripting in general 
 
 #### Build system change
 
@@ -71,6 +99,8 @@ If you are building Strange Eons from source, the build system has changed from 
 
 #### Miscellaneous changes
 
+- 
+  The `Region` and `Region2D` classes now added convenience getter/setters for `x2` and `y2` to access the corner opposite `x` and `y`. When used from script code, these allow you to use, for example, `region.x2 += 10` analogously to how you could use `region.x` previously. Internally, `Regions` are still defined in terms of `width` and `height`.
 - The script debugger provides much more useful descriptions of watch expression values.
 - Logging messages from scripts (as in `Eons.log.warning(“uh-oh”)`) now include which script and line the message was logged from.
 - Plug-in installation notes can be written in Markdown instead of HTML.
@@ -81,7 +111,7 @@ If you are building Strange Eons from source, the build system has changed from 
 
 #### High DPI support
 
-Several new classes have been added to facilitate high DPI display support, and methods such as `ResourceKit.getIcon(resUrl)` have been updated to return DPI-aware results. Many are also potentially useful for drawing game components. [See this page for more information.](dm-high-dpi.md)
+Several new classes have been added to facilitate high DPI display support, and methods such as `ResourceKit.getIcon(resUrl)` have been updated to return DPI-aware results. Many of these classes can also be used to support smart multi-resolution drawing for game components. [See this page for more information.](dm-high-dpi.md)
 
 #### Themed colour palette
 
