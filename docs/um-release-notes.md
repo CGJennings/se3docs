@@ -108,6 +108,8 @@ If you are building Strange Eons from source, the build system has changed from 
 - The `DarkMagicFilter` can be useful for displaying an image designed for a light background on a dark background, or vice-versa.
 - The `PixelArtUpscalingFilter` is useful for scaling up small, high frequency images such as icons.
 - Added `Console.scrollToTop()` and `Console.scrollToBottom()`.
+- When clicking a script name in an error message in the script output window, if there is an equivalent resource in a plug-in task of the open project, then the project version of the script will be opened instead of openable a read-only copy of the version in the plug-in.
+- The script console window now has two additional streams (in addition to *output* and *error*): *info* and *warning*. Script warnings are printed to the warning stream.
 
 #### High DPI support
 
