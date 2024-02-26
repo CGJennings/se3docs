@@ -2,6 +2,8 @@
 
 # User manual contents
 
+0. **What's new in the latest version?**
+   1. [Release notes](um-release-notes.md)
 1. **Getting started**
    1. [Welcome and quick start guide](um-install-intro.md)
    2. [Installation on **Windows**](um-install-win.md)
@@ -9,19 +11,20 @@
    4. [Installation on **Linux**](um-install-linux.md)
    5. [Installation on **Chromebooks**](um-install-chromebook.md)
    6. [Installation on **other platforms**](um-install-other.md)
-2. **Plug-ins**
+   7. [Choosing language settings](um-install-languages.md)
+2. **App basics**
+   1. [Overview of the app interface](um-ui-intro.md)
+   2. [Main menu commands](um-ui-menu.md)
+   3. [Document tab management](um-ui-documents.md)
+   4. [Using and customizing the context bar](um-ui-context-bar.md)
+   5. [Preferences](um-ui-preferences.md)
+3. **Plug-ins**
    1. [Plug-in essentials](um-plugins-intro.md)
    2. [Downloading and installing plug-ins](um-plugins-catalogue.md)
    3. [Managing installed plug-ins](um-plugins-manager.md)
    4. [Relaunching the application](um-plugins-relaunching.md)
    5. [Managing update notifications](um-plugins-updates.md)
    6. ["eons cat" links](um-plugins-eonscat.md) (sharing plug-ins easily on social media)
-3. **App basics**
-   1. [Overview of the app interface](um-ui-intro.md)
-   2. [Main menu commands](um-ui-menu.md)
-   3. [Document tab management](um-ui-documents.md)
-   4. [Using and customizing the context bar](um-ui-context-bar.md)
-   5. [Preferences](um-ui-preferences.md)
 4. **Editing game components**
    1. [Creating a new game component](um-gc-intro.md)
    2. [Preview area](um-gc-preview.md)
@@ -29,14 +32,15 @@
    4. [Portraits](um-gc-portraits.md)
    5. [Tints](um-gc-tints.md)
    6. [Expansion symbols](um-gc-expansions.md)
-   7. [Spelling checking](um-gc-spelling.md)
-   8. [Thesaurus and other language tools](um-gc-thesaurus.md)
-   9. [Using abbreviations to work efficiently](um-gc-abbreviations.md)
-   10. [Printing components](um-gc-print.md)
-   11. [Exporting images](um-gc-export.md)
-   12. [Converting components](um-gc-convert.md)
-   13. [Play testing and improving your designs](um-gc-play-testing.md)
-   14. [The marker and token editor](um-token-editor.md)
+   7. [Cloud fonts](um-cloud-fonts.md)
+   8. [Spelling checking](um-gc-spelling.md)
+   9. [Thesaurus and other language tools](um-gc-thesaurus.md)
+   10. [Using abbreviations to work efficiently](um-gc-abbreviations.md)
+   11. [Printing components](um-gc-print.md)
+   12. [Exporting images](um-gc-export.md)
+   13. [Converting components](um-gc-convert.md)
+   14. [Play testing and improving your designs](um-gc-play-testing.md)
+   15. [The marker and token editor](um-token-editor.md)
 5. **Card decks and game boards**
    1. [The deck editor](um-deck-intro.md)
    2. [Adding content to a deck](um-deck-adding-content)
@@ -62,13 +66,17 @@
    9. [Making cards from a speadsheet (CSV data)](um-proj-csv-factory.md)
    10. [Bulk exporting to image files](um-bulk-export.md)
    11. [Supported project file types](um-proj-file-types.md)
-7. **Troubleshooting and advanced configuration options**
-   1. [Transferring settings from another computer](um-install-user-folder.md)
+7. **Moving and updating settings**
+   1. [Locating, resetting, or transferring settings and other user data](um-install-user-folder.md)
    2. [Upgrading from Strange Eons 1 or 2](um-install-upgrading.md)
-   3. [Choosing language settings](um-install-languages.md)
-   4. [Troubleshooting](um-install-troubleshooting.md)
-   5. [Portable installations](um-install-portable.md)
-   6. [Command line options](um-install-command-line-options.md)
-   7. [Running a script from the command line](um-run-script.md)
-8. **Appendix**
-   1. [Release notes](um-release-notes.md)
+8. **Advanced configuration options**
+   1. [Command line options](um-install-command-line-options.md)
+   2. [Portable installations](um-install-portable.md)
+   3. [Running a script from the command line](um-run-script.md)
+9. **Troubleshooting**
+   1. [Strange Eons won’t start](um-install-troubleshooting.md)
+   2. [Can’t download plug-in catalogue](um-catalogue-troubleshooting.md)
+   3. [Plug-in errors or warnings](um-plugin-troubleshooting.md)
+   4. [Drawing or graphics issues](um-graphics-troubleshooting.md)
+   5. [Not enough memory errors](um-memory-troubleshooting.md)
+   6. [Investigating and reporting other errors](um-other-troubleshooting.md)
