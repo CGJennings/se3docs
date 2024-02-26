@@ -6,7 +6,7 @@ This page provides a high-level overview of the essential elements of the app's 
 
 The **[menu bar](um-ui-menu.md)**, as with most desktop applications, is used to activate the app's major commands, like printing and saving your work to a file.
 
-The **[tab strip](um-ui-documents.md)** allows you to work on more than one game component or other document at a time and switch between them like tabs in a Web browser.
+The **[tab strip](um-ui-documents.md)** allows you to work on more than one game component or other document at a time and switch between them, like tabs in a Web browser.
 
 The **[document, or editor, area](um-gc-intro.md)** is where the game component or other content that you are currently editing is shown. When you are working on a card or other game component, this is further divided into two vertical strips: a set of editing controls that you can use to change the contents of the card and a preview area that shows you what your changes will look like. The first time you start Strange Eons, there will be no editors open so this area and the tab strip will both be empty.
 

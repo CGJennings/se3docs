@@ -20,6 +20,10 @@ Change the app theme and other user interface options.
 
 Customize the buttons shown on the [context bar](um-ui-context-bar.md).
 
+### Cloud fonts
+
+The cloud fonts feature gives you access to thousands of free fonts that are downloaded on demand. Both plug-in developers and end users can make use of them. For end users, the cloud fonts preference category lets you explore and select fonts. When you find a font family you want to use, select it in the list and then choose **Reserve**. From now on, this font will be kept downloaded and up to date, and you can use it anywhere that you can specify a font family, such as in a `<family>` markup tag or the the typeface field of generic cards.
+
 ### Design support
 
 Options that change how game component editors offer advice on your designs. (Not all game component editors offer design support.)

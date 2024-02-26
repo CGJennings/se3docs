@@ -1,10 +1,12 @@
 # Plug-in essentials
 
-Plug-ins play a vital role in Strange Eons. With no plug-ins installed, you can only create generic tokens and decks. Installing plug-ins will be one of the first things you'll want to do, so this page covers the bare essentials. Come back and check out the other pages in this section when you want more information.
+Plug-ins play a vital role in Strange Eons. With no plug-ins installed, you can only create generic cards, generic tokens, and decks. Installing plug-ins will often be one of the first things you'll want to do, so this page covers the bare essentials. Come back and check out the other pages in this section when you want more information.
 
 ## Installing plug-ins on your first run
 
-The first time you use Strange Eons, it will prompt you to open the [plug-in catalogue](um-plugins-catalogue.md) to add support for at least one game. When you agree, it opens the catalogue for you and applies a [filter](um-plugins-catalogue.md#filtering-searching-the-listings) so that only games are listed. Once you select something and click on the **Download and Install** button, your chosen plug-ins will be... downloaded and installed. After the install completes, you will be prompted to [relaunch](um-plugins-relaunching.md). Click the link to continue, and after a brief delay you'll be ready to [start creating](um-gc-intro.md). (On some platforms the relaunch option might not be able to restart the application. Just restart Strange Eons manually after it exits.)
+The first time you use Strange Eons, it will prompt you to open the [plug-in catalogue](um-plugins-catalogue.md) to add support for at least one game. If you agree, it opens the catalogue for you and applies a [filter](um-plugins-catalogue.md#filtering-searching-the-listings) so that only games are listed. Once you select something and click on the **Download and Install** button, your chosen plug-ins will be... downloaded and installed. After the install completes, you will often be prompted to [relaunch](um-plugins-relaunching.md). Click the link to continue, and after a brief delay you'll be ready to [start creating](um-gc-intro.md).
+
+> **Tip:** On some platforms the relaunch option might not be able to restart the application. Just restart Strange Eons manually after it exits.
 
 ![the first run plug-in dialog](images/plugins-first-run.png)
 
