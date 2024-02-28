@@ -17,7 +17,7 @@
 
 #### New generic card types
 
-Previously, Strange Eons included generic components for tokens and decks (and thus boards), but nothing for creating cards. This meant that new users couldn’t play around with it without installing at least one extension. This version adds over a dozen “generic” card types in sizes commonly offered by card printing services. Each type offers the same features: title and body text, a portrait, and the ability to customize design elements like the card’s background graphics. They strike a balance between simplicity and flexibility, and are perfect for quickly creating basic designs without having to create a plug-in.
+Previously, Strange Eons included generic components for tokens and decks (and thus boards), but nothing for creating cards. This meant that new users couldn’t play around with it without installing at least one extension. This version adds over a dozen “generic” card types in sizes commonly offered by card printing services. Each type offers the same features: title and body text, a portrait, and the ability to customize design elements like the card’s background graphics. They strike a balance between simplicity and flexibility, and are perfect for quickly creating basic designs without having to create a plug-in. The built-in tuck box sizes have been updated to include a size preset for each generic card type.
 
 #### Cloud fonts
 
@@ -35,9 +35,11 @@ Projects support markdown (`.md`) files for documentation. Markdown is a simple 
 
 #### Text/source editing
 
-The previous “in house” text/code file editor has been replaced with a new implementation based on `RSyntaxTextArea`. The new system has better support for high DPI displays, and enables new functionality such as highlighting search and replace matches and occurrences of the identifier under the caret. Work is still ongoing, with additional new features planned. In a few areas, the new editor has not yet reached feature parity.
+The previous “in house” text/code file editor has been replaced with a new implementation based on `RSyntaxTextArea`. The new system has better support for high DPI displays,* and enables new functionality such as highlighting search and replace matches and occurrences of the identifier under the caret. Work is still ongoing, with additional new features planned. In a few areas, the new editor has not yet reached feature parity.
 
 Other code editing improvements include updated syntax colour themes and a more modern default font for markup and code editing (Windows and Mac).
+
+\* There are some known issues with non-integer desktop scaling settings, such as 125%.
 
 <!--  code completion for certain languages, including TypeScript and HTML -->
 
@@ -58,6 +60,7 @@ Other code editing improvements include updated syntax colour themes and a more 
 ### Bug fixes
 
 - Attempting to open a portrait containing certain characters, including `[],=+` would fail, resulting in a broken image. Also affects certain other UI elements that accept a file path/file name, but portraits are the most prominent example.
+- Components that included a bleed margin in their design might be sized incorrectly in the deck editor.
 - Editors for new DIY components could initially mark the component as having unsaved changes.
 - Attempting to resize a navigation panel could trigger an infinite loop if other open editors had a navigation panel that was disabled.
 - **View/Source Navigator** stopped working correctly.
@@ -65,7 +68,7 @@ Other code editing improvements include updated syntax colour themes and a more 
 - The default verbal design support view could have a bad background colour in some themes.
 - Project view row height varying with theme, which could clip icons.
 - Printing a text file in a dark theme could print text in a bad colour.
-- Resource leak when using Make Deck in a project.
+- Resource leak when using **Make Deck** in a project.
 - `https` access to the [online help pages](https://se3docs.cgjennings.ca/index.html) stopped working.
 - When using new themes, `addCustomComponent` components were not immediately visible.
 - **Discard Selected** in the the open file dialog shown on application exit could close the wrong editor.
@@ -78,6 +81,7 @@ Other code editing improvements include updated syntax colour themes and a more 
 - `ThemedSingleImageIcon` could enter an infinite loop trying to upscale an icon.
 - `DefaultPortrait.paint` did not honour a clip region set by the calling code.
 - The no-arg `ClassMap` constructor could not be invoked.
+- Added a workaround for an issue with how Java positions windows across multiple high DPI displays. This issue affects `ToolWindow`s such as the script output window, and causes the window to “snap” back to the main display when trying to drag to another display. Should it cause other issues, this workaround can be disabled by setting the preference key `window-location-bug-workaround` to `no`.
 
 ### For plug-in developers
 
