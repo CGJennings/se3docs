@@ -13,7 +13,6 @@
  * when first used or when they are updated.
  */
 
-const fontData = [];
 const cfc = ca.cgjennings.graphics.cloudfonts.CloudFonts.getDefaultCollection();
 const families = cfc.getFamilies();
 let totalFonts = 0;
@@ -37,10 +36,9 @@ for (let family of families) {
         });
         ++totalFonts;
     }
-    fontData.push(fam);
+    println(JSON.stringify(fam, null, 2));
 }
 
-println(JSON.stringify(fontData, null, 2));
 println();
 println(`${totalFonts} fonts in ${families.length} families`);
 
@@ -53,7 +51,6 @@ let registrationResults = firaSans.register();
 for (let i=0; i< registrationResults.length; ++i) {
     println(`    ${registrationResults[i]}`);
 }
-println(`"Fira Sans" is registered: ${ResourceKit.isFamilyRegistered("Fira Sans")}`);
 
 // If registration was successful, you can now use this font by its
 // family name in plug-ins or markup tags. For example, create any
@@ -69,6 +66,6 @@ println(`"Fira Sans" is registered: ${ResourceKit.isFamilyRegistered("Fira Sans"
 // Besides the registering the font, you can also obtain an (AWT) Font
 // instance, either for each font individually or all at once.
 
-let sample = new javax.swing.JLabel("Fira Sans!");
+let sample = new javax.swing.JLabel("A sample of Fira Sans");
 sample.font = firaSans.fonts[0].deriveFont(24);
 Console.printComponent(sample);

@@ -9,6 +9,7 @@
 useLibrary('diy');
 useLibrary('ui');
 useLibrary('imageutils');
+importClass(ca.cgjennings.ui.theme.Palette);
 
 // In addition to using a built-in design support type,
 // you can implement this interface to create your own design
@@ -63,7 +64,8 @@ function createInterface(diy, editor) {
             let view = label();
             view.horizontalAlignment = swing.JLabel.CENTER;
             view.opaque = true;
-            view.background = new Color(0xfaffc4);
+            view.background = Palette.get.background.opaque.yellow;
+            view.foreground = Palette.get.foreground.translucent.black;
             return view;
         },
         updateSupportView(view) {
